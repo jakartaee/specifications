@@ -1,5 +1,5 @@
 ## Specification PR template
-When creating a specificaton project release review, create two PRs with the content divided as follows.
+When creating a specification project release review, create two PRs with the content divided as follows.
 
 Include the following in PR#1:
 - [ ] A directory in the form wombat/x.y where x.y is the release major.minor version, and the directory contains the following.
