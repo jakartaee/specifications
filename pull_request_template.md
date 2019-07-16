@@ -1,9 +1,10 @@
 ## Specification PR template
-Include the following:
+When creating a specificaton project release review, create two PRs with the content divided as follows:
+
+Include the following in PR#1:
 - [ ] A directory in the form wombat/x.y containing the following.
 - [ ] Specification PDF in the form of wombat_x.y.pdf
 - [ ] Specification HTML in the form of wombat_x.y.html
-- [ ] Specification JavaDoc in the apidocs directory.
 - [ ] A specification page named _index.md following the template at:
       https://github.com/jakartaee/specification-committee/blob/master/spec_page_template.md
 - [ ] For a Progress Review, that sufficient progress has been made on
@@ -16,3 +17,8 @@ Include the following:
       validate the release.  Instructions MAY be by reference.
 - [ ] The URL of the OSSRH staging repository for the api, javadoc:
       <add URL here>
+- [ ] The URL of the staging directory on downloads.eclipse.org for the proposed EFTL TCK binary:
+      <add URL here>
+
+Include the following in PR#2:
+- [ ] Specification JavaDoc in the apidocs directory.
