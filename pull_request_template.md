@@ -1,8 +1,8 @@
 ## Specification PR template
-When creating a specificaton project release review, create two PRs with the content divided as follows:
+When creating a specificaton project release review, create two PRs with the content divided as follows.
 
 Include the following in PR#1:
-- [ ] A directory in the form wombat/x.y containing the following.
+- [ ] A directory in the form wombat/x.y where x.y is the release major.minor version, and the directory contains the following.
 - [ ] Specification PDF in the form of wombat_x.y.pdf
 - [ ] Specification HTML in the form of wombat_x.y.html
 - [ ] A specification page named _index.md following the template at:
@@ -21,4 +21,4 @@ Include the following in PR#1:
       <add URL here>
 
 Include the following in PR#2:
-- [ ] Specification JavaDoc in the apidocs directory.
+- [ ] Specification JavaDoc in the wombat/x.y/apidocs directory.
