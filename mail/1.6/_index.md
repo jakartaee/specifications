@@ -8,7 +8,7 @@ Jakarta Servlet defines server-side handling for HTTP requests and responses.
 * [Jakarta Mail 1.6 Specification Document](./mail-spec-1.6.pdf) (PDF)
 * [Jakarta Mail 1.6 Specification Document](./mail-spec-1.6.html) (HTML)
 * [Jakarta Mail 1.6 Javadoc](./apidocs)
-* [Jakarta Mail 1.6 TCK](http://download.eclipse.org/ee4j/javamail/mail-tck/mail-tck-eftl/release/eclipse-mailtck-1.6.0.zip)
+* [Jakarta Mail 1.6 TCK](http://download.eclipse.org/jakartaee/mail/1.6/eclipse-mailtck-1.6.0.zip)
 * Maven coordinates
   * [jakarta.mail:jakarta.mail-api:jar:1.6.4](https://search.maven.org/artifact/jakarta.mail/jakarta.mail-api/1.6.4/jar)
 
