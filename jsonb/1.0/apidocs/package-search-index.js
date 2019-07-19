@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"javax.json.bind"},{"l":"javax.json.bind.adapter"},{"l":"javax.json.bind.annotation"},{"l":"javax.json.bind.config"},{"l":"javax.json.bind.serializer"},{"l":"javax.json.bind.spi"}]
