@@ -1,0 +1,36 @@
+---
+title: "Jakarta Persistence Specification 2.2"
+date: 2019-07-19T21:45:02+0200
+summary: "First release for Jakarta EE 8"
+---
+The Jakarta Persistence API is the Java(R) API for the management of persistence
+and object/relational mapping in Jakarta EE and Java SE environments.
+
+* [Jakarta Persistence 2.2 Specification Document](./persistence_2.2.pdf) (PDF)
+* [Jakarta Persistence 2.2 Specification Document](./persistence_2.2.html) (HTML)
+* [Jakarta Persistence 2.2 Javadoc](./apidocs)
+* [Jakarta Persistence 2.2 TCK](http://downloads.eclipse.org/jakarta/persistence/2.2.3/persistence_tck_2.2.zip)
+* Maven coordinates
+  * [jakarta.persistence:jakarta.persistence-api:jar:2.2.3](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/2.2.3/jar)
+
+# Ballots
+
+## Release Review
+
+
+|                       |  Yes    | No      | Abstain  |
+|-----------------------|---------|---------|----------|
+|Fujitsu                |         |         |          |
+|IBM                    |         |         |          |
+|Oracle                 |         |         |          |
+|Payara                 |         |         |          |
+|Red Hat                |         |         |          |
+|Tomitribe              |         |         |          |
+|EE4J PMC               |         |         |          |
+|Participant Members    |         |         |          |
+|Committer Members      |         |         |          |
+
+
+# Compatible Implementations
+
+* EclipseLink 2.7.4
