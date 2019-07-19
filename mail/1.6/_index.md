@@ -1,9 +1,10 @@
 ---
 title: "Jakarta Mail Specification 1.6"
-date: 2019-07-12T14:29:05-0700
+date: 2019-07-19T15:57:57-0700
 summary: "First release for Jakarta EE 8"
 ---
-Jakarta Servlet defines server-side handling for HTTP requests and responses.
+Jakarta Mail defines a platform-independent and protocol-independent
+framework to build mail and messaging applications.
 
 * [Jakarta Mail 1.6 Specification Document](./mail-spec-1.6.pdf) (PDF)
 * [Jakarta Mail 1.6 Specification Document](./mail-spec-1.6.html) (HTML)
