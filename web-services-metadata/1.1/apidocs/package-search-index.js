@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"java.jws","l":"javax.jws"},{"m":"java.jws","l":"javax.jws.soap"}]
