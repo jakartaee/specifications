@@ -1,0 +1,29 @@
+[javatest.batch] Completed running 24 tests.
+[javatest.batch] Number of Tests Passed      = 19
+[javatest.batch] Number of Tests Failed      = 5
+[javatest.batch] Number of Tests with Errors = 0
+[javatest.batch] ********************************************************************************
+[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/containerContracts/Client.java#IsUserInRole_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/containerContracts/Client.java#WebResourcePermission_from_standalone
+[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/containerContracts/Client.java#WebUserDataPermission_from_standalone
+[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/principal2role/Client.java#PrincipalToRoleMapping_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/providerContracts/Client.java#anyAuthUserWebResPermAddedToRole_from_standalone
+[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/providerContracts/Client.java#PermissionsToRole_from_standalone
+[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/providerContracts/Client.java#WildCardAuthConstraint_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#AnyAuthUserWebRoleRef_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#GetPolicyConfiguration_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#Policy_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#PolicyConfigurationFactory_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#PolicyRefresh_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#validateNoInvalidStates_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebResourcePermission_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebResourcePermissionEquals_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebResourcePermissionExcludedPolicy_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebResourcePermissionHashCode_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebResourcePermissionUnCheckedPolicy_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebRoleRefPermission_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebRoleRefPermissionEquals_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebRoleRefPermissionHashCode_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebUserDataPermission_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebUserDataPermissionEquals_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebUserDataPermissionHashCode_from_standalone
