@@ -33,4 +33,4 @@ between XML documents and Java objects.
 
 # Compatible Implementations
 
-* Eclipse Metro 2.4.3
+* Eclipse Implementation of JAXB 2.3.2
