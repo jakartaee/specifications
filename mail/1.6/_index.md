@@ -31,4 +31,4 @@ framework to build mail and messaging applications.
 
 # Compatible Implementations
 
-* Eclipse Jakarta Mail 1.6.4
+* [Eclipse Jakarta Mail 1.6.4](https://eclipse-ee4j.github.io/mail/)
