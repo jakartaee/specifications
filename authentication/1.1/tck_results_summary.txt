@@ -1,0 +1,122 @@
+[javatest.batch] Number of Tests Passed      = 106
+[javatest.batch] Number of Tests Failed      = 0
+[javatest.batch] Number of Tests with Errors = 0
+[javatest.batch] ********************************************************************************
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/authstatus/authexception/Client.java#AuthStatusAuthException
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/authstatus/failure/Client.java#AuthStatusFailure
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/authstatus/sendfailure/Client.java#AuthStatusSendFailure
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/baseline/Client.java#ACF_getFactory_from_jaspicservlet
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/baseline/Client.java#ACFInMemoryRegisterOnlyOneACP_from_jaspicservlet
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/baseline/Client.java#ACFPersistentRegisterOnlyOneACP_from_jaspicservlet
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/baseline/Client.java#ACFRemoveRegistrationWithBadId_from_jaspicservlet
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/baseline/Client.java#ACFSwitchFactorys_from_jaspicservlet
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/baseline/Client.java#ACFUnregisterACP_from_jaspicservlet
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/baseline/Client.java#testACFComesFromSecFile_from_jaspicservlet
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFDetachListener
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFGetFactory
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFGetRegistrationContext
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFGetRegistrationIDs
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFInMemoryNotifyOnUnReg
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFInMemoryPrecedenceRules
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFInMemoryRegisterOnlyOneACP
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFPersistentNotifyOnUnReg
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFPersistentPrecedenceRules
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFPersistentRegisterOnlyOneACP
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFRemoveRegistration
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFRemoveRegistrationWithBadId
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFSwitchFactorys
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#ACFUnregisterACP
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#AuthConfigFactoryGetFactory
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#AuthConfigFactoryRegistration
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#AuthConfigFactorySetFactory
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#AuthConfigFactoryVerifyPersistence
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckACFVerifyPersistence
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckACPConfigObjAppContext
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckACPContextObjAppContext
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckAuthContextId
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckAuthContextIdUsingGet
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckAuthenInValidateRequest
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckCallbackSupport
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckforNonNullAuthContext
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckforNonNullCallback
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckMessageInfo
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckMPRCallsGetAuthContext
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckMsgInfoKey
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckNoAuthReturnsValidStatusCode
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckRegistrationContextId
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#checkSACValidateRequestWithVaryingAccess
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckSecureRespForMandatoryAuth
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckSecureRespForOptionalAuth
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckServletAppContext
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckValidateReqAlwaysCalled
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#CheckValidateReqAuthException
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#GetConfigProvider
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#getRegistrationContextId
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testACFComesFromSecFile
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testAuthenAfterLogout
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testAuthenIsUserInRole
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testAuthenResultsOnHttpServlet
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testGPCGetAuthType
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testGPCGetRemoteUser
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testGPCGetUserPrincipal
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testGPCIsUserInRole
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testGPCWithNoRequiredAuth
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testRemoteUserCorrespondsToPrin
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testRequestWrapper
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testResponseWrapper
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#testSecRespCalledAfterSvcInvoc
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#VerifyClientSubjects
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#VerifyMessageInfoObjects
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#VerifyNoInvalidEntries
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#VerifyReqPolicy
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#VerifyRequestDispatchedProperly
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#verifyRuntimeCallOrder
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#VerifySAContextVerifyReqIsCalled
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/servlet/Client.java#VerifyServiceSubjects
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ACFGetFactory
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ACFInMemoryRegisterOnlyOneACP
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ACFPersistentRegisterOnlyOneACP
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ACFRemoveRegistrationWithBadId
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ACFSwitchFactorys
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ACFUnregisterACP
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ACPAuthContext
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ACPClientAuthConfig
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ACPServerAuthConfig
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#AuthConfigFactoryRegistration
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#AuthConfigFactorySetFactory
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#AuthConfigFactoryVerifyPersistence
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#CACRequestResponse
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ClientAppContextId
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ClientAuthConfig
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ClientAuthContext
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ClientRuntimeCommonCallbackSupport
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ClientRuntimeMessageInfoMap
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#GetConfigProvider
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#GetFactory
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#getRegistrationContextId
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#MessageInfo
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#NameAndPasswordCallbackSupport
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#OperationId
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#SACRequestResponse
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#SecureRequest
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#SecureResponse
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ServerAppContextId
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ServerAuthConfig
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ServerAuthContext
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ServerRuntimeCallbackSupport
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ServerRuntimeCommonCallbackSupport
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#testACFComesFromSecFile
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ValidateRequest
+[javatest.batch] PASSED........com/sun/ts/tests/jaspic/spi/soap/Client.java#ValidateResponse
+[javatest.batch] 
+[javatest.batch] Jul 18, 2019 4:28:07 PM Finished executing all tests, wait for cleanup...
+[javatest.batch] Jul 18, 2019 4:28:07 PM Harness done with cleanup from test run.
+[javatest.batch] Total time = 348s
+[javatest.batch] Setup time = 0s
+[javatest.batch] Cleanup time = 3s
+[javatest.batch] Test results: passed: 106
+[javatest.batch] Results written to /home/jenkins/workspace/Jersey_release_pipeline/JTwork.
+[javatest.batch] Report written to /home/jenkins/workspace/Jersey_release_pipeline/JTreport
+
+BUILD SUCCESSFUL
+Total time: 5 minutes 51 seconds
