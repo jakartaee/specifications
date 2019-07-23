@@ -1,15 +1,23 @@
-[javatest.batch] Completed running 24 tests.
-[javatest.batch] Number of Tests Passed      = 19
-[javatest.batch] Number of Tests Failed      = 5
+[javatest.batch] Number of Tests Passed      = 33
+[javatest.batch] Number of Tests Failed      = 0
 [javatest.batch] Number of Tests with Errors = 0
 [javatest.batch] ********************************************************************************
-[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/containerContracts/Client.java#IsUserInRole_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/ejb/mr/Client.java#ADM_InRole_from_ejblitesecuredjsp
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/ejb/mr/Client.java#EjbIsAuthz_from_ejblitesecuredjsp
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/ejb/mr/Client.java#EjbNotAuthz_from_ejblitesecuredjsp
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/ejb/mr/Client.java#EjbSecRoleRef_from_ejblitesecuredjsp
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/ejb/mr/Client.java#excludeTest_from_ejblitesecuredjsp
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/ejb/mr/Client.java#InterMediateBean_CallerPrincipal_from_ejblitesecuredjsp
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/ejb/mr/Client.java#MGR_InRole_from_ejblitesecuredjsp
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/ejb/mr/Client.java#TargetBean_CallerPrincipal_from_ejblitesecuredjsp
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/ejb/mr/Client.java#uncheckedTest_from_ejblitesecuredjsp
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/containerContracts/Client.java#IsUserInRole_from_standalone
 [javatest.batch] PASSED........com/sun/ts/tests/jacc/web/containerContracts/Client.java#WebResourcePermission_from_standalone
-[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/containerContracts/Client.java#WebUserDataPermission_from_standalone
-[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/principal2role/Client.java#PrincipalToRoleMapping_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/containerContracts/Client.java#WebUserDataPermission_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/principal2role/Client.java#PrincipalToRoleMapping_from_standalone
 [javatest.batch] PASSED........com/sun/ts/tests/jacc/web/providerContracts/Client.java#anyAuthUserWebResPermAddedToRole_from_standalone
-[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/providerContracts/Client.java#PermissionsToRole_from_standalone
-[javatest.batch] FAILED........com/sun/ts/tests/jacc/web/providerContracts/Client.java#WildCardAuthConstraint_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/providerContracts/Client.java#PermissionsToRole_from_standalone
+[javatest.batch] PASSED........com/sun/ts/tests/jacc/web/providerContracts/Client.java#WildCardAuthConstraint_from_standalone
 [javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#AnyAuthUserWebRoleRef_from_standalone
 [javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#GetPolicyConfiguration_from_standalone
 [javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#Policy_from_standalone
@@ -27,3 +35,13 @@
 [javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebUserDataPermission_from_standalone
 [javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebUserDataPermissionEquals_from_standalone
 [javatest.batch] PASSED........com/sun/ts/tests/jacc/web/toolsContracts/Client.java#WebUserDataPermissionHashCode_from_standalone
+[javatest.batch] 
+[javatest.batch] Jul 23, 2019 11:06:03 PM Finished executing all tests, wait for cleanup...
+[javatest.batch] Jul 23, 2019 11:06:03 PM Harness done with cleanup from test run.
+[javatest.batch] Total time = 92s
+[javatest.batch] Setup time = 0s
+[javatest.batch] Cleanup time = 0s
+[javatest.batch] Test results: passed: 33
+[javatest.batch] Results written to /home/jenkins/workspace/2_authorization_run_tck_against_staged_build/jacctckwork/jacctck.
+[javatest.batch] + writeReport /home/jenkins/workspace/2_authorization_run_tck_against_staged_build/jacctckreport/jacctck
+[javatest.batch] cannot create directory for report (/home/jenkins/workspace/2_authorization_run_tck_against_staged_build/jacctckreport/jacctck)
