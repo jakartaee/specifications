@@ -1,12 +1,12 @@
 ---
 title: "Jakarta Web Services Metadata Specification 1.1"
-date: 2019-07-22T16:30:52+0200
+date: 2019-07-23T14:28:20+0200
 summary: "First release for Jakarta EE 8"
 ---
-Jakarta Web Services Metadata defines programming model for Web Services in Java,
-use of metadata, non-normative processing model for metadata annotated web service
-source file, runtime requirements for a container and annotations used for WSDL,
-binding and configuration.
+Jakarta Web Services Metadata defines a programming model for Web Services in Java,
+use of metadata, a non-normative processing model for metadata annotated web service
+source files, runtime requirements for a container, and annotations used for WSDL,
+binding, and configuration.
 
 * [Jakarta Web Services Metadata 1.1 Specification Document](./jakarta.jws-spec-1.1.pdf) (PDF)
 * [Jakarta Web Services Metadata 1.1 Specification Document](./jakarta.jws-spec-1.1.html) (HTML)
