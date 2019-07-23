@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Batch Specification 1.0"
-date: 2019-07-18
+date: 2019-07-23
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Batch
@@ -31,5 +31,5 @@ Jakarta Batch
 
 # Compatible Implementations
 
-* **"jbatch"** v1.0.1 =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.  We include links for the source [repository](https://github.com/WASdev/standards.jsr352.jbatch), and v1.0.1 Maven coordinates for [implementation](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.container/1.0.1/com.ibm.jbatch.container-1.0.1.jar) and [SPI](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.spi/1.0.1/com.ibm.jbatch.spi-1.0.1.jar) jars.
+* **"jbatch"** v1.0.3 =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.  We include links for the source [repository](https://github.com/WASdev/standards.jsr352.jbatch), and v1.0.3 Maven coordinates for [implementation](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.container/1.0.3/com.ibm.jbatch.container-1.0.3.jar) and [SPI](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.spi/1.0.3/com.ibm.jbatch.spi-1.0.3.jar) jars.
   * [Recorded TCK Execution](jbatch-tck-run.log)
