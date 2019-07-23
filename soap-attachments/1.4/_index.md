@@ -1,10 +1,10 @@
 ---
 title: "Jakarta SOAP with Attachments Specification 1.4"
-date: 2019-07-22T16:58:42+0200
+date: 2019-07-23T14:30:32+0200
 summary: "First release for Jakarta EE 8"
 ---
-Jakarta SOAP with Attachments defines API enabling developers to produce
-and consume messages conforming to the SOAP 1.1, SOAP 1.2 and SOAP Attachments Feature.
+Jakarta SOAP with Attachments defines an API enabling developers to produce
+and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments Feature.
 
 * [Jakarta SOAP with Attachments 1.4 Specification Document](./jakarta.xml.soap-spec-1.4.pdf) (PDF)
 * [Jakarta SOAP with Attachments 1.4 Specification Document](./jakarta.xml.soap-spec-1.4.html) (HTML)
