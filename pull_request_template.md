@@ -19,7 +19,7 @@ Include the following in PR#1:
       <add URL here>
 - [ ] The URL of the staging directory on downloads.eclipse.org for the proposed EFTL TCK binary:
       <add URL here>
-- [ ] The URL of the TCK results summary:
+- [ ] The URL of the TCK certification request issue:
       <add URL here>
 
 Include the following in PR#2:
