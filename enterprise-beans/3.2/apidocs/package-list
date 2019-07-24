@@ -1,0 +1,4 @@
+javax.ejb
+javax.ejb.embeddable
+javax.ejb.spi
+javax.xml.rpc.handler
