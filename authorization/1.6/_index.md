@@ -12,7 +12,7 @@ these permissions.
 * [Jakarta Authorization 1.6 Specification Document](./authorization-1.6.html) (HTML)
 * [Jakarta Authorization 1.6 Javadoc](./apidocs)
 * Maven coordinates
-  * [jakarta.security.jacc:jakarta.security.jacc-api:jar:1.6.2](https://search.maven.org/artifact/jakarta.security.jacc/jakarta.security.jacc/1.6.1/jar)
+  * [jakarta.security.jacc:jakarta.security.jacc-api:jar:1.6.2](https://search.maven.org/artifact/jakarta.security.jacc/jakarta.security.jacc-api/1.6.1/jar)
 
 # Ballots
 
