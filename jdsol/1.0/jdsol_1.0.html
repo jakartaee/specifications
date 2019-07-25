@@ -5,7 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
-<title>Introduction</title>
+<meta name="author" content="Jakarta Debugging Support for Other Languages Team, https://projects.eclipse.org/projects/ee4j.jdsol">
+<title>Jakarta Debugging Support for Other Languages</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -524,40 +525,138 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
+<h1>Jakarta Debugging Support for Other Languages</h1>
+<div class="details">
+<span id="author" class="author">Jakarta Debugging Support for Other Languages Team, https://projects.eclipse.org/projects/ee4j.jdsol</span><br>
+<span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jdsol-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jdsol-dev</a></span><br>
+<span id="revnumber"> 1.0,</span>
+<span id="revdate">July 25, 2019</span>
+<br><span id="revremark">Final Release</span>
+</div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#introduction">Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#picture">Picture</a></li>
+<li><a href="#eclipse-foundation-specification-license">Eclipse Foundation Specification License</a>
+<ul class="sectlevel3">
+<li><a href="#disclaimers">Disclaimers</a></li>
 </ul>
 </li>
+<li><a href="#introduction">1. Introduction</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>Jakarta Debugging Support for Other Languages defines API.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Specification: Jakarta Debugging Support for Other Languages
+
+Version: 1.0
+
+Status: Final Release
+
+Release: July 25, 2019</pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="picture"><a class="anchor" href="#picture"></a>Picture</h3>
+<h3 id="eclipse-foundation-specification-license"><a class="anchor" href="#eclipse-foundation-specification-license"></a>Eclipse Foundation Specification License</h3>
 <div class="paragraph">
-<p>Just an example of how images appear in the project.</p>
+<p>By using and/or copying this document, or the Eclipse Foundation
+document from which this statement is linked, you (the licensee) agree
+that you have read, understood, and will comply with the following
+terms and conditions:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="data:image/png;base64," alt="image"></span></p>
+<p>Permission to copy, and distribute the contents of this document, or
+the Eclipse Foundation document from which this statement is linked, in
+any medium for any purpose and without fee or royalty is hereby
+granted, provided that you include the following on ALL copies of the
+document, or portions thereof, that you use:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>link or URL to the original Eclipse Foundation document.</p>
+</li>
+<li>
+<p>All existing copyright notices, or if one does not exist, a notice
+(hypertext is preferred, but a textual representation is permitted)
+of the form: "Copyright (c) [$date-of-document]
+Eclipse Foundation, Inc. <a href="#url to this license">[url to this license]</a>"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Inclusion of the full text of this NOTICE must be provided. We
+request that authorship attribution be provided in any software,
+documents, or other items or products that you create pursuant to the
+implementation of the contents of this document, or any portion
+thereof.</p>
+</div>
+<div class="paragraph">
+<p>No right to create modifications or derivatives of Eclipse Foundation
+documents is granted pursuant to this license, except anyone may
+prepare and distribute derivative works and portions of this document
+in software that implements the specification, in supporting materials
+accompanying such software, and in documentation of such software,
+PROVIDED that all such works include the notice below. HOWEVER, the
+publication of derivative works of this document for use as a technical
+specification is expressly prohibited.</p>
+</div>
+<div class="paragraph">
+<p>The notice is:</p>
+</div>
+<div class="paragraph">
+<p>"Copyright (c) 2018 Eclipse Foundation. This software or
+document includes material copied from or derived from [title and URI
+of the Eclipse Foundation specification document]."</p>
+</div>
+<div class="sect3">
+<h4 id="disclaimers"><a class="anchor" href="#disclaimers"></a>Disclaimers</h4>
+<div class="paragraph">
+<p>THIS DOCUMENT IS PROVIDED &quot;AS IS,&quot; AND THE COPYRIGHT
+HOLDERS AND THE ECLIPSE FOUNDATION MAKE NO REPRESENTATIONS OR
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE
+SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS
+WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR
+OTHER RIGHTS.</p>
+</div>
+<div class="paragraph">
+<p>THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION WILL NOT BE LIABLE
+FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT
+OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE
+CONTENTS THEREOF.</p>
+</div>
+<div class="paragraph">
+<p>The name and trademarks of the copyright holders or the Eclipse
+Foundation may NOT be used in advertising or publicity pertaining to
+this document or its contents without specific, written prior
+permission. Title to copyright in this document will at all times
+remain with copyright holders.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="introduction"><a class="anchor" href="#introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The specification of Jakarta Debugging Support for Other Languages provides a mechanism by which
+programs executed under the JavaTM virtual machine but written in languages other than the Java
+programming language, can be debugged with references to the original source (for example, source
+file and line number references).</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0-SNAPSHOT<br>
-Last updated 2019-07-11 14:48:46 +0800
+ 1.0<br>
+Last updated 2019-07-25 10:19:10 +0800
 </div>
 </div>
 </body>
