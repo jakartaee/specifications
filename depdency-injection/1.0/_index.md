@@ -25,4 +25,4 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 
 # Compatible Implementations
 
-* Weld 2.3.8.Final
+* https://weld.cdi-spec.org/download/[Weld 2.3.8.Final]
