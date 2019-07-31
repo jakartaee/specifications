@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Depdency Injection 1.0"
-date: 2019-07-27T15:57:57-0700
+date: 2019-07-27
 summary: "Final for Jakarta EE 8"
 ---
 
@@ -26,3 +26,5 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 # Compatible Implementations
 
 * https://weld.cdi-spec.org/download/[Weld 2.3.8.Final]
+* https://weld.cdi-spec.org/download/[Weld 3.1.1.Final]
+Weld 3.1.1.Final
