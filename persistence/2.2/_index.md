@@ -9,7 +9,7 @@ and object/relational mapping in Jakarta EE and Java SE environments.
 * [Jakarta Persistence 2.2 Specification Document](./persistence_2.2.pdf) (PDF)
 * [Jakarta Persistence 2.2 Specification Document](./persistence_2.2.html) (HTML)
 * [Jakarta Persistence 2.2 Javadoc](./apidocs)
-* [Jakarta Persistence 2.2 TCK](http://downloads.eclipse.org/jakarta/persistence/2.2.3/persistence_tck_2.2.zip)
+* [Jakarta Persistence 2.2 TCK](https://download.eclipse.org/jakartaee/persistence/2.2/eclipse-persistence-tck-2.2.0.zip)
 * Maven coordinates
   * [jakarta.persistence:jakarta.persistence-api:jar:2.2.3](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/2.2.3/jar)
 
