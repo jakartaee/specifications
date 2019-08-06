@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Mail Specification 1.6"
-date: 2019-07-19T15:57:57-0700
+date: 2019-08-06
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Mail defines a platform-independent and protocol-independent
