@@ -3,8 +3,8 @@ When creating a specification project release review, create two PRs with the co
 
 Include the following in PR#1:
 - [ ] A directory in the form wombat/x.y where x.y is the release major.minor version, and the directory contains the following.
-- [ ] Specification PDF in the form of wombat_x.y.pdf
-- [ ] Specification HTML in the form of wombat_x.y.html
+- [ ] Specification PDF in the form of wombat-spec-x.y.pdf
+- [ ] Specification HTML in the form of wombat-spec-x.y.html
 - [ ] A specification page named _index.md following the template at:
       https://github.com/jakartaee/specification-committee/blob/master/spec_page_template.md
 - [ ] For a Progress Review, that sufficient progress has been made on
