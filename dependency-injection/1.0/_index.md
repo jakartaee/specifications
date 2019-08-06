@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Depdency Injection 1.0"
-date: 2019-07-27
+title: "Jakarta Dependency Injection 1.0"
+date: 2019-08-06
 summary: "Final for Jakarta EE 8"
 ---
 
