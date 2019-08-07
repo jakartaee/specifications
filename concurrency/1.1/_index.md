@@ -49,4 +49,4 @@ The Plan Review Specification Committee Ballot concluded successfully on 2019-09
 
 # Compatible Implementations
 
-* Eclipse GlassFish 5.1
+* [Eclipse GlassFish 5.1](https://www.eclipse.org/downloads/download.php?file=/glassfish/glassfish-5.1.0.zip)
