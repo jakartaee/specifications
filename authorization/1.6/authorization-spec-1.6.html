@@ -530,8 +530,8 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta Authorization Team, https://projects.eclipse.org/projects/ee4j.jacc</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jacc-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jacc-dev</a></span><br>
 <span id="revnumber"> 1.6.2,</span>
-<span id="revdate">July 25, 2019</span>
-<br><span id="revremark">Final</span>
+<span id="revdate">August 07, 2019</span>
+<br><span id="revremark">Release</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -554,10 +554,13 @@ table.CodeRay td.code>pre{padding:0}
 
 Version: 1.6.2
 
-Status: Final
+Status: Release
 
-Release: July 25, 2019</pre>
+Release: August 07, 2019</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Copyright (c) 2019 Eclipse Foundation.</p>
 </div>
 </div>
 </div>
@@ -645,7 +648,10 @@ remain with copyright holders.</p>
 <h2 id="specification-scope"><a class="anchor" href="#specification-scope"></a>1. Specification Scope</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Jakarta Authorization defines the installation and configuration of authorization providers for use by containers. The specification defines the interfaces that a provider must make available to allow container deployment tools to create and manage permission collections corresponding to roles.</p>
+<p>Jakarta Authorization defines a low-level SPI for authorization modules, which are repositories of permissions
+facilitating subject based security by determining whether a given subject has a given permission, and algorithms
+to transform security constraints for specific containers (such as Jakarta Servlet or Jakarta Enterprise Beans) into
+these permissions.</p>
 </div>
 </div>
 </div>
