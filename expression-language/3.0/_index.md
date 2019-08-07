@@ -5,8 +5,8 @@ summary: "First release for Jakarta EE 8"
 ---
 Jakarta Expression Language defines an expression language for Java applications.
 
-* [Jakarta Expression Language 3.0 Specification Document](./expression-language_3.0.pdf) (PDF)
-* [Jakarta Expression Language 3.0 Specification Document](./expression-language_3.0.html) (HTML)
+* [Jakarta Expression Language 3.0 Specification Document](./expression-language-spec-3.0.pdf) (PDF)
+* [Jakarta Expression Language 3.0 Specification Document](./expression-language-spec-3.0.html) (HTML)
 * [Jakarta Expression Language 3.0 Javadoc](./apidocs)
 * [Jakarta Expression Language 3.0 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-expression-language-tck-3.0.0.zip)
 * Maven coordinates
