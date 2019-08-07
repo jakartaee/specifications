@@ -1,7 +1,7 @@
 <!-- Template for the root page of a specification release -->
 ---
 title: "Jakarta Concurrency 1.1"
-date: 2019-07-17T22:03:40+0100
+date: 2019-07-17
 summary: "Jakarta EE 8 Release."
 ---
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
@@ -9,7 +9,7 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 * [Jakarta Concurrency 1.1 Specification Document](./concurrency_1.1.pdf) (PDF)
 * [Jakarta Concurrency 1.1 Specification Document](./concurrency_1.1.html) (HTML)
 * [Jakarta Concurrency 1.1 Javadoc](./apidocs)
-* [Jakarta Concurrency 1.1 TCK](http://downloads.eclipse.org/jakarta/concurrency/1.1/concurrency_tck_1.1.zip)
+* [Jakarta Concurrency 1.1 TCK](http://downloads.eclipse.org/jakarta/concurrency/1.1/concurrency-tck-1.0.0.zip)
 * Maven coordinates
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:jar:1.1.2](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/1.1.2/jar)
 
