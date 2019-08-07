@@ -9,6 +9,7 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 * [Jakarta Dependency Injection 1.0 Specification Document](./injection-spec-1.0.pdf) (PDF)
 * [Jakarta Dependency Injection 1.0 Specification Document](./injection-spec-1.0.html) (HTML)
 * [Jakarta Dependency Injection 1.0 Javadoc](./apidocs)
+* [Jakarta Dependency Injection 1.0 TCK](https://download.eclipse.org/jakartaee/dependency-injection/1.0/jakarta.inject-tck-1.0-bin.zip)
 * Maven coordinates
   * [jakarta.inject:jakarta.inject-api:jar:1.0](https://search.maven.org/artifact/jakarta.inject/jakarta.inject-api/1.0/jar)
 
