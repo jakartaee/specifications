@@ -1,10 +1,10 @@
 ---
 title: "Jakarta Persistence Specification 2.2"
-date: 2019-07-19T21:45:02+0200
+date: 2019-07-19
 summary: "First release for Jakarta EE 8"
 ---
-The Jakarta Persistence API is the Java(R) API for the management of persistence
-and object/relational mapping in Jakarta EE and Java SE environments.
+Jakarta Persistence defines a standard for management of persistence
+and object/relational mapping in Java(R) environments.
 
 * [Jakarta Persistence 2.2 Specification Document](./persistence_2.2.pdf) (PDF)
 * [Jakarta Persistence 2.2 Specification Document](./persistence_2.2.html) (HTML)
@@ -33,4 +33,4 @@ and object/relational mapping in Jakarta EE and Java SE environments.
 
 # Compatible Implementations
 
-* EclipseLink 2.7.4
+* [EclipseLink 2.7.4](https://www.eclipse.org/eclipselink)
