@@ -11,9 +11,9 @@ into a Jakarta Servlet.
 * [Jakarta Server Pages 2.3 Specification Document](./pages-spec-2.3.pdf) (PDF)
 * [Jakarta Server Pages 2.3 Specification Document](./pages-spec-2.3.html) (HTML)
 * [Jakarta Server Pages 2.3 Javadoc](./apidocs)
-* [Jakarta Server Pages 2.3 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-pages-tck-2.3.0.zip)
+* [Jakarta Server Pages 2.3 TCK](https://download.eclipse.org/jakartaee/pages/2.3/eclipse-pages-tck-2.3.0.zip)
 * Maven coordinates
-  * [jakarta.servlet.jsp:jakarta.servlet.jsp-api:jar:2.3.6](https://search.maven.org/artifact/jakarta.jakarta.servlet.jsp/jakarta.jakarta.servlet.jsp-api/2.3.6/jar)
+  * [jakarta.servlet.jsp:jakarta.servlet.jsp-api:jar:2.3.6](https://search.maven.org/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/2.3.6/jar)
 
 # Ballots
 
