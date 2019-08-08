@@ -31,4 +31,4 @@ following the Representational State Transfer (REST) architectural pattern.
 
 # Compatible Implementations
 
-[Eclipse Jersey 2.29](https://projects.eclipse.org/projects/ee4j.jersey)
+[Eclipse Jersey 2.28](https://projects.eclipse.org/projects/ee4j.jersey)
