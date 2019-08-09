@@ -4,10 +4,10 @@ date: 2019-07-30
 summary: "Initial release of Managed Beans 1.0 for Jakarta EE 8"
 ---
 Jakarta Managed Beans defines a set of basic services for container-managed objects
-with minimal requirements, otherwise known under the acronym "POJOs" (Plain Old Java Objects).
+with minimal requirements, otherwise known under the acronym POJOs (Plain Old Java Objects).
 
-* [Jakarta Managed Beans 1.0 Specification Document](./ManagedBeans-spec-1.0.pdf) (PDF)
-* [Jakarta Managed Beans 1.0 Specification Document](./ManagedBeans-spec-1.0.html) (HTML)
+* [Jakarta Managed Beans 1.0 Specification Document](./managedbeans-spec-1.0.pdf) (PDF)
+* [Jakarta Managed Beans 1.0 Specification Document](./managedbeans-spec-1.0.html) (HTML)
 * Jakarta Managed Beans 1.0 Javadoc - N/A (covered by Jakarta Annotations)
 * Jakarta Managed Beans 1.0 TCK - N/A  (covered by Jakarta EE Platform TCK)
 * Maven coordinates (provided by Jakarta Annotations)
