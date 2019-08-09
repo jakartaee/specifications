@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Annotations 1.3"
-date: 2019-08-01T11:00:00+0100
+date: 2019-08-09
 summary: "Draft for Jakarta EE 8"
 ---
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that
