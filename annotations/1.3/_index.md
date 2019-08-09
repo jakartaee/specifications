@@ -9,7 +9,7 @@ enable a declarative style of programming that applies across a variety of Java 
 * [Jakarta Annotations 1.3 Specification Document](./annotations-spec-1.3.pdf) (PDF)
 * [Jakarta Annotations 1.3 Specification Document](./annotations-spec-1.3.html) (HTML)
 * [Jakarta Annotations 1.3 Javadoc](./apidocs)
-* [Jakarta Annotations 1.3 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-annotations-tck-1.3.0.zip)
+* [Jakarta Annotations 1.3 TCK](http://download.eclipse.org/jakartaee/annotations/1.3/annotations-tck-1.3.0.zip)
 * Maven coordinates
   * [jakarta.annotation:jakarta.annotation-api:jar:1.3.5](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/1.3.5/jar)
 
@@ -31,4 +31,4 @@ enable a declarative style of programming that applies across a variety of Java 
 
 # Compatible Implementations
 
-* [Eclipse GlassFish 5.1](https://eclipse-ee4j.github.io/glassfish/)
+* [Jakarta Annotations](https://eclipse-ee4j.github.io/common-annotations-api/)
