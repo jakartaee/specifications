@@ -1,6 +1,6 @@
 ---
 title: "Jakarta JSON Binding Specification 1.0"
-date: 2019-07-19T11:00:00+0100
+date: 2019-08-10
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta JSON Binding defines a binding framework for converting Java(R) objects to and from JSON documents.
