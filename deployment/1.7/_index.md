@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Deployment Specification 1.7"
-date: 2019-07-30T10:00:00+0100
+date: 2019-08-10
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Deployment defines standard APIs that will enable any deployment tool that uses the
@@ -9,6 +9,7 @@ deployment APIs to deploy any assembled application onto a Jakarta EE compatible
 * [Jakarta Deployment 1.7 Specification Document](./deployment-spec-1.7.pdf) (PDF)
 * [Jakarta Deployment 1.7 Specification Document](./deployment-spec-1.7.html) (HTML)
 * [Jakarta Deployment 1.7 Javadoc](./apidocs)
+* [Jakarta Deployment 1.7 TCK](http://download.eclipse.org/jakartaee/platform/8.0/eclipse-jakartaeetck-8.0.0.zip)
 * Maven coordinates
   * [jakarta.enterprise.deployment:jakarta.enterprise.deploy-api:jar:1.7.2](https://search.maven.org/artifact/jakarta.enterprise.deployment/jakarta.enterprise.deploy-api/1.7.2/jar)
 
