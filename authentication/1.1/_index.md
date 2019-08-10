@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Authentication Specification 1.1"
-date: 2019-07-22T13:45:02+0200
+date: 2019-08-10
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Authentication defines a general low-level SPI for authentication mechanisms, which are controllers
@@ -10,9 +10,10 @@ and pass an authenticated identity (such as name and groups) to the container.
 Jakarta Authentication consists of several profiles, with each profile telling how a specific container
 (such as Jakarta Servlet) can integrate with- and adapt to this SPI.
 
-* [Jakarta Authentication 1.1 Specification Document](./authentication_1.1.pdf) (PDF)
-* [Jakarta Authentication 1.1 Specification Document](./authentication_1.1.html) (HTML)
+* [Jakarta Authentication 1.1 Specification Document](./authentication-spec-1.1.pdf) (PDF)
+* [Jakarta Authentication 1.1 Specification Document](./authentication-spec-1.1.html) (HTML)
 * [Jakarta Authentication 1.1 Javadoc](./apidocs)
+* [Jakarta Authentication 1.1 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-authentication-tck-1.1.0.zip)
 * Maven coordinates
   * [jakarta.security.auth.message:jakarta.security.auth.message-api:jar:1.1.3](https://search.maven.org/artifact/jakarta.security.auth.message/jakarta.security.auth.message-api/1.1.3/jar)
 
@@ -36,4 +37,4 @@ Jakarta Authentication consists of several profiles, with each profile telling h
 
 # Compatible Implementations
 
-* GlassFish 5.1
+* [Eclipse GlassFish 5.1](https://eclipse-ee4j.github.io/glassfish)

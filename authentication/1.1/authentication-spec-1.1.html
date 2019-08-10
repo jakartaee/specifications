@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
 <meta name="author" content="Jakarta Authentication Team, https://projects.eclipse.org/projects/ee4j.jaspic">
-<title>Jakarta Authentication 1.1</title>
+<title>Jakarta Authentication</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -525,12 +525,12 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Jakarta Authentication 1.1</h1>
+<h1>Jakarta Authentication</h1>
 <div class="details">
 <span id="author" class="author">Jakarta Authentication Team, https://projects.eclipse.org/projects/ee4j.jaspic</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jaspic-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jaspic-dev</a></span><br>
 <span id="revnumber"> 1.1.3,</span>
-<span id="revdate">July 25, 2019</span>
+<span id="revdate">August 10, 2019</span>
 <br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
@@ -550,13 +550,13 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre>Specification: Jakarta Authentication 1.1
+<pre>Specification: Jakarta Authentication
 
 Version: 1.1.3
 
 Status: Final
 
-Release: July 25, 2019</pre>
+Release: August 10, 2019</pre>
 </div>
 </div>
 </div>
@@ -644,14 +644,22 @@ remain with copyright holders.</p>
 <div class="sect1">
 <h2 id="specification-scope"><a class="anchor" href="#specification-scope"></a>1. Specification Scope</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Jakarta Authentication defines a general low-level SPI for authentication mechanisms, which are controllers
+that interact with a caller and a container&#8217;s environment to obtain the caller&#8217;s credentials, validate these,
+and pass an authenticated identity (such as name and groups) to the container.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta Authentication consists of several profiles, with each profile telling how a specific container
+(such as Jakarta Servlet) can integrate with- and adapt to this SPI.</p>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
  1.1.3<br>
-Last updated 2019-07-14 14:54:31 +0200
+Last updated 2019-08-10 19:36:19 +0200
 </div>
 </div>
 </body>
