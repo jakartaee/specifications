@@ -1,12 +1,12 @@
 ---
 title: "Jakarta Batch Specification 1.0"
-date: 2019-08-02
+date: 2019-08-11
 summary: "First release for Jakarta EE 8"
 ---
-Jakarta Batch
+Jakarta Batch specifies a Java API plus an XML-based job specification language (JSL), which lets you compose batch jobs in XML from reusable Java application artifacts and conveniently parameterize different executions of a single job.
 
-* [Jakarta Batch 1.0 Specification Document](./batch_1.0.pdf) (PDF)
-* [Jakarta Batch 1.0 Specification Document](./batch_1.0.html) (HTML)
+* [Jakarta Batch 1.0 Specification Document](./batch-spec-1.0.pdf) (PDF)
+* [Jakarta Batch 1.0 Specification Document](./batch-spec-1.0.html) (HTML)
 * [Jakarta Batch 1.0 Javadoc](./apidocs)
 * [Jakarta Batch 1.0 TCK](https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-1.0.2.zip)
 * Maven coordinates
