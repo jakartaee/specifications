@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Authorization 1.6"
-date: 2019-08-07
+date: 2019-08-12
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Authorization defines a low-level SPI for authorization modules, which are repositories of permissions 
