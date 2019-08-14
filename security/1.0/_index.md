@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Security Specification 1.0"
+title: "Jakarta Security 1.0"
 date: 2019-08-12
 summary: "First release for Jakarta EE 8"
 ---
