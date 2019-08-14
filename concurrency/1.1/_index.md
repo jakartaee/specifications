@@ -5,8 +5,8 @@ summary: "Jakarta EE 8 Release."
 ---
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
 
-* [Jakarta Concurrency 1.1 Specification Document](./concurrency_1.1.pdf) (PDF)
-* [Jakarta Concurrency 1.1 Specification Document](./concurrency_1.1.html) (HTML)
+* [Jakarta Concurrency 1.1 Specification Document](./concurrency-spec-1.1.pdf) (PDF)
+* [Jakarta Concurrency 1.1 Specification Document](./concurrency-spec-1.1.html) (HTML)
 * [Jakarta Concurrency 1.1 Javadoc](./apidocs)
 * [Jakarta Concurrency 1.1 TCK](https://download.eclipse.org/jakartaee/concurrency/1.1/eclipse-concurrency-tck-1.1.0.zip)
 * Maven coordinates
