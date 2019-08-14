@@ -10,7 +10,7 @@ other than the Java programming language, can be debugged with references to
 the original source (for example, source file and line number references).
 
 * [Jakarta Debugging Support for Other Languages 1.0 Specification Document](./debugging_1.0.pdf) (PDF)
-* [Jakarta Debugging Support for Other Language 1.0 Specification Document](./debugging_1.0.html) (HTML)
+* [Jakarta Debugging Support for Other Languages 1.0 Specification Document](./debugging_1.0.html) (HTML)
 * [Jakarta Debugging Support for Other Languages TCK](https://download.eclipse.org/jakartaee/debugging/1.0/eclipse-debugging-tck-1.0.0.zip)
 
 # Ballots
