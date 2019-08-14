@@ -13,7 +13,7 @@ Jakarta Authentication consists of several profiles, with each profile telling h
 * [Jakarta Authentication 1.1 Specification Document](./authentication-spec-1.1.pdf) (PDF)
 * [Jakarta Authentication 1.1 Specification Document](./authentication-spec-1.1.html) (HTML)
 * [Jakarta Authentication 1.1 Javadoc](./apidocs)
-* [Jakarta Authentication 1.1 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-authentication-tck-1.1.0.zip)
+* [Jakarta Authentication 1.1 TCK](https://download.eclipse.org/jakartaee/authentication/1.1/jakarta-authentication-tck-1.1.0.zip)
 * Maven coordinates
   * [jakarta.security.auth.message:jakarta.security.auth.message-api:jar:1.1.3](https://search.maven.org/artifact/jakarta.security.auth.message/jakarta.security.auth.message-api/1.1.3/jar)
 
