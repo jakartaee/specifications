@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Messaging 2.0"
-date: 2019-07-19T15:57:57-0700
+date: 2019-07-19
 summary: "Final release for Jakarta EE 8"
 ---
 
