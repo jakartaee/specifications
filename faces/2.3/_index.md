@@ -10,7 +10,7 @@ support for internationalization and accessibility.
 * [Jakarta Server Faces 2.3 Specification Document](./faces-spec-2.3.pdf) (PDF)
 * [Jakarta Server Faces 2.3 Specification Document](./faces-spec-2.3.html) (HTML)
 * [Jakarta Server Faces 2.3 Javadoc](./apidocs)
-* [Jakarta Server Faces 2.3 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-faces-tck-2.3.0.zip)
+* [Jakarta Server Faces 2.3 TCK](https://download.eclipse.org/jakartaee/faces/2.3/jakarta-faces-tck-2.3.0.zip)
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:2.3.2](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/2.3.2/jar)
 
