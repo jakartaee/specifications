@@ -11,7 +11,7 @@ these permissions.
 * [Jakarta Authorization 1.6 Specification Document](./authorization-spec-1.6.pdf) (PDF)
 * [Jakarta Authorization 1.6 Specification Document](./authorization-spec-1.6.html) (HTML)
 * [Jakarta Authorization 1.6 Javadoc](./apidocs)
-* [Jakarta Authorization 1.6 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-authorization-tck-1.5.0.zip)
+* [Jakarta Authorization 1.6 TCK](https://download.eclipse.org/jakartaee/authorization/1.5/jakarta-authorization-tck-1.5.0.zip)
 * Maven coordinates
   * [jakarta.security.jacc:jakarta.security.jacc-api:jar:1.6.2](https://search.maven.org/artifact/jakarta.security.jacc/jakarta.security.jacc-api/1.6.2/jar)
 
