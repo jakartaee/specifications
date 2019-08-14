@@ -31,4 +31,4 @@ operations, and parameters of the Jakarta EE Platform components.
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 5.1](https://www.eclipse.org/downloads/download.php?file=/glassfish/glassfish-5.1.0.zip)
+* [Eclipse Glassfish 5.1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
