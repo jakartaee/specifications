@@ -8,7 +8,7 @@ Jakarta Security defines a standard for creating secure Jakarta EE applications 
 * [Jakarta Security 1.0 Specification Document](./security-spec-1.0.pdf) (PDF)
 * [Jakarta Security 1.0 Specification Document](./security-spec-1.0.html) (HTML)
 * [Jakarta Security 1.0 Javadoc](./apidocs)
-* [Jakarta Security 1.0 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-security-tck-1.0.0.zip)
+* [Jakarta Security 1.0 TCK](https://download.eclipse.org/jakartaee/security/1.0/jakarta-security-tck-1.0.0.zip)
 * Maven coordinates
   * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:1.0.2](https://search.maven.org/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/1.0.2/jar)
 
