@@ -1,6 +1,6 @@
 ---
 title: "Jakarta WebSocket 1.1"
-date: 2019-08-12
+date: 2019-08-16
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta WebSocket defines a API for Server and Client Endpoints
