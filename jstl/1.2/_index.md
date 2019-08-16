@@ -24,15 +24,15 @@ The Release Review Specification Committee Ballot concluded successfully on 2019
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                | &check; |         |          |
-|IBM                    | &check; |         |          |
-|Oracle                 | &check; |         |          |
-|Payara                 | &check; |         |          |
-|Red Hat                | &check; |         |          |
-|Tomitribe              | &check; |         |          |
-|EE4J PMC               | &check; |         |          |
-|Participant Members    |         | &check; |          |
-|Committer Members      | &check; |         |          |
+|Fujitsu                |         |         |          |
+|IBM                    |         |         |          |
+|Oracle                 |         |         |          |
+|Payara                 |         |         |          |
+|Red Hat                |         |         |          |
+|Tomitribe              |         |         |          |
+|EE4J PMC               |         |         |          |
+|Participant Members    |         |         |          |
+|Committer Members      |         |         |          |
 
 ## Plan Review
 
@@ -40,15 +40,15 @@ The Plan Review Specification Committee Ballot concluded successfully on 2019-09
 
 |                       |  Yes    | No  | Abstain  |
 |-----------------------|---------|-----|----------|
-|Fujitsu                | &check; |     |          |
-|IBM                    | &check; |     |          |
-|Oracle                 | &check; |     |          |
-|Payara                 | &check; |     |          |
-|Red Hat                | &check; |     |          |
-|Tomitribe              | &check; |     |          |
-|EE4J PMC               | &check; |     |          |
-|Participant Members    | &check; |     |          |
-|Committer Members      | &check; |     |          |
+|Fujitsu                |         |     |          |
+|IBM                    |         |     |          |
+|Oracle                 |         |     |          |
+|Payara                 |         |     |          |
+|Red Hat                |         |     |          |
+|Tomitribe              |         |     |          |
+|EE4J PMC               |         |     |          |
+|Participant Members    |         |     |          |
+|Committer Members      |         |     |          |
 
 # Compatible Implementations
 
