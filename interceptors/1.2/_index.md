@@ -33,4 +33,4 @@ and other managed classes.
 
 # Compatible Implementations
 
-* [Eclipse GlassFish 5.1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+* [Eclipse GlassFish 5.1](https://eclipse-ee4j.github.io/glassfish/download)
