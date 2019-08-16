@@ -1,16 +1,16 @@
 ---
-title: "Jakarta Web Profile Spec 8"
+title: "Jakarta EE Web Profile Spec 8"
 date: 2019-07-18
-summary: "Initial release of the Jakarta EE 8 WebProfile"
+summary: "Initial release of the Jakarta EE 8 Web Profile"
 ---
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
 
-* [Jakarta EE Web Profile 8 Specification Document](./WebProfile-spec-8.pdf) (PDF)
-* [Jakarta EE Web Profile 8 Specification Document](./WebProfile-spec-8.html) (HTML)
+* [Jakarta EE Web Profile 8 Specification Document](./webprofile-spec-8.pdf) (PDF)
+* [Jakarta EE Web Profile 8 Specification Document](./webprofile-spec-8.html) (HTML)
 * [Jakarta EE Web Profile 8 Javadoc](./apidocs)
-* Jakarta EE Web Profile 8 TCK - TBD
+* [Jakarta EE Web Profile 8 TCK](https://download.eclipse.org/jakartaee/platform/8.0/eclipse-jakartaeetck-8.0.0.zip)
 * Maven coordinates
-  * TBD
+  * [jakarta.platform:jakarta.jakartaee-web-api:jar:8.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/8.0/jar)
 
 # Ballots
 
@@ -32,4 +32,4 @@ The Release Review Specification Committee Ballot concluded successfully on 2019
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 5.1](https://www.eclipse.org/downloads/download.php?file=/glassfish/glassfish-5.1.0.zip)
+* [Eclipse Glassfish 5.1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
