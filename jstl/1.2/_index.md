@@ -9,8 +9,8 @@ Jakarta Standard Tag Library has support for common, structural tasks such as it
 for manipulating XML documents, internationalization tags, and SQL tags. It also provides a framework for integrating
 existing custom tags with Jakarta Standard Tag Library tags.
 
-* [Jakarta Standard Tag Library 1.2 Specification Document](./jstl_1.2.pdf) (PDF)
-* [Jakarta Standard Tag Library 1.2 Specification Document](./jstl_1.2.html) (HTML)
+* [Jakarta Standard Tag Library 1.2 Specification Document](./jstl-1.2-spec.pdf) (PDF)
+* [Jakarta Standard Tag Library 1.2 Specification Document](./jstl-1.2-spec.html) (HTML)
 * [Jakarta Standard Tag Library 1.2 Javadoc](./apidocs)
 * [Jakarta Standard Tag TCK](http://downloads.eclipse.org/jakarta/stl/1.2/jstl_tck_1.2.zip)
 * Maven coordinates
@@ -52,5 +52,4 @@ The Plan Review Specification Committee Ballot concluded successfully on 2019-09
 
 # Compatible Implementations
 
-* Apache Marsupials 5.7
-* Eclipse Vombatidae 9.1.1
+* [Eclipse GlassFish 5.1](https://eclipse-ee4j.github.io/glassfish/)
