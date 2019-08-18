@@ -1,8 +1,7 @@
 <!-- Template for the root page of a specification release -->
 ---
 title: "Jakarta Standard Tag Library Spec 1.2"
-date: 2019-07-18T16:10:38-04:00 
-summary: ""
+summary: "First release for Jakarta EE 8"
 ---
 Jakarta Standard Tag Library encapsulates as simple tags the core functionality common to many Web applications.
 Jakarta Standard Tag Library has support for common, structural tasks such as iteration and conditionals, tags
@@ -12,7 +11,7 @@ existing custom tags with Jakarta Standard Tag Library tags.
 * [Jakarta Standard Tag Library 1.2 Specification Document](./jstl-1.2-spec.pdf) (PDF)
 * [Jakarta Standard Tag Library 1.2 Specification Document](./jstl-1.2-spec.html) (HTML)
 * [Jakarta Standard Tag Library 1.2 Javadoc](./apidocs)
-* [Jakarta Standard Tag TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8/promoted/tags-tck-1.2.0.zip)
+* [Jakarta Standard Tag TCK](https://download.eclipse.org/jakartaee/jstl/1.2/jstl-tck-1.2.0.zip)
 * Maven coordinates
   * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:1.2](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/1.2/jar)
 
@@ -33,22 +32,6 @@ The Release Review Specification Committee Ballot concluded successfully on 2019
 |EE4J PMC               |         |         |          |
 |Participant Members    |         |         |          |
 |Committer Members      |         |         |          |
-
-## Plan Review
-
-The Plan Review Specification Committee Ballot concluded successfully on 2019-09-31 with the following results.
-
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                |         |     |          |
-|IBM                    |         |     |          |
-|Oracle                 |         |     |          |
-|Payara                 |         |     |          |
-|Red Hat                |         |     |          |
-|Tomitribe              |         |     |          |
-|EE4J PMC               |         |     |          |
-|Participant Members    |         |     |          |
-|Committer Members      |         |     |          |
 
 # Compatible Implementations
 
