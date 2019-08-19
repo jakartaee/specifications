@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Authorization 1.6"
-date: 2019-08-12
+title: "Jakarta Authorization 1.5"
+date: 2019-08-19
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Authorization defines a low-level SPI for authorization modules, which are repositories of permissions 
@@ -8,12 +8,12 @@ facilitating subject based security by determining whether a given subject has a
 to transform security constraints for specific containers (such as Jakarta Servlet or Jakarta Enterprise Beans) into 
 these permissions.
 
-* [Jakarta Authorization 1.6 Specification Document](./authorization-spec-1.6.pdf) (PDF)
-* [Jakarta Authorization 1.6 Specification Document](./authorization-spec-1.6.html) (HTML)
-* [Jakarta Authorization 1.6 Javadoc](./apidocs)
-* [Jakarta Authorization 1.6 TCK](https://download.eclipse.org/jakartaee/authorization/1.5/jakarta-authorization-tck-1.5.0.zip)
+* [Jakarta Authorization 1.5 Specification Document](./authorization-spec-1.5.pdf) (PDF)
+* [Jakarta Authorization 1.5 Specification Document](./authorization-spec-1.5.html) (HTML)
+* [Jakarta Authorization 1.5 Javadoc](./apidocs)
+* [Jakarta Authorization 1.5 TCK](https://download.eclipse.org/jakartaee/authorization/1.5/jakarta-authorization-tck-1.5.0.zip)
 * Maven coordinates
-  * [jakarta.security.jacc:jakarta.security.jacc-api:jar:1.6.2](https://search.maven.org/artifact/jakarta.security.jacc/jakarta.security.jacc-api/1.6.2/jar)
+  * [jakarta.authorization:jakarta.authorization-api:jar:1.5.0](https://search.maven.org/artifact/jakarta.authorization/jakarta.authorization-api/1.5.0/jar)
 
 # Ballots
 
