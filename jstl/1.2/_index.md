@@ -1,6 +1,7 @@
 <!-- Template for the root page of a specification release -->
 ---
 title: "Jakarta Standard Tag Library Spec 1.2"
+date: 2019-07-18
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Standard Tag Library encapsulates as simple tags the core functionality common to many Web applications.
@@ -11,7 +12,7 @@ existing custom tags with Jakarta Standard Tag Library tags.
 * [Jakarta Standard Tag Library 1.2 Specification Document](./jstl-1.2-spec.pdf) (PDF)
 * [Jakarta Standard Tag Library 1.2 Specification Document](./jstl-1.2-spec.html) (HTML)
 * [Jakarta Standard Tag Library 1.2 Javadoc](./apidocs)
-* [Jakarta Standard Tag TCK](https://download.eclipse.org/jakartaee/jstl/1.2/jstl-tck-1.2.0.zip)
+* [Jakarta Standard Tag Library TCK](https://download.eclipse.org/jakartaee/tags/1.2/eclipse-tags-tck-1.2.0.zip)
 * Maven coordinates
   * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:1.2](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/1.2/jar)
 
