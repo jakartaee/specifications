@@ -530,7 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta EE Platform Team, https://projects.eclipse.org/projects/ee4j.jakartaee-platform</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev</a></span><br>
 <span id="revnumber"> 8,</span>
-<span id="revdate">August 16, 2019</span>
+<span id="revdate">August 21, 2019</span>
 <br><span id="revremark">Final Release</span>
 </div>
 <div id="toc" class="toc2">
@@ -979,8 +979,8 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#profile-definition">9.2. Profile Definition</a></li>
 <li><a href="#general-rules-for-profiles">9.3. General Rules for Profiles</a></li>
 <li><a href="#expression-of-requirements">9.4. Expression of Requirements</a></li>
-<li><a href="#a3240">9.5. Requirements for All Java EE Profiles</a></li>
-<li><a href="#optional-features-for-java-ee-profiles">9.6. Optional Features for Java EE Profiles</a></li>
+<li><a href="#a3240">9.5. Requirements for All Jakarta EE Profiles</a></li>
+<li><a href="#optional-features-for-jakarta-ee-profiles">9.6. Optional Features for Jakarta EE Profiles</a></li>
 <li><a href="#a3252">9.7. Full Jakarta™ EE Product Requirements</a></li>
 </ul>
 </li>
@@ -1042,40 +1042,14 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#revision-history">Appendix B: Revision History</a>
 <ul class="sectlevel2">
-<li><a href="#changes-in-early-draft">B.1. Changes in Early Draft</a>
+<li><a href="#changes-in-final-release-draft">B.1. Changes in Final Release Draft</a>
 <ul class="sectlevel3">
-<li><a href="#additional-requirements-2">B.1.1. Additional Requirements</a></li>
-<li><a href="#editorial-changes">B.1.2. Editorial Changes</a></li>
-</ul>
-</li>
-<li><a href="#changes-in-early-draft-2">B.2. Changes in Early Draft 2</a>
-<ul class="sectlevel3">
-<li><a href="#additional-requirements-3">B.2.1. Additional Requirements</a></li>
-<li><a href="#removed-requirements">B.2.2. Removed Requirements</a></li>
-<li><a href="#editorial-changes-2">B.2.3. Editorial Changes</a></li>
-</ul>
-</li>
-<li><a href="#changes-in-public-review-draft">B.3. Changes in Public Review Draft</a>
-<ul class="sectlevel3">
-<li><a href="#additional-requirements-4">B.3.1. Additional Requirements</a></li>
-<li><a href="#editorial-changes-3">B.3.2. Editorial Changes</a></li>
-</ul>
-</li>
-<li><a href="#changes-in-proposed-final-draft">B.4. Changes in Proposed Final Draft</a>
-<ul class="sectlevel3">
-<li><a href="#additional-requirements-5">B.4.1. Additional Requirements</a></li>
-<li><a href="#editorial-changes-4">B.4.2. Editorial Changes</a></li>
-</ul>
-</li>
-<li><a href="#changes-in-final-release-draft">B.5. Changes in Final Release Draft</a>
-<ul class="sectlevel3">
-<li><a href="#additional-requirements-6">B.5.1. Additional Requirements</a></li>
-<li><a href="#editorial-changes-5">B.5.2. Editorial Changes</a></li>
+<li><a href="#editorial-changes">B.1.1. Editorial Changes</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#related-documents">Appendix C: Related Documents</a></li>
+<li><a href="#relateddocs">Appendix C: Related Documents</a></li>
 </ul>
 </div>
 </div>
@@ -1090,7 +1064,7 @@ Version: 8
 
 Status: Final Release
 
-Release: August 16, 2019</pre>
+Release: August 21, 2019</pre>
 </div>
 </div>
 </div>
@@ -4217,7 +4191,7 @@ the Jakarta EE platform must ensure that the resource access is included as part
 of the transaction defined by the Jakarta Transactions specification.</p>
 </li>
 <li>
-<p>If a web component creates a thread, the Java EE platform must ensure that the
+<p>If a web component creates a thread, the Jakarta EE platform must ensure that the
 newly created thread is not associated with any transaction defined by the
 Jakarta Transactions specification.</p>
 </li>
@@ -10322,7 +10296,7 @@ POPT <sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_foo
 <td class="tableblock halign-left valign-top"><p class="tableblock">REQ</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Concurrency Utilities for Java EE 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Concurrency Utilities 1.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
@@ -14623,13 +14597,13 @@ specification and in other specifications.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter describes the requirements
-common to all Java EE profiles. It does not define any concrete
+common to all Jakarta&#8482; EE profiles. It does not define any concrete
 profiles, delegating this task to separate specifications.</p>
 </div>
 <div class="paragraph">
-<p>The Java EE Web Profile Specification,
+<p>The Jakarta EE Web Profile Specification,
 published in conjunction with the present specification, defines the
-first Java EE profile, the Web Profile.</p>
+first Jakarta EE profile, the Web Profile.</p>
 </div>
 <div class="paragraph">
 <p>The definition of other profiles is left to
@@ -14638,7 +14612,7 @@ future specifications.</p>
 <div class="sect2">
 <h3 id="introduction-3"><a class="anchor" href="#introduction-3"></a>9.1. Introduction</h3>
 <div class="paragraph">
-<p>A Java EE profile (from now on, simply “a
+<p>A Jakarta EE profile (from now on, simply “a
 profile”) represents a configuration of the platform suited to a
 particular class of applications.</p>
 </div>
@@ -14651,8 +14625,8 @@ not generally useful in a particular domain.</p>
 <div class="paragraph">
 <p>A profile may also add one or more
 technologies which are not present in the platform itself. For example,
-a hypothetical Java EE Portal Profile would likely include the Portlet
-API (JSR-286).</p>
+a hypothetical Jakarta EE Portal Profile would likely include the Portlet
+API (JSR-362).</p>
 </div>
 <div class="paragraph">
 <p>Additionally, a profile may tag certain
@@ -14662,8 +14636,8 @@ they do, they need to obey all the relevant requirements mandated by the
 profile specification.</p>
 </div>
 <div class="paragraph">
-<p>A product may implement two or more Java EE
-profiles, or the full platform and one or more Java EE profiles, as long
+<p>A product may implement two or more Jakarta EE
+profiles, or the full platform and one or more Jakarta EE profiles, as long
 as their combined requirements do not give rise to conflicts.</p>
 </div>
 </div>
@@ -14671,25 +14645,25 @@ as their combined requirements do not give rise to conflicts.</p>
 <h3 id="profile-definition"><a class="anchor" href="#profile-definition"></a>9.2. Profile Definition</h3>
 <div class="paragraph">
 <p>A profile is defined in accordance with the
-rules of the Java Community Process. Typically, a proposal to create a
-new profile, or to revise an existing one, will be submitted as a Java
-Specification Request (JSR). Once the JSR is approved, an expert group
-will be formed and conduct work as dictated by the process. The JSR for
-a profile must mention the version of the Java EE Platform that it
+rules of the Jakarta EE Specification Process. Typically, a proposal to create a
+new profile, or to revise an existing one, will be submitted as a Jakarta Specification
+Project. Once the Project is approved, a group of interested parties
+will be formed and conduct work as dictated by the process. The Project proposal for
+a profile must mention the version of the Jakarta EE Platform that it
 builds on. Additionally, if it builds on an existing profile, it must
 mention this fact as well.</p>
 </div>
 <div class="paragraph">
 <p>Although profiles can be created and evolved
-independently of the Java EE platform, modulo the rules contained in
+independently of the Jakarta EE platform, modulo the rules contained in
 this specification, it is envisioned that profiles will maintain a
 reasonable level of alignment with the platform itself, in order to
 avoid fragmenting the development space into progressively incompatible
 islands. To this end, a profile must build on the most recent version of
-the Java EE platform available at the time the JSR for the profile is
-approved. It is also recommended that profile expert groups go beyond
+the Jakarta EE platform available at the time the Project for the profile is
+approved. It is also recommended that profile community groups go beyond
 this requirement and, as much as it is practical, ensure that their
-profile builds on the most recent version of the Java EE platform at the
+profile builds on the most recent version of the Jakarta EE platform at the
 time the profile is finalized.</p>
 </div>
 </div>
@@ -14697,30 +14671,30 @@ time the profile is finalized.</p>
 <h3 id="general-rules-for-profiles"><a class="anchor" href="#general-rules-for-profiles"></a>9.3. General Rules for Profiles</h3>
 <div class="paragraph">
 <p>A profile must include all technologies that
-are required components of the Java EE platform or of any profiles on
+are required components of the Jakarta EE platform or of any profiles on
 which it builds. These technologies will be listed as required in the
 profile.</p>
 </div>
 <div class="paragraph">
 <p>A profile may promote to required status any
-technologies that are optional components of the Java EE platform or of
+technologies that are optional components of the Jakarta EE platform or of
 any profile on which it builds.</p>
 </div>
 <div class="paragraph">
 <p>Unless otherwise mandated by a profile, any
-technologies that are optional components of the Java EE platform, or of
+technologies that are optional components of the Jakarta EE platform, or of
 any profile on which the profile in question builds, must be optional
 components of the profile itself.</p>
 </div>
 <div class="paragraph">
 <p>A profile may include as a required or as an
-optional component any technology outside of those included in the Java
+optional component any technology outside of those included in the Jakarta
 EE platform or any profile on which it builds, as long as the
 corresponding compatibility requirements are satisfied.</p>
 </div>
 <div class="paragraph">
 <p>A profile must preserve any requirements
-defined in the Java EE platform specification, or in the specification
+defined in the Jakarta EE platform specification, or in the specification
 of any profile on which it builds, as long as the preconditions for
 those requirements are satisfied. Typically, the preconditions will
 involve the presence of one or more technologies among those included in
@@ -14729,14 +14703,14 @@ the profile. Unconditional requirements must be obeyed unconditionally.</p>
 <div class="paragraph">
 <p>A profile may add any requirements that
 pertain to one or more technologies whose inclusion it allows or
-requires. Such requirements must not conflict with those set by the Java
+requires. Such requirements must not conflict with those set by the Jakarta
 EE platform or by any profile on which the present one builds.</p>
 </div>
 <div class="paragraph">
 <p>The specification for individual technologies
 may allow for certain features of the technology in question to be
 optional. In this case, a profile may promote one or more of these
-features to required status, assuming the Java EE platform or any
+features to required status, assuming the Jakarta EE platform or any
 profile on which it builds hasn’t done so already.</p>
 </div>
 <div class="paragraph">
@@ -14787,14 +14761,14 @@ requirements.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="a3240"><a class="anchor" href="#a3240"></a>9.5. Requirements for All Java EE Profiles</h3>
+<h3 id="a3240"><a class="anchor" href="#a3240"></a>9.5. Requirements for All Jakarta EE Profiles</h3>
 <div class="paragraph">
 <p>The Java Platform, Standard Edition 8 is the
-required foundation for any Java EE 8 profile.</p>
+required foundation for any Jakarta EE 8 profile.</p>
 </div>
 <div class="paragraph">
 <p>The following technologies are required to be
-present in all Java EE profiles:</p>
+present in all Jakarta EE profiles:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -14807,7 +14781,7 @@ annotations defined by the Common Annotations specification ( <em>Resource</em>
 </div>
 <div class="paragraph">
 <p>The following functionality is required to be
-supported in all Java EE profiles:</p>
+supported in all Jakarta EE profiles:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -14815,31 +14789,29 @@ supported in all Java EE profiles:</p>
 <p>JNDI “java:” naming context (see <a href="#a607">JNDI Naming Context</a>”)</p>
 </li>
 <li>
-<p>Java Transaction API (JTA)</p>
+<p>Jakarta Transactions</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="optional-features-for-java-ee-profiles"><a class="anchor" href="#optional-features-for-java-ee-profiles"></a>9.6. Optional Features for Java EE Profiles</h3>
+<h3 id="optional-features-for-jakarta-ee-profiles"><a class="anchor" href="#optional-features-for-jakarta-ee-profiles"></a>9.6. Optional Features for Jakarta EE Profiles</h3>
 <div class="paragraph">
 <p>All the technologies listed in
 <a href="#a2136">Required APIs</a>”, and
 not designated as required in
-<a href="#a3240">Requirements for All
-Java EE Profiles</a>”, are designated as optional for use in Java EE
+<a href="#a3240">Requirements for All Jakarta EE Profiles</a>”, are designated as optional for use in Jakarta EE
 profiles.</p>
 </div>
 <div class="paragraph">
 <p>The following functionality is designated as
-optional for use in Java EE profiles:</p>
+optional for use in Jakarta EE profiles:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>RMI/IIOP interoperability requirements (see
-<a href="#a2875">OMG Protocols (Proposed
-Optional)</a>”)</p>
+<a href="#a2875">OMG Protocols (Proposed Optional)</a>”)</p>
 </li>
 <li>
 <p>Support for <em>java:comp/ORB</em> (see
@@ -14853,7 +14825,7 @@ Optional)</a>”)</p>
 <div class="paragraph">
 <p>This section defines the requirements for
 full Jakarta EE platform products. These requirements correspond to the
-full set of requirements in previous versions of the Java EE platform
+full set of requirements in previous versions of the Jakarta EE platform
 specification and update those requirements for this new version of the
 platform.</p>
 </div>
@@ -14864,8 +14836,7 @@ likely relax the requirements given here, specifically by marking as
 optional technologies that have been subject to pruning and that are
 required by the present specification. The set of technologies that have
 been made optional and/or identified as candidates for pruning is given
-in <a href="#a2331">Pruned Java
-Technologies</a>”.</p>
+in <a href="#a2331">Pruned Java Technologies</a>”.</p>
 </div>
 <div class="paragraph">
 <p>The following technologies are required:</p>
@@ -14898,7 +14869,7 @@ associated Jakarta Enterprise Beans QL, which have been made optional)</p>
 <p>Jakarta Connectors 1.7</p>
 </li>
 <li>
-<p>Jakarta XML Web Services 1.4</p>
+<p>Jakarta Enterprise Web Services 1.4</p>
 </li>
 <li>
 <p>Jakarta RESTful Web Services 2.1</p>
@@ -14937,7 +14908,7 @@ associated Jakarta Enterprise Beans QL, which have been made optional)</p>
 <p>Jakarta Standard Tag Library 1.2</p>
 </li>
 <li>
-<p>Jakarta Web Services Metadata 2.1</p>
+<p>Jakarta Web Services Metadata 1.1</p>
 </li>
 <li>
 <p>Jakarta Server Faces 2.3</p>
@@ -16114,232 +16085,19 @@ Microsystems, Inc.//DTD J2EE Application Client 1.2//EN"
 <h2 id="revision-history"><a class="anchor" href="#revision-history"></a>Appendix B: Revision History</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="changes-in-early-draft"><a class="anchor" href="#changes-in-early-draft"></a>B.1. Changes in Early Draft</h3>
+<h3 id="changes-in-final-release-draft"><a class="anchor" href="#changes-in-final-release-draft"></a>B.1. Changes in Final Release Draft</h3>
 <div class="sect3">
-<h4 id="additional-requirements-2"><a class="anchor" href="#additional-requirements-2"></a>B.1.1. Additional Requirements</h4>
+<h4 id="editorial-changes"><a class="anchor" href="#editorial-changes"></a>B.1.1. Editorial Changes</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Java EE 8 requires Java SE 8.</p>
+<p>Changed most instances of "Java EE" to "Jakarta EE", except where the previous technology was clearly the target.</p>
 </li>
 <li>
-<p>Added
-<a href="#a2713">Java API for JSON Binding 1.0 (JSON-B) Requirements</a>.</p>
+<p>Modified references to Oracle&#8482;-related items per the <a href="https://jakarta.ee/legal/acronym_guidelines/">documented guidelines</a>.</p>
 </li>
 <li>
-<p>Added "Model-View-Controller (MVC) 1.0 Requirements”</p>
-</li>
-<li>
-<p>Added
-<a href="#a149">Java EE Product Packaging</a>; updated <a href="#a3153">Deployment</a>.</p>
-</li>
-<li>
-<p>Clarified semantics of <em>metadata-complete</em>
-for application clients.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="editorial-changes"><a class="anchor" href="#editorial-changes"></a>B.1.2. Editorial Changes</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Updated
-<a href="#a651">Component classes supporting injection</a>,
-<a href="#a2159">Java EE Technologies</a>, and Section
-<a href="#a3252">Full Java EE Product Requirements</a> to reflect requirements for JSON-B and MVC.</p>
-</li>
-<li>
-<p>Updated URLs for many referenced documents.</p>
-</li>
-<li>
-<p>Updated version numbers for component
-technologies.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="changes-in-early-draft-2"><a class="anchor" href="#changes-in-early-draft-2"></a>B.2. Changes in Early Draft 2</h3>
-<div class="sect3">
-<h4 id="additional-requirements-3"><a class="anchor" href="#additional-requirements-3"></a>B.2.1. Additional Requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Added CORBA, including RMI/IIOP and Java IDL, to list of “Proposed Optional” technologies.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="removed-requirements"><a class="anchor" href="#removed-requirements"></a>B.2.2. Removed Requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Removed MVC 1.0 from required APIs in <a href="#a2159">Component classes supporting injection</a> and <a href="#a2159">Java EE Technologies</a>;
-removed section on “Model-View-Controller (MVC) 1.0 Requirements” from Chapter <a href="#a2133">Chapter 6</a>.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="editorial-changes-2"><a class="anchor" href="#editorial-changes-2"></a>B.2.3. Editorial Changes</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Changed version of Bean Validation from 1.1 to 2.0.</p>
-</li>
-<li>
-<p>Changed version of Jakarta Messaging from 2.1 to 2.0.</p>
-</li>
-<li>
-<p>Removed section on JNLP from
-<a href="#a3439">Future Directions</a>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="changes-in-public-review-draft"><a class="anchor" href="#changes-in-public-review-draft"></a>B.3. Changes in Public Review Draft</h3>
-<div class="sect3">
-<h4 id="additional-requirements-4"><a class="anchor" href="#additional-requirements-4"></a>B.3.1. Additional Requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Added
-<a href="#a2741">Java EE Security API 1.0 Requirements</a>.</p>
-</li>
-<li>
-<p>Updated
-<a href="#a3125">Assembling a Java EE Application</a>, to reflect Servlet requirements of context root naming.</p>
-</li>
-<li>
-<p>Updated version of TLS that must be supported
-to 1.2 in <a href="#a2523">Networking</a>.</p>
-</li>
-<li>
-<p>Updated version of HTML that Java EE web
-clients must be able to display to 4.01 in
-<a href="#a2884">Data Formats</a>.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="editorial-changes-3"><a class="anchor" href="#editorial-changes-3"></a>B.3.2. Editorial Changes</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Added acknowledgements for Java EE 8 work.</p>
-</li>
-<li>
-<p>Added
-<a href="#a231">Changes in Java EE 8</a>.</p>
-</li>
-<li>
-<p>Updated
-<a href="#a2159">Java EE Technologies</a> and Section
-<a href="#a3252">Full Java EE Product Requirements</a> to reflect requirements for Java EE Security API.</p>
-</li>
-<li>
-<p>Corrected version of Web Socket to 1.1.</p>
-</li>
-<li>
-<p>Removed references to JAX-WS and JAXB from
-<a href="#a2159">Java EE Technologies</a> as they are included as part of Java SE.</p>
-</li>
-<li>
-<p>Removed section on JAXB from
-<a href="#a2133">Chapter 6</a>.</p>
-</li>
-<li>
-<p>Moved contents of previous section on JAX-WS
-to Section <a href="#a2553">Java™ API for XML Web Services (JAX-WS) Requirements</a>.</p>
-</li>
-<li>
-<p>Removed section on JAX-WS from
-<a href="#a1100">Chapter 11</a>.</p>
-</li>
-<li>
-<p>Removed requirement inconsistent with Bean
-Validation specification from
-<a href="#a1619">Validator and Validator Factory References</a>.”</p>
-</li>
-<li>
-<p>Clarified requirements for JASPIC Servlet
-Container Profile and JASPIC SOAP Profile in
-<a href="#a2737">Java™ Authentication Service Provider Interface for Containers (JASPIC) 1.1 Requirements</a>.”</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="changes-in-proposed-final-draft"><a class="anchor" href="#changes-in-proposed-final-draft"></a>B.4. Changes in Proposed Final Draft</h3>
-<div class="sect3">
-<h4 id="additional-requirements-5"><a class="anchor" href="#additional-requirements-5"></a>B.4.1. Additional Requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Updated
-<a href="#a235">Security</a>, to reflect
-requirements of the Java EE Security API.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="editorial-changes-4"><a class="anchor" href="#editorial-changes-4"></a>B.4.2. Editorial Changes</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Corrected version of Batch to 1.0.</p>
-</li>
-<li>
-<p>Added clarification regarding TLS support in
-<a href="#a2865">Internet and Web Protocols</a>.</p>
-</li>
-<li>
-<p>Updated “Related Documents.”</p>
-</li>
-<li>
-<p>Added reference to
-<em>https:javaee.github.io/javaee-spec</em> project.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="changes-in-final-release-draft"><a class="anchor" href="#changes-in-final-release-draft"></a>B.5. Changes in Final Release Draft</h3>
-<div class="sect3">
-<h4 id="additional-requirements-6"><a class="anchor" href="#additional-requirements-6"></a>B.5.1. Additional Requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Updated
-<a href="#a384">SSL Mutual Authentication</a>, to reflect requirements for support of TLS 1.2 and
-related cipher suites.</p>
-</li>
-<li>
-<p>Updated
-<a href="#a235">Security</a>, to reflect
-Java EE Security API specification requirement to support default
-mapping from user groups to roles.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="editorial-changes-5"><a class="anchor" href="#editorial-changes-5"></a>B.5.2. Editorial Changes</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Made clarifications to list of annotations
-and requirements in <a href="#a3315">Packaging and Deployment</a>.</p>
+<p>Updated <a href="#relateddocs">“Related Documents"</a>.</p>
 </li>
 </ul>
 </div>
@@ -16348,7 +16106,7 @@ and requirements in <a href="#a3315">Packaging and Deployment</a>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="related-documents"><a class="anchor" href="#related-documents"></a>Appendix C: Related Documents</h2>
+<h2 id="relateddocs"><a class="anchor" href="#relateddocs"></a>Appendix C: Related Documents</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This specification refers to the following
@@ -16386,7 +16144,7 @@ specification are included in parentheses.</p>
 <p><em>Jakarta™ Messaging Specification, Version 2.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/messaging/2.0" class="bare">https://jakarta.ee/specifications/messaging/2.0</a></em></p>
 </div>
 <div class="paragraph">
-<p><em>Jakarta™ Transaction Specification, Version 1.2</em>. Available at: <em><a href="https://jakarta.ee/specifications/transactions/1.3" class="bare">https://jakarta.ee/specifications/transactions/1.3</a></em></p>
+<p><em>Jakarta™ Transaction Specification, Version 1.3</em>. Available at: <em><a href="https://jakarta.ee/specifications/transactions/1.3" class="bare">https://jakarta.ee/specifications/transactions/1.3</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Java™ Transaction Service, Version 1.0</em> (JTS specification)<em>. Available at: _https://www.oracle.com/technetwork/java/javaee/jts-spec095-1508547.pdf</em></p>
@@ -16401,7 +16159,7 @@ specification are included in parentheses.</p>
 <p><em>Jakarta™ Connectors Specification, Version 1.7</em>. Available at: <em><a href="https://jakarta.ee/specifications/connectors/1.7" class="bare">https://jakarta.ee/specifications/connectors/1.7</a></em></p>
 </div>
 <div class="paragraph">
-<p><em>Jakarta™ XML Web Services Specification, Version 1.4</em>. Available at: <em><a href="https://jakarta.ee/specifications/xml-web-services/2.3" class="bare">https://jakarta.ee/specifications/xml-web-services/2.3</a></em></p>
+<p><em>Jakarta™ XML Web Services Specification, Version 2.3</em>. Available at: <em><a href="https://jakarta.ee/specifications/xml-web-services/2.3" class="bare">https://jakarta.ee/specifications/xml-web-services/2.3</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Jakarta™ XML RPC Specification, Version 1.1</em>. Available at: <em><a href="https://jakarta.ee/specifications/xml-rpc/1.1" class="bare">https://jakarta.ee/specifications/xml-rpc/1.1</a></em></p>
@@ -16419,7 +16177,7 @@ specification are included in parentheses.</p>
 <p><em>Jakarta™ Management Specification, Version 1.1</em>. Available at: <em><a href="https://jakarta.ee/specifications/management/1.1" class="bare">https://jakarta.ee/specifications/management/1.1</a></em></p>
 </div>
 <div class="paragraph">
-<p><em>Jakarta™ Deployment Specification, Version 1.2</em>. Available at: <em><a href="https://jakarta.ee/specifications/deployment/1.7" class="bare">https://jakarta.ee/specifications/deployment/1.7</a></em></p>
+<p><em>Jakarta™ Deployment Specification, Version 1.7</em>. Available at: <em><a href="https://jakarta.ee/specifications/deployment/1.7" class="bare">https://jakarta.ee/specifications/deployment/1.7</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Jakarta™ Authorization Specification, Version 1.5</em>. Available at: <em><a href="https://jakarta.ee/specifications/authorization/1.6" class="bare">https://jakarta.ee/specifications/authorization/1.6</a></em></p>
@@ -16437,7 +16195,7 @@ specification are included in parentheses.</p>
 <p><em>Jakarta™ Standard Tag Library Specification, Version 1.2</em>. Available at: <em><a href="https://jakarta.ee/specifications/jstl/1.2" class="bare">https://jakarta.ee/specifications/jstl/1.2</a></em></p>
 </div>
 <div class="paragraph">
-<p><em>Jakarta™ Web Services Metadata Specification, Version 2.1</em>. Available at: <em><a href="https://jakarta.ee/specifications/web-services-metadata/1.1" class="bare">https://jakarta.ee/specifications/web-services-metadata/1.1</a></em></p>
+<p><em>Jakarta™ Web Services Metadata Specification, Version 1.1</em>. Available at: <em><a href="https://jakarta.ee/specifications/web-services-metadata/1.1" class="bare">https://jakarta.ee/specifications/web-services-metadata/1.1</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Jakarta™ Server Faces Specification, Version 2.3</em>. Available at: <em><a href="https://jakarta.ee/specifications/faces/2.3" class="bare">https://jakarta.ee/specifications/faces/2.3</a></em></p>
@@ -16470,7 +16228,7 @@ specification are included in parentheses.</p>
 <p><em>Jakarta™ JSON Binding Specification, Version 1.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/jsonb/1.0" class="bare">https://jakarta.ee/specifications/jsonb/1.0</a></em></p>
 </div>
 <div class="paragraph">
-<p><em>Jakarta™ Concurrency Specification, Version 1.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/concurrency/1.1" class="bare">https://jakarta.ee/specifications/concurrency/1.1</a></em></p>
+<p><em>Jakarta™ Concurrency Specification, Version 1.1</em>. Available at: <em><a href="https://jakarta.ee/specifications/concurrency/1.1" class="bare">https://jakarta.ee/specifications/concurrency/1.1</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Jakarta™ Batch Specification, Version 1.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/batch/1.0" class="bare">https://jakarta.ee/specifications/batch/1.0</a></em></p>
