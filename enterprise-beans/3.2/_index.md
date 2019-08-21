@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Enterprise Beans 3.2"
-date: 2019-07-19T15:57:57-0700
+date: 2019-08-19
 summary: "First release for Jakarta EE 8"
 ---
 
@@ -30,4 +30,4 @@ Jakarta Enterprise Beans defines an architecture for the development and deploym
 
 # Compatible Implementations
 
-* Jakarta Enterprise Beans 3.2.6
+[Eclipse Glassfish 5.1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
