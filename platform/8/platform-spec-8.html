@@ -530,7 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta EE Platform Team, https://projects.eclipse.org/projects/ee4j.jakartaee-platform</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev</a></span><br>
 <span id="revnumber"> 8,</span>
-<span id="revdate">August 21, 2019</span>
+<span id="revdate">August 24, 2019</span>
 <br><span id="revremark">Final Release</span>
 </div>
 <div id="toc" class="toc2">
@@ -1064,7 +1064,7 @@ Version: 8
 
 Status: Final Release
 
-Release: August 21, 2019</pre>
+Release: August 24, 2019</pre>
 </div>
 </div>
 </div>
@@ -10495,32 +10495,26 @@ Technologies</a>.</p>
 <h3 id="a2339"><a class="anchor" href="#a2339"></a>6.2. Java Platform, Standard Edition (Java SE) Requirements</h3>
 <div class="sect3">
 <h4 id="programming-restrictions"><a class="anchor" href="#programming-restrictions"></a>6.2.1. Programming Restrictions</h4>
-<div class="literalblock">
-<div class="content">
-<pre> _The_ Jakarta EE _programming model divides
-responsibilities between Application Component Providers and_ Jakarta EE
-_Product Providers: Application Component Providers focus on writing
-business logic and the_ Jakarta EE _Product Providers focus on providing a
+<div class="paragraph">
+<p>The Jakarta EE programming model divides
+responsibilities between Application Component Providers and Jakarta EE
+Product Providers: Application Component Providers focus on writing
+business logic and the Jakarta EE Product Providers focus on providing a
 managed system infrastructure in which the application components can be
-deployed._</pre>
+deployed.</p>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> _This division leads to a restriction on the
+<div class="paragraph">
+<p>This division leads to a restriction on the
 functionality that application components can contain. If application
 components contain the same functionality provided by Jakarta EE system
 infrastructure, there are clashes and mis-management of the
-functionality._</pre>
+functionality.</p>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> _For example, if enterprise beans were
-allowed to manage threads, the_ Jakarta EE _platform could not manage the
+<div class="paragraph">
+<p>For example, if enterprise beans were
+allowed to manage threads, the Jakarta EE platform could not manage the
 life cycle of the enterprise beans, and it could not properly manage
-transactions._</pre>
-</div>
+transactions.</p>
 </div>
 <div class="paragraph">
 <p>Since we do not want to subset the Java SE
@@ -15246,22 +15240,12 @@ annotations, only those that specify deployment information.</p>
 </li>
 <li>
 <p><em>javax.annotation.sql.DataSourceDefinitions</em></p>
-<div class="literalblock">
-<div class="content">
-<pre>__</pre>
-</div>
-</div>
 </li>
 <li>
 <p><em>javax.ejb.EJB</em></p>
 </li>
 <li>
 <p><em>javax.ejb.EJBs</em></p>
-<div class="literalblock">
-<div class="content">
-<pre>__</pre>
-</div>
-</div>
 </li>
 <li>
 <p><em>javax.jms.JMSConnectionFactoryDefinition</em></p>
@@ -15274,33 +15258,18 @@ annotations, only those that specify deployment information.</p>
 </li>
 <li>
 <p><em>javax.jms.JMSDestinationDefinitions</em></p>
-<div class="literalblock">
-<div class="content">
-<pre>__</pre>
-</div>
-</div>
 </li>
 <li>
 <p><em>javax.mail.MailSessionDefinition</em></p>
 </li>
 <li>
 <p><em>javax.mail.MailSessionDefinitions</em></p>
-<div class="literalblock">
-<div class="content">
-<pre>__</pre>
-</div>
-</div>
 </li>
 <li>
 <p><em>javax.persistence.PersistenceUnit</em></p>
 </li>
 <li>
 <p><em>javax.persistence.PersistenceUnits</em></p>
-<div class="literalblock">
-<div class="content">
-<pre>__</pre>
-</div>
-</div>
 </li>
 <li>
 <p><em>javax.resource.AdministeredObjectDefinition</em></p>
@@ -15313,33 +15282,27 @@ annotations, only those that specify deployment information.</p>
 </li>
 <li>
 <p><em>javax.resource.ConnectionFactoryDefinitions</em></p>
-<div class="literalblock">
-<div class="content">
-<pre>__</pre>
-</div>
-</div>
 </li>
 <li>
 <p>All annotations in the following packages:</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p><em>javax.jws</em></p>
 </li>
 <li>
-<p>javax.jws.soap</p>
+<p><em>javax.jws.soap</em></p>
 </li>
 <li>
-<p>javax.xml.ws</p>
+<p><em>javax.xml.ws</em></p>
 </li>
 <li>
-<p>javax.xml.ws.soap</p>
+<p><em>javax.xml.ws.soap</em></p>
 </li>
 <li>
-<p>javax.xml.ws.spi</p>
-<div class="literalblock">
-<div class="content">
-<pre>__</pre>
-</div>
+<p><em>javax.xml.ws.spi</em></p>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -16192,7 +16155,7 @@ specification are included in parentheses.</p>
 <p><em>Jakarta™ Debugging Support for Other Languages Specification, Version 1.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/debugging/1.0" class="bare">https://jakarta.ee/specifications/debugging/1.0</a></em></p>
 </div>
 <div class="paragraph">
-<p><em>Jakarta™ Standard Tag Library Specification, Version 1.2</em>. Available at: <em><a href="https://jakarta.ee/specifications/jstl/1.2" class="bare">https://jakarta.ee/specifications/jstl/1.2</a></em></p>
+<p><em>Jakarta™ Standard Tag Library Specification, Version 1.2</em>. Available at: <em><a href="https://jakarta.ee/specifications/tags/1.2" class="bare">https://jakarta.ee/specifications/tags/1.2</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Jakarta™ Web Services Metadata Specification, Version 1.1</em>. Available at: <em><a href="https://jakarta.ee/specifications/web-services-metadata/1.1" class="bare">https://jakarta.ee/specifications/web-services-metadata/1.1</a></em></p>
