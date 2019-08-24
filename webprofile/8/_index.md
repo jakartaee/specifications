@@ -10,7 +10,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta EE Web Profile 8 Javadoc](./apidocs)
 * [Jakarta EE Web Profile 8 TCK](https://download.eclipse.org/jakartaee/platform/8.0/eclipse-jakartaeetck-8.0.0.zip)
 * Maven coordinates
-  * [jakarta.platform:jakarta.jakartaee-web-api:jar:8.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/8.0/jar)
+  * [jakarta.platform:jakarta.jakartaee-web-api:jar:8.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/8.0.0/jar)
 
 # Ballots
 
