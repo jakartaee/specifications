@@ -1039,16 +1039,33 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#j2eeapplication-client-1-2-xml-dtd">A.16. J2EE:application-client 1.2 XML DTD</a></li>
 </ul>
 </li>
-<li><a href="#revision-history">Appendix B: Revision History</a>
+<li><a href="#specificationComparison">Appendix B: Java EE 8 and Jakarta EE 8 Comparison</a>
 <ul class="sectlevel2">
-<li><a href="#changes-in-final-release-draft">B.1. Changes in Final Release Draft</a>
+<li><a href="#java-ee-8-and-jakarta-ee-8-specification-comparisons">B.1. Java EE 8 and Jakarta EE 8 Specification Comparisons</a>
 <ul class="sectlevel3">
-<li><a href="#editorial-changes">B.1.1. Editorial Changes</a></li>
+<li><a href="#transaction-1-2-vs-1-3">B.1.1. Transaction 1.2 vs 1.3</a></li>
+<li><a href="#deployment-1-2-vs-1-7">B.1.2. Deployment 1.2 vs 1.7</a></li>
+<li><a href="#concurrency-1-0-vs-1-1">B.1.3. Concurrency 1.0 vs 1.1</a></li>
+</ul>
+</li>
+<li><a href="#java-ee-8-specification-references">B.2. Java EE 8 Specification References</a>
+<ul class="sectlevel3">
+<li><a href="#activation-1-1-vs-1-2">B.2.1. Activation 1.1 vs 1.2</a></li>
+<li><a href="#soap-with-attachments-1-3-vs-1-4">B.2.2. SOAP with Attachments 1.3 vs 1.4</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#relateddocs">Appendix C: Related Documents</a></li>
+<li><a href="#revisionHistory">Appendix C: Revision History</a>
+<ul class="sectlevel2">
+<li><a href="#changes-in-final-release-draft">C.1. Changes in Final Release Draft</a>
+<ul class="sectlevel3">
+<li><a href="#editorial-changes">C.1.1. Editorial Changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#relateddocs">Appendix D: Related Documents</a></li>
 </ul>
 </div>
 </div>
@@ -2663,7 +2680,8 @@ event processing and alignment on Java SE 8 features.</p>
 <div class="sect2">
 <h3 id="changes-in-jakarta-ee-8"><a class="anchor" href="#changes-in-jakarta-ee-8"></a>2.20. Changes in Jakarta EE 8</h3>
 <div class="paragraph">
-<p>Jakarta EE 8 is the migration of Java EE 8 from the JCP to the Eclipse Foundation.</p>
+<p>Jakarta EE 8 is the migration of Java EE 8 from the JCP to the Eclipse Foundation.
+Reference the <a href="#specificationComparison">"Specification Comparison"</a> and <a href="#revisionHistory">“Revision History"</a> appendices for more information.</p>
 </div>
 </div>
 </div>
@@ -14874,7 +14892,7 @@ associated Jakarta Enterprise Beans QL, which have been made optional)</p>
 <p>Jakarta Standard Tag Library 1.2</p>
 </li>
 <li>
-<p>Jakarta Web Services Metadata 1.1</p>
+<p>Jakarta Web Services Metadata 2.1</p>
 </li>
 <li>
 <p>Jakarta Server Faces 2.3</p>
@@ -16017,12 +16035,270 @@ Microsystems, Inc.//DTD J2EE Application Client 1.2//EN"
 </div>
 </div>
 <div class="sect1">
-<h2 id="revision-history"><a class="anchor" href="#revision-history"></a>Appendix B: Revision History</h2>
+<h2 id="specificationComparison"><a class="anchor" href="#specificationComparison"></a>Appendix B: Java EE 8 and Jakarta EE 8 Comparison</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="changes-in-final-release-draft"><a class="anchor" href="#changes-in-final-release-draft"></a>B.1. Changes in Final Release Draft</h3>
+<h3 id="java-ee-8-and-jakarta-ee-8-specification-comparisons"><a class="anchor" href="#java-ee-8-and-jakarta-ee-8-specification-comparisons"></a>B.1. Java EE 8 and Jakarta EE 8 Specification Comparisons</h3>
+<div class="paragraph">
+<p>The intent of this section is to explain any differences in specification names and versions between those referenced in the last Java EE 8 Platform specification, dated July 31st, 2017 and the Jakarta EE 8 Platform specification.</p>
+</div>
+<div class="paragraph">
+<p>In some cases the versions changed in preparation for contribution and therefore the official JCP versions changed over those referenced in the July 31st, 2017 Platform specification.  In other cases the versions were changed after the contribution.  This section explains both sets of changes and encompasses all specifications contributed.</p>
+</div>
+<div class="paragraph">
+<p>It is important to understand that despite any name or version changes, Java EE 8 and Jakarta EE 8 are functionally equivalent.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 9. Java EE 8 and Jakarta EE 8 Specification References</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Java EE 8 Specification</th>
+<th class="tableblock halign-left valign-top">Jakarta EE 8 Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ Platform, Enterprise Edition 8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ EE Platform 8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise JavaBeans™ 3.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Enterprise Beans 3.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common Annotations for the Java Platform 1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Annotations 1.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ Servlet 4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Servlet 4.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java API for WebSocket 1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ WebSocket 1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaServer Faces 2.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Server Faces 2.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaServer Pages™ 2.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Server Pages 2.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard Tag Library for JavaServer Pages 1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Standard Tag Library 1.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expression Language 3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Expression Language 3.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debugging Support for Other Languages 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Debugging Support for Other Languages 1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ Message Service 2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Messaging 2.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ Transaction API 1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Transaction 1.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaMail™ API 1.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Mail 1.6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java EE™ Connector Architecture 1.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Connectors 1.7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web Services for Java EE 1.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Enterprise Web Services 1.4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ API for XML-based RPC 1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ XML RPC 1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ API for XML Registries 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ XML Registries 1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ API for RESTful Web Services 2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ RESTful Web Services 2.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java API for JSON Processing 1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ JSON Processing 1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java API for JSON Binding 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ JSON Binding 1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ Platform, Enterprise Edition Management 1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Management 1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ Platform, Enterprise Edition Deployment 1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Deployment 1.7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ Authorization Service Provider Contract for Containers 1.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Authorization 1.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ Authentication Service Provider Interface for Containers 1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Authentication 1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ EE Security API 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Security 1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java Persistence 2.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Persistence 2.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bean Validation 2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Bean Validation 2.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Managed Beans 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Managed Beans 1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interceptors 1.2 rev A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Interceptors 1.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contexts and Dependency Injection for the Java EE Platform 2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Contexts and Dependency Injection 2.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dependency Injection for Java 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Dependency Injection 1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Concurrency Utilities for Java EE 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Concurrency 1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Batch Applications for the Java Platform 1.0 rev A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta™ Batch 1.0</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect3">
-<h4 id="editorial-changes"><a class="anchor" href="#editorial-changes"></a>B.1.1. Editorial Changes</h4>
+<h4 id="transaction-1-2-vs-1-3"><a class="anchor" href="#transaction-1-2-vs-1-3"></a>B.1.1. Transaction 1.2 vs 1.3</h4>
+<div class="paragraph">
+<p>To address cleanly separating the <code>javax.transaction</code> package in Java™ SE from the classes being contributed, a Maintenance Release of the Java™ Transaction API (JTA) was created in the JCP and released as <a href="https://jcp.org/aboutJava/communityprocess/maintenance/jsr907/JTA1.3MR-November2017.pdf">version 1.3</a>.  The official Jakarta version is therefore 1.3 and not 1.2.</p>
+</div>
+<div class="paragraph">
+<p>No API changes were made in this Maintenance Release or after contribution and Java™ Transaction API 1.2, Java™ Transaction API 1.3 and Jakarta Transaction 1.3 are functionally equivalent.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deployment-1-2-vs-1-7"><a class="anchor" href="#deployment-1-2-vs-1-7"></a>B.1.2. Deployment 1.2 vs 1.7</h4>
+<div class="paragraph">
+<p>The last Maintenance Release of JSR-88 Java™ EE Application Deployment in the JCP is version 1.2.  After contribution and before completion of the Jakarta EE Specification Process a version 1.7 was released under the <code>jakarta</code> groupId in efforts to ship a Java EE 8 certified version of Eclipse GlassFish.</p>
+</div>
+<div class="paragraph">
+<p>The mistaken change from 1.2 to 1.7 was discovered while following the completed Jakarta EE Specification Process.  The Specification Committee decided to leave the version as 1.7 to avoid any potential future version conflicts.</p>
+</div>
+<div class="paragraph">
+<p>Java™ EE Application Deployment 1.2 and Jakarta™ Deployment 1.7 are functionally equivalent.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="concurrency-1-0-vs-1-1"><a class="anchor" href="#concurrency-1-0-vs-1-1"></a>B.1.3. Concurrency 1.0 vs 1.1</h4>
+<div class="paragraph">
+<p>The last official release of JSR 236: Concurrency Utilities for JavaTM EE was 1.0.  A version 1.1 was published under the <code>javax</code> groupId in Feb 2018 and again as 1.1 under the <code>jakarta</code> groupId in Jan 2019 for the previously mentioned Java EE 8 certified version of Eclipse GlassFish.</p>
+</div>
+<div class="paragraph">
+<p>The mistaken change from 1.0 to 1.1 was discovered while following the Jakarta EE Specification Process and, as with Deployment, the Specification Committee decided to leave the version 1.1 to avoid future version conflicts.</p>
+</div>
+<div class="paragraph">
+<p>Concurrency Utilities for Java EE 1.0 and Jakarta Concurrency 1.1 are functionally equivalent.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-ee-8-specification-references"><a class="anchor" href="#java-ee-8-specification-references"></a>B.2. Java EE 8 Specification References</h3>
+<div class="paragraph">
+<p>The following table lists specifications contributed to Eclipse but not included in Jakarta EE 8.
+These specifications are a part of Java SE 8 but are being removed from later versions of
+Java SE as described in <a href="https://openjdk.java.net/jeps/320">JEP 320</a>. These specifications are an important part of the Jakarta EE
+platform and will be considered for inclusion in a version of Jakarta EE that targets versions of
+Java SE where they have been removed.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 10. Additional Java EE 8 Specification References</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Java EE 8 Specification</th>
+<th class="tableblock halign-left valign-top">Jakarta EE Specification (future)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaBeans™ Activation Framework 1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta Activation 1.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ Architecture for XML Binding 2.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta XML Binding 2.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java™ API for XML Web Services 2.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta XML Web Services 2.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOAP with Attachments API for Java™ 1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta SOAP with Attachments 1.4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web Services Metadata for the Java Platform 2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta Web Services Metadata 2.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="activation-1-1-vs-1-2"><a class="anchor" href="#activation-1-1-vs-1-2"></a>B.2.1. Activation 1.1 vs 1.2</h4>
+<div class="paragraph">
+<p>The Java EE 8 Platform specification, dated July 31st, 2017, references JavaBeans™ Activation Framework Specification Version 1.1 in appendix EE.C Related Documents.
+A Maintenance Release of the JavaBeans™ Activation Framework was created and released in the JCP as version 1.2 dated July 2017.
+JavaBeans Activation Framework 1.2 adds support for, and is included in, Java SE 9, and is the version contributed to Eclipse.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="soap-with-attachments-1-3-vs-1-4"><a class="anchor" href="#soap-with-attachments-1-3-vs-1-4"></a>B.2.2. SOAP with Attachments 1.3 vs 1.4</h4>
+<div class="paragraph">
+<p>The Java EE 8 Platform specification, dated July 31st, 2017, references SOAP with Attachments API for Java™ Version 1.3 in appendix EE.C Related Documents.
+A Maintenance Release of the SOAP with Attachments API for Java™ was created and released as version 1.4 dated July 2017.
+The reference to SOAP with Attachments API for Java™ Version 1.3 in the Java EE 8 Platform specification, released at the same time was simply an error, and it should have referenced version 1.4.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="revisionHistory"><a class="anchor" href="#revisionHistory"></a>Appendix C: Revision History</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="changes-in-final-release-draft"><a class="anchor" href="#changes-in-final-release-draft"></a>C.1. Changes in Final Release Draft</h3>
+<div class="sect3">
+<h4 id="editorial-changes"><a class="anchor" href="#editorial-changes"></a>C.1.1. Editorial Changes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -16032,7 +16308,10 @@ Microsystems, Inc.//DTD J2EE Application Client 1.2//EN"
 <p>Modified references to Oracle&#8482;-related items per the <a href="https://jakarta.ee/legal/acronym_guidelines/">documented guidelines</a>.</p>
 </li>
 <li>
-<p>Updated <a href="#relateddocs">“Related Documents"</a>.</p>
+<p>Added <a href="#specificationComparison">"Specification Comparison"</a> appendix.</p>
+</li>
+<li>
+<p>Updated <a href="#relateddocs">“Related Documents"</a> appendix.</p>
 </li>
 </ul>
 </div>
@@ -16041,7 +16320,7 @@ Microsystems, Inc.//DTD J2EE Application Client 1.2//EN"
 </div>
 </div>
 <div class="sect1">
-<h2 id="relateddocs"><a class="anchor" href="#relateddocs"></a>Appendix C: Related Documents</h2>
+<h2 id="relateddocs"><a class="anchor" href="#relateddocs"></a>Appendix D: Related Documents</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This specification refers to the following
@@ -16130,7 +16409,7 @@ specification are included in parentheses.</p>
 <p><em>Jakarta™ Standard Tag Library Specification, Version 1.2</em>. Available at: <em><a href="https://jakarta.ee/specifications/tags/1.2" class="bare">https://jakarta.ee/specifications/tags/1.2</a></em></p>
 </div>
 <div class="paragraph">
-<p><em>Jakarta™ Web Services Metadata Specification, Version 1.1</em>. Available at: <em><a href="https://jakarta.ee/specifications/web-services-metadata/1.1" class="bare">https://jakarta.ee/specifications/web-services-metadata/1.1</a></em></p>
+<p><em>Jakarta™ Web Services Metadata Specification, Version 2.1</em>. Available at: <em><a href="https://jcp.org/aboutJava/communityprocess/mrel/jsr181/index2.html" class="bare">https://jcp.org/aboutJava/communityprocess/mrel/jsr181/index2.html</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Jakarta™ Server Faces Specification, Version 2.3</em>. Available at: <em><a href="https://jakarta.ee/specifications/faces/2.3" class="bare">https://jakarta.ee/specifications/faces/2.3</a></em></p>
