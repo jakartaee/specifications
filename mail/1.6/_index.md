@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Mail Specification 1.6"
-date: 2019-08-06
+date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Mail defines a platform-independent and protocol-independent
@@ -19,15 +19,17 @@ framework to build mail and messaging applications.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+|Fujitsu                |    +1   |         |          |
+|IBM                    |    +1   |         |          |
+|Oracle                 |    +1   |         |          |
+|Payara                 |    +1   |         |          |
+|Red Hat                |    +1   |         |          |
+|Tomitribe              |    +1   |         |          |
+|EE4J PMC               |    +1   |         |          |
+|Participant Members    |    +1   |         |          |
+|Committer Members      |    +1   |         |          |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00450.html)
 
 # Compatible Implementations
 
