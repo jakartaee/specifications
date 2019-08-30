@@ -3,8 +3,8 @@ title: "Jakarta Mail Specification 1.6"
 date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
-Jakarta Mail defines a platform-independent and protocol-independent
-framework to build mail and messaging applications.
+
+Jakarta Mail defines a platform-independent and protocol-independent framework to build mail and messaging applications.
 
 * [Jakarta Mail 1.6 Specification Document](./mail-spec-1.6.pdf) (PDF)
 * [Jakarta Mail 1.6 Specification Document](./mail-spec-1.6.html) (HTML)
@@ -16,6 +16,8 @@ framework to build mail and messaging applications.
 # Ballots
 
 ## Release Review
+
+The Release Review Specification Committee Ballot concluded successfully on 2019-08-28 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
