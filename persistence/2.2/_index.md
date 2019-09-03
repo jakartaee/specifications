@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Persistence Specification 2.2"
-date: 2019-07-19
+date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Persistence defines a standard for management of persistence
@@ -20,15 +20,17 @@ and object/relational mapping in Java(R) environments.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
+|Fujitsu                |   +1    |         |          |
+|IBM                    |   +1    |         |          |
+|Oracle                 |   +1    |         |          |
+|Payara                 |   +1    |         |          |
+|Red Hat                |   +1    |         |          |
+|Tomitribe              |   +1    |         |          |
+|EE4J PMC               |   +1    |         |          |
 |Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+|Committer Members      |   +1    |         |          |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00448.html)
 
 
 # Compatible Implementations
