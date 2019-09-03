@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Deployment Specification 1.7"
-date: 2019-08-10
+date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Deployment defines standard APIs that will enable any deployment tool that uses the
@@ -19,15 +19,17 @@ deployment APIs to deploy any assembled application onto a Jakarta EE compatible
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
+|Fujitsu                |   +1    |         |          |
+|IBM                    |   +1    |         |          |
+|Oracle                 |   +1    |         |          |
+|Payara                 |   +1    |         |          |
+|Red Hat                |   +1    |         |          |
+|Tomitribe              |   +1    |         |          |
+|EE4J PMC               |   +1    |         |          |
+|Participant Members    |   +1    |         |          |
 |Committer Members      |         |         |          |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00452.html)
 
 # Compatible Implementations
 
