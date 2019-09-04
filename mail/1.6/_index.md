@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Mail Specification 1.6"
+title: "Jakarta Mail 1.6"
 date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---

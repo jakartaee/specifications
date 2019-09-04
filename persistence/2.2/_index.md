@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Persistence Specification 2.2"
+title: "Jakarta Persistence 2.2"
 date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
