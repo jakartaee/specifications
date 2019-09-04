@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Server Pages Specification 2.3"
-date: 2019-08-06
+title: "Jakarta Server Pages 2.3"
+date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Server Pages defines a template engine for web applications that supports mixing of textual content
@@ -30,6 +30,9 @@ into a Jakarta Servlet.
 |EE4J PMC               |         |         |          |
 |Participant Members    |         |         |          |
 |Committer Members      |         |         |          |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00499.html)
+
 
 # Compatible Implementations
 

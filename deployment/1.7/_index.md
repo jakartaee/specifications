@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Deployment Specification 1.7"
+title: "Jakarta Deployment 1.7"
 date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Jakarta JSON Processing Specification 1.1"
+title: "Jakarta JSON Processing 1.1"
 date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
