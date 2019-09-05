@@ -17,6 +17,7 @@ and object/relational mapping in Java(R) environments.
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2019-08-28 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|

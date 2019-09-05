@@ -16,6 +16,8 @@ Jakarta Expression Language defines an expression language for Java applications
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2019-09-02 with the following results.
+
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|

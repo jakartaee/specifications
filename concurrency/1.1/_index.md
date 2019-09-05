@@ -16,7 +16,7 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2019-08-28 with the following results.
+The Specification Committee Ballot concluded successfully on 2019-09-04 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|

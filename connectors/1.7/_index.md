@@ -16,7 +16,7 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2019-09-04 with the following results.
+The Specification Committee Ballot concluded successfully on 2019-09-04 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|

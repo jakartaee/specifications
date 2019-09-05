@@ -16,6 +16,8 @@ Jakarta XML-based RPC defines consistent Java APIs for using XML based RPC stand
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2019-09-02 with the following results.
+
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
 |Fujitsu                |   +1    |         |          |

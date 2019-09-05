@@ -17,6 +17,8 @@ deployment APIs to deploy any assembled application onto a Jakarta EE compatible
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2019-08-28 with the following results.
+
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
 |Fujitsu                |   +1    |         |          |

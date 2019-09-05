@@ -16,6 +16,8 @@ Jakarta Servlet defines a server-side API for handling HTTP requests and respons
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2019-09-04 with the following results.
+
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
 |Fujitsu                |   +1    |         |          |

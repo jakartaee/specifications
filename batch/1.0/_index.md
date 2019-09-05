@@ -16,6 +16,8 @@ Jakarta Batch specifies a Java API plus an XML-based job specification language 
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2019-09-02 with the following results.
+
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
 |Fujitsu                |   +1    |         |          |

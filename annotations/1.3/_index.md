@@ -17,7 +17,7 @@ enable a declarative style of programming that applies across a variety of Java 
 
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2019-08-28 with the following results.
+The Specification Committee Ballot concluded successfully on 2019-08-28 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|

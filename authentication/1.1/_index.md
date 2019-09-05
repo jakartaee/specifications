@@ -21,6 +21,7 @@ Jakarta Authentication consists of several profiles, with each profile telling h
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2019-09-02 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|

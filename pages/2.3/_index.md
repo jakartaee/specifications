@@ -7,7 +7,6 @@ Jakarta Server Pages defines a template engine for web applications that support
 (including HTML and XML) with custom tags, expression language, and embedded Java code, that gets compiled
 into a Jakarta Servlet.
 
-
 * [Jakarta Server Pages 2.3 Specification Document](./pages-spec-2.3.pdf) (PDF)
 * [Jakarta Server Pages 2.3 Specification Document](./pages-spec-2.3.html) (HTML)
 * [Jakarta Server Pages 2.3 Javadoc](./apidocs)
@@ -19,17 +18,19 @@ into a Jakarta Servlet.
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2019-09-10 with the following results.
+
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+|Fujitsu                |   +1    |         |          |
+|IBM                    |   +1    |         |          |
+|Oracle                 |   +1    |         |          |
+|Payara                 |   +1    |         |          |
+|Red Hat                |   +1    |         |          |
+|Tomitribe              |   +1    |         |          |
+|EE4J PMC               |   +1    |         |          |
+|Participant Members    |   +1    |         |          |
+|Committer Members      |   +1    |         |          |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00499.html)
 
