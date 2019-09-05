@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Connectors 1.7"
-date: 2019-07-21
+date: 2019-09-10
 summary: "Jakarta EE 8 Connectors Specification."
 ---
 The Jakarta Connectors specification defines a standard architecture for Jakarta EE application components to connect to Enterprise Information Systems.
@@ -16,18 +16,22 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 
 ## Release Review
 
+The Release Review Specification Committee Ballot concluded successfully on 2019-09-04 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
+|Fujitsu                |   +1    |         |          |
+|IBM                    |   +1    |         |          |
+|Oracle                 |   +1    |         |          |
+|Payara                 |   +1    |         |          |
+|Red Hat                |   +1    |         |          |
+|Tomitribe              |   +1    |         |          |
+|EE4J PMC               |   +1    |         |          |
 |Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+|Committer Members      |   +1    |         |          |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00510.html)
+
 
 # Compatible Implementations
 
