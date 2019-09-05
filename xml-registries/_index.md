@@ -1,4 +1,3 @@
-<!-- Template for the top page of a specification directory containing releases -->
 ---
 title: "Jakarta XML Registries"
 summary: "Jakarta XML Registries describes Java API’s designed specifically for an open and interoperable set of registry

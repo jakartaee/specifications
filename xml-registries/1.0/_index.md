@@ -1,4 +1,3 @@
-<!-- Template for the root page of a specification release -->
 ---
 title: "Jakarta XML Registries Spec 1.0"
 date: 2019-09-10
