@@ -1,7 +1,6 @@
-<!-- Template for the root page of a specification release -->
 ---
-title: "Debugging Support for Other Languages Specification 1.0"
-date: 2019-07-18T16:10:38-04:00
+title: "Jakarta Debugging Support for Other Languages 1.0"
+date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Debugging Support for Other Languages provides a mechanism by which 
@@ -17,19 +16,21 @@ the original source (for example, source file and line number references).
 
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2019-12-01 with the following results.
+The Specification Committee Ballot concluded successfully on 2019-09-02 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+|Fujitsu                |   +1    |         |          |
+|IBM                    |   +1    |         |          |
+|Oracle                 |   +1    |         |          |
+|Payara                 |   +1    |         |          |
+|Red Hat                |   +1    |         |          |
+|Tomitribe              |   +1    |         |          |
+|EE4J PMC               |   +1    |         |          |
+|Participant Members    |   +1    |         |          |
+|Committer Members      |   +1    |         |          |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00499.html)
 
 # Compatible Implementations
 

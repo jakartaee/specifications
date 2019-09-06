@@ -1,7 +1,6 @@
-<!-- Template for the root page of a specification release -->
 ---
 title: "Jakarta Standard Tag Library Spec 1.2"
-date: 2019-07-18
+date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
 Jakarta Standard Tag Library encapsulates as simple tags the core functionality common to many Web applications.
@@ -21,7 +20,7 @@ existing custom tags with Jakarta Standard Tag Library tags.
 
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2019-12-01 with the following results.
+The Specification Committee Ballot concluded successfully on 2019-09-06 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
