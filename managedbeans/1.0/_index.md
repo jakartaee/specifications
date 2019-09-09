@@ -8,8 +8,8 @@ with minimal requirements, otherwise known under the acronym POJOs (Plain Old Ja
 
 * [Jakarta Managed Beans 1.0 Specification Document](./managedbeans-spec-1.0.pdf) (PDF)
 * [Jakarta Managed Beans 1.0 Specification Document](./managedbeans-spec-1.0.html) (HTML)
-* Jakarta Managed Beans 1.0 Javadoc - N/A (covered by Jakarta Annotations)
-* Jakarta Managed Beans 1.0 TCK - N/A  (covered by Jakarta EE Platform TCK)
+* Jakarta Managed Beans 1.0 Javadoc - N/A (covered by [Jakarta Annotations](https://jakarta.ee/specifications/annotations/1.3/))
+* Jakarta Managed Beans 1.0 TCK - N/A  (covered by [Jakarta EE Platform TCK](https://download.eclipse.org/jakartaee/platform/8/eclipse-jakartaeetck-8.0.1.zip))
 * Maven coordinates (provided by Jakarta Annotations)
   * [jakarta.annotation:jakarta.annotation-api:jar:1.3.4](https://repo1.maven.org/maven2/jakarta/annotation/jakarta.annotation-api/1.3.4/jakarta.annotation-api-1.3.4.jar)
 
