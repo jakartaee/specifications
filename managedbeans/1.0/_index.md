@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Managed Beans Spec 1.0"
-date: 2019-07-30
+title: "Jakarta Managed Beans 1.0"
+date: 2019-09-10
 summary: "Initial release of Managed Beans 1.0 for Jakarta EE 8"
 ---
 Jakarta Managed Beans defines a set of basic services for container-managed objects
@@ -17,19 +17,21 @@ with minimal requirements, otherwise known under the acronym POJOs (Plain Old Ja
 
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2019-08-12 with the following results.
+The Specification Committee Ballot concluded successfully on 2019-09-09 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+|Fujitsu                |   +1    |         |          |
+|IBM                    |   +1    |         |          |
+|Oracle                 |   +1    |         |          |
+|Payara                 |   +1    |         |          |
+|Red Hat                |   +1    |         |          |
+|Tomitribe              |   +1    |         |          |
+|EE4J PMC               |   +1    |         |          |
+|Participant Members    |   +1    |         |          |
+|Committer Members      |   +1    |         |          |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00529.html)
 
 # Compatible Implementations
 
