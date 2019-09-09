@@ -8,7 +8,7 @@ Jakarta XML-based RPC defines consistent Java APIs for using XML based RPC stand
 * [Jakarta XML RPC 1.1 Specification Document](./xml-rpc-spec-1.1.pdf) (PDF)
 * [Jakarta XML RPC 1.1 Specification Document](./xml-rpc-spec-1.1.html) (HTML)
 * [Jakarta XML RPC 1.1 Javadoc](./apidocs)
-* [Jakarta XML RPC 1.1 TCK](http://download.eclipse.org/jakartaee/xml-rpc/1.1/eclipse-xml-rpc-tck-1.1.0.zip)
+* [Jakarta XML RPC 1.1 TCK](https://download.eclipse.org/jakartaee/xml-rpc/1.1/jakarta-xml-rpc-tck-1.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/xml-rpc/1.1/jakarta-xml-rpc-tck-1.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/xml-rpc/1.1/jakarta-xml-rpc-tck-1.1.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.xml.rpc:jakarta.xml.rpc-api:jar:1.1.4](https://search.maven.org/artifact/jakarta.xml.rpc/jakarta.xml.rpc-api/1.1.4/jar)
 

@@ -8,7 +8,7 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 * [Jakarta Concurrency 1.1 Specification Document](./concurrency-spec-1.1.pdf) (PDF)
 * [Jakarta Concurrency 1.1 Specification Document](./concurrency-spec-1.1.html) (HTML)
 * [Jakarta Concurrency 1.1 Javadoc](./apidocs)
-* [Jakarta Concurrency 1.1 TCK](https://download.eclipse.org/jakartaee/concurrency/1.1/eclipse-concurrency-tck-1.1.0.zip)
+* [Jakarta Concurrency 1.1 TCK](https://download.eclipse.org/jakartaee/concurrency/1.1/jakarta-concurrency-tck-1.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/concurrency/1.1/jakarta-concurrency-tck-1.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/concurrency/1.1/jakarta-concurrency-tck-1.1.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:jar:1.1.2](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/1.1.2/jar)
 

@@ -8,7 +8,7 @@ Jakarta Transactions
 * [Jakarta Transactions 1.3 Specification Document](./transactions-spec-1.3.pdf) (PDF)
 * [Jakarta Transactions 1.3 Specification Document](./transactions-spec-1.3.html) (HTML)
 * [Jakarta Transactions 1.3 Javadoc](./apidocs)
-* [Jakarta Transactions 1.3 TCK](https://download.eclipse.org/jakartaee/transactions/1.3/eclipse-transactions-tck-1.3.0.zip)
+* [Jakarta Transactions 1.3 TCK](https://download.eclipse.org/jakartaee/transactions/1.3/jakarta-transactions-tck-1.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/transactions/1.3/jakarta-transactions-tck-1.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/transactions/1.3/jakarta-transactions-tck-1.3.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.transaction:jakarta.transaction-api:jar:1.3.3](https://search.maven.org/artifact/jakarta.transaction/jakarta.transaction-api/1.3.3/jar)
 

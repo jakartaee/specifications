@@ -10,7 +10,7 @@ into a Jakarta Servlet.
 * [Jakarta Server Pages 2.3 Specification Document](./pages-spec-2.3.pdf) (PDF)
 * [Jakarta Server Pages 2.3 Specification Document](./pages-spec-2.3.html) (HTML)
 * [Jakarta Server Pages 2.3 Javadoc](./apidocs)
-* [Jakarta Server Pages 2.3 TCK](https://download.eclipse.org/jakartaee/pages/2.3/eclipse-pages-tck-2.3.0.zip)
+* [Jakarta Server Pages 2.3 TCK](https://download.eclipse.org/jakartaee/pages/2.3/jakarta-pages-tck-2.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/pages/2.3/jakarta-pages-tck-2.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/pages/2.3/jakarta-pages-tck-2.3.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.servlet.jsp:jakarta.servlet.jsp-api:jar:2.3.6](https://search.maven.org/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/2.3.6/jar)
 
