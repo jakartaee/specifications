@@ -9,7 +9,7 @@ querying JSON documents.
 * [Jakarta JSON Processing 1.1 Specification Document](./jsonp-spec-1.1.pdf) (PDF)
 * [Jakarta JSON Processing 1.1 Specification Document](./jsonp-spec-1.1.html) (HTML)
 * [Jakarta JSON Processing 1.1 Javadoc](./apidocs)
-* [Jakarta JSON Processing 1.1 TCK](http://download.eclipse.org/jakartaee/jsonp/1.1/eclipse-jsonp-tck-1.1.0.zip)
+* [Jakarta JSON Processing 1.1 TCK](https://download.eclipse.org/jakartaee/jsonp/1.1/jakarta-jsonp-tck-1.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/jsonp/1.1/jakarta-jsonp-tck-1.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/jsonp/1.1/jakarta-jsonp-tck-1.1.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.json:jakarta.json-api:jar:1.1.6](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/1.1.6/jar)
 

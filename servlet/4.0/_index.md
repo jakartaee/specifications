@@ -8,7 +8,7 @@ Jakarta Servlet defines a server-side API for handling HTTP requests and respons
 * [Jakarta Servlet 4.0 Specification Document](./servlet-spec-4.0.pdf) (PDF)
 * [Jakarta Servlet 4.0 Specification Document](./servlet-spec-4.0.html) (HTML)
 * [Jakarta Servlet 4.0 Javadoc](./apidocs)
-* [Jakarta Servlet 4.0 TCK](https://download.eclipse.org/jakartaee/servlet/4.0/jakarta-servlet-tck-4.0.0.zip)
+* [Jakarta Servlet 4.0 TCK](https://download.eclipse.org/jakartaee/servlet/4.0/jakarta-servlet-tck-4.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/servlet/4.0/jakarta-servlet-tck-4.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/servlet/4.0/jakarta-servlet-tck-4.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.servlet:jakarta.servlet-api:jar:4.0.3](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/4.0.3/jar)
 
