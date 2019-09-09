@@ -18,7 +18,7 @@ into a Jakarta Servlet.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2019-09-10 with the following results.
+The Specification Committee Ballot concluded successfully on 2019-09-09 with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
