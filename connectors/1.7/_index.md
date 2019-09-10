@@ -8,7 +8,7 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 * [Jakarta Connectors 1.7 Specification Document](./connectors-spec-1.7.pdf) (PDF)
 * [Jakarta Connectors 1.7 Specification Document](./connectors-spec-1.7.html) (HTML)
 * [Jakarta Connectors 1.7 Javadoc](./apidocs)
-* [Jakarta Connectors 1.7 TCK](https://download.eclipse.org/jakartaee/connectors/1.7/connectors-tck-1.7.4.zip) ([sig](https://download.eclipse.org/jakartaee/connectors/1.7/connectors-tck-1.7.4.zip.sig),[sha](https://download.eclipse.org/jakartaee/connectors/1.7/connectors-tck-1.7.4.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Connectors 1.7 TCK](http://download.eclipse.org/jakartaee/connectors/1.7/jakarta-connectors-tck-1.7.0.zip) ([sig](https://download.eclipse.org/jakartaee/connectors/1.7/connectors-tck-1.7.4.zip.sig),[sha](https://download.eclipse.org/jakartaee/connectors/1.7/connectors-tck-1.7.4.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.resource:jakarta.resource-api:jar:1.7.4](https://search.maven.org/artifact/jakarta.resource/jakarta.resource-api/1.7.4/jar)
 
