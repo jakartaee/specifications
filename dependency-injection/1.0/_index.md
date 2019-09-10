@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Dependency Injection 1.0"
-date: 2019-08-06
+date: 2019-09-10
 summary: "Final for Jakarta EE 8"
 ---
 
@@ -9,7 +9,7 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 * [Jakarta Dependency Injection 1.0 Specification Document](./injection-spec-1.0.pdf) (PDF)
 * [Jakarta Dependency Injection 1.0 Specification Document](./injection-spec-1.0.html) (HTML)
 * [Jakarta Dependency Injection 1.0 Javadoc](./apidocs)
-* [Jakarta Dependency Injection 1.0 TCK](https://download.eclipse.org/jakartaee/dependency-injection/1.0/jakarta.inject-tck-1.0-bin.zip)
+* [Jakarta Dependency Injection 1.0 TCK](https://download.eclipse.org/jakartaee/dependency-injection/1.0/jakarta.inject-tck-1.0-bin.zip) ([sig](https://download.eclipse.org/jakartaee/dependency-injection/1.0/jakarta.inject-tck-1.0-bin.zip.sig),[sha](https://download.eclipse.org/jakartaee/dependency-injection/1.0/jakarta.inject-tck-1.0-bin.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.inject:jakarta.inject-api:jar:1.0](https://search.maven.org/artifact/jakarta.inject/jakarta.inject-api/1.0/jar)
 
@@ -17,20 +17,23 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2019-08-28 with the following results.
+
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
+|Fujitsu                |   +1    |         |          |
+|IBM                    |   +1    |         |          |
+|Oracle                 |   +1    |         |          |
+|Payara                 |   +1    |         |          |
+|Red Hat                |   +1    |         |          |
+|Tomitribe              |   +1    |         |          |
+|EE4J PMC               |   +1    |         |          |
+|Participant Members    |   +1    |         |          |
 |Committer Members      |         |         |          |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00454.html)
 
 # Compatible Implementations
 
-* https://weld.cdi-spec.org/download/[Weld 2.3.8.Final]
-* https://weld.cdi-spec.org/download/[Weld 3.1.1.Final]
-Weld 3.1.1.Final
+* [Weld 2.3.8.Final](https://weld.cdi-spec.org/download/)
+* [Weld 3.1.1.Final](https://weld.cdi-spec.org/download/)
