@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Web Services Metadata Specification 1.1"
+title: "Jakarta Web Services Metadata Specification 2.1"
 date: 2019-07-23T14:28:20+0200
 summary: "First release for Jakarta EE 8"
 ---
@@ -8,12 +8,12 @@ use of metadata, a non-normative processing model for metadata annotated web ser
 source files, runtime requirements for a container, and annotations used for WSDL,
 binding, and configuration.
 
-* [Jakarta Web Services Metadata 1.1 Specification Document](./jakarta.jws-spec-1.1.pdf) (PDF)
-* [Jakarta Web Services Metadata 1.1 Specification Document](./jakarta.jws-spec-1.1.html) (HTML)
-* [Jakarta Web Services Metadata 1.1 Javadoc](./apidocs)
-* [Jakarta Web Services Metadata 1.1 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/8.0.1/promoted/jaxwstck-2.3_latest.zip)
+* [Jakarta Web Services Metadata 2.1 Specification Document](./jakarta.jws-spec-1.1.pdf) (PDF)
+* [Jakarta Web Services Metadata 2.1 Specification Document](./jakarta.jws-spec-1.1.html) (HTML)
+* [Jakarta Web Services Metadata 2.1 Javadoc](./apidocs)
+* [Jakarta Web Services Metadata 2.1 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/8.0.1/promoted/jaxwstck-2.3_latest.zip)
 * Maven coordinates
-  * [jakarta.jws:jakarta.jws-api:jar:1.1.2](https://search.maven.org/artifact/jakarta.jws/jakarta.jws-api/1.1.2/jar)
+  * [jakarta.jws:jakarta.jws-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.jws/jakarta.jws-api/2.1.0/jar)
 
 # Ballots
 
