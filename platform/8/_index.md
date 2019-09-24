@@ -8,7 +8,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE Platform 8 Specification Document](./platform-spec-8.pdf) (PDF)
 * [Jakarta EE Platform 8 Specification Document](./platform-spec-8.html) (HTML)
 * [Jakarta EE Platform 8 Javadoc](./apidocs)
-* [Jakarta EE Platform 8 TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta EE Platform 8 TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.platform:jakarta.jakartaee-api:jar:8.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/8.0.0/jar)
 
