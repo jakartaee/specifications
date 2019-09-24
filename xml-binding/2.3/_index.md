@@ -33,4 +33,4 @@ between XML documents and Java objects.
 
 # Compatible Implementations
 
-* Eclipse Implementation of JAXB 2.3.2
+* [Eclipse Implementation of JAXB 2.3.2](https://eclipse-ee4j.github.io/jaxb-ri/)

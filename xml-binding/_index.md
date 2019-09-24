@@ -1,4 +1,6 @@
 ---
-title: "Jakarta XML Binding (under development)"
-summary: "Need a summary/scope statement..."
+title: "Jakarta XML Binding"
+summary: "The Jakarta XML Binding provides an API and tools that automate the mapping
+between XML documents and Java objects."
+
 ---
