@@ -8,10 +8,10 @@ use of metadata, a non-normative processing model for metadata annotated web ser
 source files, runtime requirements for a container, and annotations used for WSDL,
 binding, and configuration.
 
-* [Jakarta Web Services Metadata 2.1 Specification Document](./jakarta.jws-spec-1.1.pdf) (PDF)
-* [Jakarta Web Services Metadata 2.1 Specification Document](./jakarta.jws-spec-1.1.html) (HTML)
+* [Jakarta Web Services Metadata 2.1 Specification Document](./jakarta.jws-spec-2.1.pdf) (PDF)
+* [Jakarta Web Services Metadata 2.1 Specification Document](./jakarta.jws-spec-2.1.html) (HTML)
 * [Jakarta Web Services Metadata 2.1 Javadoc](./apidocs)
-* [Jakarta Web Services Metadata 2.1 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/8.0.1/promoted/jaxwstck-2.3_latest.zip)
+* [Jakarta Web Services Metadata 2.1 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-xml-ws-tck-2.3.0.zip)
 * Maven coordinates
   * [jakarta.jws:jakarta.jws-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.jws/jakarta.jws-api/2.1.0/jar)
 
@@ -35,4 +35,4 @@ binding, and configuration.
 
 # Compatible Implementations
 
-* Eclipse Metro 2.4.3
+* [Eclipse Metro 2.4.3](https://eclipse-ee4j.github.io/metro-wsit/)
