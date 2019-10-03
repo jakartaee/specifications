@@ -34,3 +34,4 @@ and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments 
 # Compatible Implementations
 
 * [Jakarta SOAP with Attachments implementation 1.5.1](https://eclipse-ee4j.github.io/metro-saaj/)
+* {Eclipse Metro 2.4.3](https://eclipse-ee4j.github.io/metro-wsit/)
