@@ -1,5 +1,5 @@
 ---
-title: "Jakarta EE Platform 9"
+title: "Jakarta EE Platform 9 (under development)"
 date: 2020-mm-dd
 summary: "Release of the Jakarta EE 9 Platform"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Jakarta JSON Processing 2.0"
+title: "Jakarta JSON Processing 2.0 (under development)"
 date: 2020-mm-dd
 summary: "Release for Jakarta EE 9"
 ---
