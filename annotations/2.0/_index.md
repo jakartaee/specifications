@@ -23,21 +23,14 @@ enable a declarative style of programming that applies across a variety of Java 
 
 ## Plan Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+[//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.)
+[//]: # (For those Projects, just use the following statement in this Plan Review section:)
 
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/).
+Reference that Plan Review's ballot for the official results.
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+[//]: # (If your Project was required to do a standalone Plan Review...)
+[//]: # (...you'll have to cut-and-paste the voting section from the Release Review section.)
 
 ## Release Review
 
