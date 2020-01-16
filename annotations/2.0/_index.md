@@ -38,11 +38,11 @@ The Specification Committee Ballot concluded successfully on 2020-mm-dd with the
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
 | Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter, Alasdair Nottingham | IBM                 |      |
-| Bill Shannon, Ed Bratt, Dmitry Kornilov        | Oracle              |      |
-| Steve Millidge, Mark Wareham                   | Payara              |      |
+| Dan Bandera, Kevin Sutter                      | IBM                 |      |
+| Bill Shannon, Ed Bratt                         | Oracle              |      |
+| Mark Wareham, Steve Millidge                   | Payara              |      |
 | Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Richard Monson-Haefel           | Tomitribe           |      |
+| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
 | Ivar Grimstad                                  | EE4J PMC            |      |
 | Alex Theedom                                   | Participant Members |      |
 | Werner Keil                                    | Committer Members   |      |
