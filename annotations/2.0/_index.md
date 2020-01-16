@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Annotations 2.0 (under development)"
-date: 2020-mm-dd
+date: 2020-06-30
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that
@@ -26,26 +26,27 @@ enable a declarative style of programming that applies across a variety of Java 
 [//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.)
 [//]: # (For those Projects, just use the following statement in this Plan Review section:)
 
-This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/).
-Reference that Plan Review's ballot for the official results.
+This Specification Project's Plan Review was covered by the Platform Plan Review.  
+Please reference the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/) ballot for the official results.
 
 [//]: # (If your Project was required to do a standalone Plan Review...)
-[//]: # (...you'll have to cut-and-paste the voting section from the Release Review section.)
+[//]: # (...you'll have to cut-and-paste the voting section from the Release Review section below and fill in the actual results from the ballot.)
 
 ## Release Review
 
 The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
 
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
+| Dan Bandera, Kevin Sutter, Alasdair Nottingham | IBM                 |      |
+| Bill Shannon, Ed Bratt, Dmitry Kornilov        | Oracle              |      |
+| Steve Millidge, Mark Wareham                   | Payara              |      |
+| Scott Stark, Mark Little                       | Red Hat             |      |
+| David Blevins, Richard Monson-Haefel           | Tomitribe           |      |
+| Ivar Grimstad                                  | EE4J PMC            |      |
+| Alex Theedom                                   | Participant Members |      |
+| Werner Keil                                    | Committer Members   |      |
+|                                                | Total               |      |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()

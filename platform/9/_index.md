@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Platform 9 (under development)"
-date: 2020-mm-dd
+date: 2020-06-30
 summary: "Release of the Jakarta EE 9 Platform"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
@@ -21,36 +21,38 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 
 ## Plan Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-09-15 with the following results.
 
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura, Michael DeNicola               | Fujitsu             | +1   |
+| Dan Bandera, Kevin Sutter, Alasdair Nottingham | IBM                 | +1   |
+| Bill Shannon, Ed Bratt, Dmitry Kornilov        | Oracle              | +1   |
+| Steve Millidge, Mark Wareham                   | Payara              | +1   |
+| Scott Stark, Mark Little                       | Red Hat             | +1   |
+| David Blevins, Richard Monson-Haefel           | Tomitribe           | +1   |
+| Ivar Grimstad                                  | EE4J PMC            | +1   |
+| Alex Theedom                                   | Participant Members | +1   |
+| Werner Keil                                    | Committer Members   | +1   |
+|                                                | Total               |  9   |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00574.html).
 
 ## Release Review
 
 The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
 
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
+| Dan Bandera, Kevin Sutter, Alasdair Nottingham | IBM                 |      |
+| Bill Shannon, Ed Bratt, Dmitry Kornilov        | Oracle              |      |
+| Steve Millidge, Mark Wareham                   | Payara              |      |
+| Scott Stark, Mark Little                       | Red Hat             |      |
+| David Blevins, Richard Monson-Haefel           | Tomitribe           |      |
+| Ivar Grimstad                                  | EE4J PMC            |      |
+| Alex Theedom                                   | Participant Members |      |
+| Werner Keil                                    | Committer Members   |      |
+|                                                | Total               |      |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
