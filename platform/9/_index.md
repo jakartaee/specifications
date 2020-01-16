@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Platform 9 (under development)"
-date: 2020-06-15
+date: 2020-01-15
 summary: "Release of the Jakarta EE 9 Platform"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
@@ -21,7 +21,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 
 ## Plan Review
 
-The Specification Committee Ballot concluded successfully on 2020-09-15 with the following results.
+The Specification Committee Ballot concluded successfully on 2020-01-15 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
