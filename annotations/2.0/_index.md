@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Annotations 2.0 (under development)"
-date: 2020-06-30
+date: 2020-06-15
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that

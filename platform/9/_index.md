@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Platform 9 (under development)"
-date: 2020-06-30
+date: 2020-06-15
 summary: "Release of the Jakarta EE 9 Platform"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
