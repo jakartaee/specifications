@@ -26,8 +26,8 @@ enable a declarative style of programming that applies across a variety of Java 
 [//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.)
 [//]: # (For those Projects, just use the following statement in this Plan Review section:)
 
-This Specification Project's Plan Review was covered by the Platform Plan Review.  
-Please reference the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/) ballot for the official results.
+This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/).  
+Please reference that ballot for the official results.
 
 [//]: # (If your Project was required to do a standalone Plan Review...)
 [//]: # (...you'll have to cut-and-paste the voting section from the Release Review section below and fill in the actual results from the ballot.)
