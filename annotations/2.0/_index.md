@@ -35,24 +35,8 @@ This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan R
 Please reference that ballot for the official results.
 
 [//]: # "comment start..
-If your Project was required to do a standalone Plan Review...  You'll have to use this table and fill in actual results from the ballot.
-
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
-
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter, Alasdair Nottingham | IBM                 |      |
-| Bill Shannon, Ed Bratt, Dmitry Kornilov        | Oracle              |      |
-| Steve Millidge, Mark Wareham                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Richard Monson-Haefel           | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
-
-The ballot was run in the [jakarta.ee-spec mailing list]()
+If your Project was required to do a standalone Plan Review...  You'll need to perform an official
+Plan Review ballot and record the results here.
 ..comment end"
 
 ## Release Review
