@@ -26,11 +26,11 @@ The Specification Committee Ballot concluded successfully on 2020-01-15 with the
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
 | Kenji Kazumura, Michael DeNicola               | Fujitsu             | +1   |
-| Dan Bandera, Kevin Sutter, Alasdair Nottingham | IBM                 | +1   |
-| Bill Shannon, Ed Bratt, Dmitry Kornilov        | Oracle              | +1   |
-| Steve Millidge, Mark Wareham                   | Payara              | +1   |
+| Dan Bandera, Kevin Sutter                      | IBM                 | +1   |
+| Bill Shannon, Ed Bratt                         | Oracle              | +1   |
+| Mark Wareham, Steve Millidge                   | Payara              | +1   |
 | Scott Stark, Mark Little                       | Red Hat             | +1   |
-| David Blevins, Richard Monson-Haefel           | Tomitribe           | +1   |
+| David Blevins, Cesar Hernandez                 | Tomitribe           | +1   |
 | Ivar Grimstad                                  | EE4J PMC            | +1   |
 | Alex Theedom                                   | Participant Members | +1   |
 | Werner Keil                                    | Committer Members   | +1   |
@@ -45,11 +45,11 @@ The Specification Committee Ballot concluded successfully on 2020-mm-dd with the
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
 | Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter, Alasdair Nottingham | IBM                 |      |
-| Bill Shannon, Ed Bratt, Dmitry Kornilov        | Oracle              |      |
-| Steve Millidge, Mark Wareham                   | Payara              |      |
+| Dan Bandera, Kevin Sutter                      | IBM                 |      |
+| Bill Shannon, Ed Bratt                         | Oracle              |      |
+| Mark Wareham, Steve Millidge                   | Payara              |      |
 | Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Richard Monson-Haefel           | Tomitribe           |      |
+| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
 | Ivar Grimstad                                  | EE4J PMC            |      |
 | Alex Theedom                                   | Participant Members |      |
 | Werner Keil                                    | Committer Members   |      |
