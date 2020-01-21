@@ -25,10 +25,29 @@ summary: "Release for Jakarta EE 9"
 
 [//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.  For those Projects, just use the following statement in this Plan Review section:)
 
-This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/).  
-Please reference that ballot for the official results.
+[//]: # (This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review].)
+[//]: # (Please reference that ballot for the official results.)
 
 [//]: # (If your Project was required to do a standalone Plan Review...  You'll need to perform an official Plan Review ballot and record the results here.)
+
+[Jakarta Activation 2.0 Release Record and Plan]()
+
+The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
+| Dan Bandera, Kevin Sutter                      | IBM                 |      |
+| Bill Shannon, Ed Bratt                         | Oracle              |      |
+| Mark Wareham, Steve Millidge                   | Payara              |      |
+| Scott Stark, Mark Little                       | Red Hat             |      |
+| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
+| Ivar Grimstad                                  | EE4J PMC            |      |
+| Alex Theedom                                   | Participant Members |      |
+| Werner Keil                                    | Committer Members   |      |
+|                                                | Total               |      |
+
+The ballot was run in the [jakarta.ee-spec mailing list]()
 
 ## Release Review
 

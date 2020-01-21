@@ -1,12 +1,12 @@
 ---
 title: "Jakarta RESTful Web Services 3.0 (under development)"
-date: 2020-mm-dd
+date: 2020-01-15
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta RESTful Web Services provides a foundational API to develop web services
 following the Representational State Transfer (REST) architectural pattern.
 
-* [Jakarta RESTful Web Services 3.0 Release Record]()
+* [Jakarta RESTful Web Services 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta RESTful Web Services 3.0 Specification Document]() (PDF)
 * [Jakarta RESTful Web Services 3.0 Specification Document]() (HTML)
