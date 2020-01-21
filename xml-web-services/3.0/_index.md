@@ -1,26 +1,23 @@
 ---
-title: "Jakarta Standard Tag Library 2.0 (under development)"
+title: "Jakarta XML Web Services 3.0 (under development)"
 date: 2020-01-15
 summary: "Release for Jakarta EE 9"
 ---
-Jakarta Standard Tag Library encapsulates as simple tags the core functionality common to many Web applications.
-Jakarta Standard Tag Library has support for common, structural tasks such as iteration and conditionals, tags
-for manipulating XML documents, internationalization tags, and SQL tags. It also provides a framework for integrating
-existing custom tags with Jakarta Standard Tag Library tags.
+# Need a scope statement...
 
-* [Jakarta Standard Tag Library 2.0 Release Record]()
+* [Jakarta XML Web Services 3.0 Release Record]()
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Standard Tag Library 2.0 Specification Document]() (PDF)
-* [Jakarta Standard Tag Library 2.0 Specification Document]() (HTML)
-* [Jakarta Standard Tag Library 2.0 Javadoc](./apidocs)
-* [Jakarta Standard Tag Library 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta XML Web Services 3.0 Specification Document]() (PDF)
+* [Jakarta XML Web Services 3.0 Specification Document]() (HTML)
+* [Jakarta XML Web Services 3.0 Javadoc](./apidocs)
+* [Jakarta XML Web Services 3.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.tags:jakarta.tags-api:jar:2.0.0]()
+  * [jakarta.jax-ws:jakarta.jax-ws-api:jar:3.0.0]()
 
 
 # Compatible Implementations
 
-* [Jakarta Standard Tag Library]()
+* [Jakarta XML Web Services]()
 
 # Ballots
 
