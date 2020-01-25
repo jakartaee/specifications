@@ -1,7 +1,7 @@
 ---
 title: "Jakarta Web Services Metadata Specification 2.1"
 date: 2019-07-23T14:28:20+0200
-summary: "First release for Jakarta EE 8"
+summary: "Initial release for Jakarta Web Services Metadata"
 ---
 Jakarta Web Services Metadata defines a programming model for Web Services in Java,
 use of metadata, a non-normative processing model for metadata annotated web service
@@ -10,7 +10,7 @@ binding, and configuration.
 
 * [Jakarta Web Services Metadata 2.1 Specification Document](./jakarta.jws-spec-2.1.pdf) (PDF)
 * [Jakarta Web Services Metadata 2.1 Specification Document](./jakarta.jws-spec-2.1.html) (HTML)
-* [Jakarta Web Services Metadata 2.1 Javadoc](./apidocs)
+* [Jakarta Web Services Metadata 2.1 Javadoc](./apidocs/index.html?overview-summary.html)
 * [Jakarta Web Services Metadata 2.1 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-xml-ws-tck-2.3.0.zip)
 * Maven coordinates
   * [jakarta.jws:jakarta.jws-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.jws/jakarta.jws-api/2.1.0/jar)
@@ -19,6 +19,7 @@ binding, and configuration.
 
 ## Release Review
 
+The Release Review Specification Committee Ballot concluded successfully on 2020-XX-XX with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
