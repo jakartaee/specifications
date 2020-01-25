@@ -1,7 +1,7 @@
 ---
 title: "Jakarta Web Services Metadata Specification 2.1"
 date: 2019-07-23T14:28:20+0200
-summary: "Initial release for Jakarta Web Services Metadata"
+summary: "Initial release of Jakarta Web Services Metadata"
 ---
 Jakarta Web Services Metadata defines a programming model for Web Services in Java,
 use of metadata, a non-normative processing model for metadata annotated web service
