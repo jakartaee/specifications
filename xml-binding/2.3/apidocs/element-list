@@ -1,4 +1,3 @@
-module:java.xml.bind
 javax.xml.bind
 javax.xml.bind.annotation
 javax.xml.bind.annotation.adapters
