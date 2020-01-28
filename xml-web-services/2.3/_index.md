@@ -6,10 +6,10 @@ summary: "Initial release of Jakarta XML Web Services"
 Jakarta XML Web Services defines a means for implementing XML-Based Web Services
 based on Jakarta SOAP with Attachments and Jakarta Web Services Metadata.
 
-* [Jakarta XML Web Services 2.3 Specification Document](./jakarta.xml.ws-spec-2.3.pdf) (PDF)
-* [Jakarta XML Web Services 2.3 Specification Document](./jakarta.xml.ws-spec-2.3.html) (HTML)
+* [Jakarta XML Web Services 2.3 Specification Document](./xml-ws-spec-2.3.pdf) (PDF)
+* [Jakarta XML Web Services 2.3 Specification Document](./xml-ws-spec-2.3.html) (HTML)
 * [Jakarta XML Web Services 2.3 Javadoc](./apidocs/index.html?overview-summary.html)
-* [Jakarta XML Web Services 2.3 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee8-eftl/promoted/eclipse-xml-ws-tck-2.3.0.zip)
+* [Jakarta XML Web Services 2.3 TCK](http://download.eclipse.org/ee4j/xml-web-services/tck/eftl/jakarta-xml-ws-tck-2.3.0.zip)
 * Maven coordinates
   * [jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3](https://search.maven.org/artifact/jakarta.xml.ws/jakarta.xml.ws-api/2.3.3/jar)
 
