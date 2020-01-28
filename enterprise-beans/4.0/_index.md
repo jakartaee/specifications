@@ -15,10 +15,17 @@ Jakarta Enterprise Beans defines an architecture for the development and deploym
 * Maven coordinates
   * [jakarta.ejb:jakarta.ejb-api:jar:4.0.0]()
 
+The Jakarta Enterprise Beans 4.0 intended scope includes all plans detailed in the [Jakarta EE 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan), which in essence involves a backwards incompatible namespace change from `javax.ejb` to `jakarta.ejb`.  In addition the Jakarta Enterprise Beans 4.0 Release Plan will involve removal of `java.security.Identity`, which is being removed from future versions of Java.
+
+Affected method signatures:
+
+ - class `javax.ejb.EJBContext` method `Identity getCallerIdentity();`
+
+Outside of this breaking change, no other changes are planned.
 
 # Compatible Implementations
 
-* [Jakarta Enterprise Beans]()
+* Pending
 
 # Ballots
 
