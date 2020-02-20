@@ -19,20 +19,20 @@ binding, and configuration.
 
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2020-XX-XX with the following results.
+The Release Review Specification Committee Ballot concluded successfully on 2020-02-19 with the following results.
 
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
-
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura, Michael DeNicola               | Fujitsu             |   1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |   1  |
+| Bill Shannon, Ed Bratt                         | Oracle              |   1  |
+| Mark Wareham, Steve Millidge                   | Payara              |   1  |
+| Scott Stark, Mark Little                       | Red Hat             |   1  |
+| David Blevins, Cesar Hernandez                 | Tomitribe           |   1  |
+| Ivar Grimstad                                  | EE4J PMC            |   1  |
+| Alex Theedom                                   | Participant Members |      |
+| Werner Keil                                    | Committer Members   |   1  |
+|                                                | Total               |   8  |
 
 # Compatible Implementations
 
