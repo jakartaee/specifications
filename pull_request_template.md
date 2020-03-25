@@ -5,6 +5,7 @@ Include the following in PR#1:
 - [ ] A directory in the form wombat/x.y where x.y is the release major.minor version, and the directory contains the following.
 - [ ] Specification PDF in the form of wombat-spec-x.y.pdf
 - [ ] Specification HTML in the form of wombat-spec-x.y.html
+- [ ] If the specification produces XML Schema(s), link(s) to the [publish schema PR](https://eclipse-ee4j.github.io/jakartaee-platform/publish-xml-schemas)(s)
 - [ ] A specification page named _index.md following the template at:
       https://github.com/jakartaee/specification-committee/blob/master/spec_page_template.md
 - [ ] For a Progress Review, that sufficient progress has been made on
