@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Managed Beans 2.0 (under development)"
+title: "Jakarta Managed Beans 2.0"
 date: 2020-01-15
 summary: "Release for Jakarta EE 9"
 ---
