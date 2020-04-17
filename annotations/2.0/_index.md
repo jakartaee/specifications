@@ -1,35 +1,23 @@
 ---
-title: "Jakarta Annotations 2.0 (under development)"
-date: 2020-01-15
-summary: "Release for Jakarta EE 9"
+title: "Jakarta Annotations 2.0"
+date: 2020-04-17
+summary: "Jakarta Annotations spec for Jakarta EE 9."
 ---
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that
 enable a declarative style of programming that applies across a variety of Java technologies.
 
-* [Jakarta Annotations 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.ca/releases/2.0.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Annotations 2.0 Specification Document]() (PDF)
-* [Jakarta Annotations 2.0 Specification Document]() (HTML)
+* [Jakarta Annotations 2.0 Specification Document](./annotations-spec-2.0.pdf) (PDF)
+* [Jakarta Annotations 2.0 Specification Document](./annotations-spec-2.0.html) (HTML)
 * [Jakarta Annotations 2.0 Javadoc](./apidocs)
-* [Jakarta Annotations 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Annotations 2.0 TCK]()
 * Maven coordinates
   * [jakarta.annotation:jakarta.annotation-api:jar:2.0.0]()
-
 
 # Compatible Implementations
 
 * [Jakarta Annotations]()
 
 # Ballots
-
-## Plan Review
-
-[//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.  For those Projects, just use the following statement in this Plan Review section:)
-
-This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/).  
-Please reference that ballot for the official results.
-
-[//]: # (If your Project was required to do a standalone Plan Review...  You'll need to perform an official Plan Review ballot and record the results here.)
 
 ## Release Review
 
