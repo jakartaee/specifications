@@ -29,6 +29,7 @@ The Specification Committee Ballot concluded successfully on yyyy-MM-dd with the
 |EE4J PMC               |         |         |          |
 |Participant Members    |         |         |          |
 |Committer Members      |         |         |          |
+|Enterprise Members     |         |         |          |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
 
