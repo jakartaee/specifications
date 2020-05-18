@@ -18,7 +18,7 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 
 # Compatible Implementations
 
-* [Jakarta Dependency Injection]()
+* [4.0.0.Alpha2](https://weld.cdi-spec.org/download/)
 
 # Ballots
 
