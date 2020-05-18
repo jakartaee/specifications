@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Dependency Injection 2.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Dependency Injection 2.0 (milestone)"
+date: 2020-05-18
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -8,12 +8,12 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 
 * [Jakarta Dependency Injection 2.0 Release Record]()
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Dependency Injection 2.0 Specification Document]() (PDF)
-* [Jakarta Dependency Injection 2.0 Specification Document]() (HTML)
+* [Jakarta Dependency Injection 2.0 Specification Document](./injection-spec-2.0.pdf) (PDF)
+* [Jakarta Dependency Injection 2.0 Specification Document](./injection-spec-2.0.html) (HTML)
 * [Jakarta Dependency Injection 2.0 Javadoc](./apidocs)
-* [Jakarta Dependency Injection 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Dependency Injection 2.0 TCK](https://download.eclipse.org/ee4j/cdi/jakarta.inject-tck-2.0.0.RC4-bin.tar.gz) ([sig](https://download.eclipse.org/ee4j/cdi/jakarta.inject-tck-2.0.0.RC4-bin.tar.gz.asc),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.inject:jakarta.inject-api:jar:2.0.0]()
+  * [jakarta.inject:jakarta.inject-api:jar:2.0.0-RC4]()
 
 
 # Compatible Implementations
