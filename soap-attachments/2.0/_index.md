@@ -1,23 +1,25 @@
 ---
 title: "Jakarta SOAP Attachments 2.0 (under development)"
-date: 2020-01-15
+date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
-# Need a scope statement...
+Jakarta SOAP with Attachments defines an API enabling developers to produce
+and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments Feature.
 
-* [Jakarta SOAP Attachments 2.0 Release Record]()
+* [Jakarta SOAP Attachments 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/2.0-jakarta-soap-attachments)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta SOAP Attachments 2.0 Specification Document]() (PDF)
-* [Jakarta SOAP Attachments 2.0 Specification Document]() (HTML)
+* [Jakarta SOAP Attachments 2.0 Specification Document](./soap-spec-2.0-RC3.pdf) (PDF)
+* [Jakarta SOAP Attachments 2.0 Specification Document](./soap-spec-2.0-RC3.html) (HTML)
 * [Jakarta SOAP Attachments 2.0 Javadoc](./apidocs)
 * [Jakarta SOAP Attachments 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.saaj:jakarta.saaj-api:jar:2.0.0]()
+  * [jakarta.xml.soap:jakarta.xml.soap-api:jar:2.0.0-RC3](https://search.maven.org/artifact/jakarta.xml.soap/jakarta.xml.soap-api/2.0.0-RC3/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta SOAP Attachments]()
+* [Jakarta SOAP with Attachments Implementation 2.0.0-M1](https://eclipse-ee4j.github.io/metro-saaj/)
+* [Eclipse Metro 3.0.0-M3](https://eclipse-ee4j.github.io/metro-wsit/)
 
 # Ballots
 
