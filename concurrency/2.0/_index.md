@@ -1,23 +1,23 @@
 ---
 title: "Jakarta Concurrency 2.0 (under development)"
-date: 2020-01-15
+date: 2020-05-30
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
 
-* [Jakarta Concurrency 2.0 Release Record]()
+* [Jakarta Concurrency 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.cu/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Concurrency 2.0 Specification Document]() (PDF)
-* [Jakarta Concurrency 2.0 Specification Document]() (HTML)
+* [Jakarta Concurrency 2.0 Specification Document](./concurrency-spec-2.0-RC2.pdf) (PDF)
+* [Jakarta Concurrency 2.0 Specification Document](./concurrency-spec-2.0-RC2.html) (HTML)
 * [Jakarta Concurrency 2.0 Javadoc](./apidocs)
 * [Jakarta Concurrency 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.concurrency:jakarta.concurrency-api:jar:2.0.0]()
+  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:2.0.0-RC2]()
 
 
 # Compatible Implementations
 
-* [Jakarta Concurrency]()
+* [Jakarta Concurrency CI 2.0.0-RC2](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/org/glassfish/jakarta.enterprise.concurrent/2.0.0-RC2/jakarta.enterprise.concurrent-2.0.0-RC2.jar)
 
 # Ballots
 
