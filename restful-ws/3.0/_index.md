@@ -1,6 +1,6 @@
 ---
-title: "Jakarta RESTful Web Services 3.0 (under development)"
-date: 2020-01-15
+title: "Jakarta RESTful Web Services 3.0 (milestone)"
+date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta RESTful Web Services provides a foundational API to develop web services
@@ -8,17 +8,17 @@ following the Representational State Transfer (REST) architectural pattern.
 
 * [Jakarta RESTful Web Services 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta RESTful Web Services 3.0 Specification Document]() (PDF)
-* [Jakarta RESTful Web Services 3.0 Specification Document]() (HTML)
+* [Jakarta RESTful Web Services 3.0 Specification Document](./restful-ws-spec-3.0-M1.pdf) (PDF)
+* [Jakarta RESTful Web Services 3.0 Specification Document](./restful-ws-spec-3.0-M1.html) (HTML)
 * [Jakarta RESTful Web Services 3.0 Javadoc](./apidocs)
 * [Jakarta RESTful Web Services 3.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.jaxrs:jakarta.jaxrs-api:jar:3.0.0]()
+  * [jakarta.jaxrs:jakarta.jaxrs-api:jar:3.0.0-M1](https://search.maven.org/artifact/jakarta.ws.rs/jakarta.ws.rs-api/3.0.0-M1/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta RESTful Web Services]()
+* [Eclipse Jersey 3.0.0-M1](https://repo1.maven.org/maven2/org/glassfish/jersey/bundles/jaxrs-ri/3.0.0-M1/jaxrs-ri-3.0.0-M1.jar)
 
 # Ballots
 
