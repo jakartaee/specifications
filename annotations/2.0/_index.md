@@ -6,7 +6,6 @@ summary: "Release for Jakarta EE 9"
 
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that enable a declarative style of programming that applies across a variety of Java technologies.
 
-* [Jakarta Annotations 2.0 Release Record]()
 * [Jakarta Annotations 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.ca/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Annotations 2.0 Specification Document](./annotations-spec-2.0-RC1.pdf) (PDF)
@@ -18,6 +17,25 @@ Jakarta Annotations defines a collection of annotations representing common sema
 
 # Compatible Implementations
 
-* [Jakarta Annotations](https://eclipse-ee4j.github.io/common-annotations-api/)
+* [Eclipse GlassFish]()
 
 # Ballots
+
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
+| Dan Bandera, Kevin Sutter                      | IBM                 |      |
+| Bill Shannon, Ed Bratt                         | Oracle              |      |
+| Mark Wareham, Steve Millidge                   | Payara              |      |
+| Scott Stark, Mark Little                       | Red Hat             |      |
+| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
+| Ivar Grimstad                                  | EE4J PMC            |      |
+| Alex Theedom                                   | Participant Members |      |
+| Werner Keil                                    | Committer Members   |      |
+|                                                | Total               |      |
+
+The ballot was run in the [jakarta.ee-spec mailing list]()
