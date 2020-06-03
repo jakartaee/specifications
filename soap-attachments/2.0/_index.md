@@ -1,5 +1,5 @@
 ---
-title: "Jakarta SOAP Attachments 2.0 (under development)"
+title: "Jakarta SOAP Attachments 2.0 (milestone)"
 date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
@@ -18,8 +18,8 @@ and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments 
 
 # Compatible Implementations
 
-* [Jakarta SOAP with Attachments Implementation 2.0.0-M1](https://eclipse-ee4j.github.io/metro-saaj/)
-* [Eclipse Metro 3.0.0-M3](https://eclipse-ee4j.github.io/metro-wsit/)
+* [Jakarta SOAP with Attachments Implementation 2.0.0-M1](https://repo1.maven.org/maven2/com/sun/xml/messaging/saaj/saaj-impl/2.0.0-M1/saaj-impl-2.0.0-M1.jar)
+* [Eclipse Metro 3.0.0-M3](https://repo1.maven.org/maven2/org/glassfish/metro/metro-standalone/3.0.0-M2/metro-standalone-3.0.0-M2.zip)
 
 # Ballots
 
