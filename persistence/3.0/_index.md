@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Persistence 3.0 (under development)"
+title: "Jakarta Persistence 3.0 (milestone)"
 date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
@@ -18,7 +18,7 @@ and object/relational mapping in Java(R) environments.
 
 # Compatible Implementations
 
-* [EclipseLink 3.0.0-M2](https://www.eclipse.org/eclipselink)
+* [EclipseLink 3.0.0-M1](https://www.eclipse.org/eclipselink/downloads/milestones.php)
 
 # Ballots
 
