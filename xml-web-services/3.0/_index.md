@@ -1,5 +1,5 @@
 ---
-title: "Jakarta XML Web Services 3.0 (under development)"
+title: "Jakarta XML Web Services 3.0 (milestone)"
 date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
@@ -18,8 +18,8 @@ based on Jakarta SOAP with Attachments and Jakarta Web Services Metadata.
 
 # Compatible Implementations
 
-* [Eclipse Implementation of XML Web Services 3.0.0-M4](https://eclipse-ee4j.github.io/metro-jax-ws/)
-* [Eclipse Metro 3.0.0-M3](https://eclipse-ee4j.github.io/metro-wsit/)
+* [Eclipse Implementation of XML Web Services 3.0.0-M3](https://repo1.maven.org/maven2/com/sun/xml/ws/jaxws-ri/3.0.0-M3/jaxws-ri-3.0.0-M3.zip)
+* [Eclipse Metro 3.0.0-M2](https://repo1.maven.org/maven2/org/glassfish/metro/metro-standalone/3.0.0-M2/metro-standalone-3.0.0-M2.zip)
 
 # Ballots
 
