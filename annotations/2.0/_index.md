@@ -21,6 +21,15 @@ Jakarta Annotations defines a collection of annotations representing common sema
 
 # Ballots
 
+## Plan Review
+
+[//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.  For those Projects, just use the following statement in this Plan Review section:)
+
+This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/).  
+Please reference that ballot for the official results.
+
+[//]: # (If your Project was required to do a standalone Plan Review...  You'll need to perform an official Plan Review ballot and record the results here.)
+
 ## Release Review
 
 The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
