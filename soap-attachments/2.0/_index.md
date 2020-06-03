@@ -19,7 +19,7 @@ and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments 
 # Compatible Implementations
 
 * [Jakarta SOAP with Attachments Implementation 2.0.0-M1](https://repo1.maven.org/maven2/com/sun/xml/messaging/saaj/saaj-impl/2.0.0-M1/saaj-impl-2.0.0-M1.jar)
-* [Eclipse Metro 3.0.0-M3](https://repo1.maven.org/maven2/org/glassfish/metro/metro-standalone/3.0.0-M2/metro-standalone-3.0.0-M2.zip)
+* [Eclipse Metro 3.0.0-M2](https://repo1.maven.org/maven2/org/glassfish/metro/metro-standalone/3.0.0-M2/metro-standalone-3.0.0-M2.zip)
 
 # Ballots
 
