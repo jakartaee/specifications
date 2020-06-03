@@ -15,6 +15,25 @@ querying JSON documents.
 
 # Compatible Implementations
 
-* [Jakarta JSON Processing](https://eclipse-ee4j.github.io/jsonp/)
+* [Jakarta JSON Processing](https://repo1.maven.org/maven2/org/glassfish/jakarta.json/2.0.0-RC2/jakarta.json-2.0.0-RC2.jar)
 
 # Ballots
+
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
+| Dan Bandera, Kevin Sutter                      | IBM                 |      |
+| Bill Shannon, Ed Bratt                         | Oracle              |      |
+| Mark Wareham, Steve Millidge                   | Payara              |      |
+| Scott Stark, Mark Little                       | Red Hat             |      |
+| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
+| Ivar Grimstad                                  | EE4J PMC            |      |
+| Alex Theedom                                   | Participant Members |      |
+| Werner Keil                                    | Committer Members   |      |
+|                                                | Total               |      |
+
+The ballot was run in the [jakarta.ee-spec mailing list]()
