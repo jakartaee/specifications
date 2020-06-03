@@ -1,5 +1,5 @@
 ---
-title: "Jakarta XML Binding 3.0 (under development)"
+title: "Jakarta XML Binding 3.0 (milestone)"
 date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
