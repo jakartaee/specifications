@@ -1,24 +1,24 @@
 ---
-title: "Jakarta Mail 2.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Mail 2.0 (milestone)"
+date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
 
 Jakarta Mail defines a platform-independent and protocol-independent framework to build mail and messaging applications.
 
-* [Jakarta Mail 2.0 Release Record]()
+* [Jakarta Mail 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.mail/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Mail 2.0 Specification Document]() (PDF)
-* [Jakarta Mail 2.0 Specification Document]() (HTML)
+* [Jakarta Mail 2.0 Specification Document](./mail-spec-2.0-RC6.pdf) (PDF)
+* [Jakarta Mail 2.0 Specification Document](./mail-spec-2.0-RC6.html) (HTML)
 * [Jakarta Mail 2.0 Javadoc](./apidocs)
 * [Jakarta Mail 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.mail:jakarta.mail-api:jar:2.0.0]()
+  * [jakarta.mail:jakarta.mail-api:jar:2.0.0-RC6](https://search.maven.org/artifact/jakarta.mail/jakarta.mail-api/2.0.0-RC6/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Mail]()
+* [Eclipse Jakarta Mail 2.0.0-RC6](https://repo1.maven.org/maven2/com/sun/mail/jakarta.mail/2.0.0-RC6/jakarta.mail-2.0.0-RC6.jar)
 
 # Ballots
 
