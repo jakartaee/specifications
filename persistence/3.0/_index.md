@@ -1,24 +1,24 @@
 ---
-title: "Jakarta Persistence 3.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Persistence 3.0 (milestone)"
+date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Persistence defines a standard for management of persistence
 and object/relational mapping in Java(R) environments.
 
-* [Jakarta Persistence 3.0 Release Record]()
+* [Jakarta Persistence 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.0-jakarta-persistence-api)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Persistence 3.0 Specification Document]() (PDF)
-* [Jakarta Persistence 3.0 Specification Document]() (HTML)
+* [Jakarta Persistence 3.0 Specification Document](./persistence_3.0-RC2.pdf) (PDF)
+* [Jakarta Persistence 3.0 Specification Document](./persistence_3.0-RC2.html) (HTML)
 * [Jakarta Persistence 3.0 Javadoc](./apidocs)
 * [Jakarta Persistence 3.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.persistence:jakarta.persistence-api:jar:3.0.0]()
+  * [jakarta.persistence:jakarta.persistence-api:jar:3.0.0-RC2](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.0.0-RC2/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Persistence]()
+* [EclipseLink 3.0.0-M1](https://www.eclipse.org/eclipselink/downloads/milestones.php)
 
 # Ballots
 
