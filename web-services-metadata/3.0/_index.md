@@ -1,23 +1,27 @@
 ---
-title: "Jakarta Web Services Metadata 3.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Web Services Metadata 3.0 (milestone)"
+date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
-# Need a scope statement...
+Jakarta Web Services Metadata defines a programming model for Web Services in Java,
+use of metadata, a non-normative processing model for metadata annotated web service
+source files, runtime requirements for a container, and annotations used for WSDL,
+binding, and configuration.
 
-* [Jakarta Web Services Metadata 3.0 Release Record]()
+* [Jakarta Web Services Metadata 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/3.0-jakarta-web-services-metadata)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Web Services Metadata 3.0 Specification Document]() (PDF)
-* [Jakarta Web Services Metadata 3.0 Specification Document]() (HTML)
+* [Jakarta Web Services Metadata 3.0 Specification Document](./ws-metadata-spec-3.0-RC2.pdf) (PDF)
+* [Jakarta Web Services Metadata 3.0 Specification Document](./ws-metadata-spec-3.0-RC2.html) (HTML)
 * [Jakarta Web Services Metadata 3.0 Javadoc](./apidocs)
 * [Jakarta Web Services Metadata 3.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.jws:jakarta.jws-api:jar:3.0.0]()
+  * [jakarta.jws:jakarta.jws-api:jar:3.0.0-RC2](https://search.maven.org/artifact/jakarta.jws/jakarta.jws-api/3.0.0-RC2/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Web Services Metadata]()
+* [Eclipse Implementation of XML Web Services 3.0.0-M3](https://repo1.maven.org/maven2/com/sun/xml/ws/jaxws-ri/3.0.0-M3/jaxws-ri-3.0.0-M3.zip)
+* [Eclipse Metro 3.0.0-M2](https://repo1.maven.org/maven2/org/glassfish/metro/metro-standalone/3.0.0-M2/metro-standalone-3.0.0-M2.zip)
 
 # Ballots
 
