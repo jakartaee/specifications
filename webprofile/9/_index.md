@@ -1,18 +1,18 @@
 ---
 title: "Jakarta EE Web Profile 9 (under development)"
-date: 2020-01-15
+date: 2020-06-08
 summary: "Release of the Jakarta EE 9 Web Profile"
 ---
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
 
 * [Jakarta Web Profile 9 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/web-profile-9)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Web Profile 9 Specification Document]() (PDF)
-* [Jakarta Web Profile 9 Specification Document]() (HTML)
+* [Jakarta Web Profile 9 Specification Document](./webprofile-spec-9-SNAPSHOT.pdf) (PDF)
+* [Jakarta Web Profile 9 Specification Document](./webprofile-spec-9-SNAPSHOT.html) (HTML)
 * [Jakarta Web Profile 9 Javadoc](./apidocs)
 * [Jakarta Web Profile 9 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0]()
+  * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0-RC2]()
 
 
 # Compatible Implementations
