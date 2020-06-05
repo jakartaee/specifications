@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Enterprise Beans 4.0 (milestone)"
-date: 2020-06-12
+date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -8,10 +8,10 @@ Jakarta Enterprise Beans defines an architecture for the development and deploym
 
 * [Jakarta Enterprise Beans 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.ejb/releases/4.0/plan)
   * [Jakarta Enterprise Beans 4.0 Release Plan](https://github.com/eclipse-ee4j/ejb-api/blob/master/4.0-PLAN.adoc)
-* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./enterprise-beans-spec-core-4.0.pdf) (PDF)
-* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./enterprise-beans-spec-core-4.0.html) (HTML)
-* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./enterprise-beans-spec-opt-4.0.pdf) (PDF)
-* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./enterprise-beans-spec-opt-4.0.html) (HTML)
+* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./enterprise-beans-spec-core-4.0-public-draft.pdf) (PDF)
+* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./enterprise-beans-spec-core-4.0-public-draft.html) (HTML)
+* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./enterprise-beans-spec-opt-4.0-public-draft.pdf) (PDF)
+* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./enterprise-beans-spec-opt-4.0-public-draft.html) (HTML)
 * [Jakarta Enterprise Beans 4.0.0-RC2 Javadoc](./apidocs)
 * [Jakarta Enterprise Beans 4.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
