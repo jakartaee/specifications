@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Enterprise Beans 4.0 (under development)"
-date: 2020-mm-dd
+title: "Jakarta Enterprise Beans 4.0 (milestone)"
+date: 2020-06-12
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -8,12 +8,14 @@ Jakarta Enterprise Beans defines an architecture for the development and deploym
 
 * [Jakarta Enterprise Beans 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.ejb/releases/4.0/plan)
   * [Jakarta Enterprise Beans 4.0 Release Plan](https://github.com/eclipse-ee4j/ejb-api/blob/master/4.0-PLAN.adoc)
-* [Jakarta Enterprise Beans 4.0 Specification Document]() (PDF)
-* [Jakarta Enterprise Beans 4.0 Specification Document]() (HTML)
-* [Jakarta Enterprise Beans 4.0 Javadoc](./apidocs)
+* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./enterprise-beans-spec-core-4.0.pdf) (PDF)
+* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./enterprise-beans-spec-core-4.0.html) (HTML)
+* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./enterprise-beans-spec-opt-4.0.pdf) (PDF)
+* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./enterprise-beans-spec-opt-4.0.html) (HTML)
+* [Jakarta Enterprise Beans 4.0.0-RC2 Javadoc](./apidocs)
 * [Jakarta Enterprise Beans 4.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.ejb:jakarta.ejb-api:jar:4.0.0]()
+  * [jakarta.ejb:jakarta.ejb-api:jar:4.0.0-RC2](https://repo.maven.apache.org/maven2/jakarta/ejb/jakarta.ejb-api/4.0.0-RC2/)
 
 The Jakarta Enterprise Beans 4.0 intended scope includes all plans detailed in the [Jakarta EE 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan), which in essence involves a backwards incompatible namespace change from `javax.ejb` to `jakarta.ejb`.  In addition the Jakarta Enterprise Beans 4.0 Release Plan will involve:
 
