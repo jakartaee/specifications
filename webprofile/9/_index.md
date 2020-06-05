@@ -1,5 +1,5 @@
 ---
-title: "Jakarta EE Web Profile 9 (under development)"
+title: "Jakarta EE Web Profile 9 (milestone)"
 date: 2020-06-08
 summary: "Release of the Jakarta EE 9 Web Profile"
 ---
