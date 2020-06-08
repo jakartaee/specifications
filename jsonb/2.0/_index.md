@@ -1,23 +1,23 @@
 ---
-title: "Jakarta JSON Binding Specification 2.0 (under development)"
-date: 2020-01-15
+title: "Jakarta JSON Binding Specification 2.0 (milestone)"
+date: 2020-06-08
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta JSON Binding defines a binding framework for converting Java(R) objects to and from JSON documents.
 
 * [Jakarta JSON Binding 2.0 Release Record]()
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta JSON Binding 2.0 Specification Document]() (PDF)
-* [Jakarta JSON Binding 2.0 Specification Document]() (HTML)
+* [Jakarta JSON Binding 2.0 Specification Document](./jsonb-spec-2.0-RC2.pdf) (PDF)
+* [Jakarta JSON Binding 2.0 Specification Document](./jsonb-spec-2.0-RC2.html) (HTML)
 * [Jakarta JSON Binding 2.0 Javadoc](./apidocs)
 * [Jakarta JSON Binding 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.jsonb:jakarta.jsonb-api:jar:2.0.0]()
+  * [jakarta.jsonb:jakarta.jsonb-api:jar:2.0.0-RC2](https://repo1.maven.org/maven2/jakarta/json/bind/jakarta.json.bind-api/2.0.0-RC2/jakarta.json.bind-api-2.0.0-RC2.jar)
 
 
 # Compatible Implementations
 
-* [Jakarta JSON Binding]()
+* [Eclipse Yasson](https://repo1.maven.org/maven2/org/eclipse/yasson/2.0.0-M2/yasson-2.0.0-M2.jar)
 
 # Ballots
 
