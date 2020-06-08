@@ -8,6 +8,8 @@ querying JSON documents.
 
 * [Jakarta JSON Processing 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonp/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+* [Jakarta JSON Processing 2.0 Specification Document]() (PDF)
+* [Jakarta JSON Processing 2.0 Specification Document]() (HTML)  
 * [Jakarta JSON Processing 2.0 Javadoc](./apidocs)
 * [Jakarta JSON Processing 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
