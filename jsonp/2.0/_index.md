@@ -19,8 +19,6 @@ querying JSON documents.
 
 # Ballots
 
-## Release Review
-
 ## Plan Review
 
 [//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.  For those Projects, just use the following statement in this Plan Review section:)
