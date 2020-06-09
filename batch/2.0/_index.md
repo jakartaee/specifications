@@ -5,7 +5,7 @@ summary: "Release for Jakarta EE 9"
 ---
 Jakarta Batch specifies a Java API plus an XML-based job specification language (JSL), which lets you compose batch jobs in XML from reusable Java application artifacts and conveniently parameterize different executions of a single job.
 
-* [Jakarta Batch 2.0 Release Record]()
+* [Jakarta Batch 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0.pdf) (PDF)
 * [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0.html) (HTML)
