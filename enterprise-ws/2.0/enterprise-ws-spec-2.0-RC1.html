@@ -530,7 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta Enterprise Web Services Team, https://projects.eclipse.org/projects/ee4j.jaxws</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jaxws-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jaxws-dev</a></span><br>
 <span id="revnumber"> 2.0-RC1,</span>
-<span id="revdate">May 29, 2020</span>
+<span id="revdate">June 09, 2020</span>
 <br><span id="revremark">DRAFT</span>
 </div>
 <div id="toc" class="toc2">
@@ -782,7 +782,7 @@ Version: 2.0-RC1
 
 Status: DRAFT
 
-Release: May 29, 2020</pre>
+Release: June 09, 2020</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5610,12 +5610,11 @@ that the port-component-ref is compatible with the Port being bound to.</p>
 <h2 id="security-2"><a class="anchor" href="#security-2"></a>9. Security</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section defines the security requirements for Web Services for Java
-EE. A conceptual overview of security and how it applies to Web services
-is covered in the <a href="#anchor-78">Concepts</a> section. The
-<a href="#anchor-79">Goals</a> section defines what this specification attempts
-to address and the <a href="#anchor-80">Specification</a> section covers the
-requirements.</p>
+<p>This section defines the security requirements for Web Services for Jakarta EE.
+A conceptual overview of security and how it applies to Web services is covered
+in the <a href="#anchor-78">Concepts</a> section. The <a href="#anchor-79">Goals</a> section defines
+what this specification attempts to address and the <a href="#anchor-80">Specification</a> section
+covers the requirements.</p>
 </div>
 <div class="sect2">
 <h3 id="anchor-78"><a class="anchor" href="#anchor-78"></a>9.1. Concepts</h3>
@@ -5627,7 +5626,7 @@ offset the risk in the future. Any security model must illustrate how
 data can flow through an application and network topology to meet the
 requirements defined by the business without exposing the data to undue
 risk. A Web services security model should support protocol independent
-declarative security policies that Web Service for Java EE providers can
+declarative security policies that Web Service for Jakarta EE providers can
 enforce, and descriptive security policies attached to the service
 definitions that clients can use in order to securely access the
 service.</p>
@@ -5639,23 +5638,23 @@ safety of information exchange are:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Authentication</strong> – the verification of the claimant’s entitlements to
+<p><strong>Authentication</strong> - the verification of the claimant&#8217;s entitlements to
 use the claimed identity and/or privilege set.</p>
 </li>
 <li>
-<p><strong>Authorization</strong> – the granting of authority to an identity to perform
+<p><strong>Authorization</strong> - the granting of authority to an identity to perform
 certain actions on resources</p>
 </li>
 <li>
-<p><strong>Integrity</strong> – the assurance that the message was not modified
+<p><strong>Integrity</strong> - the assurance that the message was not modified
 accidentally or deliberately in transit.</p>
 </li>
 <li>
-<p><strong>Confidentiality</strong> – the guarantee that the contents of the message are
+<p><strong>Confidentiality</strong> - the guarantee that the contents of the message are
 not disclosed to unauthorized individuals.</p>
 </li>
 <li>
-<p><strong>Non-repudiation</strong> – the guarantee that the sender of the message
+<p><strong>Non-repudiation</strong> - the guarantee that the sender of the message
 cannot deny that the sender has sent it. This request also implies
 message origin authentication.</p>
 </li>
@@ -5664,16 +5663,16 @@ message origin authentication.</p>
 <div class="paragraph">
 <p>The risks associated with these requirements can be avoided with a
 combination of various existing and emerging technologies and standards
-in Java EE environments. There are fundamental business reasons
+in Jakarta EE environments. There are fundamental business reasons
 underlying the existence of various security mechanisms to mitigate the
 various security risks outlined above. The authentication of the entity
 is necessary. This helps provide access based on the identity of the
 caller of the Web service. The business reason for data integrity is so
 that each party in a transaction can have confidence in the business
-transaction. It’s also a business-legal issue to have an audit trail and
+transaction. It&#8217;s also a business-legal issue to have an audit trail and
 some evidence of non-repudiation to address liability issues. And more
 and more businesses are becoming aware of the internal threats to their
-applications by employees or others <em>inside</em> the firewall. Some business
+applications by employees or others inside the firewall. Some business
 transactions require that confidentiality be provided on a service
 invocation or its data (like credit card numbers). There is also the
 need for businesses on the Internet to protect themselves from denial of
@@ -5685,8 +5684,8 @@ to assert a security service model.</p>
 <div class="paragraph">
 <p>Since the Web services architecture builds on existing component
 technologies, intra-enterprise authentication is no different than
-today’s approaches. In order for two or more parties to communicate
-securely they may need to exchange security credentials. Web service’s
+today&#8217;s approaches. In order for two or more parties to communicate
+securely they may need to exchange security credentials. Web service&#8217;s
 security is used to exchange many different types of credentials. A
 credential represents the authenticity of the identity it is associated
 with e.g., Kerberos ticket. A credential can be validated to verify the
@@ -5731,18 +5730,18 @@ service, then they must be referenced and used.</p>
 <div class="paragraph">
 <p>Consider a scenario where incoming SOAP/WSDL messages flow over HTTP(S).
 The figure above provides a simple overview of the security flow.
-Enterprise Web sites rely on the Java EE Server support for the
-authentication models. The site also relies on a Proxy Server’s support
-for security. In these scenarios, authentication occurs before the Java
+Enterprise Web sites rely on the Jakarta EE Server support for the
+authentication models. The site also relies on a Proxy Server&#8217;s support
+for security. In these scenarios, authentication occurs before the Jakarta
 EE Server receives the request. In these cases, a Proxy Server or Web
-Server forwards authentication credentials into the Java EE Application
-Server. The Java EE application server handles the request similar to
+Server forwards authentication credentials into the Jakarta EE Application
+Server. The Jakarta EE application server handles the request similar to
 how it handles other HTTP requests.</p>
 </div>
 <div class="paragraph">
 <p>Two forms of authentication are available for use within Web Services
-for Java EE based on existing Java EE functionality. These are HTTP
-BASIC-AUTH and Symmetric HTTP, which are defined by the Servlet
+for Jakarta EE based on existing Jakarta EE functionality. These are HTTP
+BASIC-AUTH and Symmetric HTTP, which are defined by the Jakarta Servlet
 specification.</p>
 </div>
 <div class="paragraph">
@@ -5750,16 +5749,17 @@ specification.</p>
 credential mapping of incoming credentials at any point along the
 execution path. The mapping converts the external user credentials into
 a credential used within a specific security domain, for example by
-using Kerberos or other imbedded third party model.</p>
+using Kerberos or other embedded third party model.</p>
 </div>
 <div class="paragraph">
-<p>In addition to Java EE security model for credential propagation, it may
+<p>In addition to Jakarta EE security model for credential propagation, it may
 be beneficial to carry identity information within SOAP message itself
 (e.g., as a SOAP header). This can help address situations where Web
 services need to be supported where inherent security support of
 underlying transport and protocols may not be sufficient (e.g., JMS).
-JSR109 does not require any support for credential propagation within
-SOAP messages and considers this functionality as future work.</p>
+Jakarta Enterprise Web Services specification does not require any
+support for credential propagation within SOAP messages and considers
+this functionality as future work.</p>
 </div>
 </div>
 <div class="sect3">
@@ -5767,24 +5767,23 @@ SOAP messages and considers this functionality as future work.</p>
 <div class="paragraph">
 <p>In an enterprise security model, each application server and middleware
 element performs authorization for its resources (EJBs, Servlets,
-Queues, Tables, etc.). The Java EE authentication/delegation model
-ensures that the user identity is available when requests are processed
-.</p>
+Queues, Tables, etc.). The Jakarta EE authentication/delegation model
+ensures that the user identity is available when requests are processed.</p>
 </div>
 <div class="paragraph">
 <p>On successful authentication, identity of the authenticated user is
 associated with the request. Based on the identity of the user,
-authorization decisions are made. This is performed by the Java EE
-Servers based on the Java EE security model to only allow authorized
+authorization decisions are made. This is performed by the Jakarta EE
+Servers based on the Jakarta EE security model to only allow authorized
 access to the methods of EJBs and Servlets/JSPs. Authorization to Web
-services implemented as JAX-RPC or JAX-WS Service Endpoints will be
+services implemented as Jakarta XML Web Services Service Endpoints will be
 based on the servlet/JSP security model.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="integrity-and-confidentiality"><a class="anchor" href="#integrity-and-confidentiality"></a>9.1.3. Integrity and Confidentiality</h4>
 <div class="paragraph">
-<p>In general, integrity and confidentiality are based on existing Java EE
+<p>In general, integrity and confidentiality are based on existing Jakarta EE
 support such as HTTPS.</p>
 </div>
 <div class="paragraph">
@@ -5795,7 +5794,7 @@ encrypt those portions of the message that are to be kept private using
 XML Encryption. When the integrity of a message is required to be
 guaranteed, the sender of the message may use XML Digital Signature to
 ensure that the message is not modified during transit. This
-specification recommends that Java EE servers use XML Encryption for
+specification recommends that Jakarta EE servers use XML Encryption for
 confidentiality, and XML Digital Signature for integrity but defers to
 future work to standardize the format and APIs.</p>
 </div>
@@ -5803,13 +5802,13 @@ future work to standardize the format and APIs.</p>
 <div class="sect3">
 <h4 id="audit"><a class="anchor" href="#audit"></a>9.1.4. Audit</h4>
 <div class="paragraph">
-<p>Java EE Servers can optionally write implicit and explicit audit records
+<p>Jakarta EE Servers can optionally write implicit and explicit audit records
 when processing requests. The middleware flows the user credentials and
 a correlation ID in an implicit context on all operations. Management
 tools can gather the multiple logs, merge them and use the correlation
 information to see all records emitted processing an incoming Web
-service request. It is recommended that Java EE servers implement
-support for audit records, but defers to the Java EE to standardize the
+service request. It is recommended that Jakarta EE servers implement
+support for audit records, but defers to the Jakarta EE to standardize the
 record formats and APIs to support audit logs.</p>
 </div>
 </div>
@@ -5821,7 +5820,7 @@ the industry today to ensure confidentiality, authentication and
 integrity. However, it fails to assure non-repudiation.</p>
 </div>
 <div class="paragraph">
-<p>It is recommended that Java EE servers implement support for
+<p>It is recommended that Jakarta EE servers implement support for
 non-repudiation logging, but does not define a standard mechanism to
 define and support it.</p>
 </div>
@@ -5830,7 +5829,7 @@ define and support it.</p>
 <div class="sect2">
 <h3 id="anchor-79"><a class="anchor" href="#anchor-79"></a>9.2. Goals</h3>
 <div class="paragraph">
-<p>The security model for Web services in Java EE application servers
+<p>The security model for Web services in Jakarta EE application servers
 should be simple to design and use, ubiquitous, cost effective, based on
 open standards, extensible, and flexible. The base functionality needs
 to be able to be used for the construction of a wide variety of security
@@ -5841,7 +5840,7 @@ include the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Should support protecting Web services using Java EE authorization
+<p>Should support protecting Web services using Jakarta EE authorization
 model.</p>
 </li>
 <li>
@@ -5864,17 +5863,16 @@ requiring the invention of special protocols.</p>
 <p>The following assumptions apply to this chapter:</p>
 </div>
 <div class="paragraph">
-<p>The server relies on the security infrastructure of the Java EE
+<p>The server relies on the security infrastructure of the Jakarta EE
 Application Server.</p>
 </div>
 <div class="paragraph">
 <p>The Quality of Service (QoS) of a secure Web service container is based
-on the QoS requirements and functionality of the underlying Java EE
+on the QoS requirements and functionality of the underlying Jakarta EE
 application server itself (e.g., integrity).</p>
 </div>
 <div class="paragraph">
-<p>The server relies on HTTPS and RMI-IIOP over SSL for hop-by-hop
-confidentiality and integrity .</p>
+<p>The server relies on HTTPS for hop-by-hop confidentiality and integrity .</p>
 </div>
 </div>
 </div>
@@ -5882,7 +5880,7 @@ confidentiality and integrity .</p>
 <h3 id="anchor-80"><a class="anchor" href="#anchor-80"></a>9.3. Specification</h3>
 <div class="paragraph">
 <p>The following sections define the requirements for implementing security
-for Web Services for Java EE.</p>
+for Web Services for Jakarta EE.</p>
 </div>
 <div class="sect3">
 <h4 id="authentication-2"><a class="anchor" href="#authentication-2"></a>9.3.1. Authentication</h4>
@@ -5890,21 +5888,21 @@ for Web Services for Java EE.</p>
 <p>There are few authentication models to authenticate message senders that
 are adopted or proposed as standards. Form based login requires html
 processing capability so it is not included in this list. Web Services
-for Java EE product providers must support the following:</p>
+for Jakarta EE product providers must support the following:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>BASIC-AUTH: Java EE servers support basic auth information in the HTTP
-header that carries the SOAP request. The Java EE server must be able to
+<p>BASIC-AUTH: Jakarta EE servers support basic auth information in the HTTP
+header that carries the SOAP request. The Jakarta EE server must be able to
 verify the user ID and password using the authentication mechanism
 specific to the server. Typically, user ID and password are
 authenticated against a user registry. To ensure confidentiality of the
 password information, the user ID and password are sent over an SSL
 connection (i.e., HTTPS). See the Servlet specification for details on
-how BASIC-AUTH must be supported by Java EE servers and how a HTTP
+how BASIC-AUTH must be supported by Jakarta EE servers and how a HTTP
 Digest authentication can be optionally supported. Client container
-specification of authentication data is described by the Java EE
+specification of authentication data is described by the Jakarta EE
 specification section 3.4.4. The EJB and web containers must support
 deploy time configuration of credential information to use for Web
 services requests using BASIC-AUTH. Also, these containers must provide
@@ -5914,7 +5912,7 @@ provider specific though it is typically handled using the generated
 static stub or dynamic proxy implementation.</p>
 </li>
 <li>
-<p>Symmetric HTTPS: Java EE servers currently support authentication
+<p>Symmetric HTTPS: Jakarta EE servers currently support authentication
 through symmetric SSL, when both the requestor and the server can
 authenticate each other using digital certificates. For the HTTP clients
 (i.e., SOAP/HTTP), the model is based on the Servlet specification.</p>
@@ -5925,19 +5923,19 @@ authenticate each other using digital certificates. For the HTTP clients
 <div class="sect3">
 <h4 id="authorization-2"><a class="anchor" href="#authorization-2"></a>9.3.2. Authorization</h4>
 <div class="paragraph">
-<p>Web Services for Java EE relies on the authorization support provided by
-the Java EE containers and is described in the Java EE specification
+<p>Web Services for Jakarta EE relies on the authorization support provided by
+the Jakarta EE containers and is described in the Jakarta EE specification
 section 3.5.</p>
 </div>
 <div class="paragraph">
-<p>JAX-RPC or JAX-WS Service Endpoint authorization must be defined using
+<p>Jakarta XML Web Services Service Endpoint authorization must be defined using
 the http-method element value of POST.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="integrity-and-confidentiality-2"><a class="anchor" href="#integrity-and-confidentiality-2"></a>9.3.3. Integrity and Confidentiality</h4>
 <div class="paragraph">
-<p>A Web Services for Java EE server provider must support HTTPS for
+<p>A Web Services for Jakarta EE server provider must support HTTPS for
 hop-by-hop confidentiality and integrity. The WSDL port address may use
 https: to specify the client requirements.</p>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Enterprise Web Services 2.0 (under development)"
+title: "Jakarta Enterprise Web Services 2.0 (milestone)"
 date: 2020-06-05
 summary: "Release for Jakarta EE 9"
 ---
