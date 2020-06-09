@@ -7,8 +7,8 @@ Jakarta Batch specifies a Java API plus an XML-based job specification language 
 
 * [Jakarta Batch 2.0 Release Record]()
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0-draft.pdf) (PDF)
-* [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0-draft.html) (HTML)
+* [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0.pdf) (PDF)
+* [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0.html) (HTML)
 * [Jakarta Batch 2.0 Javadoc](./apidocs)
 * [Jakarta Batch 2.0 TCK]()([sig](),[sha](),[pub]()):
 
