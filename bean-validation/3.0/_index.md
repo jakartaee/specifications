@@ -5,7 +5,7 @@ summary: "Release for Jakarta EE 9"
 ---
 Jakarta Bean Validation defines a metadata model and API for JavaBean and method validation.
 
-* [Jakarta Bean Validation 3.0 Release Record]()
+* [Jakarta Bean Validation 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.bean-validation/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Bean Validation 3.0 Specification Document](./bean-validation-specification-3.0.0-M1.pdf) (PDF)
 * [Jakarta Bean Validation 3.0 Specification Document](./bean-validation-specification-3.0.0-M1.html) (HTML)
