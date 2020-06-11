@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Authorization 2.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Authorization 2.0 (milestone)"
+date: 2020-06-11
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Authorization defines a low-level SPI for authorization modules, which are repositories of permissions
@@ -10,17 +10,17 @@ these permissions.
 
 * [Jakarta Authorization 2.0 Release Record]()
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Authorization 2.0 Specification Document]() (PDF)
-* [Jakarta Authorization 2.0 Specification Document]() (HTML)
+* [Jakarta Authorization 2.0 Specification Document](./authorization-spec-2.0-SNAPSHOT.pdf) (PDF)
+* [Jakarta Authorization 2.0 Specification Document](./authorization-spec-2.0-SNAPSHOT.html) (HTML)
 * [Jakarta Authorization 2.0 Javadoc](./apidocs)
 * [Jakarta Authorization 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.authorization:jakarta.authorization-api:jar:2.0.0]()
+  * [jakarta.authorization:jakarta.authorization-api:jar:2.0.0-RC1](https://search.maven.org/artifact/jakarta.authorization/jakarta.authorization-api/2.0.0-RC1/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Authorization]()
+* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 
 # Ballots
 
