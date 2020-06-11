@@ -1,23 +1,24 @@
 ---
-title: "Jakarta Batch 2.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Batch 2.0 (milestone)"
+date: 2020-06-09
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Batch specifies a Java API plus an XML-based job specification language (JSL), which lets you compose batch jobs in XML from reusable Java application artifacts and conveniently parameterize different executions of a single job.
 
-* [Jakarta Batch 2.0 Release Record]()
+* [Jakarta Batch 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Batch 2.0 Specification Document]() (PDF)
-* [Jakarta Batch 2.0 Specification Document]() (HTML)
+* [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0-draft.pdf) (PDF)
+* [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0-draft.html) (HTML)
 * [Jakarta Batch 2.0 Javadoc](./apidocs)
-* [Jakarta Batch 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Batch 2.0 TCK](https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-2.0.0-M2.zip) (sig - N/A, [sha](https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-2.0.0-M2.zip.sha256), pub - N/A):
+
 * Maven coordinates
-  * [jakarta.batch:jakarta.batch-api:jar:2.0.0]()
+  * [jakarta.batch:jakarta.batch-api:jar:2.0.0-M2](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.0.0-M2/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Batch]()
+* [**"jbatch"** v2.0.0-M3](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.0.0-M3) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.
 
 # Ballots
 
