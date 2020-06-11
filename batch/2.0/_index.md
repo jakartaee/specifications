@@ -10,9 +10,8 @@ Jakarta Batch specifies a Java API plus an XML-based job specification language 
 * [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0-draft.pdf) (PDF)
 * [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0-draft.html) (HTML)
 * [Jakarta Batch 2.0 Javadoc](./apidocs)
-* [Jakarta Batch 2.0 TCK]()([sig](),[sha](),[pub]()):
+* [Jakarta Batch 2.0 TCK](https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-2.0.0-M2.zip) (sig - N/A, [sha](https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-2.0.0-M2.zip.sha256), pub - N/A):
 
-https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-2.0.0-M1.zip
 * Maven coordinates
   * [jakarta.batch:jakarta.batch-api:jar:2.0.0-M2](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.0.0-M2/jar)
 
