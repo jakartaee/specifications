@@ -1,23 +1,23 @@
 ---
-title: "Jakarta Servlet 5.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Servlet 5.0 (milestone)"
+date: 2020-06-12
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
 
-* [Jakarta Servlet 5.0 Release Record]()
+* [Jakarta Servlet 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.servlet/releases/5.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Servlet 5.0 Specification Document]() (PDF)
-* [Jakarta Servlet 5.0 Specification Document]() (HTML)
+* [Jakarta Servlet 5.0 Specification Document](./servlet-spec-5.0-SNAPSHOT.pdf) (PDF)
+* [Jakarta Servlet 5.0 Specification Document](./servlet-spec-5.0-SNAPSHOT.html) (HTML)
 * [Jakarta Servlet 5.0 Javadoc](./apidocs)
 * [Jakarta Servlet 5.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.servlet:jakarta.servlet-api:jar:5.0.0]()
+  * [jakarta.servlet:jakarta.servlet-api:jar:5.0.0-M1](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/5.0.0-M1/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Servlet]()
+* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 
 # Ballots
 
