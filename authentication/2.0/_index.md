@@ -10,7 +10,7 @@ and pass an authenticated identity (such as name and groups) to the container.
 Jakarta Authentication consists of several profiles, with each profile telling how a specific container
 (such as Jakarta Servlet) can integrate with- and adapt to this SPI.
 
-* [Jakarta Authentication 2.0 Release Record]()
+* [Jakarta Authentication 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaspic/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Authentication 2.0 Specification Document](./authentication-spec-2.0-SNAPSHOT.pdf) (PDF)
 * [Jakarta Authentication 2.0 Specification Document](./authentication-spec-2.0-SNAPSHOT.pdf) (HTML)
