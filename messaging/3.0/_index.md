@@ -1,24 +1,24 @@
 ---
-title: "Jakarta Messaging 3.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Messaging 3.0 (milestone)"
+date: 2020-06-12
 summary: "Release for Jakarta EE 9"
 ---
 
 Jakarta Messaging describes a means for Java applications to create, send, and receive messages via loosely coupled, reliable asynchronous communication services.
 
-* [Jakarta Messaging 3.0 Release Record]()
+* [Jakarta Messaging 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jms/releases/3.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Messaging 3.0 Specification Document]() (PDF)
-* [Jakarta Messaging 3.0 Specification Document]() (HTML)
+* [Jakarta Messaging 3.0 Specification Document](./messaging-spec-3.0-SNAPSHOT.pdf) (PDF)
+* [Jakarta Messaging 3.0 Specification Document](./messaging-spec-3.0-SNAPSHOT.html) (HTML)
 * [Jakarta Messaging 3.0 Javadoc](./apidocs)
 * [Jakarta Messaging 3.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.messaging:jakarta.messaging-api:jar:3.0.0]()
+  * [jakarta.jms:jakarta.jms-api:jar:3.0.0-RC1](https://search.maven.org/artifact/jakarta.jms/jakarta.jms-api/3.0.0-RC1/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Messaging]()
+* [Eclipse OpenMQ 6.0.0-M1](https://eclipse-ee4j.github.io/openmq)
 
 # Ballots
 
