@@ -1,23 +1,23 @@
 ---
-title: "Jakarta Security 2.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Security 2.0 (milestone)"
+date: 2020-06-11
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Security defines a standard for creating secure Jakarta EE applications in modern application paradigms.
 
-* [Jakarta Security 2.0 Release Record]()
+* [Jakarta Security 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.es/releases/2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Security 2.0 Specification Document]() (PDF)
-* [Jakarta Security 2.0 Specification Document]() (HTML)
+* [Jakarta Security 2.0 Specification Document](./security-spec-2.0.0-SNAPSHOT.pdf) (PDF)
+* [Jakarta Security 2.0 Specification Document](./security-spec-2.0.0-SNAPSHOT.html) (HTML)
 * [Jakarta Security 2.0 Javadoc](./apidocs)
 * [Jakarta Security 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.security:jakarta.security-api:jar:2.0.0]()
+  * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:2.0.0-RC2](https://search.maven.org/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/2.0.0-RC2/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Security]()
+* [Eclipse Soteria 2.0.0-RC1](https://eclipse-ee4j.github.io/soteria)
 
 # Ballots
 
