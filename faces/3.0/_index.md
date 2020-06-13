@@ -1,25 +1,25 @@
 ---
-title: "Jakarta Server Faces 3.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Server Faces 3.0 (milestone)"
+date: 2020-06-12
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Server Faces defines an MVC framework for building user interfaces for web applications,
 including UI components, state management, event handing, input validation, page navigation, and
 support for internationalization and accessibility.
 
-* [Jakarta Server Faces 3.0 Release Record]()
+* [Jakarta Server Faces 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/3.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Server Faces 3.0 Specification Document]() (PDF)
-* [Jakarta Server Faces 3.0 Specification Document]() (HTML)
+* [Jakarta Server Faces 3.0 Specification Document](./faces-3.0-SNAPSHOT.pdf) (PDF)
+* [Jakarta Server Faces 3.0 Specification Document](./faces-3.0-SNAPSHOT.html) (HTML)
 * [Jakarta Server Faces 3.0 Javadoc](./apidocs)
 * [Jakarta Server Faces 3.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.faces:jakarta.faces-api:jar:3.0.0]()
+  * [jakarta.faces:jakarta.faces-api:jar:3.0.0-RC1](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/3.0.0-RC1/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Server Faces]()
+* [Mojarra 3.0.0-RC2](https://eclipse-ee4j.github.io/mojarra)
 
 # Ballots
 
