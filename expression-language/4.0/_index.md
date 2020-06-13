@@ -1,23 +1,24 @@
 ---
-title: "Jakarta Expression Language 4.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Expression Language 4.0 (milestone)"
+date: 2020-06-12
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Expression Language defines an expression language for Java applications.
 
-* [Jakarta Expression Language 4.0 Release Record]()
+* [Jakarta Expression Language 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.el/releases/4.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Expression Language 4.0 Specification Document]() (PDF)
-* [Jakarta Expression Language 4.0 Specification Document]() (HTML)
+* [Jakarta Expression Language 4.0 Specification Document](./expression-langauge-spec-4.0-RC2.pdf) (PDF)
+* [Jakarta Expression Language 4.0 Specification Document](./expression-langauge-spec-4.0-RC2.html) (HTML)
 * [Jakarta Expression Language 4.0 Javadoc](./apidocs)
-* [Jakarta Expression Language 4.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Expression Language 4.0 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/master/nightly/expression-language-tck-4.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.el:jakarta.el-api:jar:4.0.0]()
+  * [jakarta.el:jakarta.el-api:jar:4.0.0](https://repo1.maven.org/maven2/jakarta/el/jakarta.el-api/4.0.0-RC2/)
 
 
 # Compatible Implementations
 
-* [Jakarta Expression Language]()
+* [Glassfish](https://repo1.maven.org/maven2/org/glassfish/jakarta.el/4.0.0-RC2/)
+* [Apache Tomcat 10.0.0-M6](https://tomcat.apache.org/download-10.cgi)
 
 # Ballots
 
