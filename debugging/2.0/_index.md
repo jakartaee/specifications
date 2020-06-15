@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Debugging Support for Other Languages 2.0 (under development)"
-date: 2020-01-15
+title: "Jakarta Debugging Support for Other Languages 2.0 (milestone)"
+date: 2020-06-13
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Debugging Support for Other Languages provides a mechanism by which
@@ -8,19 +8,16 @@ programs executed under the Java virtual machine but written in languages
 other than the Java programming language, can be debugged with references to
 the original source (for example, source file and line number references).
 
-* [Jakarta Debugging Support for Other Languages 2.0 Release Record]()
+* [Jakarta Debugging Support for Other Languages 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/2.0-debugging-support-other-languages)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Debugging Support for Other Languages 2.0 Specification Document]() (PDF)
-* [Jakarta Debugging Support for Other Languages 2.0 Specification Document]() (HTML)
-* [Jakarta Debugging Support for Other Languages 2.0 Javadoc](./apidocs)
-* [Jakarta Debugging Support for Other Languages 2.0 TCK]()([sig](),[sha](),[pub]())
-* Maven coordinates
-  * [jakarta.debugging:jakarta.debugging-api:jar:2.0.0]()
+* [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0-RC2.pdf) (PDF)
+* [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0-RC2.html) (HTML)
 
 
 # Compatible Implementations
 
-* [Jakarta Debugging Support for Other Languages]()
+* [Apache Tomcat 10.0.0-M6](https://tomcat.apache.org/download-10.cgi)
+
 
 # Ballots
 
