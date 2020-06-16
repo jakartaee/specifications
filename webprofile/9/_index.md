@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Web Profile 9 (milestone)"
-date: 2020-06-08
+date: 2020-06-15
 summary: "Release of the Jakarta EE 9 Web Profile"
 ---
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
@@ -12,12 +12,12 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta Web Profile 9 Javadoc](./apidocs)
 * [Jakarta Web Profile 9 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0-RC2]()
+  * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/9.0.0-RC2/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Web Profile]()
+* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 
 # Ballots
 
