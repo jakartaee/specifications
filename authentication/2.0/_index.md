@@ -13,7 +13,7 @@ Jakarta Authentication consists of several profiles, with each profile telling h
 * [Jakarta Authentication 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaspic/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Authentication 2.0 Specification Document](./authentication-spec-2.0-SNAPSHOT.pdf) (PDF)
-* [Jakarta Authentication 2.0 Specification Document](./authentication-spec-2.0-SNAPSHOT.pdf) (HTML)
+* [Jakarta Authentication 2.0 Specification Document](./authentication-spec-2.0-SNAPSHOT.html) (HTML)
 * [Jakarta Authentication 2.0 Javadoc](./apidocs)
 * [Jakarta Authentication 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
