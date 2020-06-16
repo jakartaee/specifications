@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Platform 9 (milestone)"
-date: 2020-06-08
+date: 2020-06-15
 summary: "Release of the Jakarta EE 9 Platform"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
@@ -12,10 +12,10 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE Platform 9 Javadoc](./apidocs)
 * [Jakarta EE Platform 9 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0-RC2]()
+  * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/9.0.0-RC2/jar)
 
 # Compatible Implementations
-* [Eclipse Glassfish x.y]()
+* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 
 # Ballots
 
