@@ -13,6 +13,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta Web Profile 9 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/9.0.0-RC2/jar)
+  * [Staging link (temporary)](https://jakarta.oss.sonatype.org/content/repositories/staging/jakarta/platform/jakarta.jakartaee-web-api/9.0.0-RC2/)
 
 
 # Compatible Implementations
