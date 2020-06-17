@@ -1,23 +1,26 @@
 ---
-title: "Jakarta Activation 2.0 (under development)"
-date: 2020-mm-dd
+title: "Jakarta Activation 2.0 (milestone)"
+date: 2020-06-15
 summary: "Release for Jakarta EE 9"
 ---
-# Need scope statement
+Jakarta Activation defines a set of standard services to: determine the
+MIME type of an arbitrary piece of data; encapsulate access to it;
+discover the operations available on it; and instantiate the
+appropriate bean to perform the operation(s).
 
-* [Jakarta Activation 2.0 Release Record]()
+* [Jakarta Activation 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaf/releases/2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Activation 2.0 Specification Document]() (PDF)
-* [Jakarta Activation 2.0 Specification Document]() (HTML)
+* [Jakarta Activation 2.0 Specification Document](./activation-spec-2.0-RC3.pdf) (PDF)
+* [Jakarta Activation 2.0 Specification Document](./activation-spec-2.0-RC3.html) (HTML)
 * [Jakarta Activation 2.0 Javadoc](./apidocs)
 * [Jakarta Activation 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.activation:jakarta.activation-api:jar:2.0.0]()
+  * [jakarta.activation:jakarta.activation-api:jar:2.0.0-RC3](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.0.0-RC3/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Activation]()
+* [Jakarta Activation](https://repo1.maven.org/maven2/com/sun/activation/jakarta.activation/2.0.0-RC3/jakarta.activation-2.0.0-RC3.jar)
 
 # Ballots
 
