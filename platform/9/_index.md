@@ -10,7 +10,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE Platform 9 Specification Document](./platform-spec-9-SNAPSHOT.pdf) (PDF)
 * [Jakarta EE Platform 9 Specification Document](./platform-spec-9-SNAPSHOT.html) (HTML)
 * [Jakarta EE Platform 9 Javadoc](./apidocs)
-* [Jakarta EE Platform 9 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta EE Platform 9 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9/milestones/jakartaeetck-9.0.0-M1.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/9.0.0-RC2/jar)
 
@@ -18,7 +18,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE 9 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
 
 # Compatible Implementations
-* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+* [Eclipse Glassfish 6.0.0-M1](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-6.0.0-M1.zip)
 
 # Ballots
 
