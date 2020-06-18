@@ -13,7 +13,9 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE Platform 9 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/9.0.0-RC2/jar)
-  * [Staging link (temporary)](https://jakarta.oss.sonatype.org/content/repositories/staging/jakarta/platform/jakarta.jakartaee-api/9.0.0-RC2/)
+
+# Jakarta EE 9 Schedule
+* [Jakarta EE 9 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
 
 # Compatible Implementations
 * [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
