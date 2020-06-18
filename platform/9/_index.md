@@ -1,21 +1,24 @@
 ---
-title: "Jakarta EE Platform 9 (under development)"
-date: 2020-01-15
+title: "Jakarta EE Platform 9 (milestone)"
+date: 2020-06-15
 summary: "Release of the Jakarta EE 9 Platform"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
 
 * [Jakarta EE Platform 9 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/9)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta EE Platform 9 Specification Document]() (PDF)
-* [Jakarta EE Platform 9 Specification Document]() (HTML)
+* [Jakarta EE Platform 9 Specification Document](./platform-spec-9-SNAPSHOT.pdf) (PDF)
+* [Jakarta EE Platform 9 Specification Document](./platform-spec-9-SNAPSHOT.html) (HTML)
 * [Jakarta EE Platform 9 Javadoc](./apidocs)
-* [Jakarta EE Platform 9 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta EE Platform 9 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9/milestones/jakartaeetck-9.0.0-M1.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0]()
+  * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/9.0.0-RC2/jar)
+
+# Jakarta EE 9 Schedule
+* [Jakarta EE 9 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
 
 # Compatible Implementations
-* [Eclipse Glassfish x.y]()
+* [Eclipse Glassfish 6.0.0-M1](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-6.0.0-M1.zip)
 
 # Ballots
 
