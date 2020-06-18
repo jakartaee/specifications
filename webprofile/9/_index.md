@@ -10,7 +10,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta Web Profile 9 Specification Document](./webprofile-spec-9-SNAPSHOT.pdf) (PDF)
 * [Jakarta Web Profile 9 Specification Document](./webprofile-spec-9-SNAPSHOT.html) (HTML)
 * [Jakarta Web Profile 9 Javadoc](./apidocs)
-* [Jakarta Web Profile 9 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Web Profile 9 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9/milestones/jakartaeetck-9.0.0-M1.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/9.0.0-RC2/jar)
   
@@ -20,7 +20,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+* [Eclipse Glassfish 6.0.0-M1](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/web-6.0.0-M1.zip)
 
 # Ballots
 
