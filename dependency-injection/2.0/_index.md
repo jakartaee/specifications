@@ -15,7 +15,7 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
   * TCK Summary Results [Weld 4.0.0.Alpha2](./TCK-summary.html)
 
 * Maven coordinates
-  * [jakarta.inject:jakarta.inject-api:jar:2.0.0](https://repo.eclipse.org/content/repositories/maven_central/jakarta/inject/jakarta.inject-api/2.0.0)
+  * [jakarta.inject:jakarta.inject-api:jar:2.0.0](https://repo1.maven.org/maven2/jakarta/inject/jakarta.inject-api/2.0.0/)
 
 
 # Compatible Implementations
