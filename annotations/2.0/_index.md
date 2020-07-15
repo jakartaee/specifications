@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Annotations (milestone)"
-date: 2020-05-31
+title: "Jakarta Annotations 2.0"
+date: 2020-09-24
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -8,16 +8,16 @@ Jakarta Annotations defines a collection of annotations representing common sema
 
 * [Jakarta Annotations 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.ca/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Annotations 2.0 Specification Document](./annotations-spec-2.0-RC1.pdf) (PDF)
-* [Jakarta Annotations 2.0 Specification Document](./annotations-spec-2.0-RC1.html) (HTML)
+* [Jakarta Annotations 2.0 Specification Document](./annotations-spec-2.0.pdf) (PDF)
+* [Jakarta Annotations 2.0 Specification Document](./annotations-spec-2.0.html) (HTML)
 * [Jakarta Annotations 2.0 Javadoc](./apidocs)
-* [Jakarta Annotations 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Annotations 2.0 TCK](https://download.eclipse.org/jakartaee/annotations/2.0/jakarta-annotations-tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/annotations/2.0/jakarta-annotations-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/annotations/2.0/jakarta-annotations-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.annotation:jakarta.annotation-api:jar:2.0.0-RC1](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.0.0-RC1/jar)
+  * [jakarta.annotation:jakarta.annotation-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.0.0/jar)
 
 # Compatible Implementations
 
-* [Eclipse GlassFish]()
+* [Eclipse GlassFish](https://search.maven.org/artifact/org.glassfish.main.core/glassfish/6.0.0-M1/glassfish-jar)
 
 # Ballots
 
