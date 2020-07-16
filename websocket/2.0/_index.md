@@ -1,6 +1,6 @@
 ---
-title: "Jakarta WebSocket 2.0 (milestone)"
-date: 2020-05-26
+title: "Jakarta WebSocket 2.0"
+date: 2020-07-16
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta WebSocket defines a API for Server and Client Endpoints
@@ -8,17 +8,17 @@ for the WebSocket protocol (RFC6455).
 
 * [Jakarta WebSocket 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta WebSocket 2.0 Specification Document](./websocket-spec-2.0-RC1.pdf) (PDF)
-* [Jakarta WebSocket 2.0 Specification Document](./websocket-spec-2.0-RC1.html) (HTML)
+* [Jakarta WebSocket 2.0 Specification Document](./websocket-spec-2.0.pdf) (PDF)
+* [Jakarta WebSocket 2.0 Specification Document](./websocket-spec-2.0.html) (HTML)
 * [Jakarta WebSocket 2.0 Javadoc](./apidocs)
 * [Jakarta WebSocket 2.0 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/master/nightly/websocket-tck-2.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.websocket:jakarta.websocket-api:2.0.0-RC1](https://repo1.maven.org/maven2/jakarta/websocket/jakarta.websocket-api/2.0.0-RC1/)
+  * [jakarta.websocket:jakarta.websocket-api:2.0.0](https://repo1.maven.org/maven2/jakarta/websocket/jakarta.websocket-api/2.0.0/)
 
 
 # Compatible Implementations
 
-* [Apache Tomcat 10.0.0-M6](https://tomcat.apache.org/download-10.cgi)
+* [Apache Tomcat 10.0.0-M7](https://tomcat.apache.org/download-10.cgi)
 
 # Ballots
 
