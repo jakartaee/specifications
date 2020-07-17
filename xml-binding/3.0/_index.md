@@ -12,7 +12,7 @@ between XML documents and Java objects.
 * [Jakarta XML Binding 3.0 Specification Document](./xml-binding-spec-3.0.html) (HTML)
 * [Jakarta XML Binding 3.0 Javadoc](./apidocs)
 * [Jakarta XML Binding 3.0 XML Schema](https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd)
-* [Jakarta XML Binding 3.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta XML Binding 3.0 TCK]()(https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.xml.bind/jakarta.xml.bind-api/3.0.0/jar)
 
