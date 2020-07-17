@@ -13,6 +13,7 @@ binding, and configuration.
 * [Jakarta Web Services Metadata 3.0 Specification Document](./ws-metadata-spec-3.0.pdf) (PDF)
 * [Jakarta Web Services Metadata 3.0 Specification Document](./ws-metadata-spec-3.0.html) (HTML)
 * [Jakarta Web Services Metadata 3.0 Javadoc](./apidocs)
+* [Jakarta Web Services Metadata 3.0 XML Schema](https://jakarta.ee/xml/ns/jakartaee/jakartaee_web_services_metadata_handler_3_0.xsd)
 * [Jakarta Web Services Metadata 3.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.jws:jakarta.jws-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.jws/jakarta.jws-api/3.0.0/jar)
