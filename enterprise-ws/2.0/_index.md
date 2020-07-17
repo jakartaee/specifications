@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Enterprise Web Services 2.0 (milestone)"
-date: 2020-06-05
+title: "Jakarta Enterprise Web Services 2.0"
+date: 2020-09-05
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -8,14 +8,14 @@ This specification defines the Web Services for Jakarta EE architecture.
 
 * [Jakarta Enterprise Web Services 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/2.0-enterprise-web-services)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Enterprise Web Services 2.0 Specification Document](./enterprise-ws-spec-2.0-RC1.pdf) (PDF)
-* [Jakarta Enterprise Web Services 2.0 Specification Document](./enterprise-ws-spec-2.0-RC1.html) (HTML)
+* [Jakarta Enterprise Web Services 2.0 Specification Document](./enterprise-ws-spec-2.0.pdf) (PDF)
+* [Jakarta Enterprise Web Services 2.0 Specification Document](./enterprise-ws-spec-2.0.html) (HTML)
 * [Jakarta Enterprise Web Services 2.0 TCK]()([sig](),[sha](),[pub]())
 
 
 # Compatible Implementations
 
-[Eclipse Glassfish 6.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+[Eclipse Glassfish 6.0](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 
 # Ballots
 
