@@ -13,7 +13,7 @@ appropriate bean to perform the operation(s).
 * [Jakarta Activation 2.0 Specification Document](activation-spec-2.0.pdf) (PDF)
 * [Jakarta Activation 2.0 Specification Document](activation-spec-2.0.html) (HTML)
 * [Jakarta Activation 2.0 Javadoc](./apidocs)
-* [Jakarta Activation 2.0 TCK](http://downloads.eclipse.org/jakarta/activation/2.0/jakarta-activation-tck-2.0.0.zip) ([sig](http://downloads.eclipse.org/jakarta/activation/2.0/jakarta-activation-tck-2.0.0.zip.sig),[sha](http://downloads.eclipse.org/jakarta/activation/2.0/jakarta-activation-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Activation 2.0 TCK](https://download.eclipse.org/jakarta/activation/2.0/jakarta-activation-tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakarta/activation/2.0/jakarta-activation-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakarta/activation/2.0/jakarta-activation-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.activation:jakarta.activation-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.0.0/jar)
 
