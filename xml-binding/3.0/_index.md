@@ -1,6 +1,6 @@
 ---
-title: "Jakarta XML Binding 3.0 (milestone)"
-date: 2020-06-05
+title: "Jakarta XML Binding 3.0"
+date: 2020-09-05
 summary: "Release for Jakarta EE 9"
 ---
 The Jakarta XML Binding provides an API and tools that automate the mapping
@@ -8,17 +8,17 @@ between XML documents and Java objects.
 
 * [Jakarta XML Binding 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxb/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta XML Binding 3.0 Specification Document](./xml-binding-spec-3.0-RC3.pdf) (PDF)
-* [Jakarta XML Binding 3.0 Specification Document](./xml-binding-spec-3.0-RC3.html) (HTML)
+* [Jakarta XML Binding 3.0 Specification Document](./xml-binding-spec-3.0.pdf) (PDF)
+* [Jakarta XML Binding 3.0 Specification Document](./xml-binding-spec-3.0.html) (HTML)
 * [Jakarta XML Binding 3.0 Javadoc](./apidocs)
 * [Jakarta XML Binding 3.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.0-RC3](https://search.maven.org/artifact/jakarta.xml.bind/jakarta.xml.bind-api/3.0.0-RC3/jar)
+  * [jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.xml.bind/jakarta.xml.bind-api/3.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta XML Binding 3.0.0-M4](https://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-ri/3.0.0-M4/jaxb-ri-3.0.0-M4.zip)
+* [Jakarta XML Binding 3.0.0](https://eclipse-ee4j.github.io/jaxb-ri/)
 
 # Ballots
 
