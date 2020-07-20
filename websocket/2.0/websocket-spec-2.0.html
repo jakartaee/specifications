@@ -445,7 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jakarta WebSocket Team, https://projects.eclipse.org/projects/ee4j.websocket</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/websocket-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/websocket-dev</a></span><br>
 <span id="revnumber"> 2.0,</span>
-<span id="revdate">July 16, 2020</span>
+<span id="revdate">July 20, 2020</span>
 <br><span id="revremark"></span>
 </div>
 <div id="toc" class="toc2">
@@ -604,7 +604,7 @@ Version: 2.0
 
 Status: Final Release
 
-Release: July 16, 2020</pre>
+Release: July 20, 2020</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -707,7 +707,7 @@ registered trademarks of Oracle and/or its affiliates. Other names
 may be trademarks of their respective owners.</p>
 </div>
 <div class="paragraph">
-<p>The Jakarta WebSocket Team - July 16, 2020</p>
+<p>The Jakarta WebSocket Team - July 20, 2020</p>
 </div>
 <div class="paragraph">
 <p>Comments to: <a href="mailto:websocket-dev@eclipse.org">websocket-dev@eclipse.org</a></p>
@@ -2294,15 +2294,16 @@ requirements to support WebSocket applications.</p>
 <h4 id="websocket-endpoints-and-dependency-injection"><a class="anchor" href="#websocket-endpoints-and-dependency-injection"></a>7.1.1. WebSocket Endpoints and Dependency Injection</h4>
 <div class="paragraph">
 <p>WebSocket endpoints running in the Jakarta EE platform must have full
-dependency injection support as described in the CDI specification (Muir
-2013). WebSocket implementations part of the Jakarta EE platform are
-required to support field, method, and constructor injection using the
-jakarta.inject.Inject annotation into all WebSocket endpoint classes, as
-well as the use of interceptors for these classes [WSC-7.1.1-1]. The
-details of this requirement are laid out in the Jakarta EE Platform
-Specification (DeMichiel and Shannon 2013), section EE.5.2.5, and a
-useful guide for implementations to meet the requirement is location in
-section EE.5.24.</p>
+dependency injection support as described in the Jakarta Contexts and
+Dependency Injection specification (Jakarta CDI Team, 2020). WebSocket
+implementations part of the Jakarta EE platform are required to
+support field, method, and constructor injection using the
+<code>jakarta.inject.Inject</code> annotation into all WebSocket endpoint
+classes, as well as the use of interceptors for these classes
+[WSC-7.1.1-1]. The details of this requirement are laid out in the
+Jakarta EE Platform Specification (Jakarta EE Platform Team, 2020),
+section EE.5.2.5, and a useful guide for implementations to meet the
+requirement is location in section EE.5.24.</p>
 </div>
 </div>
 </div>
@@ -2500,12 +2501,14 @@ Update specification document for move to Jakarta EE</p>
 IETF, March 2012. See <a href="http://www.ietf.org/rfc/rfc6570.txt" class="bare">http://www.ietf.org/rfc/rfc6570.txt</a>.</p>
 </div>
 <div class="paragraph">
-<p>[5] Pete Muir. Contexts and Dependency Injection for Java EE. JSR, JCP, 2013. See
-<a href="http://jcp.org/en/jsr/detail?id=347" class="bare">http://jcp.org/en/jsr/detail?id=347</a>.</p>
+<p>[5] Jakarta CDI Team. Jakarta Contexts and Dependency Injection 3.0.
+Eclipse Foundation, 2020.
+See <a href="https://jakarta.ee/specifications/cdi/3.0/" class="bare">https://jakarta.ee/specifications/cdi/3.0/</a>.</p>
 </div>
 <div class="paragraph">
-<p>[6] Linda DeMichiel and Bill Shannon. Java Platform, Enterprise Edition 7 (Java EE 7) Specification.
-JSR, JCP, 2013. See <a href="http://jcp.org/en/jsr/detail?id=342" class="bare">http://jcp.org/en/jsr/detail?id=342</a>.</p>
+<p>[6] Jakarta EE Platform Team. Jakarta EE Platform Specification 9.
+Eclipse Foundation, 2020.
+See <a href="https://jakarta.ee/specifications/platform/9/" class="bare">https://jakarta.ee/specifications/platform/9/</a>.</p>
 </div>
 <div class="paragraph">
 <p>[7] T. Berners-Lee, R. Fielding and L. Masinter. RFC 3986: Uniform Resource Identifier
