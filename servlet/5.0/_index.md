@@ -10,9 +10,9 @@ Jakarta Servlet defines a server-side API for handling HTTP requests and respons
 * [Jakarta Servlet 5.0 Specification Document](./servlet-spec-5.0.pdf) (PDF)
 * [Jakarta Servlet 5.0 Specification Document](./servlet-spec-5.0.html) (HTML)
 * [Jakarta Servlet 5.0 Javadoc](./apidocs)
-* [Jakarta Servlet 5.0 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9-eftl/staged-900/jakarta-servlet-tck-5.0.0.zip)([sig](),[sha](),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Servlet 5.0 TCK](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.0.zip)([sig](),[sha](),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.servlet:jakarta.servlet-api:jar:5.0.0](https://jakarta.oss.sonatype.org/content/repositories/staging/jakarta/servlet/jakarta.servlet-api/5.0.0/jakarta.servlet-api-5.0.0.jar)
+  * [jakarta.servlet:jakarta.servlet-api:jar:5.0.0](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/5.0.0/jar)
 
 
 # Compatible Implementations
