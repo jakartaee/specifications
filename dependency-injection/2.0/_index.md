@@ -12,7 +12,7 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 * [Jakarta Dependency Injection 2.0 Specification Document](./injection-spec-2.0.html) (HTML)
 * [Jakarta Dependency Injection 2.0 Javadoc](./apidocs)
 * [Jakarta Dependency Injection 2.0 TCK](https://download.eclipse.org/ee4j/cdi/inject/2.0/jakarta.inject-tck-2.0.0-bin.tar.gz) ([sig](https://download.eclipse.org/ee4j/cdi/inject/2.0/jakarta.inject-tck-2.0.0-bin.tar.gz.asc),[sha](),[pub]())
-  * TCK Summary Results [Weld 4.0.0.Alpha2](./TCK-summary.html)
+  * TCK Summary Results [Weld 4.0.0.Alpha2](https://github.com/jakartaredhat/weld-inject-tck/wiki/Jakarta-Dependency-Injection-2.0-TCK-Results)
 
 * Maven coordinates
   * [jakarta.inject:jakarta.inject-api:jar:2.0.0](https://repo1.maven.org/maven2/jakarta/inject/jakarta.inject-api/2.0.0/)
