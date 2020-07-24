@@ -7,6 +7,15 @@ summary: "Under Development"
 Jakarta NoSQL is a Java API standard that streamlines the integration of Java applications with NoSQL databases. It defines a set of APIs and provides a standard implementation for most NoSQL databases. 
 The goal is to create the specification in Jakarta EE to help Jakarta EE developers create enterprise-grade applications using Java® and NoSQL technologies. It helps them create scalable applications while maintaining low coupling with the underlying NoSQL technology.
 
+In general, we made some progress, especially with the creation of TCKs:
+https://github.com/eclipse-ee4j/nosql/tree/master/tck
+All APIs proved to be quite stable, except for the Graph API, and that is why there is no API for graphs. We are waiting for the definition of a standard graphical communication API, either [Apache TinkerPop](http://tinkerpop.apache.org/) or [Open Cypher](https://www.opencypher.org/), led by [Neo4J](https://neo4j.com/). Therefore, we only have a Graph implementation on the RI side, but not in the API, at least for a while.
+Regarding the migration to Jakarta EE facilities, we already have a Draft PR ready as soon as the new version of Jakarta EE is released: 
+
+https://github.com/eclipse-ee4j/nosql/pull/55
+
+A point that we are also studying is the [Quarkus](https://quarkus.io/) and [Micronaut](https://micronaut.io/) effect that uses the Annotation Processor instead of reflection and seeing how to make an API that is possible in both directions.
+
 
 * [Jakarta NoSQL Document](./nosql-1.0.0-b2.pdf) (PDF)
 * [Jakarta NoSQL Document](./nosql-1.0.0-b2.html) (HTML)
