@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Debugging Support for Other Languages 2.0"
-date: 2020-06-13
+date: 2020-06-23
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Debugging Support for Other Languages provides a mechanism by which
@@ -12,6 +12,7 @@ the original source (for example, source file and line number references).
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0.pdf) (PDF)
 * [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0.html) (HTML)
+* [Jakarta Debugging Support for Other Languages TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9-eftl/staged-900/jakarta-debugging-tck-2.0.0.zip)([sig](),[sha](),[pub]())
 
 
 # Compatible Implementations
