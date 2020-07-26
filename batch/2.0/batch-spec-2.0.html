@@ -530,8 +530,8 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta Batch Team, https://projects.eclipse.org/projects/ee4j.batch</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jakartabatch-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jakartabatch-dev</a></span><br>
 <span id="revnumber">version 2.0,</span>
-<span id="revdate">2020-06-11</span>
-<br><span id="revremark">DRAFT</span>
+<span id="revdate">2020-07-26</span>
+<br><span id="revremark"></span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -865,9 +865,9 @@ table.CodeRay td.code>pre{padding:0}
 
 Version: 2.0
 
-Status: DRAFT
+Status: Final Release
 
-Release: 2020-06-11</pre>
+Release: 2020-07-26</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -999,7 +999,7 @@ remain with copyright holders.</p>
 <h2 id="foreword"><a class="anchor" href="#foreword"></a>3. Foreword</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This specification describes the job specification language, Java programming model, and runtime environment for batch applications for the Java platform. It is designed for use on both the Java SE and Jakarta EE platforms. Additionally, it is designed to work with dependency injection (DI) containers without prescribing a particular DI implementation.</p>
+<p>This specification describes the job specification language, Java programming model, and runtime environment for Jakarta Batch. It is designed for use on Jakarta EE platforms, and also in other Java SE environments. Additionally, it is designed to work with dependency injection (DI) containers without prescribing a particular DI implementation.</p>
 </div>
 </div>
 </div>
@@ -4374,7 +4374,7 @@ artifact:</p>
    * It returns null to in dicate no more items, which
    * also means the current chunk will be committed and
    * the step will end.
-   * *@return* next item or null
+   * @return next item or null
    * @throws Exception is thrown for any errors.
    */</span>
   <span class="directive">public</span> <span class="predefined-type">Object</span> readItem() <span class="directive">throws</span> <span class="exception">Exception</span>;
@@ -4383,7 +4383,7 @@ artifact:</p>
    * The checkpointInfo method returns the current
    * checkpoint data for this reader. It is
    * called before a chunk checkpoint is committed.
-   * *@return* checkpoint data
+   * @return checkpoint data
    * @throws Exception is thrown for any errors.
    */</span>
   <span class="directive">public</span> <span class="predefined-type">Serializable</span> checkpointInfo() <span class="directive">throws</span> <span class="exception">Exception</span>;
@@ -4448,7 +4448,7 @@ batch artifact:</p>
     * to be processed. This effectively enables processItem
     * to filter out unwanted input items.
     * @param item specifies the input item to process.
-    * *@return* output item to write.
+    * @return output item to write.
     * @throws Exception thrown for any errors.
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Object</span> processItem(<span class="predefined-type">Object</span> item) <span class="directive">throws</span> <span class="exception">Exception</span>;
@@ -4517,7 +4517,7 @@ artifact:</p>
     * The checkpointInfo method returns the current
     * checkpoint data for this writer. It is
     * called before a chunk checkpoint is committed.
-    * *@return* checkpoint data
+    * @return checkpoint data
     * @throws Exception is thrown for any errors.
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Serializable</span> checkpointInfo() <span class="directive">throws</span> <span class="exception">Exception</span>;
@@ -4572,7 +4572,7 @@ artifact:</p>
     * checkpoints.
     * The default implementation returns null.
     *
-    * *@return* checkpoint data
+    * @return checkpoint data
     * @throws Exception (or subclass) if an error occurs.
     */</span>
     <span class="annotation">@Override</span>
@@ -4631,7 +4631,7 @@ CheckpointAlgorithm batch artifact:</p>
     * the batch runtime after each item is processed
     * to determine if now is the time to checkpoint
     * the current chunk.
-    * *@return* boolean indicating whether or not
+    * @return boolean indicating whether or not
     * to checkpoint now.
     * @throws Exception thrown for any errors.
     */</span>
@@ -4687,7 +4687,7 @@ CheckpointAlgorithm {
     * Implement logic in this method
     * to decide if a checkpoint should be taken now.
     *
-    * *@return* boolean indicating whether or not
+    * @return boolean indicating whether or not
     * to checkpoint now.
     * @throws Exception (or subclass) if an error occurs.
     */</span>
@@ -4744,7 +4744,7 @@ artifact:</p>
     * throws an exception, the batchlet
     * step ends with a batch status of
     * FAILED.
-    * *@return* exit status string
+    * @return exit status string
     * @throws Exception if an error occurs.
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> process() <span class="directive">throws</span> <span class="exception">Exception</span>;
@@ -4774,7 +4774,7 @@ artifact:</p>
     * Implement process logic for the Batchlet in this
     * method.
     *
-    * *@return* exit status string
+    * @return exit status string
     * @throws Exception (or subclass) if an error occurs.
     */</span>
     <span class="annotation">@Override</span>
@@ -5793,7 +5793,7 @@ to implement a PartitionMapper batch artifact:</p>
     * start of partitioned step processing. The method
     * returns a PartitionPlan, which specifies the batch properties
     * for each partition.
-    * *@return* partition plan for a partitioned step.
+    * @return partition plan for a partitioned step.
     * @throws Exception is thrown if an error occurs.
     */</span>
     <span class="directive">public</span> PartitionPlan mapPartitions( ) <span class="directive">throws</span> <span class="exception">Exception</span>;
@@ -5831,7 +5831,7 @@ may be used to implement an PartitionReducer batch artifact:</p>
 *
 */</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">PartitionReducer</span> {
-    <span class="directive">public</span> *<span class="type">enum</span>* PartitionStatus {
+    <span class="directive">public</span> <span class="type">enum</span> PartitionStatus {
         COMMIT_, _ROLLBACK
     }
     <span class="comment">/**
@@ -5983,7 +5983,7 @@ PartitionCollector batch artifact:</p>
     * Note the collector is not called if the partition
     * terminates due to an unhandled exception.
     * &lt;p&gt;
-    * *@return* an Serializable object to pass to the
+    * @return an Serializable object to pass to the
     * PartitionAnalyzer.
     * @throws Exception is thrown if an error occurs.
     */</span>
@@ -6139,7 +6139,7 @@ implement an Decider batch artifact:</p>
     * &lt;/ul&gt;
     * @param executions specifies the StepExecution(s) of the preceding
     * element.
-    * *@return* updated job exit status
+    * @return updated job exit status
     * @throws Exception is thrown if an error occurs.
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> decide(StepExecution<span class="type">[]</span> executions) <span class="directive">throws</span> <span class="exception">Exception</span>;
@@ -6150,15 +6150,28 @@ implement an Decider batch artifact:</p>
 <div class="sect2">
 <h3 id="transactionality"><a class="anchor" href="#transactionality"></a>9.7. Transactionality</h3>
 <div class="paragraph">
-<p>Chunk type check points are transactional. The batch runtime uses global
-transaction mode on the Jakarta EE platform and local transaction mode on
-the Java SE platform. Global transaction timeout is configurable at
-step-level with a step-level property:</p>
+<p>Chunk type check points are transactional.  When running on a
+Jakarta EE platform, the batch runtime uses global transactions.
+In a Java SE or other environment, the batch runtime may use global
+transactions if available, otherwise the transactional behavior
+is undefined.</p>
 </div>
 <div class="paragraph">
-<p>'jakarta.transaction.global.timeout={seconds} - default is 180
-seconds'</p>
+<p>Global transaction timeout is configurable at
+step-level with a step-level property:</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jakarta.transaction.global.timeout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(seconds) - default is 180 (seconds)</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Example:</p>
 </div>
@@ -6794,13 +6807,13 @@ resolve 'partitionPlan' substitutions.</p>
 {
     <span class="comment">/**
     * Get job name
-    * *@return* value of 'id' attribute from &lt;job&gt;
+    * @return value of 'id' attribute from &lt;job&gt;
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> getJobName();
     <span class="comment">/**
     * The getTransientUserData method returns a transient data object
     * belonging to the current Job XML execution element.
-    * *@return* user-specified type
+    * @return user-specified type
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Object</span> getTransientUserData();
     <span class="comment">/**
@@ -6812,15 +6825,15 @@ resolve 'partitionPlan' substitutions.</p>
     <span class="comment">/**
     * The getInstanceId method returns the current job's instance
     * id.
-    * *@return* job instance id
+    * @return job instance id
     */</span>
-    <span class="directive">public</span> *<span class="type">long</span>* getInstanceId();
+    <span class="directive">public</span> <span class="type">long</span> getInstanceId();
     <span class="comment">/**
     * The getExecutionId method returns the current job's current
     * execution id.
-    * *@return* job execution id
+    * @return job execution id
     */</span>
-    <span class="directive">public</span> *<span class="type">long</span>* getExecutionId();
+    <span class="directive">public</span> <span class="type">long</span> getExecutionId();
     <span class="comment">/**
     * The getProperties method returns the job level properties
     * specified in a job definition.
@@ -6839,19 +6852,19 @@ resolve 'partitionPlan' substitutions.</p>
     * implementation-defined properties.
     * &lt;/ul&gt;
     *
-    * *@return* job level properties
+    * @return job level properties
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Properties</span> getProperties();
     <span class="comment">/**
     * The getBatchStatus method simply returns the batch status value * set
     by the batch runtime into the job context.
-    * *@return* batch status string
+    * @return batch status string
     */</span>
     <span class="directive">public</span> BatchStatus getBatchStatus();
     <span class="comment">/**
     * The getExitStatus method simply returns the exit status value stored
     * into the job context through the setExitStatus method or null.
-    * *@return* exit status string
+    * @return exit status string
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> getExitStatus();
     <span class="comment">/**
@@ -6887,14 +6900,14 @@ resolve 'partitionPlan' substitutions.</p>
 {
     <span class="comment">/**
     * Get step name
-    * *@return* value of 'id' attribute from &lt;step&gt;
+    * @return value of 'id' attribute from &lt;step&gt;
     *
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> getStepName();
     <span class="comment">/**
     * The getTransientUserData method returns a transient data object
     * belonging to the current Job XML execution element.
-    * *@return* user-specified type
+    * @return user-specified type
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Object</span> getTransientUserData();
     <span class="comment">/**
@@ -6906,9 +6919,9 @@ resolve 'partitionPlan' substitutions.</p>
     <span class="comment">/**
     * The getStepExecutionId method returns the current step's
     * execution id.
-    * *@return* step execution id
+    * @return step execution id
     */</span>
-    <span class="directive">public</span> *<span class="type">long</span>* getStepExecutionId();
+    <span class="directive">public</span> <span class="type">long</span> getStepExecutionId();
     <span class="comment">/**
     * The getProperties method returns the step
     level properties
@@ -6927,7 +6940,7 @@ resolve 'partitionPlan' substitutions.</p>
     * runtime implementation may choose to include additional,
     * implementation-defined properties.
     * &lt;/ul&gt;
-    * *@return* step level properties
+    * @return step level properties
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Properties</span> getProperties();
     <span class="comment">/**
@@ -6936,7 +6949,7 @@ resolve 'partitionPlan' substitutions.</p>
     * java.util.Serializable. This data is saved as part of a step's
     * checkpoint. For a step that does not do checkpoints, it is saved
     * after the step ends. It is available upon restart.
-    * *@return* user-specified type
+    * @return user-specified type
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Serializable</span> getPersistentUserData();
     <span class="comment">/**
@@ -6952,13 +6965,13 @@ resolve 'partitionPlan' substitutions.</p>
     * The getBatchStatus method returns the current batch status of the
     * current step. This value is set by the batch runtime and changes as
     * the batch status changes.
-    * *@return* batch status string
+    * @return batch status string
     */</span>
     <span class="directive">public</span> BatchStatus getBatchStatus();
     <span class="comment">/**
     * The getExitStatus method simply returns the exit status value stored
     * into the step context through the setExitStatus method or null.
-    * *@return* exit status string
+    * @return exit status string
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> getExitStatus();
     <span class="comment">/**
@@ -6973,15 +6986,15 @@ resolve 'partitionPlan' substitutions.</p>
     <span class="comment">/**
     * The getException method returns the last exception thrown from a
     * step level batch artifact to the batch runtime.
-    * *@return* the last exception
+    * @return the last exception
     */</span>
     <span class="directive">public</span> <span class="exception">Exception</span> getException();
     <span class="comment">/**
     * The getMetrics method returns an array of step level metrics. These
     * are things like commits, skips, etc.
-    * *@see* jakarta.batch.runtime.metric.Metric for definition of standard
+    * @see jakarta.batch.runtime.metric.Metric for definition of standard
     * metrics.
-    * *@return* metrics array
+    * @return metrics array
     */</span>
     <span class="directive">public</span> Metric<span class="type">[]</span> getMetrics();
 }</code></pre>
@@ -7002,7 +7015,7 @@ resolve 'partitionPlan' substitutions.</p>
 */</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">Metric</span>
 {
-    <span class="directive">public</span> *<span class="type">enum</span>* MetricType
+    <span class="directive">public</span> <span class="type">enum</span> MetricType
     {
         READ_COUNT_, _WRITE_COUNT_,
         _COMMIT_COUNT_,
@@ -7012,14 +7025,14 @@ resolve 'partitionPlan' substitutions.</p>
     }
     <span class="comment">/**
     * The getName method returns the metric type.
-    * *@return* metric type.
+    * @return metric type.
     */</span>
     <span class="directive">public</span> MetricType getType();
     <span class="comment">/**
     * The getValue method returns the metric value.
-    * *@return* metric value.
+    * @return metric value.
     */</span>
-    <span class="directive">public</span> *<span class="type">long</span>* getValue();
+    <span class="directive">public</span> <span class="type">long</span> getValue();
 }</code></pre>
 </div>
 </div>
@@ -7033,7 +7046,7 @@ resolve 'partitionPlan' substitutions.</p>
 <span class="comment">/**
 *
 * PartitionPlan is a helper class that carries partition processing
-* information set by the *@PartitionMapper* method.
+* information set by the @PartitionMapper method.
 *
 * A PartitionPlan contains:
 * &lt;ol&gt;
@@ -7078,7 +7091,7 @@ resolve 'partitionPlan' substitutions.</p>
     <span class="directive">public</span> <span class="type">void</span> setPartitionsOverride(<span class="type">boolean</span> override);
     <span class="comment">/**
     * Return current value of partition override setting.
-    * *@return* override setting.
+    * @return override setting.
     */</span>
     <span class="directive">public</span> <span class="type">boolean</span> getPartitionsOverride();
     <span class="comment">/**
@@ -7102,7 +7115,7 @@ resolve 'partitionPlan' substitutions.</p>
     <span class="directive">public</span> <span class="type">void</span> setPartitionProperties(<span class="predefined-type">Properties</span><span class="type">[]</span> props);
     <span class="comment">/**
     * Gets count of Partitions.
-    * *@return* Partition count
+    * @return Partition count
     */</span>
     <span class="directive">public</span> <span class="type">int</span> getPartitions();
     <span class="comment">/**
@@ -7114,7 +7127,7 @@ resolve 'partitionPlan' substitutions.</p>
     it may not have this many
     * available, and may use less.
     *
-    * *@return* requested thread count
+    * @return requested thread count
     */</span>
     <span class="directive">public</span> <span class="type">int</span> getThreads();
     <span class="comment">/**
@@ -7135,7 +7148,7 @@ resolve 'partitionPlan' substitutions.</p>
     * substitution potentially resolving to the corresponding
     * value for each partition.
     *
-    * *@return* Partition Properties object array
+    * @return Partition Properties object array
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Properties</span><span class="type">[]</span>
     getPartitionProperties();
@@ -7225,12 +7238,9 @@ resolve 'partitionPlan' substitutions.</p>
     <span class="comment">/**
     * The getJobOperator factory method returns
     * an instance of the JobOperator interface.
-    * *@return* JobOperator instance.
+    * @return JobOperator instance.
     */</span>
-    <span class="directive">public</span> *<span class="directive">static</span>* JobOperator getJobOperator()
-    {
-        <span class="keyword">return</span> <span class="predefined-constant">null</span>;
-    }
+    <span class="directive">public</span> <span class="directive">static</span> JobOperator getJobOperator() { ... }
 }</code></pre>
 </div>
 </div>
@@ -7284,7 +7294,7 @@ resolve 'partitionPlan' substitutions.</p>
     <span class="comment">/**
     * Returns a set of all job names known to the batch runtime.
     *
-    * *@return* a set of job names.
+    * @return a set of job names.
     * @throws JobSecurityException
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Set</span>&lt;<span class="predefined-type">String</span>&gt; getJobNames() <span class="directive">throws</span> JobSecurityException;
@@ -7293,7 +7303,7 @@ resolve 'partitionPlan' substitutions.</p>
     *
     * @param jobName
     * specifies the name of the job.
-    * *@return* count of instances of the named job.
+    * @return count of instances of the named job.
     * @throws NoSuchJobException
     * @throws JobSecurityException
     */</span>
@@ -7313,7 +7323,7 @@ resolve 'partitionPlan' substitutions.</p>
     * @param count
     * specifies the number of job instances to return from the
     * starting position of the maximal list of job instances.
-    * *@return* list of JobInstances.
+    * @return list of JobInstances.
     * @throws NoSuchJobException
     * @throws JobSecurityException
     */</span>
@@ -7325,7 +7335,7 @@ resolve 'partitionPlan' substitutions.</p>
     *
     * @param jobName
     * specifies the job name.
-    * *@return* a list of execution ids.
+    * @return a list of execution ids.
     * @throws NoSuchJobException
     * @throws JobSecurityException
     */</span>
@@ -7339,12 +7349,12 @@ resolve 'partitionPlan' substitutions.</p>
     * @param executionId
     * specifies the execution from which to retrieve the
     * parameters.
-    * *@return* a Properties object containing the key/value job parameter
+    * @return a Properties object containing the key/value job parameter
     * pairs.
     * @throws NoSuchJobExecutionException
     * @throws JobSecurityException
     */</span>
-    <span class="directive">public</span> <span class="predefined-type">Properties</span> getParameters(*<span class="type">long</span>* executionId)
+    <span class="directive">public</span> <span class="predefined-type">Properties</span> getParameters(<span class="type">long</span> executionId)
     <span class="directive">throws</span> NoSuchJobExecutionException, JobSecurityException;
     <span class="comment">/**
     * Creates a new job instance and starts the first execution of that
@@ -7364,11 +7374,11 @@ resolve 'partitionPlan' substitutions.</p>
     * @param jobParameters
     * specifies the keyword/value pairs for attribute
     * substitution in the Job XML.
-    * *@return* executionId for the job execution.
+    * @return executionId for the job execution.
     * @throws JobStartException
     * @throws JobSecurityException
     */</span>
-    <span class="directive">public</span> *<span class="type">long</span>* start(<span class="predefined-type">String</span> jobXMLName, <span class="predefined-type">Properties</span> jobParameters)
+    <span class="directive">public</span> <span class="type">long</span> start(<span class="predefined-type">String</span> jobXMLName, <span class="predefined-type">Properties</span> jobParameters)
     <span class="directive">throws</span>
     JobStartException, JobSecurityException;
     <span class="comment">/**
@@ -7381,14 +7391,14 @@ resolve 'partitionPlan' substitutions.</p>
     * @param restartParameters
     * specifies the keyword/value pairs for attribute
     * substitution in the Job XML.
-    * *@return* new executionId
+    * @return new executionId
     * @throws JobExecutionAlreadyCompleteException
     * @throws NoSuchJobExecutionException
     * @throws JobExecutionNotMostRecentException,
     * @throws JobRestartException
     * @throws JobSecurityException
     */</span>
-    <span class="directive">public</span> *<span class="type">long</span>* restart(*<span class="type">long</span>* executionId, <span class="predefined-type">Properties</span>
+    <span class="directive">public</span> <span class="type">long</span> restart(<span class="type">long</span> executionId, <span class="predefined-type">Properties</span>
     restartParameters)
     <span class="directive">throws</span> JobExecutionAlreadyCompleteException,
     NoSuchJobExecutionException,
@@ -7415,7 +7425,7 @@ resolve 'partitionPlan' substitutions.</p>
     * @throws JobExecutionNotRunningException
     * @throws JobSecurityException
     */</span>
-    <span class="directive">public</span> <span class="type">void</span> stop(*<span class="type">long</span>* executionId) <span class="directive">throws</span>
+    <span class="directive">public</span> <span class="type">void</span> stop(<span class="type">long</span> executionId) <span class="directive">throws</span>
     NoSuchJobExecutionException,
     JobExecutionNotRunningException, JobSecurityException;
     <span class="comment">/**
@@ -7430,7 +7440,7 @@ resolve 'partitionPlan' substitutions.</p>
     * @throws JobExecutionIsRunningException
     * @throws JobSecurityException
     */</span>
-    <span class="directive">public</span> <span class="type">void</span> abandon(*<span class="type">long</span>* executionId) <span class="directive">throws</span>
+    <span class="directive">public</span> <span class="type">void</span> abandon(<span class="type">long</span> executionId) <span class="directive">throws</span>
     NoSuchJobExecutionException,
     JobExecutionIsRunningException, JobSecurityException;
     <span class="comment">/**
@@ -7438,18 +7448,18 @@ resolve 'partitionPlan' substitutions.</p>
     *
     * @param executionId
     * specifies the job execution.
-    * *@return* job instance
+    * @return job instance
     * @throws NoSuchJobExecutionException
     * @throws JobSecurityException
     */</span>
-    <span class="directive">public</span> JobInstance getJobInstance(*<span class="type">long</span>* executionId) <span class="directive">throws</span>
+    <span class="directive">public</span> JobInstance getJobInstance(<span class="type">long</span> executionId) <span class="directive">throws</span>
     NoSuchJobExecutionException, JobSecurityException;
     <span class="comment">/**
     * Return all job executions belonging to the specified job instance.
     *
     * @param jobInstance
     * specifies the job instance.
-    * *@return* list of job executions
+    * @return list of job executions
     * @throws NoSuchJobInstanceException
     * @throws JobSecurityException
     */</span>
@@ -7461,22 +7471,22 @@ resolve 'partitionPlan' substitutions.</p>
     *
     * @param executionId
     * specifies the job execution.
-    * *@return* job execution
+    * @return job execution
     * @throws NoSuchJobExecutionException
     * @throws JobSecurityException
     */</span>
-    <span class="directive">public</span> JobExecution getJobExecution(*<span class="type">long</span>* executionId) <span class="directive">throws</span>
+    <span class="directive">public</span> JobExecution getJobExecution(<span class="type">long</span> executionId) <span class="directive">throws</span>
     NoSuchJobExecutionException, JobSecurityException;
     <span class="comment">/**
     * Return StepExecutions for specified execution id.
     *
     * @param executionId
     * specifies the job execution.
-    * *@return* step executions (order not guaranteed)
+    * @return step executions (order not guaranteed)
     * @throws NoSuchJobExecutionException
     * @throws JobSecurityException
     */</span>
-    <span class="directive">public</span> <span class="predefined-type">List</span>&lt;StepExecution&gt; getStepExecutions(*<span class="type">long</span>* jobExecutionId)
+    <span class="directive">public</span> <span class="predefined-type">List</span>&lt;StepExecution&gt; getStepExecutions(<span class="type">long</span> jobExecutionId)
     <span class="directive">throws</span> NoSuchJobExecutionException, JobSecurityException;
 }</code></pre>
 </div>
@@ -7492,12 +7502,12 @@ resolve 'partitionPlan' substitutions.</p>
 {
     <span class="comment">/**
     * Get unique id for this JobInstance.
-    * *@return* instance id
+    * @return instance id
     */</span>
-    <span class="directive">public</span> *<span class="type">long</span>* getInstanceId();
+    <span class="directive">public</span> <span class="type">long</span> getInstanceId();
     <span class="comment">/**
     * Get job name.
-    * *@return* value of 'id' attribute from &lt;job&gt;
+    * @return value of 'id' attribute from &lt;job&gt;
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> getJobName();
 }</code></pre>
@@ -7516,47 +7526,47 @@ resolve 'partitionPlan' substitutions.</p>
 {
     <span class="comment">/**
     * Get unique id for this JobExecution.
-    * *@return* execution id
+    * @return execution id
     */</span>
-    <span class="directive">public</span> *<span class="type">long</span>* getExecutionId();
+    <span class="directive">public</span> <span class="type">long</span> getExecutionId();
     <span class="comment">/**
     * Get job name.
-    * *@return* value of 'id' attribute from &lt;job&gt;
+    * @return value of 'id' attribute from &lt;job&gt;
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> getJobName();
     <span class="comment">/**
     * Get batch status of this execution.
-    * *@return* batch status value.
+    * @return batch status value.
     */</span>
     <span class="directive">public</span> BatchStatus getBatchStatus();
     <span class="comment">/**
     * Get time execution entered STARTED status.
-    * *@return* date (time)
+    * @return date (time)
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Date</span> getStartTime();
     <span class="comment">/**
     * Get time execution entered end status: COMPLETED, STOPPED, FAILED
-    * *@return* date (time)
+    * @return date (time)
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Date</span> getEndTime();
     <span class="comment">/**
     * Get execution exit status.
-    * *@return* exit status.
+    * @return exit status.
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> getExitStatus();
     <span class="comment">/**
     * Get time execution was created.
-    * *@return* date (time)
+    * @return date (time)
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Date</span> getCreateTime();
     <span class="comment">/**
     * Get time execution was last updated.
-    * *@return* date (time)
+    * @return date (time)
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Date</span> getLastUpdatedTime();
     <span class="comment">/**
     * Get job parameters for this execution.
-    * *@return* job parameters
+    * @return job parameters
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Properties</span> getJobParameters();
 }</code></pre>
@@ -7575,32 +7585,32 @@ resolve 'partitionPlan' substitutions.</p>
 {
     <span class="comment">/**
     * Get unique id for this StepExecution.
-    * *@return* StepExecution id
+    * @return StepExecution id
     */</span>
-    <span class="directive">public</span> *<span class="type">long</span>* getStepExecutionId();
+    <span class="directive">public</span> <span class="type">long</span> getStepExecutionId();
     <span class="comment">/**
     * Get step name.
-    * *@return* value of 'id' attribute from &lt;step&gt;
+    * @return value of 'id' attribute from &lt;step&gt;
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> getStepName();
     <span class="comment">/**
     * Get batch status of this step execution.
-    * *@return* batch status.
+    * @return batch status.
     */</span>
     <span class="directive">public</span> BatchStatus getBatchStatus();
     <span class="comment">/**
     * Get time this step started.
-    * *@return* date (time)
+    * @return date (time)
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Date</span> getStartTime();
     <span class="comment">/**
     * Get time this step ended.
-    * *@return* date (time)
+    * @return date (time)
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Date</span> getEndTime();
     <span class="comment">/**
     * Get exit status of step.
-    * *@return* exit status
+    * @return exit status
     */</span>
     <span class="directive">public</span> <span class="predefined-type">String</span> getExitStatus();
     <span class="comment">/**
@@ -7612,13 +7622,13 @@ resolve 'partitionPlan' substitutions.</p>
     * or main thread (the one the &lt;code&gt;PartitionAnalyzer&lt;/code&gt;, etc.
     * execute on). It does not return the persistent user
     * data of the partition threads.
-    * *@return* persistent data
+    * @return persistent data
     */</span>
     <span class="directive">public</span> <span class="predefined-type">Serializable</span>
     getPersistentUserData ();
     <span class="comment">/**
     * Get step metrics
-    * *@return* array of metrics
+    * @return array of metrics
     */</span>
     <span class="directive">public</span> Metric<span class="type">[]</span> getMetrics();
 }</code></pre>
@@ -8813,7 +8823,7 @@ on each thread actively processing a partition.</p>
 <span class="tag">&lt;xs:schema</span> <span class="attribute-name">xmlns:xs</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema</span><span class="delimiter">&quot;</span></span>
     <span class="attribute-name">elementFormDefault</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">qualified</span><span class="delimiter">&quot;</span></span>
     <span class="attribute-name">targetNamespace</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span>
-    <span class="attribute-name">xmlns:jbatch</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="attribute-name">xmlns:jbatch</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
     <span class="tag">&lt;xs:element</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">batch-artifacts</span><span class="delimiter">&quot;</span></span>
         <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">jbatch:BatchArtifacts</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
     <span class="tag">&lt;xs:complexType</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">BatchArtifacts</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
@@ -8889,7 +8899,7 @@ exist)</p>
 <span class="tag">&lt;xs:schema</span> <span class="attribute-name">xmlns:xs</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema</span><span class="delimiter">&quot;</span></span>
     <span class="attribute-name">elementFormDefault</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">qualified</span><span class="delimiter">&quot;</span></span>
     <span class="attribute-name">targetNamespace</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span>
-    <span class="attribute-name">xmlns:jsl</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="attribute-name">xmlns:jsl</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
     <span class="tag">&lt;xs:annotation&gt;</span>
         <span class="tag">&lt;xs:documentation&gt;</span>
             Job Specification Language (JSL) specifies a job,
@@ -8897,6 +8907,27 @@ exist)</p>
             JSL also can be referred to as &quot;Job XML&quot;.
         <span class="tag">&lt;/xs:documentation&gt;</span>
     <span class="tag">&lt;/xs:annotation&gt;</span>
+
+    <span class="tag">&lt;xs:simpleType</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">batchVersionType</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;xs:annotation&gt;</span>
+        <span class="tag">&lt;xs:documentation&gt;</span>
+
+            Defines a decimal type used for versioning documents
+            defined via this scheam.  Intended to be identical
+            to the &quot;dewey-versionType&quot; dewey decimal restriction
+            type defined in
+            https://jakarta.ee/xml/ns/jakartaee/jakartaee_9.xsd
+            but without the need to include that schema definition
+            file.
+
+        <span class="tag">&lt;/xs:documentation&gt;</span>
+      <span class="tag">&lt;/xs:annotation&gt;</span>
+
+      <span class="tag">&lt;xs:restriction</span> <span class="attribute-name">base</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xs:token</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;xs:pattern</span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">\.?[0-9]+(\.[0-9]+)*</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/xs:restriction&gt;</span>
+    <span class="tag">&lt;/xs:simpleType&gt;</span>
+
     <span class="tag">&lt;xs:simpleType</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">artifactRef</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
         <span class="tag">&lt;xs:annotation&gt;</span>
             <span class="tag">&lt;xs:documentation&gt;</span>
@@ -8947,7 +8978,7 @@ exist)</p>
             <span class="tag">&lt;/xs:choice&gt;</span>
         <span class="tag">&lt;/xs:sequence&gt;</span>
         <span class="tag">&lt;xs:attribute</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">version</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">use</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">required</span><span class="delimiter">&quot;</span></span>
-            <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xs:string</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">fixed</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+            <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">jsl:batchVersionType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">fixed</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
         <span class="tag">&lt;xs:attribute</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">use</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">required</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xs:ID</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
         <span class="tag">&lt;xs:attribute</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">restartable</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">use</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">optional</span><span class="delimiter">&quot;</span></span>
             <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xs:string</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
