@@ -7,18 +7,18 @@ Jakarta Bean Validation defines a metadata model and API for JavaBean and method
 
 * [Jakarta Bean Validation 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.bean-validation/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Bean Validation 3.0 Specification Document](./bean-validation-specification-3.0.0.pdf) (PDF)
-* [Jakarta Bean Validation 3.0 Specification Document](./bean-validation-specification-3.0.0.html) (HTML)
+* [Jakarta Bean Validation 3.0 Specification Document](bean-validation-specification-3.0.pdf) (PDF)
+* [Jakarta Bean Validation 3.0 Specification Document](bean-validation-specification-3.0.html) (HTML)
 * [Jakarta Bean Validation 3.0 Javadoc](./apidocs)
-* [Jakarta Bean Validation 3.0 TCK](http://download.eclipse.org/ee4j/bean-validation/3.0/beanvalidation-tck-dist-3.0.0-M2.zip)([sig](),[sha](),[pub]())
-  * TCK Summary Results [Hibernate Validator 7.0.0.Alpha3](./TCK-summary.html)
+* [Jakarta Bean Validation 3.0 TCK](http://download.eclipse.org/ee4j/bean-validation/3.0/beanvalidation-tck-dist-3.0.0.zip)([sig](),[sha](bb0c85c6ab78786b023931cc407e00bbcd96fc26c0d8b56a00c28bc1665c7f01),[pub]())
+  * TCK Summary Results [Hibernate Validator 7.0.0.Alpha5](./TCK-summary.html)
 
 * Maven coordinates
   * [jakarta.bean-validation:jakarta.bean-validation-api:jar:3.0.0](https://repo1.maven.org/maven2/jakarta/validation/jakarta.validation-api/3.0.0/jakarta.validation-api-3.0.0.jar)
 
 # Compatible Implementations
 
-* [Hibernate Validator 7.0.0.Alpha4](https://hibernate.org/validator/releases/7.0/)
+* [Hibernate Validator 7.0.0.Alpha5](https://hibernate.org/validator/releases/7.0/)
 
 # Ballots
 
