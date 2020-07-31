@@ -593,8 +593,8 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta Contexts and Dependency Injection Spec Project lead by Antoine Sabot-Durand</span><br>
 <span id="email" class="email"><a href="mailto:cdi-dev@eclipse.org">cdi-dev@eclipse.org</a></span><br>
 <span id="revnumber"> 3.0,</span>
-<span id="revdate">May 20 2020</span>
-<br><span id="revremark">Draft</span>
+<span id="revdate">July 30 2020</span>
+<br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -602,6 +602,8 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_preface">Preface</a>
 <ul class="sectlevel2">
 <li><a href="#_evaluation_license">Evaluation license</a></li>
+<li><a href="#_final_license">Final license</a></li>
+<li><a href="#_eclipse_foundation_specification_license_v1_0">Eclipse Foundation Specification License - v1.0</a></li>
 <li><a href="#_foreword">Foreword</a></li>
 <li><a href="#doc_organisation">Organisation of this document</a></li>
 <li><a href="#_major_changes">Major changes</a></li>
@@ -1268,27 +1270,66 @@ table.CodeRay td.code>pre{padding:0}
 
 Version: 3.0
 
-Status: Draft
+Status: Final
 
-Specification Lead:  Red Hat, Inc.
-
-Release: May 20 2020
-
-Copyright 2017 Red Hat, Inc.
-100 East Davie Street, Raleigh, NC 27601, U.S.A.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   <a href="http://www.apache.org/licenses/LICENSE-2.0" class="bare">http://www.apache.org/licenses/LICENSE-2.0</a>
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</pre>
+Release: July 30 2020</pre>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_final_license"><a class="anchor" href="#_final_license"></a>Final license</h3>
+<div class="paragraph">
+<p>Copyright 2018,2020 Eclipse Foundation.</p>
+</div>
+<div class="paragraph">
+<p>This specification is licensed under the Eclipse Foundation Specification License 1.0; this specification is based on material that is licensed under the Apache License, version 2.0.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eclipse_foundation_specification_license_v1_0"><a class="anchor" href="#_eclipse_foundation_specification_license_v1_0"></a>Eclipse Foundation Specification License - v1.0</h3>
+<div class="paragraph">
+<p>(Copy of the EFSL license <a href="https://www.eclipse.org/legal/efsl.php">here</a>)</p>
+</div>
+<div class="paragraph">
+<p>By using and/or copying this document, or the Eclipse Foundation document from which this statement is linked, you (the licensee) agree that you have read, understood, and will comply with the following terms and conditions:</p>
+</div>
+<div class="paragraph">
+<p>Permission to copy, and distribute the contents of this document, or the Eclipse Foundation document from which this statement is linked, in any medium for any purpose and without fee or royalty is hereby granted, provided that you include the following on ALL copies of the document, or portions thereof, that you use:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>link or URL to the original Eclipse Foundation document.</p>
+</li>
+<li>
+<p>All existing copyright notices, or if one does not exist, a notice (hypertext is preferred, but a textual representation is permitted) of the form:
+"Copyright © [$date-of-document] Eclipse Foundation, Inc. <a href="https://www.eclipse.org/legal/efsl.php">EFSL</a>"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Inclusion of the full text of this NOTICE must be provided. We request that authorship attribution be provided in any software, documents, or other items or products that you create pursuant to the implementation of the contents of this document, or any portion thereof.</p>
+</div>
+<div class="paragraph">
+<p>No right to create modifications or derivatives of Eclipse Foundation documents is granted pursuant to this license, except anyone may prepare and distribute derivative works and portions of this document in software that implements the specification, in supporting materials accompanying such software, and in documentation of such software, PROVIDED that all such works include the notice below. HOWEVER, the publication of derivative works of this document for use as a technical specification is expressly prohibited.</p>
+</div>
+<div class="paragraph">
+<p>The notice is:</p>
+</div>
+<div class="paragraph">
+<p>Copyright © 2018,2020 Eclipse Foundation. This software or document includes material copied from or derived from Jakarta Contexts and Dependency Injection <a href="https://projects.eclipse.org/projects/ee4j.cdi" class="bare">https://projects.eclipse.org/projects/ee4j.cdi</a></p>
+</div>
+<div class="paragraph">
+<p>Disclaimers</p>
+</div>
+<div class="paragraph">
+<p>THIS DOCUMENT IS PROVIDED "AS IS," AND THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.</p>
+</div>
+<div class="paragraph">
+<p>THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
+</div>
+<div class="paragraph">
+<p>The name and trademarks of the copyright holders or the Eclipse Foundation may NOT be used in advertising or publicity pertaining to this document or its contents without specific, written prior permission. Title to copyright in this document will at all times remain with copyright holders.</p>
 </div>
 </div>
 <div class="sect2">
@@ -4551,9 +4592,10 @@ An alternative is selected for the bean archive if either:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://xmlns.jcp.org/xml/ns/javaee</span><span class="delimiter">&quot;</span></span>
-       <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
-       <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">bean-discovery-mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">all</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
    <span class="tag">&lt;alternatives&gt;</span>
       <span class="tag">&lt;class&gt;</span>com.acme.myfwk.InMemoryDatabase<span class="tag">&lt;/class&gt;</span>
       <span class="tag">&lt;stereotype&gt;</span>com.acme.myfwk.Mock<span class="tag">&lt;/stereotype&gt;</span>
@@ -6939,9 +6981,10 @@ The order of more than one decorator with the same priority is undefined.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://xmlns.jcp.org/xml/ns/javaee</span><span class="delimiter">&quot;</span></span>
-       <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
-       <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">bean-discovery-mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">all</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
    <span class="tag">&lt;decorators&gt;</span>
       <span class="tag">&lt;class&gt;</span>com.acme.myfwk.TimestampLogger<span class="tag">&lt;/class&gt;</span>
       <span class="tag">&lt;class&gt;</span>com.acme.myfwk.IdentityLogger<span class="tag">&lt;/class&gt;</span>
@@ -7149,9 +7192,10 @@ An interceptor binding declared on a bean class replaces an interceptor binding 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://xmlns.jcp.org/xml/ns/javaee</span><span class="delimiter">&quot;</span></span>
-       <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
-       <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">bean-discovery-mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">all</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
    <span class="tag">&lt;interceptors&gt;</span>
       <span class="tag">&lt;class&gt;</span>com.acme.myfwk.TransactionInterceptor<span class="tag">&lt;/class&gt;</span>
       <span class="tag">&lt;class&gt;</span>com.acme.myfwk.LoggingInterceptor<span class="tag">&lt;/class&gt;</span>
@@ -10683,9 +10727,10 @@ By default an exclude filter is active. If the exclude filter definition contain
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-beans xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
-       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-       xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd&quot; bean-discovery-mode=&quot;all&quot; version=&quot;2.0&quot;<span class="error">&gt;</span>
+<span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span>
+       <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
+       <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xsi:schemaLocation=</span><span class="delimiter">&quot;</span></span><span class="attribute-name">https:</span><span class="error">/</span><span class="error">/</span><span class="attribute-name">jakarta.ee</span><span class="error">/</span><span class="attribute-name">xml</span><span class="error">/</span><span class="attribute-name">ns</span><span class="error">/</span><span class="attribute-name">jakartaee</span> <span class="attribute-name">https:</span><span class="error">/</span><span class="error">/</span><span class="attribute-name">jakarta.ee</span><span class="error">/</span><span class="attribute-name">xml</span><span class="error">/</span><span class="attribute-name">ns</span><span class="error">/</span><span class="attribute-name">jakartaee</span><span class="error">/</span><span class="attribute-name">beans_3_0.xsd</span><span class="error">&quot;</span>
+       <span class="attribute-name">bean-discovery-mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">all</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 
     <span class="tag">&lt;scan&gt;</span>
         <span class="tag">&lt;exclude</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">com.acme.rest.*</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
@@ -10719,9 +10764,10 @@ beans xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://xmlns.jcp.org/xml/ns/javaee</span><span class="delimiter">&quot;</span></span>
-       <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
-       <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">bean-discovery-mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">all</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 
     <span class="tag">&lt;trim</span><span class="tag">/&gt;</span>
 <span class="tag">&lt;/beans&gt;</span></code></pre>
@@ -12645,7 +12691,7 @@ The bean archives might be directories, library jars or EJB jars.</p>
 <div id="footer">
 <div id="footer-text">
  3.0<br>
-Last updated 2020-05-20 19:13:02 CDT
+Last updated 2020-07-31 01:40:29 GMT
 </div>
 </div>
 </body>
