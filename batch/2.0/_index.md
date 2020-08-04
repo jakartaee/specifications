@@ -10,15 +10,15 @@ Jakarta Batch specifies a Java API plus an XML-based job specification language 
 * [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0.pdf) (PDF)
 * [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0.html) (HTML)
 * [Jakarta Batch 2.0 Javadoc](./apidocs)
-* [Jakarta Batch 2.0 TCK](https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-2.0.0-M4.zip) (sig - N/A, [sha](https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-2.0.0-M4.zip.sha256), pub - N/A):
+* [Jakarta Batch 2.0 TCK](https://download.eclipse.org/jakartaee/batch/2.0/jakarta.batch.official.tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/batch/2.0/jakarta.batch.official.tck-2.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/batch/2.0/jakarta.batch.official.tck-2.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.batch:jakarta.batch-api:jar:2.0.0-M6](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.0.0-M6/jar)
+  * [jakarta.batch:jakarta.batch-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.0.0/jar)
 
 
 # Compatible Implementations
 
-* [**"jbatch"** v2.0.0-M6](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.0.0-M6) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.
+* [**"jbatch"** v2.0.0](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.0.0) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.
 
 # Ballots
 
