@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Mail 2.0 (milestone)"
-date: 2020-06-05
+title: "Jakarta Mail 2.0"
+date: 2020-08-25
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -8,17 +8,17 @@ Jakarta Mail defines a platform-independent and protocol-independent framework t
 
 * [Jakarta Mail 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.mail/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Mail 2.0 Specification Document](./mail-spec-2.0-RC6.pdf) (PDF)
-* [Jakarta Mail 2.0 Specification Document](./mail-spec-2.0-RC6.html) (HTML)
+* [Jakarta Mail 2.0 Specification Document](./mail-spec-2.0.pdf) (PDF)
+* [Jakarta Mail 2.0 Specification Document](./mail-spec-2.0.html) (HTML)
 * [Jakarta Mail 2.0 Javadoc](./apidocs)
-* [Jakarta Mail 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Mail 2.0 TCK](https://download.eclipse.org/jakartaee/mail/2.0/jakarta-mail-tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/mail/2.0/jakarta-mail-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/mail/2.0/jakarta-mail-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.mail:jakarta.mail-api:jar:2.0.0-RC6](https://search.maven.org/artifact/jakarta.mail/jakarta.mail-api/2.0.0-RC6/jar)
+  * [jakarta.mail:jakarta.mail-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.mail/jakarta.mail-api/2.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Eclipse Jakarta Mail 2.0.0-RC6](https://repo1.maven.org/maven2/com/sun/mail/jakarta.mail/2.0.0-RC6/jakarta.mail-2.0.0-RC6.jar)
+* [Eclipse Jakarta Mail 2.0.0](https://eclipse-ee4j.github.io/mail/)
 
 # Ballots
 
