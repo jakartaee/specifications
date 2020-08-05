@@ -1,12 +1,12 @@
 ---
 title: "Jakarta Dependency Injection 2.0"
-date: 2020-06-7
+date: 2020-08-05
 summary: "Release for Jakarta EE 9"
 ---
 
 Jakarta Dependency Injection specifies a means for obtaining objects in such a way as to maximize reusability, testability and maintainability compared to traditional approaches such as constructors, factories, and service locators (e.g., JNDI).
 
-* [Jakarta Dependency Injection 2.0 Release Record]()
+* [Jakarta Dependency Injection 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Dependency Injection 2.0 Specification Document](./injection-spec-2.0.pdf) (PDF)
 * [Jakarta Dependency Injection 2.0 Specification Document](./injection-spec-2.0.html) (HTML)
