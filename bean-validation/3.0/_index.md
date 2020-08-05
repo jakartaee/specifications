@@ -10,10 +10,13 @@ Jakarta Bean Validation defines a metadata model and API for JavaBean and method
 * [Jakarta Bean Validation 3.0 Specification Document](bean-validation-specification-3.0.pdf) (PDF)
 * [Jakarta Bean Validation 3.0 Specification Document](bean-validation-specification-3.0.html) (HTML)
 * [Jakarta Bean Validation 3.0 Javadoc](./apidocs)
-* [Jakarta Bean Validation 3.0 TCK](http://download.eclipse.org/ee4j/bean-validation/3.0/beanvalidation-tck-dist-3.0.0.zip)([sig](),[sha](bb0c85c6ab78786b023931cc407e00bbcd96fc26c0d8b56a00c28bc1665c7f01),[pub]())
+* [Jakarta Bean Validation 3.0 TCK](http://download.eclipse.org/ee4j/bean-validation/3.0/beanvalidation-tck-dist-3.0.0.zip)
+([sig](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.0.0.zip.sig),
+[sha](c975fd229df0c40947a9f0a69b779ec92bebb3d21e05fdc65fccc1d11ef5525b),
+[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.bean-validation:jakarta.bean-validation-api:jar:3.0.0](https://repo1.maven.org/maven2/jakarta/validation/jakarta.validation-api/3.0.0/jakarta.validation-api-3.0.0.jar)
+  * [jakarta.bean-validation:jakarta.bean-validation-api:jar:3.0.0](https://jakarta.oss.sonatype.org/content/groups/staging/jakarta/validation/jakarta.validation-api/3.0.0/jakarta.validation-api-3.0.0.jar)
 
 # Compatible Implementations
 
