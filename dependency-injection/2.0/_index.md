@@ -8,8 +8,8 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 
 * [Jakarta Dependency Injection 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Dependency Injection 2.0 Specification Document](./injection-spec-2.0.pdf) (PDF)
-* [Jakarta Dependency Injection 2.0 Specification Document](./injection-spec-2.0.html) (HTML)
+* [Jakarta Dependency Injection 2.0 Specification Document](jakarta-injection-spec-2.0.pdf) (PDF)
+* [Jakarta Dependency Injection 2.0 Specification Document](jakarta-injection-spec-2.0.html) (HTML)
 * [Jakarta Dependency Injection 2.0 Javadoc](./apidocs)
 * [Jakarta Dependency Injection 2.0 TCK](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.1-bin.zip)
 ([sig](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.1-bin.zip.sig),
