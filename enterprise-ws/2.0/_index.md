@@ -13,6 +13,7 @@ This specification defines the Web Services for Jakarta EE architecture.
 * Jakarta Enterprise Web Services 2.0 XML Schemas
   * [Web Services deployment descriptor](https://jakarta.ee/xml/ns/jakartaee/jakartaee_web_services_2_0.xsd)
   * [Web Services Client deployment descriptor](https://jakarta.ee/xml/ns/jakartaee/jakartaee_web_services_client_2_0.xsd)
+* [Jakarta Platform 9.0 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 
 # Compatible Implementations
