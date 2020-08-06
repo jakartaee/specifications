@@ -15,6 +15,9 @@ Jakarta Batch specifies a Java API plus an XML-based job specification language 
 * Maven coordinates
   * [jakarta.batch:jakarta.batch-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.0.0/jar)
 
+* Schemas
+  * [XML Schema for the Jakarta Batch artifacts XML file (batch.xml)](https://jakarta.ee/xml/ns/jakartaee/batchXML_2_0.xsd)
+  * [XML Schema for the Jakarta Batch Job Specification Language](https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd)
 
 # Compatible Implementations
 
