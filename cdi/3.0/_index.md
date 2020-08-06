@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Context Dependency Injection 3.0"
-date: 2020-07-27
+date: 2020-08-06
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -11,11 +11,13 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 * [Jakarta Contexts Dependency Injection 3.0 Specification Document](cdi-spec-3.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 3.0 Specification Document](cdi-spec-3.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 3.0 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 3.0 TCK](http://download.eclipse.org/ee4j/cdi/cdi-tck-3.0.0-M3-dist.zip)([sig](),[sha](),[pub]())
-  * TCK Summary Results [Weld 4.0.0.Alpha2](./TCK-summary.html)
+* [Jakarta Contexts Dependency Injection 3.0 TCK](http://download.eclipse.org/jakartaee/cdi/cdi-tck-3.0.0-dist.zip)
+([sig](http://download.eclipse.org/jakartaee/cdi/cdi-tck-3.0.0-dist.zip.sig),
+[sha](http://download.eclipse.org/jakartaee/cdi/cdi-tck-3.0.0-dist.zip.sha256),
+[pub](https://github.com/jakartaee/specification-committee/blob/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.cdi:jakarta.cdi-api:jar:3.0.0](https://repo1.maven.org/maven2/jakarta/enterprise/jakarta.enterprise.cdi-api/3.0.0/)
+  * [jakarta.enterprise:jakarta.cdi-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/3.0.0/jar)
 
 
 # Compatible Implementations
