@@ -8,8 +8,8 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 
 * [Jakarta Contexts Dependency Injection 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Contexts Dependency Injection 3.0 Specification Document](cdi-spec-3.0.pdf) (PDF)
-* [Jakarta Contexts Dependency Injection 3.0 Specification Document](cdi-spec-3.0.html) (HTML)
+* [Jakarta Contexts Dependency Injection 3.0 Specification Document](jakarta-cdi-spec-3.0.pdf) (PDF)
+* [Jakarta Contexts Dependency Injection 3.0 Specification Document](jakarta-cdi-spec-3.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 3.0 Javadoc](./apidocs)
 * [Jakarta Contexts Dependency Injection 3.0 TCK](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.0-dist.zip)
 ([sig](http://download.eclipse.org/jakartaee/cdi/cdi-tck-3.0.0-dist.zip.sig),
