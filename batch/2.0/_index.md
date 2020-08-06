@@ -18,7 +18,7 @@ Jakarta Batch specifies a Java API plus an XML-based job specification language 
 
 # Compatible Implementations
 
-* [**"jbatch"** v2.0.0](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.0.0) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.
+* [**"jbatch"** v2.0.0-M7](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.0.0-M7) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.  Maven links: [implementation](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.container/2.0.0-M7/com.ibm.jbatch.container-2.0.0-M7.jar) and [SPI](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.spi/2.0.0-M7/com.ibm.jbatch.spi-2.0.0-M7.jar).
 
 # Ballots
 
