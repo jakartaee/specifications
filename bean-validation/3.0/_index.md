@@ -16,7 +16,7 @@ Jakarta Bean Validation defines a metadata model and API for JavaBean and method
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.bean-validation:jakarta.bean-validation-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.bean-validation/jakarta.bean-validation-api/3.0.0/jar)
+  * [jakarta.bean-validation:jakarta.bean-validation-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.validation/jakarta.validation-api/3.0.0/jar)
 
 # Compatible Implementations
 
