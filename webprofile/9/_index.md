@@ -10,7 +10,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta Web Profile 9 Specification Document](./jakarta-webprofile-spec-9.pdf) (PDF)
 * [Jakarta Web Profile 9 Specification Document](./jakarta-webprofile-spec-9.html) (HTML)
 * [Jakarta Web Profile 9 Javadoc](./apidocs)
-* [Jakarta Web Profile 9 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9/milestones/jakartaeetck-9.0.0.zip)([sig](),[sha](),[pub]())
+* [Jakarta Web Profile 9 TCK](https://download.eclipse.org/jakartaee/platform/9/eclipse-jakartaeetck-9.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/9.0.0/jar)
   
