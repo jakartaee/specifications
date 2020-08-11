@@ -10,7 +10,7 @@ Jakarta Bean Validation defines a metadata model and API for JavaBean and method
 * [Jakarta Bean Validation 3.0 Specification Document](jakarta-bean-validation-spec-3.0.pdf) (PDF)
 * [Jakarta Bean Validation 3.0 Specification Document](jakarta-bean-validation-spec-3.0.html) (HTML)
 * [Jakarta Bean Validation 3.0 Javadoc](./apidocs)
-* [Jakarta Bean Validation 3.0 TCK](http://download.eclipse.org/ee4j/bean-validation/3.0/beanvalidation-tck-dist-3.0.0.zip)
+* [Jakarta Bean Validation 3.0 TCK](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.0.0.zip)
 ([sig](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.0.0.zip.sig),
 [sha](c975fd229df0c40947a9f0a69b779ec92bebb3d21e05fdc65fccc1d11ef5525b),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
