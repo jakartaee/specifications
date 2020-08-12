@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"jakarta.json.bind"},{"l":"jakarta.json.bind.adapter"},{"l":"jakarta.json.bind.annotation"},{"l":"jakarta.json.bind.config"},{"l":"jakarta.json.bind.serializer"},{"l":"jakarta.json.bind.spi"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"jakarta.json","l":"jakarta.json"},{"m":"jakarta.json","l":"jakarta.json.spi"},{"m":"jakarta.json","l":"jakarta.json.stream"}]
