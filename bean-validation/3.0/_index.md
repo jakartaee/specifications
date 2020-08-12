@@ -2,7 +2,11 @@
 title: "Jakarta Bean Validation 3.0 (Milestone)"
 date: 2020-06-09
 summary: "Release for Jakarta EE 9"
+spec_version: 3.0
+tck_version: 3.0.0-M1
+enableInlineShortcode: true
 ---
+{{< tckdownload.inline >}}{{ http://download.eclipse.org/ee4j/{{substr .Page.Params.project_id 5}}/{{.Page.Params.spec_version}}/beanvalidation-tck-dist-{{.Page.Params.tck_version}}.zip }}{{< /tckdownload.inline >}}
 Jakarta Bean Validation defines a metadata model and API for JavaBean and method validation.
 
 * [Jakarta Bean Validation 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.bean-validation/releases/3.0)
@@ -10,7 +14,8 @@ Jakarta Bean Validation defines a metadata model and API for JavaBean and method
 * [Jakarta Bean Validation 3.0 Specification Document](./bean-validation-specification-3.0.0-M1.pdf) (PDF)
 * [Jakarta Bean Validation 3.0 Specification Document](./bean-validation-specification-3.0.0-M1.html) (HTML)
 * [Jakarta Bean Validation 3.0 Javadoc](./apidocs)
-* [Jakarta Bean Validation 3.0 TCK](http://download.eclipse.org/ee4j/bean-validation/3.0/beanvalidation-tck-dist-3.0.0-M2.zip)([sig](),[sha](),[pub]())
+* [Jakarta Bean Validation 3.0 TCK]({{< tckdownload.inline />}})
+([sig]({{< tckdownload.inline />}}.sig),[sha]({{< tckdownload.inline />}}.sha256),[pub](https://github.com/jakartaee/specification-committee/blob/master/jakartaee-spec-committee.pub))
   * TCK Summary Results [Hibernate Validator 7.0.0.Alpha3](./TCK-summary.html)
 
 * Maven coordinates

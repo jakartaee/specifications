@@ -1,21 +1,24 @@
 ---
-title: "Jakarta Dependency Injection 2.0 (milestone)"
-date: 2020-05-18
+title: "Jakarta Dependency Injection 2.0"
+date: 2020-08-05
 summary: "Release for Jakarta EE 9"
 ---
 
 Jakarta Dependency Injection specifies a means for obtaining objects in such a way as to maximize reusability, testability and maintainability compared to traditional approaches such as constructors, factories, and service locators (e.g., JNDI).
 
-* [Jakarta Dependency Injection 2.0 Release Record]()
+* [Jakarta Dependency Injection 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Dependency Injection 2.0 Specification Document](./injection-spec-2.0-draft.pdf) (PDF)
-* [Jakarta Dependency Injection 2.0 Specification Document](./injection-spec-2.0-draft.html) (HTML)
+* [Jakarta Dependency Injection 2.0 Specification Document](jakarta-injection-spec-2.0.pdf) (PDF)
+* [Jakarta Dependency Injection 2.0 Specification Document](jakarta-injection-spec-2.0.html) (HTML)
 * [Jakarta Dependency Injection 2.0 Javadoc](./apidocs)
-* [Jakarta Dependency Injection 2.0 TCK](https://download.eclipse.org/ee4j/cdi/jakarta.inject-tck-2.0.0.RC4-bin.tar.gz) ([sig](https://download.eclipse.org/ee4j/cdi/jakarta.inject-tck-2.0.0.RC4-bin.tar.gz.asc),[sha](),[pub]())
-  * TCK Summary Results [Weld 4.0.0.Alpha2](./TCK-summary.html)
+* [Jakarta Dependency Injection 2.0 TCK](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.1-bin.zip)
+([sig](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.1-bin.zip.sig),
+[sha](7853d02d372838f8300f5a18cfcc23011c9eb9016cf3980bba9442e4b1f8bfc6),
+[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+  * TCK Summary Results [Weld 4.0.0.Alpha2](https://github.com/jakartaredhat/weld-inject-tck/wiki/Jakarta-Dependency-Injection-2.0-TCK-Results)
 
 * Maven coordinates
-  * [jakarta.inject:jakarta.inject-api:jar:2.0.0-RC4](https://repo.eclipse.org/content/repositories/maven_central/jakarta/inject/jakarta.inject-api/2.0.0-RC4/)
+  * [jakarta.inject:jakarta.inject-api:jar:2.0.0](https://repo1.maven.org/maven2/jakarta/inject/jakarta.inject-api/2.0.0/)
 
 
 # Compatible Implementations
