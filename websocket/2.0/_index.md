@@ -11,7 +11,7 @@ for the WebSocket protocol (RFC6455).
 * [Jakarta WebSocket 2.0 Specification Document](./websocket-spec-2.0.pdf) (PDF)
 * [Jakarta WebSocket 2.0 Specification Document](./websocket-spec-2.0.html) (HTML)
 * [Jakarta WebSocket 2.0 Javadoc](./apidocs)
-* [Jakarta WebSocket 2.0 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/master/nightly/websocket-tck-2.0.0.zip)([sig](),[sha](),[pub]())
+* [Jakarta WebSocket 2.0 TCK](http://download.eclipse.org/ee4j/jakartaee/websocket/2.0/websocket-tck-2.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.websocket:jakarta.websocket-api:2.0.0](https://repo1.maven.org/maven2/jakarta/websocket/jakarta.websocket-api/2.0.0/)
 
