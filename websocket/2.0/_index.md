@@ -13,7 +13,7 @@ for the WebSocket protocol (RFC6455).
 * [Jakarta WebSocket 2.0 Javadoc](./apidocs)
 * [Jakarta WebSocket 2.0 TCK](http://download.eclipse.org/ee4j/jakartaee/websocket/2.0/websocket-tck-2.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.websocket:jakarta.websocket-api:2.0.0](https://repo1.maven.org/maven2/jakarta/websocket/jakarta.websocket-api/2.0.0/)
+  * [jakarta.websocket:jakarta.websocket-api:2.0.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/2.0.0/jar)
 
 
 # Compatible Implementations
