@@ -48,18 +48,18 @@ See the [Jakarta Enterprise Beans 4.0 Release Plan](https://github.com/eclipse-e
 
 The Specification Committee Ballot concluded successfully on 2020-03-04 with the following results.
 
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |   1  |
-| Dan Bandera, Kevin Sutter                      | IBM                 |   1  |
-| Bill Shannon, Ed Bratt                         | Oracle              |   1  |
-| Mark Wareham, Steve Millidge                   | Payara              |   1  |
-| Scott Stark, Mark Little                       | Red Hat             |   1  |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |   1  |
-| Ivar Grimstad                                  | EE4J PMC            |   1  |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |   1  |
-|                                                | Total               |   8  |
+| Representative                                        | Representative for: | Vote |
+|-------------------------------------------------------|---------------------|------|
+| Kenji Kazumura, Michael DeNicola                      | Fujitsu             |   1  |
+| Dan Bandera, Kevin Sutter                             | IBM                 |   1  |
+| Bill Shannon, Ed Bratt                                | Oracle              |   1  |
+| Mark Wareham, Steve Millidge                          | Payara              |   1  |
+| Scott Stark, Mark Little                              | Red Hat             |   1  |
+| David Blevins, Cesar Hernandez, Jean-Louis Monteiro   | Tomitribe           |   1  |
+| Ivar Grimstad                                         | EE4J PMC            |   1  |
+| Alex Theedom                                          | Participant Members |      |
+| Werner Keil                                           | Committer Members   |   1  |
+|                                                       | Total               |   8  |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/mhonarc/lists/jakarta.ee-spec/msg00628.html)
 
@@ -67,17 +67,17 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 
 The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
 
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Representative                                        | Representative for: | Vote |
+|-------------------------------------------------------|---------------------|------|
+| Kenji Kazumura, Michael DeNicola                      | Fujitsu             |      |
+| Dan Bandera, Kevin Sutter                             | IBM                 |      |
+| Bill Shannon, Ed Bratt                                | Oracle              |      |
+| Mark Wareham, Steve Millidge                          | Payara              |      |
+| Scott Stark, Mark Little                              | Red Hat             |      |
+| David Blevins, Cesar Hernandez, Jean-Louis Monteiro   | Tomitribe           |      |
+| Ivar Grimstad                                         | EE4J PMC            |      |
+| Alex Theedom                                          | Participant Members |      |
+| Werner Keil                                           | Committer Members   |      |
+|                                                       | Total               |      |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
