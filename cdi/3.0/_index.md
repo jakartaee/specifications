@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Context Dependency Injection 3.0"
-date: 2020-08-06
+date: 2020-08-26
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -17,7 +17,7 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 [pub](https://github.com/jakartaee/specification-committee/blob/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.enterprise:jakarta.cdi-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/3.0.0/jar)
+  * [jakarta.enterprise:jakarta.cdi-api:jar:3.0.1](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/3.0.1/jar)
 
 * Schemas
   * [XML Schema for the CDI 3.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd)
