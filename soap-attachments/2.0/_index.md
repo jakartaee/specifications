@@ -1,6 +1,6 @@
 ---
 title: "Jakarta SOAP Attachments 2.0"
-date: 2020-08-05
+date: 2020-09-30
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta SOAP with Attachments defines an API enabling developers to produce

@@ -445,7 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jakarta SOAP with Attachments Team, https://projects.eclipse.org/projects/ee4j.jaxws</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jaxws-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jaxws-dev</a></span><br>
 <span id="revnumber"> 2.0,</span>
-<span id="revdate">August 10, 2020</span>
+<span id="revdate">August 27, 2020</span>
 <br><span id="revremark"></span>
 </div>
 <div id="toc" class="toc2">
@@ -492,7 +492,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#package-jakarta-xml-soap">5. Package: jakarta.xml.soap</a>
 <ul class="sectlevel2">
 <li><a href="#description">5.1. Description</a></li>
-<li><a href="#discovery-of-saaj-implementation">5.2. Discovery of SAAJ implementation</a></li>
+<li><a href="#discovery-of-jakarta-soap-attachments-implementation">5.2. Discovery of Jakarta SOAP Attachments implementation</a></li>
 </ul>
 </li>
 <li><a href="#appendix-a-references">Appendix A: References</a></li>
@@ -518,7 +518,7 @@ Version: 2.0
 
 Status: Final Release
 
-Release: August 10, 2020</pre>
+Release: August 27, 2020</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -625,7 +625,7 @@ and the broader developer community were reviewed and incorporated into
 this specification.</p>
 </div>
 <div class="paragraph">
-<p>The SAAJ Specification, version 1.1 was a
+<p>The SOAP with Attachments API for Java Specification, version 1.1 was a
 maintenance release of the Java™ API for XML Messaging (JAXM) 1.0
 specification. JAXM 1.0 was the final deliverable of JSR067 Expert Group
 (EG). The proposed changes specified in the JSR067 changelog and
@@ -634,17 +634,17 @@ accepted on 15 April 2002, have been incorporated into this document.</p>
 <div class="paragraph">
 <p>The proposed changes specified in the second
 JSR067 changelog and accepted on 23 April 2003, have been incorporated
-into this document as SAAJ Specification, version 1.2.</p>
+into this document as SOAP with Attachments API for Java Specification, version 1.2.</p>
 </div>
 <div class="paragraph">
 <p>The proposed changes specified in the third
-JSR067 changelog have been incorporated into this document as SAAJ
+JSR067 changelog have been incorporated into this document as SOAP with Attachments API for Java
 Specification, version 1.3.</p>
 </div>
 <div class="paragraph">
 <p>The proposed changes specified in the fourth
-JSR067 changelog have been incorporated into this document as SAAJ
-Specification, version 1.4.</p>
+JSR067 changelog have been incorporated into this document as
+SOAP with Attachments API for Java Specification, version 1.4.</p>
 </div>
 <div class="paragraph">
 <p>Starting with Jakarta SOAP Attachments Specification, Version 2.0,
@@ -659,6 +659,10 @@ collaborative work within the Java community.</p>
 </div>
 <div class="sect2">
 <h3 id="terminology"><a class="anchor" href="#terminology"></a>1.2. Terminology</h3>
+<div class="paragraph">
+<p>References in this document to SAAJ refer to the Jakarta SOAP with Attachments API
+unless otherwise noted.</p>
+</div>
 <div class="paragraph">
 <p>The keywords MUST, MUST NOT, REQUIRED, SHALL,
 SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL, when they
@@ -729,13 +733,13 @@ assumed.</p>
 and consume messages conforming to the SOAP 1.1, SOAP 1.2 and SOAP Attachments Feature.</p>
 </div>
 <div class="paragraph">
-<p>In the interest of backward compatibility, SAAJ
+<p>In the interest of backward compatibility, Jakarta SOAP Attachments Specification
 continues to offer a client-side communication capability enabling
 developers to communicate in a point-to-point and request-response
 manner with SOAP services bound to HTTP. This communication capability,
-within the context of the SAAJ specification, is optional. However,
-specifications depending on SAAJ are free to require support for the
-SOAP to HTTP binding.</p>
+within the context of the Jakarta SOAP Attachments Specification specification,
+is optional. However, specifications depending on Jakarta SOAP Attachments Specification
+are free to require support for the SOAP to HTTP binding.</p>
 </div>
 </div>
 </div>
@@ -796,7 +800,7 @@ variables with real names or values.</p></td>
 <h2 id="package-overview"><a class="anchor" href="#package-overview"></a>4. Package Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This chapter presents an overview of the SAAJ
+<p>This chapter presents an overview of the Jakarta SOAP Attachments
 which consists of the single package; <code>jakarta.xml.soap</code> . The intent here
 is to provide an overview of the package only, the details of which can
 be found in the following chapter.</p>
@@ -827,7 +831,7 @@ XML message. Attachments may contain data of any type including XML. The
 SOAPPart is always XML.</p>
 </div>
 <div class="paragraph">
-<p>SAAJ allows for creation and consumption of
+<p>Jakarta SOAP Attachments allows for creation and consumption of
 both SOAP 1.1 and SOAP 1.2 messages by introducing the notion of
 Protocol aware MessageFactories. The protocol here refers to a
 particular version of SOAP. For example a SOAP 1.2 aware MessageFactory
@@ -866,12 +870,12 @@ removal of all the content from an <code>AttachmentPart</code> object while leav
 the header information.</p>
 </div>
 <div class="paragraph">
-<p>A SAAJ implementation must support the
+<p>A Jakarta SOAP Attachments implementation must support the
 following MIME types. Additional MIME types may be supported using the
 <code>jakarta.activation.DataHandler</code> class and the Jakarta Activation Framework.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. SAAJ supported MIME types</caption>
+<caption class="title">Table 1. Jakarta SOAP Attachments supported MIME types</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -898,7 +902,7 @@ following MIME types. Additional MIME types may be supported using the
 </tbody>
 </table>
 <div class="paragraph">
-<p>SAAJ provides methods for setting and getting
+<p>Jakarta SOAP Attachments API provides methods for setting and getting
 the Raw content of an Attachment. Methods have also been provided to get
 the content as Base64 encoded character data. Additionally a
 getAttachment method on the SOAPMessage provides for retrieval of an
@@ -1013,7 +1017,7 @@ models the contents of the SOAP header of a SOAP envelope.</p>
 <div class="paragraph">
 <p>The <code>SOAPConnection</code> object represents a
 simple client-side view of a request-response style of SOAP messaging. A
-SAAJ client may choose to establish a synchronous point-to-point
+Jakarta SOAP Attachments client may choose to establish a synchronous point-to-point
 connection to a SOAP service using the <code>createConnection</code> method of the
 <code>SOAPConnectionFactory</code> object. Subsequently, a <code>SOAPMessage</code> may be
 sent to a remote party using the call method on the <code>SOAPConnection</code>
@@ -1021,7 +1025,7 @@ object. Note that the call method will block until a <code>SOAPMessage</code>
 object is received.</p>
 </div>
 <div class="paragraph">
-<p>A SAAJ based application may choose to use the
+<p>A Jakarta SOAP Attachments Specification based application may choose to use the
 call method to implement the client side of a simple point-to-point
 synchronous one-way message exchange scenario. In such a case, it is the
 application’s responsibility to ignore the <code>SOAPMessage</code> object returned
@@ -1031,7 +1035,7 @@ a response to a request using the same connection when the
 <code>SOAPConnection.call</code> method was used to send the request.</p>
 </div>
 <div class="paragraph">
-<p>SAAJ also provides support for the SOAP 1.2
+<p>Jakarta SOAP Attachments Specification also provides support for the SOAP 1.2
 Response Message Exchange Pattern
 (<a href="http://www.w3.org/TR/2003/REC-soap12-part2-20030624/#soapresmep" class="bare">http://www.w3.org/TR/2003/REC-soap12-part2-20030624/#soapresmep</a>) via
 the <code>SOAPConnection.get</code> method. This method can be used for pure
@@ -1087,10 +1091,10 @@ and <code>Detail</code> objects.</p>
 <h3 id="saajmetafactory"><a class="anchor" href="#saajmetafactory"></a>4.14. SAAJMetaFactory</h3>
 <div class="paragraph">
 <p>This Factory is the access point for the
-implementation classes of all the other factories defined in the SAAJ
-API. All of the newInstance methods defined on factories in SAAJ defer
-to instances of this class to do the actual object creation. The
-implementations of newInstance() methods (in SOAPFactory and
+implementation classes of all the other factories defined in the Jakarta SOAP
+Attachments API. All of the newInstance methods defined on factories in Jakarta
+SOAP Attachments API defer to instances of this class to do the actual object
+creation. The implementations of newInstance() methods (in SOAPFactory and
 MessageFactory) that existed in SAAJ 1.2 have been updated to also
 delegate to the SAAJMetaFactory when the SAAJ 1.2 defined lookup fails
 to locate the Factory implementation class name.</p>
@@ -1105,9 +1109,9 @@ interface. There are no public methods on this class.</p>
 <div class="paragraph">
 <p>This concrete class acts as a holder for the
 results of a JAXP transformation or a Jakarta XML Binding marshalling,
-in the form of a SAAJ tree. This class will make it easier
+in the form of a Jakarta SOAP Attachments tree. This class will make it easier
 for the end user when dealing with transformations in situations
-where the result is expected to be a valid SAAJ tree.
+where the result is expected to be a valid Jakarta SOAP Attachments tree.
 The results can be accessed by using the getResult method.</p>
 </div>
 </div>
@@ -1121,7 +1125,7 @@ The results can be accessed by using the getResult method.</p>
 <div class="paragraph">
 <p>Provides the API for creating and building SOAP
 messages. This package is defined in the Jakarta SOAP
-with Attachments (SAAJ) specification.</p>
+with Attachments Specification.</p>
 </div>
 <div class="paragraph">
 <p>The API in the <code>jakarta.xml.soap</code> package allows
@@ -1168,37 +1172,39 @@ means that the <code>SOAPPart</code> of a <code>SOAPMessage</code> is also a DOM
 <code>Document</code>, and can be manipulated as such by applications, tools and
 libraries that use DOM (see <a href="http://www.w3.org/DOM/" class="bare">http://www.w3.org/DOM/</a> for more
 information). It is important to note that, while it is possible to use
-DOM APIs to add ordinary DOM nodes to a SAAJ tree, the SAAJ APIs are
-still required to return SAAJ types when examining or manipulating the
-tree. In order to accomplish this the SAAJ APIs (specifically
+DOM APIs to add ordinary DOM nodes to a Jakarta SOAP Attachments tree,
+the Jakarta SOAP Attachments APIs are
+still required to return Jakarta SOAP Attachments types when examining or manipulating the
+tree. In order to accomplish this the Jakarta SOAP Attachments APIs (specifically
 <code>SOAPElement.getChildElements()</code>) are allowed to silently replace objects that are
-incorrectly typed relative to SAAJ requirements with equivalent objects
-of the required type. These replacements must never cause the logical
+incorrectly typed relative to Jakarta SOAP Attachments Specification requirements
+with equivalent objects of the required type.
+These replacements must never cause the logical
 structure of the tree to change, so from the perspective of the DOM APIs
 the tree will remain unchanged. However, the physical composition of the
 tree will have changed so that references to the nodes that were
 replaced will refer to nodes that are no longer a part of the tree. The
-SAAJ APIs are not allowed to make these replacements if they are not
+Jakarta SOAP Attachments APIs are not allowed to make these replacements if they are not
 required so the replacement objects will never subsequently be silently
-replaced by future calls to the SAAJ API.</p>
+replaced by future calls to the Jakarta SOAP Attachments API.</p>
 </div>
 <div class="paragraph">
 <p>What this means in practical terms is that an
-application that starts to use SAAJ APIs on a tree after manipulating it
+application that starts to use Jakarta SOAP Attachments APIs on a tree after manipulating it
 using DOM APIs must assume that the tree has been translated into an all
-SAAJ tree and that any references to objects within the tree that were
-obtained using DOM APIs are no longer valid. Switching from SAAJ APIs to
+Jakarta SOAP Attachments tree and that any references to objects within the tree that were
+obtained using DOM APIs are no longer valid. Switching from Jakarta SOAP Attachments APIs to
 DOM APIs is not allowed to cause invalid references and neither is using
-SAAJ APIs exclusively. It is only switching from using DOM APIs on a
-particular SAAJ tree to using SAAJ APIs that causes the risk of invalid
-references.</p>
+Jakarta SOAP Attachments APIs exclusively. It is only switching from using DOM APIs on a
+particular Jakarta SOAP Attachments tree to using Jakarta SOAP Attachments APIs
+that causes the risk of invalid references.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="discovery-of-saaj-implementation"><a class="anchor" href="#discovery-of-saaj-implementation"></a>5.2. Discovery of SAAJ implementation</h3>
+<h3 id="discovery-of-jakarta-soap-attachments-implementation"><a class="anchor" href="#discovery-of-jakarta-soap-attachments-implementation"></a>5.2. Discovery of Jakarta SOAP Attachments implementation</h3>
 <div class="paragraph">
 <p>There are several factories defined in the
-SAAJ API to discover and load specific implementation:</p>
+Jakarta SOAP Attachments API to discover and load specific implementation:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1227,7 +1233,7 @@ uses a common lookup procedure to determine the implementation class:</p>
 name as the factory class is set (e.g. <code>jakarta.xml.soap.SOAPFactory</code>). If
 such property exists then its value is assumed to be the fully qualified
 name of the implementation class. This phase of the look up enables
-per-JVM override of the SAAJ implementation.</p>
+per-JVM override of the Jakarta SOAP Attachments implementation.</p>
 </li>
 <li>
 <p>Use the configuration file "jaxm.properties".
@@ -1501,14 +1507,14 @@ made to the JavaDocs for the API.</p>
 </div>
 <div class="paragraph">
 <p>This specification has been derived from the
-<code>jakarta.XML.SOAP</code> package originally defined in the JAXM 1.0
+<code>javax.xml.soap</code> package originally defined in the JAXM 1.0
 specification. The "accepted changes," as specified in JSR067 changelog,
 have been incorporated in this document. The key changes are as follows:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>jakarta.xml.soap</code> package was moved from the
+<p><code>javax.xml.soap</code> package was moved from the
 JAXM specification to this document. In the interest of consistency and
 for simplifying synchronization of specifications, this document has
 been designated as version 1.1 of the SAAJ specification. There are no
