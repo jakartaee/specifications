@@ -5,7 +5,7 @@ summary: "Release for Jakarta EE 9"
 ---
 Jakarta JSON Binding defines a binding framework for converting Java(R) objects to and from JSON documents.
 
-* [Jakarta JSON Binding 2.0 Release Record]()
+* [Jakarta JSON Binding 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonb/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta JSON Binding 2.0 Specification Document](./jakarta-jsonb-spec-2.0.pdf) (PDF)
 * [Jakarta JSON Binding 2.0 Specification Document](./jakarta-jsonb-spec-2.0.html) (HTML)
