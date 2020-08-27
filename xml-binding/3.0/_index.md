@@ -1,6 +1,6 @@
 ---
 title: "Jakarta XML Binding 3.0"
-date: 2020-09-05
+date: 2020-10-15
 summary: "Release for Jakarta EE 9"
 ---
 The Jakarta XML Binding provides an API and tools that automate the mapping
@@ -8,8 +8,8 @@ between XML documents and Java objects.
 
 * [Jakarta XML Binding 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxb/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta XML Binding 3.0 Specification Document](./xml-binding-spec-3.0.pdf) (PDF)
-* [Jakarta XML Binding 3.0 Specification Document](./xml-binding-spec-3.0.html) (HTML)
+* [Jakarta XML Binding 3.0 Specification Document](./jakarta-xml-binding-spec-3.0.pdf) (PDF)
+* [Jakarta XML Binding 3.0 Specification Document](./jakarta-xml-binding-spec-3.0.html) (HTML)
 * [Jakarta XML Binding 3.0 Javadoc](./apidocs)
 * [Jakarta XML Binding 3.0 XML Schema](https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd)
 * [Jakarta XML Binding 3.0 TCK](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
