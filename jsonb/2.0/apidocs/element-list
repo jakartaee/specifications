@@ -1,4 +1,6 @@
-module:jakarta.json
-jakarta.json
-jakarta.json.spi
-jakarta.json.stream
+jakarta.json.bind
+jakarta.json.bind.adapter
+jakarta.json.bind.annotation
+jakarta.json.bind.config
+jakarta.json.bind.serializer
+jakarta.json.bind.spi
