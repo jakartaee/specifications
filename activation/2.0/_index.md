@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Activation 2.0"
-date: 2020-08-15
+date: 2020-09-30
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Activation defines a set of standard services to: determine the
