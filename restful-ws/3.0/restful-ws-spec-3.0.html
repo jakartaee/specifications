@@ -443,17 +443,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Contributors to Jakarta RESTful Web Services (https://github.com/eclipse-ee4j/jaxrs-api/graphs/contributors)</span><br/>
 <span id="email" class="email"><a href="mailto:jaxrs-dev@eclipse.org">jaxrs-dev@eclipse.org</a></span><br/>
-<span id="revnumber"> 3.0.0-M1,</span>
-<span id="revdate">May 26, 2020</span>
-<br/><span id="revremark">DRAFT</span>
+<span id="revnumber"> 3.0.0,</span>
+<span id="revdate">August 27, 2020</span>
+<br/><span id="revremark"></span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#copyright">Copyright</a>
 <ul class="sectlevel2">
-<li><a href="#copyright">Copyright</a></li>
 <li><a href="#eclipse-foundation-specification-license">Eclipse Foundation Specification License</a>
 <ul class="sectlevel3">
 <li><a href="#disclaimers">Disclaimers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#introduction">1. Introduction</a>
@@ -463,7 +466,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#non_goals">1.3. Non-Goals</a></li>
 <li><a href="#conventions">1.4. Conventions</a></li>
 <li><a href="#terminology">1.5. Terminology</a></li>
-<li><a href="#expert_group">1.6. Expert Group Members</a></li>
+<li><a href="#project_team">1.6. Project Team Members</a></li>
 <li><a href="#acks">1.7. Acknowledgements</a></li>
 </ul>
 </li>
@@ -653,7 +656,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#bv_support">11.2.5. Bean Validation</a></li>
 <li><a href="#jsonp">11.2.6. Java API for JSON Processing</a></li>
 <li><a href="#jsonb">11.2.7. Java API for JSON Binding</a></li>
-<li><a href="#additional_reqs">11.2.8. Additional Requirements</a></li>
+<li><a href="#jaxb">11.2.8. Jakarta XML Binding</a></li>
+<li><a href="#additional_reqs">11.2.9. Additional Requirements</a></li>
 </ul>
 </li>
 <li><a href="#other">11.3. Other</a></li>
@@ -669,7 +673,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#processing_pipeline">Appendix C: Processing Pipeline</a></li>
 <li><a href="#change-log">Appendix D: Change Log</a>
 <ul class="sectlevel2">
-<li><a href="#changes-since-2.2-snapshot">D.1. Changes Since 2.2-SNAPSHOT</a></li>
+<li><a href="#changes-since-2.1-release">D.1. Changes Since 2.1 Release</a></li>
 <li><a href="#changes-since-2.1-public-review">D.2. Changes Since 2.1 Public Review</a></li>
 <li><a href="#changes-since-2.1-early-draft">D.3. Changes Since 2.1 Early Draft</a></li>
 <li><a href="#changes-since-2.0-final-release">D.4. Changes Since 2.0 Final Release</a></li>
@@ -695,20 +699,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre>Specification: Jakarta RESTful Web Services
 
-Version: 3.0.0-M1
+Version: 3.0.0
 
-Status: DRAFT
+Status: Final Release
 
-Release: May 26, 2020</pre>
+Release: August 27, 2020</pre>
 </div>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="copyright"><a class="anchor" href="#copyright"></a>Copyright</h3>
+<div class="sect1">
+<h2 id="copyright"><a class="anchor" href="#copyright"></a>Copyright</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Copyright (c) 2019 Eclipse Foundation.</p>
-</div>
+<p>Copyright (c) 2018, 2020 Eclipse Foundation.
+<a href="https://www.eclipse.org/legal/efsl.php" class="bare">https://www.eclipse.org/legal/efsl.php</a></p>
 </div>
 <div class="sect2">
 <h3 id="eclipse-foundation-specification-license"><a class="anchor" href="#eclipse-foundation-specification-license"></a>Eclipse Foundation Specification License</h3>
@@ -759,7 +764,7 @@ specification is expressly prohibited.</p>
 <p>The notice is:</p>
 </div>
 <div class="paragraph">
-<p>"Copyright (c) 2018 Eclipse Foundation. This software or
+<p>"Copyright (c) [$date-of-document] Eclipse Foundation. This software or
 document includes material copied from or derived from [title and URI
 of the Eclipse Foundation specification document]."</p>
 </div>
@@ -790,6 +795,8 @@ remain with copyright holders.</p>
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="introduction"><a class="anchor" href="#introduction"></a>1. Introduction</h2>
 <div class="sectionbody">
@@ -807,9 +814,6 @@ RESTful Web services, see:</p>
 Architectures<a href="#bib1">[1]</a></p>
 </li>
 <li>
-<p>The REST Wiki<a href="#bib2">[2]</a></p>
-</li>
-<li>
 <p>Representational State Transfer on Wikipedia<a href="#bib3">[3]</a></p>
 </li>
 </ul>
@@ -817,30 +821,30 @@ Architectures<a href="#bib1">[1]</a></p>
 <div class="sect2">
 <h3 id="status"><a class="anchor" href="#status"></a>1.1. Status</h3>
 <div class="paragraph">
-<p>This is the final release of version 2.1. The issue tracking system for
+<p>This is the final release of version 3.0. The issue tracking system for
 this release can be found at:</p>
 </div>
 <div class="paragraph">
-<p><a href="https://github.com/jax-rs/api/issues" class="bare">https://github.com/jax-rs/api/issues</a></p>
+<p><a href="https://github.com/eclipse-ee4j/jaxrs-api/issues" class="bare">https://github.com/eclipse-ee4j/jaxrs-api/issues</a></p>
 </div>
 <div class="paragraph">
 <p>The corresponding Javadocs can be found online at:</p>
 </div>
 <div class="paragraph">
-<p><a href="https://jax-rs.github.io/apidocs/2.1" class="bare">https://jax-rs.github.io/apidocs/2.1</a></p>
+<p><a href="https://jakarta.ee/specifications/restful-ws/3.0/apidocs/" class="bare">https://jakarta.ee/specifications/restful-ws/3.0/apidocs/</a></p>
 </div>
 <div class="paragraph">
-<p>The reference implementation can be obtained from:</p>
+<p>A compatible implementation can be obtained from:</p>
 </div>
 <div class="paragraph">
-<p><a href="https://jersey.github.io" class="bare">https://jersey.github.io</a></p>
+<p><a href="https://eclipse-ee4j.github.io/jersey/" class="bare">https://eclipse-ee4j.github.io/jersey/</a></p>
 </div>
 <div class="paragraph">
-<p>The expert group seeks feedback from the community on any aspect of this
+<p>The project team seeks feedback from the community on any aspect of this
 specification, please send comments to:</p>
 </div>
 <div class="paragraph">
-<p><a href="mailto:jaxrs-spec@javaee.groups.io">jaxrs-spec@javaee.groups.io</a></p>
+<p><a href="mailto:jaxrs-dev@eclipse.org">jaxrs-dev@eclipse.org</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -1025,12 +1029,33 @@ title, etc.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="expert_group"><a class="anchor" href="#expert_group"></a>1.6. Expert Group Members</h3>
+<h3 id="project_team"><a class="anchor" href="#project_team"></a>1.6. Project Team Members</h3>
 <div class="paragraph">
-<p>This specification is being developed as part of JSR 370 under the Java
-Community Process. It is the result of the collaborative work of the
-members of the JSR 370 Expert Group. The following are the present
-expert group members:</p>
+<p>This specification is being developed as part of Jakarta RESTful Web Services project under the
+Jakarta EE Specification Process. It is the result of the collaborative work
+of the project team and various contributors.</p>
+</div>
+<div class="paragraph">
+<p>The following are the current committers of the Jakarta RESTful Web Services specification project:</p>
+</div>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;Sebastian Daschner (IBM)</p>
+</div>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;Christian Kaltepoth (individual)</p>
+</div>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;Markus Karg (individual)</p>
+</div>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;Andy McCright (IBM)</p>
+</div>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;Santiago Pericas-Geertsen (Oracle)</p>
+</div>
+<div class="paragraph">
+<p>JAX-RS 2.1 has been developed as part of JSR 370 under the Java Community
+Process. The following are former group members of the JSR 370 Expert Group:</p>
 </div>
 <div class="paragraph">
 <p>&#8201;&#8212;&#8201;Sergey Beryozkin (Talend SA)</p>
@@ -1179,7 +1204,7 @@ Expert Group:</p>
 <div class="sect2">
 <h3 id="acks"><a class="anchor" href="#acks"></a>1.7. Acknowledgements</h3>
 <div class="paragraph">
-<p>During the course of this JSR we received great contributions and
+<p>During the course of this specification we received great contributions and
 suggestions from many individuals. Special thanks to Marek Potociar and
 Michal Gajdos. Also Gunnar Morling, Ondrej Mihalyi, Arjan Tijms,
 Guillermo Gonzales de Aguero, Christian Kaltepoth and many, many others.
@@ -2350,7 +2375,7 @@ same URI path template (modulo variable names).</p>
 <li>
 <p>Remove members for which the final regular expression capturing group
 (henceforth simply referred to as a capturing group) value is neither
-empty nor / and the class \(Z\) has no sub-resource methods or
+empty nor '/' and the class \(Z\) has no sub-resource methods or
 locators.</p>
 </li>
 </ul>
@@ -2366,7 +2391,7 @@ the algorithm terminates and an implementation MUST generate a
 characters<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> in each member as the primary key
 (descending order), the number of capturing groups as a secondary key
 (descending order) and the number of capturing groups with non-default
-regular expressions (i.e. not ([ /]+?)) as the tertiary key (descending
+regular expressions (i.e. not '([ˆ/]+?)') as the tertiary key (descending
 order).</p>
 </li>
 <li>
@@ -2399,9 +2424,9 @@ request:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha">
 <li>
-<p>[check_null] If \(U\) is null or /, set
-\(\[M = \{\mbox{resource methods of all classes in $C'$ (excluding sub-resource methods)}\}]\)
-and go to step [find_method] if \(M \neq \{\}\)</p>
+<p><a id="check_null"></a> If \(U\) is null or '/', set<br/>
+\(M = \{\mbox{resource methods of all classes in $C'$ (excluding sub-resource methods)}\}\)<br/>
+and go to <a href="#find_method">step 3</a> if \(M \neq \{\}\)</p>
 </li>
 <li>
 <p>Set \(E=\{\}\).</p>
@@ -2413,7 +2438,7 @@ as follows:</p>
 <div class="olist lowerroman">
 <ol class="lowerroman">
 <li>
-<p>For each sub-resource method \(D\), add
+<p><a id="t_method_items"></a>For each sub-resource method \(D\), add
 \(R(T_D)\) where \(T_D\) is the URI path template of
 the sub-resource method.</p>
 </li>
@@ -2434,9 +2459,9 @@ the sub-resource locator.</p>
 <p>Remove members that do not match \(U\).</p>
 </li>
 <li>
-<p>Remove members derived from \(T_D\) (those added in step
-[t_method_items]) for which the final capturing group value is neither
-empty nor /.</p>
+<p>Remove members derived from \(T_D\) (those added in
+<a href="#t_method_items">step 3(c)i</a>) for which the final capturing group value is neither
+empty nor '/'.</p>
 </li>
 </ul>
 </div>
@@ -2450,7 +2475,7 @@ status) and no entity.</p>
 <p>Sort \(E\) using the number of literal characters in each
 member as the primary key (descending order), the number of capturing
 groups as a secondary key (descending order), the number of capturing
-groups with non-default regular expressions (i.e. not ([ /]+?)) as the
+groups with non-default regular expressions (i.e. not ([^/]+?)) as the
 tertiary key (descending order), and the source of each member as
 quaternary key sorting those derived from sub-resource methods ahead of
 those derived from sub-resource locators.</p>
@@ -2462,7 +2487,7 @@ those derived from sub-resource locators.</p>
 <li>
 <p>Set \(M\) as follows,
 \(M = \{\mbox{subresource methods of all classes in $C'$ (excluding sub-resource locators)}\}]\)
-and go to step 3 if \(M \neq \{\}\).</p>
+and go to <a href="#find_method">step 3</a> if \(M \neq \{\}\).</p>
 </li>
 <li>
 <p>Let \(L\) be a sub-resource locator such that
@@ -2474,7 +2499,7 @@ capturing group of \(R(T_L)\) when matched against
 containing only the class that defines \(L\).</p>
 </li>
 <li>
-<p>Go to step 2a.</p>
+<p>Go to <a href="#check_null">step 2a</a>.</p>
 </li>
 </ol>
 </div>
@@ -2483,7 +2508,7 @@ containing only the class that defines \(L\).</p>
 </div>
 </li>
 <li>
-<p>Identify the method that will handle the request:</p>
+<p><a id="find_method"></a>Identify the method that will handle the request:</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Input</dt>
@@ -2504,11 +2529,11 @@ not meet the following criteria:</p>
 <p>The request method is supported. If no methods support the request
 method an implementation MUST generate a <code>NotAllowedException</code> (405
 status) and no entity. Note the additional support for <code>HEAD</code> and
-<code>OPTIONS</code> described in Section [head_and_options].</p>
+<code>OPTIONS</code> described in Section <a href="#head_and_options">HEAD and OPTIONS</a>.</p>
 </li>
 <li>
 <p>The media type of the request entity body (if any) is a supported
-input data format (see Section [declaring_method_capabilities]). If no
+input data format (see Section <a href="#declaring_method_capabilities">Declaring Media Type Capabilities</a>). If no
 methods support the media type of the request entity body an
 implementation MUST generate a <code>NotSupportedException</code> (415 status) and
 no entity.</p>
@@ -2516,7 +2541,7 @@ no entity.</p>
 <li>
 <p>At least one of the acceptable response entity body media types is a
 supported output data format (see Section
-[declaring_method_capabilities]). If no methods support one of the
+<a href="#declaring_method_capabilities">Declaring Media Type Capabilities</a>). If no methods support one of the
 acceptable response entity body media types an implementation MUST
 generate a <code>NotAcceptableException</code> (406 status) and no entity.</p>
 </li>
@@ -2541,25 +2566,41 @@ assumed to be \(1.0\) if absent.</p>
 \(p_1\) and a server media type \(p_2\) as the
 function that returns the <em>most</em> specific combined type with a distance
 factor if \(p_1\) and \(p_2\) are compatible and
-\({\perp}\) otherwise. For example:
-* \(S(\mbox{text/html;q=1}, \mbox{text/html;qs=1}) = \mbox{text/html;q=1;qs=1;d=0}\),
-* \(S(\mbox{text/*;q=0.5}, \mbox{text/html;qs=0.8}) = \mbox{text/html;q=0.5;qs=0.8;d=1}\),
-* \(S(\mbox{*/*;q=0.2}, \mbox{text/*;qs=0.9}) = \mbox{text/*;q=0.2;qs=0.9;d=1}\),
-* \(S(\mbox{text/*;q=0.4}, \mbox{application/*;qs=0.3}) = {\perp}\).</p>
+\({\perp}\) otherwise. For example:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>\(S(\mbox{text/html;q=1}, \mbox{text/html;qs=1}) = \mbox{text/html;q=1;qs=1;d=0}\),</p>
+</li>
+<li>
+<p>\(S(\mbox{text/*;q=0.5}, \mbox{text/html;qs=0.8}) = \mbox{text/html;q=0.5;qs=0.8;d=1}\),</p>
+</li>
+<li>
+<p>\(S(\mbox{*/*;q=0.2}, \mbox{text/*;qs=0.9}) = \mbox{text/*;q=0.2;qs=0.9;d=1}\),</p>
+</li>
+<li>
+<p>\(S(\mbox{text/*;q=0.4}, \mbox{application/*;qs=0.3}) = {\perp}\).</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
-<p>+
-where the \(d\) factor corresponds to the number of wildcards
+<p>where the \(d\) factor corresponds to the number of wildcards
 matched with a concrete type or subtype. Note that q and qs are not
 matched, but simply combined in the resulting media type. A total
 ordering can be defined over combined media types as follows.</p>
 </div>
 <div class="paragraph">
-<p>+
-We write
+<p>We write
 \(\mbox{$n_1$/$m_1$;q=$v_1$;qs=$v_1'$;d=$v_1''$} \ge \mbox{$n_2$/$m_2$;q=$v_2$;qs=$v_2'$;d=$v_2''$}\)
 if one of these ordered conditions holds:</p>
 </div>
+<div class="openblock">
+<div class="content">
 <div class="olist lowerroman">
 <ol class="lowerroman">
 <li>
@@ -2579,6 +2620,11 @@ partial order \(\succ\) is defined as
 <p>\(\mbox{$n_2$/$m_2$} \nsucc \mbox{$n_1$/$m_1$}\) and
 \(v_1 = v_2\) and \(v_1' = v_2'\) and
 \(v_1'' \le v_2''\).</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Note that \(\ge\) is a total order even though
 \(\succ\) is a partial order. For example, the following holds
@@ -2592,28 +2638,36 @@ type \(p\).</p>
 </div>
 <div class="paragraph">
 <p>Given these definitions, we can now sort \(M\) in descending
-order based on \(\ge\) as follows<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>:
-* Let \(t\) be the request content type and \(C_M\)
+order based on \(\ge\) as follows<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Let \(t\) be the request content type and \(C_M\)
 a resource method’s <code>@Consumes</code> set of server media types, we use the
 media type
 \(\max_\ge \{ S(t,c)  \, | \, (t, c) \in \{t\} \times C_M\}\)
-as primary key.
-* Let \(A\) be the request accept header set of client media
+as primary key.</p>
+</li>
+<li>
+<p>Let \(A\) be the request accept header set of client media
 types and \(P_M\) a resource method’s <code>@Produces</code> set of
 server media types, we use the media type
 \(\max_\ge \{ S(a,p) \, | \, (a,p) \in A \times P_M\}\) as
 secondary key. If there is more than one maximum element ,
 implementations SHOULD report a warning and select one of these types in
 an implementation dependent manner.</p>
-</div>
 </li>
-</ol>
+</ul>
+</div>
+</div>
 </div>
 </li>
 <li>
 <p>Let \(D\) be the first resource method
-in the set \(M\)<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> ensures the
-set contains at least one member.] and \(O\) an instance of
+in the set \(M\)<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> and \(O\) an instance of
 the class that defines \(D\). If after sorting, there is more
 than one maximum element in \(M\), implementations SHOULD
 report a warning and select one of these methods in an implementation
@@ -2664,8 +2718,7 @@ algorithm are as follows:</p>
 <dd>
 <p>Identify a set of candidate root resource classes matching the
 request. Let \(R(\mbox{widgets}) = \mbox{widgets(/.*)?}\)
-and \(R(\mbox{widget}) = \mbox{widget(/.*)?}\),
-+</p>
+and \(R(\mbox{widget}) = \mbox{widget(/.*)?}\),</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Input</dt>
@@ -2684,8 +2737,7 @@ and \(R(\mbox{widget}) = \mbox{widget(/.*)?}\),
 <dt class="hdlist1">Step 2</dt>
 <dd>
 <p>Obtain a set of candidate resource methods for the request. Let
-\($R(\{\mbox{id}\}) = \mbox{([\^{ }/\)+?)(/.*)?}$],
-+</p>
+\(R(\{\mbox{id}\}) = \mbox{([ˆ/]+?)(/.*)?}\),</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Input</dt>
@@ -2702,8 +2754,7 @@ and \(R(\mbox{widget}) = \mbox{widget(/.*)?}\),
 </dd>
 <dt class="hdlist1">Step 3</dt>
 <dd>
-<p>Identify the method that will handle the request,
-+</p>
+<p>Identify the method that will handle the request,</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Input</dt>
@@ -2747,14 +2798,14 @@ ignoring URI template variable specifications.</p>
 </li>
 <li>
 <p>Replace each URI template variable with a capturing group containing
-the specified regular expression or ([ /]+?) if no regular expression is
+the specified regular expression or '([ˆ/]+?)' if no regular expression is
 specified<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup>.</p>
 </li>
 <li>
 <p>If the resulting string ends with / then remove the final character.</p>
 </li>
 <li>
-<p>Append (/.*)? to the result.</p>
+<p>Append '(/.*)?' to the result.</p>
 </li>
 </ol>
 </div>
@@ -2806,11 +2857,11 @@ entity object.</p>
 </li>
 <li>
 <p>If \(P = \{\}\), set
-\(P = \{\mbox{\lq*/*\rq}\}\)</p>
+\(P = \{\mbox{'*/*'}\}\)</p>
 </li>
 <li>
 <p>Obtain the acceptable media types \(A\). If
-\(A = \{\}\), set \(A = \{\mbox{\lq*/*\rq}\}\)</p>
+\(A = \{\}\), set \(A = \{\mbox{'*/*'}\}\)</p>
 </li>
 <li>
 <p>Set \(M=\{\}\). For each member of \(A, a\):</p>
@@ -2855,8 +2906,8 @@ secondary key of q-value and a tertiary key of qs-value.</p>
 </div>
 </li>
 <li>
-<p>If \(M\) contains /<strong> or application/</strong>, set
-\(M_{\mbox{selected}} = \mbox{\lq application/octet-stream\rq}\),
+<p>If \(M\) contains '*/*' or 'application/*', set
+\(M_{\mbox{selected}} = \mbox{'application/octet-stream'}\),
 finish.</p>
 </li>
 <li>
@@ -2868,7 +2919,7 @@ Finish.</p>
 </div>
 <div class="paragraph">
 <p>Note that the above renders a response with a default media type of
-application/octet-stream when a concrete type cannot be determined. It
+'application/octet-stream' when a concrete type cannot be determined. It
 is RECOMMENDED that <code>MessageBodyWriter</code> implementations specify at least
 one concrete type via <code>@Produces</code>.</p>
 </div>
@@ -3105,7 +3156,7 @@ exceptions thrown in <code>MessageBodyWriter.write</code>.</p>
 <p>Message body readers and writers MAY restrict the media types they
 support using the <code>@Consumes</code> and <code>@Produces</code> annotations respectively.
 The absence of these annotations is equivalent to their inclusion with
-media type (/*), i.e. absence implies that any media type is supported.
+media type ("*/*"), i.e. absence implies that any media type is supported.
 An implementation MUST NOT use an entity provider for a media type that
 is not supported by that provider.</p>
 </div>
@@ -3113,8 +3164,8 @@ is not supported by that provider.</p>
 <p>When choosing an entity provider an implementation sorts the available
 providers according to the media types they declare support for. Sorting
 of media types follows the general rule: x/y \(&lt;\) x/*
-\(&lt;\) <strong>/</strong>, i.e. a provider that explicitly lists a media types
-is sorted before a provider that lists <strong>/</strong>.</p>
+\(&lt;\) */*, i.e. a provider that explicitly lists a media types
+is sorted before a provider that lists */*.</p>
 </div>
 </div>
 <div class="sect3">
@@ -3128,37 +3179,32 @@ type combinations:</p>
 <dl>
 <dt class="hdlist1"><code>byte[]</code></dt>
 <dd>
-<p>All media types (<code>/*</code>).</p>
+<p>All media types (<code>*/*</code>).</p>
 </dd>
 <dt class="hdlist1"><code>java.lang.String</code></dt>
 <dd>
-<p>All media types (<code>/*</code>).</p>
+<p>All media types (<code>*/*</code>).</p>
 </dd>
 <dt class="hdlist1"><code>java.io.InputStream</code></dt>
 <dd>
-<p>All media types (<code>/*</code>).</p>
+<p>All media types (<code>*/*</code>).</p>
 </dd>
 <dt class="hdlist1"><code>java.io.Reader</code></dt>
 <dd>
-<p>All media types (<code>/*</code>).</p>
+<p>All media types (<code>*/*</code>).</p>
 </dd>
 <dt class="hdlist1"><code>java.io.File</code></dt>
 <dd>
-<p>All media types (<code>/*</code>).</p>
+<p>All media types (<code>*/*</code>).</p>
 </dd>
 <dt class="hdlist1"><code>jakarta.activation.DataSource</code></dt>
 <dd>
-<p>All media types (<code>/*</code>).</p>
+<p>All media types (<code>*/*</code>).</p>
 </dd>
 <dt class="hdlist1"><code>jakarta.xml.transform.Source</code></dt>
 <dd>
 <p>XML types (<code>text/xml</code>, <code>application/xml</code> and media types of the form
 <code>application/*+xml</code>).</p>
-</dd>
-<dt class="hdlist1"><code>jakarta.xml.bind.JAXBElement</code> and application-supplied JAXB classes</dt>
-<dd>
-<p>XML types (<code>text/xml</code> and <code>application/xml</code> and media types of the
-form <code>application/*+xml</code>).</p>
 </dd>
 <dt class="hdlist1"><code>MultivaluedMap&lt;String,String&gt;</code></dt>
 <dd>
@@ -3166,7 +3212,7 @@ form <code>application/*+xml</code>).</p>
 </dd>
 <dt class="hdlist1"><code>StreamingOutput</code></dt>
 <dd>
-<p>All media types (<code>/*</code>), <code>MessageBodyWriter</code> only.</p>
+<p>All media types (<code>*/*</code>), <code>MessageBodyWriter</code> only.</p>
 </dd>
 <dt class="hdlist1"><code>java.lang.Boolean</code>, <code>java.lang.Character</code>, <code>java.lang.Number</code></dt>
 <dd>
@@ -3177,8 +3223,8 @@ boxing/unboxing conversion.</p>
 </div>
 <div class="paragraph">
 <p>Depending on the environment, the list of standard entity providers MUST
-also include those for JSON. For more information about these providers
-see <a href="#jsonp">Java API for JSON Processing</a> and <a href="#jsonb">Java API for JSON Binding</a>.</p>
+also include those for JSON or XML. For more information about these providers
+see <a href="#jsonp">Java API for JSON Processing</a>, <a href="#jsonb">Java API for JSON Binding</a> and <a href="#jaxb">Jakarta XML Binding</a>.</p>
 </div>
 <div class="paragraph">
 <p>When reading zero-length message entities all pre-packaged
@@ -3258,20 +3304,24 @@ JAXB context provider may wish to only provide the context for certain
 JAXB classes. Context providers MAY also manage multiple contexts of the
 same type keyed to different Java types.</p>
 </div>
+<div class="paragraph">
+<p>Note that a context provider for JAXB is only applicable in products that
+support <a href="#jaxb">Jakarta XML Binding</a>.</p>
+</div>
 <div class="sect3">
 <h4 id="context_media_type"><a class="anchor" href="#context_media_type"></a>4.3.1. Declaring Media Type Capabilities</h4>
 <div class="paragraph">
 <p>Context provider implementations MAY restrict the media types they
 support using the <code>@Produces</code> annotation. The absence of this annotation
-is equivalent to its inclusion with media type (/*), i.e. absence
+is equivalent to its inclusion with media type ("*/*"), i.e. absence
 implies that any media type is supported.</p>
 </div>
 <div class="paragraph">
 <p>When choosing a context provider an implementation sorts the available
 providers according to the media types they declare support for. Sorting
 of media types follows the general rule: x/y \(&lt;\) x/*
-\(&lt;\) <strong>/</strong>, i.e. a provider that explicitly lists a media type
-is sorted before a provider that lists <strong>/</strong>.</p>
+\(&lt;\) */*, i.e. a provider that explicitly lists a media type
+is sorted before a provider that lists */*.</p>
 </div>
 </div>
 </div>
@@ -5271,7 +5321,7 @@ parameters in a request:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@GET</span>
-<span class="annotation">@Produces</span>{<span class="string"><span class="delimiter">&quot;</span><span class="content">text/plain</span><span class="delimiter">&quot;</span></span>}
+<span class="annotation">@Produces</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">text/plain</span><span class="delimiter">&quot;</span></span>)
 <span class="directive">public</span> <span class="predefined-type">String</span> listQueryParamNames(<span class="annotation">@Context</span> UriInfo info) {
     <span class="predefined-type">StringBuilder</span> buf = <span class="keyword">new</span> <span class="predefined-type">StringBuilder</span>();
     <span class="keyword">for</span> (<span class="predefined-type">String</span> param: info.getQueryParameters().keySet()) {
@@ -5299,7 +5349,7 @@ all the headers in a request:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@GET</span>
-<span class="annotation">@Produces</span>{<span class="string"><span class="delimiter">&quot;</span><span class="content">text/plain</span><span class="delimiter">&quot;</span></span>}
+<span class="annotation">@Produces</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">text/plain</span><span class="delimiter">&quot;</span></span>)
 <span class="directive">public</span> <span class="predefined-type">String</span> listHeaderNames(<span class="annotation">@Context</span> HttpHeaders headers) {
     <span class="predefined-type">StringBuilder</span> buf = <span class="keyword">new</span> <span class="predefined-type">StringBuilder</span>();
     <span class="keyword">for</span> (<span class="predefined-type">String</span> header: headers.getRequestHeaders().keySet()) {
@@ -5704,7 +5754,18 @@ JSON-P for all types except <code>JsonValue</code> and its sub-types.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="additional_reqs"><a class="anchor" href="#additional_reqs"></a>11.2.8. Additional Requirements</h4>
+<h4 id="jaxb"><a class="anchor" href="#jaxb"></a>11.2.8. Jakarta XML Binding</h4>
+<div class="paragraph">
+<p>In a product that supports the Jakarta XML Binding API (JAXB)
+<a href="#bib21">[21]</a>, implementations MUST support entity providers for the type,
+<code>jakarta.xml.bind.JAXBElement</code>, and application-supplied JAXB classes
+in combination with the following XML-based media types:
+<code>text/xml</code> and <code>application/xml</code> and media types of the
+form <code>application/*+xml</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="additional_reqs"><a class="anchor" href="#additional_reqs"></a>11.2.9. Additional Requirements</h4>
 <div class="paragraph">
 <p>The following additional requirements apply when using Managed Beans,
 CDI-style Beans or EJBs as resource classes, providers or <code>Application</code>
@@ -6227,11 +6288,20 @@ or directly using the <code>ResponseBuilder.location</code> method.</p></td>
 <h2 id="change-log"><a class="anchor" href="#change-log"></a>Appendix D: Change Log</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="changes-since-2.2-snapshot"><a class="anchor" href="#changes-since-2.2-snapshot"></a>D.1. Changes Since 2.2-SNAPSHOT</h3>
+<h3 id="changes-since-2.1-release"><a class="anchor" href="#changes-since-2.1-release"></a>D.1. Changes Since 2.1 Release</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>Referencing Jakarta EE instead of Java EE</p>
+</li>
+<li>
+<p>Package changes from <code>javax.ws.rs.<strong></code> to <code>jakarta.ws.rs.</strong></code></p>
+</li>
+<li>
+<p><a href="#jaxb">Jakarta XML Binding</a>: JAXB API is now optional</p>
+</li>
+<li>
+<p><a href="#additional_reqs">Additional Requirements</a>: Clarified injection with regard to <code>getSingletons()</code> method</p>
 </li>
 </ul>
 </div>
@@ -6618,7 +6688,7 @@ added.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#expert_group">Expert Group Members</a>: Updated 2.0 expert group member list.</p>
+<p><a href="#project_team">Project Team Members</a>: Updated 2.0 expert group member list.</p>
 </li>
 <li>
 <p><a href="#acks">Acknowledgements</a>: Updated acknowledgements for 2.0 version.</p>
@@ -6692,7 +6762,7 @@ step.</p>
 <p><a href="#terminology">Terminology</a>: Added new terminology.</p>
 </li>
 <li>
-<p><a href="#expert_group">Expert Group Members</a>: List 2.0 expert group members.</p>
+<p><a href="#project_team">Project Team Members</a>: List 2.0 expert group members.</p>
 </li>
 <li>
 <p><a href="#acks">Acknowledgements</a>: acknowledgements for 2.0 version.</p>
@@ -6899,9 +6969,6 @@ headers are supported.</p>
 dissertation, University of California, Irvine, 2000. See <a href="https://roy.gbiv.com/pubs/dissertation/top.htm" class="bare">https://roy.gbiv.com/pubs/dissertation/top.htm</a>.</p>
 </li>
 <li>
-<p><a id="bib2"></a>[2] REST Wiki. Web site. See <a href="http://rest.blueoxen.net/cgi-bin/wiki.pl" class="bare">http://rest.blueoxen.net/cgi-bin/wiki.pl</a>.</p>
-</li>
-<li>
 <p><a id="bib3"></a>[3] Representational State Transfer. Web site, Wikipedia. See
 <a href="https://en.wikipedia.org/wiki/Representational" class="bare">https://en.wikipedia.org/wiki/Representational</a> State Transfer.</p>
 </li>
@@ -6922,12 +6989,12 @@ Syntax. RFC, IETF, January 2005. See <a href="https://www.ietf.org/rfc/rfc3986.t
 <a href="https://bitworking.org/projects/atom/draft-ietf-atompub-protocol-14.html" class="bare">https://bitworking.org/projects/atom/draft-ietf-atompub-protocol-14.html</a>.</p>
 </li>
 <li>
-<p><a id="bib8"></a>[8]  Jakarta™ Servlet Specification, Version 4.0. Available at:
+<p><a id="bib8"></a>[8]  Jakarta<sup>®</sup> Servlet Specification, Version 4.0. Available at:
 <a href="https://jakarta.ee/specifications/servlet/4.0" class="bare">https://jakarta.ee/specifications/servlet/4.0</a></p>
 </li>
 <li>
-<p><a id="bib9"></a>[9]  Jakarta XML Web Services, Version 3.0
-<a href="https://jakarta.ee/specifications/xml-web-services/2.3/" class="bare">https://jakarta.ee/specifications/xml-web-services/2.3/</a>.</p>
+<p><a id="bib9"></a>[9]  Jakarta<sup>®</sup> XML Web Services, Version 3.0
+<a href="https://jakarta.ee/specifications/xml-web-services/3.0/" class="bare">https://jakarta.ee/specifications/xml-web-services/3.0/</a>.</p>
 </li>
 <li>
 <p><a id="bib10"></a>[10]  S. Bradner. RFC 2119: Keywords for use in RFCs to Indicate Requirement Levels. RFC, IETF,
@@ -6942,35 +7009,39 @@ for the java VM. See <a href="https://github.com/ReactiveX/RxJava" class="bare">
 <a href="https://github.com/ReactiveX/RxJava/wiki/What’s-different-in-2.0" class="bare">https://github.com/ReactiveX/RxJava/wiki/What’s-different-in-2.0</a>.</p>
 </li>
 <li>
-<p><a id="bib13"></a>[13]  Jakarta™ Concurrency Specification, Version 1.1. Available at:
-<a href="https://jakarta.ee/specifications/concurrency/1.1" class="bare">https://jakarta.ee/specifications/concurrency/1.1</a></p>
+<p><a id="bib13"></a>[13]  Jakarta<sup>®</sup> Concurrency Specification, Version 2.0. Available at:
+<a href="https://jakarta.ee/specifications/concurrency/2.0/" class="bare">https://jakarta.ee/specifications/concurrency/2.0/</a></p>
 </li>
 <li>
-<p><a id="bib14"></a>[14]  Jakarta™ Contexts and Dependency Injection Specification, Version 2.0. Available at:
-<a href="https://jakarta.ee/specifications/cdi/2.0" class="bare">https://jakarta.ee/specifications/cdi/2.0</a></p>
+<p><a id="bib14"></a>[14]  Jakarta<sup>®</sup> Contexts and Dependency Injection Specification, Version 2.0. Available at:
+<a href="https://jakarta.ee/specifications/cdi/2.0/" class="bare">https://jakarta.ee/specifications/cdi/2.0/</a></p>
 </li>
 <li>
-<p><a id="bib15"></a>[15]  Jakarta™ Annotations Specification, Version 1.3. Available at:
-<a href="https://jakarta.ee/specifications/annotations/1.3" class="bare">https://jakarta.ee/specifications/annotations/1.3</a></p>
+<p><a id="bib15"></a>[15]  Jakarta<sup>®</sup> Annotations Specification, Version 2.0. Available at:
+<a href="https://jakarta.ee/specifications/annotations/2.0/" class="bare">https://jakarta.ee/specifications/annotations/2.0/</a></p>
 </li>
 <li>
-<p><a id="bib16"></a>[16]  Jakarta™ Bean Validation Specification, Version 2.0. Available at:
-<a href="https://jakarta.ee/specifications/bean-validation/2.0" class="bare">https://jakarta.ee/specifications/bean-validation/2.0</a></p>
+<p><a id="bib16"></a>[16]  Jakarta<sup>®</sup> Bean Validation Specification, Version 2.0. Available at:
+<a href="https://jakarta.ee/specifications/bean-validation/2.0/" class="bare">https://jakarta.ee/specifications/bean-validation/2.0/</a></p>
 </li>
 <li>
 <p><a id="bib17"></a>[17]  Server-Sent Events. See <a href="https://html.spec.whatwg.org/#server-sent-events" class="bare">https://html.spec.whatwg.org/#server-sent-events</a>.</p>
 </li>
 <li>
-<p><a id="bib18"></a>[18]  Jakarta™ JSON Processing Specification, Version 1.1. Available at:
-<a href="https://jakarta.ee/specifications/jsonp/1.1" class="bare">https://jakarta.ee/specifications/jsonp/1.1</a></p>
+<p><a id="bib18"></a>[18]  Jakarta<sup>®</sup> JSON Processing Specification, Version 2.0. Available at:
+<a href="https://jakarta.ee/specifications/jsonp/2.0/" class="bare">https://jakarta.ee/specifications/jsonp/2.0/</a></p>
 </li>
 <li>
-<p><a id="bib19"></a>[19]  Jakarta™ JSON Binding Specification, Version 1.0. Available at:
-<a href="https://jakarta.ee/specifications/jsonb/1.0" class="bare">https://jakarta.ee/specifications/jsonb/1.0</a></p>
+<p><a id="bib19"></a>[19]  Jakarta<sup>®</sup> JSON Binding Specification, Version 2.0. Available at:
+<a href="https://jakarta.ee/specifications/jsonb/2.0/" class="bare">https://jakarta.ee/specifications/jsonb/2.0/</a></p>
 </li>
 <li>
-<p><a id="bib20"></a>[20]  Jakarta Activation, Version 1.2
-<a href="https://jakarta.ee/specifications/activation/1.2/" class="bare">https://jakarta.ee/specifications/activation/1.2/</a>.</p>
+<p><a id="bib20"></a>[20]  Jakarta<sup>®</sup> Activation, Version 2.0
+<a href="https://jakarta.ee/specifications/activation/2.0/" class="bare">https://jakarta.ee/specifications/activation/2.0/</a></p>
+</li>
+<li>
+<p><a id="bib21"></a>[21]  Jakarta<sup>®</sup> XML Binding, Version 3.0
+<a href="https://jakarta.ee/specifications/xml-binding/3.0/" class="bare">https://jakarta.ee/specifications/xml-binding/3.0/</a></p>
 </li>
 </ul>
 </div>
@@ -7001,7 +7072,7 @@ for the java VM. See <a href="https://github.com/ReactiveX/RxJava" class="bare">
 <a href="#_footnoteref_7">7</a>. If any of these types or sets of types are unspecified, \(\mbox{*/*}\) and \(\mbox{\{*/*\}}\) are assumed.
 </div>
 <div class="footnote" id="_footnotedef_8">
-<a href="#_footnoteref_8">8</a>. Step [filter_methods
+<a href="#_footnoteref_8">8</a>. Step 3a ensures the set contains at least one member.
 </div>
 <div class="footnote" id="_footnotedef_9">
 <a href="#_footnoteref_9">9</a>. Note that the syntax +? denotes a reluctant quantifier as defined in the java.util.regex.Pattern class.
@@ -7030,8 +7101,8 @@ for the java VM. See <a href="https://github.com/ReactiveX/RxJava" class="bare">
 </div>
 <div id="footer">
 <div id="footer-text">
- 3.0.0-M1<br/>
-Last updated 2020-02-28 09:15:32 -0600
+ 3.0.0<br/>
+Last updated 2020-08-24 14:03:01 -0400
 </div>
 </div>
 <style>
@@ -7123,5 +7194,29 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .change .change{color:#66f}
 .CodeRay .head .head{color:#f4f}
 </style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains('stemblock')) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
