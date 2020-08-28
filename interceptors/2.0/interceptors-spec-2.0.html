@@ -445,7 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jakarta Interceptors Team, https://projects.eclipse.org/projects/ee4j.interceptors</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/interceptor-api-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/interceptor-api-dev</a></span><br>
 <span id="revnumber"> 2.0,</span>
-<span id="revdate">July 20, 2020</span>
+<span id="revdate">August 28, 2020</span>
 <br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
@@ -536,7 +536,7 @@ Version: 2.0
 
 Status: Final
 
-Release: July 20, 2020</pre>
+Release: August 28, 2020</pre>
 </div>
 </div>
 </div>
@@ -653,7 +653,7 @@ class.</p>
 <div class="paragraph">
 <p>This document is an update to the
 Jakarta Interceptors specification 1.2. Version 1.1 was based on the
-Interceptors chapter of the Enterprise JavaBeansTM 3.0 (EJB)
+Interceptors chapter of the Enterprise JavaBeansTM 3.0
 specification [<a href="#bib1">1</a>]. Version
 1.2 included interceptor binding definitions that were originally
 defined in the Contexts and Dependency Injection for the Jakarta EE
@@ -668,16 +668,16 @@ Platform (CDI) specification [<a href="#bib3">3</a>].</p>
 <div class="paragraph">
 <p>The Jakarta EE Platform specification requires
 support for interceptors. The use of interceptors defined by means of
-the <code>Interceptors</code> annotation is required to be supported for EJB and
-Managed Bean components, including in the absence of CDI. When CDI is
-enabled, the use of interceptors defined both by means of interceptor
+the <code>Interceptors</code> annotation is required to be supported for Enterprise
+Jakarta Beans and Managed Bean components, including in the absence of CDI.
+When CDI is enabled, the use of interceptors defined both by means of interceptor
 binding annotations and by means of the <code>Interceptors</code> annotation is
 required to be supported for component classes that support injection,
 as described in the section “Annotations and Injection” of the Jakarta EE
 Platform specification [<a href="#bib6">6</a>].</p>
 </div>
 <div class="paragraph">
-<p>Both the EJB and the CDI specifications
+<p>Both the Enterprise Jakarta Beans and the CDI specifications
 provide extensions to this specification. Other specifications may
 choose to do so in the future. Such specifications are referred to in
 this document as extension specifications. This document outlines
@@ -843,7 +843,7 @@ deployment descriptor to specify the invocation order of interceptors or
 to override the order specified in metadata annotations. A deployment
 descriptor can optionally be used to define interceptors, to define
 default interceptors, or to associate interceptors with a target class.
-For example, the EJB specification [<a href="#bib2">2</a>] requires support for the
+For example, the Enterprise Jakarta Beans specification [<a href="#bib2">2</a>] requires support for the
 <code>ejb-jar.xml</code> deployment descriptor and the CDI specification
 [<a href="#bib3">3</a>] requires support for the <code>beans.xml</code>
 deployment descriptor.</p>
@@ -1325,7 +1325,7 @@ methods are denoted by the <code>AroundTimeout</code> annotation.</p>
 to Jakarta Enterprise Beans, although Timer Service functionality may be
 extended to other specifications in the future, and extension
 specifications may define events that may be interposed on by
-around-timeout methods. The EJB Timer Service, defined by the Jakarta Enterprise
+around-timeout methods. The Timer Service, defined by the Jakarta Enterprise
 Beans specification [<a href="#bib2">2</a>], is a container-provided service
 that allows the Bean Provider to register enterprise beans for timer
 callbacks according to a calendar-based schedule, at a specified time,
@@ -2042,7 +2042,7 @@ overridden.</p>
 <div class="paragraph">
 <p>An extension specification may define
 alternative mechanisms (e.g., a deployment descriptor such as the CDI
-beans.xml [<a href="#bib3">3</a>] or the EJB <em>ejb-jar.xml</em>
+beans.xml [<a href="#bib3">3</a>] or the Enterprise Jakarta Beans <em>ejb-jar.xml</em>
 deployment descriptor [<a href="#bib2">2</a>]) to
 enable and order interceptors, to override the order specified by means
 of annotations, or to disable interceptors.</p>
