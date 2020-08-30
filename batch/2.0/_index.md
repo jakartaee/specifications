@@ -1,24 +1,27 @@
 ---
-title: "Jakarta Batch 2.0 (milestone)"
-date: 2020-06-09
+title: "Jakarta Batch 2.0"
+date: 2020-07-25
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Batch specifies a Java API plus an XML-based job specification language (JSL), which lets you compose batch jobs in XML from reusable Java application artifacts and conveniently parameterize different executions of a single job.
 
 * [Jakarta Batch 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0-draft.pdf) (PDF)
-* [Jakarta Batch 2.0 Specification Document](./batch-spec-2.0-draft.html) (HTML)
+* [Jakarta Batch 2.0 Specification Document](./jakarta-batch-spec-2.0.pdf) (PDF)
+* [Jakarta Batch 2.0 Specification Document](./jakarta-batch-spec-2.0.html) (HTML)
 * [Jakarta Batch 2.0 Javadoc](./apidocs)
-* [Jakarta Batch 2.0 TCK](https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-2.0.0-M2.zip) (sig - N/A, [sha](https://download.eclipse.org/jakartabatch/tck/eftl/jakarta.batch.official.tck-2.0.0-M2.zip.sha256), pub - N/A):
+* [Jakarta Batch 2.0 TCK](https://download.eclipse.org/jakartaee/batch/2.0/jakarta.batch.official.tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/batch/2.0/jakarta.batch.official.tck-2.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/batch/2.0/jakarta.batch.official.tck-2.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.batch:jakarta.batch-api:jar:2.0.0-M2](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.0.0-M2/jar)
+  * [jakarta.batch:jakarta.batch-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.0.0/jar)
 
+* Schemas
+  * [XML Schema for the Jakarta Batch artifacts XML file (batch.xml)](https://jakarta.ee/xml/ns/jakartaee/batchXML_2_0.xsd)
+  * [XML Schema for the Jakarta Batch Job Specification Language](https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd)
 
 # Compatible Implementations
 
-* [**"jbatch"** v2.0.0-M3](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.0.0-M3) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.
+* [**"jbatch"** v2.0.0-M7](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.0.0-M7) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.  Maven links: [implementation](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.container/2.0.0-M7/com.ibm.jbatch.container-2.0.0-M7.jar) and [SPI](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.spi/2.0.0-M7/com.ibm.jbatch.spi-2.0.0-M7.jar).
 
 # Ballots
 
