@@ -20,7 +20,7 @@ appropriate bean to perform the operation(s).
 
 # Compatible Implementations
 
-* [Jakarta Activation](https://eclipse-ee4j.github.io/jaf/)
+* [Eclipse implementation of Jakarta Activation](https://eclipse-ee4j.github.io/jaf/)
 
 # Ballots
 
