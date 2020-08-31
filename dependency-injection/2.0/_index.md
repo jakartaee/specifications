@@ -54,4 +54,4 @@ The Specification Committee Ballot concluded successfully on 2020-08-27 with the
 | Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
 |                                                | Total               |  10  |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00786.html)
