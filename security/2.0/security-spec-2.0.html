@@ -444,16 +444,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Jakarta Security Community, https://projects.eclipse.org/projects/ee4j.es</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/es-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/es-dev</a></span><br>
-<span id="revnumber"> 2.0.0-SNAPSHOT,</span>
-<span id="revdate">June 11, 2020</span>
-<br><span id="revremark">DRAFT</span>
+<span id="revnumber"> 2.0,</span>
+<span id="revdate">septembre 02, 2020</span>
+<br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#copyright">Copyright</a>
 <ul class="sectlevel2">
 <li><a href="#eclipse-foundation-specification-license">Eclipse Foundation Specification License</a>
 <ul class="sectlevel3">
 <li><a href="#disclaimers">Disclaimers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#preface">Preface</a>
@@ -547,17 +551,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre>Specification: Jakarta Security
 
-Version: 2.0.0-SNAPSHOT
+Version: 2.0
 
-Status: DRAFT
+Status: Final
 
-Release: June 11, 2020</pre>
+Release: septembre 02, 2020</pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="copyright"><a class="anchor" href="#copyright"></a>Copyright</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Copyright (c) 2019 Eclipse Foundation.</p>
-</div>
-</div>
+<p>Copyright (c) 2019, 2020 Eclipse Foundation.</p>
 </div>
 <div class="sect2">
 <h3 id="eclipse-foundation-specification-license"><a class="anchor" href="#eclipse-foundation-specification-license"></a>Eclipse Foundation Specification License</h3>
@@ -636,6 +643,8 @@ Foundation may NOT be used in advertising or publicity pertaining to
 this document or its contents without specific, written prior
 permission. Title to copyright in this document will at all times
 remain with copyright holders.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -887,7 +896,7 @@ RememberMe</code></pre>
 <p>Attributes on these annotations can be provided either as actual values, or as Jakarta Expression Language 3.0 expressions. In cases where the return type of an attribute is not String, an "Expression Language alternative" attribute is provided, with "Expression" appended to the name. If an "Expression Language alternative" attribute has a non-empty value, it takes precedence over the attribute it&#8217;s an alternative to, and must contain a valid Expression Language expression that evaluates to the same type as the attribute it&#8217;s an alternative to.</p>
 </div>
 <div class="paragraph">
-<p>For more information, see the package javadoc for the javax.security.enterprise package.</p>
+<p>For more information, see the package javadoc for the jakarta.security.enterprise package.</p>
 </div>
 <div class="paragraph">
 <p>Jakarta Expression Language, version 3.0 [<a href="https://jakarta.ee/specifications/expression-language/3.0/">EL30</a>] is a Jakarta EE specification.</p>
@@ -1460,10 +1469,10 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <div class="sect3">
 <h4 id="autoapplysession-annotation"><a class="anchor" href="#autoapplysession-annotation"></a>2.4.6. AutoApplySession Annotation</h4>
 <div class="paragraph">
-<p>The <em>AutoApplySession</em> annotation provides a way to declaratively enable Jakarta Authentication <em>javax.servlet.http.registerSession</em> behavior for an authentication mechanism, and automatically apply it for every request.</p>
+<p>The <em>AutoApplySession</em> annotation provides a way to declaratively enable Jakarta Authentication <em>jakarta.servlet.http.registerSession</em> behavior for an authentication mechanism, and automatically apply it for every request.</p>
 </div>
 <div class="paragraph">
-<p>The <em>javax.servlet.http.registerSession</em> property is described in Section 3.8.4 of [<a href="https://jakarta.ee/specifications/authentication/1.1/">AUTHENTICATION11</a>].</p>
+<p>The <em>jakarta.servlet.http.registerSession</em> property is described in Section 3.8.4 of [<a href="https://jakarta.ee/specifications/authentication/1.1/">AUTHENTICATION11</a>].</p>
 </div>
 <div class="paragraph">
 <p>This annotation embodies the concept of a caller being authenticated over a series of multiple HTTP requests (together, a "session"). The built-in form-based authentication mechanisms use this same concept. It is therefore implicitly suggested, but not required, that the form-based authentication mechanisms use the backing interceptor for this annotation to establish and maintain their sessions.</p>
@@ -1502,7 +1511,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <div class="ulist">
 <ul>
 <li>
-<p>If the result is <em>AuthenticationStatus.SUCCESS</em>, get the <em>Map</em> object from the <em>MessageInfo</em> in the <em>HttpMessageContext</em>, and add an entry to the <em>Map</em> with key "<em>javax.servlet.http.registerSession</em>" and value "<em>true</em>".</p>
+<p>If the result is <em>AuthenticationStatus.SUCCESS</em>, get the <em>Map</em> object from the <em>MessageInfo</em> in the <em>HttpMessageContext</em>, and add an entry to the <em>Map</em> with key "<em>jakarta.servlet.http.registerSession</em>" and value "<em>true</em>".</p>
 </li>
 </ul>
 </div>
@@ -1680,11 +1689,11 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <div class="sect3">
 <h4 id="autoapplysession-notes"><a class="anchor" href="#autoapplysession-notes"></a>2.4.10. AutoApplySession Notes</h4>
 <div class="paragraph">
-<p>As an example, idiomatic code for setting the <em>javax.servlet.http.registerSession</em> key as per the requirements is:</p>
+<p>As an example, idiomatic code for setting the <em>jakarta.servlet.http.registerSession</em> key as per the requirements is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">httpMessageContext.getMessageInfo().getMap().put(<span class="string"><span class="delimiter">&quot;</span><span class="content">javax.servlet.http.registerSession</span><span class="delimiter">&quot;</span></span>, TRUE.toString());</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java">httpMessageContext.getMessageInfo().getMap().put(<span class="string"><span class="delimiter">&quot;</span><span class="content">jakarta.servlet.http.registerSession</span><span class="delimiter">&quot;</span></span>, TRUE.toString());</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2476,8 +2485,8 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </div>
 <div id="footer">
 <div id="footer-text">
- 2.0.0-SNAPSHOT<br>
-Last updated 2020-01-07 18:46:42 +0100
+ 2.0<br>
+Last updated 2020-07-24 09:23:53 +0200
 </div>
 </div>
 <style>

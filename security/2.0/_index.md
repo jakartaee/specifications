@@ -7,8 +7,8 @@ Jakarta Security defines a standard for creating secure Jakarta EE applications 
 
 * [Jakarta Security 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.es/releases/2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Security 2.0 Specification Document](./jakarta-security-spec-2.0.0.pdf) (PDF)
-* [Jakarta Security 2.0 Specification Document](./jakarta-security-spec-2.0.0.html) (HTML)
+* [Jakarta Security 2.0 Specification Document](./security-spec-2.0.pdf) (PDF)
+* [Jakarta Security 2.0 Specification Document](./security-spec-2.0.html) (HTML)
 * [Jakarta Security 2.0 Javadoc](./apidocs)
 * [Jakarta Security 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
@@ -35,7 +35,7 @@ Please reference that ballot for the official results.
 The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
 
 | Representative                                        | Representative for: | Vote |
-|------------------------------------------------       |---------------------|------|
+|-------------------------------------------------------|---------------------|------|
 | Kenji Kazumura, Michael DeNicola                      | Fujitsu             |      |
 | Dan Bandera, Kevin Sutter                             | IBM                 |      |
 | Bill Shannon, Ed Bratt                                | Oracle              |      |
