@@ -41,7 +41,7 @@ The Specification Committee Ballot concluded successfully on 2020-mm-dd with the
 | Bill Shannon, Ed Bratt                                | Oracle              |      |
 | Mark Wareham, Steve Millidge                          | Payara              |      |
 | Scott Stark, Mark Little                              | Red Hat             |      |
-| David Blevins, Cesar Hernandez, Jean-Louis Monteiro   | Tomitribe           |      |
+| David Blevins, Jean-Louis Monteiro                    | Tomitribe           |      |
 | Ivar Grimstad                                         | EE4J PMC            |      |
 | Alex Theedom                                          | Participant Members |      |
 | Werner Keil                                           | Committer Members   |      |
