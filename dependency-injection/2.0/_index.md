@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Dependency Injection 2.0"
-date: 2020-08-05
+date: 2020-08-26
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -13,7 +13,7 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 * [Jakarta Dependency Injection 2.0 Javadoc](./apidocs)
 * [Jakarta Dependency Injection 2.0 TCK](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.1-bin.zip)
 ([sig](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.1-bin.zip.sig),
-[sha](7853d02d372838f8300f5a18cfcc23011c9eb9016cf3980bba9442e4b1f8bfc6),
+[sha](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.1-bin.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * TCK Summary Results [Weld 4.0.0.Alpha2](https://github.com/jakartaredhat/weld-inject-tck/wiki/Jakarta-Dependency-Injection-2.0-TCK-Results)
 
@@ -38,19 +38,20 @@ Please reference that ballot for the official results.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-08-27 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |  +1  |
+| Scott Stark, Mark Little                       | Red Hat             |  +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+| Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
+|                                                | Total               |  10  |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00786.html)
