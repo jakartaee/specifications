@@ -445,7 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jakarta Security Community, https://projects.eclipse.org/projects/ee4j.es</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/es-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/es-dev</a></span><br>
 <span id="revnumber"> 2.0,</span>
-<span id="revdate">septembre 02, 2020</span>
+<span id="revdate">septembre 03, 2020</span>
 <br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
@@ -555,7 +555,7 @@ Version: 2.0
 
 Status: Final
 
-Release: septembre 02, 2020</pre>
+Release: septembre 03, 2020</pre>
 </div>
 </div>
 </div>
@@ -1004,7 +1004,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <div class="sect2">
 <h3 id="installation-and-configuration"><a class="anchor" href="#installation-and-configuration"></a>2.3. Installation and Configuration</h3>
 <div class="paragraph">
-<p>An <em>HttpAuthenticationMechanism</em> must be a CDI bean, and is therefore visible to the container through CDI if it is packaged in a bean archive, which generally includes Jakarta EE modules and application archives, as well as other archives and classes that are not part of an application, but are required by the Java EE specification to be visible to applications. See the CDI specification for details on bean archives and bean discovery. An <em>HttpAuthenticationMechanism</em> is assumed to be normal scoped.</p>
+<p>An <em>HttpAuthenticationMechanism</em> must be a CDI bean, and is therefore visible to the container through CDI if it is packaged in a bean archive, which generally includes Jakarta EE modules and application archives, as well as other archives and classes that are not part of an application, but are required by the Jakarta EE specification to be visible to applications. See the CDI specification for details on bean archives and bean discovery. An <em>HttpAuthenticationMechanism</em> is assumed to be normal scoped.</p>
 </div>
 <div class="paragraph">
 <p>It MUST be possible for the definition of an <em>HttpAuthenticationMechanism</em> to exist within the application archive. Alternatively such definition MAY also exists outside the application archive, for example in a jar added to the classpath of an application server.</p>
@@ -1740,7 +1740,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <p><em>IdentityStore</em> provides an abstraction of an identity store, which is a database or directory (store) of identity information about a population of users that includes an application&#8217;s callers. An identity store holds caller names, group membership information, and information sufficient to allow it to validate a caller&#8217;s credentials. An identity store may also contain other information, such as globally unique caller identifiers (if different from caller name), or other caller attributes.</p>
 </div>
 <div class="paragraph">
-<p>Implementations of the <em>IdentityStore</em> interface are used to interact with identity stores to authenticate users (i.e., validate their credentials), and to retrieve caller groups. <em>IdentityStore</em> is roughly analogous to the JAAS <em>LoginModule</em> interface, which is often integrated into Jakarta EE products (albeit in vendor-specific ways). Unlike <em>LoginModule</em>, <em>IdentityStore</em> is intended specifically for Java EE, and provides only credential validation and group retrieval functions (i.e., functions that require interaction with an identity store). An <em>IdentityStore</em> does not collect caller credentials, or manipulate <em>Subject</em>s.</p>
+<p>Implementations of the <em>IdentityStore</em> interface are used to interact with identity stores to authenticate users (i.e., validate their credentials), and to retrieve caller groups. <em>IdentityStore</em> is roughly analogous to the JAAS <em>LoginModule</em> interface, which is often integrated into Jakarta EE products (albeit in vendor-specific ways). Unlike <em>LoginModule</em>, <em>IdentityStore</em> is intended specifically for Jakarta EE, and provides only credential validation and group retrieval functions (i.e., functions that require interaction with an identity store). An <em>IdentityStore</em> does not collect caller credentials, or manipulate <em>Subject</em>s.</p>
 </div>
 <div class="paragraph">
 <p><em>IdentityStore</em> is intended primarily for use by <em>HttpAuthenticationMechanism</em> implementations, but could in theory be used by other types of authentication mechanisms (e.g., a Jakarta Authentication <em>ServerAuthModule</em>, or a container&#8217;s built-in authentication mechanisms). <em>HttpAuthenticationMechanism</em> implementations are not required to use <em>IdentityStore</em>&#8201;&#8212;&#8201;they can authenticate users in any manner they choose&#8201;&#8212;&#8201;but <em>IdentityStore</em> will often be a useful and convenient mechanism.</p>
