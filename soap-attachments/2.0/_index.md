@@ -18,7 +18,7 @@ and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments 
 
 # Compatible Implementations
 
-* [Jakarta SOAP with Attachments implementation 2.0.0](https://eclipse-ee4j.github.io/metro-saaj/)
+* [Eclipse Implementation of Jakarta SOAP with Attachments 2.0.0](https://eclipse-ee4j.github.io/metro-saaj/)
 * [Eclipse Metro 3.0.0](https://eclipse-ee4j.github.io/metro-wsit/)
 
 # Ballots
