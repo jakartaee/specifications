@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Authentication 2.0"
-date: 2020-07-27
+date: 2020-09-03
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Authentication defines a general low-level SPI for authentication mechanisms, which are controllers
@@ -12,10 +12,10 @@ Jakarta Authentication consists of several profiles, with each profile telling h
 
 * [Jakarta Authentication 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaspic/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Authentication 2.0 Specification Document](./authentication-spec-2.0.pdf) (PDF)
-* [Jakarta Authentication 2.0 Specification Document](./authentication-spec-2.0.html) (HTML)
+* [Jakarta Authentication 2.0 Specification Document](./jakarta-authentication-spec-2.0.pdf) (PDF)
+* [Jakarta Authentication 2.0 Specification Document](./jakarta-authentication-spec-2.0.html) (HTML)
 * [Jakarta Authentication 2.0 Javadoc](./apidocs)
-* [Jakarta Authentication 2.0 TCK](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.0.zip)([sig](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-servlet-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Authentication 2.0 TCK](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.0.zip)([sig](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.authentication:jakarta.authentication-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.authentication/jakarta.authentication-api/2.0.0/jar)
 
