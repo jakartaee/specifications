@@ -1,23 +1,23 @@
 ---
-title: "Jakarta Transactions 2.0 (milestone)"
-date: 2020-06-12
+title: "Jakarta Transactions 2.0"
+date: 2020-10-08
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Transactions - Need scope statement
 
 * [Jakarta Transactions 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jta/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Transactions 2.0 Specification Document]() (PDF)
-* [Jakarta Transactions 2.0 Specification Document]() (HTML)
+* [Jakarta Transactions 2.0 Specification Document](./jakarta-transactions-spec-2.0.pdf) (PDF)
+* [Jakarta Transactions 2.0 Specification Document](./jakarta-transactions-spec-2.0.html) (HTML)
 * [Jakarta Transactions 2.0 Javadoc](./apidocs)
-* [Jakarta Transactions 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Transactions 2.0 TCK](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.0.zip)([sig](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.jta:jakarta.jta-api:jar:2.0.0](https://repo1.maven.org/maven2/jakarta/transaction/jakarta.transaction-api/2.0.0-RC2/jakarta.transaction-api-2.0.0-RC2.jar)
+  * [jakarta.jta:jakarta.jta-api:jar:2.0.0](https://repo1.maven.org/maven2/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar)
 
 
 # Compatible Implementations
 
-* [Eclipse GlassFish (expected)]()
+* [Eclipse Glassfish 6.0.0-SNAPSHOT-2020-10-04](https://download.eclipse.org/ee4j/glassfish/weekly/glassfish-6.0.0-SNAPSHOT-2020-10-04.zip)
 
 # Ballots
 
