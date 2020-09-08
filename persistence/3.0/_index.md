@@ -8,8 +8,8 @@ and object/relational mapping in Java(R) environments.
 
 * [Jakarta Persistence 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.0-jakarta-persistence-api)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Persistence 3.0 Specification Document](./persistence_3.0.pdf) (PDF)
-* [Jakarta Persistence 3.0 Specification Document](./persistence_3.0.html) (HTML)
+* [Jakarta Persistence 3.0 Specification Document](./jakarta-persistence-spec-3.0.pdf) (PDF)
+* [Jakarta Persistence 3.0 Specification Document](./jakarta-persistence-spec-3.0.html) (HTML)
 * [Jakarta Persistence 3.0 Javadoc](./apidocs)
 * Jakarta Persistence 3.0 XML Schemas
   * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd)
