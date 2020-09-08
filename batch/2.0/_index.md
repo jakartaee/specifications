@@ -49,7 +49,7 @@ The Specification Committee Ballot concluded successfully on 2020-08-27 with the
 | Ivar Grimstad                                  | EE4J PMC            | +1   |
 | Marcelo Ancelmo, Martijn Verburg               | Participant Members | +1   |
 | Werner Keil                                    | Committer Members   | +1   |
-| Scott (Congquan) Wang                          | Enterprise Members  | no vote cast |
-|                                                | Total               |  9   |
+| Scott (Congquan) Wang                          | Enterprise Members  | +1   |
+|                                                | Total               | 10   |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00789.html)
