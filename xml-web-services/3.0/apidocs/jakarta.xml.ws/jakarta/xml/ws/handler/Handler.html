@@ -136,11 +136,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public interface <span class="typeNameLabel">Handler&lt;C extends <a href="MessageContext.html" title="interface in jakarta.xml.ws.handler">MessageContext</a>&gt;</span></pre>
 <div class="block">The <code>Handler</code> interface
-  is the base interface for JAX-WS handlers.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.0</dd>
-</dl>
+  is the base interface for Jakarta XML Web Services handlers.</div>
 </li>
 </ul>
 </div>
@@ -166,7 +162,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#close(jakarta.xml.ws.handler.MessageContext)">close</a></span>&#8203;(<a href="MessageContext.html" title="interface in jakarta.xml.ws.handler">MessageContext</a>&nbsp;context)</code></th>
 <td class="colLast">
 <div class="block">Called at the conclusion of a message exchange pattern just prior to
- the JAX-WS runtime dispatching a message, fault or exception.</div>
+ the Jakarta XML Web Services runtime dispatching a message, fault or exception.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -213,7 +209,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">boolean&nbsp;handleMessage&#8203;(<a href="Handler.html" title="type parameter in Handler">C</a>&nbsp;context)</pre>
 <div class="block">The <code>handleMessage</code> method is invoked for normal processing
   of inbound and outbound messages. Refer to the description of the handler
-  framework in the JAX-WS specification for full details.</div>
+  framework in the Jakarta XML Web Services specification for full details.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - the message context.</dd>
@@ -227,9 +223,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
                      processing.</li>
                   </ul></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang" class="externalLink">RuntimeException</a></code> - Causes the JAX-WS runtime to cease
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang" class="externalLink">RuntimeException</a></code> - Causes the Jakarta XML Web Services runtime to cease
     handler processing and generate a fault.</dd>
-<dd><code><a href="../ProtocolException.html" title="class in jakarta.xml.ws">ProtocolException</a></code> - Causes the JAX-WS runtime to switch to
+<dd><code><a href="../ProtocolException.html" title="class in jakarta.xml.ws">ProtocolException</a></code> - Causes the Jakarta XML Web Services runtime to switch to
     fault message processing.</dd>
 </dl>
 </li>
@@ -245,7 +241,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">boolean&nbsp;handleFault&#8203;(<a href="Handler.html" title="type parameter in Handler">C</a>&nbsp;context)</pre>
 <div class="block">The <code>handleFault</code> method is invoked for fault message
   processing.  Refer to the description of the handler
-  framework in the JAX-WS specification for full details.</div>
+  framework in the Jakarta XML Web Services specification for full details.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - the message context</dd>
@@ -259,9 +255,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
                      processing.</li>
                   </ul></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang" class="externalLink">RuntimeException</a></code> - Causes the JAX-WS runtime to cease
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang" class="externalLink">RuntimeException</a></code> - Causes the Jakarta XML Web Services runtime to cease
     handler fault processing and dispatch the fault.</dd>
-<dd><code><a href="../ProtocolException.html" title="class in jakarta.xml.ws">ProtocolException</a></code> - Causes the JAX-WS runtime to cease
+<dd><code><a href="../ProtocolException.html" title="class in jakarta.xml.ws">ProtocolException</a></code> - Causes the Jakarta XML Web Services runtime to cease
     handler fault processing and dispatch the fault.</dd>
 </dl>
 </li>
@@ -274,9 +270,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>close</h4>
 <pre class="methodSignature">void&nbsp;close&#8203;(<a href="MessageContext.html" title="interface in jakarta.xml.ws.handler">MessageContext</a>&nbsp;context)</pre>
 <div class="block">Called at the conclusion of a message exchange pattern just prior to
- the JAX-WS runtime dispatching a message, fault or exception.  Refer to
+ the Jakarta XML Web Services runtime dispatching a message, fault or exception.  Refer to
  the description of the handler
- framework in the JAX-WS specification for full details.</div>
+ framework in the Jakarta XML Web Services specification for full details.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - the message context</dd>
