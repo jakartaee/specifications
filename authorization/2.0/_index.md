@@ -35,19 +35,19 @@ Please reference that ballot for the official results.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-09-09 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Kenji Kazumura, Michael DeNicola               | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |  +1  |
+| Bill Shannon, Ed Bratt                         | Oracle              |  +1  |
+| Mark Wareham, Steve Millidge                   | Payara              |  +1  |
+| Scott Stark, Mark Little                       | Red Hat             |  +1  |
+| David Blevins, Cesar Hernandez                 | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Alex Theedom                                   | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+|                                                | Total               |  10  |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
