@@ -37,17 +37,18 @@ Please reference that ballot for the official results.
 
 The Specification Committee Ballot concluded successfully on 2020-09-09 with the following results.
 
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |  +1  |
-| Dan Bandera, Kevin Sutter                      | IBM                 |  +1  |
-| Bill Shannon, Ed Bratt                         | Oracle              |  +1  |
-| Mark Wareham, Steve Millidge                   | Payara              |  +1  |
-| Scott Stark, Mark Little                       | Red Hat             |  +1  |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |  +1  |
-| Ivar Grimstad                                  | EE4J PMC            |  +1  |
-| Alex Theedom                                   | Participant Members |  +1  |
-| Werner Keil                                    | Committer Members   |  +1  |
-|                                                | Total               |  10  |
+| Representative                                      | Representative for: | Vote |
+|-----------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                      | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                           | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                           | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                           | Payara              |  +1  |
+| Scott Stark, Mark Little                            | Red Hat             |  +1  |
+| David Blevins, Jean-Louis Monteiro, Cesar Hernandez | Tomitribe           |  +1  |
+| Ivar Grimstad                                       | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg                    | Participant Members |  +1  |
+| Werner Keil                                         | Committer Members   |  +1  |
+| Scott (Congquan) Wang                               | Enterprise Members  |  +1  |
+|                                                     | Total               |  10  |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
