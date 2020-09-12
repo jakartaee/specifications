@@ -12,12 +12,12 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 * [Jakarta Concurrency 2.0 Javadoc](./apidocs)
 * [Jakarta Concurrency 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:2.0.0-RC2](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/2.0.0-RC2/jakarta.enterprise.concurrent-api-2.0.0-RC2.jar)
+  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:2.0.0-RC2](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/2.0.0/jakarta.enterprise.concurrent-api-2.0.0.jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Concurrency CI 2.0.0-RC2](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/org/glassfish/jakarta.enterprise.concurrent/2.0.0-RC2/jakarta.enterprise.concurrent-2.0.0-RC2.jar)
+* [Jakarta Concurrency CI 2.0.0-RC2](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/org/glassfish/jakarta.enterprise.concurrent/2.0.0/jakarta.enterprise.concurrent-2.0.0.jar)
 
 # Ballots
 
