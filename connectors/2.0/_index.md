@@ -1,14 +1,14 @@
 ---
 title: "Jakarta Connectors 2.0 (milestone)"
-date: 2020-06-12
+date: 2020-09-13
 summary: "Release for Jakarta EE 9"
 ---
 The Jakarta Connectors specification defines a standard architecture for Jakarta EE application components to connect to Enterprise Information Systems.
 
 * [Jakarta Connectors 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jca/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0-RC2.pdf) (PDF)
-* [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0-RC2.html) (HTML)
+* [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0.pdf) (PDF)
+* [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0.html) (HTML)
 * [Jakarta Connectors 2.0 Javadoc](./apidocs)
 * [Jakarta Connectors 2.0 TCK]()([sig](),[sha](),[pub]())
 * Maven coordinates
@@ -36,15 +36,16 @@ The Specification Committee Ballot concluded successfully on 2020-mm-dd with the
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
+| Kenji Kazumura                                 | Fujitsu             |      |
 | Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |      |
+| Andrew Pielage, Matt Gill                      | Payara              |      |
 | Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |      |
 | Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |      |
 | Werner Keil                                    | Committer Members   |      |
+| Scott (Congquan) Wang                          | Enterprise Members  |      |
 |                                                | Total               |      |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
