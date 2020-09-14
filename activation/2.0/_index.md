@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Activation 2.0 (milestone)"
-date: 2020-06-15
+title: "Jakarta Activation 2.0"
+date: 2020-09-30
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Activation defines a set of standard services to: determine the
@@ -10,28 +10,21 @@ appropriate bean to perform the operation(s).
 
 * [Jakarta Activation 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaf/releases/2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Activation 2.0 Specification Document](./activation-spec-2.0-RC3.pdf) (PDF)
-* [Jakarta Activation 2.0 Specification Document](./activation-spec-2.0-RC3.html) (HTML)
+* [Jakarta Activation 2.0 Specification Document](./jakarta-activation-spec-2.0.pdf) (PDF)
+* [Jakarta Activation 2.0 Specification Document](./jakarta-activation-spec-2.0.html) (HTML)
 * [Jakarta Activation 2.0 Javadoc](./apidocs)
-* [Jakarta Activation 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Activation 2.0 TCK](https://download.eclipse.org/jakarta/activation/2.0/jakarta-activation-tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakarta/activation/2.0/jakarta-activation-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakarta/activation/2.0/jakarta-activation-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.activation:jakarta.activation-api:jar:2.0.0-RC3](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.0.0-RC3/jar)
+  * [jakarta.activation:jakarta.activation-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Jakarta Activation](https://repo1.maven.org/maven2/com/sun/activation/jakarta.activation/2.0.0-RC3/jakarta.activation-2.0.0-RC3.jar)
+* [Eclipse implementation of Jakarta Activation](https://eclipse-ee4j.github.io/jaf/)
 
 # Ballots
 
 ## Plan Review
-
-[//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.  For those Projects, just use the following statement in this Plan Review section:)
-
-[//]: # (This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review].)
-[//]: # (Please reference that ballot for the official results.)
-
-[//]: # (If your Project was required to do a standalone Plan Review...  You'll need to perform an official Plan Review ballot and record the results here.)
 
 [Jakarta Activation 2.0 Release Record and Plan](https://projects.eclipse.org/projects/ee4j.jaf/releases/2.0/plan)
 
