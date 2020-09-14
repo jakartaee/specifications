@@ -7,8 +7,8 @@ Jakarta Expression Language defines an expression language for Java applications
 
 * [Jakarta Expression Language 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.el/releases/4.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Expression Language 4.0 Specification Document](./expression-language-spec-4.0.pdf) (PDF)
-* [Jakarta Expression Language 4.0 Specification Document](./expression-language-spec-4.0.html) (HTML)
+* [Jakarta Expression Language 4.0 Specification Document](./jakarta-expression-language-spec-4.0.pdf) (PDF)
+* [Jakarta Expression Language 4.0 Specification Document](./jakarta-expression-language-spec-4.0.html) (HTML)
 * [Jakarta Expression Language 4.0 Javadoc](./apidocs)
 * [Jakarta Expression Language 4.0 TCK](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
