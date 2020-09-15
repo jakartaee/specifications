@@ -11,9 +11,9 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 * [Jakarta Contexts Dependency Injection 3.0 Specification Document](jakarta-cdi-spec-3.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 3.0 Specification Document](jakarta-cdi-spec-3.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 3.0 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 3.0 TCK](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.0-dist.zip)
-([sig](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.0-dist.zip.sig),
-[sha](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.0-dist.zip.sha256),
+* [Jakarta Contexts Dependency Injection 3.0 TCK](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.1-dist.zip)
+([sig](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.1-dist.zip.sig),
+[sha](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.1-dist.zip.sha256),
 [pub](https://github.com/jakartaee/specification-committee/blob/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
