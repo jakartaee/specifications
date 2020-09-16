@@ -50,3 +50,4 @@ The Specification Committee Ballot concluded successfully on 2020-09-11 with the
 |                                                     | Total               |  10  |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
+
