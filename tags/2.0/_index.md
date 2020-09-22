@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Standard Tag Library 2.0 (milestone)"
-date: 2020-06-16
+title: "Jakarta Standard Tag Library 2.0"
+date: 2020-09-22
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Standard Tag Library encapsulates as simple tags the core functionality common to many Web applications.
@@ -10,17 +10,18 @@ existing custom tags with Jakarta Standard Tag Library tags.
 
 * [Jakarta Standard Tag Library 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jstl/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Standard Tag Library 2.0 Specification Document](./jstl-spec-2.0-SNAPSHOT.pdf) (PDF)
-* [Jakarta Standard Tag Library 2.0 Specification Document](./jstl-spec-2.0-SNAPSHOT.html) (HTML)
+* [Jakarta Standard Tag Library 2.0 Specification Document](./jakarta-tags-spec-2.0.pdf) (PDF)
+* [Jakarta Standard Tag Library 2.0 Specification Document](./jakarta-tags-spec-2.0.html) (HTML)
 * [Jakarta Standard Tag Library 2.0 Javadoc](./apidocs)
-* [Jakarta Standard Tag Library 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Standard Tag Library 2.0 Tagdoc](./tagdocs)
+* [Jakarta Standard Tag Library 2.0 TCK](https://download.eclipse.org/jakartaee/tags/jakarta-tags-tck-2.0.0.zip)([sig](https://download.eclipse.org/jakartaee/tags/jakarta-tags-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/tags/jakarta-tags-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/2.0.0-RC1/jar)
+  * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/2.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+* [Eclipse Glassfish 6.0.0-SNAPSHOT-2020-09-20](https://download.eclipse.org/ee4j/glassfish/weekly/glassfish-6.0.0-SNAPSHOT-2020-09-20.zip)
 
 # Ballots
 
@@ -37,17 +38,18 @@ Please reference that ballot for the official results.
 
 The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
 
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Representative                                      | Representative for: | Vote |
+|-----------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                      | Fujitsu             |      |
+| Dan Bandera, Kevin Sutter                           | IBM                 |      |
+| Ed Bratt, Dmitry Kornilov                           | Oracle              |      |
+| Andrew Pielage, Matt Gill                           | Payara              |      |
+| Scott Stark, Mark Little                            | Red Hat             |      |
+| David Blevins, Jean-Louis Monteiro, Cesar Hernandez | Tomitribe           |      |
+| Ivar Grimstad                                       | EE4J PMC            |      |
+| Marcelo Ancelmo, Martijn Verburg                    | Participant Members |      |
+| Werner Keil                                         | Committer Members   |      |
+| Scott (Congquan) Wang                               | Enterprise Members  |      |
+|                                                     | Total               |      |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
