@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Server Faces 3.0 (milestone)"
-date: 2020-06-12
+title: "Jakarta Server Faces 3.0"
+date: 2020-09-23
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Server Faces defines an MVC framework for building user interfaces for web applications,
@@ -9,12 +9,15 @@ support for internationalization and accessibility.
 
 * [Jakarta Server Faces 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/3.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Server Faces 3.0 Specification Document](./faces-3.0-SNAPSHOT.pdf) (PDF)
-* [Jakarta Server Faces 3.0 Specification Document](./faces-3.0-SNAPSHOT.html) (HTML)
+* [Jakarta Server Faces 3.0 Specification Document](./jakarta-faces-3.0.pdf) (PDF)
+* [Jakarta Server Faces 3.0 Specification Document](./jakarta-faces-3.0.html) (HTML)
 * [Jakarta Server Faces 3.0 Javadoc](./apidocs)
-* [Jakarta Server Faces 3.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Server Faces 2.3 Jsdoc](./jsdoc)
+* [Jakarta Server Faces 2.3 Renderkitdoc](./renderkitdoc)
+* [Jakarta Server Faces 2.3 VDLDoc](./vdldoc)
+* [Jakarta Server Faces 3.0 TCK](https://download.eclipse.org/jakartaee/faces/jakarta-faces-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/faces/jakarta-faces-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/jakarta-faces-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.faces:jakarta.faces-api:jar:3.0.0-RC1](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/3.0.0-RC1/jar)
+  * [jakarta.faces:jakarta.faces-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/3.0.0/jar)
 
 
 # Compatible Implementations
@@ -36,17 +39,18 @@ Please reference that ballot for the official results.
 
 The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
 
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Representative                                      | Representative for: | Vote |
+|-----------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                      | Fujitsu             |      |
+| Dan Bandera, Kevin Sutter                           | IBM                 |      |
+| Ed Bratt, Dmitry Kornilov                           | Oracle              |      |
+| Andrew Pielage, Matt Gill                           | Payara              |      |
+| Scott Stark, Mark Little                            | Red Hat             |      |
+| David Blevins, Jean-Louis Monteiro, Cesar Hernandez | Tomitribe           |      |
+| Ivar Grimstad                                       | EE4J PMC            |      |
+| Marcelo Ancelmo, Martijn Verburg                    | Participant Members |      |
+| Werner Keil                                         | Committer Members   |      |
+| Scott (Congquan) Wang                               | Enterprise Members  |      |
+|                                                     | Total               |      |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
