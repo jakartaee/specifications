@@ -12,9 +12,9 @@ support for internationalization and accessibility.
 * [Jakarta Server Faces 3.0 Specification Document](./jakarta-faces-3.0.pdf) (PDF)
 * [Jakarta Server Faces 3.0 Specification Document](./jakarta-faces-3.0.html) (HTML)
 * [Jakarta Server Faces 3.0 Javadoc](./apidocs)
-* [Jakarta Server Faces 2.3 Jsdoc](./jsdoc)
-* [Jakarta Server Faces 2.3 Renderkitdoc](./renderkitdoc)
-* [Jakarta Server Faces 2.3 VDLDoc](./vdldoc)
+* [Jakarta Server Faces 3.0 Jsdoc](./jsdoc)
+* [Jakarta Server Faces 3.0 Renderkitdoc](./renderkitdoc)
+* [Jakarta Server Faces 3.0 VDLDoc](./vdldoc)
 * [Jakarta Server Faces 3.0 TCK](https://download.eclipse.org/jakartaee/faces/jakarta-faces-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/faces/jakarta-faces-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/jakarta-faces-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/3.0.0/jar)
