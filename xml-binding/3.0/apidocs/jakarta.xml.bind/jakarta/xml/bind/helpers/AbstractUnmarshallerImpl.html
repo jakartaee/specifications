@@ -147,12 +147,10 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
  <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind"><code>Unmarshaller</code></a>interface.
  
  <p>
- A JAXB Provider has to implement five methods (getUnmarshallerHandler,
+ A Jakarta XML Binding Provider has to implement five methods (getUnmarshallerHandler,
  unmarshal(Node), unmarshal(XMLReader,InputSource),
  unmarshal(XMLStreamReader), and unmarshal(XMLEventReader).</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 1.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd><ul>
          <li>Kohsuke Kawaguchi, Sun Microsystems, Inc.</li>
@@ -419,7 +417,7 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)">unmarshal</a></span>&#8203;(javax.xml.stream.XMLEventReader&nbsp;reader,
          java.lang.Class&lt;T&gt;&nbsp;expectedType)</code></th>
 <td class="colLast">
-<div class="block">Unmarshal root element to JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal root element to Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.</div>
 </td>
 </tr>
@@ -436,7 +434,7 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)">unmarshal</a></span>&#8203;(javax.xml.stream.XMLStreamReader&nbsp;reader,
          java.lang.Class&lt;T&gt;&nbsp;expectedType)</code></th>
 <td class="colLast">
-<div class="block">Unmarshal root element to JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal root element to Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.</div>
 </td>
 </tr>
@@ -462,7 +460,7 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unmarshal(org.w3c.dom.Node,java.lang.Class)">unmarshal</a></span>&#8203;(org.w3c.dom.Node&nbsp;node,
          java.lang.Class&lt;T&gt;&nbsp;expectedType)</code></th>
 <td class="colLast">
-<div class="block">Unmarshal XML data by JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal XML data by Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.</div>
 </td>
 </tr>
@@ -593,33 +591,33 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
  <b>SAX 2.0 Parser Pluggability</b>
  <p>
  A client application can choose not to use the default parser mechanism
- supplied with their JAXB provider.  Any SAX 2.0 compliant parser can be
- substituted for the JAXB provider's default mechanism.  To do so, the
+ supplied with their Jakarta XML Binding provider.  Any SAX 2.0 compliant parser can be
+ substituted for the Jakarta XML Binding provider's default mechanism.  To do so, the
  client application must properly configure a <code>SAXSource</code> containing
  an <code>XMLReader</code> implemented by the SAX 2.0 parser provider.  If the
  <code>XMLReader</code> has an <code>org.xml.sax.ErrorHandler</code> registered
- on it, it will be replaced by the JAXB Provider so that validation errors
+ on it, it will be replaced by the Jakarta XML Binding Provider so that validation errors
  can be reported via the <code>ValidationEventHandler</code> mechanism of
- JAXB.  If the <code>SAXSource</code> does not contain an <code>XMLReader</code>,
- then the JAXB provider's default parser mechanism will be used.
+ Jakarta XML Binding.  If the <code>SAXSource</code> does not contain an <code>XMLReader</code>,
+ then the Jakarta XML Binding provider's default parser mechanism will be used.
  <p>
- This parser replacement mechanism can also be used to replace the JAXB
+ This parser replacement mechanism can also be used to replace the Jakarta XML Binding
  provider's unmarshal-time validation engine.  The client application 
  must properly configure their SAX 2.0 compliant parser to perform
  validation (as shown in the example above).  Any <code>SAXParserExceptions</code>
  encountered by the parser during the unmarshal operation will be
- processed by the JAXB provider and converted into JAXB 
+ processed by the Jakarta XML Binding provider and converted into Jakarta XML Binding 
  <code>ValidationEvent</code> objects which will be reported back to the
  client via the <code>ValidationEventHandler</code> registered with the
  <code>Unmarshaller</code>.  <i>Note:</i> specifying a substitute validating
  SAX 2.0 parser for unmarshalling does not necessarily replace the 
- validation engine used by the JAXB provider for performing on-demand 
+ validation engine used by the Jakarta XML Binding provider for performing on-demand 
  validation.
  <p>
  The only way for a client application to specify an alternate parser
  mechanism to be used during unmarshal is via the 
  <code>unmarshal(SAXSource)</code> API.  All other forms of the unmarshal
- method (File, URL, Node, etc) will use the JAXB provider's default 
+ method (File, URL, Node, etc) will use the Jakarta XML Binding provider's default 
  parser and validator mechanisms.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -847,7 +845,7 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
                      throws <a href="../JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></pre>
 <div class="block">Allow an application to register a validation event handler.
  <p>
- The validation event handler will be called by the JAXB Provider if any
+ The validation event handler will be called by the Jakarta XML Binding Provider if any
  validation errors are encountered during calls to any of the
  <code>unmarshal</code> methods.  If the client application does not register
  a validation event handler before invoking the unmarshal methods, then
@@ -1080,7 +1078,7 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
                                     java.lang.Class&lt;T&gt;&nbsp;expectedType)
                              throws <a href="../JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../Unmarshaller.html#unmarshal(org.w3c.dom.Node,java.lang.Class)">Unmarshaller</a></code></span></div>
-<div class="block">Unmarshal XML data by JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal XML data by Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.
 
  <p>
@@ -1091,9 +1089,9 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>node</code> - the document/element to unmarshal XML data from.
       The caller must support at least Document and Element.</dd>
-<dd><code>expectedType</code> - appropriate JAXB mapped class to hold <code>node</code>'s XML data.</dd>
+<dd><code>expectedType</code> - appropriate Jakarta XML Binding mapped class to hold <code>node</code>'s XML data.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><a href="#unmarshalDeclaredTypeReturn">JAXB Element</a> representation of <code>node</code></dd>
+<dd><a href="#unmarshalDeclaredTypeReturn">JAXBElement</a> representation of <code>node</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></code> - If any unexpected errors occur while unmarshalling</dd>
 <dd><code><a href="../UnmarshalException.html" title="class in jakarta.xml.bind">UnmarshalException</a></code> - If the <a href="../ValidationEventHandler.html" title="interface in jakarta.xml.bind"><code>ValidationEventHandler</code></a>
@@ -1127,9 +1125,9 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the XML Source to unmarshal XML data from (providers are
         only required to support SAXSource, DOMSource, and StreamSource)</dd>
-<dd><code>expectedType</code> - appropriate JAXB mapped class to hold <code>source</code>'s xml root element</dd>
+<dd><code>expectedType</code> - appropriate Jakarta XML Binding mapped class to hold <code>source</code>'s xml root element</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>Java content rooted by <a href="#unmarshalDeclaredTypeReturn">JAXB Element</a></dd>
+<dd>Java content rooted by <a href="#unmarshalDeclaredTypeReturn">JAXBElement</a></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></code> - If any unexpected errors occur while unmarshalling</dd>
 <dd><code><a href="../UnmarshalException.html" title="class in jakarta.xml.bind">UnmarshalException</a></code> - If the <a href="../ValidationEventHandler.html" title="interface in jakarta.xml.bind"><code>ValidationEventHandler</code></a>
@@ -1149,7 +1147,7 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
                                     java.lang.Class&lt;T&gt;&nbsp;expectedType)
                              throws <a href="../JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../Unmarshaller.html#unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)">Unmarshaller</a></code></span></div>
-<div class="block">Unmarshal root element to JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal root element to Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.
  
  <p>
@@ -1165,9 +1163,9 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
 <dd><code><a href="../Unmarshaller.html#unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)">unmarshal</a></code>&nbsp;in interface&nbsp;<code><a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">Unmarshaller</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>reader</code> - The parser to be read.</dd>
-<dd><code>expectedType</code> - appropriate JAXB mapped class to hold <code>reader</code>'s START_ELEMENT XML data.</dd>
+<dd><code>expectedType</code> - appropriate Jakarta XML Binding mapped class to hold <code>reader</code>'s START_ELEMENT XML data.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>content tree rooted by <a href="#unmarshalDeclaredTypeReturn">JAXB Element representation</a></dd>
+<dd>content tree rooted by <a href="#unmarshalDeclaredTypeReturn">JAXBElement</a> representation</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></code> - If any unexpected errors occur while unmarshalling</dd>
 <dd><code><a href="../UnmarshalException.html" title="class in jakarta.xml.bind">UnmarshalException</a></code> - If the <a href="../ValidationEventHandler.html" title="interface in jakarta.xml.bind"><code>ValidationEventHandler</code></a>
@@ -1187,7 +1185,7 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
                                     java.lang.Class&lt;T&gt;&nbsp;expectedType)
                              throws <a href="../JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../Unmarshaller.html#unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)">Unmarshaller</a></code></span></div>
-<div class="block">Unmarshal root element to JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal root element to Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.
  
  <p>
@@ -1204,9 +1202,9 @@ implements <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">
 <dd><code><a href="../Unmarshaller.html#unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)">unmarshal</a></code>&nbsp;in interface&nbsp;<code><a href="../Unmarshaller.html" title="interface in jakarta.xml.bind">Unmarshaller</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>reader</code> - The parser to be read.</dd>
-<dd><code>expectedType</code> - appropriate JAXB mapped class to hold <code>reader</code>'s START_ELEMENT XML data.</dd>
+<dd><code>expectedType</code> - appropriate Jakarta XML Binding mapped class to hold <code>reader</code>'s START_ELEMENT XML data.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>content tree rooted by <a href="#unmarshalDeclaredTypeReturn">JAXB Element representation</a></dd>
+<dd>content tree rooted by <a href="#unmarshalDeclaredTypeReturn">JAXBElement</a> representation</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></code> - If any unexpected errors occur while unmarshalling</dd>
 <dd><code><a href="../UnmarshalException.html" title="class in jakarta.xml.bind">UnmarshalException</a></code> - If the <a href="../ValidationEventHandler.html" title="interface in jakarta.xml.bind"><code>ValidationEventHandler</code></a>

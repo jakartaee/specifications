@@ -135,11 +135,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public abstract class <span class="typeNameLabel">AttachmentUnmarshaller</span>
 extends java.lang.Object</pre>
-<div class="block"><p>Enables JAXB unmarshalling of a root document containing optimized binary data formats.</p>
+<div class="block"><p>Enables Jakarta XML Binding unmarshalling of a root document containing optimized binary data formats.</p>
 
  <p>This API enables an efficient cooperative processing of optimized
- binary data formats between a JAXB 2.0 implementation and MIME-based package
- processor (MTOM/XOP and WS-I AP 1.0). JAXB unmarshals the body of a package, delegating the 
+ binary data formats between a Jakarta XML Binding implementation and MIME-based package
+ processor (MTOM/XOP and WS-I AP 1.0). Jakarta XML Binding unmarshals the body of a package, delegating the 
  understanding of the packaging format being used to a MIME-based 
  package processor that implements this abstract class.</p>
 
@@ -161,8 +161,6 @@ extends java.lang.Object</pre>
  </li>
  </ul></div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Marc Hadley, Kohsuke Kawaguchi, Joseph Fialli</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -230,7 +228,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isXOPPackage()">isXOPPackage</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Read-only property that returns true if JAXB unmarshaller needs to perform XOP processing.</div>
+<div class="block">Read-only property that returns true if Jakarta XML Binding unmarshaller needs to perform XOP processing.</div>
 </td>
 </tr>
 </table>
@@ -354,7 +352,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>isXOPPackage</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isXOPPackage()</pre>
-<div class="block"><p>Read-only property that returns true if JAXB unmarshaller needs to perform XOP processing.</p>
+<div class="block"><p>Read-only property that returns true if Jakarta XML Binding unmarshaller needs to perform XOP processing.</p>
 
  <p>This method returns <code>true</code> when the constraints specified
  in  <a href="http://www.w3.org/TR/2005/REC-xop10-20050125/#identifying_xop_documents">Identifying XOP Documents</a> are met.

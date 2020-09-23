@@ -150,13 +150,11 @@ implements <a href="../ValidationEventHandler.html" title="interface in jakarta.
  error or fatal error.
  
  <p>
- This handler is not the default handler for JAXB mapped classes following 
- JAXB 2.0 or later versions. Default validation event handling has changed 
+ This handler is not the default handler for Jakarta XML Binding mapped classes following 
+ Jakarta XML Binding or later versions. Default validation event handling has changed 
  and is specified in  <a href="../Unmarshaller.html" title="interface in jakarta.xml.bind"><code>Unmarshaller</code></a> and
  <a href="../Marshaller.html" title="interface in jakarta.xml.bind"><code>Marshaller</code></a>.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 1.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd><ul><li>Ryan Shoemaker, Sun Microsystems, Inc.</li></ul></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -270,7 +268,7 @@ implements <a href="../ValidationEventHandler.html" title="interface in jakarta.
  indicates where the error or warning occurred.
 
  <p>
- If an unchecked runtime exception is thrown from this method, the JAXB
+ If an unchecked runtime exception is thrown from this method, the Jakarta XML Binding
  provider will treat it as if the method returned false and interrupt
  the current unmarshal, validate, or marshal operation.</div>
 <dl>
@@ -280,7 +278,7 @@ implements <a href="../ValidationEventHandler.html" title="interface in jakarta.
 <dd><code>event</code> - the encapsulated validation event information.  It is a 
  provider error if this parameter is null.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>true if the JAXB Provider should attempt to continue the current
+<dd>true if the Jakarta XML Binding Provider should attempt to continue the current
          unmarshal, validate, or marshal operation after handling this 
          warning/error, false if the provider should terminate the current 
          operation with the appropriate <code>UnmarshalException</code>,

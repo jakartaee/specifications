@@ -135,11 +135,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public abstract class <span class="typeNameLabel">AttachmentMarshaller</span>
 extends java.lang.Object</pre>
-<div class="block"><p>Enable JAXB marshalling to optimize storage of binary data.
+<div class="block"><p>Enable Jakarta XML Binding marshalling to optimize storage of binary data.
 
  <p>This API enables an efficient cooperative creation of optimized
- binary data formats between a JAXB marshalling process and a MIME-based package
- processor. A JAXB implementation marshals the root body of a MIME-based package,
+ binary data formats between a Jakarta XML Binding marshalling process and a MIME-based package
+ processor. A Jakarta XML Binding implementation marshals the root body of a MIME-based package,
  delegating the creation of referenceable MIME parts to
  the MIME-based package processor that implements this abstraction.
 
@@ -149,11 +149,9 @@ extends java.lang.Object</pre>
 
  <p>WS-I Attachment Profile 1.0 is supported by
  <a href="#addSwaRefAttachment(jakarta.activation.DataHandler)"><code>addSwaRefAttachment(DataHandler)</code></a> being called by the
- marshaller for each JAXB property related to
+ marshaller for each Jakarta XML Binding property related to
  {http://ws-i.org/profiles/basic/1.1/xsd}swaRef.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Marc Hadley, Kohsuke Kawaguchi, Joseph Fialli</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -234,7 +232,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isXOPPackage()">isXOPPackage</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Read-only property that returns true if JAXB marshaller should enable XOP creation.</div>
+<div class="block">Read-only property that returns true if Jakarta XML Binding marshaller should enable XOP creation.</div>
 </td>
 </tr>
 </table>
@@ -292,7 +290,7 @@ extends java.lang.Object</pre>
 <div class="block"><p>Consider MIME content <code>data</code> for optimized binary storage as an attachment.
 
  <p>
- This method is called by JAXB marshal process when <a href="#isXOPPackage()"><code>isXOPPackage()</code></a> is
+ This method is called by Jakarta XML Binding marshal process when <a href="#isXOPPackage()"><code>isXOPPackage()</code></a> is
  <code>true</code>, for each element whose datatype is "base64Binary", as described in
  Step 3 in
  <a href="http://www.w3.org/TR/2005/REC-xop10-20050125/#creating_xop_packages">Creating XOP Packages</a>.
@@ -303,14 +301,14 @@ extends java.lang.Object</pre>
  of the binary data as a MIME part, it is responsible for attaching <code>data</code> to the
  MIME-based package, and then assigning an unique content-id, cid, that identifies
  the MIME part within the MIME message. This method returns the cid,
- which enables the JAXB marshaller to marshal a XOP element that refers to that cid in place
- of marshalling the binary data. When the method returns null, the JAXB marshaller
+ which enables the Jakarta XML Binding marshaller to marshal a XOP element that refers to that cid in place
+ of marshalling the binary data. When the method returns null, the Jakarta XML Binding marshaller
  inlines <code>data</code> as base64binary data.
 
  <p>
  The caller of this method is required to meet the following constraint.
  If the element infoset item containing <code>data</code> has the attribute
- <code>xmime:contentType</code> or if the JAXB property/field representing
+ <code>xmime:contentType</code> or if the Jakarta XML Binding property/field representing
  <code>data</code> is annotated with a known MIME type,
  <code>data.getContentType()</code> should be set to that MIME type.
 
@@ -365,7 +363,7 @@ extends java.lang.Object</pre>
        must be non-negative and no larger than array.length</dd>
 <dd><code>length</code> - The number of bytes to be read from the given array;
        must be non-negative and no larger than array.length</dd>
-<dd><code>mimeType</code> - If the data has an associated MIME type known to JAXB, that is passed
+<dd><code>mimeType</code> - If the data has an associated MIME type known to Jakarta XML Binding, that is passed
       as this parameter. If none is known, "application/octet-stream".
       This parameter may never be null.</dd>
 <dd><code>elementNamespace</code> - the namespace URI of the element that encloses the base64Binary data.
@@ -386,7 +384,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>isXOPPackage</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isXOPPackage()</pre>
-<div class="block"><p>Read-only property that returns true if JAXB marshaller should enable XOP creation.
+<div class="block"><p>Read-only property that returns true if Jakarta XML Binding marshaller should enable XOP creation.
 
  <p>This value must not change during the marshalling process. When this
  value is true, the <code>addMtomAttachment(...)</code> method
@@ -422,7 +420,7 @@ extends java.lang.Object</pre>
 <div class="block"><p>Add MIME <code>data</code> as an attachment and return attachment's content-id, cid.
 
  <p>
- This method is called by JAXB marshal process for each element/attribute typed as
+ This method is called by Jakarta XML Binding marshal process for each element/attribute typed as
  {http://ws-i.org/profiles/basic/1.1/xsd}swaRef. The MIME-based package processor
  implementing this method is responsible for attaching the specified data to a
  MIME attachment, and generating a content-id, cid, that uniquely identifies the attachment

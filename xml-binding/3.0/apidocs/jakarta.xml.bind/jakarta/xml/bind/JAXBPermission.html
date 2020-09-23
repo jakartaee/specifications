@@ -143,13 +143,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public final class <span class="typeNameLabel">JAXBPermission</span>
 extends java.security.BasicPermission</pre>
-<div class="block">This class is for JAXB permissions. A <code>JAXBPermission</code>
+<div class="block">This class is for Jakarta XML Binding permissions. A <code>JAXBPermission</code>
  contains a name (also referred to as a "target name") but
  no actions list; you either have the named permission
  or you don't.
 
  <P>
- The target name is the name of the JAXB permission (see below).
+ The target name is the name of the Jakarta XML Binding permission (see below).
 
  <P>
  The following table lists all the possible <code>JAXBPermission</code> target names,
@@ -176,7 +176,7 @@ extends java.security.BasicPermission</pre>
    </td>
    <td>
      Malicious code can set <a href="DatatypeConverterInterface.html" title="interface in jakarta.xml.bind"><code>DatatypeConverterInterface</code></a>, which has
-     VM-wide singleton semantics,  before a genuine JAXB implementation sets one.
+     VM-wide singleton semantics,  before a genuine Jakarta XML Binding implementation sets one.
      This allows malicious code to gain access to objects that it may otherwise
      not have access to, such as <code>Frame.getFrames()</code> that belongs to
      another application running in the same JVM.
@@ -185,8 +185,6 @@ extends java.security.BasicPermission</pre>
  </tbody>
  </table></div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAXB 2.2</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Joe Fialli</dd>
 <dt><span class="seeLabel">See Also:</span></dt>

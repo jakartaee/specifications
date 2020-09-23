@@ -129,10 +129,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block"><p>Factory that creates new <code>JAXBContext</code> instances.
 
  JAXBContextFactory can be located using <code>ServiceLoader.load(Class)</code></div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>9, JAXB 2.3</dd>
-</dl>
 </li>
 </ul>
 </div>
@@ -207,7 +203,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>classesToBeBound</code> - List of java classes to be recognized by the new <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a>.
       Classes in <code>classesToBeBound</code> that are in named modules must be in a package
-      that is <code>open</code> to at least the <code>java.xml.bind</code> module.
+      that is <code>open</code> to at least the <code>jakarta.xml.bind</code> module.
       Can be empty, in which case a <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a> that only knows about
       spec-defined classes will be returned.</dd>
 <dd><code>properties</code> - provider-specific properties. Can be null, which means the same thing as passing
@@ -218,17 +214,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code><a href="JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></code> - if an error was encountered while creating the
       <code>JAXBContext</code>, such as (but not limited to):
  <ol>
-  <li>No JAXB implementation was discovered
-  <li>Classes use JAXB annotations incorrectly
+  <li>No Jakarta XML Binding implementation was discovered
+  <li>Classes use Jakarta XML Binding annotations incorrectly
   <li>Classes have colliding annotations (i.e., two classes with the same type name)
-  <li>The JAXB implementation was unable to locate
+  <li>The Jakarta XML Binding implementation was unable to locate
       provider-specific out-of-band information (such as additional
       files generated at the development time.)
-  <li><code>classesToBeBound</code> are not open to <code>java.xml.bind</code> module
+  <li><code>classesToBeBound</code> are not open to <code>jakarta.xml.bind</code> module
  </ol></dd>
 <dd><code>java.lang.IllegalArgumentException</code> - if the parameter contains <code>null</code> (i.e., <code>newInstance(null,someMap);</code>)</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>9, JAXB 2.3</dd>
 </dl>
 </li>
 </ul>
@@ -255,7 +249,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>contextPath</code> - List of java package names that contain schema derived classes.
       Classes in <code>classesToBeBound</code> that are in named modules must be in a package
-      that is <code>open</code> to at least the <code>java.xml.bind</code> module.</dd>
+      that is <code>open</code> to at least the <code>jakarta.xml.bind</code> module.</dd>
 <dd><code>classLoader</code> - This class loader will be used to locate the implementation classes.</dd>
 <dd><code>properties</code> - provider-specific properties. Can be null, which means the same thing as passing
       in an empty map.</dd>
@@ -269,10 +263,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
    <li>an ambiguity among global elements contained in the contextPath</li>
    <li>failure to locate a value for the context factory provider property</li>
    <li>mixing schema derived packages from different providers on the same contextPath</li>
-   <li>packages are not open to <code>java.xml.bind</code> module</li>
+   <li>packages are not open to <code>jakarta.xml.bind</code> module</li>
  </ol></dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>9, JAXB 2.3</dd>
 </dl>
 </li>
 </ul>

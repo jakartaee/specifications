@@ -135,25 +135,25 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public final class <span class="typeNameLabel">JAXB</span>
 extends java.lang.Object</pre>
-<div class="block">Class that defines convenience methods for common, simple use of JAXB.
+<div class="block">Class that defines convenience methods for common, simple use of Jakarta XML Binding.
 
  <p>
  Methods defined in this class are convenience methods that combine several basic operations
  in the <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a>, <a href="Unmarshaller.html" title="interface in jakarta.xml.bind"><code>Unmarshaller</code></a>, and <a href="Marshaller.html" title="interface in jakarta.xml.bind"><code>Marshaller</code></a>.
 
  They are designed
- to be the prefered methods for developers new to JAXB. They have
+ to be the prefered methods for developers new to Jakarta XML Binding. They have
  the following characterstics:
 
  <ol>
   <li>Generally speaking, the performance is not necessarily optimal.
       It is expected that people who need to write performance
-      critical code will use the rest of the JAXB API directly.
+      critical code will use the rest of the Jakarta XML Binding API directly.
   <li>Errors that happen during the processing is wrapped into
       <a href="DataBindingException.html" title="class in jakarta.xml.bind"><code>DataBindingException</code></a> (which will have <a href="JAXBException.html" title="class in jakarta.xml.bind"><code>JAXBException</code></a>
       as its <code>cause</code>. It is expected that
       people who prefer the checked exception would use
-      the rest of the JAXB API directly.
+      the rest of the Jakarta XML Binding API directly.
  </ol>
 
  <p>
@@ -180,8 +180,6 @@ extends java.lang.Object</pre>
  The <code>unmarshal</code> methods either fail with an exception or return
  a non-null value.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.1</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Kohsuke Kawaguchi</dd>
 </dl>

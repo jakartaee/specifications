@@ -127,9 +127,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public interface <span class="typeNameLabel">DatatypeConverterInterface</span></pre>
 <div class="block"><p>
- The DatatypeConverterInterface is for JAXB provider use only. A
- JAXB provider must supply a class that implements this interface.
- JAXB Providers are required to call the
+ The DatatypeConverterInterface is for Jakarta XML Binding provider use only. A
+ Jakarta XML Binding provider must supply a class that implements this interface.
+ Jakarta XML Binding Providers are required to call the
  <a href="DatatypeConverter.html#setDatatypeConverter(jakarta.xml.bind.DatatypeConverterInterface)"><code>DatatypeConverter.setDatatypeConverter</code></a> api at
  some point before the first marshal or unmarshal operation (perhaps during
  the call to JAXBContext.newInstance).  This step is necessary to configure
@@ -141,7 +141,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <p>
  This interface defines the parse and print methods. There is one
  parse and print method for each XML schema datatype specified in the
- the default binding Table 5-1 in the JAXB specification.
+ the default binding Table 5-1 in the Jakarta XML Binding specification.
 
  <p>
  The parse and print methods defined here are invoked by the static parse
@@ -167,8 +167,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <a href="http://www.w3.org/TR/xmlschema-2/"> XML Schema Part2: Datatypes
  specification.</a></div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 1.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd><ul>
          <li>Sekhar Vajjhala, Sun Microsystems, Inc.</li>

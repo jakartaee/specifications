@@ -140,16 +140,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 
  <p>
  Implementations hide how a portion of XML is converted into/from such
- DOM-like representation, allowing JAXB providers to work with arbitrary
+ DOM-like representation, allowing Jakarta XML Binding providers to work with arbitrary
  such library.
 
  <P>
  This interface is intended to be implemented by library writers
- and consumed by JAXB providers. None of those methods are intended to
+ and consumed by Jakarta XML Binding providers. None of those methods are intended to
  be called from applications.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Kohsuke Kawaguchi</dd>
 </dl>
@@ -177,7 +175,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code><a href="DomHandler.html" title="type parameter in DomHandler">ResultT</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createUnmarshaller(jakarta.xml.bind.ValidationEventHandler)">createUnmarshaller</a></span>&#8203;(<a href="../ValidationEventHandler.html" title="interface in jakarta.xml.bind">ValidationEventHandler</a>&nbsp;errorHandler)</code></th>
 <td class="colLast">
-<div class="block">When a JAXB provider needs to unmarshal a part of a document into an
+<div class="block">When a Jakarta XML Binding provider needs to unmarshal a part of a document into an
  infoset representation, it first calls this method to create a
  <code>Result</code> object.</div>
 </td>
@@ -194,7 +192,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#marshal(ElementT,jakarta.xml.bind.ValidationEventHandler)">marshal</a></span>&#8203;(<a href="DomHandler.html" title="type parameter in DomHandler">ElementT</a>&nbsp;n,
        <a href="../ValidationEventHandler.html" title="interface in jakarta.xml.bind">ValidationEventHandler</a>&nbsp;errorHandler)</code></th>
 <td class="colLast">
-<div class="block">This method is called when a JAXB provider needs to marshal an element
+<div class="block">This method is called when a Jakarta XML Binding provider needs to marshal an element
  to XML.</div>
 </td>
 </tr>
@@ -222,12 +220,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>createUnmarshaller</h4>
 <pre class="methodSignature"><a href="DomHandler.html" title="type parameter in DomHandler">ResultT</a>&nbsp;createUnmarshaller&#8203;(<a href="../ValidationEventHandler.html" title="interface in jakarta.xml.bind">ValidationEventHandler</a>&nbsp;errorHandler)</pre>
-<div class="block">When a JAXB provider needs to unmarshal a part of a document into an
+<div class="block">When a Jakarta XML Binding provider needs to unmarshal a part of a document into an
  infoset representation, it first calls this method to create a
  <code>Result</code> object.
 
  <p>
- A JAXB provider will then send a portion of the XML
+ A Jakarta XML Binding provider will then send a portion of the XML
  into the given result. Such a portion always form a subtree
  of the whole XML document rooted at an element.</div>
 <dl>
@@ -256,7 +254,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>getElement</h4>
 <pre class="methodSignature"><a href="DomHandler.html" title="type parameter in DomHandler">ElementT</a>&nbsp;getElement&#8203;(<a href="DomHandler.html" title="type parameter in DomHandler">ResultT</a>&nbsp;rt)</pre>
 <div class="block">Once the portion is sent to the <code>Result</code>. This method is called
- by a JAXB provider to obtain the unmarshalled element representation.
+ by a Jakarta XML Binding provider to obtain the unmarshalled element representation.
 
  <p>
  Multiple invocations of this method may return different objects.
@@ -281,13 +279,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>marshal</h4>
 <pre class="methodSignature">javax.xml.transform.Source&nbsp;marshal&#8203;(<a href="DomHandler.html" title="type parameter in DomHandler">ElementT</a>&nbsp;n,
                                    <a href="../ValidationEventHandler.html" title="interface in jakarta.xml.bind">ValidationEventHandler</a>&nbsp;errorHandler)</pre>
-<div class="block">This method is called when a JAXB provider needs to marshal an element
+<div class="block">This method is called when a Jakarta XML Binding provider needs to marshal an element
  to XML.
 
  <p>
  If non-null, the returned <code>Source</code> must contain a whole document
  rooted at one element, which will then be weaved into a bigger document
- that the JAXB provider is marshalling.</div>
+ that the Jakarta XML Binding provider is marshalling.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>errorHandler</code> - Receives any errors happened during the process of converting
