@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Messaging 3.0"
-date: 2020-06-12
+date: 2020-09-22
 summary: "Release for Jakarta EE 9"
 ---
 
