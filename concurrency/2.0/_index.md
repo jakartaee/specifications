@@ -17,7 +17,7 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 
 # Compatible Implementations
 
-* [Jakarta Concurrency CI 2.0.0-RC2](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/org/glassfish/jakarta.enterprise.concurrent/2.0.0/jakarta.enterprise.concurrent-2.0.0.jar)
+* [Jakarta Concurrency CI 2.0.0](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/org/glassfish/jakarta.enterprise.concurrent/2.0.0/jakarta.enterprise.concurrent-2.0.0.jar)
 
 # Ballots
 
