@@ -10,14 +10,14 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 * [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0.pdf) (PDF)
 * [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0.html) (HTML)
 * [Jakarta Connectors 2.0 Javadoc](./apidocs)
-* [Jakarta Connectors 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Connectors 2.0 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9-eftl/staged-900/jakarta-connectors-tck-2.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.resource:jakarta.resource-api:jar:2.0.0-RC2](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/jakarta/resource/jakarta.resource-api/2.0.0-RC2/jakarta.resource-api-2.0.0-RC2.jar)
+  * [jakarta.resource:jakarta.resource-api:jar:2.0.0](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/jakarta/resource/jakarta.resource-api/2.0.0jakarta.resource-api-2.0.0.jar)
 
 
 # Compatible Implementations
 
-* [Eclipse GlassFish 6.0.0-M1]()
+* [Eclipse GlassFish 6.0.0-M1](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-6.0.0-M1.zip)
 
 # Ballots
 
@@ -25,7 +25,7 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 
 [//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.  For those Projects, just use the following statement in this Plan Review section:)
 
-This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/).  
+This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/). 
 Please reference that ballot for the official results.
 
 [//]: # (If your Project was required to do a standalone Plan Review...  You'll need to perform an official Plan Review ballot and record the results here.)
