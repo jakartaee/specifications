@@ -10,9 +10,9 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 * [Jakarta Concurrency 2.0 Specification Document](./concurrency-spec-2.0.pdf) (PDF)
 * [Jakarta Concurrency 2.0 Specification Document](./concurrency-spec-2.0.html) (HTML)
 * [Jakarta Concurrency 2.0 Javadoc](./apidocs)
-* [Jakarta Concurrency 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Concurrency 2.0 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9-eftl/staged-900/jakarta-concurrency-tck-2.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:2.0.0-RC2](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/2.0.0/jakarta.enterprise.concurrent-api-2.0.0.jar)
+  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:2.0.0](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/2.0.0/jakarta.enterprise.concurrent-api-2.0.0.jar)
 
 
 # Compatible Implementations
