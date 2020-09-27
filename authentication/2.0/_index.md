@@ -22,7 +22,7 @@ Jakarta Authentication consists of several profiles, with each profile telling h
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 6.0.0-M2-servlet5](https://github.com/eclipse-ee4j/glassfish/releases/tag/6.0.0-M2-servlet5)
+* [Eclipse Glassfish 6.0.0-SNAPSHOT-2020-09-20](https://download.eclipse.org/ee4j/glassfish/weekly/glassfish-6.0.0-SNAPSHOT-2020-09-20.zip)
 
 # Ballots
 
@@ -39,17 +39,18 @@ Please reference that ballot for the official results.
 
 The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
 
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Representative                                      | Representative for: | Vote |
+|-----------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                      | Fujitsu             |      |
+| Dan Bandera, Kevin Sutter                           | IBM                 |      |
+| Ed Bratt, Dmitry Kornilov                           | Oracle              |      |
+| Andrew Pielage, Matt Gill                           | Payara              |      |
+| Scott Stark, Mark Little                            | Red Hat             |      |
+| David Blevins, Jean-Louis Monteiro, Cesar Hernandez | Tomitribe           |      |
+| Ivar Grimstad                                       | EE4J PMC            |      |
+| Marcelo Ancelmo, Martijn Verburg                    | Participant Members |      |
+| Werner Keil                                         | Committer Members   |      |
+| Scott (Congquan) Wang                               | Enterprise Members  |      |
+|                                                     | Total               |      |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
