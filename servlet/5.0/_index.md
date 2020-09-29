@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Servlet 5.0"
-date: 2020-09-07
+date: 2020-09-29
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
@@ -32,21 +32,25 @@ Please reference that ballot for the official results.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-09-29 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
-| Kenji Kazumura                                 | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Ed Bratt, Dmitry Kornilov                      | Oracle              |      |
-| Andrew Pielage, Matt Gill                      | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Jean-Louis Monteiro             | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Marcelo Ancelmo, Martijn Verburg               | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-| Scott (Congquan) Wang                          | Enterprise Members  |      |
-|                                                | Total               |      |
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |  +1  |
+| Scott Stark, Mark Little                       | Red Hat             |  +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+| Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
+|                                                | Total               |  10  |
 
+| Non-binding Votes                              | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Greg Wilkins                                   | Committer           |  +1  |
+|                                                | Total               |   1  |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00898.html).
