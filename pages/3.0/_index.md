@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Server Pages 3.0 (milestone)"
-date: 2020-06-13
+title: "Jakarta Server Pages 3.0"
+date: 2020-09-29
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Server Pages defines a template engine for web applications that supports mixing of textual content
@@ -9,17 +9,17 @@ into a Jakarta Servlet.
 
 * [Jakarta Server Pages 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/3.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Server Pages 3.0 Specification Document](./server-pages-spec-3.0-RC2.pdf) (PDF)
-* [Jakarta Server Pages 3.0 Specification Document](./server-pages-spec-3.0-RC2.html) (HTML)
+* [Jakarta Server Pages 3.0 Specification Document](./jakarta-server-pages-spec-3.0.pdf) (PDF)
+* [Jakarta Server Pages 3.0 Specification Document](./jakarta-server-pages-spec-3.0.html) (HTML)
 * [Jakarta Server Pages 3.0 Javadoc](./apidocs)
-* [Jakarta Server Pages 3.0 TCK](http://download.eclipse.org/ee4j/jakartaee-tck/master/nightly/pages-tck-3.0.0.zip)([sig](),[sha](),[pub]())
+* [Jakarta Server Pages 3.0 TCK](https://download.eclipse.org/jakartaee/pages/3.0/jakarta-pages-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/pages/3.0/jakarta-pages-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/pages/3.0/jakarta-pages-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.pages:jakarta.pages-api:jar:3.0.0](https://repo1.maven.org/maven2/jakarta/servlet/jsp/jakarta.servlet.jsp-api/3.0.0-RC2/)
+  * [jakarta.pages:jakarta.pages-api:jar:3.0.0](https://repo1.maven.org/maven2/jakarta/servlet/jsp/jakarta.servlet.jsp-api/3.0.0/)
 
 
 # Compatible Implementations
 
-* [Apache Tomcat 10.0.0-M6](https://tomcat.apache.org/download-10.cgi)
+* [Apache Tomcat 10.0.0-M8](https://tomcat.apache.org/download-10.cgi)
 
 
 # Ballots

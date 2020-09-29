@@ -444,9 +444,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Jakarta Server Pages Team, https://projects.eclipse.org/projects/ee4j.jsp</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jsp-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jsp-dev</a></span><br>
-<span id="revnumber"> 3.0-RC2,</span>
-<span id="revdate">June 13, 2020</span>
-<br><span id="revremark">DRAFT</span>
+<span id="revnumber"> 3.0,</span>
+<span id="revdate">September 29, 2020</span>
+<br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -905,11 +905,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre>Specification: Jakarta Server Pages
 
-Version: 3.0-RC2
+Version: 3.0
 
-Status: DRAFT
+Status: Final
 
-Release: June 13, 2020</pre>
+Release: September 29, 2020</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1012,7 +1012,7 @@ registered trademarks of Oracle and/or its affiliates. Other names
 may be trademarks of their respective owners.</p>
 </div>
 <div class="paragraph">
-<p>The Jakarta Server Pages Team - June 13, 2020</p>
+<p>The Jakarta Server Pages Team - September 29, 2020</p>
 </div>
 <div class="paragraph">
 <p>Comments to: <a href="mailto:jsp-dev@eclipse.org">jsp-dev@eclipse.org</a></p>
@@ -5591,7 +5591,7 @@ expression using the <code>#{}</code> syntax.</p>
 equal to the type specified in the TLD). The expression is not
 evaluated. The result of parsing the expression is passed directly to
 the setter method of the tag attribute, whose argument type must be
-<code>javax.el.ValueExpression</code>. This allows for deferred evaluation of EL
+<code>jakarta.el.ValueExpression</code>. This allows for deferred evaluation of EL
 expressions. When the expression is evaluated by the tag handler, the
 value is coerced to the expected type. If a static value is provided, it
 is converted to a <code>ValueExpression</code> where <code>isLiteralText()</code> returns
@@ -9599,10 +9599,9 @@ jsp:root is the version of the JSP specification used:</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>version</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(required) The version of the JSP
-specification used in this page. Valid values are "1.2", "2.0", and
-"2.1". It is a translation error if the container does not support the
-specified version.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(required) The version of the JSP specification used in this page.
+Valid values are "1.2", "2.0", "2.1", "2.2", "2.3" and "3.0".
+It is a translation error if the container does not support the specified version.</p></td>
 </tr>
 </tbody>
 </table>
@@ -15813,8 +15812,8 @@ container that support the corresponding component contracts.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
- 3.0-RC2<br>
-Last updated 2020-06-08 22:25:26 +0100
+ 3.0<br>
+Last updated 2020-07-23 13:05:20 -0400
 </div>
 </div>
 <style>
