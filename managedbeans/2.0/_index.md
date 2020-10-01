@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Managed Beans 2.0"
-date: 2020-09-01
+date: 2020-10-01
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Managed Beans defines a set of basic services for container-managed objects
@@ -11,7 +11,7 @@ with minimal requirements, otherwise known under the acronym POJOs (Plain Old Ja
 * [Jakarta Managed Beans 2.0 Specification Document](./jakarta-managedbeans-spec-2.0.pdf) (PDF)
 * [Jakarta Managed Beans 2.0 Specification Document](./jakarta-managedbeans-spec-2.0.html) (HTML)
 * Jakarta Managed Beans 2.0 Javadoc - N/A (covered by [Jakarta Annotations](https://jakarta.ee/specifications/annotations/2.0/))
-* Jakarta Managed Beans 2.0 TCK - N/A  (covered by [Jakarta EE 9 Platform TCK](https://download.eclipse.org/jakartaee/platform/9/eclipse-jakartaeetck-9.0.0.zip) ([sig](),[sha](),[pub]()))
+* Jakarta Managed Beans 2.0 TCK - N/A  (covered by [Jakarta EE 9 Platform TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub)))
 * Maven coordinates (provided by Jakarta Annotations)
   * [jakarta.annotation:jakarta.annotation-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.0.0/jar)
 
