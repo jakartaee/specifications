@@ -9,7 +9,7 @@ Jakarta MVC defines a standard for creating web applications following the actio
 * [Jakarta MVC 1.1 Specification Document](./jakarta-mvc-spec-1.1.pdf) (PDF)
 * [Jakarta MVC 1.1 Specification Document](./jakarta-mvc-spec-1.1.html) (HTML)
 * [Jakarta MVC 1.1 Javadoc](./apidocs)
-* [Jakarta MVC 1.1 TCK](http://downloads.eclipse.org/jakarta/mvc/1.1.0/mvc-tck-1.1.0.zip)
+* [Jakarta MVC 1.1 TCK](http://downloads.eclipse.org/jakarta/mvc/1.1./mvc-tck-1.1.0.zip)
 * Maven coordinates
   * [jakarta.mvc:jakarta.mvc-api:jar:1.1.0](https://search.maven.org/artifact/jakarta.mvc/jakarta.mvc-api/1.1.0/jar)
 
