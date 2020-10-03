@@ -7,7 +7,7 @@ Jakarta Server Faces defines an MVC framework for building user interfaces for w
 including UI components, state management, event handing, input validation, page navigation, and
 support for internationalization and accessibility.
 
-* [Jakarta Server Faces 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/3.0.0)
+* [Jakarta Server Faces 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/3.0.0/plan)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Server Faces 3.0 Specification Document](./jakarta-faces-3.0.pdf) (PDF)
 * [Jakarta Server Faces 3.0 Specification Document](./jakarta-faces-3.0.html) (HTML)
@@ -15,14 +15,14 @@ support for internationalization and accessibility.
 * [Jakarta Server Faces 3.0 Jsdoc](./jsdoc)
 * [Jakarta Server Faces 3.0 Renderkitdoc](./renderkitdoc)
 * [Jakarta Server Faces 3.0 VDLDoc](./vdldoc)
-* [Jakarta Server Faces 3.0 TCK](https://download.eclipse.org/jakartaee/faces/jakarta-faces-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/faces/jakarta-faces-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/jakarta-faces-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Server Faces 3.0 TCK](https://download.eclipse.org/jakartaee/faces/3.0/jakarta-faces-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/faces/3.0/jakarta-faces-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/3.0/jakarta-faces-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/3.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Mojarra 3.0.0-RC2](https://eclipse-ee4j.github.io/mojarra)
+* [Mojarra 3.0.0-RC4](https://eclipse-ee4j.github.io/mojarra)
 
 # Ballots
 
