@@ -1,5 +1,5 @@
 ---
-title: "Jakarta NoSQL"
+title: "Jakarta NoSQL 1.0 (under development)"
 date: 2020-07-23
 summary: "Under Development"
 ---
