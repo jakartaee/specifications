@@ -23,19 +23,19 @@ Jakarta MVC defines a standard for creating web applications following the actio
 
 This Specification Project's Plan Review was covered by the Creation Review which concluded successfully on 2020-05-21 with the following results:
 
-|                       |  +1     | -1      |
-|-----------------------|---------|---------|
-|Fujitsu                | &check; |         |
-|IBM                    | &check; |         |
-|Oracle                 | &check; |         |
-|Payara                 |         |         |
-|Red Hat                | &check; |         |
-|Tomitribe              | &check; |         |
-|EE4J PMC               | &check; |         |
-|Enterprise Members     |         |         |
-|Participant Members    | &check; |         |
-|Committer Members      | &check; |         |
-|**Total**              |  **8**  |         |
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |      |
+| Scott Stark, Mark Little                       | Red Hat             |  +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+| Scott (Congquan) Wang                          | Enterprise Members  |      |
+|                                                | **Total**           | **8**|
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00650.html)
 
