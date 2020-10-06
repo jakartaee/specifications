@@ -1,6 +1,6 @@
 ---
 title: "Jakarta WebSocket 2.0"
-date: 2020-mm-dd
+date: 2020-10-06
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta WebSocket defines a API for Server and Client Endpoints
