@@ -15,7 +15,7 @@ Jakarta MVC defines a standard for creating web applications following the actio
 
 # Compatible Implementations
 
-* [Eclipse Krazo 1.1.0](https://projects.eclipse.org/projects/ee4j.krazo)
+* [Eclipse Krazo 1.1.0](https://eclipse-ee4j.github.io/krazo/downloads/1.1.0.html)
 
 # Ballots
 
