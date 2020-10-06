@@ -17,12 +17,11 @@ https://github.com/eclipse-ee4j/nosql/pull/55
 A point that we are also studying is the [Quarkus](https://quarkus.io/) and [Micronaut](https://micronaut.io/) effect that uses the Annotation Processor instead of reflection and seeing how to make an API that is possible in both directions.
 
 
-* [Jakarta NoSQL Document](./nosql-1.0.0-b2.pdf) (PDF)
-* [Jakarta NoSQL Document](./nosql-1.0.0-b2.html) (HTML)
-* [Jakarta NoSQL Javadoc](./apidocs)
-* [Jakarta NoSQL TCK](https://github.com/eclipse/jnosql/archive/1.0.0-b2.zip)([sig](),[sha](),[pub]())
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b2.pdf) (PDF)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b2.html) (HTML)
+* [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
+* [Jakarta NoSQL 1.0 Specification Document TCK](https://github.com/eclipse/jnosql/archive/1.0.0-b2.zip)([sig](),[sha](),[pub]())
   
-
 * Maven coordinates
   * [jakarta.nosql.communication:communication-core:jar:1.0.0-b2](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-core/1.0.0-b2/)
   * [jakarta.nosql.communication:communication-column:jar:1.0.0-b2](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-column/1.0.0-b2/)
