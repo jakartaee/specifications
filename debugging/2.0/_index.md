@@ -17,7 +17,7 @@ the original source (for example, source file and line number references).
 
 # Compatible Implementations
 
-* [Apache Tomcat 10.0.0-M7](https://tomcat.apache.org/download-10.cgi)
+* [Eclipse GlassFish 6.0](https://download.eclipse.org/ee4j/glassfish/weekly/glassfish-6.0.0-SNAPSHOT-2020-09-06.zip)
 
 
 # Ballots
