@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>debug (Jakarta Server Faces 3.0.0 VDL Documentation)
@@ -75,7 +75,7 @@
             namely the current state of the component
             tree and the scoped variables in the application, when the component
             is rendered. If the user presses CTRL + SHIFT + d,
-            JSF opens a window that shows the debugging information captured by
+            Faces opens a window that shows the debugging information captured by
             the debug component.
             </p>
 
@@ -122,7 +122,7 @@
                     </thead>
                     <tbody>
                         <tr id="hotkey" class="rowColor">
-                            <td class="colFirst"><a href="#hotkey"><code>hotkey</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#hotkey"><code>hotkey</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
@@ -131,7 +131,7 @@
                 <div class="changed_added_2_0">
                 <p>
                 Defines a single character, that, pressed in conjunction with
-                CTRL and SHIFT, will display the JSF debug window.
+                CTRL and SHIFT, will display the Faces debug window.
                 By default, the hotkey is 'd'. <em>The value for the
                 hotkey attribute cannot be an EL expression.</em>
                 </p>
@@ -141,7 +141,7 @@
             </td>
                         </tr>
                         <tr id="rendered" class="altColor">
-                            <td class="colFirst"><a href="#rendered"><code>rendered</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#rendered"><code>rendered</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">

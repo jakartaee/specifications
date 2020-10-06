@@ -1,10 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>
-            outputScript
-         (Jakarta Server Faces 3.0.0 VDL Documentation)
+        <title>outputScript (Jakarta Server Faces 3.0.0 VDL Documentation)
 			</title>
         <meta name="keywords" content="$title">
         <link rel="stylesheet" type="text/css" title="Style" href="../jsf-api.css">
@@ -31,12 +29,12 @@
         <div class="subNav">
             <ul class="navList">
                 <li>
-                    <a target="_top" href="../index.html?html_basic/%0A            outputScript%0A        .html">
+                    <a target="_top" href="../index.html?html_basic/outputScript.html">
 									Frames
 								</a>
                 </li>
                 <li>
-                    <a target="_top" href="%0A            outputScript%0A        .html">
+                    <a target="_top" href="outputScript.html">
 									No Frames
 								</a>
                 </li>
@@ -57,9 +55,7 @@
             <h1 title="Library" class="title">html_basic</h1>
             <h2 class="title">
 							Tag
-							
-            outputScript
-        </h2>
+							outputScript</h2>
         </div>
         <div class="contentContainer">
             <div class="description">
@@ -76,20 +72,20 @@
             <code>name</code> attribute and <code>library</code> attributes.</p>
             
             <p>The implementation of this renderer must have a <a target="_"
-            href="../../javadocs/javax/faces/event/ListenerFor.html"><code>@ListenerFor</code></a>
+            href="../../javadocs/jakarta/faces/event/ListenerFor.html"><code>@ListenerFor</code></a>
             annotation attached to it, at the class level, declaring <a target="_"
-            href="../../javadocs/javax/faces/event/PostAddToViewEvent.html"><code>PostAddToViewEvent.class</code></a>
+            href="../../javadocs/jakarta/faces/event/PostAddToViewEvent.html"><code>PostAddToViewEvent.class</code></a>
             as the value of the <code>systemEventClass</code> attribute.  The presence of
             this annotation on a renderer implies the renderer implements <a
             target="_"
-            href="../../javadocs/javax/faces/event/ComponentSystemEventListener.html"><code>ComponentSystemEventListener</code></a>,
+            href="../../javadocs/jakarta/faces/event/ComponentSystemEventListener.html"><code>ComponentSystemEventListener</code></a>,
             which this renderer must do.  The implementation of
             <code>processEvent()</code> must extract the <code>UIComponent</code>
             from the argument event and look for the presence of the key
             "<code>target</code>" in the component's attribute <code>Map</code>.  If
             and only if such a key is present, the implementation of
             <code>processEvent()</code> must pass the component to <a target="_"
-            href="../../javadocs/javax/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20javax.faces.component.UIComponent)"><code>UIViewRoot.addComponentResource()</code></a>.</p>
+            href="../../javadocs/jakarta/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20jakarta.faces.component.UIComponent)"><code>UIViewRoot.addComponentResource()</code></a>.</p>
             
             <p>Decode Behavior</p>
             
@@ -257,7 +253,7 @@
                 converter
             </code></a></td><td class="colOne"><code>
                 false
-            </code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+            </code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>
                 jakarta.faces.convert.Converter
@@ -273,7 +269,7 @@
                 id
             </code></a></td><td class="colOne"><code>
                 false
-            </code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+            </code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>
                 java.lang.String
@@ -291,7 +287,7 @@
                 rendered
             </code></a></td><td class="colOne"><code>
                 false
-            </code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+            </code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>
                 boolean
@@ -309,7 +305,7 @@
                 value
             </code></a></td><td class="colOne"><code>
                 false
-            </code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+            </code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>
                 java.lang.Object
@@ -325,7 +321,7 @@
                 library
             </code></a></td><td class="colOne"><code>
                 false
-            </code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+            </code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>
                 java.lang.String
@@ -341,7 +337,7 @@
                 name
             </code></a></td><td class="colOne"><code>
                 false
-            </code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+            </code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>
                 java.lang.String
@@ -362,7 +358,7 @@
                 target
             </code></a></td><td class="colOne"><code>
                 false
-            </code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+            </code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>
                 java.lang.String
@@ -378,7 +374,7 @@
                 binding
             </code></a></td><td class="colOne"><code>
                 false
-            </code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+            </code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>
                 jakarta.faces.component.UIComponent
@@ -389,7 +385,7 @@
             </td>
                         </tr>
                         <tr id="role" class="rowColor">
-                            <td class="colFirst"><a href="#role"><code>role</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#role"><code>role</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
@@ -431,12 +427,12 @@
         <div class="subNav">
             <ul class="navList">
                 <li>
-                    <a target="_bottom" href="../index.html?html_basic/%0A            outputScript%0A        .html">
+                    <a target="_bottom" href="../index.html?html_basic/outputScript.html">
 									Frames
 								</a>
                 </li>
                 <li>
-                    <a target="_bottom" href="%0A            outputScript%0A        .html">
+                    <a target="_bottom" href="outputScript.html">
 									No Frames
 								</a>
                 </li>

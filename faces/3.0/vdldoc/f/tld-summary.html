@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>f (Jakarta Server Faces 3.0.0 VDL Documentation)
@@ -669,7 +669,7 @@
             validations for this class-level validation have passed.</p>
 
             <p>Class-level bean validation must operate on a
-            sufficiently populated bean instance.  This differs from JSF
+            sufficiently populated bean instance.  This differs from Faces
             field-level validation, which prevents beans from being
             populated with invalid values.  To accomodate this
             difference, the <em>candidate bean</em> must be copied,
@@ -703,7 +703,7 @@
             values</em>.</p>
 
             <p>Obtain a reference to
-            a <code>javax.validation.Validator</code> instance using the
+            a <code>jakarta.validation.Validator</code> instance using the
             same steps described in the javadoc
             for <code>jakarta.faces.validator.BeanValidator.validate()</code>.
             Let the instance be called <em>beanValidator</em> for
@@ -909,8 +909,8 @@ public class BackingBean implements PasswordHolder, Cloneable {
                         <tr class="altColor">
                             <td class="colOne"><b><a href="verbatim.html">verbatim</a></b></td><td class="colLast">
             <p class="changed_deleted_2_0_rev_a">The use of
-            this element has been deprecated in Facelets for JSF 2.0 and
-            beyond. Create and register a child UIOutput component
+            this element has been deprecated in Facelets for Faces. 
+            Create and register a child UIOutput component
             associated with the closest parent UIComponent custom
             action, which renders nested body content.</p>
         </td>
@@ -926,7 +926,7 @@ public class BackingBean implements PasswordHolder, Cloneable {
                             <td class="colOne"><b><a href="viewAction.html">viewAction</a></b></td><td class="colLast">
             This action component specifies
             an application-specific command (or action), using an EL
-            method expression, to be invoked during one of the JSF
+            method expression, to be invoked during one of the Faces
             lifecycle phases, by default Invoke Application.
 
         </td>
@@ -937,7 +937,7 @@ public class BackingBean implements PasswordHolder, Cloneable {
             <p class="changed_added_2_0"><span
             class="changed_modified_2_0_rev_a changed_modified_2_2">Used</span> inside of the
             metadata facet of a view, this tag causes a <a target="_"
-            href="../../../javadocs/javax/faces/component/UIViewParameter.html">UIViewParameter</a>
+            href="../../../javadocs/jakarta/faces/component/UIViewParameter.html">UIViewParameter</a>
             to be attached as metadata for the current view.  Because
             <code>UIViewParameter</code> extends <code>UIInput</code>
             all of the attributes and nested child content for any

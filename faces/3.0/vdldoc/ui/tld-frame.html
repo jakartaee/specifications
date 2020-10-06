@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>ui
@@ -9,16 +9,16 @@
 
         &lt;p&gt;&lt;span class="changed_modified_2_3"&gt;The&lt;/span&gt; tags in this
         library add templating &amp;mdash; a powerful view composition
-        technique &amp;mdash; to JSF.  Templating is so useful that there
+        technique &amp;mdash; to Faces.  Templating is so useful that there
         are entire frameworks, such as Tiles and SiteMesh, that are
         built around the concept of templating. So what is templating,
         how can you benefit from it, and how does this tag library
         implement it?  &lt;/p&gt;
 
-        &lt;p&gt;If you've used JSP before, you've probably used &lt;code&gt;jsp:include&lt;/code&gt;.
+        &lt;p&gt;If you've used Jakarta Server Pages before, you've probably used &lt;code&gt;jsp:include&lt;/code&gt;.
         The prototypical example for
         &lt;code&gt;jsp:include&lt;/code&gt; is a header on each page in a web
-        application. One JSP page, say header.jsp,
+        application. One Jakarta Server Pages page, say header.jsp,
         encapsulates the header content, and the header is included by each
         page. You &lt;em&gt;encapsulate and reuse
         content&lt;/em&gt;, so that changes to one file, header.jsp, affect the
@@ -196,11 +196,11 @@
         &lt;/div&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;
 
         &lt;p&gt;
-        At runtime, JSF synthesizes the two previous XHTML pages to create a
-        single JSF view by inserting the
+        At runtime, Faces synthesizes the two previous XHTML pages to create a
+        single Faces view by inserting the
         pieces defined in the composition into the template (that template is
         layout.xhtml, which is the first
-        listing above). JSF also disregards everything outside of the &lt;code&gt;composition&lt;/code&gt;
+        listing above). Faces also disregards everything outside of the &lt;code&gt;composition&lt;/code&gt;
         tag so that we don't
         wind up with two &lt;code&gt;body&lt;/code&gt; elements in the view.
         Also, note that we use the &lt;code&gt;ui:include&lt;/code&gt;
@@ -286,7 +286,7 @@
         By encapsulating the layout, we can reuse that layout among multiple
         compositions. Just like
         &lt;code&gt;ui:include&lt;/code&gt; lets us encapsulate and reuse
-        conent, JSF compositions let us encapsulate and reuse
+        conent, Faces compositions let us encapsulate and reuse
         layout, so that changes to a single layout can affect multiple views.
         Fundamentally, that's what this
         tag library is all about.

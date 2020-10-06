@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>
@@ -93,7 +93,7 @@
 
 <h2>Creating a Composite Component</h2>
 
-  <p>A composite component is declared by creating a Facelets2 file
+  <p>A composite component is declared by creating a Facelets file
   inside of a resource library.  (See section JSF.2.6 of the
   specification prose document for more information about resource
   libraries.)  A composite component must reside within a resource
@@ -118,7 +118,7 @@
 </code></pre>
 
 <p>This declares that any Facelets2 file in the resource
-library called <code>ezcomp</code> can be used as a regular JSF UI
+library called <code>ezcomp</code> can be used as a regular Faces UI
 component in a view with the above namespace declaration by using the
 "<code>ez</code>" prefix.  For example, placing a file called
 <code>foo.xhtml</code> in a resource library called <code>ezcomp</code>
@@ -130,7 +130,7 @@ would make that file accessible like this.</p>
 
 
   <p>The implementation must also support declaring the
-  namespace of the tag library in a JSF VDL tag library descriptor.
+  namespace of the tag library in a Faces VDL tag library descriptor.
   This descriptor file is optional and is useful for component vendors
   that do not want to use the default XML namespace.  This version of
   the proposal currently uses the facelet taglib descriptor syntax.  For
@@ -296,16 +296,16 @@ apply.</p>
 
         <p><span class="changed_modified_2_3">The</span> tags in this
         library add templating &mdash; a powerful view composition
-        technique &mdash; to JSF.  Templating is so useful that there
+        technique &mdash; to Faces.  Templating is so useful that there
         are entire frameworks, such as Tiles and SiteMesh, that are
         built around the concept of templating. So what is templating,
         how can you benefit from it, and how does this tag library
         implement it?  </p>
 
-        <p>If you've used JSP before, you've probably used <code>jsp:include</code>.
+        <p>If you've used Jakarta Server Pages before, you've probably used <code>jsp:include</code>.
         The prototypical example for
         <code>jsp:include</code> is a header on each page in a web
-        application. One JSP page, say header.jsp,
+        application. One Jakarta Server Pages page, say header.jsp,
         encapsulates the header content, and the header is included by each
         page. You <em>encapsulate and reuse
         content</em>, so that changes to one file, header.jsp, affect the
@@ -483,11 +483,11 @@ apply.</p>
         </div></li></ol></div></div>
 
         <p>
-        At runtime, JSF synthesizes the two previous XHTML pages to create a
-        single JSF view by inserting the
+        At runtime, Faces synthesizes the two previous XHTML pages to create a
+        single Faces view by inserting the
         pieces defined in the composition into the template (that template is
         layout.xhtml, which is the first
-        listing above). JSF also disregards everything outside of the <code>composition</code>
+        listing above). Faces also disregards everything outside of the <code>composition</code>
         tag so that we don't
         wind up with two <code>body</code> elements in the view.
         Also, note that we use the <code>ui:include</code>
@@ -573,7 +573,7 @@ apply.</p>
         By encapsulating the layout, we can reuse that layout among multiple
         compositions. Just like
         <code>ui:include</code> lets us encapsulate and reuse
-        conent, JSF compositions let us encapsulate and reuse
+        conent, Faces compositions let us encapsulate and reuse
         layout, so that changes to a single layout can affect multiple views.
         Fundamentally, that's what this
         tag library is all about.
@@ -588,9 +588,9 @@ apply.</p>
                         <td class="colFirst"><a href="jsf/tld-summary.html">jsf</a></td><td class="colLast">
 
 <p class="changed_added_2_2">The presence of an <br />
-        attribute from this namespace on an otherwise non-JSF aware<br />
+        attribute from this namespace on an otherwise non-Faces aware<br />
         markup element indicates that the markup element must be treated<br />
-        as a JSF component that will be rendered equivalently to what is<br />
+        as a Faces component that will be rendered equivalently to what is<br />
         specified directly in the Facelet page, with the added benefit<br />
         of being associated with a server side <code>UIComponent</code><br />
         instance.
@@ -610,7 +610,7 @@ apply.</p>
                         <td class="colFirst"><a href="jstl-core/tld-summary.html">jstl-core</a></td><td class="colLast">
 <p>JSTL 1.2 core library</p>
 
-<p>The pre JSF 2.0 version of Facelets incorrectly declared the taglib
+<p>The pre Faces version of Facelets incorrectly declared the taglib
 uri to be <code>http://xmlns.jcp.org/jstl/core</code>.  For backwards
 compatibility implementations must correctly handle inclusions with the
 incorrect uri, and the correct uri, declared here.</p>

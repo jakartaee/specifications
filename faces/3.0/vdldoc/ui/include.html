@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>include (Jakarta Server Faces 3.0.0 VDL Documentation)
@@ -74,10 +74,10 @@
             XHTML, and XHTML pages that have either a
             <code>composition</code> tag or a <code>component</code>
             tag.  </p> <p>You supply a filename, through
-            <code>ui:include</code>'s <code>src</code> attribute for JSF
+            <code>ui:include</code>'s <code>src</code> attribute for Faces
             to include. That filename is relative to the XHTML file that
             was rendered as a result of the last request. So, for
-            example, if JSF loaded the view <code>login.xhtml</code>,
+            example, if Faces loaded the view <code>login.xhtml</code>,
             and that file included
             <code>pageDecorations/header.xhtml</code>, and <code>
             pageDecorations/header.xhtml</code> included
@@ -107,7 +107,7 @@
                     </thead>
                     <tbody>
                         <tr id="src" class="rowColor">
-                            <td class="colFirst"><a href="#src"><code>src</code></a></td><td class="colOne"><code>true</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#src"><code>src</code></a></td><td class="colOne"><code>true</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">

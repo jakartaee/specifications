@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>composition (Jakarta Server Faces 3.0.0 VDL Documentation)
@@ -72,7 +72,7 @@
 <span class="changed_modified_2_2">Defines</span> a composition that
 optionally uses a template, as outlined in the description of the ui tag
 library. Multiple compositions can use the same template, thus
-encapsulating and reusing layout. JSF disregards everything outside of
+encapsulating and reusing layout. Faces disregards everything outside of
 the composition, which lets developers embed compositions in well-formed
 XHTML pages that can be viewed in an XHTML viewer, such as Dreamweaver
 or a browser, without including extraneous elements such as
@@ -89,7 +89,7 @@ or a browser, without including extraneous elements such as
 <li class="li2"><div class="de2">&nbsp;</div></li>
 <li class="li1"><div class="de1">&nbsp; <span class="sc3"><span class="re1">&lt;body<span class="re2">&gt;</span></span></span></div></li>
 <li class="li2"><div class="de2">&nbsp;</div></li>
-<li class="li1"><div class="de1">&nbsp; &nbsp; THIS LINE, AND EVERYTHING ABOVE IT IS DISREGARDED BY JSF</div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; THIS LINE, AND EVERYTHING ABOVE IT IS DISREGARDED BY Faces</div></li>
 <li class="li2"><div class="de2">&nbsp; &nbsp; <span class="sc3"><span class="re1">&lt;ui</span>:composition <span class="re0">template</span>=<span class="st0">&quot;/layout.xhtml&quot;</span><span class="re2">&gt;</span></span></div></li>
 
 <li class="li1"><div class="de1">&nbsp;</div></li>
@@ -103,7 +103,7 @@ or a browser, without including extraneous elements such as
 <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; <span class="sc3"><span class="re1">&lt;/ui</span>:define<span class="re2">&gt;</span></span></div></li>
 <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></li>
 <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="sc3"><span class="re1">&lt;/ui</span>:composition<span class="re2">&gt;</span></span></div></li>
-<li class="li2"><div class="de2">&nbsp; &nbsp; THIS LINE, AND EVERYTHING BELOW IT IS DISREGARDED BY JSF</div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; THIS LINE, AND EVERYTHING BELOW IT IS DISREGARDED BY Faces</div></li>
 
 <li class="li1"><div class="de1">&nbsp;</div></li>
 <li class="li2"><div class="de2">&nbsp; <span class="sc3"><span class="re1">&lt;/body<span class="re2">&gt;</span></span></span></div></li>
@@ -130,7 +130,7 @@ or a browser, without including extraneous elements such as
                     </thead>
                     <tbody>
                         <tr id="template" class="rowColor">
-                            <td class="colFirst"><a href="#template"><code>template</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#template"><code>template</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">

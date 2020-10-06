@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>cc
@@ -29,7 +29,7 @@
 
 &lt;h2&gt;Creating a Composite Component&lt;/h2&gt;
 
-  &lt;p&gt;A composite component is declared by creating a Facelets2 file
+  &lt;p&gt;A composite component is declared by creating a Facelets file
   inside of a resource library.  (See section JSF.2.6 of the
   specification prose document for more information about resource
   libraries.)  A composite component must reside within a resource
@@ -54,7 +54,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This declares that any Facelets2 file in the resource
-library called &lt;code&gt;ezcomp&lt;/code&gt; can be used as a regular JSF UI
+library called &lt;code&gt;ezcomp&lt;/code&gt; can be used as a regular Faces UI
 component in a view with the above namespace declaration by using the
 "&lt;code&gt;ez&lt;/code&gt;" prefix.  For example, placing a file called
 &lt;code&gt;foo.xhtml&lt;/code&gt; in a resource library called &lt;code&gt;ezcomp&lt;/code&gt;
@@ -66,7 +66,7 @@ would make that file accessible like this.&lt;/p&gt;
 
 
   &lt;p&gt;The implementation must also support declaring the
-  namespace of the tag library in a JSF VDL tag library descriptor.
+  namespace of the tag library in a Faces VDL tag library descriptor.
   This descriptor file is optional and is useful for component vendors
   that do not want to use the default XML namespace.  This version of
   the proposal currently uses the facelet taglib descriptor syntax.  For

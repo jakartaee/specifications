@@ -44,7 +44,7 @@ changed_modified_2_1 changed_modified_2_2">Render</span> the markup for a
        <code>getRendersChildren()</code>.</p>
 
         <p>For <code>encodeEnd()</code>, use the algorithm <a
-        href="jakarta.faces.Outputjavax.faces.resource.Script.html#ResourceCommonGetResource">Common
+        href="jakarta.faces.Outputjakarta.faces.resource.Script.html#ResourceCommonGetResource">Common
         Algorithm for Obtaining A Resource to Render</a> to obtain a
         reference to the <code>Resource</code> to be encoded.</p>
 
@@ -59,16 +59,16 @@ Otherwise, do not render a media attribute.</span></p>
 
 
 <p>The implementation of this renderer must have a <a target="_"
-href="../../javadocs/javax/faces/event/ListenerFor.html"><code>@ListenerFor</code></a>
+href="../../javadocs/jakarta/faces/event/ListenerFor.html"><code>@ListenerFor</code></a>
 annotation attached to it, at the class level, declaring <a target="_"
-href="../../javadocs/javax/faces/event/PostAddToViewEvent.html"><code>PostAddToViewEvent.class</code></a>
+href="../../javadocs/jakarta/faces/event/PostAddToViewEvent.html"><code>PostAddToViewEvent.class</code></a>
 as the value of the <code>systemEventClass</code> attribute.  The presence of
 this annotation on a renderer implies the renderer implements <a target="_"
-href="../../javadocs/javax/faces/event/ComponentSystemEventListener.html"><code>ComponentSystemEventListener</code></a>,
+href="../../javadocs/jakarta/faces/event/ComponentSystemEventListener.html"><code>ComponentSystemEventListener</code></a>,
 which this renderer must do.  The implementation of
 <code>processEvent()</code> must extract the <code>UIComponent</code>
 from the argument event pass it to <a target="_"
-href="../../javadocs/javax/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20javax.faces.component.UIComponent,%20java.lang.String)"><code>UIViewRoot.addComponentResource()</code></a>, specifying
+href="../../javadocs/jakarta/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20jakarta.faces.component.UIComponent,%20java.lang.String)"><code>UIViewRoot.addComponentResource()</code></a>, specifying
 the literal string "<code>head</code>" as the last argument.</p>
 
 <p>The stylsheet renderer must ensure that any stylesheets are included in the &lt;head&gt; of the document. 

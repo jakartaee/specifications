@@ -610,9 +610,9 @@ view from whence this state originated.
 unique within this view, but must not be included in the
 view state.  This requirement is simply to satisfy XML
 correctness in parity with what is done in the
-corresponding non-partial JSF view.  Locate and update
+corresponding non-partial Faces view.  Locate and update
 the <code>jakarta.faces.ViewState</code> value for all
-JSF forms covered in the <code>render</code> target
+Faces forms covered in the <code>render</code> target
 list whose ID starts with the same 
 &lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt; value.</li>
 <li class="changed_added_2_2">If an
@@ -634,9 +634,9 @@ view from whence this state originated.
 unique within this view, but must not be included in the
 view state.  This requirement is simply to satisfy XML
 correctness in parity with what is done in the
-corresponding non-partial JSF view.  Locate and update
+corresponding non-partial Faces view.  Locate and update
 the <code>jakarta.faces.ClientWindow</code> value for all
-JSF forms covered in the <code>render</code> target
+Faces forms covered in the <code>render</code> target
 list whose ID starts with the same 
 &lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt; value.</li>
 <li class="changed_added_2_3">If an <code>update</code> element is found in the response with the

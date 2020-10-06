@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>html_basic (Jakarta Server Faces 3.0.0 VDL Documentation)
@@ -106,9 +106,7 @@
                     </thead>
                     <tbody>
                         <tr class="rowColor">
-                            <td class="colOne"><b><a href="%0A            button%0A        .html">
-            button
-        </a></b></td><td class="colLast">
+                            <td class="colOne"><b><a href="button.html">button</a></b></td><td class="colLast">
             <div class="changed_added_2_0">Render an HTML "input" element of type "button".
             The value of the component is rendered as the button text and the outcome of the
             component is used to determine the target URL which is activated by onclick.  If
@@ -135,9 +133,7 @@
         </td>
                         </tr>
                         <tr class="altColor">
-                            <td class="colOne"><b><a href="%0A            link%0A        .html">
-            link
-        </a></b></td><td class="colLast">
+                            <td class="colOne"><b><a href="link.html">link</a></b></td><td class="colLast">
             <div class="changed_added_2_0">Render an HTML "a" anchor element.  The value of the
             component is rendered as the anchor text and the outcome of the component is used
             to determine the target URL rendered in the "href" attribute.  Any
@@ -164,9 +160,7 @@
         </td>
                         </tr>
                         <tr class="rowColor">
-                            <td class="colOne"><b><a href="%0A            head%0A        .html">
-            head
-        </a></b></td><td class="colLast">
+                            <td class="colOne"><b><a href="head.html">head</a></b></td><td class="colLast">
             
 
           <p>Render the markup for a <code>&lt;head&gt;</code> element.</p>
@@ -206,9 +200,7 @@
         </td>
                         </tr>
                         <tr class="altColor">
-                            <td class="colOne"><b><a href="%0A            body%0A        .html">
-            body
-        </a></b></td><td class="colLast">
+                            <td class="colOne"><b><a href="body.html">body</a></b></td><td class="colLast">
             
 
           <p>Render the markup for a <code>&lt;body&gt;</code> element.</p>
@@ -416,7 +408,7 @@
             var b=function(){#JSF_FUNCTION#};
             return (a()==false) ? false : b();</code></p>
             <p>where #USER_FUNCTION# is the user's JavaScript and
-            #JSF_FUNCTION# is the JavaScript rendered by JSF. The choice
+            #JSF_FUNCTION# is the JavaScript rendered by Faces. The choice
             function should operate such that if the user's JavaScript returns
             true, then the rendered JavaScript will also execute.</p>
             <p>If the "styleClass" attribute is specified, render its
@@ -694,7 +686,7 @@
             <p>Handling the Value</p>
             <ul>
             <p>If the "name" attribute is present, execute algorithm <a
-            href="../../../renderkitdocs/HTML_BASIC/jakarta.faces.Outputjavax.faces.resource.Script.html#ResourceCommonGetResource">Common
+            href="../../../renderkitdocs/HTML_BASIC/jakarta.faces.Outputjakarta.faces.resource.Script.html#ResourceCommonGetResource">Common
             Algorithm for Obtaining A Resource to Render</a> to obtain a
             <code>Resource</code> instance. Call
             <code>Resource.getRequestPath()</code> and output the
@@ -727,7 +719,7 @@
             <p>Decode Behavior</p>
             <ul>
             <p>See the decode description for the <a
-            href="jakarta.faces.Inputjavax.faces.Text.html#encode">Input
+            href="jakarta.faces.Inputjakarta.faces.Text.html#encode">Input
             Text</a> renderer.</p>
             </ul>
             <p>Encode Behavior</p>
@@ -744,7 +736,7 @@
             <p>Decode Behavior</p>
             <ul>
             <p>See the decode description for the <a
-            href="jakarta.faces.Inputjavax.faces.Text.html#encode">Input
+            href="jakarta.faces.Inputjakarta.faces.Text.html#encode">Input
             Text</a> renderer.</p>
             </ul>
             <p>Encode Behavior</p>
@@ -792,7 +784,7 @@
             <p>Decode Behavior</p>
             <ul>
             <p>See the encode description for the <a
-            href="jakarta.faces.Inputjavax.faces.Text.html#encode">Input
+            href="jakarta.faces.Inputjakarta.faces.Text.html#encode">Input
             Text</a> renderer.</p>
             </ul>
             <p>Encode Behavior</p>
@@ -980,9 +972,7 @@
         </td>
                         </tr>
                         <tr class="altColor">
-                            <td class="colOne"><b><a href="%0A            outputStylesheet%0A        .html">
-            outputStylesheet
-        </a></b></td><td class="colLast">
+                            <td class="colOne"><b><a href="outputStylesheet.html">outputStylesheet</a></b></td><td class="colLast">
             <div class="changed_added_2_0">
             
             <p>Render the markup for a <code>&lt;link&gt;</code> element that
@@ -1006,7 +996,7 @@
             <code>getRendersChildren()</code>.</p>
             
             <p>For <code>encodeEnd()</code>, use the algorithm <a
-            href="jakarta.faces.Outputjavax.faces.resource.Script.html#ResourceCommonGetResource">Common
+            href="jakarta.faces.Outputjakarta.faces.resource.Script.html#ResourceCommonGetResource">Common
             Algorithm for Obtaining A Resource to Render</a> to obtain a
             reference to the <code>Resource</code> to be encoded.</p>
             
@@ -1019,16 +1009,16 @@
             attribute.</p>
             
             <p>The implementation of this renderer must have a <a target="_"
-            href="../../javadocs/javax/faces/event/ListenerFor.html"><code>@ListenerFor</code></a>
+            href="../../javadocs/jakarta/faces/event/ListenerFor.html"><code>@ListenerFor</code></a>
             annotation attached to it, at the class level, declaring <a target="_"
-            href="../../javadocs/javax/faces/event/PostAddToViewEvent.html"><code>PostAddToViewEvent.class</code></a>
+            href="../../javadocs/jakarta/faces/event/PostAddToViewEvent.html"><code>PostAddToViewEvent.class</code></a>
             as the value of the <code>systemEventClass</code> attribute.  The presence of
             this annotation on a renderer implies the renderer implements <a target="_"
-            href="../../javadocs/javax/faces/event/ComponentSystemEventListener.html"><code>ComponentSystemEventListener</code></a>,
+            href="../../javadocs/jakarta/faces/event/ComponentSystemEventListener.html"><code>ComponentSystemEventListener</code></a>,
             which this renderer must do.  The implementation of
             <code>processEvent()</code> must extract the <code>UIComponent</code>
             from the argument event pass it to <a target="_"
-            href="../../javadocs/javax/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20javax.faces.component.UIComponent,%20java.lang.String)"><code>UIViewRoot.addComponentResource()</code></a>, specifying
+            href="../../javadocs/jakarta/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20jakarta.faces.component.UIComponent,%20java.lang.String)"><code>UIViewRoot.addComponentResource()</code></a>, specifying
             the literal string "<code>head</code>" as the last argument.</p>
             
             <p>The stylsheet renderer must ensure that any stylesheets are included in the &lt;head&gt; of the document.
@@ -1052,9 +1042,7 @@
         </td>
                         </tr>
                         <tr class="altColor">
-                            <td class="colOne"><b><a href="%0A            outputScript%0A        .html">
-            outputScript
-        </a></b></td><td class="colLast">
+                            <td class="colOne"><b><a href="outputScript.html">outputScript</a></b></td><td class="colLast">
             <div class="changed_added_2_0">
             
             <p>Render the markup for a <code>&lt;script&gt;</code> element that
@@ -1062,20 +1050,20 @@
             <code>name</code> attribute and <code>library</code> attributes.</p>
             
             <p>The implementation of this renderer must have a <a target="_"
-            href="../../javadocs/javax/faces/event/ListenerFor.html"><code>@ListenerFor</code></a>
+            href="../../javadocs/jakarta/faces/event/ListenerFor.html"><code>@ListenerFor</code></a>
             annotation attached to it, at the class level, declaring <a target="_"
-            href="../../javadocs/javax/faces/event/PostAddToViewEvent.html"><code>PostAddToViewEvent.class</code></a>
+            href="../../javadocs/jakarta/faces/event/PostAddToViewEvent.html"><code>PostAddToViewEvent.class</code></a>
             as the value of the <code>systemEventClass</code> attribute.  The presence of
             this annotation on a renderer implies the renderer implements <a
             target="_"
-            href="../../javadocs/javax/faces/event/ComponentSystemEventListener.html"><code>ComponentSystemEventListener</code></a>,
+            href="../../javadocs/jakarta/faces/event/ComponentSystemEventListener.html"><code>ComponentSystemEventListener</code></a>,
             which this renderer must do.  The implementation of
             <code>processEvent()</code> must extract the <code>UIComponent</code>
             from the argument event and look for the presence of the key
             "<code>target</code>" in the component's attribute <code>Map</code>.  If
             and only if such a key is present, the implementation of
             <code>processEvent()</code> must pass the component to <a target="_"
-            href="../../javadocs/javax/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20javax.faces.component.UIComponent)"><code>UIViewRoot.addComponentResource()</code></a>.</p>
+            href="../../javadocs/jakarta/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20jakarta.faces.component.UIComponent)"><code>UIViewRoot.addComponentResource()</code></a>.</p>
             
             <p>Decode Behavior</p>
             
@@ -1385,7 +1373,7 @@
             <code>setSubmittedValue()</code> with it.</p>
             <p class="changed_modified_2_0">Please check the javadoc for
             <a
-            href="../../javadocs/javax/faces/component/UISelectMany.html#getConvertedvalue">UISelectMany.getConvertedValue()</a>
+            href="../../javadocs/jakarta/faces/component/UISelectMany.html#getConvertedvalue">UISelectMany.getConvertedValue()</a>
             for additional requirements for renderers that render this kind
             of component.</p>
             </ul>
@@ -1698,7 +1686,7 @@
             must be an instance of <code>EditableValueHolder</code>, and
             return.  Otherwise, obtain the "request" property from the
             <code>ExternalContext</code> and cast it to
-            <code>javax.servlet.http.HttpServletRequest</code>.  Call
+            <code>jakarta.servlet.http.HttpServletRequest</code>.  Call
             <code>getParts()</code> on the httpServletRequest. Iterate over
             the parts.  If the "name" property of the current part is equal to
             the "clientId", pass the current part to the

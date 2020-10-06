@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>selectItems (Jakarta Server Faces 3.0.0 VDL Documentation)
@@ -126,7 +126,7 @@
                         <tr id="binding" class="rowColor">
                             <td class="colFirst"><a href="#binding"><code>binding</code></a></td><td class="colOne"><code>
 							false
-						</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+						</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>jakarta.faces.component.UIComponent</code>)
 					</td><td class="colLast">
@@ -136,7 +136,7 @@
             </td>
                         </tr>
                         <tr id="id" class="altColor">
-                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
@@ -147,7 +147,7 @@
                         <tr id="itemDescription" class="rowColor">
                             <td class="colFirst"><a href="#itemDescription"><code>itemDescription</code></a></td><td class="colOne"><code>
 							false
-						</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+						</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
@@ -162,7 +162,7 @@
                         <tr id="itemDisabled" class="altColor">
                             <td class="colFirst"><a href="#itemDisabled"><code>itemDisabled</code></a></td><td class="colOne"><code>
 							false
-						</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+						</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Boolean</code>)
 					</td><td class="colLast">
@@ -176,7 +176,7 @@
                         <tr id="itemLabel" class="rowColor">
                             <td class="colFirst"><a href="#itemLabel"><code>itemLabel</code></a></td><td class="colOne"><code>
 							false
-						</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+						</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
@@ -190,13 +190,13 @@
                         <tr id="itemLabelEscaped" class="altColor">
                             <td class="colFirst"><a href="#itemLabelEscaped"><code>itemLabelEscaped</code></a></td><td class="colOne"><code>
 							false
-						</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+						</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Boolean</code>)
 					</td><td class="colLast">
 
 <p class="changed_added_2_0">evaluates to a boolean that will
-determine if the rendered markup for the item receives normal JSF HTML
+determine if the rendered markup for the item receives normal Faces HTML
 escaping or not.  <span class="changed_added_2_2">If not specified, the
 runtime must behave as if the value were <code>true</code>.</span></p>
 
@@ -205,7 +205,7 @@ runtime must behave as if the value were <code>true</code>.</span></p>
                         <tr id="itemValue" class="rowColor">
                             <td class="colFirst"><a href="#itemValue"><code>itemValue</code></a></td><td class="colOne"><code>
 							false
-						</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+						</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Object</code>)
 					</td><td class="colLast">
@@ -222,7 +222,7 @@ runtime must behave as if the value were <code>true</code>.</span></p>
                         <tr id="noSelectionValue" class="altColor">
                             <td class="colFirst"><a href="#noSelectionValue"><code>noSelectionValue</code></a></td><td class="colOne"><code>
 							false
-						</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+						</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Boolean</code>)
 					</td><td class="colLast">
@@ -243,7 +243,7 @@ runtime must behave as if the value were <code>true</code>.</span></p>
                         <tr id="value" class="rowColor">
                             <td class="colFirst"><a href="#value"><code>value</code></a></td><td class="colOne"><code>
 							false
-						</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+						</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Object</code>)
 					</td><td class="colLast">
@@ -290,7 +290,7 @@ of POJOs.
             </td>
                         </tr>
                         <tr id="var" class="altColor">
-                            <td class="colFirst"><a href="#var"><code>var</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#var"><code>var</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">

@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>validateWholeBean (Jakarta Server Faces 3.0.0 VDL Documentation)
@@ -161,7 +161,7 @@
             validations for this class-level validation have passed.</p>
 
             <p>Class-level bean validation must operate on a
-            sufficiently populated bean instance.  This differs from JSF
+            sufficiently populated bean instance.  This differs from Faces
             field-level validation, which prevents beans from being
             populated with invalid values.  To accomodate this
             difference, the <em>candidate bean</em> must be copied,
@@ -195,7 +195,7 @@
             values</em>.</p>
 
             <p>Obtain a reference to
-            a <code>javax.validation.Validator</code> instance using the
+            a <code>jakarta.validation.Validator</code> instance using the
             same steps described in the javadoc
             for <code>jakarta.faces.validator.BeanValidator.validate()</code>.
             Let the instance be called <em>beanValidator</em> for
@@ -408,7 +408,7 @@ public class BackingBean implements PasswordHolder, Cloneable {
                     </thead>
                     <tbody>
                         <tr id="disabled" class="rowColor">
-                            <td class="colFirst"><a href="#disabled"><code>disabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#disabled"><code>disabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Boolean</code>)
 					</td><td class="colLast">
@@ -420,7 +420,7 @@ public class BackingBean implements PasswordHolder, Cloneable {
             </td>
                         </tr>
                         <tr id="id" class="altColor">
-                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
@@ -429,7 +429,7 @@ public class BackingBean implements PasswordHolder, Cloneable {
             </td>
                         </tr>
                         <tr id="validationGroups" class="rowColor">
-                            <td class="colFirst"><a href="#validationGroups"><code>validationGroups</code></a></td><td class="colOne"><code>true</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#validationGroups"><code>validationGroups</code></a></td><td class="colOne"><code>true</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
@@ -441,7 +441,7 @@ public class BackingBean implements PasswordHolder, Cloneable {
             </td>
                         </tr>
                         <tr id="value" class="altColor">
-                            <td class="colFirst"><a href="#value"><code>value</code></a></td><td class="colOne"><code>true</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#value"><code>value</code></a></td><td class="colOne"><code>true</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Object</code>)
 					</td><td class="colLast">
