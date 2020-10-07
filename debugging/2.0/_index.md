@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Debugging Support for Other Languages 2.0"
-date: 2020-06-23
+date: 2020-10-07
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Debugging Support for Other Languages provides a mechanism by which
