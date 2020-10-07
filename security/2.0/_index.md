@@ -14,7 +14,6 @@ Jakarta Security defines a standard for creating secure Jakarta EE applications 
 * Maven coordinates
   * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/2.0.0/jar)
 
-
 # Compatible Implementations
 
 * [Eclipse Soteria 2.0.0-RC1](https://eclipse-ee4j.github.io/soteria)
