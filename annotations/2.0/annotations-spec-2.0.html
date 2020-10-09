@@ -445,7 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jakarta Annotations Team, https://projects.eclipse.org/projects/ee4j.ca</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/ca-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/ca-dev</a></span><br>
 <span id="revnumber"> 2.0,</span>
-<span id="revdate">July 16, 2020</span>
+<span id="revdate">October 09, 2020</span>
 <br><span id="revremark">Final Release</span>
 </div>
 <div id="toc" class="toc2">
@@ -507,7 +507,7 @@ Version: 2.0
 
 Status: Final Release
 
-Release: July 16, 2020</pre>
+Release: October 09, 2020</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -907,7 +907,7 @@ the guidelines specified for annotations and inheritance:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">foo() in ABean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TransactionAttribute(REQUIRED). (Default TransactionAttribute as defined by the EJB specification).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TransactionAttribute(REQUIRED). (Default TransactionAttribute as defined by the Jakarta Enterprise Beans specification).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bar() in ABean</p></td>
@@ -948,7 +948,7 @@ the guidelines specified for annotations and inheritance:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For more details about the <em>TransactionAttribute</em> annotation, see the <em>EJB 3 Core Contracts</em>
+<p>For more details about the <em>TransactionAttribute</em> annotation, see the <em>Jakarta Enterprise Beans Core Contracts</em>
 specification.</p>
 </div>
 <div class="paragraph">
@@ -1282,7 +1282,7 @@ and the type is <em>javax.sql.DataSource.class</em> .</p>
 </div>
 <div class="paragraph">
 <p>The table below shows the mapping from Java
-type to the equivalent resource type in the Java EE 5 (and later)
+type to the equivalent resource type in the Jakarta EE 9 (and later)
 deployment descriptors:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1334,10 +1334,6 @@ deployment descriptors:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">env-entry</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">jakarta.xml.rpc.Service</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">service-ref</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">jakarta.xml.ws.Service</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">service-ref</p></td>
 </tr>
@@ -1371,10 +1367,6 @@ deployment descriptors:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">jakarta.resource.cci.ConnectionFactory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">resource-ref</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.omg.CORBA_2_3.ORB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">resource-ref</p></td>
 </tr>
 <tr>
@@ -1474,7 +1466,7 @@ resources to be injected. Only one method in a given class can be
 annotated with this annotation. The method on which the <em>PostConstruct</em>
 annotation is applied MUST fulfill all of the following requirements,
 except in cases where these requirements have been relaxed by another
-specification. See in particular the <em>Interceptors</em> specification.</p>
+specification. See in particular the <em>Jakarta Interceptors</em> specification.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1551,7 +1543,7 @@ managed objects that support <em>PostConstruct</em> except the application
 client. The method on which the <em>PreDestroy</em> annotation is applied MUST
 fulfill all of the following requirements, except in cases where these
 requirements have been relaxed by another specification. See in
-particular the <em>Interceptors</em> specification.</p>
+particular the <em>Jakarta Interceptors</em> specification.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1631,7 +1623,7 @@ effect of using the <em>Priority</em> annotation in any particular instance is
 defined by other specifications that define the use of a specific class.</p>
 </div>
 <div class="paragraph">
-<p>For example, the <em>Interceptors</em> specification
+<p>For example, the <em>Jakarta Interceptors</em> specification
 defines the use of priorities on interceptors to control the order in
 which interceptors are called.</p>
 </div>
@@ -2236,10 +2228,10 @@ annotation acts as a container for multiple data source declarations.</p>
 <h3 id="jakarta-annotation-managedbean"><a class="anchor" href="#jakarta-annotation-managedbean"></a>3.16. jakarta.annotation.ManagedBean</h3>
 <div class="paragraph">
 <p>The <em>ManagedBean</em> annotation is used to
-declare a Managed Bean as specified in the <em>Managed Beans</em>
-specification. Managed Beans are container-managed objects that support
+declare a Jakarta Managed Bean as specified in the <em>Jakarta Managed Beans</em>
+specification. Jakarta Managed Beans are container-managed objects that support
 a small set of basic services such as resource injection, lifecycle
-callbacks and interceptors. A Managed Bean may optionally have a name, a
+callbacks and interceptors. A Jakarta Managed Bean may optionally have a name, a
 <em>String</em> specified via the <em>value</em> element.</p>
 </div>
 <div class="listingblock">
@@ -2270,7 +2262,7 @@ callbacks and interceptors. A Managed Bean may optionally have a name, a
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the Managed Bean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the Jakarta Managed Bean</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
 </tr>
 </tbody>
@@ -2297,24 +2289,24 @@ callbacks and interceptors. A Managed Bean may optionally have a name, a
 Programming Language. <a href="http://jcp.org/en/jsr/detail?id=175" class="bare">http://jcp.org/en/jsr/detail?id=175</a></p>
 </div>
 <div class="paragraph">
-<p>Java Platform, Enterprise Edition, v7 (Java
-EE). <a href="http://jcp.org/en/jsr/detail?id=342" class="bare">http://jcp.org/en/jsr/detail?id=342</a></p>
+<p>Jakarta EE Platform 9 (Jakarta EE).
+<a href="https://jakarta.ee/specifications/platform/9/" class="bare">https://jakarta.ee/specifications/platform/9/</a></p>
 </div>
 <div class="paragraph">
 <p>Java 2 Platform, Standard Edition, v5.0
-(J2SE). <a href="http://java.sun.com/j2se" class="bare">http://java.sun.com/j2se</a></p>
+(J2SE). <a href="https://www.oracle.com/java/technologies/javase/j2se-v50.html" class="bare">https://www.oracle.com/java/technologies/javase/j2se-v50.html</a></p>
 </div>
 <div class="paragraph">
-<p>Enterprise JavaBeans, v3.2 (EJB).
-<a href="http://jcp.org/en/jsr/detail?id=345" class="bare">http://jcp.org/en/jsr/detail?id=345</a></p>
+<p>Jakarta Enterprise Beans, v4.0.
+<a href="https://jakarta.ee/specifications/enterprise-beans/4.0" class="bare">https://jakarta.ee/specifications/enterprise-beans/4.0</a></p>
 </div>
 <div class="paragraph">
-<p>Interceptors, 1.2.
-<a href="http://jcp.org/en/jsr/detail?id=318" class="bare">http://jcp.org/en/jsr/detail?id=318</a></p>
+<p>Jakarta Interceptors, 2.0.
+<a href="https://jakarta.ee/specifications/interceptors/2.0/" class="bare">https://jakarta.ee/specifications/interceptors/2.0/</a></p>
 </div>
 <div class="paragraph">
-<p>Managed Beans.
-<a href="http://jcp.org/en/jsr/detail?id=316" class="bare">http://jcp.org/en/jsr/detail?id=316</a></p>
+<p>Jakarta Managed Beans.
+<a href="https://jakarta.ee/specifications/managedbeans/2.0/" class="bare">https://jakarta.ee/specifications/managedbeans/2.0/</a></p>
 </div>
 <div class="paragraph">
 <p>RFC 2119.
