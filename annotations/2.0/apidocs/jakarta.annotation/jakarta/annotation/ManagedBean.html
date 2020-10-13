@@ -124,10 +124,6 @@ public @interface <span class="memberNameLabel">ManagedBean</span></pre>
 <div class="block">The <code>ManagedBean</code> annotation marks a POJO (Plain Old Java Object)
  as a ManagedBean.  A ManagedBean supports a small set of basic services
  such as resource injection, lifecycle callbacks and interceptors.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>Common Annotations 1.1</dd>
-</dl>
 </li>
 </ul>
 </div>
@@ -152,7 +148,7 @@ public @interface <span class="memberNameLabel">ManagedBean</span></pre>
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#value()">value</a></span></code></th>
 <td class="colLast">
-<div class="block">The name of the Managed Bean.</div>
+<div class="block">The name of the Jakarta Managed Bean.</div>
 </td>
 </tr>
 </table>
@@ -179,14 +175,14 @@ public @interface <span class="memberNameLabel">ManagedBean</span></pre>
 <li class="blockList">
 <h4>value</h4>
 <pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value</pre>
-<div class="block">The name of the Managed Bean. Managed Bean names must be unique within a
- Jakarta EE module. For each named Managed Bean, Java EE containers must make
+<div class="block">The name of the Jakarta Managed Bean. Jakarta Managed Bean names must be unique within a
+ Jakarta EE module. For each named Jakarta Managed Bean, Jakarta EE containers must make
  available the following entries in JNDI, using the same naming scheme used
- for EJB components.
+ for Jakarta Enterprise Beans components.
  <p>
  In the application namespace: <p>
  java:app/&lt;module-name&gt;/&lt;bean-name&gt; <p>
- In the module namespace of the module containing the Managed Bean:
+ In the module namespace of the module containing the Jakarta Managed Bean:
  <p> java:module/&lt;bean-name&gt;</div>
 <dl>
 <dt>Default:</dt>

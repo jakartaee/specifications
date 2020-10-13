@@ -225,7 +225,7 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  )
  </pre>
  <p>
- An example lookup of the DataSource from an EJB:
+ An example lookup of the DataSource from an Jakarta Enterprise Beans:
  <pre>
  &#064;Stateless
  public class MyStatelessEJB {
@@ -236,8 +236,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  </pre>
  <p></div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>Common Annotations 1.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/javax/sql/DataSource.html?is-external=true" title="class or interface in javax.sql" class="externalLink"><code>DataSource</code></a>, 
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/javax/sql/XADataSource.html?is-external=true" title="class or interface in javax.sql" class="externalLink"><code>XADataSource</code></a>, 
@@ -442,10 +440,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
 <h4>name</h4>
 <pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name</pre>
 <div class="block">JNDI name by which the data source will be registered.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 </li>
 </ul>
 </li>
@@ -463,10 +457,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
 <div class="block">Name of a DataSource class that implements
   <code>javax.sql.DataSource</code> or <code>javax.sql.XADataSource</code>
  or <code>javax.sql.ConnectionPoolDataSource</code>.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 </li>
 </ul>
 </li>
@@ -483,10 +473,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
 <h4>description</h4>
 <pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;description</pre>
 <div class="block">Description of this data source</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 <dl>
 <dt>Default:</dt>
 <dd>""</dd>
@@ -510,10 +496,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  annotation element, the precedence order is undefined and
  implementation specific.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
-<dl>
 <dt>Default:</dt>
 <dd>""</dd>
 </dl>
@@ -532,10 +514,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
 <h4>user</h4>
 <pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;user</pre>
 <div class="block">User name to use for connection authentication.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 <dl>
 <dt>Default:</dt>
 <dd>""</dd>
@@ -556,10 +534,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
 <pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;password</pre>
 <div class="block">Password to use for connection authentication.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
-<dl>
 <dt>Default:</dt>
 <dd>""</dd>
 </dl>
@@ -578,10 +552,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
 <h4>databaseName</h4>
 <pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;databaseName</pre>
 <div class="block">Name of a database on a server.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 <dl>
 <dt>Default:</dt>
 <dd>""</dd>
@@ -602,10 +572,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
 <pre>int&nbsp;portNumber</pre>
 <div class="block">Port number where a server is listening for requests.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
-<dl>
 <dt>Default:</dt>
 <dd>-1</dd>
 </dl>
@@ -624,10 +590,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
 <h4>serverName</h4>
 <pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;serverName</pre>
 <div class="block">Database server name.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 <dl>
 <dt>Default:</dt>
 <dd>"localhost"</dd>
@@ -659,10 +621,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  <p>
  Default is vendor-specific.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
-<dl>
 <dt>Default:</dt>
 <dd>-1</dd>
 </dl>
@@ -686,10 +644,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  Default is to enlist in a transaction when one is active or becomes
  active.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
-<dl>
 <dt>Default:</dt>
 <dd>true</dd>
 </dl>
@@ -711,10 +665,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  is initialized.
  <p>
  Default is vendor-specific</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 <dl>
 <dt>Default:</dt>
 <dd>-1</dd>
@@ -738,10 +688,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  <p>
  Default is vendor-specific.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
-<dl>
 <dt>Default:</dt>
 <dd>-1</dd>
 </dl>
@@ -763,10 +709,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  connection pool.
  <p>
  Default is vendor-specific.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 <dl>
 <dt>Default:</dt>
 <dd>-1</dd>
@@ -791,10 +733,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  <p>
  Default is vendor-specific</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
-<dl>
 <dt>Default:</dt>
 <dd>-1</dd>
 </dl>
@@ -817,10 +755,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  a connection pool.
  <p>
  Default is vendor-specific</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 <dl>
 <dt>Default:</dt>
 <dd>-1</dd>
@@ -856,10 +790,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  element and the annotation element for the  property is also
  specified, the annotation element value takes precedence.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
-<dl>
 <dt>Default:</dt>
 <dd>{}</dd>
 </dl>
@@ -883,10 +813,6 @@ public @interface <span class="memberNameLabel">DataSourceDefinition</span></pre
  it specifies that there is no timeout.
  <p>
  Default is vendor-specific.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.1</dd>
-</dl>
 <dl>
 <dt>Default:</dt>
 <dd>0</dd>
