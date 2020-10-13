@@ -5,8 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<meta name="author" content="Otávio Santana, Leonardo de Moura Rocha Lima, Roan Brasil Monteiro">
-<title>Eclipse Jakarta NoSQL</title>
+<meta name="author" content="Eclipse Foundation, Otavio Santana, Leonardo de Moura Rocha Lima, Roan Brasil Monteiro">
+<title>Jakarta NoSQL</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -520,7 +520,7 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Eclipse Jakarta NoSQL</h1>
+<h1>Jakarta NoSQL</h1>
 <div class="details">
 <span id="revnumber">version 1.0.0-b2,</span>
 <span id="revdate">October 13, 2020</span>
@@ -529,7 +529,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel0">
-<li><a href="#_eclipse_jakarta_nosql">Eclipse Jakarta NoSQL</a>
+<li><a href="#_jakarta_nosql">Jakarta NoSQL</a>
 <ul class="sectlevel1">
 <li><a href="#_one_mapping_api_multiples_databases">1. One Mapping API, multiples databases</a>
 <ul class="sectlevel2">
@@ -726,7 +726,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre>Specification: Eclipse Jakarta NoSQL
+<pre>Specification: Jakarta NoSQL
 
 Version: 1.0.0-b2
 
@@ -734,8 +734,8 @@ Status: Draft
 
 Release: October 13, 2020
 
-Copyright (c) 2020 Eclipse Jakarta NoSQL Contributors:
-Otávio Santana, Leonardo de Moura Rocha Lima, Roan Brasil Monteiro
+Copyright (c) 2020 Jakarta NoSQL Contributors:
+Eclipse Foundation, Otavio Santana, Leonardo de Moura Rocha Lima, Roan Brasil Monteiro
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License v. 2.0 which is available at
@@ -744,7 +744,7 @@ terms of the Eclipse Public License v. 2.0 which is available at
 </div>
 </div>
 </div>
-<h1 id="_eclipse_jakarta_nosql" class="sect0"><a class="anchor" href="#_eclipse_jakarta_nosql"></a>Eclipse Jakarta NoSQL</h1>
+<h1 id="_jakarta_nosql" class="sect0"><a class="anchor" href="#_jakarta_nosql"></a>Jakarta NoSQL</h1>
 <div class="sect1">
 <h2 id="_one_mapping_api_multiples_databases"><a class="anchor" href="#_one_mapping_api_multiples_databases"></a>1. One Mapping API, multiples databases</h2>
 <div class="sectionbody">
@@ -821,7 +821,7 @@ template.insert(diana, <span class="predefined-type">Duration</span>.ofSeconds(<
 <div class="sect2">
 <h3 id="_a_fluent_api"><a class="anchor" href="#_a_fluent_api"></a>1.2. A Fluent API</h3>
 <div class="paragraph">
-<p>Eclipse Jakarta NoSQL is a fluent API that makes it easier for Java developers create queries that either retrieve or delete information in a Document type, for example.</p>
+<p>Jakarta NoSQL is a fluent API that makes it easier for Java developers create queries that either retrieve or delete information in a Document type, for example.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2842,7 +2842,7 @@ Like communication API, there is a support for database diversity. This project 
 <div class="sect4">
 <h5 id="_entity_2"><a class="anchor" href="#_entity_2"></a>@Entity</h5>
 <div class="paragraph">
-<p>This annotation maps the class to Eclipse Jakarta NoSQL. There is a single value attribute. This attribute specifies the column family name, or the document collection name, etc. The default value is the simple name of the class. For example, given the <code>org.jakarta.nosql.demo.Person</code> class, the default name will be <code>Person</code>.</p>
+<p>This annotation maps the class to Jakarta NoSQL. There is a single value attribute. This attribute specifies the column family name, or the document collection name, etc. The default value is the simple name of the class. For example, given the <code>org.jakarta.nosql.demo.Person</code> class, the default name will be <code>Person</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4017,7 +4017,7 @@ The main difference to run using a template instead of in a manager instance is 
 <div class="sect4">
 <h5 id="_document_collection_2"><a class="anchor" href="#_document_collection_2"></a>Document Collection</h5>
 <div class="paragraph">
-<p>The document types allow more complex queries, so with more complex entities with a document type, a developer can find from different fields more easily and naturally. Also, there are NoSQL document types that support aggregations query, however, Eclipse Jakarta NoSQL does not support this yet. At the Eclipse Jakarta NoSQL API perspective, the document and column type is pretty similar, but with the document, a Java developer might do a query from a field that isn&#8217;t a key and neither returns an unsupported operation exception or adds a secondary index for this. So, given the same Person entity with document NoSQL type, a developer can do more with queries, such as "person" between "age".</p>
+<p>The document types allow more complex queries, so with more complex entities with a document type, a developer can find from different fields more easily and naturally. Also, there are NoSQL document types that support aggregations query, however, Jakarta NoSQL does not support this yet. At the Jakarta NoSQL API perspective, the document and column type is pretty similar, but with the document, a Java developer might do a query from a field that isn&#8217;t a key and neither returns an unsupported operation exception or adds a secondary index for this. So, given the same Person entity with document NoSQL type, a developer can do more with queries, such as "person" between "age".</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4041,7 +4041,7 @@ The main difference to run using a template instead of in a manager instance is 
 <div class="sect4">
 <h5 id="_graph_2"><a class="anchor" href="#_graph_2"></a>Graph</h5>
 <div class="paragraph">
-<p>If an application needs a recommendation engine or a full detail about the relationship between two entities in your system, it requires a graph database. A graph database has the vertex and the edge. The edge is an object that holds the relationship information about the edges and has direction and properties that make it perfect for maps or human relationship. To the Graph API, Eclipse Jakarta NoSQL uses the Apache Tinkerpop. Likewise, the GraphTemplate is a wrapper to convert a Java entity to Vertex in TinkerPop.</p>
+<p>If an application needs a recommendation engine or a full detail about the relationship between two entities in your system, it requires a graph database. A graph database has the vertex and the edge. The edge is an object that holds the relationship information about the edges and has direction and properties that make it perfect for maps or human relationship. To the Graph API, Jakarta NoSQL uses the Apache Tinkerpop. Likewise, the GraphTemplate is a wrapper to convert a Java entity to Vertex in TinkerPop.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4217,7 +4217,7 @@ Stream&lt;Person&gt; people = preparedStatement.getResult();</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>So, Eclipse Jakarta NoSQL will inject automatically.</p>
+<p>So, Jakarta NoSQL will inject automatically.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4951,7 +4951,7 @@ repository.save(person); <span class="comment">//throws a ConstraintViolationExc
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0-b2<br>
-Last updated 2020-10-13 07:35:48 BRT
+Last updated 2020-10-13 17:51:52 BRT
 </div>
 </div>
 </body>

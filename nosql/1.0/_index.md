@@ -21,7 +21,7 @@ A point that we are also studying is the [Quarkus](https://quarkus.io/) and [Mic
 * [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b2.pdf) (PDF)
 * [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b2.pdf) (PDF)
 * [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b2.html) (HTML)
-* [Jakarta NoSQL 1.0 Specification Javadoc](./javadoc)
+* [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
 * [Jakarta NoSQL 1.0 Specification Document TCK](https://github.com/eclipse/jnosql/archive/1.0.0-b2.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.nosql.communication:communication-core:jar:1.0.0-b2](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-core/1.0.0-b2/)
