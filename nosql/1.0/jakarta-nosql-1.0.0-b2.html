@@ -523,7 +523,7 @@ table.CodeRay td.code>pre{padding:0}
 <h1>Eclipse Jakarta NoSQL</h1>
 <div class="details">
 <span id="revnumber">version 1.0.0-b2,</span>
-<span id="revdate">junho 07, 2020</span>
+<span id="revdate">October 13, 2020</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -732,9 +732,9 @@ Version: 1.0.0-b2
 
 Status: Draft
 
-Release: junho 07, 2020
+Release: October 13, 2020
 
-Copyright (c) 2019 Eclipse Jakarta NoSQL Contributors:
+Copyright (c) 2020 Eclipse Jakarta NoSQL Contributors:
 Otávio Santana, Leonardo de Moura Rocha Lima, Roan Brasil Monteiro
 
 This program and the accompanying materials are made available under the
@@ -752,16 +752,16 @@ terms of the Eclipse Public License v. 2.0 which is available at
 <p>Jakarta NoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases. It defines a set of APIs and provides a standard implementation for most NoSQL databases. This clearly helps to achieve very low application coupling with the underlying NoSQL technologies used in applications.</p>
 </div>
 <div class="paragraph">
-<p>The project has two layers:</p>
+<p>The project has two layers that define communication with NOSQL databases through API&#8217;s. There are:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>Communication Layer</strong>: A set of APIs that defines communication with NoSQL databases. Compared with traditional the RDBMS world, they are like the JDBC API. It contains four modules, one for each NoSQL database type: Key-Value, Column Family, Document, and Graph.</p>
+<p><strong>Communication Layer</strong>: Contains four modules, one for each NoSQL database type: Key-Value, Column Family, Document and Graph.
+Compared with traditional the RDBMS world, they are like the JDBC API.</p>
 </li>
 <li>
-<p><strong>Mapping Layer</strong>: These APIs help developers to integrate their Java application with the NoSQL database.
-This layer is annotation-driven and uses technologies like CDI and Bean Validation, making it simple for developers to use.
+<p><strong>Mapping Layer</strong>: This layer is annotation-driven and uses technologies like CDI and Bean Validation, making it simple for developers to use.
 In the traditional RDBMS world, this layer can be compared to the Java Persistence API or object-relational mapping frameworks such as Hibernate.</p>
 </li>
 </ol>
@@ -1072,7 +1072,7 @@ template.save(person, level);</code></pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Relationship</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">not supported</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">----</p></td>
 </tr>
 </tbody>
 </table>
@@ -4951,7 +4951,7 @@ repository.save(person); <span class="comment">//throws a ConstraintViolationExc
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0-b2<br>
-Last updated 2020-05-24 04:35:44 BRT
+Last updated 2020-10-13 07:35:48 BRT
 </div>
 </div>
 </body>
