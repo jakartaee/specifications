@@ -12,7 +12,7 @@ Jakarta Wombat 1.0 lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
 
 ## Plan Review
 
-This Specification Project's Plan Review was covered by the Creation Review which concluded successfully on 202x-xx-xx with the following results:
+This Specification Project's Plan Review was concluded successfully on 202x-xx-xx with the following results:
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
