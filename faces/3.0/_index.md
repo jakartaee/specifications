@@ -22,7 +22,7 @@ support for internationalization and accessibility.
 
 # Compatible Implementations
 
-* [Mojarra 3.0.0-RC4](https://eclipse-ee4j.github.io/mojarra)
+* [Mojarra 3.0.0-RC5](https://github.com/eclipse-ee4j/mojarra/releases/download/3.0.0-RC5-RELEASE/jakarta.faces-3.0.0-RC5.jar)
 
 # Ballots
 
