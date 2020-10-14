@@ -22,7 +22,7 @@ Jakarta Authentication consists of several profiles, with each profile telling h
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 6.0.0-SNAPSHOT-2020-09-20](https://download.eclipse.org/ee4j/glassfish/weekly/glassfish-6.0.0-SNAPSHOT-2020-09-20.zip)
+* [Eclipse Glassfish 6.0.0-M3-2020-10-04](https://github.com/eclipse-ee4j/glassfish/releases/download/6.0.0-M3-2020-10-04/glassfish-6.0.0-M3-2020-10-04.zip)
 
 # Ballots
 
