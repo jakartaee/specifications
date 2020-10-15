@@ -12,7 +12,7 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 * [Jakarta Connectors 2.0 Javadoc](./apidocs)
 * [Jakarta Connectors 2.0 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9-eftl/staged-900/jakarta-connectors-tck-2.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.resource:jakarta.resource-api:jar:2.0.0](https://jakarta.oss.sonatype.org/service/local/repo_groups/staging/content/jakarta/resource/jakarta.resource-api/2.0.0jakarta.resource-api-2.0.0.jar)
+  * [jakarta.resource:jakarta.resource-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.resource/jakarta.resource-api/2.0.0/jar)
 
 
 # Compatible Implementations
