@@ -1,6 +1,6 @@
 ---
 title: "Jakarta NoSQL 1.0 (under development)"
-date: 2020-07-23
+date: 2020-10-12
 summary: "Under Development"
 ---
 
@@ -36,3 +36,25 @@ A point that we are also studying is the [Quarkus](https://quarkus.io/) and [Mic
 # Compatible Implementations
 
 * [Eclipse JNoSQL](http://www.jnosql.org/)
+
+# Ballots
+
+## Plan Review
+
+The Specification Committee Ballot concluded successfully on 2020-10-12 with the following results.
+
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |   0  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |  +1  |
+| Scott Stark, Mark Little                       | Red Hat             |   0  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+| Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
+|                                                | **Total**           | **8**|
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00984.html)
