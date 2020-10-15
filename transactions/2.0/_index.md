@@ -12,7 +12,7 @@ Jakarta Transactions - Need scope statement
 * [Jakarta Transactions 2.0 Javadoc](./apidocs)
 * [Jakarta Transactions 2.0 TCK](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.0.zip)([sig](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.jta:jakarta.jta-api:jar:2.0.0](https://repo1.maven.org/maven2/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar)
+  * [jakarta.transaction:jakarta.transaction-api:jar:2.0.0](https://repo1.maven.org/maven2/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar)
 
 
 # Compatible Implementations
