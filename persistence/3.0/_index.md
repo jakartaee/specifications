@@ -40,24 +40,23 @@ The Specification Committee Ballot concluded successfully on 2020-10-15 with the
 
 | Representative                     | Representative for: |  Vote  |
 |------------------------------------|---------------------|--------|
-| Kenji Kazumura	                   | Fujitsu	           |   +1   |
-| Dan Bandera, Kevin Sutter	         | IBM	               |   +1   |
-| Ed Bratt, Dmitry Kornilov	         | Oracle	             |   +1   |
-| Andrew Pielage, Matt Gill	         | Payara	             |   +1   |
-| Scott Stark, Mark Little	         | Red Hat	           |   +1   |
-| David Blevins, Jean-Louis Monteiro | Tomitribe	         |   +1   |
-| Ivar Grimstad	EE4J                 | PMC	               |   +1   |
-| Marcelo Ancelmo, Martijn Verburg	 | Participant Members |   +1   |
-| Werner Keil	                       | Committer Members	 |   +1   |
-| Scott (Congquan) Wang	             | Enterprise Members	 |   +1   |
-| 	                                 | **Total**	         | **10** |
+| Kenji Kazumura                     | Fujitsu             |   +1   |
+| Dan Bandera, Kevin Sutter          | IBM                 |   +1   |
+| Ed Bratt, Dmitry Kornilov          | Oracle              |   +1   |
+| Andrew Pielage, Matt Gill          | Payara              |   +1   |
+| Scott Stark, Mark Little           | Red Hat             |   +1   |
+| David Blevins, Jean-Louis Monteiro | Tomitribe           |   +1   |
+| Ivar Grimstad                      | EE4J PMC            |   +1   |
+| Marcelo Ancelmo, Martijn Verburg   | Participant Members |   +1   |
+| Werner Keil                        | Committer Members   |   +1   |
+| Scott (Congquan) Wang              | Enterprise Members  |   +1   |
+|                                    | **Total**           | **10** |
 		
 		
 		
 | Non-binding Votes                  | Representative for: |  Vote  |
 |------------------------------------|---------------------|--------|
-| Jody Grassel	                     | Committer	         |   +1   |
-| 	                                 | **Total**	         |  **1** |
-		
+| Jody Grassel                       | Committer           |   +1   |
+|                                    | **Total**           |  **1** |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00949.html)
