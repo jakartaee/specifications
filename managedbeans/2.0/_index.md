@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Managed Beans 2.0"
-date: 2020-10-01
+date: 2020-11-20
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Managed Beans defines a set of basic services for container-managed objects
