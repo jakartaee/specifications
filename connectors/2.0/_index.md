@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Connectors 2.0 (milestone)"
-date: 2020-09-13
+title: "Jakarta Connectors 2.0"
+date: 2020-10-10
 summary: "Release for Jakarta EE 9"
 ---
 The Jakarta Connectors specification defines a standard architecture for Jakarta EE application components to connect to Enterprise Information Systems.
@@ -10,7 +10,7 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 * [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0.pdf) (PDF)
 * [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0.html) (HTML)
 * [Jakarta Connectors 2.0 Javadoc](./apidocs)
-* [Jakarta Connectors 2.0 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9-eftl/staged-900/jakarta-connectors-tck-2.0.0.zip)([sig](),[sha](),[pub]())
+* [Jakarta Connectors 2.0 TCK](https://download.eclipse.org/jakartaee/connectors/2.0/jakarta-connectors-tck-2.0.0.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.resource:jakarta.resource-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.resource/jakarta.resource-api/2.0.0/jar)
 
