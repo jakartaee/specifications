@@ -17,7 +17,7 @@ Jakarta Annotations defines a collection of annotations representing common sema
 
 # Compatible Implementations
 
-* [Eclipse GlassFish](https://search.maven.org/artifact/org.glassfish.main.core/glassfish/6.0.0-M1/glassfish-jar)
+* [Eclipse GlassFish](https://github.com/eclipse-ee4j/glassfish/releases/download/6.0.0-M3-2020-10-04/glassfish-6.0.0-M3-2020-10-04.zip)
 
 # Ballots
 
