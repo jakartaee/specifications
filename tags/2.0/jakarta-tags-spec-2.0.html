@@ -445,7 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jakarta Standard Tag Library Team, https://projects.eclipse.org/projects/ee4j.jstl</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jstl-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jstl-dev</a></span><br>
 <span id="revnumber"> 2.0,</span>
-<span id="revdate">September 22, 2020</span>
+<span id="revdate">October 19, 2020</span>
 <br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
@@ -717,13 +717,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#compatibility-migration">Appendix A: Compatibility &amp; Migration</a>
 <ul class="sectlevel2">
-<li><a href="#jstl-1-2-backwards-compatibility">A.1. JSTL 1.2 Backwards Compatibility</a></li>
-<li><a href="#jstl-1-1-backwards-compatibility">A.2. JSTL 1.1 Backwards Compatibility</a>
-<ul class="sectlevel3">
-<li><a href="#how-jstl-1-1-backwards-compatibility-is-achieved">A.2.1. How JSTL 1.1 Backwards Compatibility is Achieved</a></li>
-</ul>
-</li>
-<li><a href="#migrating-to-jstl-1-1">A.3. Migrating to JSTL 1.1</a></li>
+<li><a href="#java-ee-backwards-compatibility">A.1. Java EE Backwards Compatibility</a></li>
 </ul>
 </li>
 <li><a href="#changes">Appendix B: Changes</a>
@@ -745,7 +739,7 @@ Version: 2.0
 
 Status: Final
 
-Release: September 22, 2020</pre>
+Release: October 19, 2020</pre>
 </div>
 </div>
 </div>
@@ -1051,7 +1045,7 @@ your comments to us at:</p>
 <div class="paragraph">
 <p>The Jakarta Standard Tag Library provides a specification document, API and
 TCK that extends the Jakarta Server Pages specification by adding a tag
-library of Java Server Pages tags for common tasks, such as XML data
+library of Jakarta Server Pages tags for common tasks, such as XML data
 processing, conditional execution, database access, loops and
 internationalization.</p>
 </div>
@@ -1185,9 +1179,8 @@ use any prefix they want).</p>
 <div class="sect2">
 <h3 id="container-requirement"><a class="anchor" href="#container-requirement"></a>1.3. Container Requirement</h3>
 <div class="paragraph">
-<p>JSTL 1.2 requires a JSP 2.1 web container.
-Please note that the expression language is part of the JSP
-specification starting with JSP 2.0.</p>
+<p>Jakarta Standard Tag Library requires a Jakarta Server Pages 3.0 web container.
+Please note that the expression language is an individual specification: Jakarta Expression Language 4.0.</p>
 </div>
 </div>
 </div>
@@ -1293,7 +1286,7 @@ true or false. A false value in the dynamic column means that only a
 static string value can be specified for the attribute. A true value
 means that a <em>request-time attribute value</em> can be specified. As defined
 in the Jakarta Server Pages specification, a "request-time attribute value" can be either
-a Java expression, an EL expression, or a value set by a
+a Java expression, an Expression Language expression, or a value set by a
 <code>&lt;jsp:attribute&gt;</code>.</p>
 </div>
 </div>
@@ -1745,26 +1738,18 @@ Date: &lt;c:out value="${formattedDate}" default="not specified"/&gt;</pre>
 <h2 id="expression-language-overview"><a class="anchor" href="#expression-language-overview"></a>3. Expression Language Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>JSTL 1.0 introduced the notion of an
-expression language (EL) to make it easy for page authors to access and
-manipulate application data without having to master the complexity
-associated with programming languages such as Java and JavaScript.</p>
-</div>
-<div class="paragraph">
-<p>Starting with JSP 2.0 / JSTL 1.1, the EL has
-become the responsibility of the JSP specification and is now formally
-defined there.</p>
+<p>Jakarta Standard Tag Library makes use of the Jakarta Expression Language.</p>
 </div>
 <div class="paragraph">
 <p>This chapter provides a simple overview of
 the key features of the expression language, it is therefore
-non-normative. Please refer to the Jakarta Server Pages specification for the formal
-definition of the EL.</p>
+non-normative. Please refer to the Jakarta Expression Language specification for the formal
+definition of the Expression Language.</p>
 </div>
 <div class="sect2">
 <h3 id="expressions-and-attribute-values"><a class="anchor" href="#expressions-and-attribute-values"></a>3.1. Expressions and Attribute Values</h3>
 <div class="paragraph">
-<p>The EL is invoked exclusively via the
+<p>The Expression Language is invoked exclusively via the
 construct <em>${expr}</em>. In the sample code below, an EL expression is
 used to set the value of attribute <em>test</em>, while a second one is used
 to display the title of a book.</p>
@@ -1778,7 +1763,7 @@ to display the title of a book.</p>
 </div>
 <div class="paragraph">
 <p>It is also possible for an attribute to
-contain more than one EL expression, mixed with static text. For
+contain more than one Expression Language expression, mixed with static text. For
 example, the following would display "Price of productName is
 productPrice" for a list of products.</p>
 </div>
@@ -1793,7 +1778,7 @@ productPrice" for a list of products.</p>
 <div class="sect2">
 <h3 id="accessing-application-data"><a class="anchor" href="#accessing-application-data"></a>3.2. Accessing Application Data</h3>
 <div class="paragraph">
-<p>An identifier in the EL refers to the Jakarta Server Pages
+<p>An identifier in the Expression Language refers to the Jakarta Server Pages
 scoped variable returned by a call to
 <em>PageContext.findAttribute(identifier)</em>. This variable can therefore
 reside in any of the four Jakarta Server Pages scopes: page, request, session, or
@@ -1801,7 +1786,7 @@ application. A null value is returned if the variable does not exist in
 any of the scopes.</p>
 </div>
 <div class="paragraph">
-<p>The EL also defines implicit objects to
+<p>The Expression Language also defines implicit objects to
 support easy access to application data that is of interest to a page
 author. Implicit objects <em>pageScope</em>, <em>requestScope</em>, <em>session</em> Scope,
 and <em>applicationScope</em> provide access to the scoped variables in each
@@ -1850,7 +1835,7 @@ the JavaBeans specification, or that represent collections such as
 lists, maps, or arrays.</p>
 </div>
 <div class="paragraph">
-<p>The EL recognizes the importance of these
+<p>The Expression Language recognizes the importance of these
 data structures and provides two operators, "." and "[]", to make it
 easy to access the data encapsulated in these objects.</p>
 </div>
@@ -1884,9 +1869,9 @@ ${user.preferences["shipping"]}</pre>
 <div class="sect2">
 <h3 id="operators"><a class="anchor" href="#operators"></a>3.4. Operators</h3>
 <div class="paragraph">
-<p>The operators supported in the EL handle the
+<p>The operators supported in the Expression Language handle the
 most common data manipulations. The standard relational, arithmetic, and
-logical operators are provided in the EL. A very useful "empty" operator
+logical operators are provided in the Expression Language. A very useful "empty" operator
 is also provided.</p>
 </div>
 <div class="paragraph">
@@ -1920,7 +1905,7 @@ that can used to determine if a value is null or empty. For example:</p>
 <div class="paragraph">
 <p>The application data a page author has access
 to may not always exactly match the type expected by the attribute of an
-action or the type expected for an EL operator. The EL supports an
+action or the type expected for an Expression Language operator. The Expression Language supports an
 exhaustive set of rules to coerce the type of the resulting value to the
 expected type.</p>
 </div>
@@ -1957,7 +1942,7 @@ yield an int value for attribute <em>begin</em>.</p>
 <p>Jakarta Server Pages are mostly used in presentation.
 Experience suggests that it is important to be able to provide as good a
 presentation as possible, even when simple errors occur in the page. To
-satisfy this requirement, the EL provides default values rather than
+satisfy this requirement, the Expression Language provides default values rather than
 errors when failure to evaluate an expression is deemed "recoverable".
 Default values are type-correct values that allow a page to easily
 recover from these error conditions.</p>
@@ -2021,7 +2006,7 @@ attribute.</p>
 </div>
 <div class="paragraph">
 <p>The <code>&lt;c:out&gt;</code> action also supports the notion
-of default values for cases where the value of an EL expression is null.
+of default values for cases where the value of an Expression Language expression is null.
 In the example below, the value "unknown" will be displayed if the
 property <em>city</em> is not accessible.</p>
 </div>
@@ -2171,7 +2156,7 @@ of the evaluation to the current <em>JspWriter</em> object.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -2343,7 +2328,7 @@ using body content</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -2500,7 +2485,7 @@ performed according to the conversion rules defined in the expression
 language (see <a href="EL-152.html#UNKNOWN">See Type Conversion</a>). With the
 exception of a null value, setting a bean property with &lt;c:set&gt; is
 therefore exactly the same as setting an attribute value of an action
-using the EL. A failure of these conversion rules to determine an
+using the Expression Language. A failure of these conversion rules to determine an
 appropriate type coersion leads to a <em>JspException</em> at runtime.</p>
 </li>
 </ul>
@@ -2512,7 +2497,7 @@ appropriate type coersion leads to a <em>JspException</em> at runtime.</p>
 <ul>
 <li>
 <p>Map the deferred-value specified to the "var"
-attribute into the EL VariableMapper.</p>
+attribute into the Expression Language VariableMapper.</p>
 </li>
 <li>
 <p>Some implementation notes illustrating how
@@ -2530,12 +2515,12 @@ the &lt;c:set&gt; tag handler may process a deferred-value specified for the
 <td class="tableblock halign-left valign-top"><p class="tableblock">doStartTag()<br>
 &#8230;&#8203;<br>
  // 'value' is a deferred-value<br>
- // Get the current EL VariableMapper<br>
+ // Get the current Expression Language VariableMapper<br>
 VariableMapper vm = jspContext.getELContext().getVariableMapper();<br>
  // Assign the expression to the variable specified<br>
  // in the 'var' attribute, so any reference to that<br>
  // variable will be replaced by the expression is<br>
- // subsequent EL evaluations.<br>
+ // subsequent Expression Language evaluations.<br>
 vm.setVariable(getVar(), (ValueExpression)getValue());<br>
 &#8230;&#8203;</p></td>
 </tr>
@@ -2617,7 +2602,7 @@ of its nested actions.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The body content is processed by the Jakarta Server Pages
+<p>Jakarta Server Pages content. The body content is processed by the Jakarta Server Pages
 container and the result is written to the current <em>JspWriter</em>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -2822,7 +2807,7 @@ specified with the <em>test</em> attribute is true.</p>
 <div class="literalblock">
 <div class="content">
 <pre>&lt;c:if test="testCondition"
-    var="varName" [scope="{page|request|session|application}"]/&gt;</pre>
+    var="varName" [scope="{<span class="underline">page</span>|request|session|application}"]/&gt;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2831,14 +2816,14 @@ specified with the <em>test</em> attribute is true.</p>
 <div class="literalblock">
 <div class="content">
 <pre>&lt;c:if test="testCondition"
-        [var="varName"] [scope="{page|request|session|application}"]&gt;
+        [var="varName"] [scope="{<span class="underline">page</span>|request|session|application}"]&gt;
     body content
 &lt;/c:if&gt;</pre>
 </div>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. If the test condition evaluates to true,
+<p>Jakarta Server Pages content. If the test condition evaluates to true,
 the Jakarta Server Pages container processes the body content and then writes it to the
 current <em>JspWriter</em>.</p>
 </div>
@@ -2916,7 +2901,7 @@ conditional execution.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The body content is processed by the Jakarta Server Pages
+<p>Jakarta Server Pages content. The body content is processed by the Jakarta Server Pages
 container (at most one of the nested actions will be processed) and
 written to the current <em>JspWriter</em>.</p>
 </div>
@@ -2974,7 +2959,7 @@ action.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. If this is the first &lt;c:when&gt; action to
+<p>Jakarta Server Pages content. If this is the first &lt;c:when&gt; action to
 evaluate to true within &lt;c:choose&gt;, the Jakarta Server Pages container processes the body
 content and then writes it to the current <em>JspWriter</em>.</p>
 </div>
@@ -3043,7 +3028,7 @@ evaluated by the Jakarta Server Pages container, and the result is output to the
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. If no <code>&lt;c:when&gt;</code> action nested within
+<p>Jakarta Server Pages content. If no <code>&lt;c:when&gt;</code> action nested within
 <code>&lt;c:choose&gt;</code> evaluates to true, the Jakarta Server Pages container processes the body
 content and then writes it to the current <em>JspWriter</em>.</p>
 </div>
@@ -3393,7 +3378,7 @@ collection of objects, or repeats it a fixed number of times.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. As long as there are items to iterate
+<p>Jakarta Server Pages content. As long as there are items to iterate
 over, the body content is processed by the Jakarta Server Pages container and written to
 the current <em>JspWriter</em>.</p>
 </div>
@@ -3577,7 +3562,7 @@ Tokens are processed in their sequential order in the string.</p>
 <div class="paragraph">
 <p>When a deferred-value is specified for the
 <em>items</em> attribute, the tag handler now adds at each iteration a mapping
-for the <em>var</em> attribute into the EL <em>VariableMapper</em>.</p>
+for the <em>var</em> attribute into the Expression Language <em>VariableMapper</em>.</p>
 </div>
 <div class="paragraph">
 <p>Below are some implementation notes
@@ -3589,7 +3574,7 @@ specified for the <em>items</em> attribute.</p>
 <pre>doStartTag() +
     ...
     // 'items' is a deferred-value +
-    // Get the current EL VariableMapper
+    // Get the current Expression Language VariableMapper
     VariableMapper vm =
         jspContext.getELContext().getVariableMapper();
     // Create an expression to be assigned to the variable
@@ -3599,8 +3584,8 @@ specified for the <em>items</em> attribute.</p>
         new myimpl.IndexExpression(getItems(), index);
     // Assign the expression to the variable specified in
     // the 'var' attribute, so any reference to that variable
-    // will be replaced by the expression in subsequent EL
-    // evaluations.
+    // will be replaced by the expression in subsequent
+    // Expression Language evaluations.
     oldMapping = vm.setVariable(getVar(), expr);
     ...
 
@@ -3639,7 +3624,7 @@ supplied delimiters.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. As long as there are items to iterate
+<p>Jakarta Server Pages content. As long as there are items to iterate
 over, the body content is processed by the Jakarta Server Pages container and written to
 the current <em>JspWriter</em>.</p>
 </div>
@@ -4023,7 +4008,7 @@ Reader object</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The body content is processed by the Jakarta Server Pages
+<p>Jakarta Server Pages content. The body content is processed by the Jakarta Server Pages
 container and the result is written to the current <em>JspWriter</em>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -4171,7 +4156,7 @@ properly closed by the time the end of the page is
 reached<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup>. Because of this requirement, the Jakarta Standard Tag Library defines
 the exported <em>Reader</em> as having nested visibility: it may not currently
 be accessed after the end-tag for the <code>&lt;c:import&gt;</code>
-action<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>. Implementations that use JSP 1.2
+action<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>. Implementations that use the
 tag-extension API will likely need to implement <em>TryCatchFinally</em> with
 their <code>&lt;c:import&gt;</code> tag handlers and close the exported Reader in
 <em>doFinally()</em>.</p>
@@ -4249,7 +4234,7 @@ relative URL may either be a context-relative path, or a page-relative
 path. A context-relative path is a path that starts with a "/". It is to
 be interpreted as relative to the application to which the Jakarta Server Pages page
 belongs. A page-relative path is a path that does not start with a "/".
-It is to be interpreted as relative to the current JSP page, as defined
+It is to be interpreted as relative to the current Jakarta Server Pages page, as defined
 by the rules of inclusion of the <code>&lt;jsp:include&gt;</code> action in the Jakarta Server Pages
 specification.</p>
 </div>
@@ -4361,7 +4346,7 @@ query string parameters</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -4431,7 +4416,7 @@ encoded (e.g. space), it is the user&#8217;s responsibility to encode them.</p>
 <div class="paragraph">
 <p>The URL must be either an absolute URL
 starting with a scheme (e.g. "http://server/context/page.jsp") or a
-relative URL as defined by JSP 1.2 in JSP.2.2.1 "Relative URL
+relative URL as defined by Jakarta Server Pages in JSP.2.2.1 "Relative URL
 Specification". As a consequence, an implementation must prepend the
 context path to a URL that starts with a slash (e.g. "/page2.jsp") so
 that such URLs can be properly interpreted by a client browser.</p>
@@ -4491,7 +4476,7 @@ query string parameters</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -4536,7 +4521,7 @@ to the client and aborts the processing of the page by returning
 <div class="paragraph">
 <p>The URL must be either an absolute URL
 starting with a scheme (e.g. "http://server/context/page.jsp") or a
-relative URL as defined by JSP 1.2 in JSP.2.2.1 "Relative URL
+relative URL as defined by Jakarta Server Pages in JSP.2.2.1 "Relative URL
 Specification". As a consequence, an implementation must prepend the
 context path to a URL that starts with a slash (e.g. "/page2.jsp") if
 the behavior is implemented using the
@@ -4584,7 +4569,7 @@ body content</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -5383,7 +5368,7 @@ used by its body content.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content and then writes it to the current <em>JspWriter</em>. The action
 ignores the body content.</p>
 </div>
@@ -5623,7 +5608,7 @@ optional message parameters</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -5783,7 +5768,7 @@ replacement to a containing <code>&lt;fmt:message&gt;</code> (see
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -5907,7 +5892,7 @@ invokes this page.</p>
 <em>setCharacterEncoding()</em> method on the servlet request with the
 character encoding name specified in the <em>value</em> attribute. It must be
 used before any parameters are retrieved, either explicitly or through
-the use of an EL expression.</p>
+the use of an Expression Language expression.</p>
 </div>
 <div class="paragraph">
 <p>If the character encoding of the request
@@ -6433,7 +6418,7 @@ information is to be formatted or parsed in its body content.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content and then writes it to the current <em>JspWriter</em>. The action
 ignores the body content.</p>
 </div>
@@ -6630,7 +6615,7 @@ numeric value to be formatted</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -6902,7 +6887,7 @@ numeric value to be parsed</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -7302,7 +7287,7 @@ value to be parsed</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -7900,7 +7885,7 @@ optional query parameters</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -8129,7 +8114,7 @@ statement and optional update parameters</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -8264,7 +8249,7 @@ isolationLevel ::= "read_committed"
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakart Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakart Server Pages container processes the body
 content and then writes the result to the current <em>JspWriter</em>. The
 action ignores the body content.</p>
 </div>
@@ -8586,7 +8571,7 @@ body content</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -9140,7 +9125,7 @@ the XPath engine.</p>
 <em>select</em> attribute of XML actions evaluates XPath expressions, helps
 avoid confusion between XPath (expression language that is local to the
 XML actions) and the Jakarta Standard Tag Library expression language (global to all actions
-with dynamic attributes in the EL version of the tag library).</p>
+with dynamic attributes in the Expression Language version of the tag library).</p>
 </div>
 </div>
 <div class="sect3">
@@ -9199,7 +9184,7 @@ using an <em>EntityResolver</em> and <em>URIResolver</em> as necessary</p>
 <div class="paragraph">
 <p>The XML core actions provide "expression
 language support" for XPath. These actions are therefore similar to the
-EL support actions <code>&lt;c:out&gt;</code> and <code>&lt;c:set&gt;</code> covered in
+Expression Language support actions <code>&lt;c:out&gt;</code> and <code>&lt;c:set&gt;</code> covered in
 <a href="#general-purpose-actions-core-tag-library">General-Purpose Actions: core tag library</a>, except that they apply to XPath
 expressions.</p>
 </div>
@@ -9253,8 +9238,7 @@ String or Reader object</em></p>
 <div class="literalblock">
 <div class="content">
 <pre>&lt;x:parse {doc="XMLDocument"|xml<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup>="XMLDocument"}
-    {var="var" [scope="scope"]|varDom="var"
-    [scopeDom="scope"]}
+    {var="var" [scope="scope"]|varDom="var" [scopeDom="scope"]}
     [systemId="systemId"]
     [filter="filter"]/&gt;</pre>
 </div>
@@ -9266,8 +9250,7 @@ body content</em></p>
 <div class="literalblock">
 <div class="content">
 <pre>&lt;x:parse
-    {var="var" [scope="scope"]|varDom="var"
-    [scopeDom="scope"]}
+    {var="var" [scope="scope"]|varDom="var" [scopeDom="scope"]}
     [systemId="systemId"]
     [filter="filter"]&gt;
         XML Document to parse
@@ -9280,7 +9263,7 @@ body content</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -9616,7 +9599,7 @@ actions provide these capabilities.</p>
 <div class="paragraph">
 <p>The XML flow control actions provide flow
 control based on the value of XPath expressions. These actions are
-therefore similar to the EL flow control actions (<code>&lt;c:if&gt;</code>, <code>&lt;c:choose&gt;</code>,
+therefore similar to the Expression Language flow control actions (<code>&lt;c:if&gt;</code>, <code>&lt;c:choose&gt;</code>,
 and &lt;`c:forEach&gt;`), except that they apply to XPath expressions.</p>
 </div>
 <div class="paragraph">
@@ -9724,7 +9707,7 @@ evaluates to true.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. If the test condition evaluates to true,
+<p>Jakarta Server Pages content. If the test condition evaluates to true,
 the Jakarta Server Pages container processes the body content and then writes it to the
 current <em>JspWriter</em>.</p>
 </div>
@@ -9803,7 +9786,7 @@ conditional execution.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The body content is processed by the Jakarta Server Pages
+<p>Jakarta Server Pages content. The body content is processed by the Jakarta Server Pages
 container (at most one of the nested elements will be processed) and
 written to the current <em>JspWriter</em>.</p>
 </div>
@@ -9862,7 +9845,7 @@ present.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. If this is the first <em>&lt;x:when&gt;</em> action
+<p>Jakarta Server Pages content. If this is the first <em>&lt;x:when&gt;</em> action
 to evaluate to true within <em>&lt;x:choose&gt;</em>, the Jakarta Server Pages container processes
 the body content and then writes it to the current <em>JspWriter</em>.</p>
 </div>
@@ -9932,7 +9915,7 @@ writes it to the current <em>JspWriter</em>.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. If no <code>&lt;x:when&gt;</code> action nested within
+<p>Jakarta Server Pages content. If no <code>&lt;x:when&gt;</code> action nested within
 <code>&lt;x:choose&gt;</code> evaluates to true, the Jakarta Server Pages container processes the body
 content and then writes it to the current <em>JspWriter</em>.</p>
 </div>
@@ -9980,7 +9963,7 @@ node to each element in the iteration.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. As long as there are items to iterate
+<p>Jakarta Server Pages content. As long as there are items to iterate
 over, the body content is processed by the Jakarta Server Pages container and written to
 the current <em>JspWriter</em>.</p>
 </div>
@@ -10169,8 +10152,7 @@ an XML document.</p>
         {doc="XMLDocument"|xml<sup class="footnote" id="_footnote_deprecated">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>="XMLDocument"} xslt="XSLTStylesheet"
         [{docSystemId="XMLSystemId"|xmlSystemId<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>="XMLSystemId"}]
         [xsltSystemId="XSLTSystemId"]
-        [{var="varName"
-        [scope="scopeName"]|result="resultObject"}]</pre>
+        [{var="varName" [scope="scopeName"]|result="resultObject"}]</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10183,8 +10165,7 @@ transformation parameters</em></p>
         {doc="XMLDocument"|xml1="XMLDocument"} xslt="XSLTStylesheet"
         [{docSystemId="XMLSystemId"|xmlSystemId<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>="XMLSystemId"}]
         [xsltSystemId="XSLTSystemId"]
-        [{var="varName"
-        [scope="scopeName"]|result="resultObject"}]
+        [{var="varName" [scope="scopeName"]|result="resultObject"}]
     &lt;x:param&gt; actions
 &lt;/x:transform&gt;</pre>
 </div>
@@ -10199,8 +10180,7 @@ document and optional transformation parameters</em></p>
         xslt="XSLTStylesheet"
         [{docSystemId="XMLSystemId"|xmlSystemId<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>="XMLSystemId"}]
         xsltSystemId="XSLTSystemId"
-        [{var="varName"
-        [scope="scopeName"]|result="resultObject"}]
+        [{var="varName" [scope="scopeName"]|result="resultObject"}]
     XML Document to parse
     optional &lt;x:param&gt; actions
 &lt;/x:transform&gt;</pre>
@@ -10212,7 +10192,7 @@ document and optional transformation parameters</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -10380,7 +10360,7 @@ body content</em></p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Body Content</strong></div>
-<p>JSP. The Jakarta Server Pages container processes the body
+<p>Jakarta Server Pages content. The Jakarta Server Pages container processes the body
 content, then the action trims it and processes it further.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -10431,13 +10411,13 @@ action&#8217;s body content.</p>
 <h2 id="tag-library-validators"><a class="anchor" href="#tag-library-validators"></a>14. Tag Library Validators</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>JSP 1.2 provides tag library validators
+<p>Jakarta Server Pages provides tag library validators
 (TLVs) as a mechanism for a tag library to enforce constraints on the
-JSP document (the "XML view") associated with any JSP page into which
+Jakarta Server Pages document (the "XML view") associated with any Jakarta Server Pages page into which
 the tag library is imported. While the expectation is that TLVs used by
 a tag library will typically enforce multi-tag constraints related to
 usage of the library&#8217;s tags themselves, a TLV is free to perform
-arbitrary validation of JSP documents. A TLV returns to the container
+arbitrary validation of Jakarta Server Pages documents. A TLV returns to the container
 information about which elements, if any, are in violation of its
 specific constraints, along with textual descriptions of the syntactic
 violation.</p>
@@ -10450,7 +10430,7 @@ libraries do not necessarily need to be substantial collections of tags;
 a taglib may exist simply to provide site-specific validation logic.
 Just like tag libraries whose primary focus is to provide new tags, such
 "validation-centric" tag libraries may be configured and used by
-"back-end" developers in order to affect the "front-end" JSP page
+"back-end" developers in order to affect the "front-end" Jakarta Server Pages page
 author&#8217;s environment.</p>
 </div>
 <div class="paragraph">
@@ -10492,7 +10472,7 @@ developer could create the following TLD:</p>
         "http://java.sun.com/xml/ns/j2ee web jsptaglibrary_2_0.xsd"
     version="2.0"&gt;
     &lt;description&gt;
-        Validates JSP pages to prohibit use of scripting elements.
+        Validates Jakarta Server Pages to prohibit use of scripting elements.
     &lt;/description&gt;
     &lt;tlib-version&gt;1.0&lt;/tlib-version&gt;
     &lt;jsp-version&gt;2.0&lt;/jsp.version&gt;
@@ -10524,13 +10504,13 @@ developer could create the following TLD:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Note that in JSP 2.0, scripting elements can
+<p>Note that in Jakarta Server Pages, scripting elements can
 also be disabled through the use of the <em>scripting-invalid</em>
-configuration element (see the JSP specification for details).</p>
+configuration element (see the Jakarta Server Pages specification for details).</p>
 </div>
 <div class="paragraph">
 <p>Similarly, to restrict a Jakarta Server Pages page to a set of
-permitted tag-libraries (in the example below, the Jakarta Standard Tag Library "EL" tag
+permitted tag-libraries (in the example below, the Jakarta Standard Tag Library "Expression Language" tag
 libraries), a developer could create the following TLD:</p>
 </div>
 <div class="literalblock">
@@ -10582,7 +10562,7 @@ extend the Jakarta Server Pages syntax with their own customized behavior, the e
 <p>The Jakarta Standard Tag Library is about the standardization, via these
 extension mechanisms, of behavior that is commonly needed by page
 authors. In addition to defining a standard set of actions, the Jakarta Standard Tag Library
-therefore also defines a standardized set of EL functions. These
+therefore also defines a standardized set of Expression Language functions. These
 functions are described in this chapter.</p>
 </div>
 <div class="sect2">
@@ -11896,160 +11876,10 @@ as on how to migrate your web application to take advantage of the new
 features of the latest Jakarta Standard Tag Library release.</p>
 </div>
 <div class="sect2">
-<h3 id="jstl-1-2-backwards-compatibility"><a class="anchor" href="#jstl-1-2-backwards-compatibility"></a>A.1. JSTL 1.2 Backwards Compatibility</h3>
+<h3 id="java-ee-backwards-compatibility"><a class="anchor" href="#java-ee-backwards-compatibility"></a>A.1. Java EE Backwards Compatibility</h3>
 <div class="paragraph">
-<p>JSTL 1.2 is backwards compatible with JSTL 1.1.
-This means that a web-application that was developed to run with JSTL
-1.1 won&#8217;t require any modification when run with JSTL 1.2.</p>
-</div>
-<div class="paragraph">
-<p>Note that JSTL is part of the Java EE platform
-as of the JSTL 1.2 version. A web application therefore does not need to
-bundle JSTL anymore when it runs on a web container that is Java EE
-technology compliant. Should JSTL be bundled with a web-application, it
-will simply be ignored as JSTL provided by the platform always takes
-precedence (see Section JSP.7.3.2, "TLD resource path" of the JSP
-specification).</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="jstl-1-1-backwards-compatibility"><a class="anchor" href="#jstl-1-1-backwards-compatibility"></a>A.2. JSTL 1.1 Backwards Compatibility</h3>
-<div class="paragraph">
-<p>JSTL 1.1 is backwards compatible with JSTL 1.0.
-This means that a web-application that was developed to run with JSTL
-1.0 won&#8217;t require any modification when run with JSTL 1.1. Details
-explaining how this backwards compatibility is achieved are given in
-<a href="#how-jstl-1-1-backwards-compatibility-is-achieved">How JSTL 1.1 Backwards Compatibility is Achieved</a> below.</p>
-</div>
-<div class="paragraph">
-<p>If your application executes in an environment
-that has JSTL 1.1, it is however recommended that you migrate to JSTL
-1.1 to take full advantage of the new capabilities it offers. Details on
-how to migrate your web-application from JSTL 1.0 to JSTL 1.1 are given
-in <a href="#migrating-to-jstl-1-1">Migrating to JSTL 1.1</a>.</p>
-</div>
-<div class="sect3">
-<h4 id="how-jstl-1-1-backwards-compatibility-is-achieved"><a class="anchor" href="#how-jstl-1-1-backwards-compatibility-is-achieved"></a>A.2.1. How JSTL 1.1 Backwards Compatibility is Achieved</h4>
-<div class="paragraph">
-<p>JSTL 1.0 requires JSP 1.2 (J2EE 1.3 platform).
-The key difference between JSTL 1.0 and JSTL 1.1 is that the expression
-language (EL) has moved from the JSTL specification to the JSP
-specification. The EL is therefore now part of the JSP 2.0
-specification, and JSTL 1.1 requires JSP 2.0 (J2EE 1.4 platform).</p>
-</div>
-<div class="paragraph">
-<p>A web application developed for JSP 1.2 has a
-servlet 2.3 deployment descriptor (web.xml). JSP 2.0 provides backwards
-compatibility for JSP 1.2 web applications by disabling by default the
-EL machinery (i.e. evaluation of EL expressions) when a web application
-has a servlet 2.3 deployment descriptor. A web application that uses
-JSTL 1.0 and which is deployed with a servlet 2.3 deployment descriptor
-therefore runs without any modification in a J2EE 1.4 environment
-because EL expressions are ignored by JSP 2.0, and JSTL 1.0 keeps
-evaluating them as was the case with JSP 1.2.</p>
-</div>
-<div class="paragraph">
-<p>To support backwards compatibility, JSTL 1.1
-introduces new URIs that must be specified to use the new capabilities
-offered in JSTL 1.1. Among these new capabilities is the evaluation of
-EL expressions being performed by the JSP 2.0 container rather than JSTL
-itself. The new URIs for JSTL 1.1 are as follows:</p>
-</div>
-<div class="paragraph">
-<p>JSTL 1.1 Tag Libraries</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 34%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Functional Area</th>
-<th class="tableblock halign-left valign-top">URI</th>
-<th class="tableblock halign-left valign-top">Prefix</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">core</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://java.sun.com/jsp/jstl/core" class="bare">http://java.sun.com/jsp/jstl/core</a></em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>c</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XML processing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://java.sun.com/jsp/jstl/xml" class="bare">http://java.sun.com/jsp/jstl/xml</a></em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>x</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I18N capable formatting</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://java.sun.com/jsp/jstl/fmt" class="bare">http://java.sun.com/jsp/jstl/fmt</a></em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>fmt</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">relational db access (SQL)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="http://java.sun.com/jsp/jstl/sql" class="bare">http://java.sun.com/jsp/jstl/sql</a></em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>sql</em></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The new URIs are similar to the old JSTL 1.0 EL
-URIs, except that <em>jsp/</em> has been added in front of <em>jstl</em>, stressing
-JSTL&#8217;s dependency on the JSP specification (which now "owns" the EL). It
-would have been desirable to move forward with the same EL URIs in JSTL
-1.1, however this would have only been possible at the cost of losing
-full backwards compatibility. The JSTL Expert Group felt that
-maintaining backwards compatibility was more important than preserving
-the old URIs.</p>
-</div>
-<div class="paragraph">
-<p>The JSTL 1.0 URIs are deprecated as of JSTL 1.1.
-If used, they should normally appear in a web application that has a
-servlet 2.3 deployment descriptor to disable the JSP 2.0 EL machinery.
-If used with a servlet 2.4 deployment descriptor, the JSP 2.0 EL
-machinery must be explicitely disabled for the pages where the JSTL 1.0
-tag libraries are used. Consult the JSP specification for details.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="migrating-to-jstl-1-1"><a class="anchor" href="#migrating-to-jstl-1-1"></a>A.3. Migrating to JSTL 1.1</h3>
-<div class="paragraph">
-<p>To migrate from JSTL 1.0 to JSTL 1.1, so a web
-application can take advantage of the new features associated with JSTL
-1.1, one must do the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Migrate the web application deployment
-descriptor (web.xml) from servlet 2.3 to servlet 2.4.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>See Servlet 2.4 specification for details</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Replace all the JSTL 1.0 EL &amp; RT URIs by the new
-JSTL 1.1 URIs</p>
-</li>
-<li>
-<p>Escape all occurrences of "${" in RT actions
-and template text.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>See JSP 2.0 specification for details.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<p>The API has moved from the Java EE (JCP) <code>javax.servlet.jsp.jstl</code> package to the Jakarta EE (Eclipse Foundation) <code>jakarta.servlet.jsp.jstl</code> package. Applications
+using the Java EE package will need to change this to the Jakarta EE package.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -12060,7 +11890,7 @@ and template text.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This appendix lists the
-changes in the JSTL specification. This appendix is non-normative.</p>
+changes in the Jakarta Standard Tag Library specification. This appendix is non-normative.</p>
 </div>
 <div class="sect2">
 <h3 id="changed-between-jakarta-standard-tag-library-2-0-and-jsr-52"><a class="anchor" href="#changed-between-jakarta-standard-tag-library-2-0-and-jsr-52"></a>B.1. Changed between Jakarta Standard Tag Library 2.0 and JSR-52</h3>
@@ -12086,7 +11916,7 @@ changes in the JSTL specification. This appendix is non-normative.</p>
 <a href="#_footnoteref_1">1</a>. Since nested scoped variables are always saved in page scope, no scope attribute is associated with them.
 </div>
 <div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. It is important to note that the Jakarta Server Pages specification says that "A name should refer to a unique object at all points in the execution, that is all the different scopes really should behave as a single name space." The Jakarta Server Pages specification also says that "A JSP container implementation may or may not enforce this rule explicitly due to performance reasons". Because of this, if a scoped variable with the same name as a nested variable already exists in a scope other than 'page', exactly what happens to that scoped variable depends on how the Jakarta Server Pages container has been implemented. To comply with the Jakarta Server Pages specification, and to avoid non-portable behavior, page authors should therefore avoid using the same name in different scopes.
+<a href="#_footnoteref_2">2</a>. It is important to note that the Jakarta Server Pages specification says that "A name should refer to a unique object at all points in the execution, that is all the different scopes really should behave as a single name space." The Jakarta Server Pages specification also says that "A Jakarta Server Pages container implementation may or may not enforce this rule explicitly due to performance reasons". Because of this, if a scoped variable with the same name as a nested variable already exists in a scope other than 'page', exactly what happens to that scoped variable depends on how the Jakarta Server Pages container has been implemented. To comply with the Jakarta Server Pages specification, and to avoid non-portable behavior, page authors should therefore avoid using the same name in different scopes.
 </div>
 <div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. The proper way to process strings of tokens is via &lt;c:forTokens&gt; or via functions <em>split</em> and <em>join</em>.
@@ -12095,7 +11925,7 @@ changes in the JSTL specification. This appendix is non-normative.</p>
 <a href="#_footnoteref_4">4</a>. If the responsibility was left to the consumer tag, this could lead to resource leaks (e.g. connection left open, memory space for buffers) until garbage collection is activated. This is because a consumer tag might not close the <em>Reader</em>, or because the page author might remove the consumer tag while leaving inadvertantly the &lt;c:import&gt; tag in the page.
 </div>
 <div class="footnote" id="_footnotedef_5">
-<a href="#_footnoteref_5">5</a>. This restriction could eventually be lifted when the JSP spec supports the notion of page events that actions could register to. On a <em>pageExit</em> event, an &lt;c:import&gt; tag would then simply release its resources if it had not already been done, removing the requirement for nested visibility.
+<a href="#_footnoteref_5">5</a>. This restriction could eventually be lifted when the Jakarta Server Pages spec supports the notion of page events that actions could register to. On a <em>pageExit</em> event, an &lt;c:import&gt; tag would then simply release its resources if it had not already been done, removing the requirement for nested visibility.
 </div>
 <div class="footnote" id="_footnotedef_6">
 <a href="#_footnoteref_6">6</a>. It is however important to note that using the output of &lt;c:url&gt; as the <em>url</em> attribute value of &lt;c:import&gt; won&#8217;t work for context relative URLs (URLs that start with a '/'). That&#8217;s because in those cases &lt;c:url&gt; prepends the context path to the URL value.
