@@ -8,8 +8,8 @@ following the Representational State Transfer (REST) architectural pattern.
 
 * [Jakarta RESTful Web Services 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta RESTful Web Services 3.0 Specification Document](./restful-ws-spec-3.0.pdf) (PDF)
-* [Jakarta RESTful Web Services 3.0 Specification Document](./restful-ws-spec-3.0.html) (HTML)
+* [Jakarta RESTful Web Services 3.0 Specification Document](./jakarta-restful-ws-spec-3.0.pdf) (PDF)
+* [Jakarta RESTful Web Services 3.0 Specification Document](./jakarta-restful-ws-spec-3.0.html) (HTML)
 * [Jakarta RESTful Web Services 3.0 Javadoc](./apidocs)
 * [Jakarta RESTful Web Services 3.0 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
