@@ -20,8 +20,7 @@ existing custom tags with Jakarta Standard Tag Library tags.
 
 
 # Compatible Implementations
-
-* [Eclipse Glassfish 6.0.0-SNAPSHOT-2020-09-20](https://download.eclipse.org/ee4j/glassfish/weekly/glassfish-6.0.0-SNAPSHOT-2020-09-20.zip)
+* [EE4J implementation of Jakarta Standard Tag Library 2.0.0](https://github.com/eclipse-ee4j/jstl-api/releases/download/2.0.0-IMPL-RELEASE/jakarta.servlet.jsp.jstl-2.0.0.jar) using vehicle [Eclipse Glassfish 6.0.0-M3-2020-10-04](https://github.com/eclipse-ee4j/glassfish/releases/download/6.0.0-M3-2020-10-04/glassfish-6.0.0-M3-2020-10-04.zip)
 
 # Ballots
 
