@@ -18,7 +18,7 @@ following the Representational State Transfer (REST) architectural pattern.
 
 # Compatible Implementations
 
-* [Eclipse Jersey 3.0.0](https://repo1.maven.org/maven2/org/glassfish/jersey/bundles/jaxrs-ri/3.0.0/jaxrs-ri-3.0.0.jar)
+* [Eclipse Jersey 3.0.0](https://eclipse-ee4j.github.io/jersey/download.html)
 
 # Ballots
 
