@@ -20,6 +20,7 @@ into a Jakarta Servlet.
 # Compatible Implementations
 
 * [Eclipse Glassfish 6.0.0-RC1](https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-RC1.zip)
+* [EE4J implementation of Jakarta Server Pages 3.0.0](https://github.com/eclipse-ee4j/jsp-api/releases/download/3.0.0-RELEASE-impl/jakarta.servlet.jsp-3.0.0.jar) using vehicle [Eclipse GlassFish 6.0.0-RC1](https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-RC1.zip)
 
 
 # Ballots
