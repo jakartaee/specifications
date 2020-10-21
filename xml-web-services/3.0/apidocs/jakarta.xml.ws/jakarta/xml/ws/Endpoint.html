@@ -159,12 +159,10 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 
  <p>An endpoint may have a list of metadata documents, such as WSDL
  and XMLSchema documents, bound to it. At publishing time, the
- JAX-WS implementation will try to reuse as much of that metadata
+ Jakarta XML Web Services implementation will try to reuse as much of that metadata
  as possible instead of generating new ones based on the annotations
  present on the implementor.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="Binding.html" title="interface in jakarta.xml.ws"><code>Binding</code></a>, 
 <a href="BindingType.html" title="annotation in jakarta.xml.ws"><code>BindingType</code></a>, 
@@ -382,7 +380,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEndpointContext(jakarta.xml.ws.EndpointContext)">setEndpointContext</a></span>&#8203;(<a href="EndpointContext.html" title="class in jakarta.xml.ws">EndpointContext</a>&nbsp;ctxt)</code></th>
 <td class="colLast">
-<div class="block">By setting a <code>EndpointContext</code>, JAX-WS runtime knows about
+<div class="block">By setting a <code>EndpointContext</code>, Jakarta XML Web Services runtime knows about
  addresses of other endpoints in an application.</div>
 </td>
 </tr>
@@ -543,8 +541,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
         </code> parameter will have their default values.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The newly created endpoint.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 </dl>
 </li>
 </ul>
@@ -599,8 +595,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
         </code> parameter will have their default values.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The newly created endpoint.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 </dl>
 </li>
 </ul>
@@ -641,7 +635,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre class="methodSignature">public abstract&nbsp;void&nbsp;publish&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;address)</pre>
 <div class="block">Publishes this endpoint at the given address.
  The necessary server infrastructure will be created and
- configured by the JAX-WS implementation using some default configuration.
+ configured by the Jakarta XML Web Services implementation using some default configuration.
  In order to get more control over the server configuration, please
  use the <a href="#publish(java.lang.Object)"><code>publish(Object)</code></a> method instead.</div>
 <dl>
@@ -671,7 +665,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  object at the given address.
  <p>
  The necessary server infrastructure will be created and
- configured by the JAX-WS implementation using some default configuration.
+ configured by the Jakarta XML Web Services implementation using some default configuration.
 
  In order to get more control over the server configuration, please
  use the <a href="#create(java.lang.String,java.lang.Object)"><code>create(String,Object)</code></a> and
@@ -706,7 +700,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  with the web service features.
  <p>
  The necessary server infrastructure will be created and
- configured by the JAX-WS implementation using some default configuration.
+ configured by the Jakarta XML Web Services implementation using some default configuration.
 
  In order to get more control over the server configuration, please
  use the <a href="#create(java.lang.String,java.lang.Object)"><code>create(String,Object)</code></a> and
@@ -727,8 +721,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/SecurityException.html?is-external=true" title="class or interface in java.lang" class="externalLink">SecurityException</a></code> - If a <code>java.lang.SecurityManger</code>
           is being used and the application doesn't have the
           <code>WebServicePermission("publishEndpoint")</code> permission.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 </dl>
 </li>
 </ul>
@@ -792,8 +784,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/SecurityException.html?is-external=true" title="class or interface in java.lang" class="externalLink">SecurityException</a></code> - If a <code>java.lang.SecurityManger</code>
           is being used and the application doesn't have the
           <code>WebServicePermission("publishEndpoint")</code> permission.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 </dl>
 </li>
 </ul>
@@ -964,8 +954,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  not in the published state.</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang" class="externalLink">UnsupportedOperationException</a></code> - If this <code>BindingProvider</code>
  uses the XML/HTTP binding.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="wsaddressing/W3CEndpointReference.html" title="class in jakarta.xml.ws.wsaddressing"><code>W3CEndpointReference</code></a></dd>
 </dl>
@@ -1001,8 +989,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  <code>EndpointReference</code> type.</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang" class="externalLink">UnsupportedOperationException</a></code> - If this <code>BindingProvider</code>
  uses the XML/HTTP binding.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 </dl>
 </li>
 </ul>
@@ -1013,7 +999,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>setEndpointContext</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setEndpointContext&#8203;(<a href="EndpointContext.html" title="class in jakarta.xml.ws">EndpointContext</a>&nbsp;ctxt)</pre>
-<div class="block">By setting a <code>EndpointContext</code>, JAX-WS runtime knows about
+<div class="block">By setting a <code>EndpointContext</code>, Jakarta XML Web Services runtime knows about
  addresses of other endpoints in an application. If multiple endpoints
  share different ports of a WSDL, then the multiple port addresses
  are patched when the WSDL is accessed.
@@ -1025,8 +1011,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dd><code>ctxt</code> - that is shared for multiple endpoints</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalStateException</a></code> - If the endpoint has been published already or it has been stopped.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 </dl>
 </li>
 </ul>

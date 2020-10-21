@@ -138,16 +138,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 <div class="block">Invoker hides the detail of calling into application endpoint
  implementation. Container hands over an implementation of Invoker
- to JAX-WS runtime, and jax-ws runtime calls <a href="#invoke(java.lang.reflect.Method,java.lang.Object...)"><code>invoke(java.lang.reflect.Method, java.lang.Object...)</code></a>
+ to Jakarta XML Web Services runtime, and Jakarta XML Web Services runtime calls <a href="#invoke(java.lang.reflect.Method,java.lang.Object...)"><code>invoke(java.lang.reflect.Method, java.lang.Object...)</code></a>
  for a web service invocation. Finally, Invoker does the actual
  invocation of web service on endpoint instance.
 
  Container also injects the provided <code>WebServiceContext</code> and takes
- care of invoking <code>javax.annotation.PostConstruct</code> methods,
+ care of invoking <code>jakarta.annotation.PostConstruct</code> methods,
  if present, on the endpoint implementation.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Jitendra Kotamraju</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -198,7 +196,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <td class="colFirst"><code>abstract void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#inject(jakarta.xml.ws.WebServiceContext)">inject</a></span>&#8203;(<a href="../WebServiceContext.html" title="interface in jakarta.xml.ws">WebServiceContext</a>&nbsp;webServiceContext)</code></th>
 <td class="colLast">
-<div class="block">JAX-WS runtimes calls this method to ask container to inject
+<div class="block">Jakarta XML Web Services runtimes calls this method to ask container to inject
  WebServiceContext on the endpoint instance.</div>
 </td>
 </tr>
@@ -207,7 +205,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#invoke(java.lang.reflect.Method,java.lang.Object...)">invoke</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect" class="externalLink">Method</a>&nbsp;m,
       <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</code></th>
 <td class="colLast">
-<div class="block">JAX-WS runtime calls this method to do the actual web service
+<div class="block">Jakarta XML Web Services runtime calls this method to do the actual web service
  invocation on endpoint instance.</div>
 </td>
 </tr>
@@ -264,7 +262,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                      throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalAccessException</a>,
                             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a>,
                             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect" class="externalLink">InvocationTargetException</a></pre>
-<div class="block">JAX-WS runtimes calls this method to ask container to inject
+<div class="block">Jakarta XML Web Services runtimes calls this method to ask container to inject
  WebServiceContext on the endpoint instance. The
  <code>WebServiceContext</code> object uses thread-local information
  to return the correct information during the actual endpoint invocation
@@ -294,7 +292,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                        throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalAccessException</a>,
                               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a>,
                               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect" class="externalLink">InvocationTargetException</a></pre>
-<div class="block">JAX-WS runtime calls this method to do the actual web service
+<div class="block">Jakarta XML Web Services runtime calls this method to do the actual web service
  invocation on endpoint instance. The injected
  <code>WebServiceContext.getMessageContext()</code> gives the correct
  information for this invocation.</div>

@@ -160,10 +160,10 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  an <code>EndpointReference</code> for a particular version of Addressing.
  For example the <a href="wsaddressing/W3CEndpointReference.html" title="class in jakarta.xml.ws.wsaddressing"><code>W3CEndpointReference</code></a> is for use
  with W3C Web Services Addressing 1.0 - Core Recommendation.
- If JAX-WS implementors need to support different versions
+ If Jakarta XML Web Services implementors need to support different versions
  of addressing, they should write their own
  <code>EndpointReference</code> subclass for that version.
- This will allow a JAX-WS implementation to create
+ This will allow a Jakarta XML Web Services implementation to create
  a vendor specific <code>EndpointReferences</code> that the
  vendor can use to flag a different version of
  addressing.
@@ -176,17 +176,15 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  schema mapped from the SEI will be more descriptive of the
  type of endpoint reference being passed.
  <p>
- JAX-WS implementors are expected to extract the XML infoset
+ Jakarta XML Web Services implementors are expected to extract the XML infoset
  from an <code>EndpointReferece</code> using the
  <a href="#writeTo(javax.xml.transform.Result)"><code>writeTo(javax.xml.transform.Result)</code></a>
  method.
  <p>
- JAXB will bind this class to xs:anyType. If a better binding
+ Jakarta XML Binding will bind this class to xs:anyType. If a better binding
  is desired, web services developers should use a concrete
  subclass such as <a href="wsaddressing/W3CEndpointReference.html" title="class in jakarta.xml.ws.wsaddressing"><code>W3CEndpointReference</code></a>.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="wsaddressing/W3CEndpointReference.html" title="class in jakarta.xml.ws.wsaddressing"><code>W3CEndpointReference</code></a>, 
 <a href="Service.html" title="class in jakarta.xml.ws"><code>Service</code></a></dd>
@@ -369,7 +367,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  returned proxy.
  The <code>EndpointReference</code> instance specifies the
  endpoint that will be invoked by the returned proxy.
- In the implementation of this method, the JAX-WS
+ In the implementation of this method, the Jakarta XML Web Services
  runtime system takes the responsibility of selecting a protocol
  binding (and a port) and configuring the proxy accordingly from
  the WSDL Metadata from this <code>EndpointReference</code> or from
