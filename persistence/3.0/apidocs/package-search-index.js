@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"jakarta.persistence"},{"l":"jakarta.persistence.criteria"},{"l":"jakarta.persistence.metamodel"},{"l":"jakarta.persistence.spi"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"jakarta.persistence","l":"jakarta.persistence"},{"m":"jakarta.persistence","l":"jakarta.persistence.criteria"},{"m":"jakarta.persistence","l":"jakarta.persistence.metamodel"},{"m":"jakarta.persistence","l":"jakarta.persistence.spi"}]

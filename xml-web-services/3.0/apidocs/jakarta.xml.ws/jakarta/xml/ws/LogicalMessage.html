@@ -130,10 +130,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">The <code>LogicalMessage</code> interface represents a
   protocol agnostic XML message and contains methods that
   provide access to the payload of the message.</div>
-<dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.0</dd>
-</dl>
 </li>
 </ul>
 </div>
@@ -168,7 +164,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPayload(jakarta.xml.bind.JAXBContext)">getPayload</a></span>&#8203;(jakarta.xml.bind.JAXBContext&nbsp;context)</code></th>
 <td class="colLast">
-<div class="block">Gets the message payload as a JAXB object.</div>
+<div class="block">Gets the message payload as a Jakarta XML Binding object.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -254,7 +250,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>getPayload</h4>
 <pre class="methodSignature"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;getPayload&#8203;(jakarta.xml.bind.JAXBContext&nbsp;context)</pre>
-<div class="block">Gets the message payload as a JAXB object. Note that there is no
+<div class="block">Gets the message payload as a Jakarta XML Binding object. Note that there is no
   connection between the returned object and the message payload,
   changes to the payload require calling <code>setPayload</code>.</div>
 <dl>

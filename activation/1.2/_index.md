@@ -36,4 +36,4 @@ The Release Review Specification Committee Ballot concluded successfully on 2020
 
 # Compatible Implementations
 
-* [Eclipse implementation of Jakarta Activation 1.2.2](https://github.com/eclipse-ee4j/activation)
+* [Eclipse implementation of Jakarta Activation 1.2.2](https://github.com/eclipse-ee4j/jaf)

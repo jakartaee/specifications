@@ -68,3 +68,4 @@ The Specification Committee Ballot concluded successfully on 2020-09-14 with the
 |                                                    | Total              |10|
 	
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00804.html)
+

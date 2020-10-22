@@ -109,9 +109,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 
   <p>
   References in this document to JAX-WS refer to the Jakarta XML Web Services unless otherwise noted.<br>
-  References in this document to SAAJ refer to the Jakarta SOAP with Attachments unless otherwise noted.<br>
   References in this document to JAXB refer to the Jakarta XML Binding unless otherwise noted.<br>
-  References in this document to JWS refer to the Jakarta Web Services Metadata unless otherwise noted.
 
   <p>
   The portable deployment is done as below:
@@ -125,14 +123,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
   web service in servlet container case.</li>
   <li>Then publishes all the endpoints using
   <a href="../../Endpoint.html#publish(jakarta.xml.ws.spi.http.HttpContext)"><code>Endpoint.publish(HttpContext)</code></a>. During publish(),
-  JAX-WS runtime registers a <a href="HttpHandler.html" title="class in jakarta.xml.ws.spi.http"><code>HttpHandler</code></a>
+  Jakarta XML Web Services runtime registers a <a href="HttpHandler.html" title="class in jakarta.xml.ws.spi.http"><code>HttpHandler</code></a>
   callback to handle incoming requests or
   <a href="HttpExchange.html" title="class in jakarta.xml.ws.spi.http"><code>HttpExchange</code></a> objects. The HttpExchange
   object encapsulates a HTTP request and a response.
   </ol>
 
   <pre>
-  Container                               JAX-WS runtime
+  Container                               Jakarta XML Web Services runtime
   ---------                               --------------
   1. Creates Invoker1, ... InvokerN
   2. Provider.createEndpoint(...)     --&gt; 3. creates Endpoint1
@@ -152,7 +150,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 
   The request processing is done as below(for every request):
   <pre>
-  Container                               JAX-WS runtime
+  Container                               Jakarta XML Web Services runtime
   ---------                               --------------
   1. Creates a HttpExchange
   2. Gets handler from HttpContext
@@ -173,8 +171,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
   3. EndpointN.stop()
   </pre></div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Jitendra Kotamraju</dd>
 </dl>

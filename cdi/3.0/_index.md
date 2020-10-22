@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Context Dependency Injection 3.0 (milestone)"
-date: 2020-05-28
+title: "Jakarta Context Dependency Injection 3.0"
+date: 2020-08-26
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -8,19 +8,23 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 
 * [Jakarta Contexts Dependency Injection 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Contexts Dependency Injection 3.0 Specification Document](./cdi-spec-3.0.0-M4.pdf) (PDF)
-* [Jakarta Contexts Dependency Injection 3.0 Specification Document](./cdi-spec-3.0.0-M4.html) (HTML)
+* [Jakarta Contexts Dependency Injection 3.0 Specification Document](jakarta-cdi-spec-3.0.pdf) (PDF)
+* [Jakarta Contexts Dependency Injection 3.0 Specification Document](jakarta-cdi-spec-3.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 3.0 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 3.0 TCK](http://download.eclipse.org/ee4j/cdi/cdi-tck-3.0.0-M3-dist.zip)([sig](),[sha](),[pub]())
-  * TCK Summary Results [Weld 4.0.0.Alpha2](./TCK-summary.html)
+* [Jakarta Contexts Dependency Injection 3.0 TCK](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.1-dist.zip)
+([sig](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.1-dist.zip.sig),
+[sha](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.1-dist.zip.sha256),
+[pub](https://github.com/jakartaee/specification-committee/blob/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.cdi:jakarta.cdi-api:jar:3.0.0-M4](https://repo1.maven.org/maven2/jakarta/enterprise/jakarta.enterprise.cdi-api/3.0.0-M4/)
+  * [jakarta.enterprise:jakarta.cdi-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/3.0.0/jar)
 
+* Schemas
+  * [XML Schema for the CDI 3.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd)
 
 # Compatible Implementations
 
-* [Weld 4.0.0.Alpha2](https://weld.cdi-spec.org/download/)
+* [Weld 4.0.0.Alpha3](https://weld.cdi-spec.org/download/)
 
 # Ballots
 
@@ -35,19 +39,20 @@ Please reference that ballot for the official results.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-09-14 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |  +1  |
+| Scott Stark, Mark Little                       | Red Hat             |  +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+| Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
+|                                                | Total               |  10  |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00813.html)

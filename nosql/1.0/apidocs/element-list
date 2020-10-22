@@ -1,0 +1,10 @@
+jakarta.nosql
+jakarta.nosql.column
+jakarta.nosql.document
+jakarta.nosql.keyvalue
+jakarta.nosql.mapping
+jakarta.nosql.mapping.column
+jakarta.nosql.mapping.document
+jakarta.nosql.mapping.keyvalue
+jakarta.nosql.mapping.reflection
+jakarta.nosql.query

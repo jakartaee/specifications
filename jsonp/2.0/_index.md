@@ -1,6 +1,6 @@
 ---
-title: "Jakarta JSON Processing 2.0 (milestone)"
-date: 2020-05-31
+title: "Jakarta JSON Processing 2.0"
+date: 2020-07-17
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta JSON Processing defines a Java(R) based framework for parsing, generating, transforming, and
@@ -8,16 +8,14 @@ querying JSON documents.
 
 * [Jakarta JSON Processing 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonp/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta JSON Processing 2.0 Specification Document]() (PDF)
-* [Jakarta JSON Processing 2.0 Specification Document]() (HTML)  
 * [Jakarta JSON Processing 2.0 Javadoc](./apidocs)
-* [Jakarta JSON Processing 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta JSON Processing 2.0 TCK](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.jsonp:jakarta.jsonp-api:jar:2.0.0-RC2](https://repo1.maven.org/maven2/jakarta/json/jakarta.json-api/2.0.0-RC2/jakarta.json-api-2.0.0-RC2.jar)
+  * [jakarta.jsonp:jakarta.jsonp-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/2.0.0/jar)
 
 # Compatible Implementations
 
-* [Jakarta JSON Processing](https://repo1.maven.org/maven2/org/glassfish/jakarta.json/2.0.0-RC2/jakarta.json-2.0.0-RC2.jar)
+* [Jakarta JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0-RELEASE)
 
 # Ballots
 
@@ -32,19 +30,20 @@ Please reference that ballot for the official results.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-09-18 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |  +1  |
+| Scott Stark, Mark Little                       | Red Hat             |  +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+| Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
+|                                                | Total               |  10  |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00826.html)
