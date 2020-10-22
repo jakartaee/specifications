@@ -39,23 +39,22 @@ This Specification Project's Plan Review was covered by the Creation Review whic
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00650.html)
 
-<!--
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2020-x-x with the following results:
- 
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Enterprise Members     |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+The Specification Committee Ballot concluded successfully on 2020-09-21 with the following results.
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
--->
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |  +1  |
+| Scott Stark, Mark Little                       | Red Hat             |  no vote  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+| Scott (Congquan) Wang                          | Enterprise Members  |  no vote  |
+|                                                | Total               |   8  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00991.html)
