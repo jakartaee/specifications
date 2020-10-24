@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Debugging Support for Other Languages 2.0 (milestone)"
-date: 2020-06-13
+title: "Jakarta Debugging Support for Other Languages 2.0"
+date: 2020-10-07
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Debugging Support for Other Languages provides a mechanism by which
@@ -10,13 +10,14 @@ the original source (for example, source file and line number references).
 
 * [Jakarta Debugging Support for Other Languages 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/2.0-debugging-support-other-languages)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0-RC2.pdf) (PDF)
-* [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0-RC2.html) (HTML)
+* [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0.pdf) (PDF)
+* [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0.html) (HTML)
+* [Jakarta Debugging Support for Other Languages TCK](https://download.eclipse.org/jakartaee/debugging/2.0/jakarta-debugging-tck-2.0.0.zip)([sig](https://download.eclipse.org/jakartaee/debugging/2.0/jakarta-debugging-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/debugging/2.0/jakarta-debugging-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 
 # Compatible Implementations
 
-* [Apache Tomcat 10.0.0-M6](https://tomcat.apache.org/download-10.cgi)
+* [Eclipse GlassFish 6.0](https://download.eclipse.org/ee4j/glassfish/weekly/glassfish-6.0.0-SNAPSHOT-2020-09-06.zip)
 
 
 # Ballots
