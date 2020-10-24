@@ -18,8 +18,7 @@ Jakarta Messaging describes a means for Java applications to create, send, and r
 
 # Compatible Implementations
 
-* [Eclipse OpenMQ 6.0.0M2](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/mq/mq-distribution/6.0.0-M2/mq-distribution-6.0.0-M2.zip)
-* [Eclipse GlassFish 6.0.0-RC1](https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-RC1.zip)
+* [Eclipse OpenMQ 6.0.0M3](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/mq/mq-distribution/6.0.0-M3/mq-distribution-6.0.0-M3.zip)
 
 # Ballots
 
