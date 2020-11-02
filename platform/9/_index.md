@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Platform 9"
-date: 2020-09-01
+date: 2020-11-20
 summary: "Release of the Jakarta EE 9 Platform"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
@@ -10,7 +10,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE Platform 9 Specification Document](./jakarta-platform-spec-9.pdf) (PDF)
 * [Jakarta EE Platform 9 Specification Document](./jakarta-platform-spec-9.html) (HTML)
 * [Jakarta EE Platform 9 Javadoc](./apidocs)
-* [Jakarta EE Platform 9 TCK](https://download.eclipse.org/jakartaee/platform/9/eclipse-jakartaeetck-9.0.0.zip)([sig](),[sha](),[pub]())
+* [Jakarta EE Platform 9 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip)([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/9.0.0/jar)
 
