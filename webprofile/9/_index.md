@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Web Profile 9"
-date: 2020-10-06
+date: 2020-11-20
 summary: "Release of the Jakarta EE 9 Web Profile"
 ---
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
