@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Enterprise Beans 4.0"
-date: 2020-08-26
+date: 2020-11-20
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -13,7 +13,7 @@ Jakarta Enterprise Beans defines an architecture for the development and deploym
 * [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./jakarta-enterprise-beans-spec-opt-4.0.pdf) (PDF)
 * [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./jakarta-enterprise-beans-spec-opt-4.0.html) (HTML)
 * [Jakarta Enterprise Beans 4.0 Javadoc](./apidocs)
-* [Jakarta Enterprise Beans 4.0 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9-eftl/promoted/jakarta-jakartaeetck-9.0.0-RC1.zip)
+* [Jakarta Enterprise Beans 4.0 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip)
 ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
@@ -34,7 +34,7 @@ See the [Jakarta Enterprise Beans 4.0 Release Plan](https://github.com/eclipse-e
 
 # Compatible Implementations
 
-* Pending
+* [Eclipse Glassfish 6.0 RC2](https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-RC2.zip)
 
 # Ballots
 
@@ -58,7 +58,7 @@ The Specification Committee Ballot concluded successfully on 2020-03-04 with the
 | Bill Shannon, Ed Bratt                                | Oracle              |   1  |
 | Mark Wareham, Steve Millidge                          | Payara              |   1  |
 | Scott Stark, Mark Little                              | Red Hat             |   1  |
-| David Blevins, Cesar Hernandez, Jean-Louis Monteiro   | Tomitribe           |   1  |
+| David Blevins, Jean-Louis Monteiro                    | Tomitribe           |   1  |
 | Ivar Grimstad                                         | EE4J PMC            |   1  |
 | Alex Theedom                                          | Participant Members |      |
 | Werner Keil                                           | Committer Members   |   1  |
@@ -77,7 +77,7 @@ The Specification Committee Ballot concluded successfully on 2020-mm-dd with the
 | Bill Shannon, Ed Bratt                                | Oracle              |      |
 | Mark Wareham, Steve Millidge                          | Payara              |      |
 | Scott Stark, Mark Little                              | Red Hat             |      |
-| David Blevins, Cesar Hernandez, Jean-Louis Monteiro   | Tomitribe           |      |
+| David Blevins, Jean-Louis Monteiro                    | Tomitribe           |      |
 | Ivar Grimstad                                         | EE4J PMC            |      |
 | Alex Theedom                                          | Participant Members |      |
 | Werner Keil                                           | Committer Members   |      |
