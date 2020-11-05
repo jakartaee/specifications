@@ -40,31 +40,9 @@ See the [Jakarta Enterprise Beans 4.0 Release Plan](https://github.com/eclipse-e
 
 ## Plan Review
 
-[//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.  For those Projects, just use the following statement in this Plan Review section:)
+This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review](https://jakarta.ee/specifications/platform/9/).
 
-[//]: # (This Specification Project's Plan Review was covered by the [Jakarta EE 9 Plan Review].)
-[//]: # (Please reference that ballot for the official results.)
-
-[//]: # (If your Project was required to do a standalone Plan Review...  You'll need to perform an official Plan Review ballot and record the results here.)
-
-[Jakarta Enterprise Bean 4.0 Release Record and Plan](https://projects.eclipse.org/projects/ee4j.ejb/releases/4.0/plan)
-
-The Specification Committee Ballot concluded successfully on 2020-03-04 with the following results.
-
-| Representative                                        | Representative for: | Vote |
-|-------------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola                      | Fujitsu             |   1  |
-| Dan Bandera, Kevin Sutter                             | IBM                 |   1  |
-| Bill Shannon, Ed Bratt                                | Oracle              |   1  |
-| Mark Wareham, Steve Millidge                          | Payara              |   1  |
-| Scott Stark, Mark Little                              | Red Hat             |   1  |
-| David Blevins, Jean-Louis Monteiro                    | Tomitribe           |   1  |
-| Ivar Grimstad                                         | EE4J PMC            |   1  |
-| Alex Theedom                                          | Participant Members |      |
-| Werner Keil                                           | Committer Members   |   1  |
-|                                                       | Total               |   8  |
-
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/mhonarc/lists/jakarta.ee-spec/msg00628.html)
+Please reference that ballot for the official results.
 
 ## Release Review
 
