@@ -1,6 +1,6 @@
 ---
-title: "Jakarta RESTful Web Services 3.0 (milestone)"
-date: 2020-06-05
+title: "Jakarta RESTful Web Services 3.0"
+date: 2020-08-26
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta RESTful Web Services provides a foundational API to develop web services
@@ -8,17 +8,17 @@ following the Representational State Transfer (REST) architectural pattern.
 
 * [Jakarta RESTful Web Services 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta RESTful Web Services 3.0 Specification Document](./restful-ws-spec-3.0-M1.pdf) (PDF)
-* [Jakarta RESTful Web Services 3.0 Specification Document](./restful-ws-spec-3.0-M1.html) (HTML)
+* [Jakarta RESTful Web Services 3.0 Specification Document](./jakarta-restful-ws-spec-3.0.pdf) (PDF)
+* [Jakarta RESTful Web Services 3.0 Specification Document](./jakarta-restful-ws-spec-3.0.html) (HTML)
 * [Jakarta RESTful Web Services 3.0 Javadoc](./apidocs)
-* [Jakarta RESTful Web Services 3.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta RESTful Web Services 3.0 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.jaxrs:jakarta.jaxrs-api:jar:3.0.0-M1](https://search.maven.org/artifact/jakarta.ws.rs/jakarta.ws.rs-api/3.0.0-M1/jar)
+  * [jakarta.jaxrs:jakarta.jaxrs-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.ws.rs/jakarta.ws.rs-api/3.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Eclipse Jersey 3.0.0-M1](https://repo1.maven.org/maven2/org/glassfish/jersey/bundles/jaxrs-ri/3.0.0-M1/jaxrs-ri-3.0.0-M1.jar)
+* [Eclipse Jersey 3.0.0](https://eclipse-ee4j.github.io/jersey/download.html)
 
 # Ballots
 
