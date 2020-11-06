@@ -530,7 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta EE Platform Team, https://projects.eclipse.org/projects/ee4j.jakartaee-platform</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev</a></span><br>
 <span id="revnumber"> 9,</span>
-<span id="revdate">November 02, 2020</span>
+<span id="revdate">November 06, 2020</span>
 <br><span id="revremark">Final Release</span>
 </div>
 <div id="toc" class="toc2">
@@ -1121,7 +1121,7 @@ Version: 9
 
 Status: Final Release
 
-Release: November 02, 2020</pre>
+Release: November 06, 2020</pre>
 </div>
 </div>
 </div>
@@ -11378,9 +11378,8 @@ application component types can be clients of RMI objects.</p>
 <p>The RMI-IIOP subsystem is composed of APIs that allow for the
 use of RMI-style programming that is independent of the underlying
 protocol.  Implementations of these APIs may support the Java SE native RMI
-protocol (JRMP), the CORBA IIOP protocol or any custom protocol that is
-compatible with the RMI programming restrictions (see the RMI-IIOP spec
-for details).</p>
+protocol (JRMP), the CORBA IIOP protocol, or any custom protocol that is
+compatible with the RMI programming restrictions.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -11400,23 +11399,12 @@ include an Enterprise Beans container with support for remote interfaces.
 remote Enterprise Beans components, as described in the Jakarta Enterprise
 Beans 4.0 specification.  This allows Enterprise Beans and their clients to be
 protocol independent and portable to Jakarta EE implementations that may use
-CORBA/IIOP, RMI, or any other custom protocol.  However, there is currently no
-requirement that Enterprise Beans be accessible using the IIOP protocol itself
-or that Jakarta EE implementations support any form of distributed interoperability
-with other Jakarta EE implementations.</p>
+CORBA/IIOP, RMI, or any other custom protocol.</p>
 </div>
 <div class="paragraph">
-<p>The use of the term RMI-IIOP has existed since J2EE 1.2 and EJB 1.1, predates
-any requirements to support CORBA itself and was used to detail application
-programming restrictions necessary to allow application portability.  Requirements
-for implementations to use CORBA/IIOP itself were added to J2EE 1.3 and EJB 2.0 and
-expanded the term RMI-IIOP beyond application portability and into distributed
-interoperability. These distributed interoperability requirements
-were marked Proposed Optional in Java EE 8 .  As of Jakarta EE 9 and Enterprise
-Beans 4.0 distributed interoperability requirements are fully removed and the term
-RMI-IIOP reverts back to a term that guarantees only application portability, not
-distributed interoperability.  Remaining use of the narrow method of
-<code>javax.rmi.PortableRemoteObject</code> is slated for removal in a future release.</p>
+<p>Requirements for distributed interoperability over CORBA/IIOP have been removed in
+Jakarta Enterprise Beans 4.0. Use of the narrow method of <code>javax.rmi.PortableRemoteObject</code>
+and references to <code>org.omg.ORB</code> in the Platform are slated for removal in a future release.</p>
 </div>
 <div class="paragraph">
 <p>Jakarta EE implementations may use CORBA/IIOP as their underlying protocol, however,
@@ -16400,7 +16388,7 @@ The reference to SOAP with Attachments API for Java™ Version 1.3 in the Java E
 <p>Created a new section for Backwards Compatibility.</p>
 </li>
 <li>
-<p><strong>TODO</strong> Documented the Java Module conventions for Jakarta EE 9.</p>
+<p>Documented the Java Module guidelines for Jakarta EE 9.</p>
 </li>
 </ul>
 </div>
