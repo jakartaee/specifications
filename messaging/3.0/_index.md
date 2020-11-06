@@ -31,21 +31,25 @@ Please reference that ballot for the official results.
 
 [//]: # (If your Project was required to do a standalone Plan Review...  You'll need to perform an official Plan Review ballot and record the results here.)
 
+
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Release Review Specification Committee Ballot concluded successfully on 2020-11-05 with the following results.
 
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Representative                                      | Representative for: | Vote |
+|-----------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                      | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                           | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                           | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                           | Payara              |  +1  |
+| Scott Stark, Mark Little                            | Red Hat             |  +1  |
+| David Blevins, Jean-Louis Monteiro, Cesar Hernandez | Tomitribe           |  +1  |
+| Ivar Grimstad                                       | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg                    | Participant Members |  +1  |
+| Werner Keil                                         | Committer Members   |  +1  |
+| Scott (Congquan) Wang                               | Enterprise Members  |  +1  |
+|                                                     | Total               |  10  |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+
+This ballot was conducted on the public e-mail list [jakarta.ee-spec@eclipse.org](mailto:jakarta.ee-spec@eclipse.org). This ballot thread begins [here](https://www.eclipse.org/lists/jakarta.ee-spec/msg01186.html).
+
