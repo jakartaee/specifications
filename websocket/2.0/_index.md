@@ -38,7 +38,6 @@ The Release Review Specification Committee Ballot concluded successfully on 2020
 | Marcelo Ancelmo, Martijn Verburg                    | Participant Members |  +1  |
 | Werner Keil                                         | Committer Members   |  +1  |
 | Scott (Congquan) Wang                               | Enterprise Members  |  +1  |
-|-----------------------------------------------------|---------------------|------|
 |                                                     | Total               |  10  |
 
 
