@@ -1,17 +1,19 @@
 ---
 title: "Jakarta MVC 2.0 (under development)"
-date: 2020-11-01
+date: 2020-11-08
 summary: "Release of Jakarta MVC with the jakarta.* namespace"
 ---
+
 Jakarta MVC defines a standard for creating web applications following the action-based model-view-controller pattern.
+The key goal of this release is to switch the namespace for the API from `javax.mvc.*` to `jakarta.mvc.*`. No additional features are planned to make the transition from Jakarta MVC 1.1 easier.
 
 * [Jakarta MVC 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.mvc/releases/2.0)
 
+<!--
 # Ballots
 
 ## Plan Review
-
-This Specification Project's Plan Review was covered by the Creation Review which concluded successfully on 202x-xx-xx with the following results:
+The Specification Committee Ballot concluded successfully on 2020-xx-xx with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
@@ -28,3 +30,4 @@ This Specification Project's Plan Review was covered by the Creation Review whic
 |                                                | **Total**           | **** |
 
 The ballot was run in the [jakarta.ee-spec mailing list]()
+-->
