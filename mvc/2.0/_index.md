@@ -1,7 +1,7 @@
 ---
 title: "Jakarta MVC 2.0 (under development)"
 date: 2020-11-08
-summary: "Release of Jakarta MVC under the `jakarta.*` namespace"
+summary: "Release of Jakarta MVC under the jakarta.* namespace"
 ---
 
 Jakarta MVC defines a standard for creating web applications following the action-based model-view-controller pattern.
