@@ -17,7 +17,7 @@ Jakarta Transactions - Need scope statement
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 6.0.0-SNAPSHOT-2020-10-04](https://download.eclipse.org/ee4j/glassfish/weekly/glassfish-6.0.0-SNAPSHOT-2020-10-04.zip)
+* [Eclipse Glassfish 6.0.0-SNAPSHOT-2020-10-04](https://github.com/eclipse-ee4j/glassfish/releases/download/6.0.0-M3-2020-10-04/glassfish-6.0.0-M3-2020-10-04.zip)
 
 # Ballots
 
