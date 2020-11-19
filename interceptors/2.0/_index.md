@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Interceptors 2.0 (milestone)"
-date: 2020-06-12
+title: "Jakarta Interceptors 2.0"
+date: 2020-07-20
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Interceptors defines a means of interposing on business method invocations and specific
@@ -9,17 +9,17 @@ and other managed classes.
 
 * [Jakarta Interceptors 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.interceptors/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0-SNAPSHOT.pdf) (PDF)
-* [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0-SNAPSHOT.html) (HTML)
+* [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0.pdf) (PDF)
+* [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0.html) (HTML)
 * [Jakarta Interceptors 2.0 Javadoc](./apidocs)
-* [Jakarta Interceptors 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta EE Platform 9 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.interceptor/jakarta.interceptor-api/2.0.0-RC2/jar)
+  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.interceptor/jakarta.interceptor-api/2.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+* [Eclipse Glassfish 6.0.0](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 
 # Ballots
 
