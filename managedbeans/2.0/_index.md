@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Managed Beans 2.0 (milestone)"
-date: 2020-06-04
+title: "Jakarta Managed Beans 2.0"
+date: 2020-11-20
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Managed Beans defines a set of basic services for container-managed objects
@@ -8,17 +8,17 @@ with minimal requirements, otherwise known under the acronym POJOs (Plain Old Ja
 
 * [Jakarta Managed Beans 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/managed-beans-2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Managed Beans 2.0 Specification Document](./managedbeans-spec-2.0-SNAPSHOT.pdf) (PDF)
-* [Jakarta Managed Beans 2.0 Specification Document](./managedbeans-spec-2.0-SNAPSHOT.html) (HTML)
+* [Jakarta Managed Beans 2.0 Specification Document](./jakarta-managed-beans-spec-2.0.pdf) (PDF)
+* [Jakarta Managed Beans 2.0 Specification Document](./jakarta-managed-beans-spec-2.0.html) (HTML)
 * Jakarta Managed Beans 2.0 Javadoc - N/A (covered by [Jakarta Annotations](https://jakarta.ee/specifications/annotations/2.0/))
-* Jakarta Managed Beans 2.0 TCK - N/A  (covered by [Jakarta EE 9 Platform TCK]() ([sig](),[sha](),[pub]()))
+* Jakarta Managed Beans 2.0 TCK - N/A  (covered by [Jakarta EE 9 Platform TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub)))
 * Maven coordinates (provided by Jakarta Annotations)
-  * [jakarta.annotation:jakarta.annotation-api:jar:2.0.0-RC1](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.0.0-RC1/jar)
+  * [jakarta.annotation:jakarta.annotation-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+* [Eclipse Glassfish 6.0.0](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 
 # Ballots
 
