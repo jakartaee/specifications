@@ -1,18 +1,18 @@
 ---
-title: "Jakarta EE Web Profile 9 (milestone)"
-date: 2020-06-15
+title: "Jakarta EE Web Profile 9"
+date: 2020-11-20
 summary: "Release of the Jakarta EE 9 Web Profile"
 ---
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
 
 * [Jakarta Web Profile 9 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/web-profile-9)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Web Profile 9 Specification Document](./webprofile-spec-9-SNAPSHOT.pdf) (PDF)
-* [Jakarta Web Profile 9 Specification Document](./webprofile-spec-9-SNAPSHOT.html) (HTML)
+* [Jakarta Web Profile 9 Specification Document](./jakarta-webprofile-spec-9.pdf) (PDF)
+* [Jakarta Web Profile 9 Specification Document](./jakarta-webprofile-spec-9.html) (HTML)
 * [Jakarta Web Profile 9 Javadoc](./apidocs)
-* [Jakarta Web Profile 9 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9/milestones/jakartaeetck-9.0.0-M1.zip)([sig](),[sha](),[pub]())
+* [Jakarta Web Profile 9 TCK](https://download.eclipse.org/jakartaee/platform/9/eclipse-jakartaeetck-9.0.0.zip)([sig](https://download.eclipse.org/jakartaee/platform/9/eclipse-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/eclipse-jakartaeetck-9.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/9.0.0-RC2/jar)
+  * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/9.0.0/jar)
   
 # Jakarta EE 9 Schedule
 
@@ -20,7 +20,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 6.0.0-M1](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/web-6.0.0-M1.zip)
+* [Eclipse Glassfish 6.0.0 RC2](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/web-6.0.0-RC2.zip)
 
 # Ballots
 
