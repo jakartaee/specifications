@@ -12,7 +12,7 @@ The key goal of this release is to switch the namespace for the API from `javax
 # Ballots
 
 ## Plan Review
-The Specification Committee Ballot concluded successfully on 2020-xx-xx with the following results.
+The Specification Committee Ballot concluded successfully on 2020-11-20 with the following results.
 
 | Representative                     | Representative for: |  Vote  |
 |------------------------------------|---------------------|--------|
