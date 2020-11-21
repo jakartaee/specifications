@@ -20,7 +20,7 @@ The key goal of this release is to switch the namespace for the API from `javax
 * [Eclipse Krazo 2.0.0](https://eclipse-ee4j.github.io/krazo/downloads/2.0.0.html)
 
 # Ballots
-<!-->
+<!--
 ## Release Review
 
 The Specification Committee Ballot concluded successfully on 20xx-xx-xx with the following results.
