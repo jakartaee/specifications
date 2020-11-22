@@ -69,7 +69,7 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-11-20 with the following results.
 
 | Representative                                        | Representative for: | Vote |
 |-------------------------------------------------------|---------------------|------|
