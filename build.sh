@@ -18,7 +18,7 @@ echo -e "Step 1: Fetch a current copy of jakarta.ee\n"
 rm -rf website
 git clone https://github.com/jakartaee/jakarta.ee.git website
 cp website/package.json .
-cp webiste/package.jason.lock .
+cp website/package.json.lock .
 cd website && npm install && cd ../
 
 echo -e "Step 2: Reset specifications content\n"
