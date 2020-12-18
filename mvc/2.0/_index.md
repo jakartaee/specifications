@@ -1,6 +1,6 @@
 ---
 title: "Jakarta MVC 2.0"
-date: 2020-11-08
+date: 2020-12-17
 summary: "Release of Jakarta MVC under the jakarta.* namespace"
 ---
 
@@ -59,3 +59,23 @@ The Specification Committee Ballot concluded successfully on 2020-11-20 with the
 |                                    | **Total**           | **10** |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01337.html)
+
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2020-12-17 with the following results.
+
+| Representative                                        | Representative for: | Vote |
+|-------------------------------------------------------|---------------------|------|
+| Kenji Kazumura	                                    | Fujitsu	          | +1
+| Dan Bandera, Kevin Sutter	                            | IBM	              | +1
+| Ed Bratt, Dmitry Kornilov	                            | Oracle	          | +1
+| Andrew Pielage, Matt Gill	                            | Payara	          | +1
+| Scott Stark, Mark Little	                            | Red Hat	          | +1
+| David Blevins, Jean-Louis Monteiro	                | Tomitribe	          | +1
+| Ivar Grimstad	                                        | EE4J PMC	          | +1
+| Marcelo Ancelmo, Martijn Verburg	                    | Participant Members | +1
+| Werner Keil	                                        | Committer Members	  | +1
+| Scott (Congquan) Wang	                                | Enterprise Members  |	+1
+|                                                       | Total               |  10    |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01401.html)
