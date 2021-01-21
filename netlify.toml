@@ -2,6 +2,9 @@
 publish = "website/public"
 command = "./build.sh && cd website && npm run disallow_robots_txt && hugo --buildFuture"
 
+[build.environment]
+NODE_VERSION = "12.18.3"
+
 [context.production.environment]
 HUGO_VERSION = "0.76.5"
 HUGO_ENV = "production"
