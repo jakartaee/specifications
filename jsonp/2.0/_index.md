@@ -16,6 +16,7 @@ querying JSON documents.
 # Compatible Implementations
 
 * [Jakarta JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0-RELEASE)
+* [Leadpony Joy 2.1.0](https://github.com/leadpony/joy/releases/tag/v2.1.0)
 
 # Ballots
 
