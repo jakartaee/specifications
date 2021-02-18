@@ -13,11 +13,11 @@ querying JSON documents.
 * Maven coordinates
   * [jakarta.json:jakarta.json-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/2.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-  * [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0-RELEASE)
+  * [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0)
 
 # Compatible Implementations
 
-* [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0-RELEASE)
+* [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0)
 * [Leadpony Joy 2.1.0](https://github.com/leadpony/joy/releases/tag/v2.1.0)
 
 # Ballots
