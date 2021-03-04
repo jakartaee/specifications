@@ -18,6 +18,7 @@ Jakarta Servlet defines a server-side API for handling HTTP requests and respons
 # Compatible Implementations
 
 * [Eclipse Glassfish 6.0.0-SNAPSHOT-2020-09-06](https://download.eclipse.org/ee4j/glassfish/weekly/glassfish-6.0.0-SNAPSHOT-2020-09-06.zip)
+* [Eclipse Jetty 11.0.1](https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/11.0.1/jetty-home-11.0.1.zip)
 
 # Ballots
 
