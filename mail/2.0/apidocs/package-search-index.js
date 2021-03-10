@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"jakarta.mail"},{"l":"jakarta.mail.event"},{"l":"jakarta.mail.internet"},{"l":"jakarta.mail.search"},{"l":"jakarta.mail.util"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"jakarta.mail","l":"jakarta.mail"},{"m":"jakarta.mail","l":"jakarta.mail.event"},{"m":"jakarta.mail","l":"jakarta.mail.internet"},{"m":"jakarta.mail","l":"jakarta.mail.search"},{"m":"jakarta.mail","l":"jakarta.mail.util"}]
