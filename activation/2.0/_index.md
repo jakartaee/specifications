@@ -19,6 +19,7 @@ appropriate bean to perform the operation(s).
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub) )
 * Maven coordinates
   * [jakarta.activation:jakarta.activation-api:jar:2.0.1](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.0.1/jar)
+* [Change Log](./changelog.md)
 
 
 # Compatible Implementations
