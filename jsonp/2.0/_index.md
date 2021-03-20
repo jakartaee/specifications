@@ -15,7 +15,7 @@ querying JSON documents.
 
 # Compatible Implementations
 
-* [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0) *)
+* [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0) *
 * [Leadpony Joy 2.1.0](https://github.com/leadpony/joy/releases/tag/v2.1.0)
 
 *) Used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
@@ -49,4 +49,4 @@ The Specification Committee Ballot concluded successfully on 2020-09-18 with the
 | Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
 |                                                | Total               |  10  |
 
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00826.html). The Compatibility Certification Requests used for the Ballot were: [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/issues/257).
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00826.html).
