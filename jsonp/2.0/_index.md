@@ -49,4 +49,4 @@ The Specification Committee Ballot concluded successfully on 2020-09-18 with the
 | Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
 |                                                | Total               |  10  |
 
-he ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00826.html). The Compatibility Certification Requests used for the Ballot were: [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/issues/257).
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00826.html). The Compatibility Certification Requests used for the Ballot were: [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/issues/257).
