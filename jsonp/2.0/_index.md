@@ -18,7 +18,7 @@ querying JSON documents.
 * [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0) *
 * [Leadpony Joy 2.1.0](https://github.com/leadpony/joy/releases/tag/v2.1.0)
 
-* Used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+\* Used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
 
 # Ballots
 
