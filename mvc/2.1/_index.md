@@ -16,8 +16,6 @@ The JDK version required will be aligned with Jakarta EE 10.
 
 * [Jakarta MVC 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.mvc/releases/2.1)
 
-# Compatible Implementations
-
 
 # Ballots
 
