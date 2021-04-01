@@ -15,6 +15,6 @@ Include the following in the PR:
 - [ ] Update `wombat/x.y/_index.md` accordingly.
 - [ ] Start service release review by emailing [Specification Committee](https://accounts.eclipse.org/mailing-list/jakarta.ee-spec) and referencing this PR.
 
-Note: Specifications themselves do not have service releases.  Only the associated JavaDoc and TCK artifacts can have service releases.  Thus, the Specification version does not use the third digit -- only the `x.y` version is used in the Specification directory structure.
+Note: Specifications themselves do not have service releases.  Only the associated API (limited to JavaDoc updates), JavaDoc, and TCK artifacts can have service releases.  Thus, the Specification version does not use the third digit -- only the `x.y` version is used in the Specification directory structure.
  
 Note: If any item does not apply, check it and mark N/A below it.
