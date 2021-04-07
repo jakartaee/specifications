@@ -522,8 +522,8 @@ table.CodeRay td.code>pre{padding:0}
 <div id="header">
 <h1>Jakarta NoSQL</h1>
 <div class="details">
-<span id="revnumber">version 1.0.0-b2,</span>
-<span id="revdate">October 13, 2020</span>
+<span id="revnumber">version 1.0.0-b3,</span>
+<span id="revdate">March 01, 2021</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -728,11 +728,11 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <pre>Specification: Jakarta NoSQL
 
-Version: 1.0.0-b2
+Version: 1.0.0-b3
 
 Status: Draft
 
-Release: October 13, 2020
+Release: March 01, 2021
 
 Copyright (c) 2020 Jakarta NoSQL Contributors:
 Eclipse Foundation, Otavio Santana, Leonardo de Moura Rocha Lima, Roan Brasil Monteiro
@@ -773,7 +773,7 @@ Therefore, with just these annotations that look like JPA, there is support for 
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
-<span class="directive">public</span> <span class="type">class</span> <span class="class">God</span> {
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Deity</span> {
 
     <span class="annotation">@Id</span>
     <span class="directive">private</span> <span class="predefined-type">String</span> id;
@@ -790,17 +790,17 @@ Therefore, with just these annotations that look like JPA, there is support for 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">GodRepository</span> <span class="directive">extends</span> Repository&lt;God, <span class="predefined-type">String</span>&gt; {
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">DeityRepository</span> <span class="directive">extends</span> Repository&lt;Deity, <span class="predefined-type">String</span>&gt; {
 
-    Optional&lt;God&gt; findByName(<span class="predefined-type">String</span> name);
+    Optional&lt;Deity&gt; findByName(<span class="predefined-type">String</span> name);
 
 }
 
-GodRepository repository = ...;
-God diana = God.builder().withId(<span class="string"><span class="delimiter">&quot;</span><span class="content">diana</span><span class="delimiter">&quot;</span></span>).withName(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>).withPower(<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>).builder();
+DeityRepository repository = ...;
+Deity diana = Deity.builder().withId(<span class="string"><span class="delimiter">&quot;</span><span class="content">diana</span><span class="delimiter">&quot;</span></span>).withName(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>).withPower(<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>).builder();
 repository.save(diana);
-Optional idResult = repository.findById(<span class="string"><span class="delimiter">&quot;</span><span class="content">diana</span><span class="delimiter">&quot;</span></span>);
-Optional nameResult = repository.findByName(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>);</code></pre>
+Optional&lt;Deity&gt; idResult = repository.findById(<span class="string"><span class="delimiter">&quot;</span><span class="content">diana</span><span class="delimiter">&quot;</span></span>);
+Optional&lt;Deity&gt; nameResult = repository.findByName(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>);</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -811,7 +811,7 @@ Optional nameResult = repository.findByName(<span class="string"><span class="de
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java">ColumnTemplate template = <span class="error">…</span>;
-God diana = God.builder().withId(<span class="string"><span class="delimiter">&quot;</span><span class="content">diana</span><span class="delimiter">&quot;</span></span>).withName(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>)
+Deity diana = Deity.builder().withId(<span class="string"><span class="delimiter">&quot;</span><span class="content">diana</span><span class="delimiter">&quot;</span></span>).withName(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>)
                 .withPower(<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>).builder();
 <span class="predefined-type">Duration</span> ttl = <span class="predefined-type">Duration</span>.ofSeconds(<span class="integer">1</span>);
 template.insert(diana, <span class="predefined-type">Duration</span>.ofSeconds(<span class="integer">1</span>));</code></pre>
@@ -826,13 +826,13 @@ template.insert(diana, <span class="predefined-type">Duration</span>.ofSeconds(<
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java">DocumentTemplate template = <span class="comment">//;//a template to document nosql operations</span>
-God diana = God.builder().withId(<span class="string"><span class="delimiter">&quot;</span><span class="content">diana</span><span class="delimiter">&quot;</span></span>).withName(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>)
+Deity diana = Deity.builder().withId(<span class="string"><span class="delimiter">&quot;</span><span class="content">diana</span><span class="delimiter">&quot;</span></span>).withName(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>)
                 .withPower(<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>).builder();
 template.insert(diana);<span class="comment">//insert an entity</span>
-DocumentQuery query = select().from(God.class).where(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>)
-                .eq(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>).build();<span class="comment">//select god where name equals “Diana”</span>
-<span class="predefined-type">List</span>&lt;God&gt; gods = template.select(query);<span class="comment">//execute query</span>
-DocumentDeleteQuery delete = delete().from(<span class="string"><span class="delimiter">&quot;</span><span class="content">god</span><span class="delimiter">&quot;</span></span>).where(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>)
+DocumentQuery query = select().from(Deity.class).where(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>)
+                .eq(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>).build();<span class="comment">//select Deity where name equals “Diana”</span>
+<span class="predefined-type">List</span>&lt;Deity&gt; deities = template.select(query);<span class="comment">//execute query</span>
+DocumentDeleteQuery delete = delete().from(<span class="string"><span class="delimiter">&quot;</span><span class="content">deity</span><span class="delimiter">&quot;</span></span>).where(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>)
                 .eq(<span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>).build();<span class="comment">//delete query</span>
 template.delete(delete);</code></pre>
 </div>
@@ -2283,11 +2283,11 @@ put {<span class="string"><span class="delimiter">&quot;</span><span class="cont
 <pre class="CodeRay highlight"><code data-lang="sql">insert_statement ::=  <span class="class">insert</span> ENTITY_NAME (NAME = VALUE, (<span class="string"><span class="delimiter">`</span><span class="content">,</span><span class="delimiter">`</span></span> NAME = VALUE) *) || JSON [ TTL ]
 
 //examples
-<span class="class">insert</span> God (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>)
-<span class="class">insert</span> God (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>, powers = {<span class="string"><span class="delimiter">&quot;</span><span class="content">sun</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">god</span><span class="delimiter">&quot;</span></span>})
-<span class="class">insert</span> God (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>, powers = {<span class="string"><span class="delimiter">&quot;</span><span class="content">sun</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">god</span><span class="delimiter">&quot;</span></span>}) <span class="integer">1</span> day
-<span class="class">insert</span> God {<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">age</span><span class="delimiter">&quot;</span></span>: <span class="integer">10</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">powers</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>]}
-<span class="class">insert</span> God {<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">age</span><span class="delimiter">&quot;</span></span>: <span class="integer">10</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">powers</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>]} <span class="integer">1</span> day</code></pre>
+<span class="class">insert</span> Deity (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>)
+<span class="class">insert</span> Deity (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>, powers = {<span class="string"><span class="delimiter">&quot;</span><span class="content">sun</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>})
+<span class="class">insert</span> Deity (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>, powers = {<span class="string"><span class="delimiter">&quot;</span><span class="content">sun</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>}) <span class="integer">1</span> day
+<span class="class">insert</span> Deity {<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">age</span><span class="delimiter">&quot;</span></span>: <span class="integer">10</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">powers</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>]}
+<span class="class">insert</span> Deity {<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">age</span><span class="delimiter">&quot;</span></span>: <span class="integer">10</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">powers</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>]} <span class="integer">1</span> day</code></pre>
 </div>
 </div>
 </div>
@@ -2301,9 +2301,9 @@ put {<span class="string"><span class="delimiter">&quot;</span><span class="cont
 <pre class="CodeRay highlight"><code data-lang="sql">update_statement ::= <span class="class">update</span> ENTITY_NAME (NAME = VALUE, (<span class="string"><span class="delimiter">`</span><span class="content">,</span><span class="delimiter">`</span></span> NAME = VALUE) *) || JSON
 
  //examples
-<span class="class">update</span> God (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>)
-<span class="class">update</span> God (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>, power = {<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>})
-<span class="class">update</span> God {<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">age</span><span class="delimiter">&quot;</span></span>: <span class="integer">10</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">power</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>]}</code></pre>
+<span class="class">update</span> Deity (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>)
+<span class="class">update</span> Deity (name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, age = <span class="integer">10</span>, power = {<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>})
+<span class="class">update</span> Deity {<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">age</span><span class="delimiter">&quot;</span></span>: <span class="integer">10</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">power</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">hunt</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">moon</span><span class="delimiter">&quot;</span></span>]}</code></pre>
 </div>
 </div>
 </div>
@@ -2318,8 +2318,8 @@ put {<span class="string"><span class="delimiter">&quot;</span><span class="cont
                       <span class="keyword">from</span> ENTITY_NAME
                       [ <span class="keyword">where</span> WHERE_CLAUSE ]
 //examples
-<span class="class">delete</span> <span class="keyword">from</span> God
-<span class="class">delete</span> power, age <span class="keyword">from</span> God <span class="keyword">where</span> name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span></code></pre>
+<span class="class">delete</span> <span class="keyword">from</span> Deity
+<span class="class">delete</span> power, age <span class="keyword">from</span> Deity <span class="keyword">where</span> name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Diana</span><span class="delimiter">&quot;</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -2337,10 +2337,10 @@ put {<span class="string"><span class="delimiter">&quot;</span><span class="cont
                       [ limit (<span class="predefined-type">INTEGER</span>) ]
                       [ <span class="keyword">order</span> <span class="keyword">by</span> ORDERING_CLAUSE ]
 //examples
-<span class="class">select</span> * <span class="keyword">from</span> God
-<span class="class">select</span> name, age, adress.age <span class="keyword">from</span> God <span class="keyword">order</span> <span class="keyword">by</span> name <span class="directive">desc</span> age <span class="directive">desc</span>
-<span class="class">select</span> * <span class="keyword">from</span> God <span class="keyword">where</span> birthday <span class="keyword">between</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">01-09-1988</span><span class="delimiter">&quot;</span></span> <span class="keyword">and</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">01-09-1988</span><span class="delimiter">&quot;</span></span> <span class="keyword">and</span> salary = <span class="integer">12</span>
-<span class="class">select</span> name, age, adress.age <span class="keyword">from</span> God skip <span class="integer">20</span> limit <span class="integer">10</span> <span class="keyword">order</span> <span class="keyword">by</span> name <span class="directive">desc</span> age <span class="directive">desc</span></code></pre>
+<span class="class">select</span> * <span class="keyword">from</span> Deity
+<span class="class">select</span> name, age, adress.age <span class="keyword">from</span> Deity <span class="keyword">order</span> <span class="keyword">by</span> name <span class="directive">desc</span> age <span class="directive">desc</span>
+<span class="class">select</span> * <span class="keyword">from</span> Deity <span class="keyword">where</span> birthday <span class="keyword">between</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">01-09-1988</span><span class="delimiter">&quot;</span></span> <span class="keyword">and</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">01-09-1988</span><span class="delimiter">&quot;</span></span> <span class="keyword">and</span> salary = <span class="integer">12</span>
+<span class="class">select</span> name, age, adress.age <span class="keyword">from</span> Deity skip <span class="integer">20</span> limit <span class="integer">10</span> <span class="keyword">order</span> <span class="keyword">by</span> name <span class="directive">desc</span> age <span class="directive">desc</span></code></pre>
 </div>
 </div>
 </div>
@@ -4950,8 +4950,8 @@ repository.save(person); <span class="comment">//throws a ConstraintViolationExc
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0.0-b2<br>
-Last updated 2020-10-13 17:51:52 BRT
+Version 1.0.0-b3<br>
+Last updated 2020-11-29 08:37:38 WET
 </div>
 </div>
 </body>
