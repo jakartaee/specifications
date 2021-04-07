@@ -13,6 +13,9 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta Web Profile 9.1 TCK](https://download.eclipse.org/jakartaee/platform/9.1/jakarta-jakartaeetck-9.1.0.zip)([sig](https://download.eclipse.org/jakartaee/platform/9.1/jakarta-jakartaeetck-9.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9.1/jakarta-jakartaeetck-9.1.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.platform:jakarta.webprofile-api:jar:9.1.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/9.1.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [Eclipse Glassfish x.y.z]()
+
   
 # Jakarta EE 9.1 Schedule
 
@@ -20,7 +23,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 
 # Compatible Implementations
 
-* [Eclipse Glassfish x.y.z]()
+* [Jakarta EE 9.1 Compatible Implementations](https://jakarta.ee/compatibility/#tab-9.1)
 
 # Ballots
 

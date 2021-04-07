@@ -13,15 +13,15 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta Web Profile 9 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.2.zip)([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.2.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.platform:jakarta.webprofile-api:jar:9.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/9.0.0/jar)
-  
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [Eclipse Glassfish 6.0.0 RC2](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-6.0.0-RC2.zip)
+    
 # Jakarta EE 9 Schedule
-
-* [Jakarta EE 9 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
+  * [Jakarta EE 9 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
 
 # Compatible Implementations
-
-* [Eclipse Glassfish 6.0.0 RC2](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/web-6.0.0-RC2.zip)
-
+  * [Jakarta EE 9 Compatible Implementations](https://jakarta.ee/compatibility/#tab-9)
+  
 # Ballots
 
 ## Plan Review

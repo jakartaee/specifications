@@ -11,6 +11,12 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE Platform 8 TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.platform:jakarta.jakartaee-api:jar:8.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/8.0.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [Eclipse Glassfish 5.1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+
+# Compatible Implementations
+
+* [Jakarta EE 8 Compatible Implementations](https://jakarta.ee/compatibility/#tab-8)
 
 # Ballots
 
@@ -31,7 +37,3 @@ The Specification Committee Ballot concluded successfully on 2019-09-09 with the
 |Committer Members      |   +1    |         |          |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00534.html)
-
-# Compatible Implementations
-
-* [Eclipse Glassfish 5.1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
