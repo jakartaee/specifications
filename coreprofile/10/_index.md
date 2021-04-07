@@ -11,7 +11,7 @@ The goals for this release are:
 3. Java SE version will be aligned with the Platform Project's decision regarding Java SE versions.
 
 
-* [Jakarta EE Core Profile 10 Release Record]()
+* [Jakarta EE Core Profile 10 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/core-profile-10)
 
 
 # Ballots
