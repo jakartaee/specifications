@@ -15,7 +15,6 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
   * [Eclipse Glassfish 5.1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 
 # Compatible Implementations
-
 * [Jakarta EE 8 Compatible Implementations](https://jakarta.ee/compatibility/#tab-8)
 
 # Ballots
