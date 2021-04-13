@@ -1,5 +1,5 @@
 ---
-title: "Jakarta RESTful Web Services 4.0"
+title: "Jakarta RESTful Web Services 4.0 (under development)"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
