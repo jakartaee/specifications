@@ -6,7 +6,7 @@ summary: "Release for Jakarta EE 10"
 
 Jakarta MVC defines a standard for creating web applications following the action-based model-view-controller pattern.
 
-The goal of this release is to provide features requested by the community, such as: 
+The goal of this release is to make necessary adjustments to ensure alignment with Jakarta RESTful Web Services 4.0 as well as providing features requested by the community, such as: 
 
 * HTTP Method as request headers
 * Lazy loading
