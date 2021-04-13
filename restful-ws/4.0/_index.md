@@ -22,7 +22,9 @@ Jakarta REST.
     * Better alignment with JSON-B - [Issue #742](https://github.com/eclipse-ee4j/jaxrs-api/issues/742)
     * Automatic loading of provider extensions - [Issue #751](https://github.com/eclipse-ee4j/jaxrs-api/issues/751)
     
-The JDK version required will be aligned with Jakarta EE 10.
+The JDK version required will be aligned with Jakarta EE 10. The latest details and progress for this work 
+may be found on the [Project Site](eclipse-ee4j.github.io/jaxrs-api) as well as the
+[Github Wiki](https://github.com/eclipse-ee4j/jaxrs-api/wiki).
 
 * [Jakarta RESTful Web Services 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/4.0.0)
 
