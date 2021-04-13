@@ -46,7 +46,7 @@ New deprecations:
 
 The JDK version required will be aligned with Jakarta EE 10.
 
-* [Jakarta Faces 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/4.0.0)
+* [Jakarta Faces 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/4.0)
 
 # Ballots
 
