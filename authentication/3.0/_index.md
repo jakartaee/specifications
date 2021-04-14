@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Authentication 2.0 (under development)"
+title: "Jakarta Authentication 3.0 (under development)"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
