@@ -11,9 +11,10 @@ querying JSON documents.
 * [Jakarta JSON Processing 2.0 Javadoc](./apidocs)
 * [Jakarta JSON Processing 2.0 TCK](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.json:jakarta.json-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/2.0.1/jar)
+  * [jakarta.json:jakarta.json-api:jar:2.0.1](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/2.0.1/jar)
 * [Change Log](./changelog)
-
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0)
 
 # Compatible Implementations
 
@@ -49,4 +50,4 @@ The Specification Committee Ballot concluded successfully on 2020-09-18 with the
 | Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
 |                                                | Total               |  10  |
 
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00826.html)
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00826.html).
