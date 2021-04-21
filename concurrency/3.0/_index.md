@@ -29,7 +29,6 @@ Any requirements identified by other specifications or the Jakarta EE 10 platfor
 # Ballots
 
 
-
 ## Plan Review
 
 |                       |  Yes    | No  | Abstain  |
