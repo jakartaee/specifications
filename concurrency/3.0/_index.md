@@ -1,5 +1,3 @@
-<!-- Template for the root page of a specification release -->
-<!-- The "date:" field is used as a "publish" date for the automated Hugo processing -->
 ---
 title: "Jakarta Concurrency 3.0 (Under Development)"
 date: 2021-10-15
@@ -30,14 +28,3 @@ Any requirements identified by other specifications or the Jakarta EE 10 platfor
 
 ## Plan Review
 
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                | &check; |     |          |
-|IBM                    | &check; |     |          |
-|Oracle                 | &check; |     |          |
-|Payara                 | &check; |     |          |
-|Red Hat                | &check; |     |          |
-|Tomitribe              | &check; |     |          |
-|EE4J PMC               | &check; |     |          |
-|Participant Members    | &check; |     |          |
-|Committer Members      | &check; |     |          |
