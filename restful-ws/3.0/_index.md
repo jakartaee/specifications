@@ -11,7 +11,8 @@ following the Representational State Transfer (REST) architectural pattern.
 * [Jakarta RESTful Web Services 3.0 Specification Document](./jakarta-restful-ws-spec-3.0.pdf) (PDF)
 * [Jakarta RESTful Web Services 3.0 Specification Document](./jakarta-restful-ws-spec-3.0.html) (HTML)
 * [Jakarta RESTful Web Services 3.0 Javadoc](./apidocs)
-* [Jakarta RESTful Web Services 3.0 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.1.zip)([sig](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.1.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta RESTful Web Services 3.0.1 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+   * Adds JDK 11 support [Jakarta RESTful Web Services 3.0.2 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.2.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.2.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.2.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.jaxrs:jakarta.jaxrs-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.ws.rs/jakarta.ws.rs-api/3.0.0/jar)
 

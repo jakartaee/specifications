@@ -10,7 +10,8 @@ Jakarta Servlet defines a server-side API for handling HTTP requests and respons
 * [Jakarta Servlet 5.0 Specification Document](./jakarta-servlet-spec-5.0.pdf) (PDF)
 * [Jakarta Servlet 5.0 Specification Document](./jakarta-servlet-spec-5.0.html) (HTML)
 * [Jakarta Servlet 5.0 Javadoc](./apidocs)
-* [Jakarta Servlet 5.0 TCK](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.1.zip)([sig](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.1.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Servlet 5.0.1 TCK](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+   * Adds JDK 11 support [Jakarta Servlet 5.0.2 TCK](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.2.zip)  ([sig](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.2.zip.sig),  [sha](https://download.eclipse.org/jakartaee/servlet/5.0/jakarta-servlet-tck-5.0.2.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.servlet:jakarta.servlet-api:jar:5.0.0](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/5.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
