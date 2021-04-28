@@ -9,7 +9,8 @@ querying JSON documents.
 * [Jakarta JSON Processing 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonp/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta JSON Processing 2.0 Javadoc](./apidocs)
-* [Jakarta JSON Processing 2.0 TCK](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta JSON Processing 2.0 TCK](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+   * Adds JDK 11 support [Jakarta JSON Processing 2.0.1 TCK](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.json:jakarta.json-api:jar:2.0.1](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/2.0.1/jar)
 * [Change Log](./changelog)

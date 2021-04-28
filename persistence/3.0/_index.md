@@ -14,7 +14,8 @@ and object/relational mapping in Java(R) environments.
 * Jakarta Persistence 3.0 XML Schemas
   * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd)
   * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_0.xsd)
-* [Jakarta Persistence 3.0 TCK](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Persistence 3.0 TCK](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+   * Adds JDK 11 support [Jakarta Persistence 3.0.1 TCK](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.persistence:jakarta.persistence-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.0.0/jar)
 
