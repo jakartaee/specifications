@@ -8,12 +8,6 @@ for the WebSocket protocol (RFC6455).
 
 * [Jakarta WebSocket 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.1)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta WebSocket 2.1 Specification Document](./websocket-spec-2.1.pdf) (PDF)
-* [Jakarta WebSocket 2.1 Specification Document](./websocket-spec-2.1.html) (HTML)
-* [Jakarta WebSocket 2.1 Javadoc](./apidocs)
-* [Jakarta WebSocket 2.1 TCK](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip)([sig](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
-* Maven coordinates
-  * [jakarta.websocket:jakarta.websocket-api:2.1.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/2.1.0/jar)
 
 # Plan
 
