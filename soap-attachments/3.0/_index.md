@@ -10,6 +10,7 @@ The goal of this release is to:
 
 * provide features requested by the community
 * implement requirements by other specification included in Jakarta EE 10
+* consider drop extenting DOM API (major API change)
 * editorial updates and clarifications in the specification
 
 The JDK version required will be aligned with Jakarta EE 10.
