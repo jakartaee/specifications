@@ -10,6 +10,8 @@ The goal of this release is to:
 
 * provide features requested by the community
 * adopt changes from other specification included in Jakarta EE 10
+* consider folding Jakarta Web Services Metadata and Jakarta SOAP w/Attachments into this (master) Specification
+* (major release due to changes in Jakarta XML Binding)
 
 The JDK version required will be aligned with Jakarta EE 10.
 
