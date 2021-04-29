@@ -19,7 +19,8 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
   * [OpenLiberty 21.0.0.3-Beta (JDK 11)](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2021-02-09_1100/openliberty-jakartaee9-21.0.0.3-beta.zip)
   * [OpenLiberty 21.0.0.3-Beta (JDK 8)](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2021-02-09_1100/openliberty-jakartaee9-21.0.0.3-beta.zip)
   * [TomEE x.y.z]()
-  * [WildFly x.y.z]()
+  * [WildFly Preview 23.0.2.Final (JDK 11)](https://www.wildfly.org/downloads/)
+  * [WildFly Preview 23.0.2.Final (JDK 8)](https://www.wildfly.org/downloads/)
   
 # Jakarta EE 9.1 Schedule
 * [Jakarta EE 9.1 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9.1#jakarta-ee-9.1-schedule)
