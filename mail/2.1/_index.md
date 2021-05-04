@@ -15,7 +15,7 @@ The JDK version required will be aligned with Jakarta EE 10.
 
 ## Plan Review
 <!--
-The Specification Committee Ballot concluded successfully on 2021-xx-xx with the following results.
+The Specification Committee Ballot concluded successfully on 2021-05-03 with the following results.
 | Representative                     | Representative for: |  Vote  |
 |------------------------------------|---------------------|--------|
 | Kenji Kazumura                     | Fujitsu             | +1     |
@@ -29,5 +29,5 @@ The Specification Committee Ballot concluded successfully on 2021-xx-xx with the
 | Werner Keil                        | Committer Members   | +1     |
 | Dr. Jun Qian                       | Enterprise Members  | +1     |
 |                                    | **Total**           | 10     |
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01555.html)
 -->
