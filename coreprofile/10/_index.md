@@ -6,7 +6,7 @@ summary: "Release of the Jakarta EE Core Profile 10"
 The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifically targeted at smaller runtimes.
 
 The goals for this release are:
-1. To provide a profile that contains a set of Jakarta EE Specifications targeting smaller runtimes suitable for microservices as well as enabling compilation to native images.
+1. To provide a profile that contains a set of Jakarta EE Specifications targeting smaller runtimes suitable for microservices and ahead-of-time compilation.
 2. The TCK(s) for the Core profile should be possible to run independently of the Full Platform TCK.
 3. Java SE version will be aligned with the Platform Project's decision regarding Java SE versions.
 
