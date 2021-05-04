@@ -16,11 +16,11 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [Eclipse Glassfish 6.1 RC1 (JDK 11)](https://download.eclipse.org/ee4j/glassfish/glassfish-6.1.0-RC1.zip)
   * [Eclipse Glassfish 6.0 (JDK 8)](https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0.zip)
+  * [ManageFish 6.1.0 (JDK 11)](https://managefish.s3.amazonaws.com/managefish-6.1.0.tar.gz?AWSAccessKeyId=AKIAJNYMDLCT3Q3TBS4A&Expires=1625205438&Signature=7FaIdsXsBhXHlRVR91RxQmNC2j4%3D)
   * [OpenLiberty 21.0.0.3-Beta (JDK 11)](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2021-02-09_1100/openliberty-jakartaee9-21.0.0.3-beta.zip)
   * [OpenLiberty 21.0.0.3-Beta (JDK 8)](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2021-02-09_1100/openliberty-jakartaee9-21.0.0.3-beta.zip)
-  * [TomEE x.y.z]()
-  * [WildFly Preview 23.0.2.Final (JDK 11)](https://www.wildfly.org/downloads/)
-  * [WildFly Preview 23.0.2.Final (JDK 8)](https://www.wildfly.org/downloads/)
+  * [WildFly Preview 23.0.2.Final (JDK 11)](https://download.jboss.org/wildfly/23.0.2.Final/wildfly-preview-23.0.2.Final.zip)
+  * [WildFly Preview 23.0.2.Final (JDK 8)](https://download.jboss.org/wildfly/23.0.2.Final/wildfly-preview-23.0.2.Final.zip)
 
 # Jakarta EE 9.1 Schedule
 * [Jakarta EE 9.1 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9.1#jakarta-ee-9.1-schedule)
