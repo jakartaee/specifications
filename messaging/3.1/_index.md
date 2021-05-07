@@ -1,5 +1,3 @@
-# Jakarta Messaging 3.1
-
 ---
 title: "Jakarta Messaging Spec 3.1 (Under Development)"
 date: 2021-10-15
