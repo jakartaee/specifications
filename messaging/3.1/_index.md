@@ -1,6 +1,3 @@
-<!-- Template for the root page of a specification release -->
-<!-- The "date:" field is used as a "publish" date for the automated Hugo processing -->
-
 # Jakarta Messaging 3.1
 
 ---
