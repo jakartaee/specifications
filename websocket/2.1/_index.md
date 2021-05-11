@@ -72,3 +72,5 @@ The Release Review Specification Committee Ballot concluded successfully on TBD 
 |EE4J PMC               |         |         |          |
 |Participant Members    |         |         |          |
 |Committer Members      |         |         |          |
+
+This ballot was conducted on the public e-mail list [jakarta.ee-spec@eclipse.org](mailto:jakarta.ee-spec@eclipse.org). This ballot thread begins [here](TBD).
