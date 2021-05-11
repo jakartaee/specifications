@@ -57,6 +57,8 @@ The Plan Review Specification Committee Ballot concluded successfully on TBD wit
 |Participant Members    |         |     |          |
 |Committer Members      |         |     |          |
 
+This ballot was conducted on the public e-mail list [jakarta.ee-spec@eclipse.org](mailto:jakarta.ee-spec@eclipse.org). This ballot thread begins [here](TBD).
+
 ## Release Review
 
 The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
