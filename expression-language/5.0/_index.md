@@ -42,9 +42,27 @@ The following TCK updates will be required:
 
 # Ballots
 
+## Plan Review
+
+The Plan Review Specification Committee Ballot concluded successfully on TBD with the following results.
+
+|                       |  Yes    | No  | Abstain  |
+|-----------------------|---------|-----|----------|
+|Fujitsu                |         |     |          |
+|IBM                    |         |     |          |
+|Oracle                 |         |     |          |
+|Payara                 |         |     |          |
+|Red Hat                |         |     |          |
+|Tomitribe              |         |     |          |
+|EE4J PMC               |         |     |          |
+|Participant Members    |         |     |          |
+|Committer Members      |         |     |          |
+
+ This ballot was conducted on the public e-mail list [jakarta.ee-spec@eclipse.org](). This ballot thread begins [here](TBD).
+ 
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2019-12-01 with the following results.
+The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
@@ -58,18 +76,4 @@ The Release Review Specification Committee Ballot concluded successfully on 2019
 |Participant Members    |         |         |          |
 |Committer Members      |         |         |          |
 
-## Plan Review
-
-The Plan Review Specification Committee Ballot concluded successfully on 2019-09-31 with the following results.
-
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                |         |     |          |
-|IBM                    |         |     |          |
-|Oracle                 |         |     |          |
-|Payara                 |         |     |          |
-|Red Hat                |         |     |          |
-|Tomitribe              |         |     |          |
-|EE4J PMC               |         |     |          |
-|Participant Members    |         |     |          |
-|Committer Members      |         |     |          |
+ This ballot was conducted on the public e-mail list [jakarta.ee-spec@eclipse.org](). This ballot thread begins [here](TBD).
