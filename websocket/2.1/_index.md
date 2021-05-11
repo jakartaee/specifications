@@ -7,7 +7,7 @@ Jakarta WebSocket defines a API for Server and Client Endpoints
 for the WebSocket protocol (RFC6455).
 
 * [Jakarta WebSocket 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.1)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 
 # Plan
 
@@ -41,22 +41,6 @@ The following TCK updates will be required:
 
 # Ballots
 
-## Release Review
-
-The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
-
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
-
 ## Plan Review
 
 The Plan Review Specification Committee Ballot concluded successfully on TBD with the following results.
@@ -72,3 +56,19 @@ The Plan Review Specification Committee Ballot concluded successfully on TBD wit
 |EE4J PMC               |         |     |          |
 |Participant Members    |         |     |          |
 |Committer Members      |         |     |          |
+
+## Release Review
+
+The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
+
+|                       |  Yes    | No      | Abstain  |
+|-----------------------|---------|---------|----------|
+|Fujitsu                |         |         |          |
+|IBM                    |         |         |          |
+|Oracle                 |         |         |          |
+|Payara                 |         |         |          |
+|Red Hat                |         |         |          |
+|Tomitribe              |         |         |          |
+|EE4J PMC               |         |         |          |
+|Participant Members    |         |         |          |
+|Committer Members      |         |         |          |
