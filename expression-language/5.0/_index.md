@@ -44,7 +44,7 @@ The following TCK updates will be required:
 
 ## Plan Review
 
-The Plan Review Specification Committee Ballot concluded successfully on 12/05/2021 with the following results.
+The Plan Review Specification Committee Ballot concluded successfully on 12/05/2021 (May 12th 2021) with the following results.
 
 | Representative                     | Representative for: |  Vote   |
 |------------------------------------|---------------------|---------|
