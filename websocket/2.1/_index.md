@@ -43,36 +43,20 @@ The following TCK updates will be required:
 
 ## Plan Review
 
-The Plan Review Specification Committee Ballot concluded successfully on TBD with the following results.
+The Plan Review Specification Committee Ballot concluded successfully on 2021-05-14 with the following results.
 
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                |         |     |          |
-|IBM                    |         |     |          |
-|Oracle                 |         |     |          |
-|Payara                 |         |     |          |
-|Red Hat                |         |     |          |
-|Tomitribe              |         |     |          |
-|EE4J PMC               |         |     |          |
-|Participant Members    |         |     |          |
-|Committer Members      |         |     |          |
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Dan Bandera, Kevin Sutter                      | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              | no vote |
+| Andrew Pielage, Matt Gill                      | Payara              |   +1    |
+| Scott Stark, Mark Little                       | Red Hat             | no vote |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Dr. Jun Qian                                   | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **8**  |
 
-This ballot was conducted on the public e-mail list [jakarta.ee-spec@eclipse.org](mailto:jakarta.ee-spec@eclipse.org). This ballot thread begins [here](TBD).
-
-## Release Review
-
-The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
-
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
-
-This ballot was conducted on the public e-mail list [jakarta.ee-spec@eclipse.org](mailto:jakarta.ee-spec@eclipse.org). This ballot thread begins [here](TBD).
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01704.html)
