@@ -17,14 +17,14 @@ echo -e "Prepare Jakarta EE Specifications Preview...\n"
 echo -e "Step 1: Fetch a current copy of jakarta.ee\n"
 rm -rf website
 git clone https://github.com/jakartaee/jakarta.ee.git website
-cd website && npm install && cd ../
+cd website && gh pr checkout 1188 && npm install && npm run production && cd ../
+#cd website && npm install && npm run production && cd ../
 
 echo -e "Step 2: Reset specifications content\n"
-rm -rf website/content/specifications && rm -rf website/static/specifications
 mkdir -p website/static/specifications && mkdir -p website/content/specifications
 
 echo "Step 3: Copy PR content to Hugo content"
-find . ! -name . -prune ! -name website -exec cp -R {} website/content/specifications/ \;
+find .  -mindepth 1 -maxdepth 1 -not -path "./.github" -not -path "./website" -type d  -exec cp -R {} website/content/specifications/ \;
 cd website/content
 echo -e "Current working directory: $PWD\n"
 
@@ -72,4 +72,3 @@ for F in $FILES; do
   fi
 done
 echo "Done!"
-
