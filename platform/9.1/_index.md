@@ -52,20 +52,20 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 
 ## Release Review 
 
-The Specification Committee Ballot concluded successfully on 2021-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2021-05-21 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
-| Kenji Kazumura	                             | Fujitsu	           |      |
-| Dan Bandera, Kevin Sutter	                     | IBM	               |      |
-| Ed Bratt, Dmitry Kornilov	                     | Oracle	           |      |
-| Andrew Pielage, Matt Gill	                     | Payara	           |      |
-| Scott Stark, Mark Little	                     | Red Hat	           |      |
-| David Blevins, Jean-Louis Monteiro	         | Tomitribe	       |      |
-| Ivar Grimstad	                                 | EE4J PMC	           |      |
-| Marcelo Ancelmo, Martijn Verburg	             | Participant Members |      |
-| Werner Keil	                                 | Committer Members   |      |
-| Scott (Congquan) Wang, Jun Qian                | Enterprise Members  |      |
-|                                                | Total               |      |
+| Kenji Kazumura	                               | Fujitsu	           | +1   |
+| Dan Bandera, Kevin Sutter	                     | IBM	               | +1   |
+| Ed Bratt, Dmitry Kornilov	                     | Oracle	             | +1   |
+| Andrew Pielage, Matt Gill	                     | Payara	             | +1   |
+| Scott Stark, Mark Little	                     | Red Hat	           | +1   |
+| David Blevins, Jean-Louis Monteiro	           | Tomitribe	         | +1   |
+| Ivar Grimstad	                                 | EE4J PMC	           | +1   |
+| Marcelo Ancelmo, Martijn Verburg	             | Participant Members | +1   |
+| Werner Keil	                                   | Committer Members   | +1   |
+| Scott (Congquan) Wang, Jun Qian                | Enterprise Members  | +1   |
+|                                                | Total               | 10   |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01722.html)
