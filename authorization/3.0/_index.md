@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Authorization 3.0 (under development)"
-date: 2021-04-15
+title: "Jakarta Authorization 2.1 (under development)"
+date: 2021-05-19
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Authorization defines a low-level SPI for authorization modules, which are repositories of permissions
@@ -18,7 +18,7 @@ More specifically:
 
 The JDK version required will be aligned with Jakarta EE 10.
 
-* [Jakarta Authorization 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jacc/releases/3.0)
+* [Jakarta Authorization 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jacc/releases/2.1)
 
 # Ballots
 
