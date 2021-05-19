@@ -17,8 +17,7 @@ echo -e "Prepare Jakarta EE Specifications Preview...\n"
 echo -e "Step 1: Fetch a current copy of jakarta.ee\n"
 rm -rf website
 git clone https://github.com/jakartaee/jakarta.ee.git website
-cd website && gh pr checkout 1188 && npm install && npm run production && cd ../
-#cd website && npm install && npm run production && cd ../
+cd website && npm install && npm run production && cd ../
 
 echo -e "Step 2: Reset specifications content\n"
 mkdir -p website/static/specifications && mkdir -p website/content/specifications
