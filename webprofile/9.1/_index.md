@@ -18,7 +18,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
   * [Eclipse Glassfish 6.0 (JDK 8)](https://download.eclipse.org/ee4j/glassfish/web-6.0.0.zip)
   * [OpenLiberty 21.0.0.3-Beta (JDK 11)](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2021-02-09_1100/openliberty-jakartaee9-21.0.0.3-beta.zip)
   * [OpenLiberty 21.0.0.3-Beta (JDK 8)](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2021-02-09_1100/openliberty-jakartaee9-21.0.0.3-beta.zip)
-  * [TomEE 9.0.0-M7 (JDK 11)](https://repository.apache.org/content/repositories/orgapachetomee-1184/org/apache/tomee/apache-tomee/9.0.0-M7/apache-tomee-9.0.0-M7-plume.zip)
+  * [Apache TomEE 9.0.0-M7 (JDK 11)](https://www.apache.org/dyn/closer.cgi/tomee/tomee-9.0.0-M7/apache-tomee-9.0.0-M7-plume.zip)
   * [WildFly Preview 23.0.2.Final (JDK 11)](https://download.jboss.org/wildfly/23.0.2.Final/wildfly-preview-23.0.2.Final.zip)
   * [WildFly Preview 23.0.2.Final (JDK 8)](https://download.jboss.org/wildfly/23.0.2.Final/wildfly-preview-23.0.2.Final.zip)
   
