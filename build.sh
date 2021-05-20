@@ -13,6 +13,7 @@
 # ===========================================================================
 
 echo -e "Prepare Jakarta EE Specifications Preview...\n"
+echo -e "test...\n"
 
 echo -e "Step 1: Fetch a current copy of jakarta.ee\n"
 rm -rf website
