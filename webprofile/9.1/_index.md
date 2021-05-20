@@ -41,7 +41,7 @@ Please reference that ballot for the official results.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2021-05-21 with the following results.
+The Specification Committee Ballot concluded successfully on 2021-05-17 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
