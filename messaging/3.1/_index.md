@@ -21,7 +21,7 @@ It will contain:
 * Any requirements identified by other specifications or the Jakarta EE 10 platform projects during the release cycle.
 
 
-[Jakarta Messaging 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jca/releases/2.1.0)
+[Jakarta Messaging 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jms/releases/3.1.0)
 
 
 
