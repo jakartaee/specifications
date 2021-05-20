@@ -1,6 +1,6 @@
 [build]
 publish = "website/public"
-command = "./build.sh && cd website && npm run disallow_robots_txt && hugo --buildFuture"
+command = "./build.sh && cd website && hugo --buildFuture"
 
 [build.environment]
 NODE_VERSION = "12.18.3"
