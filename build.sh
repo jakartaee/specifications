@@ -71,3 +71,6 @@ for F in $FILES; do
   fi
 done
 echo "Done!"
+
+echo -e "Step 7: Remove jakarta.ee _redirect file."
+rm ../static/_redirects 
