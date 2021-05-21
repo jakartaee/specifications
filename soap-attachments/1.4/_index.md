@@ -1,5 +1,5 @@
 ---
-title: "Jakarta SOAP with Attachments Specification 1.4"
+title: "Jakarta SOAP with Attachments 1.4"
 date: 2019-07-23T14:30:32+0200
 summary: "Initial release of Jakarta SOAP with Attachments"
 ---
