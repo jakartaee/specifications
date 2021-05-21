@@ -1,5 +1,5 @@
 ---
-title: "Jakarta SOAP Attachments 2.0"
+title: "Jakarta SOAP with Attachments 2.0"
 date: 2020-09-16
 summary: "Release for Jakarta EE 9"
 ---
