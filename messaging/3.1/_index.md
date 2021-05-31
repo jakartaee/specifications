@@ -23,21 +23,24 @@ It will contain:
 
 [Jakarta Messaging 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jms/releases/3.1.0)
 
-
-
 # Ballots
-
 
 ## Plan Review
 
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                |         |     |          |
-|IBM                    |         |     |          |
-|Oracle                 |         |     |          |
-|Payara                 |         |     |          |
-|Red Hat                |         |     |          |
-|Tomitribe              |         |     |          |
-|EE4J PMC               |         |     |          |
-|Participant Members    |         |     |          |
-|Committer Members      |         |     |          |
+The Specification Committee Ballot concluded successfully on 2021-05-19 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Dan Bandera, Kevin Sutter                      | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Matt Gill                      | Payara              |   +1    |
+| Scott Stark, Mark Little                       | Red Hat             |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Dr. Jun Qian                                   | Enterprise Members  |   +1    |
+|                                                | **Total**           | **10**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01793.html)
