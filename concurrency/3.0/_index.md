@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Concurrency 3.0 (Under Development)"
-date: 2021-10-15
+date: 2021-05-20
 summary: "Jakarta EE 10 Release"
 ---
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
