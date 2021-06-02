@@ -37,3 +37,4 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 # Compatible Implementations
 
 * [EclipseLink 2.7.4](https://www.eclipse.org/eclipselink)
+* [Hibernate ORM 5.5.0.Final](https://hibernate.org/orm/releases/5.5/)
