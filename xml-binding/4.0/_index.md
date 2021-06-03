@@ -10,8 +10,8 @@ The goal of this release is to:
 
 * provide features requested by the community
 * implement requirements by other specification included in Jakarta EE 10
-* drop explicit dependency on JavaBeans (Has transitive relationship to any dependent specifications)
-* editorial updates, clarifications and removal of JAXB 1 from the specification (May have transitive relationship to any dependent specifications)
+* drop explicit dependency on JavaBeans (Has transitive relationship to any dependent specifications; major API change)
+* editorial updates, clarifications and removal of JAXB 1 from the specification (May have transitive relationship to any dependent specifications; major API change)
 
 The JDK version required will be aligned with Jakarta EE 10.
 
