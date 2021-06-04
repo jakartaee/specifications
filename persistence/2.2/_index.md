@@ -15,6 +15,11 @@ and object/relational mapping in Java(R) environments.
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
   * [EclipseLink 2.7.4](https://www.eclipse.org/eclipselink)
 
+# Compatible Implementations
+
+* [EclipseLink 2.7.4](https://www.eclipse.org/eclipselink)
+* [Hibernate ORM 5.5.0.Final](https://hibernate.org/orm/releases/5.5/)
+
 # Ballots
 
 ## Release Review
@@ -34,9 +39,3 @@ The Specification Committee Ballot concluded successfully on 2019-08-28 with the
 |Committer Members      |   +1    |         |          |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00448.html)
-
-
-# Compatible Implementations
-
-* [EclipseLink 2.7.4](https://www.eclipse.org/eclipselink)
-* [Hibernate ORM 5.5.0.Final](https://hibernate.org/orm/releases/5.5/)
