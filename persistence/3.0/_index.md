@@ -18,6 +18,8 @@ and object/relational mapping in Java(R) environments.
    * Adds JDK 11 support [Jakarta Persistence 3.0.1 TCK](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.persistence:jakarta.persistence-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.0.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
+  * [EclipseLink 3.0.0](https://www.eclipse.org/eclipselink)
 
 
 # Compatible Implementations
