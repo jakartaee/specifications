@@ -26,7 +26,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta EE 9.1 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9.1#jakarta-ee-9.1-schedule)
 
 # Compatible Implementations
-* [Jakarta EE 9.1 Compatible Implementations](https://jakarta.ee/compatibility/#tab-9.1)
+* [Jakarta EE 9.1 Compatible Implementations](https://jakarta.ee/compatibility/#tab-9_1)
 
 # Ballots
 
