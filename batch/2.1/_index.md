@@ -62,15 +62,19 @@ N/A
 
 
 ## Plan Review
+Vote was conducted and passed June 4 - June 11 on https://www.eclipse.org/lists/jakarta.ee-spec/msg01825.html
 
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                |         |     |          |
-|IBM                    |         |     |          |
-|Oracle                 |         |     |          |
-|Payara                 |         |     |          |
-|Red Hat                |         |     |          |
-|Tomitribe              |         |     |          |
-|EE4J PMC               |         |     |          |
-|Participant Members    |         |     |          |
-|Committer Members      |         |     |          |
+
+|                       |  Yes      | No  | Abstain  |
+|-----------------------|--------  -|-----|----------|
+|Fujitsu                |  +1       |     |          |
+|IBM                    |  +1       |     |          |
+|Oracle                 |  +1       |     |          |
+|Payara                 |  +1       |     |          |
+|Red Hat                |  +1       |     |          |
+|Tomitribe              |  +1       |     |          |
+|EE4J PMC               |  +1       |     |          |
+|Participant Members    |  +1       |     |          |
+|Committer Members      |  +1       |     |          |
+|Enterprise Members     |  +1       |     |          |
+|Total                  |  +1       |     |          |
