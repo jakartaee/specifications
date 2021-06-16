@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Messaging 3.1 (Under Development)"
-date: 2021-10-15
+date: 2021-05-19
 summary: "Jakarta EE 10 Release"
 ---
 
