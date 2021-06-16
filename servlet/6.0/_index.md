@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Servlet 6.0 (under development)"
-date: 2021-10-15
+date: 2021-06-16
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
