@@ -41,22 +41,6 @@ It is anticipated that some additional tests will be required to provide test co
 
 # Ballots
 
-## Release Review
-
-The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
-
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
-
 ## Plan Review
 
 The Plan Review Specification Committee Ballot concluded successfully on TBD with the following results.
