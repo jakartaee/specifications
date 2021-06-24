@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Server Pages 3.1 (under development)"
-date: 2021-10-15
+date: 2021-06-24
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Server Pages defines a template engine for web applications that supports mixing of textual content
