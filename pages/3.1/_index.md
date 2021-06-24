@@ -8,7 +8,7 @@ Jakarta Server Pages defines a template engine for web applications that support
 into a Jakarta Servlet.
 
 * [Jakarta Server Pages 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/3.1.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE9ReleasePlan)
 * [Jakarta Server Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.pdf) (PDF)
 * [Jakarta Server Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.html) (HTML)
 * [Jakarta Server Pages 3.1 Javadoc](./apidocs)
