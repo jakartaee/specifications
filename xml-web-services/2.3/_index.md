@@ -1,5 +1,5 @@
 ---
-title: "Jakarta XML Web Services Specification 2.3"
+title: "Jakarta XML Web Services 2.3"
 date: 2019-07-22T17:31:37+0200
 summary: "Initial release of Jakarta XML Web Services"
 ---
