@@ -23,27 +23,7 @@ The key goal of this release is to switch the namespace for the API from `javax
 * [Eclipse GlassFish 6.2.0](https://download.eclipse.org/ee4j/glassfish/glassfish-6.2.0.zip)
 
 # Ballots
-<!--
-## Release Review
 
-The Specification Committee Ballot concluded successfully on 20xx-xx-xx with the following results.
-
-| Representative                     | Representative for: |  Vote  |
-|------------------------------------|---------------------|--------|
-| Kenji Kazumura                     | Fujitsu             |        |
-| Dan Bandera, Kevin Sutter          | IBM                 |        |
-| Ed Bratt, Dmitry Kornilov          | Oracle              |        |
-| Andrew Pielage, Matt Gill          | Payara              |        |
-| Scott Stark, Mark Little           | Red Hat             |        |
-| David Blevins, Jean-Louis Monteiro | Tomitribe           |        |
-| Ivar Grimstad                      | EE4J PMC            |        |
-| Marcelo Ancelmo, Martijn Verburg   | Participant Members |        |
-| Werner Keil                        | Committer Members   |        |
-| Scott (Congquan) Wang              | Enterprise Members  |        |
-|                                    | **Total**           |        |
-
-The ballot was run in the [jakarta.ee-spec mailing list]()
--->
 ## Plan Review
 The Specification Committee Ballot concluded successfully on 2020-11-20 with the following results.
 
