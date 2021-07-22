@@ -14,10 +14,13 @@ The key goal of this release is to switch the namespace for the API from `javax
 * [Jakarta MVC 2.0 TCK](http://download.eclipse.org/jakartaee/mvc/2.0/jakarta-mvc-tck-2.0.0.zip) ([sig](http://download.eclipse.org/jakartaee/mvc/2.0/jakarta-mvc-tck-2.0.0.zip.sig), [sha](http://download.eclipse.org/jakartaee/mvc/2.0/jakarta-mvc-tck-2.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.mvc:jakarta.mvc-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.mvc/jakarta.mvc-api/2.0.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [Eclipse Krazo 2.0.0](https://eclipse-ee4j.github.io/krazo/downloads/2.0.0.html)
 
 # Compatible Implementations
 
 * [Eclipse Krazo 2.0.0](https://eclipse-ee4j.github.io/krazo/downloads/2.0.0.html)
+* [Eclipse GlassFish 6.2.0](https://download.eclipse.org/ee4j/glassfish/glassfish-6.2.0.zip)
 
 # Ballots
 <!--
