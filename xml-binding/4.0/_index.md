@@ -21,7 +21,7 @@ The JDK version required will be aligned with Jakarta EE 10.
 
 ## Plan Review
 
-The Specification Committee Ballot concluded successfully on 2021-06-08 with the following results.
+The Specification Committee Ballot concluded successfully on 2021-06-07 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
