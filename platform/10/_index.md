@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Platform 10 (under development)"
-date: 2022-03-31
+date: 2021-08-11
 summary: "Release of the Jakarta EE 10 Platform"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
