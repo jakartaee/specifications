@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Web Profile 10 (under development)"
-date: 2022-03-31
+date: 2021-08-11
 summary: "Release of the Jakarta EE 10 Web Profile"
 ---
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
