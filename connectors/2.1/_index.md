@@ -39,6 +39,7 @@ Any requirements identified by other specifications or the Jakarta EE 10 platfor
 |EE4J PMC               | &check; |     |          |
 |Participant Members    | &check; |     |          |
 |Committer Members      | &check; |     |          |
-|**Total**              | 10      |     |          |
+|Enterprise Members     | &check; |     |          |
+|**Total**              | **10**  |     |          |
 
 The ballot was held over the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01820.html)
