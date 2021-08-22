@@ -26,12 +26,23 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 
 ## Plan Review
 
-[//]: # (For Jakarta EE 9, the Platform Plan Review covered 95% of the Specification Projects.  For those Projects, just use the following statement in this Plan Review section:)
+The Specification Committee Ballot concluded successfully on 2021-08-19 with the following results.
 
-This Specification Project's Plan Review was covered by the [Jakarta EE 10 Plan Review](https://jakarta.ee/specifications/platform/10/).  
-Please reference that ballot for the official results.
+| Representative                                 | Representative for: |  Vote  |
+|------------------------------------------------|---------------------|--------|
+| Kenji Kazumura                                 | Fujitsu             |   +1   |
+| Dan Bandera, Kevin Sutter                      | IBM                 |   +1   |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1   |
+| Andrew Pielage, Matt Gill                      | Payara              |   +1   |
+| Scott Stark, Mark Little                       | Red Hat             |   +1   |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1   |
+| Ivar Grimstad                                  | EE4J PMC            |   +1   |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |   +1   |
+| Werner Keil                                    | Committer Members   |   +1   |
+| Jun Qian                                       | Enterprise Members  |   +1   |
+|                                                | Total               | **10** |
 
-[//]: # (If your Project was required to do a standalone Plan Review...  You'll need to perform an official Plan Review ballot and record the results here.)
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01927.html).
 
 ## Release Review
 <!--
