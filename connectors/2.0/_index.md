@@ -7,8 +7,8 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 
 * [Jakarta Connectors 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jca/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0.pdf) (PDF)
-* [Jakarta Connectors 2.0 Specification Document](./connectors-spec-2.0.html) (HTML)
+* [Jakarta Connectors 2.0 Specification Document](https://download.eclipse.org/jakartaee/connectors/2.0/connectors-spec-2.0.pdf) (PDF)
+* [Jakarta Connectors 2.0 Specification Document](https://download.eclipse.org/jakartaee/connectors/2.0/connectors-spec-2.0.html) (HTML)
 * [Jakarta Connectors 2.0 Javadoc](./apidocs)
 * [Jakarta Connectors 2.0 TCK](https://download.eclipse.org/jakartaee/connectors/2.0/jakarta-connectors-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/connectors/2.0/jakarta-connectors-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/connectors/2.0/jakarta-connectors-tck-2.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
    * Adds JDK 11 support [Jakarta Connectors 2.0.1 TCK](https://download.eclipse.org/jakartaee/connectors/2.0/jakarta-connectors-tck-2.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/connectors/2.0/jakarta-connectors-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/connectors/2.0/jakarta-connectors-tck-2.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
