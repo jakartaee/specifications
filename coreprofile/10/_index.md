@@ -23,9 +23,9 @@ applications with support for build time/ahead of time compilation.
 
 # Ballots
 
-## Plan Review
+## Creation/Plan Review
 
-The Specification Committee Ballot concluded successfully on 2021-08-19 with the following results.
+The Specification Committee Ballot concluded successfully on 2021-05-12 with the following results.
 
 | Representative                                 | Representative for: |  Vote  |
 |------------------------------------------------|---------------------|--------|
