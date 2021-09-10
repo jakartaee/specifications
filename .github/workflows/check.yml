@@ -1,0 +1,50 @@
+name: Specification PR review
+
+# Controls when the workflow will run
+on:
+  pull_request:
+    branches: [ main, master ]
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  review:
+    if: ${{ contains(github.event.pull_request.body, 'Specification PR template') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-deptch: 0
+          ref: actions
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v1.0.0
+      - name: PR review
+        uses: ./.github/actions/
+        id: review
+        with:
+          content: ${{ steps.changed-files.outputs.all_modified_files }}
+      - name: Find Comment
+        uses: peter-evans/find-comment@v1
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+      - name: Create comment
+        if: steps.fc.outputs.comment-id == ''
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ${{ steps.review.outputs.review }}
+      - name: Update comment
+        if: steps.fc.outputs.comment-id != ''
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          edit-mode: replace
+          body: |
+            ${{ steps.review.outputs.review }}
