@@ -22,8 +22,6 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: jitterbit/get-changed-files@v1
-        with:
-          format: 'json'
       - name: PR review
         uses: ./.github/actions/
         id: review
