@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-deptch: 0
+          fetch-depth: 0
           ref: actions
       - name: Get changed files
         id: changed-files
