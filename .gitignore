@@ -1,1 +1,5 @@
 /website
+
+/.github/actions/node_modules/*
+/.github/actions/lib/*
+/.github/actions/
