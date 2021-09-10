@@ -17,8 +17,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          - fetch-deptch: 0
-          - ref: actions
+          fetch-deptch: 0
+          ref: actions
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v1.0.0
