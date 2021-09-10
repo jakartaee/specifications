@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -129,7 +129,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span>
 <div class="deprecationComment">since JAXB 2.0</div>
 </div>
-<div class="block">As of JAXB 2.0, this class is deprecated and optional.
+<div class="block">As of Jakarta XML Binding, this class is deprecated and optional.
  <p>
  The <code>Validator</code> class is responsible for controlling the validation
  of content trees during runtime.
@@ -162,8 +162,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
         <dd> This form of validation enables a client application to receive 
              immediate feedback about modifications to the Java content tree 
              that violate type constraints on Java Properties as defined in 
-             the specification.  JAXB Providers are not required support
-             this type of validation.  Of the JAXB Providers that do support
+             the specification.  Jakarta XML Binding Providers are not required support
+             this type of validation.  Of the Jakarta XML Binding Providers that do support
              this type of validation, some may require you to decide at schema
              compile time whether or not a client application will be allowed
              to request fail-fast validation at runtime.
@@ -229,9 +229,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <p>
  Validation events are handled differently depending on how the client 
  application is configured to process them as described in the previous
- section.  However, there are certain cases where a JAXB Provider indicates
+ section.  However, there are certain cases where a Jakarta XML Binding Provider indicates
  that it is no longer able to reliably detect and report errors.  In these
- cases, the JAXB Provider will set the severity of the ValidationEvent to
+ cases, the Jakarta XML Binding Provider will set the severity of the ValidationEvent to
  FATAL_ERROR to indicate that the unmarshal, validate, or marshal operations 
  should be terminated.  The default event handler and 
  <code>ValidationEventCollector</code> utility class must terminate processing
@@ -246,12 +246,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <blockquote>
  <p>
  There currently are not any properties required to be supported by all 
- JAXB Providers on Validator.  However, some providers may support 
+ Jakarta XML Binding Providers on Validator.  However, some providers may support 
  their own set of provider specific properties.
  </blockquote></div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 1.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd><ul><li>Ryan Shoemaker, Sun Microsystems, Inc.</li><li>Kohsuke Kawaguchi, Sun Microsystems, Inc.</li><li>Joe Fialli, Sun Microsystems, Inc.</li></ul></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -366,7 +364,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </div>
 <div class="block">Allow an application to register a validation event handler.
  <p>
- The validation event handler will be called by the JAXB Provider if any
+ The validation event handler will be called by the Jakarta XML Binding Provider if any
  validation errors are encountered during calls to 
  <a href="#validate(java.lang.Object)"><code>validate</code></a>.  If the client application does not 
  register a validation event handler before invoking the validate method, 
@@ -488,7 +486,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </div>
 <div class="block">Set the particular property in the underlying implementation of 
  <code>Validator</code>.  This method can only be used to set one of
- the standard JAXB defined properties above or a provider specific
+ the standard Jakarta XML Binding defined properties above or a provider specific
  property.  Attempting to set an undefined property will result in
  a PropertyException being thrown.  See <a href="#supportedProps">
  Supported Properties</a>.</div>
@@ -518,7 +516,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </div>
 <div class="block">Get the particular property in the underlying implementation of 
  <code>Validator</code>.  This method can only be used to get one of
- the standard JAXB defined properties above or a provider specific
+ the standard Jakarta XML Binding defined properties above or a provider specific
  property.  Attempting to get an undefined property will result in
  a PropertyException being thrown.  See <a href="#supportedProps">
  Supported Properties</a>.</div>
@@ -562,7 +560,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -603,7 +601,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2020 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

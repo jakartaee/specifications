@@ -53,7 +53,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -139,14 +139,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public class <span class="typeNameLabel">JAXBSource</span>
 extends javax.xml.transform.sax.SAXSource</pre>
 <div class="block">JAXP <code>Source</code> implementation
- that marshals a JAXB-generated object.
+ that marshals a Jakarta XML Binding-generated object.
  
  <p>
- This utility class is useful to combine JAXB with
+ This utility class is useful to combine Jakarta XML Binding with
  other Java/XML technologies.
  
  <p>
- The following example shows how to use JAXB to marshal a document
+ The following example shows how to use Jakarta XML Binding to marshal a document
  for transformation by XSLT.
  
  <blockquote>
@@ -179,8 +179,6 @@ extends javax.xml.transform.sax.SAXSource</pre>
  method shall be used only for being parsed by the XMLReader object
  returned by the getXMLReader.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)</dd>
 </dl>
@@ -290,7 +288,7 @@ extends javax.xml.transform.sax.SAXSource</pre>
 <dd><code>context</code> - JAXBContext that was used to create
       <code>contentObject</code>. This context is used
       to create a new instance of marshaller and must not be null.</dd>
-<dd><code>contentObject</code> - An instance of a JAXB-generated class, which will be
+<dd><code>contentObject</code> - An instance of a Jakarta XML Binding-generated class, which will be
       used as a <code>Source</code> (by marshalling it into XML).  It must
       not be null.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -315,7 +313,7 @@ extends javax.xml.transform.sax.SAXSource</pre>
       <code>contentObject</code> into XML. This must be
       created from a JAXBContext that was used to build
       <code>contentObject</code> and must not be null.</dd>
-<dd><code>contentObject</code> - An instance of a JAXB-generated class, which will be
+<dd><code>contentObject</code> - An instance of a Jakarta XML Binding-generated class, which will be
       used as a <code>Source</code> (by marshalling it into XML).  It must
       not be null.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -352,7 +350,7 @@ extends javax.xml.transform.sax.SAXSource</pre>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -393,7 +391,7 @@ extends javax.xml.transform.sax.SAXSource</pre>
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2020 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

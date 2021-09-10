@@ -17,14 +17,13 @@ echo -e "Prepare Jakarta EE Specifications Preview...\n"
 echo -e "Step 1: Fetch a current copy of jakarta.ee\n"
 rm -rf website
 git clone https://github.com/jakartaee/jakarta.ee.git website
-cd website && npm install && cd ../
+cd website && npm install && npm run production && cd ../
 
 echo -e "Step 2: Reset specifications content\n"
-rm -rf website/content/specifications && rm -rf website/static/specifications
 mkdir -p website/static/specifications && mkdir -p website/content/specifications
 
 echo "Step 3: Copy PR content to Hugo content"
-find . ! -name . -prune ! -name website -exec cp -R {} website/content/specifications/ \;
+find .  -mindepth 1 -maxdepth 1 -not -path "./.github" -not -path "./website" -type d  -exec cp -R {} website/content/specifications/ \;
 cd website/content
 echo -e "Current working directory: $PWD\n"
 
@@ -47,3 +46,31 @@ for f in specifications/*/*/*/; do
 done
 
 echo "Done!"
+
+echo -e "Step 6: Create missing language copies..."
+LANGS=(zh)
+FILES=`find ./specifications -type f -name "*.md"`
+for F in $FILES; do
+  if [ -f "$F" ]; then
+    FILE_NAME=`basename $F`
+    EXTENSION=${FILE_NAME#**.}
+    for LANG in ${LANGS[@]}; do
+      ## Skip non base-lang copies
+      if [[ "$EXTENSION" =~ .*"$LANG".* ]];then
+        continue 2
+      fi
+    done
+    REL_DIR=`dirname $F`
+    for LANG in ${LANGS[@]}; do
+      LANG_FILE="$REL_DIR/`basename $F .md`.$LANG.md"
+      if [ ! -f $LANG_FILE ]; then
+        echo "Creating langauge copy of $F in $LANG_FILE"
+        cp $F $LANG_FILE
+      fi
+    done
+  fi
+done
+echo "Done!"
+
+echo -e "Step 7: Remove jakarta.ee _redirect file."
+rm ../static/_redirects 

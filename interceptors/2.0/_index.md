@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Interceptors 2.0 (milestone)"
-date: 2020-06-12
+title: "Jakarta Interceptors 2.0"
+date: 2020-11-04
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Interceptors defines a means of interposing on business method invocations and specific
@@ -9,17 +9,17 @@ and other managed classes.
 
 * [Jakarta Interceptors 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.interceptors/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0-SNAPSHOT.pdf) (PDF)
-* [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0-SNAPSHOT.html) (HTML)
+* [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0.pdf) (PDF)
+* [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0.html) (HTML)
 * [Jakarta Interceptors 2.0 Javadoc](./apidocs)
-* [Jakarta Interceptors 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta EE Platform 9 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.interceptor/jakarta.interceptor-api/2.0.0-RC2/jar)
+  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.interceptor/jakarta.interceptor-api/2.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+* [Eclipse Glassfish 6.0.0](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 
 # Ballots
 
@@ -34,19 +34,20 @@ Please reference that ballot for the official results.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-11-16 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Kenji Kazumura                                 | Fujitsu             | +1   |
+| Dan Bandera, Kevin Sutter                      | IBM                 | +1   |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              | +1   |
+| Andrew Pielage, Matt Gill                      | Payara              | +1   |
+| Scott Stark, Mark Little                       | Red Hat             | +1   |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           | +1   |
+| Ivar Grimstad                                  | EE4J PMC            | +1   |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members | +1   |
+| Werner Keil                                    | Committer Members   | +1   |
+| Scott (Congquan) Wang                          | Enterprise Members  | +1   |
+|                                                | Total               | 10   |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01261.html)

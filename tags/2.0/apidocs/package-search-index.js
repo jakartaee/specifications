@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"jakarta.servlet.jsp.jstl.core"},{"l":"jakarta.servlet.jsp.jstl.fmt"},{"l":"jakarta.servlet.jsp.jstl.sql"},{"l":"jakarta.servlet.jsp.jstl.tlv"}]
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"jakarta.servlet.jsp.jstl.core"},{"l":"jakarta.servlet.jsp.jstl.fmt"},{"l":"jakarta.servlet.jsp.jstl.sql"},{"l":"jakarta.servlet.jsp.jstl.tlv"}];updateSearchResults();

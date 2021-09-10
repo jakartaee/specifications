@@ -1,7 +1,7 @@
 ---
 title: "Jakarta MVC"
 summary: "Jakarta MVC defines a standard for creating web applications following the action-based model-view-controller pattern."
-<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
+#<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
 summary_sixty_char: "Standardizes the action-based model-view-controller pattern"
 project_id: "ee4j.mvc"
 ---

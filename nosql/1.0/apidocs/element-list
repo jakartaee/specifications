@@ -6,5 +6,4 @@ jakarta.nosql.mapping
 jakarta.nosql.mapping.column
 jakarta.nosql.mapping.document
 jakarta.nosql.mapping.keyvalue
-jakarta.nosql.mapping.reflection
 jakarta.nosql.query

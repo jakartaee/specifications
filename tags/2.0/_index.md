@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Standard Tag Library 2.0 (milestone)"
-date: 2020-06-16
+title: "Jakarta Standard Tag Library 2.0"
+date: 2020-09-22
 summary: "Release for Jakarta EE 9"
 ---
 Jakarta Standard Tag Library encapsulates as simple tags the core functionality common to many Web applications.
@@ -10,17 +10,18 @@ existing custom tags with Jakarta Standard Tag Library tags.
 
 * [Jakarta Standard Tag Library 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jstl/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Standard Tag Library 2.0 Specification Document](./jstl-spec-2.0-SNAPSHOT.pdf) (PDF)
-* [Jakarta Standard Tag Library 2.0 Specification Document](./jstl-spec-2.0-SNAPSHOT.html) (HTML)
+* [Jakarta Standard Tag Library 2.0 Specification Document](./jakarta-tags-spec-2.0.pdf) (PDF)
+* [Jakarta Standard Tag Library 2.0 Specification Document](./jakarta-tags-spec-2.0.html) (HTML)
 * [Jakarta Standard Tag Library 2.0 Javadoc](./apidocs)
-* [Jakarta Standard Tag Library 2.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Standard Tag Library 2.0 Tagdoc](./tagdocs)
+* [Jakarta Standard Tag Library 2.0 TCK](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+   * Adds JDK 11 support [Jakarta Standard Tag Library 2.0.1 TCK](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/2.0.0-RC1/jar)
+  * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/2.0.0/jar)
 
 
 # Compatible Implementations
-
-* [Eclipse Glassfish 6.0.0-M1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
+* [EE4J implementation of Jakarta Standard Tag Library 2.0.0](https://github.com/eclipse-ee4j/jstl-api/releases/download/2.0.0-IMPL-RELEASE/jakarta.servlet.jsp.jstl-2.0.0.jar) using vehicle [Eclipse Glassfish 6.0.0-M3-2020-10-04](https://github.com/eclipse-ee4j/glassfish/releases/download/6.0.0-M3-2020-10-04/glassfish-6.0.0-M3-2020-10-04.zip)
 
 # Ballots
 
@@ -35,19 +36,25 @@ Please reference that ballot for the official results.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-11-04 with the following results.
 
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Dan Bandera, Kevin Sutter                      | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |  +1  |
+| Scott Stark, Mark Little                       | Red Hat             |  +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+| Scott (Congquan) Wang                          | Enterprise Members  |  +1  |
+|                                                | Total               |  10  |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+| Community                                      | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Paul Nicolucci                                 | Individual          |  +1  |
+|                                                | Total               |   1  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01276.html)
