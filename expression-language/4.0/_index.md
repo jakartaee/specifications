@@ -19,7 +19,6 @@ Jakarta Expression Language defines an expression language for Java applications
 # Compatible Implementations
 
 * [Glassfish](https://repo1.maven.org/maven2/org/glassfish/jakarta.el/4.0.0/)
-* [Apache Tomcat 10.0.0-M7](https://tomcat.apache.org/download-10.cgi)
 
 # Ballots
 
