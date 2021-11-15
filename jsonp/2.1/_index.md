@@ -1,5 +1,5 @@
 ---
-title: "Jakarta JSON Processing 2.1 (under development)"
+title: "Jakarta JSON Processing 2.1"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
@@ -13,6 +13,15 @@ and implement requirements by other specification included in Jakarta EE 10.
 The JDK version required will be aligned with Jakarta EE 10.
 
 * [Jakarta JSON Processing 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsonp/releases/2.1)
+  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta JSON Processing 2.1 Javadoc](./apidocs)
+* [Jakarta JSON Processing 2.1 TCK](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+  * [jakarta.json:jakarta.json-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/2.1.0/jar)
+
+# Compatible Implementations
+
+* [Eclipse Parsson](https://github.com/eclipse-ee4j/parsson)
 
 # Ballots
 
