@@ -23,6 +23,17 @@ may be found on the [Project Site](https://projects.eclipse.org/projects/ee4j.ja
 [Github Wiki](https://github.com/eclipse-ee4j/jaxrs-api/wiki).
 
 * [Jakarta RESTful Web Services 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/3.1.0)
+    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
+* [Jakarta RESTful Web Services 3.1 Specification Document](./jakarta-restful-ws-spec-3.1.pdf) (PDF)
+* [Jakarta RESTful Web Services 3.1 Specification Document](./jakarta-restful-ws-spec-3.1.html) (HTML)
+* [Jakarta RESTful Web Services 3.1 Javadoc](./apidocs)
+* [Jakarta RESTful Web Services 3.1.0 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/3.0/jakarta-restful-ws-tck-3.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.jaxrs:jakarta.jaxrs-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.ws.rs/jakarta.ws.rs-api/3.1.0/jar)
+
+# Compatible Implementations
+
+* [Eclipse Jersey 3.1.0](https://eclipse-ee4j.github.io/jersey/download.html)
 
 # Ballots
 
