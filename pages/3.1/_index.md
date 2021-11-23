@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Server Pages 3.1 (under development)"
-date: 2021-06-24
+title: "Jakarta Server Pages 3.1"
+date: 2022-05-01
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Server Pages defines a template engine for web applications that supports mixing of textual content
@@ -8,7 +8,7 @@ Jakarta Server Pages defines a template engine for web applications that support
 into a Jakarta Servlet.
 
 * [Jakarta Server Pages 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/3.1.0)
-  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Server Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.pdf) (PDF)
 * [Jakarta Server Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.html) (HTML)
 * [Jakarta Server Pages 3.1 Javadoc](./apidocs)
@@ -16,28 +16,9 @@ into a Jakarta Servlet.
 * Maven coordinates
   * [jakarta.pages:jakarta.pages-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/3.1.0/jar)
 
-# Plan
-Minor update to address the small number of open issues (2 clarifications and 1 enhancement) currently open against the API. Any new issues opened will also be considered.
-
-# Backwards compatibility
-None.
-
-# Optional features
-None
-
-# Minimum Java SE version
-The JDK version required will be aligned with Jakarta EE 10.
-
-# TCK Updates
-It is anticipated that some additional tests will be required to provide test coverage for the areas where the specification has been clarified and for any new features.
-
-# Release Record
-[Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/3.1.0)
-
 # Compatible Implementations
 
 * Glassfish version TBD
-* Apache Tomcat 10.1.x ?
 
 # Ballots
 
@@ -60,3 +41,19 @@ The Specification Committee Ballot concluded successfully on 2021-06-23 with the
 |                                                | Total               |  10  |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01876.html).
+
+## Release Review
+
+The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
+
+|                       |  Yes    | No      | Abstain  |
+|-----------------------|---------|---------|----------|
+|Fujitsu                | &check; |         |          |
+|IBM                    | &check; |         |          |
+|Oracle                 | &check; |         |          |
+|Payara                 | &check; |         |          |
+|Red Hat                | &check; |         |          |
+|Tomitribe              | &check; |         |          |
+|EE4J PMC               | &check; |         |          |
+|Participant Members    | &check; |         |          |
+|Committer Members      | &check; |         |          |
