@@ -27,7 +27,7 @@ The JDK version required will be aligned with Jakarta EE 10.
 
 # Compatible Implementations
 
-* [Eclipse Angus](https://www.github.com/eclipse-ee4j/angus-activation)
+* [Eclipse Angus/Activation 1.0.0](https://github.com/eclipse-ee4j/angus-activation/releases)
 
 
 # Ballots
