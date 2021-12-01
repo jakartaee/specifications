@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Annotations 2.1 (under development)"
-date: 2021-10-20
+title: "Jakarta Annotations 2.1"
+date: 2021-12-01
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that enable a declarative style of programming that applies across a variety of Java technologies.
@@ -15,6 +15,17 @@ The JDK version required will be aligned with Jakarta EE 10.
 The release won't contain any backwards incompatible changes.
 
 * [Jakarta Annotations 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.ca/releases/2.1)
+    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta Annotations 2.1 Specification Document](./annotations-spec-2.1.pdf) (PDF)
+* [Jakarta Annotations 2.1 Specification Document](./annotations-spec-2.1.html) (HTML)
+* [Jakarta Annotations 2.1 Javadoc](./apidocs)
+* [Jakarta Annotations 2.1 TCK](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.annotation:jakarta.annotation-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.1.0/jar)
+
+# Compatible Implementations
+
+N/A
 
 # Ballots
 
@@ -38,3 +49,21 @@ The Specification Committee Ballot concluded successfully on 2021-10-27 with the
 |                                                | **Total**           |  **10** |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02013.html)
+
+<!--
+## Release Review
+
+The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
+
+|                       |  Yes    | No      | Abstain  |
+|-----------------------|---------|---------|----------|
+|Fujitsu                | &check; |         |          |
+|IBM                    | &check; |         |          |
+|Oracle                 | &check; |         |          |
+|Payara                 | &check; |         |          |
+|Red Hat                | &check; |         |          |
+|Tomitribe              | &check; |         |          |
+|EE4J PMC               | &check; |         |          |
+|Participant Members    | &check; |         |          |
+|Committer Members      | &check; |         |          |
+-->
