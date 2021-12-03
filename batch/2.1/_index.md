@@ -1,65 +1,36 @@
 ---
-title: "Jakarta Batch 2.1 (Under Development)"
-date: 2021-04-15
+title: "Jakarta Batch 2.1"
+date: 2022-02-24
 summary: "Release for Jakarta EE 10"
 ---
 
 Jakarta Batch specifies a Java API plus an XML-based job specification language (JSL), which lets you compose batch jobs in XML from reusable Java application artifacts and conveniently parameterize different executions of a single job.
 
-# Plan
-Jakarta Batch 2.1 will target the Jakarta EE 10 platform release.
+The goal of this release is to:
 
-Jakarta Batch 2.1 will be a minor update with fixes and enhancements, and will introduce a new requirement, explained below, to support integration with CDI.
+* define Jakarta Batch integration with Jakarta Contexts and Dependency Injection (CDI) within and outside of the Jakarta EE Platform
+* require Jakarta Batch + CDI integration (which in previous releases was optional from the Jakarta Batch perspective
 
-## It will contain:
+This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
-### CDI integration defined
+* [Jakarta Batch 2.1.0 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.1.0)
+    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta Batch 2.1 Specification Document](./jakarta-batch-spec-2.1.pdf) (PDF)
+* [Jakarta Batch 2.1 Specification Document](./jakarta-batch-spec-2.1.html) (HTML)
+* [Jakarta Batch 2.1 Javadoc](./apidocs)
+* [Jakarta Batch 2.1 TCK](https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
-The Jakarta Batch legacy, building from JSR 352, was to allow the use of CDI but not require it, and leave open the ability for an implementation to possibly use another dependency injection technology.
+* Maven coordinates
+  * [jakarta.batch:jakarta.batch-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.1.0/jar)
 
-In order to simplify the spec, promote portability and better integration with the rest of the Jakarta Platform, we have decided to take an additional step and introduce a new requirement a Jakarta Batch implementation to integrate CDI.  
-For example, an implementation will be required to be able to load a batch artifact as a CDI managed bean, so that injections of object instances can be managed using normal CDI lifecyle constructs, e.g. managed by CDI scopes, etc.
+* Schemas
+  * [XML Schema for the Jakarta Batch artifacts XML file (batch.xml)](https://jakarta.ee/xml/ns/jakartaee/batchXML_2_0.xsd)
+  * [XML Schema for the Jakarta Batch Job Specification Language](https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd)
 
-We plan to now enforce this requirement through tests in the Batch TCK.  We don't have an opinion currently if this will require additional TCK tests at the Jakarta EE Platform level.
-
-We don't believe this will require any special deprecation statement at the specification level, since roughly speaking, there was not a well-defined, standard behavior that is no longer guaranteed.   It is possible that individual implementations may want or need to give specific guidance for users of earlier JSR 352 and Jakarta Batch releases related to this topic.
-
-### Other enhancements.  
-
-This set is being discussed and prioritized via the Jakarta Batch dev mailing list, and no firm commitments to any individual items have been made.
-
-The working milestone is being tracked at: https://github.com/eclipse-ee4j/batch-api/milestone/1.  At the current pace, it is expected that the 2.1 delivery will include less than the full list of issues grouped here.
-We are open to other minor fixes/enhancements to the Jakarta Batch API from our backlog at: https://github.com/eclipse-ee4j/batch-api/issues.
-
-A good deal of the prioritization among these will likely come from the choice of individual committers deciding what to work on.
-
-## It will also contain:
-
-* Bug fixes as they arise during the release cycle
-* Any updates required to meet the Java version requirements of Jakarta EE 10
-* Any requirements identified by other specifications or the Jakarta EE 10 platform projects during the release cycle
-
-## It may contain: 
-
-### Standalone TCK refactor to include EE tests
-
-Refactoring of the Batch standalone TCK, so the full suite, including the EE platform portion (which is currently only offered by the platform TCK ), can be run against a Batch implementation to ceritfy Batch compliance.  This would allow the Jakarta Batch project to avoid having to maintain a duplicate "fork" of these tests in the platform TCK.
-
-This is the main TCK-related item, tracked via https://github.com/eclipse-ee4j/batch-tck/milestone/1
-
-
-## Optional Features:
-
-N/A
-
-
-# Release Record
-
-[Jakarta Batch 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.1.0)
-
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+* [**"jbatch"** v2.1.0-M2](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.1.0-M2) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.  Maven links: [implementation](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.container/2.1.0-M2/com.ibm.jbatch.container-2.1.0-M2.jar) and [SPI](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.spi/2.1.0-M2/com.ibm.jbatch.spi-2.1.0-M2.jar).
 
 # Ballots
-
 
 ## Plan Review
 Vote was conducted and passed June 4 - June 11 on https://www.eclipse.org/lists/jakarta.ee-spec/msg01825.html
@@ -78,3 +49,7 @@ Vote was conducted and passed June 4 - June 11 on https://www.eclipse.org/lists/
 |Committer Members      |  +1       |     |          |
 |Enterprise Members     |  +1       |     |          |
 |Total                  |  +1       |     |          |
+
+## Release Review
+
+*TODO*
