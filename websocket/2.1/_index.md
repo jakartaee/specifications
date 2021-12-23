@@ -10,7 +10,9 @@ for the WebSocket protocol (RFC6455).
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta WebSocket 2.1 Specification Document](./jakarta-websocket-spec-2.1.pdf) (PDF)
 * [Jakarta WebSocket 2.1 Specification Document](./jakarta-websocket-spec-2.1.html) (HTML)
-* [Jakarta WebSocket 2.1 Javadoc](./apidocs)
+* [Jakarta WebSocket 2.1 Javadoc]
+    * [Client](./apidocs/client)
+    * [Server](./apidocs/server)
 * [Jakarta WebSocket 2.1 TCK](TBD)TBD
 * Maven coordinates
     * [jakarta.websocket:jakarta.websocket-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/2.1.0/jar)
