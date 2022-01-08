@@ -18,7 +18,7 @@ The Jakarta Contexts and Dependency Injection 4.0 goals for this release are:
     * [Improve constructor injection](https://github.com/eclipse-ee4j/cdi/issues/464)
     * [AFTER_SUCCESS Observers and Events fired from within EntityListeners](https://github.com/eclipse-ee4j/cdi/issues/467)
     * [Add methods to BeanConfigurator for applying decorators](https://github.com/eclipse-ee4j/cdi/issues/459)
-    * [All issues with a Lite label](https://github.com/eclipse-ee4j/cdi/issues?q=is%3Aissue+is%3Aopen+label%3ALite)
+    * [All issues with a Lite label](https://github.com/eclipse-ee4j/cdi/issues?q=is%3Aissue+label%3ALite)
 
 
 * [Jakarta Contexts Dependency Injection 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/4.0)
