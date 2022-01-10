@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Persistence 3.1 (under development)"
+title: "Jakarta Persistence 3.1"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
@@ -15,6 +15,18 @@ The goal of this release is to:
 The JDK version required will be aligned with Jakarta EE 10.
 
 * [Jakarta Persistence 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.1)
+* [Jakarta Persistence 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.1-jakarta-persistence-api)
+    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta Persistence 3.1 Specification Document](./jakarta-persistence-spec-3.1.pdf) (PDF)
+* [Jakarta Persistence 3.1 Specification Document](./jakarta-persistence-spec-3.1.html) (HTML)
+* [Jakarta Persistence 3.1 Javadoc](./apidocs)
+* Jakarta Persistence 3.1 XML Schemas
+    * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd)
+    * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_0.xsd)
+* [Jakarta Persistence 3.1 TCK](https://download.eclipse.org/jakartaee/persistence/3.1/jakarta-persistence-tck-3.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.1/jakarta-persistence-tck-3.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.1/jakarta-persistence-tck-3.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.persistence:jakarta.persistence-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.1.0/jar)
+
 
 # Ballots
 
