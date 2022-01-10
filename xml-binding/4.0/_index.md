@@ -1,5 +1,5 @@
 ---
-title: "Jakarta XML Binding 4.0 (under development)"
+title: "Jakarta XML Binding 4.0"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
@@ -16,6 +16,14 @@ The goal of this release is to:
 The JDK version required will be aligned with Jakarta EE 10.
 
 * [Jakarta XML Binding 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxb/releases/4.0)
+    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta XML Binding 4.0 Specification Document](./jakarta-xml-binding-spec-4.0.pdf) (PDF)
+* [Jakarta XML Binding 4.0 Specification Document](./jakarta-xml-binding-spec-4.0.html) (HTML)
+* [Jakarta XML Binding 4.0 Javadoc](./apidocs)
+* [Jakarta XML Binding 3.0 XML Schema](https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd)
+* [Jakarta XML Binding 4.0 TCK](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.xml.bind/jakarta.xml.bind-api/4.0.0/jar)
 
 # Ballots
 
