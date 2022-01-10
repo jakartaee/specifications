@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -228,13 +228,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
        SAXSource source = 
            new SAXSource( xmlReader, new InputSource( "http://..." ) );
 
-       // Setup JAXB to unmarshal
+       // Setup Jakarta XML Binding to unmarshal
        JAXBContext jc = JAXBContext.newInstance( "com.acme.foo" );
        Unmarshaller u = jc.createUnmarshaller();
        ValidationEventCollector vec = new ValidationEventCollector();
        u.setEventHandler( vec );
        
-       // turn off the JAXB provider's default validation mechanism to 
+       // turn off the Jakarta XML Binding provider's default validation mechanism to 
        // avoid duplicate validation
        u.setValidating( false )
 
@@ -285,7 +285,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  unmarshalling methods described by  
  <a href="#unmarshalGlobal">Unmarshal root element that is declared globally</a>.
  These unmarshal methods utilize <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a>'s mapping of global XML element
- declarations and type definitions to JAXB mapped classes to initiate the 
+ declarations and type definitions to Jakarta XML Binding mapped classes to initiate the 
  unmarshalling of the root element of  XML data.  When the <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a>'s 
  mappings are not sufficient to unmarshal the root element of XML data, 
  the application can assist the unmarshalling process by using the 
@@ -296,7 +296,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  
  <blockquote>
  An unmarshal method never returns null. If the unmarshal process is unable to unmarshal
- the root of XML content to a JAXB mapped object, a fatal error is reported that
+ the root of XML content to a Jakarta XML Binding mapped object, a fatal error is reported that
  terminates processing by throwing JAXBException.
  </blockquote>
 
@@ -308,11 +308,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a> to unmarshal the root element of an XML data. The <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a> 
  instance is the one that was used to create this <code>Unmarshaller</code>. The <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a>
  instance maintains a mapping of globally declared XML element and type definition names to 
- JAXB mapped classes. The unmarshal method checks if <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a> has a mapping
- from the root element's XML name and/or <code>@xsi:type</code> to a JAXB mapped class.  If it does, it umarshalls the
- XML data using the appropriate JAXB mapped class. Note that when the root element name is unknown and the root
+ Jakarta XML Binding mapped classes. The unmarshal method checks if <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a> has a mapping
+ from the root element's XML name and/or <code>@xsi:type</code> to a Jakarta XML Binding mapped class.  If it does, it umarshalls the
+ XML data using the appropriate Jakarta XML Binding mapped class. Note that when the root element name is unknown and the root
  element has an <code>@xsi:type</code>, the XML data is unmarshalled
- using that JAXB mapped class as the value of a <a href="JAXBElement.html" title="class in jakarta.xml.bind"><code>JAXBElement</code></a>.
+ using that Jakarta XML Binding mapped class as the value of a <a href="JAXBElement.html" title="class in jakarta.xml.bind"><code>JAXBElement</code></a>.
  When the <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a> object does not have a mapping for the root element's name
  nor its <code>@xsi:type</code>, if it exists,
  then the unmarshal operation will abort immediately by throwing a <a href="UnmarshalException.html" title="class in jakarta.xml.bind"><code>UnmarshalException</code></a>. This exception scenario can be worked around by using the unmarshal by 
@@ -333,7 +333,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  deserializing the root element when using these unmarshal methods. 
  Additionally, when the root element of XML data has an <code>xsi:type</code> attribute and
  that attribute's value references a type definition that is mapped 
- to a JAXB mapped class by <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a>, that the root 
+ to a Jakarta XML Binding mapped class by <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a>, that the root 
  element's <code>xsi:type</code> attribute takes
  precedence over the unmarshal methods <code>declaredType</code> parameter.
  These methods always return a <code>JAXBElement&lt;declaredType&gt;</code>
@@ -402,7 +402,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
        Element  fooSubtree = ...; // traverse DOM till reach xml element foo, constrained by a 
                                   // local element declaration in schema.
  
-       // FooType is the JAXB mapping of the type of local element declaration foo.
+       // FooType is the Jakarta XML Binding mapping of the type of local element declaration foo.
        JAXBElement&lt;FooType&gt; foo = u.unmarshal( fooSubtree, FooType.class);
     </code></pre>
  </blockquote>
@@ -411,8 +411,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <b>Support for SAX2.0 Compliant Parsers</b><br>
  <blockquote>
  A client application has the ability to select the SAX2.0 compliant parser
- of their choice.  If a SAX parser is not selected, then the JAXB Provider's
- default parser will be used.  Even though the JAXB Provider's default parser
+ of their choice.  If a SAX parser is not selected, then the Jakarta XML Binding Provider's
+ default parser will be used.  Even though the Jakarta XML Binding Provider's default parser
  is not required to be SAX2.0 compliant, all providers are required to allow
  a client application to specify their own SAX2.0 parser.  Some providers may
  require the client application to specify the SAX2.0 parser at schema compile
@@ -431,14 +431,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <a href="#unmarshal(javax.xml.transform.Source)"><code>unmarshal(Source)</code></a>  API.
  
  <p>
- Since unmarshalling invalid XML content is defined in JAXB 2.0, 
+ Since unmarshalling invalid XML content is defined in Jakarta XML Binding, 
  the Unmarshaller default validation event handler was made more lenient
  than in JAXB 1.0.  When schema-derived code generated
  by JAXB 1.0 binding compiler is registered with <a href="JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a>, 
  the default unmarshal validation handler is 
  <a href="helpers/DefaultValidationEventHandler.html" title="class in jakarta.xml.bind.helpers"><code>DefaultValidationEventHandler</code></a> and it
  terminates the marshal  operation after encountering either a fatal error or an error. 
- For a JAXB 2.0 client application, there is no explicitly defined default
+ For a Jakarta XML Binding client application, there is no explicitly defined default
  validation handler and the default event handling only 
  terminates the unmarshal operation after encountering a fatal error.
  
@@ -450,7 +450,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <blockquote>
  <p>
  There currently are not any properties required to be supported by all 
- JAXB Providers on Unmarshaller.  However, some providers may support 
+ Jakarta XML Binding Providers on Unmarshaller.  However, some providers may support 
  their own set of provider specific properties.
  </blockquote>
  
@@ -461,11 +461,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  The <a href="Unmarshaller.html" title="interface in jakarta.xml.bind"><code>Unmarshaller</code></a> provides two styles of callback mechanisms
  that allow application specific processing during key points in the
  unmarshalling process.  In 'class defined' event callbacks, application
- specific code placed in JAXB mapped classes is triggered during
+ specific code placed in Jakarta XML Binding mapped classes is triggered during
  unmarshalling.  'External listeners' allow for centralized processing
  of unmarshal events in one callback method rather than by type event callbacks.
  <p>
- 'Class defined' event callback methods allow any JAXB mapped class to specify 
+ 'Class defined' event callback methods allow any Jakarta XML Binding mapped class to specify 
  its own specific callback methods by defining methods with the following method signature:
  <blockquote>
  <pre>
@@ -484,7 +484,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  The external listener callback mechanism enables the registration of a <a href="Unmarshaller.Listener.html" title="class in jakarta.xml.bind"><code>Unmarshaller.Listener</code></a> 
  instance with an <a href="#setListener(jakarta.xml.bind.Unmarshaller.Listener)"><code>setListener(Listener)</code></a>. The external listener receives all callback events, 
  allowing for more centralized processing than per class defined callback methods.  The external listener 
- receives events when unmarshalling process is marshalling to a JAXB element or to JAXB mapped class.
+ receives events when unmarshalling process is marshalling to a Jakarta XML Binding element or to Jakarta XML Binding mapped class.
  <p>
  The 'class defined' and external listener event callback methods are independent of each other,
  both can be called for one event.  The invocation ordering when both listener callback methods exist is
@@ -494,8 +494,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  
  </blockquote></div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 1.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd><ul><li>Ryan Shoemaker, Sun Microsystems, Inc.</li><li>Kohsuke Kawaguchi, Sun Microsystems, Inc.</li><li>Joe Fialli, Sun Microsystems, Inc.</li></ul></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -720,7 +718,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)">unmarshal</a></span>&#8203;(javax.xml.stream.XMLEventReader&nbsp;reader,
          java.lang.Class&lt;T&gt;&nbsp;declaredType)</code></th>
 <td class="colLast">
-<div class="block">Unmarshal root element to JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal root element to Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.</div>
 </td>
 </tr>
@@ -737,7 +735,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)">unmarshal</a></span>&#8203;(javax.xml.stream.XMLStreamReader&nbsp;reader,
          java.lang.Class&lt;T&gt;&nbsp;declaredType)</code></th>
 <td class="colLast">
-<div class="block">Unmarshal root element to JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal root element to Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.</div>
 </td>
 </tr>
@@ -771,7 +769,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unmarshal(org.w3c.dom.Node,java.lang.Class)">unmarshal</a></span>&#8203;(org.w3c.dom.Node&nbsp;node,
          java.lang.Class&lt;T&gt;&nbsp;declaredType)</code></th>
 <td class="colLast">
-<div class="block">Unmarshal XML data by JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal XML data by Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.</div>
 </td>
 </tr>
@@ -884,8 +882,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
      <code>Unmarshaller</code> is unable to perform the XML to Java
      binding.  See <a href="#unmarshalEx">Unmarshalling XML Data</a></dd>
 <dd><code>java.lang.IllegalArgumentException</code> - If the InputStream parameter is null</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -985,7 +981,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">&lt;T&gt;&nbsp;<a href="JAXBElement.html" title="class in jakarta.xml.bind">JAXBElement</a>&lt;T&gt;&nbsp;unmarshal&#8203;(org.w3c.dom.Node&nbsp;node,
                              java.lang.Class&lt;T&gt;&nbsp;declaredType)
                       throws <a href="JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></pre>
-<div class="block">Unmarshal XML data by JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal XML data by Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.
 
  <p>
@@ -994,9 +990,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>node</code> - the document/element to unmarshal XML data from.
       The caller must support at least Document and Element.</dd>
-<dd><code>declaredType</code> - appropriate JAXB mapped class to hold <code>node</code>'s XML data.</dd>
+<dd><code>declaredType</code> - appropriate Jakarta XML Binding mapped class to hold <code>node</code>'s XML data.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><a href="#unmarshalDeclaredTypeReturn">JAXB Element</a> representation of <code>node</code></dd>
+<dd><a href="#unmarshalDeclaredTypeReturn">JAXBElement</a> representation of <code>node</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></code> - If any unexpected errors occur while unmarshalling</dd>
 <dd><code><a href="UnmarshalException.html" title="class in jakarta.xml.bind">UnmarshalException</a></code> - If the <a href="ValidationEventHandler.html" title="interface in jakarta.xml.bind"><code>ValidationEventHandler</code></a>
@@ -1004,8 +1000,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
      <code>Unmarshaller</code> is unable to perform the XML to Java
      binding.  See <a href="#unmarshalEx">Unmarshalling XML Data</a></dd>
 <dd><code>java.lang.IllegalArgumentException</code> - If any parameter is null</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1028,33 +1022,33 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <b>SAX 2.0 Parser Pluggability</b>
  <p>
  A client application can choose not to use the default parser mechanism
- supplied with their JAXB provider.  Any SAX 2.0 compliant parser can be
- substituted for the JAXB provider's default mechanism.  To do so, the
+ supplied with their Jakarta XML Binding provider.  Any SAX 2.0 compliant parser can be
+ substituted for the Jakarta XML Binding provider's default mechanism.  To do so, the
  client application must properly configure a <code>SAXSource</code> containing
  an <code>XMLReader</code> implemented by the SAX 2.0 parser provider.  If the
  <code>XMLReader</code> has an <code>org.xml.sax.ErrorHandler</code> registered
- on it, it will be replaced by the JAXB Provider so that validation errors
+ on it, it will be replaced by the Jakarta XML Binding Provider so that validation errors
  can be reported via the <code>ValidationEventHandler</code> mechanism of
- JAXB.  If the <code>SAXSource</code> does not contain an <code>XMLReader</code>,
- then the JAXB provider's default parser mechanism will be used.
+ Jakarta XML Binding.  If the <code>SAXSource</code> does not contain an <code>XMLReader</code>,
+ then the Jakarta XML Binding provider's default parser mechanism will be used.
  <p>
- This parser replacement mechanism can also be used to replace the JAXB
+ This parser replacement mechanism can also be used to replace the Jakarta XML Binding
  provider's unmarshal-time validation engine.  The client application 
  must properly configure their SAX 2.0 compliant parser to perform
  validation (as shown in the example above).  Any <code>SAXParserExceptions</code>
  encountered by the parser during the unmarshal operation will be
- processed by the JAXB provider and converted into JAXB 
+ processed by the Jakarta XML Binding provider and converted into Jakarta XML Binding 
  <code>ValidationEvent</code> objects which will be reported back to the
  client via the <code>ValidationEventHandler</code> registered with the
  <code>Unmarshaller</code>.  <i>Note:</i> specifying a substitute validating
  SAX 2.0 parser for unmarshalling does not necessarily replace the 
- validation engine used by the JAXB provider for performing on-demand 
+ validation engine used by the Jakarta XML Binding provider for performing on-demand 
  validation.
  <p>
  The only way for a client application to specify an alternate parser
  mechanism to be used during unmarshal is via the 
  <code>unmarshal(SAXSource)</code> API.  All other forms of the unmarshal
- method (File, URL, Node, etc) will use the JAXB provider's default 
+ method (File, URL, Node, etc) will use the Jakarta XML Binding provider's default 
  parser and validator mechanisms.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1095,9 +1089,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the XML Source to unmarshal XML data from (providers are
         only required to support SAXSource, DOMSource, and StreamSource)</dd>
-<dd><code>declaredType</code> - appropriate JAXB mapped class to hold <code>source</code>'s xml root element</dd>
+<dd><code>declaredType</code> - appropriate Jakarta XML Binding mapped class to hold <code>source</code>'s xml root element</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>Java content rooted by <a href="#unmarshalDeclaredTypeReturn">JAXB Element</a></dd>
+<dd>Java content rooted by <a href="#unmarshalDeclaredTypeReturn">JAXBElement</a></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></code> - If any unexpected errors occur while unmarshalling</dd>
 <dd><code><a href="UnmarshalException.html" title="class in jakarta.xml.bind">UnmarshalException</a></code> - If the <a href="ValidationEventHandler.html" title="interface in jakarta.xml.bind"><code>ValidationEventHandler</code></a>
@@ -1105,8 +1099,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
      <code>Unmarshaller</code> is unable to perform the XML to Java
      binding.  See <a href="#unmarshalEx">Unmarshalling XML Data</a></dd>
 <dd><code>java.lang.IllegalArgumentException</code> - If any parameter is null</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1144,8 +1136,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code>java.lang.IllegalArgumentException</code> - If the <code>reader</code> parameter is null</dd>
 <dd><code>java.lang.IllegalStateException</code> - If <code>reader</code> is not pointing to a START_DOCUMENT or
       START_ELEMENT  event.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)"><code>unmarshal(javax.xml.stream.XMLStreamReader, Class)</code></a></dd>
 </dl>
@@ -1160,7 +1150,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">&lt;T&gt;&nbsp;<a href="JAXBElement.html" title="class in jakarta.xml.bind">JAXBElement</a>&lt;T&gt;&nbsp;unmarshal&#8203;(javax.xml.stream.XMLStreamReader&nbsp;reader,
                              java.lang.Class&lt;T&gt;&nbsp;declaredType)
                       throws <a href="JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></pre>
-<div class="block">Unmarshal root element to JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal root element to Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.
  
  <p>
@@ -1174,9 +1164,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>reader</code> - The parser to be read.</dd>
-<dd><code>declaredType</code> - appropriate JAXB mapped class to hold <code>reader</code>'s START_ELEMENT XML data.</dd>
+<dd><code>declaredType</code> - appropriate Jakarta XML Binding mapped class to hold <code>reader</code>'s START_ELEMENT XML data.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>content tree rooted by <a href="#unmarshalDeclaredTypeReturn">JAXB Element representation</a></dd>
+<dd>content tree rooted by <a href="#unmarshalDeclaredTypeReturn">JAXBElement</a> representation</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></code> - If any unexpected errors occur while unmarshalling</dd>
 <dd><code><a href="UnmarshalException.html" title="class in jakarta.xml.bind">UnmarshalException</a></code> - If the <a href="ValidationEventHandler.html" title="interface in jakarta.xml.bind"><code>ValidationEventHandler</code></a>
@@ -1184,8 +1174,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
      <code>Unmarshaller</code> is unable to perform the XML to Java
      binding.  See <a href="#unmarshalEx">Unmarshalling XML Data</a></dd>
 <dd><code>java.lang.IllegalArgumentException</code> - If any parameter is null</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1223,8 +1211,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code>java.lang.IllegalArgumentException</code> - If the <code>reader</code> parameter is null</dd>
 <dd><code>java.lang.IllegalStateException</code> - If <code>reader</code> is not pointing to a START_DOCUMENT or
       START_ELEMENT event.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)"><code>unmarshal(javax.xml.stream.XMLEventReader, Class)</code></a></dd>
 </dl>
@@ -1239,7 +1225,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">&lt;T&gt;&nbsp;<a href="JAXBElement.html" title="class in jakarta.xml.bind">JAXBElement</a>&lt;T&gt;&nbsp;unmarshal&#8203;(javax.xml.stream.XMLEventReader&nbsp;reader,
                              java.lang.Class&lt;T&gt;&nbsp;declaredType)
                       throws <a href="JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></pre>
-<div class="block">Unmarshal root element to JAXB mapped <code>declaredType</code>
+<div class="block">Unmarshal root element to Jakarta XML Binding mapped <code>declaredType</code>
  and return the resulting content tree.
  
  <p>
@@ -1254,9 +1240,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>reader</code> - The parser to be read.</dd>
-<dd><code>declaredType</code> - appropriate JAXB mapped class to hold <code>reader</code>'s START_ELEMENT XML data.</dd>
+<dd><code>declaredType</code> - appropriate Jakarta XML Binding mapped class to hold <code>reader</code>'s START_ELEMENT XML data.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>content tree rooted by <a href="#unmarshalDeclaredTypeReturn">JAXB Element representation</a></dd>
+<dd>content tree rooted by <a href="#unmarshalDeclaredTypeReturn">JAXBElement</a> representation</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></code> - If any unexpected errors occur while unmarshalling</dd>
 <dd><code><a href="UnmarshalException.html" title="class in jakarta.xml.bind">UnmarshalException</a></code> - If the <a href="ValidationEventHandler.html" title="interface in jakarta.xml.bind"><code>ValidationEventHandler</code></a>
@@ -1264,8 +1250,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
      <code>Unmarshaller</code> is unable to perform the XML to Java
      binding.  See <a href="#unmarshalEx">Unmarshalling XML Data</a></dd>
 <dd><code>java.lang.IllegalArgumentException</code> - If any parameter is null</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1280,7 +1264,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  an XML pipeline.
  
  <p>
- The JAXB Provider can return the same handler object for multiple 
+ The Jakarta XML Binding Provider can return the same handler object for multiple 
  invocations of this method. In other words, this method does not 
  necessarily create a new instance of <code>UnmarshallerHandler</code>. If the
  application needs to use more than one <code>UnmarshallerHandler</code>, it
@@ -1311,14 +1295,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  This method may only be invoked before or after calling one of the
  unmarshal methods.
  <p>
- This method only controls the JAXB Provider's default unmarshal-time
+ This method only controls the Jakarta XML Binding Provider's default unmarshal-time
  validation mechanism - it has no impact on clients that specify their 
  own validating SAX 2.0 compliant parser.  Clients that specify their
- own unmarshal-time validation mechanism may wish to turn off the JAXB
+ own unmarshal-time validation mechanism may wish to turn off the Jakarta XML Binding
  Provider's default validation mechanism via this API to avoid "double
  validation".
  <p>
- This method is deprecated as of JAXB 2.0 - please use the new
+ This method is deprecated as of Jakarta XML Binding - please use the new
  <a href="#setSchema(javax.xml.validation.Schema)"><code>setSchema(javax.xml.validation.Schema)</code></a> API.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1329,7 +1313,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
          validation at unmarshal time</dd>
 <dd><code>java.lang.UnsupportedOperationException</code> - could be thrown if this method is
          invoked on an Unmarshaller created from a JAXBContext referencing
-         JAXB 2.0 mapped classes</dd>
+         Jakarta XML Binding mapped classes</dd>
 </dl>
 </li>
 </ul>
@@ -1347,10 +1331,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Indicates whether or not the <code>Unmarshaller</code> is configured to
  validate during unmarshal operations.
  <p>
- This API returns the state of the JAXB Provider's default unmarshal-time
+ This API returns the state of the Jakarta XML Binding Provider's default unmarshal-time
  validation mechanism. 
  <p>
- This method is deprecated as of JAXB 2.0 - please use the new
+ This method is deprecated as of Jakarta XML Binding - please use the new
  <a href="#getSchema()"><code>getSchema()</code></a> API.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -1361,7 +1345,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
          flag</dd>
 <dd><code>java.lang.UnsupportedOperationException</code> - could be thrown if this method is
          invoked on an Unmarshaller created from a JAXBContext referencing
-         JAXB 2.0 mapped classes</dd>
+         Jakarta XML Binding mapped classes</dd>
 </dl>
 </li>
 </ul>
@@ -1375,7 +1359,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
               throws <a href="JAXBException.html" title="class in jakarta.xml.bind">JAXBException</a></pre>
 <div class="block">Allow an application to register a <code>ValidationEventHandler</code>.
  <p>
- The <code>ValidationEventHandler</code> will be called by the JAXB Provider
+ The <code>ValidationEventHandler</code> will be called by the Jakarta XML Binding Provider
  if any validation errors are encountered during calls to any of the 
  unmarshal methods.  If the client application does not register a 
  <code>ValidationEventHandler</code> before invoking the unmarshal methods,
@@ -1425,7 +1409,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
           throws <a href="PropertyException.html" title="class in jakarta.xml.bind">PropertyException</a></pre>
 <div class="block">Set the particular property in the underlying implementation of 
  <code>Unmarshaller</code>.  This method can only be used to set one of
- the standard JAXB defined properties above or a provider specific
+ the standard Jakarta XML Binding defined properties above or a provider specific
  property.  Attempting to set an undefined property will result in
  a PropertyException being thrown.  See <a href="#supportedProps">
  Supported Properties</a>.</div>
@@ -1452,7 +1436,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
                       throws <a href="PropertyException.html" title="class in jakarta.xml.bind">PropertyException</a></pre>
 <div class="block">Get the particular property in the underlying implementation of 
  <code>Unmarshaller</code>.  This method can only be used to get one of
- the standard JAXB defined properties above or a provider specific
+ the standard Jakarta XML Binding defined properties above or a provider specific
  property.  Attempting to get an undefined property will result in
  a PropertyException being thrown.  See <a href="#supportedProps">
  Supported Properties</a>.</div>
@@ -1491,8 +1475,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code>java.lang.UnsupportedOperationException</code> - could be thrown if this method is
          invoked on an Unmarshaller created from a JAXBContext referencing
          JAXB 1.0 mapped classes</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1523,8 +1505,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code>java.lang.UnsupportedOperationException</code> - could be thrown if this method is
          invoked on an Unmarshaller created from a JAXBContext referencing
          JAXB 1.0 mapped classes</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1543,8 +1523,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.IllegalArgumentException</code> - if the adapter parameter is null.</dd>
 <dd><code>java.lang.UnsupportedOperationException</code> - if invoked agains a JAXB 1.0 implementation.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#setAdapter(java.lang.Class,A)"><code>setAdapter(Class,XmlAdapter)</code></a></dd>
 </dl>
@@ -1582,8 +1560,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.IllegalArgumentException</code> - if the type parameter is null.</dd>
 <dd><code>java.lang.UnsupportedOperationException</code> - if invoked agains a JAXB 1.0 implementation.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1601,8 +1577,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.IllegalArgumentException</code> - if the type parameter is null.</dd>
 <dd><code>java.lang.UnsupportedOperationException</code> - if invoked agains a JAXB 1.0 implementation.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1650,8 +1624,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>listener</code> - provides unmarshal event callbacks for this <a href="Unmarshaller.html" title="interface in jakarta.xml.bind"><code>Unmarshaller</code></a></dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1667,8 +1639,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>registered <a href="Unmarshaller.Listener.html" title="class in jakarta.xml.bind"><code>Unmarshaller.Listener</code></a> or <code>null</code>
          if no Listener is registered with this Unmarshaller.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 </dl>
 </li>
 </ul>
@@ -1700,7 +1670,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -1741,7 +1711,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2020 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

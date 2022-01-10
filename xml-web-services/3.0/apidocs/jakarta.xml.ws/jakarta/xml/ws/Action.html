@@ -133,7 +133,7 @@ public @interface <span class="memberNameLabel">Action</span></pre>
  <code>output</code> and <code>fault</code> messages of the WSDL <code>operation</code>
  is based upon which attributes of the <code>Action</code> annotation have been specified.
  For the exact computation of <code>wsam:Action</code> values for the messages, refer
- to the algorithm in the JAX-WS specification.
+ to the algorithm in the Jakarta XML Web Services specification.
  <p>
  <b>Example 1</b>: Specify explicit values for <code>Action</code> message addressing property
  for <code>input</code> and <code>output</code> messages.
@@ -170,7 +170,7 @@ public @interface <span class="memberNameLabel">Action</span></pre>
  <p>
  <b>Example 2</b>: Specify explicit value for <code>Action</code> message addressing property
  for only the <code>input</code> message. The <code>wsam:Action</code> values for the
- WSDL <code>output</code> message are computed using the algorithm in the JAX-WS specification.
+ WSDL <code>output</code> message are computed using the algorithm in the Jakarta XML Web Services specification.
 
  <pre>
  @WebService(targetNamespace="http://example.com/numbers")
@@ -200,15 +200,13 @@ public @interface <span class="memberNameLabel">Action</span></pre>
 
  It is legitimate to specify an explicit value for <code>Action</code> message addressing property for
  <code>output</code> message only. In this case, <code>wsam:Action</code> value for the
- WSDL <code>input</code> message is computed using the algorithm in the JAX-WS specification.
+ WSDL <code>input</code> message is computed using the algorithm in the Jakarta XML Web Services specification.
 
  <p>
  <b>Example 3</b>: See <a href="FaultAction.html" title="annotation in jakarta.xml.ws"><code>FaultAction</code></a> annotation for an example of
  how to specify an explicit value for <code>Action</code> message addressing property for the
  <code>fault</code> message.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="FaultAction.html" title="annotation in jakarta.xml.ws"><code>FaultAction</code></a></dd>
 </dl>
@@ -410,7 +408,7 @@ public @interface <span class="memberNameLabel">Action</span></pre>
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to: <a href="mailto:jaxws-dev@eclipse.org">jaxws-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2020 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to: <a href="mailto:jaxws-dev@eclipse.org">jaxws-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

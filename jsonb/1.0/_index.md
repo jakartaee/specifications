@@ -1,5 +1,5 @@
 ---
-title: "Jakarta JSON Binding Specification 1.0"
+title: "Jakarta JSON Binding 1.0"
 date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---

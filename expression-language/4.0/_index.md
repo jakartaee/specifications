@@ -10,7 +10,8 @@ Jakarta Expression Language defines an expression language for Java applications
 * [Jakarta Expression Language 4.0 Specification Document](./jakarta-expression-language-spec-4.0.pdf) (PDF)
 * [Jakarta Expression Language 4.0 Specification Document](./jakarta-expression-language-spec-4.0.html) (HTML)
 * [Jakarta Expression Language 4.0 Javadoc](./apidocs)
-* [Jakarta Expression Language 4.0 TCK](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.0.zip)([sig](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Expression Language 4.0 TCK](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+   * Adds JDK 11 support [Jakarta Expression Language 4.0.1 TCK](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/expression-language/4.0/jakarta-expression-language-tck-4.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.el:jakarta.el-api:jar:4.0.0](https://repo1.maven.org/maven2/jakarta/el/jakarta.el-api/4.0.0/)
 
@@ -18,7 +19,6 @@ Jakarta Expression Language defines an expression language for Java applications
 # Compatible Implementations
 
 * [Glassfish](https://repo1.maven.org/maven2/org/glassfish/jakarta.el/4.0.0/)
-* [Apache Tomcat 10.0.0-M7](https://tomcat.apache.org/download-10.cgi)
 
 # Ballots
 

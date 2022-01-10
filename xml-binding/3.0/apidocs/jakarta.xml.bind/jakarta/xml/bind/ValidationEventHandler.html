@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -138,13 +138,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <a href="Unmarshaller.html#setEventHandler(jakarta.xml.bind.ValidationEventHandler)"><code>Unmarshaller</code></a>, 
  the <a href="Validator.html#setEventHandler(jakarta.xml.bind.ValidationEventHandler)"><code>Validator</code></a>, or 
  the <a href="Marshaller.html#setEventHandler(jakarta.xml.bind.ValidationEventHandler)"><code>Marshaller</code></a>.  
- The JAXB Provider will then report validation errors and warnings encountered
+ The Jakarta XML Binding Provider will then report validation errors and warnings encountered
  during the unmarshal, marshal, and validate operations to these event 
  handlers.
 
  <p>
  If the <code>handleEvent</code> method throws an unchecked runtime exception,
- the JAXB Provider must treat that as if the method returned false, effectively
+ the Jakarta XML Binding Provider must treat that as if the method returned false, effectively
  terminating whatever operation was in progress at the time (unmarshal, 
  validate, or marshal).
  
@@ -163,8 +163,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
     See: <a href="Validator.html#defaulthandler">Validator javadocs</a>
  </blockquote></div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 1.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd><ul><li>Ryan Shoemaker, Sun Microsystems, Inc.</li>
              <li>Kohsuke Kawaguchi, Sun Microsystems, Inc.</li>
@@ -234,7 +232,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  indicates where the error or warning occurred.
 
  <p>
- If an unchecked runtime exception is thrown from this method, the JAXB
+ If an unchecked runtime exception is thrown from this method, the Jakarta XML Binding
  provider will treat it as if the method returned false and interrupt
  the current unmarshal, validate, or marshal operation.</div>
 <dl>
@@ -242,7 +240,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code>event</code> - the encapsulated validation event information.  It is a 
  provider error if this parameter is null.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>true if the JAXB Provider should attempt to continue the current
+<dd>true if the Jakarta XML Binding Provider should attempt to continue the current
          unmarshal, validate, or marshal operation after handling this 
          warning/error, false if the provider should terminate the current 
          operation with the appropriate <code>UnmarshalException</code>,
@@ -280,7 +278,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -321,7 +319,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2020 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

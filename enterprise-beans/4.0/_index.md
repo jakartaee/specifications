@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Enterprise Beans 4.0 (milestone)"
-date: 2020-06-05
+title: "Jakarta Enterprise Beans 4.0"
+date: 2020-11-20
 summary: "Release for Jakarta EE 9"
 ---
 
@@ -8,16 +8,21 @@ Jakarta Enterprise Beans defines an architecture for the development and deploym
 
 * [Jakarta Enterprise Beans 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.ejb/releases/4.0/plan)
   * [Jakarta Enterprise Beans 4.0 Release Plan](https://github.com/eclipse-ee4j/ejb-api/blob/master/4.0-PLAN.adoc)
-* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./enterprise-beans-spec-core-4.0-public-draft.pdf) (PDF)
-* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./enterprise-beans-spec-core-4.0-public-draft.html) (HTML)
-* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./enterprise-beans-spec-opt-4.0-public-draft.pdf) (PDF)
-* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./enterprise-beans-spec-opt-4.0-public-draft.html) (HTML)
-* [Jakarta Enterprise Beans 4.0.0-RC2 Javadoc](./apidocs)
-* [Jakarta Enterprise Beans 4.0 TCK]()([sig](),[sha](),[pub]())
+* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./jakarta-enterprise-beans-spec-core-4.0.pdf) (PDF)
+* [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./jakarta-enterprise-beans-spec-core-4.0.html) (HTML)
+* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./jakarta-enterprise-beans-spec-opt-4.0.pdf) (PDF)
+* [Jakarta Enterprise Beans, Optional Features 4.0 Specification Document](./jakarta-enterprise-beans-spec-opt-4.0.html) (HTML)
+* [Jakarta Enterprise Beans 4.0 Javadoc](./apidocs)
+* [Jakarta Enterprise Beans 4.0 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip)
+([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),
+[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),
+[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.ejb:jakarta.ejb-api:jar:4.0.0-RC2](https://repo.maven.apache.org/maven2/jakarta/ejb/jakarta.ejb-api/4.0.0-RC2/)
+  * [jakarta.ejb:jakarta.ejb-api:jar:4.0.0](https://repo.maven.apache.org/maven2/jakarta/ejb/jakarta.ejb-api/4.0.0/)
 
-The Jakarta Enterprise Beans 4.0 intended scope includes all plans detailed in the [Jakarta EE 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan), which in essence involves a backwards incompatible namespace change from `javax.ejb` to `jakarta.ejb`.  In addition the Jakarta Enterprise Beans 4.0 Release Plan will involve:
+The Jakarta Enterprise Beans 4.0 intended scope includes all plans detailed in the [Jakarta EE 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan), 
+which in essence involves a backwards incompatible namespace change from `javax.ejb` to `jakarta.ejb`.  
+In addition the Jakarta Enterprise Beans 4.0 Release Plan will involve:
 
  - Removal of methods relying on `java.security.Identity`
  - Removal of methods relying on JAX-RPC
@@ -29,7 +34,7 @@ See the [Jakarta Enterprise Beans 4.0 Release Plan](https://github.com/eclipse-e
 
 # Compatible Implementations
 
-* Pending
+* [Eclipse Glassfish 6.0 RC2](https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-RC2.zip)
 
 # Ballots
 
@@ -61,21 +66,23 @@ The Specification Committee Ballot concluded successfully on 2020-03-04 with the
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/mhonarc/lists/jakarta.ee-spec/msg00628.html)
 
+
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-11-20 with the following results.
 
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Representative                                        | Representative for: | Vote |
+|-------------------------------------------------------|---------------------|------|
+| Kenji Kazumura	                                    | Fujitsu	          | +1
+| Dan Bandera, Kevin Sutter	                            | IBM	              | +1
+| Ed Bratt, Dmitry Kornilov	                            | Oracle	          | +1
+| Andrew Pielage, Matt Gill	                            | Payara	          | +1
+| Scott Stark, Mark Little	                            | Red Hat	          | +1
+| David Blevins, Jean-Louis Monteiro	                | Tomitribe	          | +1
+| Ivar Grimstad	                                        | EE4J PMC	          | +1
+| Marcelo Ancelmo, Martijn Verburg	                    | Participant Members | +1
+| Werner Keil	                                        | Committer Members	  | +1
+| Scott (Congquan) Wang	                                | Enterprise Members  |	+1
+|                                                       | Total               |  10    |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01277.html)

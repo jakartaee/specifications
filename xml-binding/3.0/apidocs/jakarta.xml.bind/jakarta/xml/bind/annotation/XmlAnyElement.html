@@ -53,7 +53,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -120,11 +120,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>@Retention(RUNTIME)
 @Target({FIELD,METHOD})
 public @interface <span class="memberNameLabel">XmlAnyElement</span></pre>
-<div class="block">Maps a JavaBean property to XML infoset representation and/or JAXB element.
+<div class="block">Maps a JavaBean property to XML infoset representation and/or JAXBElement.
 
  <p>
  This annotation serves as a "catch-all" property while unmarshalling
- xml content into a instance of a JAXB annotated class. It typically
+ xml content into a instance of a Jakarta XML Binding annotated class. It typically
  annotates a multi-valued JavaBean property, but it can occur on
  single value JavaBean property. During unmarshalling, each xml element
  that does not match a static &#64;XmlElement or &#64;XmlElementRef
@@ -136,7 +136,7 @@ public @interface <span class="memberNameLabel">XmlAnyElement</span></pre>
  &#64;XmlAnyElement
  public <code>Element</code>[] others;
 
- // Collection of <code>Element</code> or JAXB elements.
+ // Collection of <code>Element</code> or JAXBElements.
  &#64;XmlAnyElement(lax="true")
  public <code>Object</code>[] others;
 
@@ -322,8 +322,6 @@ public @interface <span class="memberNameLabel">XmlAnyElement</span></pre>
  assert foo.others[1] instanceof Foo;
  </code></pre></div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAXB 2.0</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Kohsuke Kawaguchi</dd>
 </dl>
@@ -403,18 +401,18 @@ public @interface <span class="memberNameLabel">XmlAnyElement</span></pre>
  is known to <a href="../JAXBContext.html" title="class in jakarta.xml.bind"><code>JAXBContext</code></a> (for example, there's a class with
  <a href="XmlRootElement.html" title="annotation in jakarta.xml.bind.annotation"><code>XmlRootElement</code></a> that has the same tag name, or there's
  <a href="XmlElementDecl.html" title="annotation in jakarta.xml.bind.annotation"><code>XmlElementDecl</code></a> that has the same tag name),
- the unmarshaller will eagerly unmarshal this element to the JAXB object,
+ the unmarshaller will eagerly unmarshal this element to the Jakarta XML Binding object,
  instead of unmarshalling it to DOM. Additionally, if the element is
  unknown but it has a known xsi:type, the unmarshaller eagerly unmarshals
  the element to a <a href="../JAXBElement.html" title="class in jakarta.xml.bind"><code>JAXBElement</code></a>, with the unknown element name and
- the JAXBElement value is set to an instance of the JAXB mapping of the
+ the JAXBElement value is set to an instance of the Jakarta XML Binding mapping of the
  known xsi:type.
  </dd>
  </dl>
 
  <p>
  As a result, after the unmarshalling, the property can become heterogeneous;
- it can have both DOM nodes and some JAXB objects at the same time.
+ it can have both DOM nodes and some Jakarta XML Binding objects at the same time.
 
  <p>
  This can be used to emulate the "lax" wildcard semantics of the W3C XML Schema.</div>
@@ -472,7 +470,7 @@ public @interface <span class="memberNameLabel">XmlAnyElement</span></pre>
 <li><a href="../../../../../index-all.html">Index</a></li>
 <li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.0-RC3</div>
+<div class="aboutLanguage">Jakarta XML Binding<br>v3.0.1</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -511,7 +509,7 @@ public @interface <span class="memberNameLabel">XmlAnyElement</span></pre>
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2020 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:jaxb-dev@eclipse.org">jaxb-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

@@ -1,5 +1,5 @@
 ---
-title: "Jakarta XML Binding Specification 2.3"
+title: "Jakarta XML Binding 2.3"
 date: 2019-07-22T17:54:14+0200
 summary: "Initial release of Jakarta XML Binding"
 ---

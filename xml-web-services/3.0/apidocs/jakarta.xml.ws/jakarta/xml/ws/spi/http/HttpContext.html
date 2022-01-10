@@ -143,8 +143,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  Container provides the implementation for this and it matches
  web service requests to corresponding HttpContext objects.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Jitendra Kotamraju</dd>
 </dl>
@@ -219,7 +217,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttribute(java.lang.String)">getAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
 <td class="colLast">
 <div class="block">Returns an attribute value for container's configuration
- and other data that can be used by jax-ws runtime.</div>
+ and other data that can be used by Jakarta XML Web Services runtime.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -227,7 +225,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttributeNames()">getAttributeNames</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns all attribute names for container's configuration
- and other data that can be used by jax-ws runtime.</div>
+ and other data that can be used by Jakarta XML Web Services runtime.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -241,7 +239,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHandler(jakarta.xml.ws.spi.http.HttpHandler)">setHandler</a></span>&#8203;(<a href="HttpHandler.html" title="class in jakarta.xml.ws.spi.http">HttpHandler</a>&nbsp;handler)</code></th>
 <td class="colLast">
-<div class="block">JAX-WS runtime sets its handler during
+<div class="block">Jakarta XML Web Services runtime sets its handler during
  <a href="../../Endpoint.html#publish(jakarta.xml.ws.spi.http.HttpContext)"><code>Endpoint.publish(HttpContext)</code></a> to handle
  HTTP requests for this context.</div>
 </td>
@@ -316,7 +314,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>setHandler</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setHandler&#8203;(<a href="HttpHandler.html" title="class in jakarta.xml.ws.spi.http">HttpHandler</a>&nbsp;handler)</pre>
-<div class="block">JAX-WS runtime sets its handler during
+<div class="block">Jakarta XML Web Services runtime sets its handler during
  <a href="../../Endpoint.html#publish(jakarta.xml.ws.spi.http.HttpContext)"><code>Endpoint.publish(HttpContext)</code></a> to handle
  HTTP requests for this context. Container or its extensions
  use this handler to process the requests.</div>
@@ -365,7 +363,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <h4>getAttribute</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;getAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
 <div class="block">Returns an attribute value for container's configuration
- and other data that can be used by jax-ws runtime.</div>
+ and other data that can be used by Jakarta XML Web Services runtime.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - attribute name</dd>
@@ -382,7 +380,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <h4>getAttributeNames</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;getAttributeNames()</pre>
 <div class="block">Returns all attribute names for container's configuration
- and other data that can be used by jax-ws runtime.</div>
+ and other data that can be used by Jakarta XML Web Services runtime.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>set of all attribute names</dd>
@@ -459,7 +457,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to: <a href="mailto:jaxws-dev@eclipse.org">jaxws-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2020 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to: <a href="mailto:jaxws-dev@eclipse.org">jaxws-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

@@ -160,8 +160,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  can be enabled by creating a <code>ThreadPoolExecutor</code> and
  registering it with the service.</div>
 <dl>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="spi/Provider.html" title="class in jakarta.xml.ws.spi"><code>Provider</code></a>, 
 <a href="handler/HandlerResolver.html" title="interface in jakarta.xml.ws.handler"><code>HandlerResolver</code></a>, 
@@ -295,7 +293,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
               <a href="Service.Mode.html" title="enum in jakarta.xml.ws">Service.Mode</a>&nbsp;mode,
               <a href="WebServiceFeature.html" title="class in jakarta.xml.ws">WebServiceFeature</a>...&nbsp;features)</code></th>
 <td class="colLast">
-<div class="block">Creates a <code>Dispatch</code> instance for use with JAXB
+<div class="block">Creates a <code>Dispatch</code> instance for use with Jakarta XML Binding
  generated objects.</div>
 </td>
 </tr>
@@ -316,7 +314,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
               jakarta.xml.bind.JAXBContext&nbsp;context,
               <a href="Service.Mode.html" title="enum in jakarta.xml.ws">Service.Mode</a>&nbsp;mode)</code></th>
 <td class="colLast">
-<div class="block">Creates a <code>Dispatch</code> instance for use with JAXB
+<div class="block">Creates a <code>Dispatch</code> instance for use with Jakarta XML Binding
  generated objects.</div>
 </td>
 </tr>
@@ -327,7 +325,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
               <a href="Service.Mode.html" title="enum in jakarta.xml.ws">Service.Mode</a>&nbsp;mode,
               <a href="WebServiceFeature.html" title="class in jakarta.xml.ws">WebServiceFeature</a>...&nbsp;features)</code></th>
 <td class="colLast">
-<div class="block">Creates a <code>Dispatch</code> instance for use with JAXB
+<div class="block">Creates a <code>Dispatch</code> instance for use with Jakarta XML Binding
  generated objects.</div>
 </td>
 </tr>
@@ -610,8 +608,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                   <LI>If a feature is enabled that is not compatible
                       with this port or is unsupported.
                   </UL></dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/reflect/Proxy.html?is-external=true" title="class or interface in java.lang.reflect" class="externalLink"><code>Proxy</code></a>, 
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/reflect/InvocationHandler.html?is-external=true" title="class or interface in java.lang.reflect" class="externalLink"><code>InvocationHandler</code></a>, 
@@ -629,7 +625,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <div class="block">The <code>getPort</code> method returns a proxy. The parameter
  <code>serviceEndpointInterface</code> specifies the service
  endpoint interface that is supported by the returned proxy.
- In the implementation of this method, the JAX-WS
+ In the implementation of this method, the Jakarta XML Web Services
  runtime system takes the responsibility of selecting a protocol
  binding (and a port) and configuring the proxy accordingly.
  The returned proxy should not be reconfigured by the client.</div>
@@ -665,7 +661,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <div class="block">The <code>getPort</code> method returns a proxy. The parameter
  <code>serviceEndpointInterface</code> specifies the service
  endpoint interface that is supported by the returned proxy.
- In the implementation of this method, the JAX-WS
+ In the implementation of this method, the Jakarta XML Web Services
  runtime system takes the responsibility of selecting a protocol
  binding (and a port) and configuring the proxy accordingly.
  The returned proxy should not be reconfigured by the client.</div>
@@ -692,8 +688,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                   <LI>If a feature is enabled that is not compatible
                       with this port or is unsupported.
                   </UL></dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="WebServiceFeature.html" title="class in jakarta.xml.ws"><code>WebServiceFeature</code></a></dd>
 </dl>
@@ -720,7 +714,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  The parameter <code>serviceEndpointInterface</code> specifies
  the service endpoint interface that is supported by the
  returned proxy.
- In the implementation of this method, the JAX-WS
+ In the implementation of this method, the Jakarta XML Web Services
  runtime system takes the responsibility of selecting a protocol
  binding (and a port) and configuring the proxy accordingly from
  the WSDL associated with this <code>Service</code> instance or
@@ -780,8 +774,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                   <LI>If a feature is enabled that is not compatible
                       with this port or is unsupported.
                   </UL></dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 </dl>
 </li>
 </ul>
@@ -831,7 +823,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dd><code>type</code> - The class of object used for messages or message
  payloads. Implementations are required to support
  <code>javax.xml.transform.Source</code>, <code>jakarta.xml.soap.SOAPMessage</code>
- and <code>javax.activation.DataSource</code>, depending on
+ and <code>jakarta.activation.DataSource</code>, depending on
  the binding in use.</dd>
 <dd><code>mode</code> - Controls whether the created dispatch instance is message
  or payload oriented, i.e. whether the client will work with complete
@@ -886,8 +878,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                   the <code>Dispatch</code> object or if a
                   feature is enabled that is not compatible with
                   this port or is unsupported.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/javax/xml/transform/Source.html?is-external=true" title="class or interface in javax.xml.transform" class="externalLink"><code>Source</code></a>, 
 <code>SOAPMessage</code>, 
@@ -913,7 +903,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  reference parameters, on all messages sent to the endpoint.
  The <code>endpointReference's</code> address MUST be used
  for invocations on the endpoint.
- In the implementation of this method, the JAX-WS
+ In the implementation of this method, the Jakarta XML Web Services
  runtime system takes the responsibility of selecting a protocol
  binding (and a port) and configuring the dispatch accordingly from
  the WSDL associated with this <code>Service</code> instance or
@@ -969,8 +959,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                     <li>If a feature is enabled that is not
                     compatible with this port or is unsupported.
                   </UL></dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/javax/xml/transform/Source.html?is-external=true" title="class or interface in javax.xml.transform" class="externalLink"><code>Source</code></a>, 
 <code>SOAPMessage</code>, 
@@ -987,12 +975,12 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre class="methodSignature">public&nbsp;<a href="Dispatch.html" title="interface in jakarta.xml.ws">Dispatch</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;createDispatch&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/javax/xml/namespace/QName.html?is-external=true" title="class or interface in javax.xml.namespace" class="externalLink">QName</a>&nbsp;portName,
                                        jakarta.xml.bind.JAXBContext&nbsp;context,
                                        <a href="Service.Mode.html" title="enum in jakarta.xml.ws">Service.Mode</a>&nbsp;mode)</pre>
-<div class="block">Creates a <code>Dispatch</code> instance for use with JAXB
+<div class="block">Creates a <code>Dispatch</code> instance for use with Jakarta XML Binding
  generated objects.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>portName</code> - Qualified name for the target service endpoint</dd>
-<dd><code>context</code> - The JAXB context used to marshall and unmarshall
+<dd><code>context</code> - The JAXBContext used to marshall and unmarshall
  messages or message payloads.</dd>
 <dd><code>mode</code> - Controls whether the created dispatch instance is message
  or payload oriented, i.e. whether the client will work with complete
@@ -1019,12 +1007,12 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                                        jakarta.xml.bind.JAXBContext&nbsp;context,
                                        <a href="Service.Mode.html" title="enum in jakarta.xml.ws">Service.Mode</a>&nbsp;mode,
                                        <a href="WebServiceFeature.html" title="class in jakarta.xml.ws">WebServiceFeature</a>...&nbsp;features)</pre>
-<div class="block">Creates a <code>Dispatch</code> instance for use with JAXB
+<div class="block">Creates a <code>Dispatch</code> instance for use with Jakarta XML Binding
  generated objects.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>portName</code> - Qualified name for the target service endpoint</dd>
-<dd><code>context</code> - The JAXB context used to marshall and unmarshall
+<dd><code>context</code> - The JAXBContext used to marshall and unmarshall
  messages or message payloads.</dd>
 <dd><code>mode</code> - Controls whether the created dispatch instance is message
  or payload oriented, i.e. whether the client will work with complete
@@ -1041,8 +1029,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                   the <code>Dispatch</code> object or if a
                   feature is enabled that is not compatible with
                   this port or is unsupported.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><code>JAXBContext</code>, 
 <a href="WebServiceFeature.html" title="class in jakarta.xml.ws"><code>WebServiceFeature</code></a></dd>
@@ -1059,7 +1045,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                                        jakarta.xml.bind.JAXBContext&nbsp;context,
                                        <a href="Service.Mode.html" title="enum in jakarta.xml.ws">Service.Mode</a>&nbsp;mode,
                                        <a href="WebServiceFeature.html" title="class in jakarta.xml.ws">WebServiceFeature</a>...&nbsp;features)</pre>
-<div class="block">Creates a <code>Dispatch</code> instance for use with JAXB
+<div class="block">Creates a <code>Dispatch</code> instance for use with Jakarta XML Binding
  generated objects. If there
  are any reference parameters in the
  <code>endpointReference</code>, then those reference
@@ -1067,7 +1053,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  reference parameters, on all messages sent to the endpoint.
  The <code>endpointReference's</code> address MUST be used
  for invocations on the endpoint.
- In the implementation of this method, the JAX-WS
+ In the implementation of this method, the Jakarta XML Web Services
  runtime system takes the responsibility of selecting a protocol
  binding (and a port) and configuring the dispatch accordingly from
  the WSDL associated with this <code>Service</code> instance or
@@ -1093,7 +1079,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dd><code>endpointReference</code> - The <code>EndpointReference</code>
  for the target service endpoint that will be invoked by the
  returned <code>Dispatch</code> object.</dd>
-<dd><code>context</code> - The JAXB context used to marshall and unmarshall
+<dd><code>context</code> - The Jakarta XML Binding context used to marshall and unmarshall
  messages or message payloads.</dd>
 <dd><code>mode</code> - Controls whether the created dispatch instance is message
  or payload oriented, i.e. whether the client will work with complete
@@ -1120,8 +1106,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                     <li>if a feature is enabled that is not
                     compatible with this port or is unsupported.
                   </UL></dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.6, JAX-WS 2.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><code>JAXBContext</code>, 
 <a href="WebServiceFeature.html" title="class in jakarta.xml.ws"><code>WebServiceFeature</code></a></dd>
@@ -1311,8 +1295,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="WebServiceException.html" title="class in jakarta.xml.ws">WebServiceException</a></code> - If any error in creation of the
                     specified service.</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 </dl>
 </li>
 </ul>
@@ -1356,8 +1338,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="WebServiceException.html" title="class in jakarta.xml.ws">WebServiceException</a></code> - If any error in creation of the
                     specified service</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>1.7, JAX-WS 2.2</dd>
 </dl>
 </li>
 </ul>
@@ -1431,7 +1411,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to: <a href="mailto:jaxws-dev@eclipse.org">jaxws-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2020 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to: <a href="mailto:jaxws-dev@eclipse.org">jaxws-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

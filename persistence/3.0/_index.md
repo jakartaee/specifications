@@ -14,14 +14,18 @@ and object/relational mapping in Java(R) environments.
 * Jakarta Persistence 3.0 XML Schemas
   * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd)
   * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_0.xsd)
-* [Jakarta Persistence 3.0 TCK](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Persistence 3.0 TCK](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+   * Adds JDK 11 support [Jakarta Persistence 3.0.1 TCK](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.persistence:jakarta.persistence-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.0.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
+  * [EclipseLink 3.0.0](https://www.eclipse.org/eclipselink)
 
 
 # Compatible Implementations
 
 * [EclipseLink 3.0.0](https://www.eclipse.org/eclipselink)
+* [Hibernate ORM 5.5.0.Final](https://hibernate.org/orm/releases/5.5/)
 
 # Ballots
 
@@ -36,19 +40,27 @@ Please reference that ballot for the official results.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2020-mm-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2020-10-15 with the following results.
 
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura, Michael DeNicola               | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Bill Shannon, Ed Bratt                         | Oracle              |      |
-| Mark Wareham, Steve Millidge                   | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Cesar Hernandez                 | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Alex Theedom                                   | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-|                                                | Total               |      |
+| Representative                     | Representative for: |  Vote  |
+|------------------------------------|---------------------|--------|
+| Kenji Kazumura                     | Fujitsu             |   +1   |
+| Dan Bandera, Kevin Sutter          | IBM                 |   +1   |
+| Ed Bratt, Dmitry Kornilov          | Oracle              |   +1   |
+| Andrew Pielage, Matt Gill          | Payara              |   +1   |
+| Scott Stark, Mark Little           | Red Hat             |   +1   |
+| David Blevins, Jean-Louis Monteiro | Tomitribe           |   +1   |
+| Ivar Grimstad                      | EE4J PMC            |   +1   |
+| Marcelo Ancelmo, Martijn Verburg   | Participant Members |   +1   |
+| Werner Keil                        | Committer Members   |   +1   |
+| Scott (Congquan) Wang              | Enterprise Members  |   +1   |
+|                                    | **Total**           | **10** |
+		
+		
+		
+| Non-binding Votes                  | Representative for: |  Vote  |
+|------------------------------------|---------------------|--------|
+| Jody Grassel                       | Committer           |   +1   |
+|                                    | **Total**           |  **1** |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg00949.html)
