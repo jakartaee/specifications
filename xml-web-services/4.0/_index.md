@@ -1,5 +1,5 @@
 ---
-title: "Jakarta XML Web Services 4.0 (under development)"
+title: "Jakarta XML Web Services 4.0"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
@@ -16,6 +16,14 @@ The goal of this release is to:
 The JDK version required will be aligned with Jakarta EE 10.
 
 * [Jakarta XML Web Services 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/4.0-jakarta-xml-web-services)
+    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta XML Web Services 4.0 Specification Document](./jakarta-xml-ws-spec-4.0.pdf) (PDF)
+* [Jakarta XML Web Services 4.0 Specification Document](./jakarta-xml-ws-spec-4.0.html) (HTML)
+* [Jakarta XML Web Services 4.0 Javadoc](./apidocs)
+* [Jakarta XML Web Services 4.0 XML Schema](https://jakarta.ee/xml/ns/jaxws/wsdl_customizationschema_3_0.xsd)
+* [Jakarta XML Web Services 4.0 TCK](https://download.eclipse.org/jakartaee/xml-web-services/4.0/jakarta-xml-ws-tck-4.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-web-services/4.0/jakarta-xml-ws-tck-4.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-web-services/4.0/jakarta-xml-ws-tck-4.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.xml.ws:jakarta.xml.ws-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.xml.ws/jakarta.xml.ws-api/4.0.0/jar)
 
 # Ballots
 
@@ -35,6 +43,6 @@ The Specification Committee Ballot concluded successfully on 2021-05-17 with the
 | Marcelo Ancelmo, Martijn Verburg               | Participant Members |    +1   |
 | Werner Keil                                    | Committer Members   |    +1   |
 | Dr. Jun Qian                                   | Enterprise Members  |    +1   |
-|                                                | **Total**           |   **9** |
+|                                                | **Total**           |   **10** |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01658.html)
