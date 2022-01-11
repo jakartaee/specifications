@@ -1,5 +1,5 @@
 ---
-title: "Jakarta SOAP with Attachments 3.0 (under development)"
+title: "Jakarta SOAP with Attachments 3.0"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
@@ -16,6 +16,13 @@ The goal of this release is to:
 The JDK version required will be aligned with Jakarta EE 10.
 
 * [Jakarta SOAP Attachments 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/3.0-jakarta-soap-attachments)
+    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta SOAP Attachments 3.0 Specification Document](./jakarta-soap-spec-3.0.pdf) (PDF)
+* [Jakarta SOAP Attachments 3.0 Specification Document](./jakarta-soap-spec-3.0.html) (HTML)
+* [Jakarta SOAP Attachments 3.0 Javadoc](./apidocs)
+* [Jakarta SOAP Attachments 3.0 TCK](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.xml.soap/jakarta.xml.soap-api/3.0.0/jar)
 
 # Ballots
 
