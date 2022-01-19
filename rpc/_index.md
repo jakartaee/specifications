@@ -12,6 +12,8 @@ An additional goal is to eliminate the need for special tooling and build-time c
 
 ## Creation Review
 
+The Specification Committee Ballot concluded successfully on 2022-01-19 with the following results.
+
 | Representative                                 | Representative for: | Vote   |
 |------------------------------------------------|---------------------|--------|
 | Kenji Kazumura                                 | Fujitsu             |    +1  |
@@ -25,3 +27,5 @@ An additional goal is to eliminate the need for special tooling and build-time c
 | Jun Qian                                       | Enterprise Members  |    +1  |
 | Zhai Luchao                                    | Enterprise Members  |    +1  |
 |                                                | **Total**           | **10** |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02093.html)
