@@ -21,7 +21,7 @@ The JDK version required will be aligned with Jakarta EE 10.
 
 # Compatible Implementations
 
-* [Angus Mail](https://www.github.com/eclipse-ee4j/angus-mail)
+* [Angus Mail 1.0.0](https://github.com/eclipse-ee4j/angus-mail/releases/tag/1.0.0)
 
 # Ballots
 
