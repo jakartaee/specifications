@@ -48,6 +48,11 @@ The Specification Committee Ballot concluded successfully on 2022-01-26 with the
 | Zhai Luchao                                    | Enterprise Members  |    +1  |
 |                                                | **Total**           | **10** |
 
+| Non-binding Votes                  | Representative for: |  Vote  |
+|------------------------------------|---------------------|--------|
+| Scott Stark                        | Red Hat             |   +1   |
+|                                    | **Total**           |  **1** |
+
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02175.html)
 
 ## Plan Review
