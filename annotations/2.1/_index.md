@@ -22,10 +22,12 @@ The release won't contain any backwards incompatible changes.
 * [Jakarta Annotations 2.1 TCK](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.annotation:jakarta.annotation-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.1.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [Eclipse GlassFish 7.0.1-M1](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M1/glassfish-7.0.0-M1.zip)
 
 # Compatible Implementations
 
-N/A
+* [Eclipse GlassFish 7.0.0-M1](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M1/glassfish-7.0.0-M1.zip)
 
 # Ballots
 
