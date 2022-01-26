@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Activation 2.1 (under development)"
+title: "Jakarta Activation 2.1"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
@@ -15,6 +15,19 @@ on the particular implementation.
 The JDK version required will be aligned with Jakarta EE 10.
 
 * [Jakarta Activation 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jaf/releases/2.1)
+* [Jakarta Activation 2.1 Specification Document](./jakarta-activation-spec-2.1.pdf) (PDF)
+* [Jakarta Activation 2.1 Specification Document](./jakarta-activation-spec-2.1.html) (HTML)
+* [Jakarta Activation 2.1 Javadoc](./apidocs)
+* [Jakarta Activation 2.1 TCK](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.0.zip)
+  ([sig](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.0.zip.sig),
+  [sha](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.0.zip.sha256),
+  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.activation:jakarta.activation-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.1.0/jar)
+
+# Compatible Implementations
+
+* [Eclipse Angus/Activation 1.0.0](https://github.com/eclipse-ee4j/angus-activation/releases)
 
 
 # Ballots
