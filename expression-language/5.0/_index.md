@@ -9,7 +9,7 @@ Jakarta Expression Language defines an expression language for Java applications
 * [Jakarta Expression Language 5.0 Specification Document](./jakarta-expression-language-spec-5.0.pdf) (PDF)
 * [Jakarta Expression Language 5.0 Specification Document](./jakarta-expression-language-spec-5.0.html) (HTML)
 * [Jakarta Expression Language 5.0 Javadoc](./apidocs)
-* TCK - TBD
+* [Jakarta Expression Language 5.0 TCK](https://download.eclipse.org/jakartaee/expression-language/5.0/jakarta-expression-language-tck-5.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/expression-language/5.0/jakarta-expression-language-tck-5.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/expression-language/5.0/jakarta-expression-language-tck-5.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.el:jakarta.el-api:jar:5.0.0](https://repo1.maven.org/maven2/jakarta/el/jakarta.el-api/5.0.0/)
 
