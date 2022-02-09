@@ -31,6 +31,26 @@ The release won't contain any backwards incompatible changes.
 
 # Ballots
 
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2022-02-09 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |    +1   |
+| Tom Watson, Emily Jiang                        | IBM                 |    +1   |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1   |
+| Andrew Pielage, Matt Gill                      | Payara              |    +1   |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1   |
+| Ivar Grimstad                                  | EE4J PMC            |    +1   |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |    +1   |
+| Werner Keil                                    | Committer Members   |    +1   |
+| Jun Qian                                       | Enterprise Members  |    +1   |
+| Zhai Luchao                                    | Enterprise Members  |    +1   |
+|                                                | **Total**           |  **10** |
+
+The ballot was run in the [jakarta.ee-spec mailing list]https://www.eclipse.org/lists/jakarta.ee-spec/msg02183.html)
+
 ## Plan Review
 
 The Specification Committee Ballot concluded successfully on 2021-10-27 with the following results.
@@ -51,21 +71,3 @@ The Specification Committee Ballot concluded successfully on 2021-10-27 with the
 |                                                | **Total**           |  **10** |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02013.html)
-
-<!--
-## Release Review
-
-The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
-
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                | &check; |         |          |
-|IBM                    | &check; |         |          |
-|Oracle                 | &check; |         |          |
-|Payara                 | &check; |         |          |
-|Red Hat                | &check; |         |          |
-|Tomitribe              | &check; |         |          |
-|EE4J PMC               | &check; |         |          |
-|Participant Members    | &check; |         |          |
-|Committer Members      | &check; |         |          |
--->
