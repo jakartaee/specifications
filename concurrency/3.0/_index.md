@@ -5,7 +5,23 @@ summary: "Jakarta EE 10 Release"
 ---
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
 
+
+# Plan
+
+Jakarta Concurrency 3.0 contains the following features:
+
+* Asynchronous methods
+* Context-aware completion stages and completable futures
+* Context propagation to parallel streams operations
+* Modernization of the Trigger mechanism and Cron support
+* Propagation of third party context types
+* Resource definition annotations
+
+
+# Release Information
+
 * [Jakarta Concurrency 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.cu/releases/3.0.0)
+  * [Jakarta Concurrency 3.0 Release Plan](https://projects.eclipse.org/projects/ee4j.cu/releases/3.0/plan)
   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Concurrency 3.0 Specification Document](./jakarta-concurrency-spec-3.0.pdf) (PDF)
 * [Jakarta Concurrency 3.0 Specification Document](./jakarta-concurrency-spec-3.0.html) (HTML)
@@ -15,13 +31,12 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
   * [SHA](https://jakarta.oss.sonatype.org/content/groups/staging/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-tck/3.0.0/jakarta.enterprise.concurrent-tck-3.0.0.pom.sha1)
 * Maven coordinates
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.0.0](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.0.0/jar) Currently located on [staging](https://jakarta.oss.sonatype.org/content/groups/staging/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/3.0.0/) until release is approved, and then we will push it to Maven.
+  * [TCK User's Guide](https://github.com/eclipse-ee4j/concurrency-api/tree/master/tck)
 
 
 # Compatible Implementations
 
 * [Open Liberty 22.0.0.3-beta](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/beta/2022-02-01_1901/openliberty-22.0.0.3-beta.zip)
-  * [TCK results on Java 11](https://openliberty.io/certifications/jakartaee/10/concurrency/22.0.0.3-beta-Java11-TCKResults.html)
-  * [TCK results on Java 17](https://openliberty.io/certifications/jakartaee/10/concurrency/22.0.0.3-beta-Java17-TCKResults.html)
 
 # Ballots
 
