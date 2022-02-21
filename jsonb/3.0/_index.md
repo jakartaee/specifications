@@ -1,5 +1,5 @@
 ---
-title: "Jakarta JSON Binding 3.0 (under development)"
+title: "Jakarta JSON Binding 3.0"
 date: 2021-11-11
 summary: "Release for Jakarta EE 10"
 ---
@@ -19,6 +19,7 @@ Including the following backwards incompatible changes:
 The JDK version required will be aligned with Jakarta EE 10.
 
 * [Jakarta JSON Binding 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonb/releases/3.0.0)
+* [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 
 # Ballots
 
