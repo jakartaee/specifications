@@ -12,9 +12,9 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 * [Jakarta Contexts Dependency Injection 4.0 Specification Document](jakarta-cdi-spec-4.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.0 Javadoc](./apidocs)
 * [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.zip)
-([sig](),
-[sha](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.info),
-[pub]())
+([sig](TBD_post_ballot),
+[sha](7671d6895eb57b74b52e46b63adfeb57adf965dd91efc673db21a781fedc452f),
+[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
   * [jakarta.enterprise:jakarta.cdi-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.0/jar)
@@ -24,7 +24,7 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 
 # Compatible Implementations
 
-* [Weld 5.0.0.RC1](https://weld.cdi-spec.org/download/)
+* [Weld 5.0.0.CR1](https://weld.cdi-spec.org/download/)
 
 # Ballots
 
