@@ -20,6 +20,13 @@ The JDK version required will be aligned with Jakarta EE 10.
 
 * [Jakarta JSON Binding 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonb/releases/3.0.0)
 * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta JSON Binding 3.0 Specification Document](./jakarta-jsonb-spec-3.0.html)
+* [Jakarta JSON Binding 3.0 Javadoc](./apidocs)
+* [jakarta.json.bind:jakarta.json.bind-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.json.bind/jakarta.json.bind-api/3.0.0/jar)
+
+# Compatible Implementations
+
+* [Eclipse Yasson 3.0.0-RC1](https://github.com/eclipse-ee4j/yasson/releases/tag/3.0.0-RC1)
 
 # Ballots
 
