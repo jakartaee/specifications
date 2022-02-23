@@ -7958,6 +7958,10 @@ Default value for this attribute is <code>annotated</code>.</p>
 More kinds of bean archives exist in CDI Full.</p>
 </div>
 <div class="paragraph">
+<p>Implementations that do not support CDI Full are required to ignore the content of the <code>beans.xml</code> file, except for the <code>bean-discovery-mode</code> attribute.
+Implementations that do not support CDI Full are required to detect presence of an archive which contains a <code>beans.xml</code> file that has <code>bean-discovery-mode</code> attribute set to <code>all</code> and treat it as a deployment problem.</p>
+</div>
+<div class="paragraph">
 <p>To ensure portability between CDI Lite and CDI Full, applications are encouraged to:</p>
 </div>
 <div class="ulist">
@@ -14079,7 +14083,7 @@ The bean archives might be directories, library jars or EJB jars.</p>
 <div id="footer">
 <div id="footer-text">
  4.0<br>
-Last updated 2021-12-10 21:31:43 UTC
+Last updated 2022-02-23 00:10:39 UTC
 </div>
 </div>
 </body>

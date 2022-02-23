@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Context Dependency Injection 4.0"
-date: 2021-12-13
+date: 2022-02-22
 summary: "Release for Jakarta EE 10"
 ---
 
@@ -11,20 +11,20 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 * [Jakarta Contexts Dependency Injection 4.0 Specification Document](jakarta-cdi-spec-4.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 4.0 Specification Document](jakarta-cdi-spec-4.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.0 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-RC1-dist.zip)
+* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.zip)
 ([sig](),
-[sha](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-RC1-dist.info),
+[sha](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.info),
 [pub]())
 
 * Maven coordinates
-  * [jakarta.enterprise:jakarta.cdi-api:jar:4.0.0-RC1](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/3.0.0/jar)
+  * [jakarta.enterprise:jakarta.cdi-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.0/jar)
 
 * Schemas
   * [XML Schema for the CDI 4.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd)
 
 # Compatible Implementations
 
-* [Weld 5.0.0.Alpha2](https://weld.cdi-spec.org/download/)
+* [Weld 5.0.0.RC1](https://weld.cdi-spec.org/download/)
 
 # Ballots
 
