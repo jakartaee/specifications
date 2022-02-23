@@ -13,7 +13,8 @@ Instructions MAY be by reference.
    - [ ] Updated release record
    - [ ] Generated IP Log
    - [ ] Email to PMC
-   - [ ] Start release review by emailing EMO 
+   - [ ] Start release review as described in the EDP (is done from the Project PMI page) 
+         <<link to GitLab Issue here>>
 - [ ] The URL of the OSSRH staging repository for the api, javadoc:
       <add URL here>
 - [ ] The URL of the staging directory on downloads.eclipse.org for the proposed EFTL TCK binary:
