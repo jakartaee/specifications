@@ -12,7 +12,7 @@ The release contains following changes:
 * removes constraints on using java.desktop/java.beans.Introspector
 * removes deprecated jakarta.xml.bind.Validator
 * removes deprecated jakarta.xml.bind.context.factory property
-* drops implementation lookup throught META-INF/services/jakarta.xml.bind.JAXBContext
+* drops implementation lookup through META-INF/services/jakarta.xml.bind.JAXBContext
 * drops implementation lookup through jaxb.properties file
 * adds implementation lookup through the properties Map passed to JAXBContext.newInstance(...) methods
 * provided implementation of the DatatypeConverterInterface throws exception on invalid input
