@@ -6,14 +6,20 @@ summary: "Release for Jakarta EE 10"
 The Jakarta XML Binding provides an API and tools that automate the mapping
 between XML documents and Java objects.
 
-The goal of this release is to:
+The release contains following changes:
 
-* provide features requested by the community
-* implement requirements by other specification included in Jakarta EE 10
-* drop explicit dependency on JavaBeans (Has transitive relationship to any dependent specifications; major API change)
-* editorial updates, clarifications and removal of JAXB 1 from the specification (May have transitive relationship to any dependent specifications; major API change)
+* drops compatibility with JAXB 1.0
+* removes constraints on using java.desktop/java.beans.Introspector
+* removes deprecated jakarta.xml.bind.Validator
+* removes deprecated jakarta.xml.bind.context.factory property
+* drops implementation lookup throught META-INF/services/jakarta.xml.bind.JAXBContext
+* drops implementation lookup through jaxb.properties file
+* adds implementation lookup through the properties Map passed to JAXBContext.newInstance(...) methods
+* provided implementation of the DatatypeConverterInterface throws exception on invalid input
+* adds https scheme to the list of required to be removed schemes when mapping namespace to java package
+* fixes cross-references in the specification document
 
-The JDK version required will be aligned with Jakarta EE 10.
+Requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 * [Jakarta XML Binding 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxb/releases/4.0)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
@@ -24,6 +30,10 @@ The JDK version required will be aligned with Jakarta EE 10.
 * [Jakarta XML Binding 4.0 TCK](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.xml.bind/jakarta.xml.bind-api/4.0.0/jar)
+
+# Compatible Implementations
+
+* [Jakarta XML Binding 4.0.0-M3](https://github.com/eclipse-ee4j/jaxb-ri/releases/tag/4.0.0-M3-RI)
 
 # Ballots
 
