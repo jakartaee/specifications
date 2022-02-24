@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Annotations 2.1 (under development)"
-date: 2021-10-20
+title: "Jakarta Annotations 2.1"
+date: 2021-12-01
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that enable a declarative style of programming that applies across a variety of Java technologies.
@@ -15,8 +15,41 @@ The JDK version required will be aligned with Jakarta EE 10.
 The release won't contain any backwards incompatible changes.
 
 * [Jakarta Annotations 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.ca/releases/2.1)
+    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta Annotations 2.1 Specification Document](./annotations-spec-2.1.pdf) (PDF)
+* [Jakarta Annotations 2.1 Specification Document](./annotations-spec-2.1.html) (HTML)
+* [Jakarta Annotations 2.1 Javadoc](./apidocs)
+* [Jakarta Annotations 2.1 TCK](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.annotation:jakarta.annotation-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.1.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [Eclipse GlassFish 7.0.1-M1](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M1/glassfish-7.0.0-M1.zip)
+
+# Compatible Implementations
+
+* [Eclipse GlassFish 7.0.0-M1](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M1/glassfish-7.0.0-M1.zip)
 
 # Ballots
+
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2022-02-09 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |    +1   |
+| Tom Watson, Emily Jiang                        | IBM                 |    +1   |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1   |
+| Andrew Pielage, Matt Gill                      | Payara              |    +1   |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1   |
+| Ivar Grimstad                                  | EE4J PMC            |    +1   |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |    +1   |
+| Werner Keil                                    | Committer Members   |    +1   |
+| Jun Qian                                       | Enterprise Members  |    +1   |
+| Zhai Luchao                                    | Enterprise Members  |    +1   |
+|                                                | **Total**           |  **10** |
+
+The ballot was run in the [jakarta.ee-spec mailing list]https://www.eclipse.org/lists/jakarta.ee-spec/msg02183.html)
 
 ## Plan Review
 
