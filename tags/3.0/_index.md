@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Standard Tag Library 3.0 (under development)"
-date: 2021-04-15
+title: "Jakarta Standard Tag Library 3.0"
+date: 2022-02-24
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Standard Tag Library encapsulates as simple tags the core functionality common to many Web applications.
@@ -9,7 +9,7 @@ for manipulating XML documents, internationalization tags, and SQL tags. It also
 existing custom tags with Jakarta Standard Tag Library tags.
 
 * [Jakarta Standard Tag Library 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jstl/releases/3.0.0)
-  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Standard Tag Library 3.0 Specification Document](./jakarta-tags-spec-3.0.pdf) (PDF)
 * [Jakarta Standard Tag Library 3.0 Specification Document](./jakarta-tags-spec-3.0.html) (HTML)
 * [Jakarta Standard Tag Library 3.0 Javadoc](./apidocs)
@@ -22,22 +22,25 @@ existing custom tags with Jakarta Standard Tag Library tags.
 
 The plan for the release is to clean up open issues:
 * General specification document cleanup.
-* Clean up issues found during the Jakarta EE9 review ballot process: update if possible the tagdocs to include EFSL, Update tlddoc generation if possible to jakarta.
+* Clean up issues found during the Jakarta EE9 review ballot process
+* Update tagdocs to include EFSL
+* Update tlddoc generation to jakarta.
 * Remove any deprecated methods from the API if they exist.
 * Rename java.sun.com / xmlns.jcp.org taglib URIs to new jakarta.tags.\* URNs. [Issue 144](https://github.com/eclipse-ee4j/jstl-api/issues/144)
     * This alone should require a major release.
 * Other small clean up issues
- 
+
 # Backwards compatibility
 Backward compatibility issue include:
 * Removal of deprecated methods if any exist and are removed.
-* Rename java.sun.com / xmlns.jcp.org taglib URIs to new jakarta.tags.\* URNs.
+* Rename java.sun.com taglib URIs to new jakarta.tags.\* URNs.
+* Still allow java.sun.com taglib URIs to be used
 
 # Optional features
 None
 
 # Minimum Java SE version
-The JDK version required will be aligned with Jakarta EE 10.
+This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 # TCK Updates
 The following TCK updates will be required:
@@ -48,7 +51,7 @@ The following TCK updates will be required:
 * [Jakarta Standard Tag Library 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jstl/releases/3.0.0)
 
 # Compatible Implementations
-* [EE4J implementation of Jakarta Standard Tag Library 3.0.0](https://github.com/eclipse-ee4j/jstl-api/releases/download/3.0.0-IMPL-RELEASE/jakarta.servlet.jsp.jstl-3.0.0.jar) using vehicle [Eclipse Glassfish x.0.0-x](https://github.com/eclipse-ee4j/glassfish/releases/download/)
+* [EE4J implementation of Jakarta Standard Tag Library 3.0.0-M1](https://github.com/eclipse-ee4j/jstl-api/releases/tag/3.0.0-M1-IMPL-RELEASE)
 
 # Ballots
 
