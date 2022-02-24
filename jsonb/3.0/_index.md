@@ -5,24 +5,27 @@ summary: "Release for Jakarta EE 10"
 ---
 Jakarta JSON Binding defines a binding framework for converting Java(R) objects to and from JSON documents.
 
-The goal of this release is to provide features requested by the community, such as:
+This release contains following changes:
 
-* Deserialization of the null to the JsonValue.NULL_VALUE - [JSON-B API #181](https://github.com/eclipse-ee4j/jsonb-api/issues/181)
-* @JsonbTypeDeserializer and @JsonbTypeAdapter supported as a parameter/type annotation - [JSON-B API #71](https://github.com/eclipse-ee4j/jsonb-api/issues/71)
-* Support for handling polymorphic types - [JSON-B API #147](https://github.com/eclipse-ee4j/jsonb-api/issues/147)
-* Deprecate @JsonbProperty.nillable() - [JSON-B API #52](https://github.com/eclipse-ee4j/jsonb-api/issues/52)
+* Deserialization of the null to the JsonValue.NULL_VALUE
+* @JsonbTypeDeserializer and @JsonbTypeAdapter supported as a parameter/type annotation
+* Support for handling polymorphic types
+* Deprecate @JsonbProperty.nillable()
 
 Including the following backwards incompatible changes:
 
-* Optional @JsonbCreator parameters - [JSON-B API #121](https://github.com/eclipse-ee4j/jsonb-api/issues/121)
+* Optional @JsonbCreator parameters
 
-The JDK version required will be aligned with Jakarta EE 10.
+This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 * [Jakarta JSON Binding 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonb/releases/3.0.0)
-* [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
-* [Jakarta JSON Binding 3.0 Specification Document](./jakarta-jsonb-spec-3.0.html)
+  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta JSON Binding 3.0 Specification Document](./jakarta-jsonb-spec-3.0.pdf) (PDF)
+* [Jakarta JSON Binding 3.0 Specification Document](./jakarta-jsonb-spec-3.0.html) (HTML)
 * [Jakarta JSON Binding 3.0 Javadoc](./apidocs)
-* [jakarta.json.bind:jakarta.json.bind-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.json.bind/jakarta.json.bind-api/3.0.0/jar)
+* [Jakarta JSON Binding 3.0 TCK](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+  * [jakarta.json.bind:jakarta.json.bind-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.json.bind/jakarta.json.bind-api/3.0.0/jar)
 
 # Compatible Implementations
 
