@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Batch 2.1"
-date: 2022-02-24
+date: 2022-02-25
 summary: "Release for Jakarta EE 10"
 ---
 
@@ -35,20 +35,19 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 ## Plan Review
 Vote was conducted and passed June 4 - June 11 on https://www.eclipse.org/lists/jakarta.ee-spec/msg01825.html
 
-
-|                       |  Yes      | No  | Abstain  |
-|-----------------------|--------  -|-----|----------|
-|Fujitsu                |  +1       |     |          |
-|IBM                    |  +1       |     |          |
-|Oracle                 |  +1       |     |          |
-|Payara                 |  +1       |     |          |
-|Red Hat                |  +1       |     |          |
-|Tomitribe              |  +1       |     |          |
-|EE4J PMC               |  +1       |     |          |
-|Participant Members    |  +1       |     |          |
-|Committer Members      |  +1       |     |          |
-|Enterprise Members     |  +1       |     |          |
-|Total                  |  +1       |     |          |
+| Representative                                 | Representative for: | Vote   |
+|------------------------------------------------|---------------------|--------|
+| Kenji Kazumura                                 | Fujitsu             |   +1   |
+| Kevin Sutter                                   | IBM                 |   +1   |
+| Ed Bratt                                       | Oracle              |   +1   |
+| Andrew Pielage                                 | Payara              |   +1   |
+| Scott Stark                                    | Red Hat             |   +1   |
+| Jean-Louis Monteiro                            | Tomitribe           |   +1   |
+| Ivar Grimstad                                  | EE4J PMC            |   +1   |
+| Marcelo Ancelmo                                | Participant Members |   +1   |
+| Werner Keil                                    | Committer Members   |   +1   |
+| Dr. Jun Qian                                   | Enterprise Members  |   +1   |
+|                                                | Total               | **10** |
 
 ## Release Review
 
