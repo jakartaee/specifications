@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+					Overview (Jakarta Faces 4.0.0 VDL Documentation)
+				</title>
+        <link rel="stylesheet" type="text/css" title="Style" href="faces-api.css">
+    </head>
+    <body>
+        <noscript>
+            <div>JavaScript is disabled on your browser.</div>
+        </noscript>
+        <div class="topNav">
+            <a name="navbar_top"></a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow"></a>
+            <ul class="navList" title="Navigation">
+                <li class="navBarCell1Rev">Overview</li>
+                <li>Library</li>
+                <li>Tag</li>
+                <li>
+                    <a href="help-doc.html">Help</a>
+                </li>
+            </ul>
+        </div>
+        <div class="subNav">
+            <ul class="navList">
+                <li>
+                    <a href="index.html?overview-summary.html" target="_top">Frames</a>
+                </li>
+                <li>
+                    <a href="overview-summary.html" target="_top">No Frames</a>
+                </li>
+            </ul>
+            <ul class="navList" id="alltags_navbar_top">
+                <li>
+                    <a href="alltags-noframe.html">All Tags</a>
+                </li>
+            </ul>
+            <div>
+                <script type="text/javascript">
+							document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
+						</script>
+            </div>
+            <a name="skip-navbar_top"></a>
+        </div>
+        <div class="header">
+            <h1 class="title">VDL Documentation Generator - Generated Documentation</h1>
+        </div>
+        <div class="contentContainer">
+            <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Tag Library table, listing tag libraries, and an explanation">
+                <caption>
+                    <span>Tag Libraries</span><span class="tabEnd">&nbsp;</span>
+                </caption>
+                <thead>
+                    <tr>
+                        <th class="colFirst" scope="col">Library</th><th class="colLast" scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="rowColor">
+                        <td class="colFirst"><a href="faces/tld-summary.html">faces</a></td><td class="colLast">
+        <p><strong>Jakarta Faces Passthrough Elements Tag Library</strong></p>
+
+<p class="changed_added_2_2">The presence of an
+        attribute from this namespace on an otherwise non-Faces aware
+        markup element indicates that the markup element must be treated
+        as a Faces component that will be rendered equivalently to what is
+        specified directly in the Facelet page, with the added benefit
+        of being associated with a server side <code>UIComponent</code>
+        instance.
+
+        </p>
+
+        <div class="changed_added_2_2">
+
+        <p>Please see the documentation for Java class <code>jakarta.faces.view.facelets.TagDecorator</code>.</p>
+
+        </div>
+
+    
+    </td>
+                    </tr>
+                    <tr class="altColor">
+                        <td class="colFirst"><a href="ui/tld-summary.html">ui</a></td><td class="colLast">
+        <p><strong>Jakarta Faces Facelets Tag Library</strong></p>
+
+        <div class="changed_added_2_0">
+
+        <p><span class="changed_modified_2_3">The</span> tags in this
+        library add templating &mdash; a powerful view composition
+        technique &mdash; to Faces.  Templating is so useful that there
+        are entire frameworks, such as Tiles and SiteMesh, that are
+        built around the concept of templating. So what is templating,
+        how can you benefit from it, and how does this tag library
+        implement it?  </p>
+
+        <p>If you've used Jakarta Server Pages before, you've probably used <code>jsp:include</code>.
+        The prototypical example for
+        <code>jsp:include</code> is a header on each page in a web
+        application. One Jakarta Server Pages page, say header.jsp,
+        encapsulates the header content, and the header is included by each
+        page. You <em>encapsulate and reuse
+        content</em>, so that changes to one file, header.jsp, affect the
+        header on every page.
+        </p>
+
+        <p>This tab library contains a tag &mdash;<code>ui:include</code> &mdash;
+        that's analagous to <code>jsp:include</code>,
+        but encapsulating and reusing content is only half the templating story,
+        because templating also lets you
+        <em>encapsulate and reuse <b>layout</b></em>.
+        You define a single <em>template</em> (meaning layout), and
+        you reuse
+        that template with multiple <em>compositions</em>. So now
+        you can control the layout of many pages with a single
+        template (layout). Let's take a look at an example.
+        </p>
+
+        <h3>A Templating Example</h3>
+
+        <p>
+        First, we define a template:
+        </p>
+        <div class="syntax"><div class="html4strict"
+        style="font-family: monospace;"><ol><li class="li1"><div
+        class="de1"><span class="sc0">&lt;!DOCTYPE html&gt;</span></div></li>
+        <li class="li2"><div class="de2"><span class="sc3"><span
+        class="re1">&lt;html</span> xmlns:<span
+        class="re0">ui</span>=<span class="st0">&quot;jakarta.faces.facelets&quot;</span><span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li1"><div class="de1">&nbsp; &nbsp; <span
+        class="sc3"><span class="re1">&lt;head<span class="re2">&gt;</span></span></span></div></li>
+        <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;link</span>
+        <span class="re0">href</span>=<span class="st0">&quot;styles.css&quot;</span>
+        <span class="re0">rel</span>=<span class="st0">&quot;stylesheet&quot;</span>
+        <span class="re0">type</span>=<span class="st0">&quot;text/css&quot;</span><span
+        class="re2">/&gt;</span></span></div></li>
+
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;title<span
+        class="re2">&gt;</span></span></span><span
+        class="sc3"><span class="re1">&lt;ui</span>:insert
+        <span class="re0">name</span>=<span class="st0">&quot;title&quot;</span><span
+        class="re2">&gt;</span></span>Default Title<span
+        class="sc3"><span class="re1">&lt;/ui</span>:insert<span
+        class="re2">&gt;</span></span><span class="sc3"><span
+        class="re1">&lt;/title<span class="re2">&gt;</span></span></span></div></li>
+        <li class="li2"><div class="de2">&nbsp; &nbsp; <span
+        class="sc3"><span class="re1">&lt;/head<span class="re2">&gt;</span></span></span></div></li>
+
+        <li class="li1"><div class="de1">&nbsp;</div></li>
+        <li class="li2"><div class="de2">&nbsp; &nbsp; <span
+        class="sc3"><span class="re1">&lt;body<span class="re2">&gt;</span></span></span></div></li>
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;ui</span>:debug<span
+        class="re2">/&gt;</span></span></div></li>
+        <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;div</span>
+        <span class="re0">class</span>=<span class="st0">&quot;heading&quot;</span><span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        &nbsp; <span class="sc3"><span class="re1">&lt;ui</span>:insert
+        <span class="re0">name</span>=<span class="st0">&quot;heading&quot;</span><span
+        class="re2">/&gt;</span></span></div></li>
+        <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;/div<span
+        class="re2">&gt;</span></span></span></div></li>
+        <li class="li1"><div class="de1">&nbsp;</div></li>
+
+        <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;div</span>
+        <span class="re0">class</span>=<span class="st0">&quot;content&quot;</span><span
+        class="re2">&gt;</span></span></div></li>
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        &nbsp; <span class="sc3"><span class="re1">&lt;ui</span>:insert
+        <span class="re0">name</span>=<span class="st0">&quot;content&quot;</span><span
+        class="re2">/&gt;</span></span></div></li>
+
+        <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;/div<span
+        class="re2">&gt;</span></span></span></div></li>
+        <li class="li1"><div class="de1">&nbsp; &nbsp; <span
+        class="sc3"><span class="re1">&lt;/body<span class="re2">&gt;</span></span></span></div></li>
+        <li class="li2"><div class="de2"><span class="sc3"><span
+        class="re1">&lt;/html<span class="re2">&gt;</span></span></span>
+        </div></li></ol></div></div>
+
+        <p>
+        In the preceeding listing, we've defined a layout, also known as a
+        template. That template uses the
+        <code>ui:insert</code> tag to insert pieces of a page &mdash; namely,
+        title, heading, and content &mdash;
+        defined in a <em>composition</em>. Notice that on line 8, we
+        define a default title, in case one isn't provided
+        by the composition. Also note that on line 12 we have the <code>ui:debug</code>
+        tag, which lets the user activate
+        a popup window with debugging information by typing CTRL + Shift + d.
+        </p>
+
+        <p>
+        The title, heading, and content pieces of the page referenced in the
+        template are defined in a separate XHTML
+        file in a composition, like this:
+        </p>
+
+        <div class="syntax"><div class="html4strict"
+        style="font-family: monospace;"><ol><li class="li1"><div
+        class="de1"><span class="sc0">&lt;!DOCTYPE html&gt;</span></div></li>
+        <li class="li2"><div class="de2"><span class="sc3"><span
+        class="re1">&lt;html</span> xmlns:<span
+        class="re0">ui</span>=<span class="st0">&quot;jakarta.faces.facelets&quot;</span><span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li1"><div class="de1">&nbsp; <span
+        class="sc3"><span class="re1">&lt;body<span class="re2">&gt;</span></span></span></div></li>
+        <li class="li2"><div class="de2">&nbsp; &nbsp; <span
+        class="sc3"><span class="re1">&lt;ui</span>:composition
+        <span class="re0">template</span>=<span class="st0">&quot;/layout.xhtml&quot;</span><span
+        class="re2">&gt;</span></span></div></li>
+        <li class="li1"><div class="de1">&nbsp;</div></li>
+        <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;ui</span>:define
+        <span class="re0">name</span>=<span class="st0">&quot;title&quot;</span><span
+        class="re2">&gt;</span></span>A List of Contacts<span
+        class="sc3"><span class="re1">&lt;/ui</span>:define<span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;ui</span>:define
+        <span class="re0">name</span>=<span class="st0">&quot;heading&quot;</span><span
+        class="re2">&gt;</span></span>Contacts<span
+        class="sc3"><span class="re1">&lt;/ui</span>:define<span
+        class="re2">&gt;</span></span></div></li>
+        <li class="li2"><div class="de2">&nbsp;</div></li>
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;ui</span>:define
+        <span class="re0">name</span>=<span class="st0">&quot;content&quot;</span><span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp;
+        &nbsp; <span class="sc3"><span class="re1">&lt;ui</span>:include
+        <span class="re0">src</span>=<span class="st0">&quot;contactsTable.xhtml&quot;</span>
+        <span class="re2">/&gt;</span></span></div></li>
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;/ui</span>:define<span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp;</div></li>
+        <li class="li1"><div class="de1">&nbsp; &nbsp; <span
+        class="sc3"><span class="re1">&lt;/ui</span>:composition<span
+        class="re2">&gt;</span></span></div></li>
+        <li class="li2"><div class="de2">&nbsp; <span
+        class="sc3"><span class="re1">&lt;/body<span class="re2">&gt;</span></span></span></div></li>
+        <li class="li1"><div class="de1"><span class="sc3"><span
+        class="re1">&lt;/html<span class="re2">&gt;</span></span></span>
+        </div></li></ol></div></div>
+
+        <p>
+        At runtime, Faces synthesizes the two previous XHTML pages to create a
+        single Faces view by inserting the
+        pieces defined in the composition into the template (that template is
+        layout.xhtml, which is the first
+        listing above). Faces also disregards everything outside of the <code>composition</code>
+        tag so that we don't
+        wind up with two <code>body</code> elements in the view.
+        Also, note that we use the <code>ui:include</code>
+        tag on line 14 to include content (which happens to be a table) from
+        another XHTML page, so that we can reuse
+        that table in other views.
+        </p>
+
+        <p>
+        So why do we have two XHTML pages to define a single view? Why not
+        simply take the pieces and manually insert
+        them into the layout so that we have only a single XHTML page? The
+        answer is simple: we have separated layout
+        from the content so that we can <em>reuse that layout</em>
+        among multiple compositions. For example, now we can
+        define another composition that uses the same layout:
+        </p>
+
+        <div class="syntax"><div class="html4strict"
+        style="font-family: monospace;"><ol><li class="li1"><div
+        class="de1"><span class="sc0">&lt;!DOCTYPE html&gt;</span></div></li>
+        <li class="li2"><div class="de2"><span class="sc3"><span
+        class="re1">&lt;html</span> xmlns:<span
+        class="re0">ui</span>=<span class="st0">&quot;jakarta.faces.facelets&quot;</span><span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li1"><div class="de1">&nbsp; <span
+        class="sc3"><span class="re1">&lt;body<span class="re2">&gt;</span></span></span></div></li>
+        <li class="li2"><div class="de2">&nbsp; &nbsp; <span
+        class="sc3"><span class="re1">&lt;ui</span>:composition
+        <span class="re0">template</span>=<span class="st0">&quot;/layout.xhtml&quot;</span><span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li2"><div class="de2">&nbsp;</div></li>
+
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;ui</span>:define
+        <span class="re0">name</span>=<span class="st0">&quot;title&quot;</span><span
+        class="re2">&gt;</span></span>Create a Contact<span
+        class="sc3"><span class="re1">&lt;/ui</span>:define<span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;ui</span>:define
+        <span class="re0">name</span>=<span class="st0">&quot;heading&quot;</span><span
+        class="re2">&gt;</span></span>Create Contact&lt;/ui</span>:define<span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li2"><div class="de2">&nbsp;</div></li>
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;ui</span>:define
+        <span class="re0">name</span>=<span class="st0">&quot;content&quot;</span><span
+        class="re2">&gt;</span></span></div></li>
+        <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp;
+        &nbsp; <span class="sc3"><span class="re1">&lt;ui</span>:include
+        <span class="re0">src</span>=<span class="st0">&quot;createContactForm.xhtml&quot;</span><span
+        class="re2">/&gt;</span></span></div></li>
+
+        <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp;
+        <span class="sc3"><span class="re1">&lt;/ui</span>:define<span
+        class="re2">&gt;</span></span></div></li>
+
+        <li class="li2"><div class="de2">&nbsp;</div></li>
+
+        <li class="li2"><div class="de2">&nbsp; &nbsp; <span
+        class="sc3"><span class="re1">&lt;/ui</span>:composition<span
+        class="re2">&gt;</span></span></div></li>
+        <li class="li1"><div class="de1">&nbsp; <span
+        class="sc3"><span class="re1">&lt;/body<span class="re2">&gt;</span></span></span></div></li>
+        <li class="li2"><div class="de2"><span class="sc3"><span
+        class="re1">&lt;/html<span class="re2">&gt;</span></span></span>
+        </div></li></ol></div></div>
+
+        <p>
+        By encapsulating the layout, we can reuse that layout among multiple
+        compositions. Just like
+        <code>ui:include</code> lets us encapsulate and reuse
+        conent, Faces compositions let us encapsulate and reuse
+        layout, so that changes to a single layout can affect multiple views.
+        Fundamentally, that's what this
+        tag library is all about.
+        </p>
+
+        </div>
+        <pre>
+
+</td>
+                    </tr>
+                    <tr class="rowColor">
+                        <td class="colFirst"><a href="f/tld-summary.html">f</a></td><td class="colLast">
+        <p><strong>Jakarta Faces Core Tag Library</strong></p>
+
+        <p><span class="changed_modified_2_3">The</span> core Jakarta Faces
+        <span class="changed_modified_4_0">tags</span> that are independent of any particular
+        RenderKit.</p>
+    </td>
+                    </tr>
+                    <tr class="altColor">
+                        <td class="colFirst"><a href="h/tld-summary.html">h</a></td><td class="colLast">
+        <p><strong>Jakarta Faces HTML Tag Library</strong></p>
+
+        <p>This tag library contains Jakarta Faces component tags for all
+        UIComponent + HTML RenderKit Renderer combinations as defined in
+        section 9.5 "Standard HTML RenderKit Tag Library" of the Jakarta Faces Specification Document.</p>
+    </td>
+                    </tr>
+                    <tr class="rowColor">
+                        <td class="colFirst"><a href="pt/tld-summary.html">pt</a></td><td class="colLast">
+        <p><strong>Jakarta Faces Passthrough Attributes Tag Library</strong></p>
+
+        <p class="changed_added_2_2">Facelet tag attributes in 
+        this namespace must be added to the pass through attribute map
+        on the <code>UIComponent</code> corresponding to the facelet 
+        tag.  There are no tags in this tag library.</p>
+
+         <div class="changed_added_2_2">
+ 
+        <p>Usage example</p>
+
+        <code><pre>&lt;h:outputText value="Namespaced Attributes" p:foo="bar" /&gt;</pre></code>
+
+        <p>Would cause <code>&lt;span foo="bar"&gt;Namespaced Attributes&lt;/span&gt;</code> to be rendered.</p>
+
+
+        </div>
+    
+    </td>
+                    </tr>
+                    <tr class="altColor">
+                        <td class="colFirst"><a href="cc/tld-summary.html">cc</a></td><td class="colLast">
+        <p><strong>Jakarta Faces Composite Components Tag Library</strong></p> 
+
+<div class="changed_added_2_0">
+
+  <p>Describes the tag library used for declaring and defining
+  the usage contract for composite UI Components.  When authoring a
+  composite component, use of this tag library is largely optional,
+  though always recommended.  Declaring and defining a composite
+  component with this taglib provides valuable information about the
+  component that can be used by tools and users of the composite
+  component. In most cases, a composite component can be authored
+  without declaring and defining its usage contract with this taglib.
+  </p>
+
+<!--
+
+  PENDING: the limit of what one can do without declaring and defining a
+  usage contract must be cleary specified and documented.  PENDING: The
+  implementation team must help discover these limits.
+
+-->
+
+<h2>Creating a Composite Component</h2>
+
+  <p>A composite component is declared by creating a Facelets file
+  inside of a resource library.  (See section 2.6 "Resource Handling" of the Jakarta Faces Specification Document
+  for more information about resource
+  libraries.)  A composite component must reside within a resource
+  library.  It is not possible to create a composite component without
+  putting it inside of a resource library.</p>
+
+  <p>The default XML namespace URI of the taglib that contains the
+  composite component, for use in <em>the using page</em>, is
+  <code>jakarta.faces.composite/&lt;composite-library-name&gt;</code>,
+  where <code>&lt;composite-library-name&gt;</code> is the name of the
+  resource library.  For example:</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html xmlns:ui="jakarta.faces.facelets"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:ez="<i>jakarta.faces.composite/<b>ezcomp</b></i>"&gt;
+    ...
+&lt;/html&gt;</code></pre>
+
+<p>This declares that any Facelets file in the resource
+library called <code>ezcomp</code> can be used as a regular Faces UI
+component in a view with the above namespace declaration by using the
+"<code>ez</code>" prefix.  For example, placing a file called
+<code>foo.xhtml</code> in a resource library called <code>ezcomp</code>
+would make that file accessible like this.</p>
+
+<pre><code>&lt;ez:foo /&gt;</code></pre>
+
+
+  <p>The implementation must also support declaring the
+  namespace of the tag library in a Faces VDL tag library descriptor.
+  This descriptor file is optional and is useful for component vendors
+  that do not want to use the default XML namespace.  This version of
+  the proposal currently uses the facelet taglib descriptor syntax.  For
+  example: </p>
+
+<pre><code>&lt;facelet-taglib id="ez"&gt;
+    &lt;namespace&gt;http://example.com/path&lt;/namespace&gt;
+    &lt;composite-library-name&gt;ezcomp&lt;/composite-library-name&gt;
+&lt;/facelet-taglib&gt;</code></pre>
+
+  <p>Components from that taglibrary may be used in a using page by
+  declaring them in the XML namespace for that view:</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html xmlns:ui="jakarta.faces.facelets"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:ez="<i><b>http://example.com/path</b></i>"&gt;
+    ...
+&lt;/html&gt;</code></pre>
+
+
+  <p><a name="composite_example">Below is an example of a fairly
+  involved composite component declaration.  Such a declaration might
+  appear in <code>foo.xhtml</code>.</a></p>
+
+<div class="syntax"><div class="html4strict" style="font-family: monospace;"><ol>
+<li class="li1"><div class="de1"><span class="sc2">&lt;<a href="interface.html">cc:interface</a> <span class="kw3">name</span>=<span class="st0">&quot;foo&quot;</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; displayName=<span class="st0">&quot;Very Simple Login Panel&quot;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; preferred=<span class="st0">&quot;true&quot;</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; expert=<span class="st0">&quot;false&quot;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shortDescription=<span class="st0">&quot;An illustration of the composite component feature&quot;</span><span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; <span class="sc2">&lt;<a href="attribute.html">cc:attribute</a> <span class="kw3">name</span>=<span class="st0">&quot;model&quot;</span> required=<span class="st0">&quot;true&quot;</span><span class="kw2">&gt;</span></span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; <span class="sc2">&lt;cc:attribute <span class="kw3">name</span>=<span class="st0">&quot;loginAction&quot;</span> required=<span class="st0">&quot;true&quot;</span> method-signature=<span class="st0">&quot;java.lang.Object action()&quot;</span>/ <span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; <span class="sc2"><span class="kw2">&lt;</span>/cc:attribute&gt;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; <span class="sc2">&lt;cc:attribute <span class="kw3">name</span>=<span class="st0">&quot;valueChangeListener&quot;</span> targets=<span class="st0">&quot;username&quot;</span> /<span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; <span class="sc2">&lt;cc:attribute <span class="kw3">name</span>=<span class="st0">&quot;specialMethodExpression&quot;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;method-signature=<span class="st0">&quot;com.foo.User validateCurrentUser()&quot;</span> /<span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; <span class="sc2">&lt;cc:attribute <span class="kw3">name</span>=<span class="st0">&quot;loginButtonLabel&quot;</span> default=<span class="st0">&quot;Login&quot;</span> /<span class="kw2">&gt;</span></span></div></li>
+<li class="li1"><div class="de1">&nbsp; <span class="sc2">&lt;<a href="editableValueHolder.html">cc:editableValueHolder</a> <span class="kw3">name</span>=<span class="st0">&quot;username&quot;</span> /<span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; <span class="sc2">&lt;cc:actionSource <span class="kw3">name</span>=<span class="st0">&quot;loginEvent&quot;</span> /<span class="kw2">&gt;</span></span></div></li>
+<li class="li1"><div class="de1">&nbsp; <span class="sc2">&lt;cc:actionSource <span class="kw3">name</span>=<span class="st0">&quot;cancelEvent&quot;</span> /<span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; <span class="sc2">&lt;cc:actionSource <span class="kw3">name</span>=<span class="st0">&quot;allEvents&quot;</span> targets=<span class="st0">&quot;loginEvent cancelEvent&quot;</span> /<span class="kw2">&gt;</span></span></div></li>
+<li class="li1"><div class="de1"><span class="sc2"><span class="kw2">&lt;</span>/cc:interface&gt;</span></div></li>
+<li class="li2"><div class="de2"><span class="sc2">&lt;<a href="implementation.html">cc:implementation</a><span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de1">&nbsp; <span class="sc2">&lt;ui:decorate template=<span class="st0">&quot;fooTemplate.xhtml&quot;</span><span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; <span class="sc2">&lt;ui:define <span class="kw3">name</span>=<span class="st0">&quot;header&quot;</span><span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de1">&nbsp; &nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;p&gt;</span></span>This is the login panel header<span class="sc2"><span class="kw2">&lt;/p&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;</span>/ui:define&gt;</span></div></li>
+<li class="li2"><div class="de1">&nbsp; &nbsp; <span class="sc2">&lt;ui:define <span class="kw3">name</span>=<span class="st0">&quot;body&quot;</span><span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;p&gt;</span></span></div></li>
+<li class="li2"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;h:inputText <span class="kw3">id</span>=<span class="st0">&quot;username&quot;</span> /<span class="kw2">&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;/p&gt;</span></span></div></li>
+<li class="li2"><div class="de1">&nbsp; &nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;p&gt;</span></span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;h:commandButton <span class="kw3">id</span>=<span class="st0">&quot;loginEvent&quot;</span> </div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw3">value</span>=<span class="st0">&quot;#{cc.attrs.loginButtonLabel}&quot;</span><span class="kw2">&gt;</span></span></div></li>
+<li class="li1"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;</span>/h:commandButton&gt;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;h:commandButton <span class="kw3">id</span>=<span class="st0">&quot;cancelEvent&quot;</span> <span class="kw3">value</span>=<span class="st0">&quot;Cancel&quot;</span> <span class="kw3">action</span>=<span class="st0">&quot;cancel&quot;</span><span class="kw2">&gt;</span></span></div></li>
+<li class="li1"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;</span>/h:commandButton&gt;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;special:validateUserButton </div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; validateUser=<span class="st0">&quot;#{cc.attrs.specialMethodExpression}&quot;</span> /<span class="kw2">&gt;</span></span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;/p&gt;</span></span></div></li>
+<li class="li1"><div class="de2">&nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;</span>/ui:define&gt;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; <span class="sc2">&lt;ui:define <span class="kw3">name</span>=<span class="st0">&quot;footer&quot;</span><span class="kw2">&gt;</span></span></div></li>
+<li class="li1"><div class="de2">&nbsp; &nbsp; &nbsp;<span class="sc2"><span class="kw2">&lt;p&gt;</span></span>This is the login panel footer<span class="sc2"><span class="kw2">&lt;/p&gt;</span></span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; <span class="sc2"><span class="kw2">&lt;</span>/ui:define&gt;</span></div></li>
+<li class="li1"><div class="de2">&nbsp; <span class="sc2"><span class="kw2">&lt;</span>/ui:decorate&gt;</span></div></li>
+<li class="li1"><div class="de1"><span class="sc2"><span class="kw2">&lt;</span>/cc:implementation&gt;</span> </div></li></ol></div></div>
+
+<p>The values for attributes in a composite component VDL file can be
+fully localized by putting them inside a ResourceBundle in the same
+directory as the VDL view and accessing them with the per-component
+resource bundle syntax.  Consider the file <code>foo.xhtml</code>, in
+the resource library <code>ezcomp</code>.  The
+<code>shortDescription</code> element could be changed to be:</p>
+
+<pre><code>&lt;cc:interface shortDescription="#{cc.resourceBundleMap.shortDescription}" &gt;</code></pre>
+
+<p>In this case, In the same <code>ezcomp</code> directory as
+<code>foo.xhtml</code>, there would be a <code>foo.properties</code>
+file that would contain this entry:</p>
+
+<pre><code>shortDescription=A really nifty login panel.</code></pre>
+
+<p>The normal localization rules for <code>ResourceBundle</code> would
+apply.</p>
+
+<p>Refer to the <code>composite</code> tag for the details of defining the <code>interface</code> and <code>implementation</code> for composite components.</p>
+
+</div>
+
+
+
+<pre>
+
+</td>
+                    </tr>
+                    <tr class="rowColor">
+                        <td class="colFirst"><a href="c/tld-summary.html">c</a></td><td class="colLast">
+        <p><strong>Jakarta Tags Core Tag Library</strong></p>
+    </td>
+                    </tr>
+                    <tr class="altColor">
+                        <td class="colFirst"><a href="fn/tld-summary.html">fn</a></td><td class="colLast">
+        <p><strong>Jakarta Tags Functions Tag Library</strong></p>
+    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="bottomNav">
+            <a name="navbar_bottom"></a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow"></a>
+            <ul class="navList" title="Navigation">
+                <li class="navBarCell1Rev">Overview</li>
+                <li>Library</li>
+                <li>Tag</li>
+                <li>
+                    <a href="help-doc.html">Help</a>
+                </li>
+            </ul>
+        </div>
+        <div class="subNav">
+            <ul class="navList">
+                <li>
+                    <a href="index.html?overview-summary.html" target="_top">Frames</a>
+                </li>
+                <li>
+                    <a href="overview-summary.html" target="_top">No Frames</a>
+                </li>
+            </ul>
+            <ul class="navList" id="alltags_navbar_bottom">
+                <li>
+                    <a href="alltags-noframe.html">All Tags</a>
+                </li>
+            </ul>
+            <script type="text/javascript">
+						document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
+					</script><a name="skip-navbar_bottom"></a>
+        </div>
+    </body>
+</html>
