@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"jakarta.ws.rs"}]
+moduleSearchIndex = [{"l":"jakarta.ws.rs"}];updateSearchResults();

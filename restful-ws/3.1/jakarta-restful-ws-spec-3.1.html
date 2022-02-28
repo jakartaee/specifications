@@ -533,7 +533,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <span id="author" class="author">Contributors to Jakarta RESTful Web Services (https://github.com/eclipse-ee4j/jaxrs-api/graphs/contributors)</span><br/>
 <span id="email" class="email"><a href="mailto:jaxrs-dev@eclipse.org">jaxrs-dev@eclipse.org</a></span><br/>
 <span id="revnumber"> 3.1.0,</span>
-<span id="revdate">November 09, 2021</span>
+<span id="revdate">February 28, 2022</span>
 <br/><span id="revremark"></span>
 </div>
 <div id="toc" class="toc2">
@@ -668,6 +668,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </ul>
 </li>
 <li><a href="#executor_services">5.8. Executor Services</a></li>
+<li><a href="#client_exceptions">5.9. Client Exceptions</a></li>
 </ul>
 </li>
 <li><a href="#filters_and_interceptors">6. Filters and Interceptors</a>
@@ -803,7 +804,7 @@ Version: 3.1.0
 
 Status: Final Release
 
-Release: November 09, 2021</pre>
+Release: February 28, 2022</pre>
 </div>
 </div>
 </div>
@@ -3666,7 +3667,8 @@ while processing a response.</p>
 <div class="paragraph">
 <p>Note that the client runtime will only throw an instance of
 <code>WebApplicationException</code> (or any of its subclasses) as a result of a
-response from the server with status codes 3xx, 4xx or 5xx.</p>
+response from the server with status codes 3xx, 4xx or 5xx.
+See <a href="#client_exceptions">Client Exceptions</a> for more details on <code>WebApplicationException</code>.</p>
 </div>
 </div>
 </div>
@@ -4081,6 +4083,33 @@ building a <code>Client</code> instance. Two methods are provided in
 <code>ManagedExecutorService</code> and <code>ManagedScheduledExecutorService</code>,
 respectively. The reader is referred to the Javadoc of <code>ClientBuilder</code>
 for more information about executor services.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="client_exceptions"><a class="anchor" href="#client_exceptions"></a>5.9. Client Exceptions</h3>
+<div class="paragraph">
+<p>A method of the JAX-RS Client API that <em>nominally</em> throws <code>WebApplicationException</code>
+MUST <em>actually</em> throw the <em>most specific</em> exception subclass for the current response status code,
+unless no such subclass is defined by the JAX-RS API.</p>
+</div>
+<div class="paragraph">
+<p>Only in the latter case the method MAY throw the <code>WebApplicationException</code>
+class directly.</p>
+</div>
+<div class="paragraph">
+<p>The method MAY throw a direct or indirect subclass of the mandatory exception.</p>
+</div>
+<div class="paragraph">
+<p>Example: If a response has the status 404, a compliant implementation MUST NOT
+throw <code>WebApplicationException(404)</code>, but instead MUST throw <code>NotFoundException</code>,
+or a subclass of <code>NotFoundException</code>, because the description of <code>NotFoundException</code>
+<em>exactly</em> matches the status code 404.</p>
+</div>
+<div class="paragraph">
+<p>Example: If a response has the status 567, a compliant implementation MUST NOT
+throw <code>WebApplicationException(567)</code> but instead MUST throw <code>ServerErrorException</code>,
+or a subclass of <code>ServerErrorException</code>, because the description of <code>ServerErrorException</code>
+<em>indirectly</em> matches the status code 567 by matching the whole 5XX family of codes.</p>
 </div>
 </div>
 </div>
