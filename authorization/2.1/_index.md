@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Authorization 2.1 (under development)"
-date: 2021-05-19
+title: "Jakarta Authorization 2.1"
+date: 2022-02-28
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Authorization defines a low-level SPI for authorization modules, which are repositories of permissions
@@ -8,17 +8,30 @@ facilitating subject based security by determining whether a given subject has a
 to transform security constraints for specific containers (such as Jakarta Servlet or Jakarta Enterprise Beans) into
 these permissions.
 
-The primary goal of this release is to make Jakarta Authorization more suitable for cloud deployments, by adding an option to add policy providers programmatically for a single application. This mirrors the API available for Jakarta Authentication.
+This release contains the following changes:
 
-More specifically:
+* [Issue #53](https://github.com/jakartaee/authorization/issues/53): Add getPolicyConfiguration methods without state requirement
+* [Issue #52](https://github.com/jakartaee/authorization/issues/52): Add methods to PolicyConfiguation to read permissions
+* [Issue #105](https://github.com/jakartaee/authorization/issues/105): Generic return value for getContext  
 
-* Register a policy provider programmatically per application [AUTHORIZATION #98](https://github.com/eclipse-ee4j/authorization/issues/98)
-* getPolicyConfiguration without open requirement [AUTHORIZATION #53](https://github.com/eclipse-ee4j/authorization/issues/53)
-* Add methods to the PolicyConfiguration to read permissions [AUTHORIZATION #52](https://github.com/eclipse-ee4j/authorization/issues/52)
 
-The JDK version required will be aligned with Jakarta EE 10.
+This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 * [Jakarta Authorization 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jacc/releases/2.1)
+  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta Authorization 2.1 Specification Document](./authorization-spec-2.1.pdf) (PDF)
+* [Jakarta Authorization 2.1 Specification Document](./authorization-spec-2.1.html) (HTML)
+* [Jakarta Authorization 2.1 Javadoc](./apidocs)
+* [Jakarta Authorization 2.1 TCK](https://download.eclipse.org/jakartaee/authorization/2.1/jakarta-authorization-tck-2.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/authorization/2.1/jakarta-authorization-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/authorization/2.1/jakarta-authorization-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+
+* Maven coordinates
+  * [jakarta.authorization:jakarta.authorization-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.authorization/jakarta.authorization-api/2.1.0/jar)
+
+
+# Compatible Implementations
+
+* [Eclipse Exousia 2.1.0-M1](https://github.com/eclipse-ee4j/exousia/releases/download/2.1.0-M1-RELEASE/exousia-2.1.0-M1.jar)
+* [Eclipse Glassfish 7.0.0-M3](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M2/glassfish-7.0.0-M2.zip)
 
 # Ballots
 
