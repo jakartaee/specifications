@@ -98,7 +98,7 @@ for Jakarta Faces functionality.</span></div>
         <h3 class="subsection-title">Namespaces</h3>
 
         <dl>
-            <dt><a href="faces.html#.ajax">ajax</a></dt>
+            <dt><a href="faces.ajax.html">ajax</a></dt>
             <dd></dd>
         
             <dt><a href="faces.push.html">push</a></dt>
@@ -111,158 +111,6 @@ for Jakarta Faces functionality.</span></div>
 
     
         <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id=".ajax"><span class="type-signature">(static) </span>ajax<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    Register a callback for error handling.
-<p><b>Usage:</b></p>
-<pre><code>
-faces.ajax.addOnError(handleError);
-...
-var handleError = function handleError(data) {
-...
-}
-</pre></code>
-<p><b>Implementation Requirements:</b></p>
-This function must accept a reference to an existing JavaScript function.
-The JavaScript function reference must be added to a list of callbacks, making it possible
-to register more than one callback by invoking <code>faces.ajax.addOnError</code>
-more than once.  This function must throw an error if the <code>callback</code>
-argument is not a function.
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line2096">line 2096</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id=".ajax"><span class="type-signature">(static) </span>ajax<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    Register a callback for event handling.
-<p><b>Usage:</b></p>
-<pre><code>
-faces.ajax.addOnEvent(statusUpdate);
-...
-var statusUpdate = function statusUpdate(data) {
-...
-}
-</pre></code>
-<p><b>Implementation Requirements:</b></p>
-This function must accept a reference to an existing JavaScript function.
-The JavaScript function reference must be added to a list of callbacks, making it possible
-to register more than one callback by invoking <code>faces.ajax.addOnEvent</code>
-more than once.  This function must throw an error if the <code>callback</code>
-argument is not a function.
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line2123">line 2123</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
 
         
             
@@ -311,7 +159,7 @@ The result of calling <code>ExternalContext.getRequestContextPath()</code>.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3547">line 3547</a>
+        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3549">line 3549</a>
     </li></ul></dd>
     
 
@@ -376,7 +224,7 @@ This number is implementation dependent.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3563">line 3563</a>
+        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3565">line 3565</a>
     </li></ul></dd>
     
 
@@ -439,7 +287,7 @@ This number is implementation dependent.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3541">line 3541</a>
+        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3543">line 3543</a>
     </li></ul></dd>
     
 
@@ -504,7 +352,7 @@ This number may only be incremented by a new release of the specification.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3555">line 3555</a>
+        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3557">line 3557</a>
     </li></ul></dd>
     
 
@@ -637,7 +485,7 @@ value is a DOM element, start the search from there.</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3157">line 3157</a>
+        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3159">line 3159</a>
     </li></ul></dd>
     
 
@@ -753,7 +601,7 @@ if (stage === ProjectStage.Development) {
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3020">line 3020</a>
+        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3022">line 3022</a>
     </li></ul></dd>
     
 
@@ -902,7 +750,7 @@ Section 17.13.2 of the HTML Specification</a>.</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3075">line 3075</a>
+        <a href="faces-uncompressed.js.html">faces-uncompressed.js</a>, <a href="faces-uncompressed.js.html#line3077">line 3077</a>
     </li></ul></dd>
     
 
@@ -953,7 +801,7 @@ Section 17.13.2 of the HTML Specification</a>.</td>
 
   </div>
   <nav>
-   <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="faces.html">faces</a></li><li><a href="faces.html#.ajax">ajax</a></li><li><a href="faces.push.html">push</a></li><li><a href="faces.util.html">util</a></li><li><a href="mojarra.html">mojarra</a></li></ul>
+   <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="faces.html">faces</a></li><li><a href="faces.ajax.html">ajax</a></li><li><a href="faces.push.html">push</a></li><li><a href="faces.util.html">util</a></li><li><a href="mojarra.html">mojarra</a></li></ul>
   </nav>
   <br class="clear">
   <footer>
