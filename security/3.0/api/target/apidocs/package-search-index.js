@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"jakarta.security.enterprise"},{"l":"jakarta.security.enterprise.authentication.mechanism.http"},{"l":"jakarta.security.enterprise.credential"},{"l":"jakarta.security.enterprise.identitystore"},{"l":"jakarta.security.enterprise.identitystore.openid"}];updateSearchResults();
