@@ -6,13 +6,25 @@ summary: "Release for Jakarta EE 10"
 Jakarta Persistence defines a standard for management of persistence
 and object/relational mapping in Java(R) environments.
 
-The goal of this release is to:
+The release contains following changes:
 
-* provide features requested by the community (for example [#77](https://github.com/eclipse-ee4j/jpa-api/issues/77))
-* implement requirements by other specification included in Jakarta EE 10
-* editorial updates and clarifications in the specification (for example [#307](https://github.com/eclipse-ee4j/jpa-api/issues/307), [#308](https://github.com/eclipse-ee4j/jpa-api/issues/308))
+* EntityManagerFactory and EntityManager interfaces extend java.lang.AutoCloseable interface
+* Fixes ClassTransformer.transform to throw Persistence API specific exception
+* Adds support for java.util.UUID and GenerationType.UUID
+* Adds CEILING, EXP, FLOOR, LN, POWER, ROUND, and SIGN
+numeric functions to Jakarta Persistence QL and ceiling(), exp(),
+floor(), ln(), power(),  round(), and sign() to Criteria API
+* Adds LOCAL DATE, LOCAL DATETIME, and LOCAL TIME functions to Jakarta Persistence QL and
+corresponding localDate(), localDateTime(), and localTime() to Criteria API
+* Adds EXTRACT function to Jakarta Persistence QL
+* Adds support for Expressions as conditions in Criteria CASE expressions
+* Adds missing definition of single_valued_embeddable_object_field in Jakarta Persistence QL BNF
+* Clarifies mixing types of query input parameters
+* Clarifies definition of the Basic type
+* Clarifies the order of parameters in the LOCATE function
+* Clarifies SqlResultSetMapping with multiple EntityResults and conflicting aliases
 
-The JDK version required will be aligned with Jakarta EE 10.
+Requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 * [Jakarta Persistence 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.1)
 * [Jakarta Persistence 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.1-jakarta-persistence-api)
@@ -22,7 +34,7 @@ The JDK version required will be aligned with Jakarta EE 10.
 * [Jakarta Persistence 3.1 Javadoc](./apidocs)
 * Jakarta Persistence 3.1 XML Schemas
     * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd)
-    * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_0.xsd)
+    * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_1.xsd)
 * [Jakarta Persistence 3.1 TCK](https://download.eclipse.org/jakartaee/persistence/3.1/jakarta-persistence-tck-3.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.1/jakarta-persistence-tck-3.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.1/jakarta-persistence-tck-3.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.persistence:jakarta.persistence-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.1.0/jar)
