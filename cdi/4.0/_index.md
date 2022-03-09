@@ -25,6 +25,7 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 # Compatible Implementations
 
 * [Weld 5.0.0.CR1](https://weld.cdi-spec.org/download/)
+
 =======
 The Jakarta Contexts and Dependency Injection 4.0 goals for this release are:
 
