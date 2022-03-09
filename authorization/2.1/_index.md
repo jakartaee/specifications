@@ -19,8 +19,8 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 * [Jakarta Authorization 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jacc/releases/2.1)
   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
-* [Jakarta Authorization 2.1 Specification Document](./authorization-spec-2.1.pdf) (PDF)
-* [Jakarta Authorization 2.1 Specification Document](./authorization-spec-2.1.html) (HTML)
+* [Jakarta Authorization 2.1 Specification Document](./jakarta-authorization-spec-2.1.pdf) (PDF)
+* [Jakarta Authorization 2.1 Specification Document](./jakarta-authorization-spec-2.1.html) (HTML)
 * [Jakarta Authorization 2.1 Javadoc](./apidocs)
 * [Jakarta Authorization 2.1 TCK](https://download.eclipse.org/jakartaee/authorization/2.1/jakarta-authorization-tck-2.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/authorization/2.1/jakarta-authorization-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/authorization/2.1/jakarta-authorization-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
