@@ -13,7 +13,10 @@ The 2.1 release updates dependencies for EE 10 and adds a JPMS module-info descr
 * [Jakarta Interceptors 2.1 Specification Document](./jakarta-interceptors-spec-2.1.pdf) (PDF)
 * [Jakarta Interceptors 2.1 Specification Document](./jakarta-interceptors-spec-2.1.html) (HTML)
 * [Jakarta Interceptors 2.1 Javadoc](./apidocs)
-* [Jakarta EE Platform 10 TCK](TBD) ([sig](TBD),[sha](TBD),[pub](TBD))
+* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.zip)
+   ([sig](TBD_post_ballot),
+   [sha](7671d6895eb57b74b52e46b63adfeb57adf965dd91efc673db21a781fedc452f),
+   [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.interceptor/jakarta.interceptor-api/2.1.0/jar)
 
