@@ -8,8 +8,8 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 
 * [Jakarta Contexts Dependency Injection 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/4.0)
   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
-* [Jakarta Contexts Dependency Injection 4.0 Specification Document](jakarta-cdi-spec-4.0.pdf) (PDF)
-* [Jakarta Contexts Dependency Injection 4.0 Specification Document](jakarta-cdi-spec-4.0.html) (HTML)
+* [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.pdf) (PDF)
+* [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.0 Javadoc](./apidocs)
 * [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.zip)
 ([sig](TBD_post_ballot),
@@ -39,6 +39,7 @@ The Jakarta Contexts and Dependency Injection 4.0 goals for this release are:
     * [AFTER_SUCCESS Observers and Events fired from within EntityListeners](https://github.com/eclipse-ee4j/cdi/issues/467)
     * [Add methods to BeanConfigurator for applying decorators](https://github.com/eclipse-ee4j/cdi/issues/459)
     * [All issues with a Lite label](https://github.com/eclipse-ee4j/cdi/issues?q=is%3Aissue+label%3ALite)
+
 
 
 # Ballots
