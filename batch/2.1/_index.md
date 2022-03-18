@@ -54,18 +54,20 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 
 ## Plan Review
 
-Vote was conducted and passed June 4 - June 11 on https://www.eclipse.org/lists/jakarta.ee-spec/msg01825.html
+The Specification Committee Ballot concluded successfully on 2021-06-11 with the following results.
 
-|                       |  Yes      | No  | Abstain  |
-|-----------------------|--------  -|-----|----------|
-|Fujitsu                |  +1       |     |          |
-|IBM                    |  +1       |     |          |
-|Oracle                 |  +1       |     |          |
-|Payara                 |  +1       |     |          |
-|Red Hat                |  +1       |     |          |
-|Tomitribe              |  +1       |     |          |
-|EE4J PMC               |  +1       |     |          |
-|Participant Members    |  +1       |     |          |
-|Committer Members      |  +1       |     |          |
-|Enterprise Members     |  +1       |     |          |
-|Total                  |  +1       |     |          |
+| Representative                                 | Representative for: | Vote   |
+|------------------------------------------------|---------------------|--------|
+| Kenji Kazumura                                 | Fujitsu             |    +1  |
+| Tom Watson, Emily Jiang                        | IBM                 |    +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |    +1  |
+| Scott Stark                                    | Red Hat             |    +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1  |
+| Ivar Grimstad                                  | EE4J PMC            |    +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |    +1  |
+| Werner Keil                                    | Committer Members   |    +1  |
+| Jun Qian                                       | Enterprise Members  |    +1  |
+|                                                | **Total**           | **10** |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01825.html)
