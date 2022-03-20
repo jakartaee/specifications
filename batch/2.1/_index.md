@@ -59,7 +59,7 @@ The Specification Committee Ballot concluded successfully on 2021-06-11 with the
 | Representative                                 | Representative for: | Vote   |
 |------------------------------------------------|---------------------|--------|
 | Kenji Kazumura                                 | Fujitsu             |    +1  |
-| kevin Sutter                                   | IBM                 |    +1  |
+| Kevin Sutter                                   | IBM                 |    +1  |
 | Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1  |
 | Andrew Pielage, Matt Gill                      | Payara              |    +1  |
 | Scott Stark                                    | Red Hat             |    +1  |
