@@ -13,7 +13,7 @@ The release contains following changes:
 * Adds support for java.util.UUID and GenerationType.UUID
 * Adds CEILING, EXP, FLOOR, LN, POWER, ROUND, and SIGN
 numeric functions to Jakarta Persistence QL and ceiling(), exp(),
-floor(), ln(), power(),  round(), and sign() to Criteria API
+floor(), ln(), power(), round(), and sign() to Criteria API
 * Adds LOCAL DATE, LOCAL DATETIME, and LOCAL TIME functions to Jakarta Persistence QL and
 corresponding localDate(), localDateTime(), and localTime() to Criteria API
 * Adds EXTRACT function to Jakarta Persistence QL
@@ -39,6 +39,9 @@ Requires Java SE 11 or newer (aligned with Jakarta EE 10).
 * Maven coordinates
     * [jakarta.persistence:jakarta.persistence-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.1.0/jar)
 
+# Compatible Implementations
+
+* [EclipseLink 4.0.0-M3](https://jakarta.oss.sonatype.org/content/repositories/staging/org/eclipse/persistence/eclipselink/4.0.0-M3/eclipselink-4.0.0-M3.zip)
 
 # Ballots
 
