@@ -534,7 +534,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <span id="author" class="author">Jakarta Security Community, https://projects.eclipse.org/projects/ee4j.es</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/es-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/es-dev</a></span><br>
 <span id="revnumber"> 3.0,</span>
-<span id="revdate">March 01, 2022</span>
+<span id="revdate">March 25, 2022</span>
 <br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
@@ -585,13 +585,20 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#basic-annotation">2.4.1. BASIC Annotation</a></li>
 <li><a href="#form-annotation">2.4.2. FORM Annotation</a></li>
 <li><a href="#custom-form-annotation">2.4.3. Custom FORM Annotation</a></li>
-<li><a href="#logintocontinue-annotation">2.4.4. LoginToContinue Annotation</a></li>
-<li><a href="#rememberme-annotation">2.4.5. RememberMe Annotation</a></li>
-<li><a href="#autoapplysession-annotation">2.4.6. AutoApplySession Annotation</a></li>
-<li><a href="#implementation-notes">2.4.7. Implementation Notes</a></li>
-<li><a href="#custom-form-notes">2.4.8. Custom FORM Notes</a></li>
-<li><a href="#securitycontext-authenticate-notes">2.4.9. SecurityContext.authenticate() Notes</a></li>
-<li><a href="#autoapplysession-notes">2.4.10. AutoApplySession Notes</a></li>
+<li><a href="#openid-connect-annotation">2.4.4. OpenID Connect Annotation</a>
+<ul class="sectlevel4">
+<li><a href="#metadata-configuration">2.4.4.1. Metadata configuration</a></li>
+<li><a href="#authentication-dialog">2.4.4.2. Authentication dialog</a></li>
+<li><a href="#caller-name-and-groups">2.4.4.3. Caller name and groups</a></li>
+</ul>
+</li>
+<li><a href="#logintocontinue-annotation">2.4.5. LoginToContinue Annotation</a></li>
+<li><a href="#rememberme-annotation">2.4.6. RememberMe Annotation</a></li>
+<li><a href="#autoapplysession-annotation">2.4.7. AutoApplySession Annotation</a></li>
+<li><a href="#implementation-notes">2.4.8. Implementation Notes</a></li>
+<li><a href="#custom-form-notes">2.4.9. Custom FORM Notes</a></li>
+<li><a href="#securitycontext-authenticate-notes">2.4.10. SecurityContext.authenticate() Notes</a></li>
+<li><a href="#autoapplysession-notes">2.4.11. AutoApplySession Notes</a></li>
 </ul>
 </li>
 <li><a href="#relationship-to-other-specifications">2.5. Relationship to other specifications</a></li>
@@ -627,25 +634,13 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#testing-for-access">4.3. Testing for Access</a></li>
 <li><a href="#triggering-the-authentication-process">4.4. Triggering the Authentication Process</a></li>
 <li><a href="#relationship-to-other-specifications-3">4.5. Relationship to Other Specifications</a></li>
+<li><a href="#other-context-interfaces">4.6. Other context interfaces</a>
+<ul class="sectlevel3">
+<li><a href="#openidcontext">4.6.1. OpenIdContext</a></li>
 </ul>
 </li>
-<li><a href="#openid">5. Open Id Connect Support</a>
-<ul class="sectlevel2">
-<li><a href="#define-the-openid-connect-provider-details">5.1. Define the OpenId Connect Provider details</a></li>
-<li><a href="#define-the-openid-connect-client-details">5.2. Define the OpenId Connect Client details</a></li>
-<li><a href="#additional-properties">5.3. Additional properties</a></li>
 </ul>
 </li>
-<li><a href="#openidauthenticationmechanism">6. OpenIdAuthenticationMechanism</a>
-<ul class="sectlevel2">
-<li><a href="#get-tokens">6.1. Get Tokens</a></li>
-<li><a href="#caller-name-and-groups">6.2. Caller name and groups</a></li>
-</ul>
-</li>
-<li><a href="#openidcontext">7. OpenIdContext</a></li>
-<li><a href="#refreshtoken">8. RefreshToken</a></li>
-<li><a href="#logout">9. Logout</a></li>
-<li><a href="#callback">10. Callback</a></li>
 <li><a href="#bibliography">Bibliography</a></li>
 </ul>
 </div>
@@ -661,7 +656,7 @@ Version: 3.0
 
 Status: Final
 
-Release: March 01, 2022</pre>
+Release: March 25, 2022</pre>
 </div>
 </div>
 </div>
@@ -993,19 +988,20 @@ LdapIdentityStoreDefinition
 BasicAuthenticationMechanismDefinition
 CustomFormAuthenticationMechanismDefinition
 FormAuthenticationMechanismDefinition
+OpenIdAuthenticationMechanismDefinition
 
 LoginToContinue
 RememberMe</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Attributes on these annotations can be provided either as actual values, or as Jakarta Expression Language 3.0 expressions. In cases where the return type of an attribute is not String, an "Expression Language alternative" attribute is provided, with "Expression" appended to the name. If an "Expression Language alternative" attribute has a non-empty value, it takes precedence over the attribute it&#8217;s an alternative to, and must contain a valid Expression Language expression that evaluates to the same type as the attribute it&#8217;s an alternative to.</p>
+<p>Attributes on these annotations can be provided either as actual values, or as Jakarta Expression Language 5.0 expressions. In cases where the return type of an attribute is not String, an "Expression Language alternative" attribute is provided, with "Expression" appended to the name. If an "Expression Language alternative" attribute has a non-empty value, it takes precedence over the attribute it&#8217;s an alternative to, and must contain a valid Expression Language expression that evaluates to the same type as the attribute it&#8217;s an alternative to.</p>
 </div>
 <div class="paragraph">
 <p>For more information, see the package javadoc for the jakarta.security.enterprise package.</p>
 </div>
 <div class="paragraph">
-<p>Jakarta Expression Language, version 3.0 [<a href="https://jakarta.ee/specifications/expression-language/3.0/">EL30</a>] is a Jakarta EE specification.</p>
+<p>Jakarta Expression Language, version 5.0 [<a href="https://jakarta.ee/specifications/expression-language/5.0/">EL50</a>] is a Jakarta EE specification.</p>
 </div>
 </div>
 </div>
@@ -1029,13 +1025,13 @@ RememberMe</code></pre>
 <p>In some cases (for example, username/password authentication) the interaction between the caller and the application is simple. In other cases, a lengthier dialog is required&#8201;&#8212;&#8201;an application may send a random nonce to the caller, which must then use that nonce in the construction of an authentication token, or there may be interactions with a third party that vouches for the caller&#8217;s identity, or the authenticity of the provided credential.</p>
 </div>
 <div class="paragraph">
-<p>The Jakarta EE Platform already specifies mechanisms for authenticating users of web applications. The Jakarta Servlet Specification, version 4.0 [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>] specifies a declarative mechanism for configuring an application to provide BASIC, DIGEST, FORM, or CERT authentication, with authentication performed automatically by the container based on the application&#8217;s configuration, which, in the case of FORM authentication, can include custom form pages.</p>
+<p>The Jakarta EE Platform already specifies mechanisms for authenticating users of web applications. The Jakarta Servlet Specification, version 4.0 [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>] specifies a declarative mechanism for configuring an application to provide BASIC, DIGEST, FORM, or CERT authentication, with authentication performed automatically by the container based on the application&#8217;s configuration, which, in the case of FORM authentication, can include custom form pages.</p>
 </div>
 <div class="paragraph">
-<p>In addition, The Jakarta Authentication Specification, version 1.1 [<a href="https://jakarta.ee/specifications/authentication/1.1/">AUTHENTICATION11</a>] specifies a general-purpose mechanism for securing messages sent between Jakarta EE clients and servers. Jakarta Authentication defines an SPI called <em>ServerAuthModule</em>, which enables development of authentication modules to handle any credential type, or engage in interaction of arbitrary complexity with clients and third parties. [<a href="https://jakarta.ee/specifications/authentication/1.1/">AUTHENTICATION11</a>] also defines the Servlet Container Profile, which specifies how Jakarta Authentication mechanisms, including <em>ServerAuthModules</em>, are integrated with the servlet container.</p>
+<p>In addition, The Jakarta Authentication Specification, version 3.0 [<a href="https://jakarta.ee/specifications/authentication/3.0/">AUTHENTICATION30</a>] specifies a general-purpose mechanism for securing messages sent between Jakarta EE clients and servers. Jakarta Authentication defines an SPI called <em>ServerAuthModule</em>, which enables development of authentication modules to handle any credential type, or engage in interaction of arbitrary complexity with clients and third parties. [<a href="https://jakarta.ee/specifications/authentication/3.0/">AUTHENTICATION30</a>] also defines the Servlet Container Profile, which specifies how Jakarta Authentication mechanisms, including <em>ServerAuthModules</em>, are integrated with the servlet container.</p>
 </div>
 <div class="paragraph">
-<p>While both existing mechanisms are important and useful, each has limitations from the point of view of an application developer. The servlet container&#8217;s <em>login-config</em> mechanism is limited to the <em>auth-method</em> types defined by [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>]&#8201;&#8212;&#8201;it doesn&#8217;t support other credential types, or complex interactions with callers. It also relies on unspecified container mechanisms to associate identity stores with applications. There is no way for an application to ensure that callers are authenticated against the desired identity store, or, indeed, against <em>any</em> identity store.</p>
+<p>While both existing mechanisms are important and useful, each has limitations from the point of view of an application developer. The servlet container&#8217;s <em>login-config</em> mechanism is limited to the <em>auth-method</em> types defined by [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>]&#8201;&#8212;&#8201;it doesn&#8217;t support other credential types, or complex interactions with callers. It also relies on unspecified container mechanisms to associate identity stores with applications. There is no way for an application to ensure that callers are authenticated against the desired identity store, or, indeed, against <em>any</em> identity store.</p>
 </div>
 <div class="paragraph">
 <p>Jakarta Authentication, by way of contrast, is extremely flexible and powerful, but is also complex. Writing an <em>AuthModule</em>, and arranging for the web container to use it for authentication, is a non-trivial exercise. Additionally, there is no declarative configuration syntax for Jakarta Authentication, and there is no well-defined mechanism for a container to override an application&#8217;s programmatically-registered <em>AuthModule</em>. A container can choose to register its own <em>AuthModule</em>, or to remove one registered by an application, but Jakarta Authentication will always use the most-recently-registered module&#8201;&#8212;&#8201;the outcome is dependent on the order in which the application and the container attempt to register their respective modules.</p>
@@ -1158,13 +1154,16 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <div class="ulist">
 <ul>
 <li>
-<p>BASIC - Authenticates according to the mechanism as described in 13.6.1, "HTTP Basic Authentication", in [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>]. See also RFC 7617, "The 'Basic' HTTP Authentication Scheme" [<a href="https://tools.ietf.org/html/rfc7617">RFC7617</a>]. This bean is activated and configured via the <em>@BasicAuthenticationMechanismDefinition</em> annotation.</p>
+<p>BASIC - Authenticates according to the mechanism as described in 13.6.1, "HTTP Basic Authentication", in [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>]. See also RFC 7617, "The 'Basic' HTTP Authentication Scheme" [<a href="https://tools.ietf.org/html/rfc7617">RFC7617</a>]. This bean is activated and configured via the <em>@BasicAuthenticationMechanismDefinition</em> annotation.</p>
 </li>
 <li>
-<p>FORM - Authenticates according to the mechanism as described in 13.6.3, "Form Based Authentication", in [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>]. This bean is activated and configured via the <em>@FormAuthenticationMechanismDefinition</em> annotation.</p>
+<p>FORM - Authenticates according to the mechanism as described in 13.6.3, "Form Based Authentication", in [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>]. This bean is activated and configured via the <em>@FormAuthenticationMechanismDefinition</em> annotation.</p>
 </li>
 <li>
-<p>Custom FORM - A variant on FORM, with the difference that continuing the authentication dialog as described in [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>], section 13.6.3, step 3, and further clarified in section 13.6.3.1, does not happen by posting back to j_security_check, but by invoking <em>SecurityContext.authenticate()</em> with the credentials the application collected. This bean is activated and configured via the <em>@CustomFormAuthenticationMechanismDefinition</em> annotation.</p>
+<p>Custom FORM - A variant on FORM, with the difference that continuing the authentication dialog as described in [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>], section 13.6.3, step 3, and further clarified in section 13.6.3.1, does not happen by posting back to j_security_check, but by invoking <em>SecurityContext.authenticate()</em> with the credentials the application collected. This bean is activated and configured via the <em>@CustomFormAuthenticationMechanismDefinition</em> annotation.</p>
+</li>
+<li>
+<p>OpenID Connect - Authenticates according to the Authorization Code flow and Refresh tokens as defined by the OpenID Connect specification. See [<a href="https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth">OPENID10FLOW</a>] and [<a href="https://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens">OPENID10REFRESH</a>]. This bean is activated and configured via the <em>@OpenIdAuthenticationMechanismDefinition</em> annotation.</p>
 </li>
 </ul>
 </div>
@@ -1245,9 +1244,669 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </div>
 </div>
 <div class="sect3">
-<h4 id="logintocontinue-annotation"><a class="anchor" href="#logintocontinue-annotation"></a>2.4.4. LoginToContinue Annotation</h4>
+<h4 id="openid-connect-annotation"><a class="anchor" href="#openid-connect-annotation"></a>2.4.4. OpenID Connect Annotation</h4>
 <div class="paragraph">
-<p>The <em>LoginToContinue</em> annotation provides an application with the ability to declaratively add "login to continue" functionality to an authentication mechanism. "Login to continue" conceptually refers to the algorithm (flow) described by the numbered steps in [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>], Section 13.6.3, "Form Based Authentication".</p>
+<p>The following annotation is used to configure the built-in OpenID Connect authentication mechanism.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Target</span>({TYPE, METHOD})
+<span class="annotation">@Retention</span>(RUNTIME)
+<span class="directive">public</span> <span class="annotation">@interface</span> OpenIdAuthenticationMechanismDefinition {
+
+    <span class="comment">/**
+     * Required, unless providerMetadata is specified.
+     * The provider URI to read / discover the metadata of the openid provider.
+     *
+     * @see http://openid.net/specs/openid-connect-discovery-1_0.html
+     *
+     * @return provider URI to read from which to read metadata
+     */</span>
+    <span class="predefined-type">String</span> providerURI() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * To override the openid connect provider's metadata property discovered
+     * via providerUri.
+     *
+     * @return OpenIdProviderMetadata instance.
+     */</span>
+    OpenIdProviderMetadata providerMetadata() <span class="keyword">default</span> <span class="annotation">@OpenIdProviderMetadata</span>;
+
+    <span class="comment">/**
+     * Required. The client identifier issued when the application was
+     * registered.
+     *
+     * @return the client identifier
+     */</span>
+    <span class="predefined-type">String</span> clientId() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Required. The client secret.
+     *
+     * &lt;p&gt;
+     * Note that it is strongly recommended to set this using an Expression so that the value
+     * is not hardcoded within the code.
+     *
+     * @return The client secret
+     */</span>
+    <span class="predefined-type">String</span> clientSecret() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. The claims definition defines the custom claims mapping of
+     * caller name and groups.
+     *
+     * @return
+     */</span>
+    ClaimsDefinition claimsDefinition() <span class="keyword">default</span> <span class="annotation">@ClaimsDefinition</span>;
+
+    <span class="comment">/**
+     * Optional. The Logout definition defines the logout and Relaying Party session
+     * management configuration.
+     *
+     * @return
+     */</span>
+    LogoutDefinition logout() <span class="keyword">default</span> <span class="annotation">@LogoutDefinition</span>;
+
+    <span class="comment">/**
+     * The redirect URI (callback URI) to which the response will be sent by the OpenId
+     * Connect Provider. This URI must exactly match one of the Redirection URI values
+     * for the Client pre-registered at the OpenID Provider.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> redirectURI() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">${baseURL}/Callback</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. Automatically redirects the caller (the end-user) from
+     * the redirect URI defined by the &lt;code&gt;redirectURI&lt;/code&gt; attribute
+     * to the resource the end-user originally requested in a &quot;login to continue&quot;
+     * scenario.
+     *
+     * &lt;p&gt;
+     * After arriving at the original requested resource, the runtime restores
+     * the request as it originally happened, including cookies, headers, the
+     * request method and the request parameters in the same way as done when
+     * using the {@link LoginToContinue} feature.
+     *
+     * @return
+     */</span>
+    <span class="type">boolean</span> redirectToOriginalResource() <span class="keyword">default</span> <span class="predefined-constant">false</span>;
+
+    <span class="comment">/**
+     * Optional. Allows the &lt;code&gt;redirectToOriginalResource&lt;/code&gt; to be specified as
+     * Jakarta Expression Language expression.
+     * If set, overrides the value defined by the &lt;code&gt;redirectToOriginalResource&lt;/code&gt; value.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> redirectToOriginalResourceExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. The scope value defines the access privileges. The basic (and
+     * required) scope for OpenID Connect is the openid scope.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span><span class="type">[]</span> scope() <span class="keyword">default</span> {OPENID_SCOPE, EMAIL_SCOPE, PROFILE_SCOPE};
+
+    <span class="comment">/**
+     * Optional. Allows The scope value to be specified as Jakarta Expression Language expression.
+     * If Set, overrides any values set by scope.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> scopeExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. Response Type value defines the processing flow to be used. By
+     * default, the value is code (Authorization Code Flow).
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> responseType() <span class="keyword">default</span> CODE;
+
+    <span class="comment">/**
+     * Optional. Informs the Authorization Server of the mechanism to be used
+     * for returning parameters from the Authorization Endpoint.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> responseMode() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. The prompt value specifies whether the authorization server
+     * prompts the user for reauthentication and consent. If no value is
+     * specified and the user has not previously authorized access, then the
+     * user is shown a consent screen.
+     *
+     * @return
+     */</span>
+    PromptType<span class="type">[]</span> prompt() <span class="keyword">default</span> {};
+
+    <span class="comment">/**
+     * Optional. Allows the  prompt value to be specified as Jakarta Expression Language expression.
+     * If Set, overirdes the value defined by the prompt value.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> promptExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. The display value specifying how the authorization server
+     * displays the authentication and consent user interface pages.
+     *
+     * @return
+     */</span>
+    DisplayType display() <span class="keyword">default</span> DisplayType.PAGE;
+
+    <span class="comment">/**
+     * Optional. Allows the display value to be specified as Jakarta Expression Language expression.
+     * If set, overrides the value defined by display.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> displayExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. Enables string value used to mitigate replay attacks.
+     *
+     * @return
+     */</span>
+    <span class="type">boolean</span> useNonce() <span class="keyword">default</span> <span class="predefined-constant">true</span>;
+
+    <span class="comment">/**
+     * Optional. Allows the nonce activation to be specified as Jakarta Expression Language expression.
+     * If set, overrides the value defined by the useNonce value.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> useNonceExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. If enabled the state, nonce values and original requested resource data are stored in an HTTP session
+     * otherwise in cookies.
+     *
+     * @return
+     */</span>
+    <span class="type">boolean</span> useSession() <span class="keyword">default</span> <span class="predefined-constant">true</span>;
+
+    <span class="comment">/**
+     * Optional. Allows the configuration of the session through a Jakarta Expression Language expression.
+     * If set, overwrites the value of useSession value.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> useSessionExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * An array of extra options that will be sent to the OAuth provider.
+     * &lt;p&gt;
+     * These must be in the form of {@code &quot;key=value&quot;} i.e.
+     * &lt;code&gt; extraParameters={&quot;key1=value&quot;, &quot;key2=value2&quot;} &lt;/code&gt;
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span><span class="type">[]</span> extraParameters() <span class="keyword">default</span> {};
+
+    <span class="comment">/**
+     * Allows the extra parameters to be defined as a Jakarta Expression Language expression.
+     * If set, overrides the extraParameters value.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> extraParametersExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. Sets the connect timeout(in milliseconds) for Remote JWKS
+     * retrieval. Value must not be negative and if value is zero then infinite
+     * timeout.
+     *
+     * @return
+     */</span>
+    <span class="type">int</span> jwksConnectTimeout() <span class="keyword">default</span> <span class="integer">500</span>;
+
+    <span class="comment">/**
+     * Optional. Allows the connect timeout(in milliseconds) for Remote JWKS to be defined as
+     * Jakarta Expression Language expression.
+     * If set, overwrites the  jwksConnectTimeout value.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> jwksConnectTimeoutExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. Sets the read timeout(in milliseconds) for Remote JWKS
+     * retrieval. Value must not be negative and if value is zero then infinite
+     * timeout.
+     *
+     * @return
+     */</span>
+    <span class="type">int</span> jwksReadTimeout() <span class="keyword">default</span> <span class="integer">500</span>;
+
+    <span class="comment">/**
+     * Optional. Allows the read timeout(in milliseconds) for Remote JWKS
+     * retrieval to be defined as Jakarta Expression Language expression.
+     * If set, overwrites the jwksReadTimeout value.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> jwksReadTimeoutExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. Enables or disables the automatically performed refresh of
+     * Access and Refresh Token.
+     *
+     * @return {@code true}, if Access and Refresh Token shall be refreshed
+     * automatically when they are expired.
+     */</span>
+    <span class="type">boolean</span> tokenAutoRefresh() <span class="keyword">default</span> <span class="predefined-constant">false</span>;
+
+    <span class="comment">/**
+     * Optional. Allows the automatically performed refresh of
+     * Access and Refresh Token to be defined as Jakarta Expression Language expression.
+     * If set, overwrites the value of  tokenAutoRefresh.
+     */</span>
+    <span class="predefined-type">String</span> tokenAutoRefreshExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">/**
+     * Optional. Sets the minimum validity time in milliseconds the Access Token
+     * must be valid before it is considered expired. Value must not be
+     * negative.
+     *
+     * @return
+     */</span>
+    <span class="type">int</span> tokenMinValidity() <span class="keyword">default</span> <span class="integer">10</span> * <span class="integer">1000</span>;
+
+    <span class="comment">/**
+     * Optional. Allows the minimum validity time in milliseconds the Access Token
+     * must be valid before it is considered expired to be defined as Jakarta Expression Language expression.
+     * If Set, overwrites the tokenMinValidity value.
+     *
+     * @return
+     */</span>
+    <span class="predefined-type">String</span> tokenMinValidityExpression() <span class="keyword">default</span> <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Attributes of this annotation support Jakarta Expression Language evaluation as specified in <a href="#jakarta-expression-language-support">Jakarta Expression Language Support</a>.</p>
+</div>
+<div class="paragraph">
+<p>The expected behavior is defined in the following sections.</p>
+</div>
+<div class="sect4">
+<h5 id="metadata-configuration"><a class="anchor" href="#metadata-configuration"></a>2.4.4.1. Metadata configuration</h5>
+<div class="paragraph">
+<p>The OpenID Connect authentication mechanism needs metadata about the OpenID Connect Provider to function properly. The OpenID Connect specification defines that this data can be read from the <code>well known openid configuration endpoint</code> which resides at <code>[OpenID Connect Provider base URL].well-known/openid-configuration</code>.</p>
+</div>
+<div class="paragraph">
+<p>The following metadata values are required (since they are defined as required by the OpenID Specification):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Authorization endpoint</p>
+</li>
+<li>
+<p>Token endpoint</p>
+</li>
+<li>
+<p>JWKS URI</p>
+</li>
+<li>
+<p>Issuer of the tokens</p>
+</li>
+<li>
+<p>Supported Subject types</p>
+</li>
+<li>
+<p>Supported Response types</p>
+</li>
+<li>
+<p>Supported Id Token Signing Algorithms</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>OpenIdAuthenticationMechanismDefinition.providerURI</code> defines the base URL of the OpenID Connect Provider where the <code>/.well-known/openid-configuration</code> is appended to (or used as-is when it is the well known configuration URL itself). Reading the <code>well known openid configuration endpoint</code> can be done eagerly when the application is deployed or lazily at the time a secured URL is accessed for the first time. The values retrieved from the <code>well known openid configuration endpoint</code> can be overwritten if needed by using the <code>OpenIdAuthenticationMechanismDefinition.providerMetadata</code> structure.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="authentication-dialog"><a class="anchor" href="#authentication-dialog"></a>2.4.4.2. Authentication dialog</h5>
+<div class="paragraph">
+<p>The authentication dialog that the authentication mechanism starts and coordinates follows the flow as defined by the OpenID Connect specification. For
+completeness this is depicted below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="text"> *  +--------+                                                       +--------+
+ *  |        |                                                       |        |
+ *  |        |---------------(1) Authentication Request-------------&gt;|        |
+ *  |        |                                                       |        |
+ *  |        |       +--------+                                      |        |
+ *  |        |       |  End-  |&lt;--(2) Authenticates the End-User----&gt;|        |
+ *  |   RP   |       |  User  |                                      |   OP   |
+ *  |        |       +--------+                                      |        |
+ *  |        |                                                       |        |
+ *  |        |&lt;---------(3) Returns Authorization code---------------|        |
+ *  |        |                                                       |        |
+ *  |        |---------(3b)                                          |        |
+ *  |        |           | Redirect to original resource (if any)    |        |
+ *  |        |&lt;----------+                                           |        |
+ *  |        |                                                       |        |
+ *  |        |------------------------------------------------------&gt;|        |
+ *  |        |   (4) Request to TokenEndpoint for Access / Id Token  |        |
+ *  | OpenID |&lt;------------------------------------------------------| OpenID |
+ *  | Connect|                                                       | Connect|
+ *  | Client | -----------------------------------------------------&gt;|Provider|
+ *  |        |   (5) Fetch JWKS to validate ID Token                 |        |
+ *  |        |&lt;------------------------------------------------------|        |
+ *  |        |                                                       |        |
+ *  |        |------------------------------------------------------&gt;|        |
+ *  |        |   (6) Request to UserInfoEndpoint for End-User Claims |        |
+ *  |        |&lt;------------------------------------------------------|        |
+ *  |        |                                                       |        |
+ *  +--------+                                                       +--------+</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the authentication mechanism determines authentication is required, for instance when the caller ("end-user" in OpenID Connect terminology) tries to access a protected resource without being authenticated, or when the caller explicitly initiates authentication, without being authenticated for the current request, an authentication request needs to be assembled and send to the authentication endpoint of the OpenID Connect provider. This request corresponds to step (1) in the OpenID Connect diagram depicted above. The location of this endpoint is configured by the <code>providerURI</code> attribute of the <code>OpenIdAuthenticationMechanismDefinition</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>The following values need to be passed to this endpoint <em>unconditionally</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ClientId value as taken from <code>OpenIdAuthenticationMechanismDefinition.clientId</code></p>
+</li>
+<li>
+<p>Scope value as taken from <code>OpenIdAuthenticationMechanismDefinition.scope</code></p>
+</li>
+<li>
+<p>Response Type value as taken from <code>OpenIdAuthenticationMechanismDefinition.responseType</code></p>
+</li>
+<li>
+<p>State value, must be generated by the authentication mechanism</p>
+</li>
+<li>
+<p>RedirectURI value as taken from <code>OpenIdAuthenticationMechanismDefinition.redirectURI</code> (evaluated)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>redirectURI</code> attribute of the <code>OpenIdAuthenticationMechanismDefinition</code> annotation may contain the special 'expression' value <code>${baseURL}</code> and this must be resolved to the host and context path of the application for which the OpenID Connect authentication mechanism is installed. This requirement makes it easier to have an absolute URL as required by the OpenID Connect specification.</p>
+</div>
+<div class="paragraph">
+<p>The following values need to be passed to this endpoint <em>conditionally</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nonce, must be generated by the authentication mechanism if <code>OpenIdAuthenticationMechanismDefinition.useNonce</code> is set to <code>true</code></p>
+</li>
+<li>
+<p>Response Mode value as taken from <code>OpenIdAuthenticationMechanismDefinition.responseMode</code> if defined</p>
+</li>
+<li>
+<p>Display value as taken from <code>OpenIdAuthenticationMechanismDefinition.display</code> if defined</p>
+</li>
+<li>
+<p>Prompt value as taken from <code>OpenIdAuthenticationMechanismDefinition.prompt</code> if defined</p>
+</li>
+<li>
+<p>Extra values as taken from <code>OpenIdAuthenticationMechanismDefinition.extraParameters</code> if defined</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The State value, and also the Nonce value if requested, MUST be stored between requests so that these values can be validated when the OpenID Connect Provider later calls the supplied redirectURI. These values can either be stored serverside (in the HTTP Session) or clientside (as a Cookie). The value of the <code>OpenIdAuthenticationDefinition.useSession</code> attribute determines which one is used. In the case of storage through a Cookie, the Cookie must be defined as <code>HTTPonly</code> and must have the <code>Secure</code> flag set.</p>
+</div>
+<div class="paragraph">
+<p>Before the redirect to the authentication endpoint of the OpenID Connect Provider is performed, the URL plus request parameters requested by the caller on which the authentication dialog was triggered must be stored so that it later on can be retrieved by a call to <code>OpenIdContext.getStoredValue(request, response, OpenIdConstant.ORIGINAL_REQUEST)</code>.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, if <code>OpenIdAuthenticationMechanismDefinition.redirectToOriginalResource</code> is set to 'true' and the authentication flow is container-initiated (as opposed to caller-initiated authentication) the authentication mechanism must store the full request as well. The full request here means all data that makes up the <code>HttpServletRequest</code> so that the container can restore this request later on in a similar way to how the "<a href="#logintocontinue-annotation">LoginToContinue Annotation</a>" behaves.</p>
+</div>
+<div class="paragraph">
+<p>Step (3) in the OpenID Connect diagram depicted above, that is, when the OpenID Connect Provider calls us back, is detected by the authentication mechanism when a request contains a <code>state</code> request parameter. When that initial condition is satisfied, the following investigation and actions must be done by the authentication mechanism:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the request (without request parameters) does not match the <code>redirectURI</code>, or does not match the stored original URL (without request parameters) in case <code>AuthenticationMechanismDefinition.redirectToOriginalResource</code> is set to 'true', it must reply with a <code>CredentialValidationResult.NOT_VALIDATED_RESULT</code> value.</p>
+</li>
+<li>
+<p>If there is no State value stored, it must reply with a <code>CredentialValidationResult.NOT_VALIDATED_RESULT</code> value.</p>
+</li>
+<li>
+<p>If the State value in the request does not match the State value stored, it must reply with a <code>CredentialValidationResult.INVALID_RESULT</code> value.</p>
+</li>
+<li>
+<p>If the request contains a parameter <code>error</code>, the authentication by the OpenID Connect Provider has failed and the authentication mechanism must reply with a <code>CredentialValidationResult.INVALID_RESULT</code> value.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If none of the above listed additional conditions apply, the request is taken to be a valid callback and the authentication between the end-user (caller) and the OpenID Connect Provider is considered to have been successful. The authentication mechanism must now move to step (4) of the OpenID Connect diagram and mark this internally by clearing the stored State value (remove it from the HTTP session or Cookie).</p>
+</div>
+<div class="paragraph">
+<p>For step (4) the authentication mechanism itself must call the Token endpoint to retrieve an Access Token and ID Token. This constitutes a so-called server to server call, as the end-user (caller) MUST NOT be involved here.</p>
+</div>
+<div class="paragraph">
+<p>The call to the token endpoint must include the following parameters (as specified by the OpenID Connect specification):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The ClientId value as taken from <code>OpenIdAuthenticationMechanismDefinition.clientId</code></p>
+</li>
+<li>
+<p>The ClientSecret value as taken from <code>OpenIdAuthenticationMechanismDefinition.clientId</code></p>
+</li>
+<li>
+<p>The <code>grant_type</code> value set to the constant <code>authorization_code</code></p>
+</li>
+<li>
+<p>The RedirectURI value as taken from <code>OpenIdAuthenticationMechanismDefinition.redirectURI</code></p>
+</li>
+<li>
+<p>The code received from the OpenID Connect Provider in the callback request as the <code>code</code> request parameter</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the call to the Token endpoint is successful, it should return a "Token Response" in JSON format.</p>
+</div>
+<div class="paragraph">
+<p>When available in the "Token Response", the optional fields "refresh_token" and "expires_in" must be stored internally.</p>
+</div>
+<div class="paragraph">
+<p>The authentication mechanism also MUST create a <code>jakarta.security.enterprise.credential.Credential</code> instance holding this Token Response and MUST validate this token using the available <code>IdentityStoreHandler</code>.</p>
+</div>
+<div class="paragraph">
+<p>In order to correctly validate this token, the Jakarta Security implementation MUST install an <code>IdentityStore</code> capable of validating this credential. Note that in this version of the specification the type of both the <code>Credential</code> and <code>IdentityStore</code> are implementation specific. A future version of the specification may standardise these. For this reason the implementation specific identity store is now discussed in this chapter.</p>
+</div>
+<div class="paragraph">
+<p>The <code>IdentityStore</code> mentioned above must perform the following checks (also defined by the OpenID Connect specification):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>issuer</em> claim matches the issuer retrieved from the <code>well known openid configuration endpoint</code> or the <code>issuer</code> member of the <code>OpenIdProviderMetadata</code> construct.</p>
+</li>
+<li>
+<p>A <em>subject</em> claim is present and contains a value.</p>
+</li>
+<li>
+<p>The <em>audience</em> claim is present and is equal to the <code>OpenIdAuthenticationMechanismDefinition.clientId</code></p>
+</li>
+<li>
+<p>If multiple audience values are returned by the OpenID Connect Provider, an authorized party claim (<code>azp</code>) must be present.</p>
+</li>
+<li>
+<p>If an <em>authorized party</em> claim (<code>azp</code>) is present, it must match the <code>OpenIdAuthenticationMechanismDefinition.clientId</code></p>
+</li>
+<li>
+<p>The <em>expiration</em> claim must be present and must be 'in the future' (a clock skew might be considered or configured in an implementation specific way)</p>
+</li>
+<li>
+<p>The <em>issued at</em> claim must be present and must be 'in the past' (a clock skew might be considered or configured in an implementation specific way)</p>
+</li>
+<li>
+<p>The <em>not before</em> claim can be present and if defined, must be 'in the past' (a clock skew might be considered or configured in an implementation specific way)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the Identity Token, the following check must be performed additionally</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When <code>nonce</code> usage is configured, verify if the <code>nonce</code> value within the Identity Token is identical to the one that was specified in the authentication request.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="caller-name-and-groups"><a class="anchor" href="#caller-name-and-groups"></a>2.4.4.3. Caller name and groups</h5>
+<div class="paragraph">
+<p>A public OpenID Connect Provider generally has no knowledge about roles or groups an end-user (caller) has in a client application (relying party), but
+a (private) OpenID Connect Provider operated by the same organisation may have. Therefore this specification allows groups to be provided by the client application or by the OpenID Connect Provider (or both).</p>
+</div>
+<div class="paragraph">
+<p>Groups can be provided by the client application by means of an extra identity store with the <code>validationTypes</code> method returning <code>PROVIDE_GROUPS</code>.  Groups can be provided by the OpenID Connect Provider by means of additional claims.</p>
+</div>
+<div class="paragraph">
+<p>The claim name that is used to define the Caller Name and optionally the Caller Groups from the OpenID Connect Provider can be defined by the following attributes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Caller Name: <code>OpenIdAuthenticationMechanismDefinition.claimsDefinition.callerNameClaim</code></p>
+</li>
+<li>
+<p>Caller Groups: <code>OpenIdAuthenticationMechanismDefinition.claimsDefinition.callerGroupsClaim</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following logic is used to determine the value of each;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the specified claim exists and has a non-empty value in the Access Token, this Access Token claim value is taken.</p>
+</li>
+<li>
+<p>If not resolved yet, and the specified claim exists and has a non-empty value in the Identity Token, this Identity Token claim value is taken.</p>
+</li>
+<li>
+<p>If not resolved yet, and the specified claim exists and has a non-empty value in the User Info Token, this User Info Token claim value is taken.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An implementation may choose to not implement the call to the User Info Endpoint, in all cases or when a certain configuration value is set, since not all OpenID Connect Providers support this User Info Endpoint.</p>
+</div>
+<div class="paragraph">
+<p>The Caller Name and optionally any Caller Groups provided by the OpenID Connect Provider must be present in the <code>CredentialValidationResult</code> that is returned by the implementation specific identity store that validates the <code>Credential</code> holding the Token Response as mentioned above.</p>
+</div>
+<div class="sect5">
+<h6 id="remembering-authentication"><a class="anchor" href="#remembering-authentication"></a>Remembering authentication</h6>
+<div class="paragraph">
+<p>After the end-user (caller) has been successfully authenticated, the authentication mechanism must ensure that an authenticated session is established in a way functionally equivalent to the functionality provided by the "<a href="#autoapplysession-annotation">AutoApplySession Annotation</a>". An implementation may, but does not have to, use that annotation to fulfill this requirement.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="token-expiration"><a class="anchor" href="#token-expiration"></a>Token Expiration</h6>
+<div class="paragraph">
+<p>The authentication mechanism must check on each request for which there is an authenticated user if the Access Token or the Identity Token has expired.</p>
+</div>
+<div class="paragraph">
+<p>In case a token is expired, there are 3 options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The token is refreshed when <code>OpenIdAuthenticationMechanismDefinition.tokenAutoRefresh</code> set to <code>true</code></p>
+</li>
+<li>
+<p>A logout takes place when <code>OpenIdAuthenticationMechanismDefinition.logout.accessTokenExpiry</code> or <code>OpenIdAuthenticationMechanismDefinition.logout.identityTokenExpiry</code> set to <code>true</code> and the Access Token respectively Identity Token is expired</p>
+</li>
+<li>
+<p>The token expiration is ignored when none of the above conditions hold</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the case a refresh of the token is needed, the OpenID Connect provider refreshToken endpoint has to be called with the following parameters</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The ClientId value as taken from <code>OpenIdAuthenticationMechanismDefinition.clientId</code></p>
+</li>
+<li>
+<p>The ClientSecret value as taken from <code>OpenIdAuthenticationMechanismDefinition.clientId</code></p>
+</li>
+<li>
+<p>The <code>grant_type</code> value set to the constant <code>refresh_token</code></p>
+</li>
+<li>
+<p>the <code>refresh_token</code> value set to the previously stored value from the <code>refresh_token</code> field of the Token Response</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When the call is successful and a new Access Token is received, the same logic is applied as described above;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Validate tokens</p>
+</li>
+<li>
+<p>Store in context</p>
+</li>
+<li>
+<p>Determine the caller Name and Caller groups values (which can lead to more or less permissions in the application)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When the call is not successful, or when there is no previously stored <code>refresh_token</code> field of the Token Response, a logout should be initiated.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="logout"><a class="anchor" href="#logout"></a>Logout</h6>
+<div class="paragraph">
+<p>The <code>cleanSubject</code> method of the authentication mechanism has the following requirements</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Invalidate the HTTP Session, if one is available</p>
+</li>
+<li>
+<p>Call the EndSession endpoint of the OpenID Connect Provider if <code>OpenIdAuthenticationMechanismDefinition.logout.notifyProvider</code> is set to <code>true</code> and such EndSession endpoint is available. If <code>OpenIdAuthenticationMechanismDefinition.logout.redirectURI</code> is defined it should be passed along in this call.</p>
+</li>
+<li>
+<p>Redirect to <code>OpenIdAuthenticationMechanismDefinition.logout.redirectURI</code> if <code>OpenIdAuthenticationMechanismDefinition.logout.notifyProvider</code> is set to <code>false</code> and <code>OpenIdAuthenticationMechanismDefinition.logout.redirectURI</code> is defined</p>
+</li>
+<li>
+<p>Redirect to the OpenID Connect Provider Authentication endpoint for re-authentication if the previous two conditions don&#8217;t hold. Be aware that a correct <code>promptType</code> must be defined so that this option works properly. Without any prompt defined, the Openid Connect Provider can immediately redirect to the <em>callback</em>  (value of <code>OpenIdAuthenticationMechanismDefinition.redirectURI</code>) of the application and the end-user (caller) is then again authenticated within the application, effectively making logging out impossible.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="logintocontinue-annotation"><a class="anchor" href="#logintocontinue-annotation"></a>2.4.5. LoginToContinue Annotation</h4>
+<div class="paragraph">
+<p>The <em>LoginToContinue</em> annotation provides an application with the ability to declaratively add "login to continue" functionality to an authentication mechanism. "Login to continue" conceptually refers to the algorithm (flow) described by the numbered steps in [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>], Section 13.6.3, "Form Based Authentication".</p>
 </div>
 <div class="paragraph">
 <p>The annotation is also used to configure the login page, error page, and redirect/forward behavior for the built-in form-based authentication mechanisms (implicitly suggesting, but not requiring, that those authentication mechanisms use the backing interceptor for this annotation, which is described below).</p>
@@ -1448,7 +2107,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </div>
 </div>
 <div class="sect3">
-<h4 id="rememberme-annotation"><a class="anchor" href="#rememberme-annotation"></a>2.4.5. RememberMe Annotation</h4>
+<h4 id="rememberme-annotation"><a class="anchor" href="#rememberme-annotation"></a>2.4.6. RememberMe Annotation</h4>
 <div class="paragraph">
 <p>The <em>RememberMe</em> annotation is used to configure a <em>RememberMeIdentityStore</em>, which must be provided by the application. To use <em>RememberMe</em>, the application must provide an <em>HttpAuthenticationMechanism</em> and annotate the <em>HttpAuthenticationMechanism</em> with the <em>RememberMe</em> annotation.</p>
 </div>
@@ -1573,12 +2232,12 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </div>
 </div>
 <div class="sect3">
-<h4 id="autoapplysession-annotation"><a class="anchor" href="#autoapplysession-annotation"></a>2.4.6. AutoApplySession Annotation</h4>
+<h4 id="autoapplysession-annotation"><a class="anchor" href="#autoapplysession-annotation"></a>2.4.7. AutoApplySession Annotation</h4>
 <div class="paragraph">
 <p>The <em>AutoApplySession</em> annotation provides a way to declaratively enable Jakarta Authentication <em>jakarta.servlet.http.registerSession</em> behavior for an authentication mechanism, and automatically apply it for every request.</p>
 </div>
 <div class="paragraph">
-<p>The <em>jakarta.servlet.http.registerSession</em> property is described in Section 3.8.4 of [<a href="https://jakarta.ee/specifications/authentication/1.1/">AUTHENTICATION11</a>].</p>
+<p>The <em>jakarta.servlet.http.registerSession</em> property is described in Section 3.8.4 of [<a href="https://jakarta.ee/specifications/authentication/3.0/">AUTHENTICATION30</a>].</p>
 </div>
 <div class="paragraph">
 <p>This annotation embodies the concept of a caller being authenticated over a series of multiple HTTP requests (together, a "session"). The built-in form-based authentication mechanisms use this same concept. It is therefore implicitly suggested, but not required, that the form-based authentication mechanisms use the backing interceptor for this annotation to establish and maintain their sessions.</p>
@@ -1674,9 +2333,9 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </div>
 </div>
 <div class="sect3">
-<h4 id="implementation-notes"><a class="anchor" href="#implementation-notes"></a>2.4.7. Implementation Notes</h4>
+<h4 id="implementation-notes"><a class="anchor" href="#implementation-notes"></a>2.4.8. Implementation Notes</h4>
 <div class="paragraph">
-<p>Section 14.4, item 18, of [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>] describes requirements for supporting BASIC and FORM authentication via the web.xml <em>login-config</em> element. This specification requires that implementations of BASIC and FORM be made available as <em>HttpAuthenticationMechanism</em> CDI beans. The servlet container is NOT REQUIRED to implement separate and independent mechanisms to satisfy each requirement. Instead, the container MAY choose to provide a single mechanism, for each of BASIC and FORM, that meets the requirements of both specifications; i.e., an implementation that can be configured via <em>login-config</em>, but which is also made available as an <em>HttpAuthenticationMechanism</em> if the application uses the corresponding annotation. Equally, the container is NOT REQUIRED to provide a unified implementation, and MAY satisfy the two requirements using separate, independent implementations.</p>
+<p>Section 14.4, item 18, of [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>] describes requirements for supporting BASIC and FORM authentication via the web.xml <em>login-config</em> element. This specification requires that implementations of BASIC and FORM be made available as <em>HttpAuthenticationMechanism</em> CDI beans. The servlet container is NOT REQUIRED to implement separate and independent mechanisms to satisfy each requirement. Instead, the container MAY choose to provide a single mechanism, for each of BASIC and FORM, that meets the requirements of both specifications; i.e., an implementation that can be configured via <em>login-config</em>, but which is also made available as an <em>HttpAuthenticationMechanism</em> if the application uses the corresponding annotation. Equally, the container is NOT REQUIRED to provide a unified implementation, and MAY satisfy the two requirements using separate, independent implementations.</p>
 </div>
 <div class="paragraph">
 <p>An implementation of BASIC or FORM is NOT REQUIRED to support <em>IdentityStore</em> when configured via <em>login-config</em>, regardless of whether the container has provided a single mechanism or separate mechanisms to satisfy the <em>login-config</em> and <em>HttpAuthenticationMechanism</em> requirements. Implementations MAY support <em>IdentityStore</em> for all configuration methods.</p>
@@ -1686,7 +2345,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </div>
 </div>
 <div class="sect3">
-<h4 id="custom-form-notes"><a class="anchor" href="#custom-form-notes"></a>2.4.8. Custom FORM Notes</h4>
+<h4 id="custom-form-notes"><a class="anchor" href="#custom-form-notes"></a>2.4.9. Custom FORM Notes</h4>
 <div class="paragraph">
 <p>The Custom FORM variant is intended to align better with modern Jakarta EE technologies such as CDI, Jakarta Expression Language, Jakarta Bean Validation and specifically Jakarta Server Faces.</p>
 </div>
@@ -1768,9 +2427,9 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </div>
 </div>
 <div class="sect3">
-<h4 id="securitycontext-authenticate-notes"><a class="anchor" href="#securitycontext-authenticate-notes"></a>2.4.9. SecurityContext.authenticate() Notes</h4>
+<h4 id="securitycontext-authenticate-notes"><a class="anchor" href="#securitycontext-authenticate-notes"></a>2.4.10. SecurityContext.authenticate() Notes</h4>
 <div class="paragraph">
-<p>Any <em>LoginToContinue</em>-annotated <em>HttpAuthenticationMechanism</em>, as well as the two built-in FORM authentication mechanisms, can be triggered via a call to the <em>SecurityContext.authenticate()</em> method. This method is based on the <em>HttpServletRequest.authenticate()</em> method, as defined by [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>], but has been extended to support additional functionality defined by the Servlet Container Profile of [<a href="https://jakarta.ee/specifications/authentication/1.1/">AUTHENTICATION11</a>].</p>
+<p>Any <em>LoginToContinue</em>-annotated <em>HttpAuthenticationMechanism</em>, as well as the two built-in FORM authentication mechanisms, can be triggered via a call to the <em>SecurityContext.authenticate()</em> method. This method is based on the <em>HttpServletRequest.authenticate()</em> method, as defined by [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>], but has been extended to support additional functionality defined by the Servlet Container Profile of [<a href="https://jakarta.ee/specifications/authentication/3.0/">AUTHENTICATION30</a>].</p>
 </div>
 <div class="paragraph">
 <p>The extended behavior is facilitated by the <em>AuthenticationParameters</em> parameter passed to <em>SecurityContext.authenticate()</em>. <em>AuthenticationParameters</em> includes a <em>newAuthentication</em> field.</p>
@@ -1793,7 +2452,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </div>
 </div>
 <div class="sect3">
-<h4 id="autoapplysession-notes"><a class="anchor" href="#autoapplysession-notes"></a>2.4.10. AutoApplySession Notes</h4>
+<h4 id="autoapplysession-notes"><a class="anchor" href="#autoapplysession-notes"></a>2.4.11. AutoApplySession Notes</h4>
 <div class="paragraph">
 <p>As an example, idiomatic code for setting the <em>jakarta.servlet.http.registerSession</em> key as per the requirements is:</p>
 </div>
@@ -1817,19 +2476,19 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <div class="sect2">
 <h3 id="relationship-to-other-specifications"><a class="anchor" href="#relationship-to-other-specifications"></a>2.5. Relationship to other specifications</h3>
 <div class="paragraph">
-<p>An <em>HttpAuthenticationMechanism</em> is a CDI bean, as defined by Jakarta Contexts and Dependency Injection spec, version 2.0 [<a href="https://jakarta.ee/specifications/cdi/2.0/">CDI20</a>].</p>
+<p>An <em>HttpAuthenticationMechanism</em> is a CDI bean, as defined by Jakarta Contexts and Dependency Injection spec, version 4.0 [<a href="https://jakarta.ee/specifications/cdi/4.0/">CDI40</a>].</p>
 </div>
 <div class="paragraph">
-<p>The methods defined by the <em>HttpAuthenticationMechanism</em> closely map to the methods and semantics of a <em>ServerAuthModule</em>, as defined by the Servlet Container Profile of [<a href="https://jakarta.ee/specifications/authentication/1.1/">AUTHENTICATION11</a>]. (But an <em>HttpAuthenticationMechanism</em> is itself not a <em>ServerAuthModule</em>.) The servlet container MUST use Jakarta Authentication mechanisms to arrange for an <em>HttpAuthenticationMechanism</em> to be placed in service.</p>
+<p>The methods defined by the <em>HttpAuthenticationMechanism</em> closely map to the methods and semantics of a <em>ServerAuthModule</em>, as defined by the Servlet Container Profile of [<a href="https://jakarta.ee/specifications/authentication/3.0/">AUTHENTICATION30</a>]. (But an <em>HttpAuthenticationMechanism</em> is itself not a <em>ServerAuthModule</em>.) The servlet container MUST use Jakarta Authentication mechanisms to arrange for an <em>HttpAuthenticationMechanism</em> to be placed in service.</p>
 </div>
 <div class="paragraph">
 <p>This specification mandates that when a <em>ServerAuthModule</em> is called by the Servlet container, CDI services (such as the <em>BeanManager</em>) MUST be fully available, and all scopes that are defined to be active during the <em>service()</em> method of a servlet, or during the <em>doFilter()</em> method of a servlet filter, MUST be active. Specifically this means that the request, session, and application scopes MUST be active, and that a <em>ServerAuthModule</em> method such as <em>validateRequest()</em> MUST be able to obtain a reference to the CDI <em>BeanManager</em> programmatically (for example, by doing a JNDI lookup), and MUST be able to use that reference to obtain a valid request-scoped, session-scoped, or application-scoped bean. This specification does not mandate that a <em>ServerAuthModule</em> must itself be a CDI bean, or that a <em>ServerAuthModule</em> must be injectable.</p>
 </div>
 <div class="paragraph">
-<p>An <em>HttpAuthenticationMechanism</em> implementation is logically equivalent to a built-in authentication mechanism as defined by [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>] (i.e., HTTP Basic Authentication, HTTP Digest Authentication, Form Based Authentication, and HTTPS Client Authentication); more specifically, it corresponds to an "additional container authentication mechanism", as described in section 13.6.5 of [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>].</p>
+<p>An <em>HttpAuthenticationMechanism</em> implementation is logically equivalent to a built-in authentication mechanism as defined by [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>] (i.e., HTTP Basic Authentication, HTTP Digest Authentication, Form Based Authentication, and HTTPS Client Authentication); more specifically, it corresponds to an "additional container authentication mechanism", as described in section 13.6.5 of [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>].</p>
 </div>
 <div class="paragraph">
-<p>The BASIC and FORM authentication mechanisms as defined by this specification are logically equivalent to the similarly named authentication mechanisms in [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>], respectively sections 13.6.1, "HTTP Basic Authentication", and 13.6.3, "Form Based Authentication".</p>
+<p>The BASIC and FORM authentication mechanisms as defined by this specification are logically equivalent to the similarly named authentication mechanisms in [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>], respectively sections 13.6.1, "HTTP Basic Authentication", and 13.6.3, "Form Based Authentication".</p>
 </div>
 </div>
 </div>
@@ -2377,7 +3036,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <div class="sect2">
 <h3 id="relationship-to-other-specifications-2"><a class="anchor" href="#relationship-to-other-specifications-2"></a>3.5. Relationship to Other Specifications</h3>
 <div class="paragraph">
-<p><em>IdentityStore</em> and <em>IdentityStoreHandler</em> implementations are CDI beans, as defined by [<a href="https://jakarta.ee/specifications/cdi/2.0/">CDI20</a>].</p>
+<p><em>IdentityStore</em> and <em>IdentityStoreHandler</em> implementations are CDI beans, as defined by [<a href="https://jakarta.ee/specifications/cdi/4.0/">CDI40</a>].</p>
 </div>
 </div>
 </div>
@@ -2386,7 +3045,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <h2 id="security-context"><a class="anchor" href="#security-context"></a>4. Security Context</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This chapter describes the <em>SecurityContext</em> interface and contract.</p>
+<p>This chapter describes the main <em>SecurityContext</em> interface and contract and other context interfaces and their contract.</p>
 </div>
 <div class="sect2">
 <h3 id="introduction-3"><a class="anchor" href="#introduction-3"></a>4.1. Introduction</h3>
@@ -2441,7 +3100,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </div>
 </div>
 <div class="paragraph">
-<p>The <em>hasAccessToWebResource()</em> method determines if the caller has access to the specified web resource for the specified HTTP methods, as determined by the security constraints configured for the application. See section 13.8 of [<a href="https://jakarta.ee/specifications/servlet/4.0/">SERVLET40</a>] for a description of web application security constraints.</p>
+<p>The <em>hasAccessToWebResource()</em> method determines if the caller has access to the specified web resource for the specified HTTP methods, as determined by the security constraints configured for the application. See section 13.8 of [<a href="https://jakarta.ee/specifications/servlet/6.0/">SERVLET60</a>] for a description of web application security constraints.</p>
 </div>
 <div class="paragraph">
 <p>The resource parameter is an <em>URLPatternSpec</em> that identifies an application-specific web resource. See the javadoc for more detail.</p>
@@ -2493,7 +3152,7 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 <div class="sect2">
 <h3 id="relationship-to-other-specifications-3"><a class="anchor" href="#relationship-to-other-specifications-3"></a>4.5. Relationship to Other Specifications</h3>
 <div class="paragraph">
-<p>The <em>SecurityContext</em> implementation is a CDI bean, as defined by [<a href="https://jakarta.ee/specifications/cdi/2.0/">CDI20</a>].</p>
+<p>The <em>SecurityContext</em> implementation is a CDI bean, as defined by [<a href="https://jakarta.ee/specifications/cdi/4.0/">CDI40</a>].</p>
 </div>
 <div class="paragraph">
 <p>Various specifications in Jakarta EE provide similar or even identical methods to those provided be the <em>SecurityContext</em>. It is the intention of this specification to eventually supersede those methods and provide a cross-specification, platform alternative. The following gives an overview:</p>
@@ -2524,382 +3183,13 @@ AuthenticationStatus secureResponse(HttpServletRequest request,
 </ul>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="openid"><a class="anchor" href="#openid"></a>5. Open Id Connect Support</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Jakarta Security API supports the integration of the OpenId Connect protocol within an application.  The idea is to define the required parameters for the OpenId Connect provider and the implementation provides the necessary steps to call the endpoints and integrate with the IdentityStore concept.</p>
-</div>
 <div class="sect2">
-<h3 id="define-the-openid-connect-provider-details"><a class="anchor" href="#define-the-openid-connect-provider-details"></a>5.1. Define the OpenId Connect Provider details</h3>
+<h3 id="other-context-interfaces"><a class="anchor" href="#other-context-interfaces"></a>4.6. Other context interfaces</h3>
+<div class="sect3">
+<h4 id="openidcontext"><a class="anchor" href="#openidcontext"></a>4.6.1. OpenIdContext</h4>
 <div class="paragraph">
-<p>The <code>jakarta.security.enterprise.identitystore.OpenIdAuthenticationDefinition.providerURI</code> defines the base URL of the Provider where the <code>/.well-known/openid-configuration</code> is appended to (or used as it is when it is the well known configuration URL itself)</p>
+<p>An implementation must provide a CDI bean for the <code>OpenIdContext</code> interface with scope <code>SessionScoped</code>. This bean is used to programmatically access data received from an OpenID Connect Provider when the OpenID Connect authentication mechanism (via the <a href="#openid-connect-annotation">OpenID Connect Annotation</a>) has been used to authenticate the caller.</p>
 </div>
-<div class="paragraph">
-<p>Reading the <code>well known openid configuration endpoint</code> can be done when the application is deployed or at the time a secured URL is accessed for the first time.</p>
-</div>
-<div class="paragraph">
-<p>The values retrieved from the <code>well known openid configuration endpoint</code> can be overwritten by the definitions made in the <code>OpenIdProviderMetadata</code> structure.</p>
-</div>
-<div class="paragraph">
-<p>Both the providerURI member and the members in the OpenIdProviderMetadata support values or EL expressions that are resolved to retrieve the actual values used by the implementation.</p>
-</div>
-<div class="paragraph">
-<p>The following values are required (since they are defined as required by the OpenId Specification) and must be validated to verify if they are specified.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Authorization endpoint</p>
-</li>
-<li>
-<p>Token endpoint</p>
-</li>
-<li>
-<p>JWKS URI</p>
-</li>
-<li>
-<p>Issuer of the tokens</p>
-</li>
-<li>
-<p>Supported Subject types</p>
-</li>
-<li>
-<p>Supported Response types</p>
-</li>
-<li>
-<p>Supported Id Token Signing Algorithms</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>These values can come from the <code>well known openid configuration endpoint</code> or from the <code>OpenIdProviderMetadata</code> structure.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="define-the-openid-connect-client-details"><a class="anchor" href="#define-the-openid-connect-client-details"></a>5.2. Define the OpenId Connect Client details</h3>
-<div class="paragraph">
-<p>The <code>clientId</code> and the <code>clientSecret</code> are two important parameters to identify the client application for the provider.  They need to be specified as members of the <code>OpenIdAuthenticationDefinition</code> authentication.  They can either be defined within the member itself (not recommended) or as EL expression so that the value can be read from otside of the application.</p>
-</div>
-<div class="paragraph">
-<p>Other client parameters that are also required but have a default value defined within the annotation:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Redirect URI to which the response of the authentication request must be sent. This URI can be used by the developer to redirect the authenticated user to the original requested secured URL or any other part of the application.<br>
-The annotation member has a default value <code>${baseURL}/Callback</code>.</p>
-</li>
-<li>
-<p>JWKS connect timeout must be a valid positive value.</p>
-</li>
-<li>
-<p>JWKS read timeout must be a valid positive value.</p>
-</li>
-<li>
-<p>Response Type must be defined and valid based on the supported values by the server. A default value of <code>code</code> is defined.</p>
-</li>
-<li>
-<p>Scope(s) must be defined and valid based on the supported values by the server. A default value of <code>openid,email,profile</code> is defined.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Since both timeouts are a number, an <code>Expression</code> member is provided to define an EL expression.  If the Expression member has a valid, the resolved value overrides the number based member.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="additional-properties"><a class="anchor" href="#additional-properties"></a>5.3. Additional properties</h3>
-<div class="paragraph">
-<p>The other members defined on the <code>OpenIdAuthenticationDefinition</code> must be sent to the OpenId Connect Provider so that the configuration can be picked up.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>responseMode: Defines the mechanism to be used for returning parameters from the Authorization Endpoint.</p>
-</li>
-<li>
-<p>prompt: The value specifies whether the authorization server prompts the user for reauthentication and consent.</p>
-</li>
-<li>
-<p>display: This value specifies how the authorization server displays the authentication and consent user interface pages.</p>
-</li>
-<li>
-<p>useNonce: Defines if an additional value is created to mitigate replay attacks.</p>
-</li>
-<li>
-<p>useSession: If specified, the HTTP session is used to store the state and nonce values. Otherwise a cookie.</p>
-</li>
-<li>
-<p>extraParameters: additianal key value pairs that are sent to the Provider to cover Provider specific functionality.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="openidauthenticationmechanism"><a class="anchor" href="#openidauthenticationmechanism"></a>6. OpenIdAuthenticationMechanism</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>An implementation is required to implement an <code>HttpAuthenticationMechanism</code> that interact with the OpenId Connect Provider using the OpenId protocol.</p>
-</div>
-<div class="paragraph">
-<p>If the request is related to a protected resource and no user is authenticated for the request, an authentication request need to be assembled and send to the authentication endpoint of the provider. Following configured values need to be passed to the endpoint:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>ClientId value</p>
-</li>
-<li>
-<p>Scope value</p>
-</li>
-<li>
-<p>Response Type value</p>
-</li>
-<li>
-<p>State value, automatically generated</p>
-</li>
-<li>
-<p>RedirectURI value.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The redirectURI can contain the 'expression' value <code>${baseURL}</code> and this must be replaced by the host and context path. This requirement makes it easier to have an absolute URL as required by the OpenId Connect specification. The <code>OpenIdAuthenticationDefinition.redirectURI</code> member also supports Jakarta EL Expression values to configure the <code>redirectURI</code>.</p>
-</div>
-<div class="paragraph">
-<p>Following configuration values need to be supplied to the authorisation call when they are defined</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Nonce, automatically generated</p>
-</li>
-<li>
-<p>Response Mode value</p>
-</li>
-<li>
-<p>Display value</p>
-</li>
-<li>
-<p>Prompt value</p>
-</li>
-<li>
-<p>Extra extra</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The State value, and also the Nonce value if requested, will be stored so the values can be validated when the OpenId Connect Provider calls the supplied redirectURI.<br>
-These values can be either stored in the HTTP Session context or as a Cookie.  The value of the member OpenIdAuthenticationDefinition.useSession determines what is used.  In the case of a storage through a Cookie, it must be defined as <code>HTTPonly</code> and must have the <code>Secure</code> flag set.</p>
-</div>
-<div class="paragraph">
-<p>Before the redirect to the authentication endpoint of the Provider is performed, the URL requested by the caller must be stored so that it later on can be retrieved by a call to <code>OpenIdContext.getStoredValue(request, response, OpenIdConstant.ORIGINAL_REQUEST)</code>.</p>
-</div>
-<div class="paragraph">
-<p>If a request is detected that contains a <code>state</code> request parameter, it might be a call to the redirectURI by the Openid Connect Provider and the following logic must be implemented.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If the call does not match the <code>redirectURI</code>, it must reply with a <code>CredentialValidationResult.NOT_VALIDATED_RESULT</code> value.</p>
-</li>
-<li>
-<p>If there is no State value stored, it must reply with a <code>CredentialValidationResult.NOT_VALIDATED_RESULT</code> value.</p>
-</li>
-<li>
-<p>If the State value on the request does not match the State value stored, it must reply with a <code>CredentialValidationResult.INVALID_RESULT</code> value.</p>
-</li>
-<li>
-<p>If the request contains a parameter <code>error</code>, the authentication by the Provider failed and the authentication must reply with a <code>CredentialValidationResult.INVALID_RESULT</code> value.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If none of the above conditions apply, the authentication is considered as successful, and the OpenId Tokens can be requested (see further). The stored State value must be cleared (removed from HTTP session or Cookie must be removed)</p>
-</div>
-<div class="sect2">
-<h3 id="get-tokens"><a class="anchor" href="#get-tokens"></a>6.1. Get Tokens</h3>
-<div class="paragraph">
-<p>Based on the value of the code received on the RedirectURI callback method, the implementation must call the Token endpoint to retrieve an Access Token and ID Token.</p>
-</div>
-<div class="paragraph">
-<p>The call to the token endpoint must include the following parameters (as specified by the OpenId Connect specification)</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The ClientId configured for the application.</p>
-</li>
-<li>
-<p>The ClientSecret configured for the application.</p>
-</li>
-<li>
-<p>The <code>grant_type</code> parameter (<em>authorization_code</em>)</p>
-</li>
-<li>
-<p>The redirectURI value</p>
-</li>
-<li>
-<p>The code received from the Provider.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If the call to the Token endpoint is successful, the following checks must be performed (also defined by the OpenId Connect specification)</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The issuer claim matches the issuer retrieved from the <code>well known openid configuration endpoint</code> or the <code>issuer</code> member of the <code>OpenIdProviderMetadata</code> construct.</p>
-</li>
-<li>
-<p>A Subject claim is present and contains a value.</p>
-</li>
-<li>
-<p>The Audience claim is present and is equal to the clientId that we configured.</p>
-</li>
-<li>
-<p>If multiple audience values are returned by the Provider, an authorized party claim (<code>azp</code>) must be present.</p>
-</li>
-<li>
-<p>If an authorized party claim (<code>azp</code>) is present, it must match the clientId that we configured.</p>
-</li>
-<li>
-<p>The expiration claim must be present and must be 'in the future' (a clock skew might be considered or configured in an implementation specific way)</p>
-</li>
-<li>
-<p>The issued at claim must be present and must be 'in the past' (a clock skew might be considered or configured in an implementation specific way)</p>
-</li>
-<li>
-<p>The <em>not before</em> claim can be present and if defined, must be 'in the past' (a clock skew might be considered or configured in an implementation specific way)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For the Identity Token, the following check must be performed additionally</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>When <code>nonce</code> usage is configured, verify if the <code>nonce</code> value within the Identity Token is identical to the one that was specified in the authentication request.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="caller-name-and-groups"><a class="anchor" href="#caller-name-and-groups"></a>6.2. Caller name and groups</h3>
-<div class="paragraph">
-<p>The Caller Name and the Caller Groups must be present in the <code>CredentialValidationResult</code> as defined by the Security API specification.</p>
-</div>
-<div class="paragraph">
-<p>The claim name that is used to define the Caller Name and the Caller Groups can be defined by the members <code>ClaimsDefinition.callerNameClaim</code> and <code>ClaimsDefinition.callerGroupsClaim</code>.  The following logic is sued to determine the value;</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If the specified claim exists and has a non-empty value in the Access Token, this Access Token claim value is taken.</p>
-</li>
-<li>
-<p>If not resolved yet, and the specified claim exists and has a non-empty value in the Identity Token, this Identity Token claim value is taken.</p>
-</li>
-<li>
-<p>If not resolved yet, and the specified claim exists and has a non-empty value in the User Info Token, this User Info Token claim value is taken.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>An implementation may choose to not implement the call to the User Info Endpoint, in all cases or when a certain configuration value is set, since not all OpenId Connect Providers support this User Info Endpoint.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="openidcontext"><a class="anchor" href="#openidcontext"></a>7. OpenIdContext</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>An implementation must provide an CDI bean for the <code>OpenIdContext</code> interface with scope <code>SessionScoped</code>.</p>
-</div>
-<div class="paragraph">
-<p>The javadoc of the class defines the values and some additional requirments when retrieving values through the bean.</p>
-</div>
-<div class="paragraph">
-<p>The programmatic logout option is described further in the document.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="refreshtoken"><a class="anchor" href="#refreshtoken"></a>8. RefreshToken</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Authenthentication Mechanism must check for each call to a protected resource when there is an authenticated user if the Access Token or the Identity Token is expired.</p>
-</div>
-<div class="paragraph">
-<p>The member <code>OpenIdAuthenticationDefinition.tokenAutoRefresh</code> determines if the in the case a token is expired  a re-authentication is attempted based on the RefreshToken.  This option can be used to configure the usage of Refresh Token based on the fact on the support of the OpenId Connect Provider supports RefreshTokens.</p>
-</div>
-<div class="paragraph">
-<p>The <code>LogoutDefinition</code> can be used to determine if the expiration time of the Access Token or the Identity Token is considered (or both).</p>
-</div>
-<div class="paragraph">
-<p>In the case the <em>autoRefresh</em> is configured, and the token that is indicated on the <code>LogoutDefinition</code> is expired, the RefreshToken is used to send it to yhe OpenId Connect provider refreshToken endpoint.</p>
-</div>
-<div class="paragraph">
-<p>The OpenId Specification requires that also the <em>clientId</em> and the <em>clientSecret</em> are sent to this endpoint.</p>
-</div>
-<div class="paragraph">
-<p>When the call is successful and a new Access Token is received, the same logic is applied as described above;</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Validate tokens</p>
-</li>
-<li>
-<p>Store in context</p>
-</li>
-<li>
-<p>Determine the caller Name and Caller groups values (which can lead to more or less permissions in the application)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="logout"><a class="anchor" href="#logout"></a>9. Logout</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A programmatic logout can be performed through the <code>OpenIdContext</code> instance that can be retrieved from the CDI subsystem.</p>
-</div>
-<div class="paragraph">
-<p>A call to this method must always result in a logout from the current HTTP request and an invalidation of an HTTP Session is that one is available.</p>
-</div>
-<div class="paragraph">
-<p>When the <code>LogoutDefinition.notifyProvider</code> flag (or through the expression member) is set, a RP-Initiated Logout is performed.  The EndSession endpoint of the OpenId Connect provider is called, optionally containing the URL defined in the <code>LogoutDefinition.redirectURI</code> member.</p>
-</div>
-<div class="paragraph">
-<p>If the provider is not to be notified, but a <code>LogoutDefinition.redirectURI</code> is defined, a redirect to this URL must be performed.</p>
-</div>
-<div class="paragraph">
-<p>Otherwise, a call to the authentication endpoint is performed. Be aware that a correct <code>promptType</code> must be defined so that this option works properly.  Without any prompt defined, the Openid Connect Provider can immediately redirect to the <em>callback</em>  of the application and user is again authenticated within the application.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="callback"><a class="anchor" href="#callback"></a>10. Callback</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As indicated earlier, a <em>callback</em> or redirect URL is required to be defined.  The developer is responsible for creating a resource mapped to the redirectURL like a Servlet.</p>
-</div>
-<div class="paragraph">
-<p>Within the Servlet implementation, the developer can redirect ro the original requested URL by the user, using the key <code>OpenIdConstant.ORIGINAL_REQUEST</code>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Optional&lt;String&gt; originalRequest = context.getStoredValue(request, response, OpenIdConstant.ORIGINAL_REQUEST);</pre>
 </div>
 </div>
 </div>
@@ -2912,30 +3202,30 @@ These values can be either stored in the HTTP Session context or as a Cookie.  T
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">[CDI20]</dt>
+<dt class="hdlist1">[CDI40]</dt>
 <dd>
-<p>Jakarta Contexts and Dependency Injection, version 2.0<br>
-<a href="https://jakarta.ee/specifications/cdi/2.0/" class="bare">https://jakarta.ee/specifications/cdi/2.0/</a></p>
+<p>Jakarta Contexts and Dependency Injection, version 4.0<br>
+<a href="https://jakarta.ee/specifications/cdi/4.0/" class="bare">https://jakarta.ee/specifications/cdi/4.0/</a></p>
 </dd>
 <dt class="hdlist1">[JEB32]</dt>
 <dd>
 <p>Jakarta Enterprise Beans, version 3.2<br>
 <a href="https://jakarta.ee/specifications/enterprise-beans/3.2/" class="bare">https://jakarta.ee/specifications/enterprise-beans/3.2/</a></p>
 </dd>
-<dt class="hdlist1">[EL30]</dt>
+<dt class="hdlist1">[EL50]</dt>
 <dd>
-<p>Jakarta Expression Language, version 3.0<br>
-<a href="https://jakarta.ee/specifications/expression-language/3.0/" class="bare">https://jakarta.ee/specifications/expression-language/3.0/</a></p>
+<p>Jakarta Expression Language, version 5.0<br>
+<a href="https://jakarta.ee/specifications/expression-language/5.0/" class="bare">https://jakarta.ee/specifications/expression-language/5.0/</a></p>
 </dd>
-<dt class="hdlist1">[AUTHORIZATION15]</dt>
+<dt class="hdlist1">[AUTHORIZATION21]</dt>
 <dd>
-<p>Jakarta Authorization, version 1.5<br>
-<a href="https://jakarta.ee/specifications/authorization/1.5/" class="bare">https://jakarta.ee/specifications/authorization/1.5/</a></p>
+<p>Jakarta Authorization, version 2.1<br>
+<a href="https://jakarta.ee/specifications/authorization/2.1/" class="bare">https://jakarta.ee/specifications/authorization/2.1/</a></p>
 </dd>
-<dt class="hdlist1">[AUTHENTICATION11]</dt>
+<dt class="hdlist1">[AUTHENTICATION30]</dt>
 <dd>
-<p>Jakarta Authentication, version 1.1<br>
-<a href="https://jakarta.ee/specifications/authentication/1.1/" class="bare">https://jakarta.ee/specifications/authentication/1.1/</a></p>
+<p>Jakarta Authentication, version 3.0<br>
+<a href="https://jakarta.ee/specifications/authentication/3.0/" class="bare">https://jakarta.ee/specifications/authentication/3.0/</a></p>
 </dd>
 <dt class="hdlist1">[RFC2119]</dt>
 <dd>
@@ -2949,13 +3239,13 @@ These values can be either stored in the HTTP Session context or as a Cookie.  T
 </dd>
 <dt class="hdlist1">[SECAPI]</dt>
 <dd>
-<p>Jakarta Security, version 1.0<br>
-<a href="https://jakarta.ee/specifications/security/1.0/" class="bare">https://jakarta.ee/specifications/security/1.0/</a></p>
+<p>Jakarta Security, version 3.0<br>
+<a href="https://jakarta.ee/specifications/security/3.0/" class="bare">https://jakarta.ee/specifications/security/3.0/</a></p>
 </dd>
-<dt class="hdlist1">[SERVLET40]</dt>
+<dt class="hdlist1">[SERVLET60]</dt>
 <dd>
-<p>Jakarta Servlet, version 3.0<br>
-<a href="https://jakarta.ee/specifications/servlet/4.0/" class="bare">https://jakarta.ee/specifications/servlet/4.0/</a></p>
+<p>Jakarta Servlet, version 6.0<br>
+<a href="https://jakarta.ee/specifications/servlet/6.0/" class="bare">https://jakarta.ee/specifications/servlet/6.0/</a></p>
 </dd>
 <dt class="hdlist1">[SHIROTERM]</dt>
 <dd>
@@ -2970,7 +3260,7 @@ These values can be either stored in the HTTP Session context or as a Cookie.  T
 <div id="footer">
 <div id="footer-text">
  3.0<br>
-Last updated 2022-03-01 00:32:53 +0100
+Last updated 2022-03-25 18:03:51 +0100
 </div>
 </div>
 </body>
