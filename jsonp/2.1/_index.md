@@ -1,18 +1,37 @@
 ---
-title: "Jakarta JSON Processing 2.1 (under development)"
+title: "Jakarta JSON Processing 2.1"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta JSON Processing defines a Java(R) based framework for parsing, generating, transforming, and
 querying JSON documents.
 
-The goal of this release is to provide standalone API jar fully independent
-on the particular implementation, to provide features requested by the community
-and implement requirements by other specification included in Jakarta EE 10.
+This release contains following changes:
 
-The JDK version required will be aligned with Jakarta EE 10.
+* added API to create JsonValue from primitive types
+* added API to create get JsonValue from java.lang.Number type
+* added API to get current event from the JsonParser
+* added standard property to handle duplicated keys
+* clarified behaviour of JsonObjectBuilder.build() method
+* clarified behaviour of JsonGenerator.close() method
+* changed type bounds of a Map argument in Json.createObjectBuilder(Map): JsonObjectBuilder method
+* added definition of exceptions thrown by JsonParser.getValue()/getObject()/getArray() methods
+* removed (default) implementation from the specification API artifact and moved the implementation to the separate project
+* provided standalone TCK based on Apache Maven
+
+Requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 * [Jakarta JSON Processing 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsonp/releases/2.1)
+  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta JSON Processing 2.1 Specification Document](./apidocs) (Javadoc is the specification document of this project)
+* [Jakarta JSON Processing 2.1 Javadoc](./apidocs)
+* [Jakarta JSON Processing 2.1 TCK](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+  * [jakarta.json:jakarta.json-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/2.1.0/jar)
+
+# Compatible Implementations
+
+* [Eclipse Parsson 1.1.0](https://github.com/eclipse-ee4j/parsson/releases/tag/1.1.0)
 
 # Ballots
 
