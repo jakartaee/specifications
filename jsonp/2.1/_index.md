@@ -1,6 +1,6 @@
 ---
 title: "Jakarta JSON Processing 2.1"
-date: 2021-04-15
+date: 2022-03-27
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta JSON Processing defines a Java(R) based framework for parsing, generating, transforming, and
@@ -53,3 +53,25 @@ The Specification Committee Ballot concluded successfully on 2021-06-22 with the
 |                                    | **Total**           |  10 |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01870.html)
+
+## Release Review
+The Specification Committee Ballot concluded successfully on 2022-03-24 with the following results.
+
+Release Review
+
+
+| Representative                     | Representative for:     | Vote |
+|------------------------------------|-------------------------|------|
+| Kenji Kazumura                     | 	Fujitsu	              | +1   |
+| Tom Watson, Emily Jiang            | 	IBM                   | +1   |
+| Ed Bratt, Dmitry Kornilov          | 	Oracle                | +1   |
+| Andrew Pielage, Petr Aubrecht      | 	Payara                | +1   |
+| David Blevins, Jean-Louis Monteiro | 	Tomitribe             | +1   |
+| Ivar Grimstad                      | 	EE4J PMC              | +1   |
+| Marcelo Ancelmo, Martijn Verburg   | 	Participant Members   ||
+| Werner Keil                        | 	Committer Members     ||
+| Jun Qian                           | 	Enterprise Members    | +1   |
+| Zhai Luchao                        | 	Enterprise Members    ||
+|                                    | **Total**               | 7    |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02274.html)
