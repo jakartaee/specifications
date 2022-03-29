@@ -3,7 +3,7 @@ title: "Jakarta Interceptors 2.1"
 date: 2022-01-26
 summary: "Release for Jakarta EE 10"
 ---
-Jakarta Interceptors dpwdefines a means of interposing on business method invocations and specific
+Jakarta Interceptors defines a means of interposing on business method invocations and specific
 events—such as lifecycle events and timeout events—that occur on instances of Jakarta EE components
 and other managed classes.
 
