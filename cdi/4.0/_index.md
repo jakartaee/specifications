@@ -27,6 +27,7 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 * [Weld 5.0.0.CR2](https://weld.cdi-spec.org/download/)
 
 =======
+
 The Jakarta Contexts and Dependency Injection 4.0 goals for this release are:
 
 * Split the existing 3.0 specification into pieces that separate out requirements based on the target runtime container support; Java SE, Jakarta Servlet, Jakarta Message Service, etc.
@@ -53,6 +54,7 @@ Please reference that ballot for the official results.
 
 ## Release Review
 =======
+
 The Specification Committee Ballot concluded successfully on 2021-10-01 with the following results.
 
 | Representative                                 | Representative for: | Vote   |
