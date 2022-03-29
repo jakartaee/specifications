@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Context Dependency Injection 4.0"
-date: 2022-02-22
+date: 2022-03-28
 summary: "Release for Jakarta EE 10"
 ---
 
@@ -13,7 +13,7 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 * [Jakarta Contexts Dependency Injection 4.0 Javadoc](./apidocs)
 * [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.zip)
 ([sig](TBD_post_ballot),
-[sha](7671d6895eb57b74b52e46b63adfeb57adf965dd91efc673db21a781fedc452f),
+[sha](905cc2ccd35ab3900737b8ec1c65e1c0b53f1d19ed5503d229342f1f739cc2cc),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
@@ -24,7 +24,7 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 
 # Compatible Implementations
 
-* [Weld 5.0.0.CR1](https://weld.cdi-spec.org/download/)
+* [Weld 5.0.0.CR2](https://weld.cdi-spec.org/download/)
 
 =======
 The Jakarta Contexts and Dependency Injection 4.0 goals for this release are:
