@@ -45,6 +45,26 @@ Requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 # Ballots
 
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2022-04-06 with the following results.
+
+| Representative                                 | Representative for: | Vote   |
+|------------------------------------------------|---------------------|--------|
+| Kenji Kazumura                                 | Fujitsu             |    +1  |
+| Tom Watson, Emily Jiang                        | IBM                 |    +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1  |
+| Andrew Pielage, Matt Gill                      | Payara              |    +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1  |
+| Ivar Grimstad                                  | EE4J PMC            |    +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |    +1  |
+| Werner Keil                                    | Committer Members   |    +1  |
+| Jun Qian                                       | Enterprise Members  |    +1  |
+| Zhai Luchao                                    | Enterprise Members  |    +1  |
+|                                                | **Total**           | **10** |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02317.html)
+
 ## Plan Review
 
 The Specification Committee Ballot concluded successfully on 2021-04-28 with the following results.
