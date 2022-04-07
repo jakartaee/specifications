@@ -42,6 +42,7 @@ Requires Java SE 11 or newer (aligned with Jakarta EE 10).
 # Compatible Implementations
 
 * [EclipseLink 4.0.0-M3](https://jakarta.oss.sonatype.org/content/repositories/staging/org/eclipse/persistence/eclipselink/4.0.0-M3/eclipselink-4.0.0-M3.zip)
+* [Hibernate ORM 6.0.0.Final](https://hibernate.org/orm/releases/6.0/)
 
 # Ballots
 
