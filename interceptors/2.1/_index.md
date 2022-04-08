@@ -1,26 +1,29 @@
 ---
 title: "Jakarta Interceptors 2.1"
-date: 2022-01-12
+date: 2022-01-26
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Interceptors defines a means of interposing on business method invocations and specific
 events—such as lifecycle events and timeout events—that occur on instances of Jakarta EE components
 and other managed classes.
 
-The 2.1 release updates dependencies for EE 10 and add a JPMS module-info descriptor.
+The 2.1 release updates dependencies for EE 10 and adds a JPMS module-info descriptor.
 
 * [Jakarta Interceptors 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.interceptors/releases/2.1)
-* [Jakarta Interceptors 2.1 Specification Document](./interceptors-spec-2.1.pdf) (PDF)
-* [Jakarta Interceptors 2.1 Specification Document](./interceptors-spec-2.1.html) (HTML)
+* [Jakarta Interceptors 2.1 Specification Document](./jakarta-interceptors-spec-2.1.pdf) (PDF)
+* [Jakarta Interceptors 2.1 Specification Document](./jakarta-interceptors-spec-2.1.html) (HTML)
 * [Jakarta Interceptors 2.1 Javadoc](./apidocs)
-* [Jakarta EE Platform 10 TCK](TBD) ([sig](TBD),[sha](TBD),[pub](TBD))
+* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.zip)
+   ([sig](TBD_post_ballot),
+   [sha](7671d6895eb57b74b52e46b63adfeb57adf965dd91efc673db21a781fedc452f),
+   [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0](TBD)
+  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.interceptor/jakarta.interceptor-api/2.1.0/jar)
 
 
 # Compatible Implementations
 
-* [Weld 5.0.](https://weld.cdi-spec.org/download/)
+* [Weld 5.0.0.Beta1](https://weld.cdi-spec.org/download/)
 
 # Ballots
 
