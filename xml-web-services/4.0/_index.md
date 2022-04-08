@@ -70,6 +70,6 @@ The Specification Committee Ballot concluded successfully on 2021-05-17 with the
 | Marcelo Ancelmo, Martijn Verburg               | Participant Members |    +1   |
 | Werner Keil                                    | Committer Members   |    +1   |
 | Dr. Jun Qian                                   | Enterprise Members  |    +1   |
-|                                                | **Total**           |   **10** |
+|                                                | **Total**           |   **9** |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01658.html)
