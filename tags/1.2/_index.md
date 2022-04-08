@@ -12,7 +12,7 @@ existing custom tags with Jakarta Standard Tag Library tags.
 * [Jakarta Standard Tag Library 1.2 Specification Document](./tags-1.2-spec.html) (HTML)
 * [Jakarta Standard Tag Library 1.2 Javadoc](./apidocs)
 * [Jakarta Standard Tag Library 1.2 Tagdoc](./tagdocs)
-* [Jakarta Standard Tag Library 1.2 TCK](https://download.eclipse.org/jakartaee/tags/1.2/jakarta-tags-tck-1.2.0.zip) ([sig](https://download.eclipse.org/jakartaee/tags/1.2/jakarta-tags-tck-1.2.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/tags/1.2/jakarta-tags-tck-1.2.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Standard Tag Library 1.2 TCK](https://download.eclipse.org/jakartaee/tags/1.2/jakarta-tags-tck-1.2.0.zip) ([sig](https://download.eclipse.org/jakartaee/tags/1.2/jakarta-tags-tck-1.2.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/tags/1.2/jakarta-tags-tck-1.2.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:1.2.7](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/1.2.7/jar)
 

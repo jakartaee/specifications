@@ -9,7 +9,7 @@ enable a declarative style of programming that applies across a variety of Java 
 * [Jakarta Annotations 1.3 Specification Document](./annotations-spec-1.3.pdf) (PDF)
 * [Jakarta Annotations 1.3 Specification Document](./annotations-spec-1.3.html) (HTML)
 * [Jakarta Annotations 1.3 Javadoc](./apidocs)
-* [Jakarta Annotations 1.3 TCK](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Annotations 1.3 TCK](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.annotation:jakarta.annotation-api:jar:1.3.5](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/1.3.5/jar)
 

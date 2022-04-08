@@ -21,7 +21,7 @@ The JDK version required will be aligned with Jakarta EE 10.
 * [Jakarta Activation 2.1 TCK](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.0.zip)
   ([sig](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.0.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.0.zip.sha256),
-  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.activation:jakarta.activation-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.1.0/jar)
 

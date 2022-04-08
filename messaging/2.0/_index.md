@@ -9,7 +9,7 @@ Jakarta Messaging describes a means for Java applications to create, send, and r
 * [Jakarta Messaging 2.0 Specification Document](./messaging-spec-2.0.pdf) (PDF)
 * [Jakarta Messaging 2.0 Specification Document](./messaging-spec-2.0.html) (HTML)
 * [Jakarta Messaging 2.0 Javadoc](./apidocs)
-* [Jakarta Messaging 2.0 TCK](https://download.eclipse.org/jakartaee/messaging/2.0/jakarta-messaging-tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/messaging/2.0/jakarta-messaging-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/messaging/2.0/jakarta-messaging-tck-2.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Messaging 2.0 TCK](https://download.eclipse.org/jakartaee/messaging/2.0/jakarta-messaging-tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/messaging/2.0/jakarta-messaging-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/messaging/2.0/jakarta-messaging-tck-2.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.jms:jakarta.jms-api:jar:2.0.3](https://search.maven.org/artifact/jakarta.jms/jakarta.jms-api/2.0.3/jar)
 

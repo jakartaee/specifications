@@ -23,7 +23,7 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 * [Jakarta JSON Binding 3.0 Specification Document](./jakarta-jsonb-spec-3.0.pdf) (PDF)
 * [Jakarta JSON Binding 3.0 Specification Document](./jakarta-jsonb-spec-3.0.html) (HTML)
 * [Jakarta JSON Binding 3.0 Javadoc](./apidocs)
-* [Jakarta JSON Binding 3.0 TCK](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta JSON Binding 3.0 TCK](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.json.bind:jakarta.json.bind-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.json.bind/jakarta.json.bind-api/3.0.0/jar)
 
