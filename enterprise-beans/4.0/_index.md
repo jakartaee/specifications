@@ -16,7 +16,7 @@ Jakarta Enterprise Beans defines an architecture for the development and deploym
 * [Jakarta Enterprise Beans 4.0 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip)
 ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),
-[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.ejb:jakarta.ejb-api:jar:4.0.0](https://repo.maven.apache.org/maven2/jakarta/ejb/jakarta.ejb-api/4.0.0/)
 

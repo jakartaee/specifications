@@ -24,7 +24,7 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 * [Jakarta SOAP Attachments 3.0 Specification Document](./jakarta-soap-spec-3.0.pdf) (PDF)
 * [Jakarta SOAP Attachments 3.0 Specification Document](./jakarta-soap-spec-3.0.html) (HTML)
 * [Jakarta SOAP Attachments 3.0 Javadoc](./apidocs)
-* [Jakarta SOAP Attachments 3.0 TCK](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta SOAP Attachments 3.0 TCK](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.xml.soap/jakarta.xml.soap-api/3.0.0/jar)
 

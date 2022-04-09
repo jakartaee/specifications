@@ -10,7 +10,7 @@ and other managed classes.
 * [Jakarta Interceptors 1.2 Specification Document](./interceptors-spec-1.2.pdf) (PDF)
 * [Jakarta Interceptors 1.2 Specification Document](./interceptors-spec-1.2.html) (HTML)
 * [Jakarta Interceptors 1.2 Javadoc](./apidocs)
-* [Jakarta EE Platform 8 TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta EE Platform 8 TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.interceptor:jakarta.interceptor-api:jar:1.2.5](https://search.maven.org/artifact/jakarta.interceptor/jakarta.interceptor-api/1.2.5/jar)
 
