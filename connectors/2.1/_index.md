@@ -15,7 +15,7 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 * Maven coordinates
   * [jakarta.resource:jakarta.resource-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.resource/jakarta.resource-api/2.1.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-  * [Eclipse GlassFish 7.0](https://glassfish.org/download)
+  * [Eclipse GlassFish 7.0 M4](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/7.0.0-M4/glassfish-7.0.0-M4.zip)
 
 # Compatible Implementations
 
