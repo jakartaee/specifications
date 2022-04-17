@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Connectors 2.1"
-date: 2021-02-26
+date: 2022-04-17
 summary: "Jakarta EE 10 Release"
 ---
 The Jakarta Connectors specification defines a standard architecture for Jakarta EE application components to connect to Enterprise Information Systems.
