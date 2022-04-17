@@ -11,7 +11,7 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 * [Jakarta Connectors 2.1 Specification Document](./jakarta-connectors-spec-2.1.html) (HTML)
 * [Jakarta Connectors 2.1 Javadoc](./apidocs)
 * [Jakarta Connectors 2.1 XML Schema](https://jakarta.ee/xml/ns/jakartaee/connector_2_0.xsd)
-* [Jakarta Connectors 2.1TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee10/staged/eftl/jakarta-connectors-tck-2.1.0.zip)
+* [Jakarta Connectors 2.1 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee10/staged/eftl/jakarta-connectors-tck-2.1.0.zip)
 * Maven coordinates
   * [jakarta.resource:jakarta.resource-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.resource/jakarta.resource-api/2.1.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
