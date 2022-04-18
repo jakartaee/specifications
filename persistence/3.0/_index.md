@@ -26,6 +26,7 @@ and object/relational mapping in Java(R) environments.
 
 * [EclipseLink 3.0.0](https://www.eclipse.org/eclipselink)
 * [Hibernate ORM 5.5.0.Final](https://hibernate.org/orm/releases/5.5/)
+* [Hibernate ORM 6.0.0.Final](https://hibernate.org/orm/releases/6.0/)
 
 # Ballots
 
