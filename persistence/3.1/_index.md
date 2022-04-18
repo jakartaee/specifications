@@ -38,6 +38,8 @@ Requires Java SE 11 or newer (aligned with Jakarta EE 10).
 * [Jakarta Persistence 3.1 TCK](https://download.eclipse.org/jakartaee/persistence/3.1/jakarta-persistence-tck-3.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.1/jakarta-persistence-tck-3.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.1/jakarta-persistence-tck-3.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.persistence:jakarta.persistence-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.1.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
+    * [EclipseLink 4.0.0-M3](https://jakarta.oss.sonatype.org/content/repositories/staging/org/eclipse/persistence/eclipselink/4.0.0-M3/eclipselink-4.0.0-M3.zip)
 
 # Compatible Implementations
 
