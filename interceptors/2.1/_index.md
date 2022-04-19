@@ -40,7 +40,7 @@ The Specification Committee Ballot concluded successfully on 2022-04-06 with the
 | Ivar Grimstad                      | EE4J PMC            | +1     |
 | Marcelo Ancelmo, Martijn Verburg   | Participant Members | +1     |
 | Werner Keil                        | Committer Members   | +1     |
-| Jun Qian                           | Enterprise Members  |      |
+| Jun Qian                           | Enterprise Members  | no vote |
 | Zhai Luchao                        | Enterprise Members  | +1     |  
 |                                    | **Total**           | **9** |
 
