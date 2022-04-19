@@ -1,10 +1,30 @@
 ---
-title: "Jakarta Context Dependency Injection 4.0 (Under Development)"
-date: 2022-01-05
+title: "Jakarta Context Dependency Injection 4.0"
+date: 2022-03-28
 summary: "Release for Jakarta EE 10"
 ---
 
 Jakarta Contexts Dependency Injection specifies a means for obtaining objects in such a way as to maximize reusability, testability and maintainability compared to traditional approaches such as constructors, factories, and service locators (e.g., JNDI).
+
+* [Jakarta Contexts Dependency Injection 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/4.0)
+* [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.pdf) (PDF)
+* [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.html) (HTML)
+* [Jakarta Contexts Dependency Injection 4.0 Javadoc](./apidocs)
+* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.zip)
+([sig](TBD_post_ballot),
+[sha](905cc2ccd35ab3900737b8ec1c65e1c0b53f1d19ed5503d229342f1f739cc2cc),
+[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+
+* Maven coordinates
+  * [jakarta.enterprise:jakarta.cdi-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.0/jar)
+
+* Schemas
+  * [XML Schema for the CDI 4.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd)
+
+# Compatible Implementations
+
+* [Weld 5.0.0.CR2](https://weld.cdi-spec.org/download/)
 
 The Jakarta Contexts and Dependency Injection 4.0 goals for this release are:
 
@@ -21,25 +41,6 @@ The Jakarta Contexts and Dependency Injection 4.0 goals for this release are:
     * [All issues with a Lite label](https://github.com/eclipse-ee4j/cdi/issues?q=is%3Aissue+label%3ALite)
 
 
-* [Jakarta Contexts Dependency Injection 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/4.0)
-<!-- 
-* [Jakarta Contexts Dependency Injection 4.0 Specification Document]() (PDF)
-* [Jakarta Contexts Dependency Injection 4.0 Specification Document]() (HTML)
-* [Jakarta Contexts Dependency Injection 4.0 Javadoc]()
-* [Jakarta Contexts Dependency Injection 4.0 TCK]()
-([sig](),
-[sha](),
-[pub]()
-* Maven coordinates
-  * [jakarta.enterprise:jakarta.cdi-api:jar:4.0.0]()
-* Schemas
-  * [XML Schema for the CDI 4.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd)
--->
-
-
-# Compatible Implementations
-
-* TBD
 
 # Ballots
 
@@ -65,6 +66,7 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 
 ## Plan Review
 
+This Specification Project's Plan Review was covered by the [CDI 4.0 Plan Review](https://projects.eclipse.org/projects/ee4j.cdi/releases/4.0/plan).  
 The Specification Committee Ballot concluded successfully on 2021-10-01 with the following results.
 
 | Representative                                 | Representative for: | Vote   |
