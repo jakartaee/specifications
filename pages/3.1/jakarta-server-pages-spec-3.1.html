@@ -445,7 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jakarta Server Pages Team, https://projects.eclipse.org/projects/ee4j.jsp</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jsp-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jsp-dev</a></span><br>
 <span id="revnumber"> 3.1,</span>
-<span id="revdate">November 23, 2021</span>
+<span id="revdate">April 21, 2022</span>
 <br><span id="revremark"></span>
 </div>
 <div id="toc" class="toc2">
@@ -912,11 +912,11 @@ Version: 3.1
 
 Status: Final Release
 
-Release: November 23, 2021</pre>
+Release: April 21, 2022</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Copyright (c) 2018, 2021 Eclipse Foundation.</p>
+<p>Copyright (c) 2018, 2022 Eclipse Foundation.</p>
 </div>
 </div>
 </div>
@@ -1005,7 +1005,7 @@ remain with copyright holders.</p>
 <h2 id="jakarta-server-pages-specification-version-3-1"><a class="anchor" href="#jakarta-server-pages-specification-version-3-1"></a>Jakarta Server Pages Specification, Version 3.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Copyright (c) 2013, 2020 Oracle and/or its affiliates and others.
+<p>Copyright (c) 2013, 2022 Oracle and/or its affiliates and others.
 All rights reserved.</p>
 </div>
 <div class="paragraph">
@@ -1015,7 +1015,7 @@ registered trademarks of Oracle and/or its affiliates. Other names
 may be trademarks of their respective owners.</p>
 </div>
 <div class="paragraph">
-<p>The Jakarta Server Pages Team - November 23, 2021</p>
+<p>The Jakarta Server Pages Team - April 21, 2022</p>
 </div>
 <div class="paragraph">
 <p>Comments to: <a href="mailto:jsp-dev@eclipse.org">jsp-dev@eclipse.org</a></p>
@@ -2517,7 +2517,7 @@ that described by Chapter 6 of the XML 1.0 specification, available at
 the following URL:</p>
 </div>
 <div class="paragraph">
-<p><a href="http://www.w3c.org/TR/2000/REC-xml-20001006#sec-notation" class="bare">http://www.w3c.org/TR/2000/REC-xml-20001006#sec-notation</a></p>
+<p><a href="https://www.w3.org/TR/xml/#sec-notation" class="bare">https://www.w3.org/TR/xml/#sec-notation</a></p>
 </div>
 <div class="paragraph">
 <p>In addition, the following notes and rules
@@ -8140,162 +8140,20 @@ names and values must be encoded as per the content type
 <div class="sect2">
 <h3 id="jsp:plugin"><a class="anchor" href="#jsp:plugin"></a>5.7. &lt;jsp:plugin&gt;</h3>
 <div class="paragraph">
-<p>The plugin action enables a JSP page author
-to generate HTML that contains the appropriate client browser dependent
-constructs (<code>OBJECT</code> or <code>EMBED</code>) that will result in the download of
-the Java Plugin software (if required) and subsequent execution of the
-Applet or JavaBeans component specified therein.</p>
+<p>The HTML elements that the <code>jsp:plugin</code> action is translated to are no
+longer supported by any major browser. Therefore, as of version 3.1 of
+this specification, the <code>jsp:plugin</code> action has been deprecated and
+will be removed in a future version.</p>
 </div>
 <div class="paragraph">
-<p>The <code>&lt;jsp:plugin&gt;</code> tag is replaced by either
-an <code>&lt;object&gt;</code> or <code>&lt;embed&gt;</code> tag, as appropriate for the requesting user
-agent, and emitted into the output stream of the response. The
-attributes of the <code>&lt;jsp:plugin&gt;</code> tag provide configuration data for the
-presentation of the element, as indicated in the table below.</p>
+<p>As of version 3.1 of this specification, the JSP container must ignore
+the <code>jsp:plugin</code> action rather than generate HTML that contains either
+the <code>OBJECT</code> or <code>EMBED</code> constructs.</p>
 </div>
 <div class="paragraph">
-<p>The <code>&lt;jsp:params&gt;</code> action containing one or
-more <code>&lt;jsp:param&gt;</code> actions provides parameters to the Applet or
-JavaBeans component.</p>
+<p>The JSP container must still validate that the content of any
+<code>jsp:plugin</code> action is consistent with the <a href="#jsp-syntax-grammar">Section 1.3.10, &#8220;JSP Syntax Grammar&#8221;</a>.</p>
 </div>
-<div class="paragraph">
-<p>The <code>&lt;jsp:fallback&gt;</code> element indicates the
-content to be used by the client browser if the plugin cannot be started
-(either because <code>OBJECT</code> or <code>EMBED</code> is not supported by the client
-browser or due to some other problem). If the plugin can start but the
-Applet or JavaBeans component cannot be found or started, a plugin
-specific message will be presented to the user, most likely a popup
-window reporting a <code>ClassNotFoundException</code>.</p>
-</div>
-<div class="paragraph">
-<p>The actual plugin code need not be bundled
-with the JSP container and a reference to Sun’s plugin location can be
-used instead, although some vendors will choose to include the plugin
-for the benefit of their customers.</p>
-</div>
-<div class="paragraph">
-<p><em>Examples</em></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="jsp"> &lt;jsp:plugin type=&quot;applet&quot; code=&quot;Molecule.class&quot; codebase=&quot;/html&quot; &gt;
-   &lt;jsp:params&gt;
-     &lt;jsp:param
-         name=&quot;molecule&quot;
-         value=&quot;molecules/benzene.mol&quot;/&gt;
-   &lt;/jsp:params&gt;
-   &lt;jsp:fallback&gt;
-     &lt;p&gt; unable to start plugin &lt;/p&gt;
-   &lt;/jsp:fallback&gt;
- &lt;/jsp:plugin&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><em>Syntax</em></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="jsp">....
-&lt;jsp:plugin type=&quot;bean|applet&quot;
-    code=&quot;objectCode&quot;
-    codebase=&quot;objectCodebase&quot;
-    { align=&quot;alignment&quot;       }
-    { archive=&quot;archiveList&quot;   }
-    { height=&quot;height&quot;         }
-    { hspace=&quot;hspace&quot;         }
-    { jreversion=&quot;jreversion&quot; }
-    { name=&quot;componentName&quot;    }
-    { vspace=&quot;vspace&quot;         }
-    { title=&quot;title&quot;           }
-    { width=&quot;width&quot;           }
-    { nspluginurl=&quot;url&quot;       }
-    { iepluginurl=&quot;url&quot;       }
-    { mayscript='true|false'  } &gt;
-
-    { &lt;jsp:params&gt;
-        { &lt;jsp:param name=&quot;paramName&quot; value=&quot;paramValue&quot; /&gt; }+
-      &lt;/jsp:params&gt; }
-
-    { &lt;jsp:fallback&gt; arbitrary_text &lt;/jsp:fallback&gt; }
-&lt;/jsp:plugin&gt;
-....</code></pre>
-</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title"><strong>Table JSP.5-6</strong> jsp:plugin Attributes</caption>
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifies the type of the component; a bean,
-or an Applet.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>codebase</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>align</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>archive</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.<br>
-Accepts a run-time expression value.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hspace</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jreversion</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifies the spec version number of the JRE
-the component requires in order to operate; the default is: <code>1.2</code>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vspace</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by the HTML spec.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>width</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.<br>
-Accepts a run-time expression value.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nspluginurl</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URL where JRE plugin can be downloaded for
-Netscape Navigator, default is implementation defined.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iepluginurl</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URL where JRE plugin can be downloaded for
-IE, default is implementation defined.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mayscript</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As defined by HTML spec.</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="sect2">
 <h3 id="jspparams"><a class="anchor" href="#jspparams"></a>5.8. &lt;jsp:params&gt;</h3>
@@ -8306,8 +8164,12 @@ IE, default is implementation defined.</p></td>
 context shall result in a translation-time error.</p>
 </div>
 <div class="paragraph">
-<p>The semantics and syntax of <code>jsp:params</code> are
-described in <a href="#jsp:plugin">Section 5.7, &#8220;&lt;jsp:plugin&gt;&#8221;</a>.</p>
+<p>As of version 3.1 of this specification, the <code>jsp:params</code> action is
+deprecated and will be removed in a future version.</p>
+</div>
+<div class="paragraph">
+<p>The JSP container must still validate that the content of any
+<code>jsp:params</code> action is consistent with the <a href="#jsp-syntax-grammar">Section 1.3.10, &#8220;JSP Syntax Grammar&#8221;</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -8319,8 +8181,12 @@ described in <a href="#jsp:plugin">Section 5.7, &#8220;&lt;jsp:plugin&gt;&#8221;
 context shall result in a translation-time error.</p>
 </div>
 <div class="paragraph">
-<p>The semantics and syntax of <code>jsp:fallback</code>
-are described in <a href="#jsp:plugin">Section 5.7, &#8220;&lt;jsp:plugin&gt;&#8221;</a>.</p>
+<p>As of version 3.1 of this specification, the <code>jsp:fallback</code> action is
+deprecated and will be removed in a future version.</p>
+</div>
+<div class="paragraph">
+<p>The JSP container must still validate that the content of any
+<code>jsp:fallback</code> action is consistent with the <a href="#jsp-syntax-grammar">Section 1.3.10, &#8220;JSP Syntax Grammar&#8221;</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -8461,7 +8327,7 @@ which attributes are to be output with that element:</p>
 <p>The attributes are:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title"><strong>Table JSP.5-7</strong> Attributes for the <code>&lt;jsp:attribute&gt;</code> standard action</caption>
+<caption class="title"><strong>Table JSP.5-6</strong> Attributes for the <code>&lt;jsp:attribute&gt;</code> standard action</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -8647,7 +8513,7 @@ standard action.</p>
 <p>The attributes are:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title"><strong>Table JSP.5-8</strong> Attributes for the <code>&lt;jsp:invoke&gt;</code> standard action</caption>
+<caption class="title"><strong>Table JSP.5-7</strong> Attributes for the <code>&lt;jsp:invoke&gt;</code> standard action</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -8728,7 +8594,7 @@ standard action.</p>
 <p>The attributes are:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title"><strong>Table JSP.5-9</strong> Attributes for the <code>&lt;jsp:doBody&gt;</code> standard action</caption>
+<caption class="title"><strong>Table JSP.5-8</strong> Attributes for the <code>&lt;jsp:doBody&gt;</code> standard action</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -8846,7 +8712,7 @@ has a special meaning when used in the body of <code>&lt;jsp:element&gt;</code>.
 <a href="#jsp:attribute">Section 5.10, &#8220;&lt;jsp:attribute&gt;&#8221;</a> for more details..</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title"><strong>Table JSP.5-10</strong> Attributes for the <code>&lt;jsp:element&gt;</code> standard action</caption>
+<caption class="title"><strong>Table JSP.5-9</strong> Attributes for the <code>&lt;jsp:element&gt;</code> standard action</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -9197,7 +9063,7 @@ doctypeDecl ::=   ( doctype-root-element=&quot;rootElement&quot;
 jsp:output:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title"><strong>Table JSP.5-11</strong> Attribute for the <code>&lt;jsp:output&gt;</code> standard action</caption>
+<caption class="title"><strong>Table JSP.5-10</strong> Attribute for the <code>&lt;jsp:output&gt;</code> standard action</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -15758,7 +15624,12 @@ unresolved variables.</p>
 <li>
 <p>Deprecate the <code>isThreadSafe</code> page directive attribute as the related Servlet
 API interface <code>SingleThreadModel</code> has been removed as of the Servlet 6.0
-specification.e</p>
+specification.</p>
+</li>
+<li>
+<p><a href="https://github.com/eclipse-ee4j/jsp-api/issues/226">#226</a>
+Deprecate the <code>jsp:plugin</code> action and related actions as the associated HTML
+elements are no longer supported by any major borowser.</p>
 </li>
 </ul>
 </div>
