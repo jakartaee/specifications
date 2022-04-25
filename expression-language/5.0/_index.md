@@ -38,7 +38,7 @@ The following TCK updates will be required:
 
 # Compatible Implementations
 
-* Eclipse Tyrus 2.1.0-M3
+* TBD
 
 # Ballots
 
