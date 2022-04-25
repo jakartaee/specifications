@@ -20,7 +20,7 @@ for the WebSocket protocol (RFC6455).
 
 # Compatible Implementations
 
-* TBD
+* Eclipse Tyrus 2.1.0-M3
 
 # Ballots
 
