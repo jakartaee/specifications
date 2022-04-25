@@ -1,6 +1,6 @@
 ---
 title: "Jakarta WebSocket 2.1"
-date: 2022-02-28
+date: 2022-05-31
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta WebSocket defines a API for Server and Client Endpoints
