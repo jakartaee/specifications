@@ -15,7 +15,7 @@ Jakarta Expression Language defines an expression language for Java applications
   * [jakarta.el:jakarta.el-api:jar:5.0.0](https://search.maven.org/artifact/jakarta.el/jakarta.el-api/5.0.0/jar)
 
 # Compatible Implementations
-* Eclipse Expressly 5.0.0-M2
+* [Eclipse Expressly 5.0.0-M2](https://github.com/eclipse-ee4j/expressly)
 
 # Ballots
 
