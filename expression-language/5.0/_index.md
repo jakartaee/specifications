@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Expression Language 5.0"
-date: 2021-11-08
+date: 2021-05-31
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Expression Language defines an expression language for Java applications.
@@ -15,7 +15,7 @@ Jakarta Expression Language defines an expression language for Java applications
   * [jakarta.el:jakarta.el-api:jar:5.0.0](https://search.maven.org/artifact/jakarta.el/jakarta.el-api/5.0.0/jar)
 
 # Compatible Implementations
-* Glassfish 7.0
+* Eclipse Expressly 5.0.0-M2
 
 # Ballots
 
