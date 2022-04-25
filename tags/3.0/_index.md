@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Standard Tag Library 3.0"
-date: 2022-02-24
+date: 2022-04-11
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Standard Tag Library encapsulates as simple tags the core functionality common to many Web applications.
