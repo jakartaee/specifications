@@ -20,8 +20,7 @@ Jakarta Servlet defines a server-side API for handling HTTP requests and respons
 
 # Compatible Implementations
 
-* Glassfish (version TBD)
-* Apache Tomcat 10.1.x ?
+* Glassfish 7.0.0-M4
 
 # Ballots
 
