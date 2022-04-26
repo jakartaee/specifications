@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Concurrency 3.0"
-date: 2022-02-28
+date: 2022-04-27
 summary: "Jakarta EE 10 Release"
 ---
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
@@ -26,17 +26,17 @@ Jakarta Concurrency 3.0 contains the following features:
 * [Jakarta Concurrency 3.0 Specification Document](./jakarta-concurrency-spec-3.0.pdf) (PDF)
 * [Jakarta Concurrency 3.0 Specification Document](./jakarta-concurrency-spec-3.0.html) (HTML)
 * [Jakarta Concurrency 3.0 Javadoc](./apidocs)
-* Jakarta Concurrency 3.0 TCK (includes signature tests) [staging](https://jakarta.oss.sonatype.org/content/groups/staging/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-tck/3.0.0/)
-  * [mirrored](https://public.dhe.ibm.com/ibmdl/export/pub/software/olrepo/io/openliberty/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-tck/3.0.0.20220126/jakarta.enterprise.concurrent-tck-3.0.0.20220126.jar)
-  * [SHA](https://jakarta.oss.sonatype.org/content/groups/staging/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-tck/3.0.0/jakarta.enterprise.concurrent-tck-3.0.0.pom.sha1)
+
+
+* [Jakarta Concurrency 3.0 TCK](https://download.eclipse.org/ee4j/cu/jakartaee10/promoted/eftl/concurrency-tck-3.0.0.zip), [sha](https://download.eclipse.org/ee4j/cu/jakartaee10/promoted/eftl/concurrency-tck-3.0.0.info) 2fe905b8adfab903a6c5954453e67fbc3ed583b0e313edef7f09d18b7eddd0ee, [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+  * Signature tests are included with the TCK and run automatically as part of it
 * Maven coordinates
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.0.0](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.0.0/jar) Currently located on [staging](https://jakarta.oss.sonatype.org/content/groups/staging/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/3.0.0/) until release is approved, and then we will push it to Maven.
-  * [TCK User's Guide](https://github.com/eclipse-ee4j/concurrency-api/tree/master/tck)
 
 
 # Compatible Implementations
 
-* [Open Liberty 22.0.0.3-beta](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/beta/2022-02-01_1901/openliberty-22.0.0.3-beta.zip)
+* [Open Liberty 22.0.0.5-beta](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/beta/22.0.0.5-beta/openliberty-22.0.0.5-beta.zip)
 
 # Ballots
 
