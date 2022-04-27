@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"jakarta.servlet","l":"jakarta.servlet"},{"m":"jakarta.servlet","l":"jakarta.servlet.annotation"},{"m":"jakarta.servlet","l":"jakarta.servlet.descriptor"},{"m":"jakarta.servlet","l":"jakarta.servlet.http"}]

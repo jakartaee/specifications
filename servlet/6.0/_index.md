@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Servlet 6.0"
-date: 2022-05-31
+title: "Jakarta Servlet 6.0 (under development)"
+date: 2021-06-16
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
@@ -18,9 +18,40 @@ Jakarta Servlet defines a server-side API for handling HTTP requests and respons
 * Maven coordinates
   * [jakarta.servlet:jakarta.servlet-api:jar:6.0.0](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/6.0.0/jar)
 
+# Plan
+
+The plan for 6.0.0 is:
+* remove currently deprecated features
+* consider removing / deprecating additional features
+* add clarity to existing features
+* implement requested enhancements
+
+Prioritisation to be determined by the community as work progresses.
+
+# Backwards compatibility
+Backward compatibility issue include:
+* Removal of deprecated code
+* Removal of other features not currently deprecated
+
+# Optional features
+None
+
+# Minimum Java SE version
+The JDK version required will be aligned with Jakarta EE 10.
+
+# TCK Updates
+The following TCK updates will be required:
+* Updated signatures
+* New tests for any new features
+* Remove tests associated with removed features
+
+# Release Record
+[Release Record](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.0.0)
+
 # Compatible Implementations
 
-* [Glassfish 7.0.0-M4](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/7.0.0-M4/glassfish-7.0.0-M4.zip)
+* Glassfish (version TBD)
+* Apache Tomcat 10.1.x ?
 
 # Ballots
 
