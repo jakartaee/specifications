@@ -28,7 +28,7 @@ Jakarta Concurrency 3.0 contains the following features:
 * [Jakarta Concurrency 3.0 Javadoc](./apidocs)
 
 
-* [Jakarta Concurrency 3.0 TCK](https://download.eclipse.org/ee4j/cu/jakartaee10/promoted/eftl/concurrency-tck-3.0.0.zip), [sha](https://download.eclipse.org/ee4j/cu/jakartaee10/promoted/eftl/concurrency-tck-3.0.0.info) 2fe905b8adfab903a6c5954453e67fbc3ed583b0e313edef7f09d18b7eddd0ee, [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Concurrency 3.0 TCK](https://download.eclipse.org/jakartaee/concurrency/3.0/jakarta-concurrency-tck-3.0.0.zip), [sha](https://download.eclipse.org/jakartaee/concurrency/3.0/jakarta-concurrency-tck-3.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * Signature tests are included with the TCK and run automatically as part of it
 * Maven coordinates
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.0.0](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.0.0/jar) Currently located on [staging](https://jakarta.oss.sonatype.org/content/groups/staging/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/3.0.0/) until release is approved, and then we will push it to Maven.
