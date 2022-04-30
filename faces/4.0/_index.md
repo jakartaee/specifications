@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Faces 4.0"
-date: 2022-28-02
+date: 2022-02-28
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Faces defines an MVC framework for building user interfaces for web applications,
