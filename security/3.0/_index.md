@@ -10,8 +10,7 @@ Jakarta Security defines a standard for creating secure Jakarta EE applications 
 * [Jakarta Security 3.0 Specification Document](./jakarta-security-spec-3.0.pdf) (PDF)
 * [Jakarta Security 3.0 Specification Document](./jakarta-security-spec-3.0.html) (HTML)
 * [Jakarta Security 3.0 Javadoc](./apidocs)
-* [Jakarta Security 3.0 TCK](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
-   * Adds JDK 11 support [Jakarta Security 3.0.1 TCK](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Security 3.0 TCK](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/3.0.0/jar)
 
