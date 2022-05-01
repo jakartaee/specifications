@@ -18,7 +18,7 @@ into a Jakarta Servlet.
 
 # Compatible Implementations
 
-* Glassfish version TBD
+* [Eclipse WaSP 3.1.0-M3](https://github.com/eclipse-ee4j/wasp)
 
 # Ballots
 
