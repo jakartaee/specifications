@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Authentication 3.0"
-date: 2020-02-28
+date: 2022-02-28
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Authentication defines a general low-level SPI for authentication mechanisms, which are controllers
@@ -36,7 +36,7 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 7.0.0-M3](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M3/glassfish-7.0.0-M3.zip) (draft link, not active yet)
+* [Eclipse Glassfish 7.0.0-M4](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M3/glassfish-7.0.0-M4.zip)
 
 # Ballots
 
