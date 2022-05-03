@@ -51,7 +51,7 @@ The following TCK updates will be required:
 * [Jakarta Standard Tag Library 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jstl/releases/3.0.0)
 
 # Compatible Implementations
-* [EE4J implementation of Jakarta Standard Tag Library 3.0.0-M1](https://github.com/eclipse-ee4j/jstl-api/releases/tag/3.0.0-M1-IMPL-RELEASE)
+* [EE4J implementation of Jakarta Standard Tag Library 3.0.0](https://github.com/eclipse-ee4j/jstl-api/releases/tag/3.0.0-IMPL-RELEASE)
 
 # Ballots
 
