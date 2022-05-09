@@ -4,7 +4,17 @@ date: 2022-04-17
 summary: "Jakarta EE 10 Release"
 ---
 The Jakarta Connectors specification defines a standard architecture for Jakarta EE application components to connect to Enterprise Information Systems.
-.
+
+## New features, enhancements or additions
+- Bug Fixes
+- Documentation clean up
+- Updates required to meet the Java version requirements of Jakarta EE 10
+
+## Removals, deprecations or backwards incompatible changes
+none
+
+## Minimum Java SE Version
+11
 
 * [Jakarta Connectors 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jca/releases/2.1.0)
 * [Jakarta Connectors 2.1 Specification Document](./jakarta-connectors-spec-2.1.pdf) (PDF)
@@ -19,17 +29,6 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 
 # Compatible Implementations
   * [Eclipse GlassFish 7.0 M4](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/7.0.0-M4/glassfish-7.0.0-M4.zip)
-
-## New features, enhancements or additions
-- Bug Fixes
-- Documentation clean up
-- Updates required to meet the Java version requirements of Jakarta EE 10
-
-## Removals, deprecations or backwards incompatible changes
-none
-
-## Minimum Java SE Version
-11
 
 # Ballots
 
