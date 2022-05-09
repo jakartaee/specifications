@@ -8,7 +8,6 @@ Jakarta Standard Tag Library has support for common, structural tasks such as it
 for manipulating XML documents, internationalization tags, and SQL tags. It also provides a framework for integrating
 existing custom tags with Jakarta Standard Tag Library tags.
 
-* [Jakarta Standard Tag Library 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jstl/releases/3.0.0)
 * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Standard Tag Library 3.0 Specification Document](./jakarta-tags-spec-3.0.pdf) (PDF)
 * [Jakarta Standard Tag Library 3.0 Specification Document](./jakarta-tags-spec-3.0.html) (HTML)
@@ -18,17 +17,17 @@ existing custom tags with Jakarta Standard Tag Library tags.
 * Maven coordinates
   * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/3.0.0/jar)
 
-# Plan
+# Summary of Changes:
 
-The plan for the release is to clean up open issues:
+This release includes the following changes:
+* Renamed Tag URIs to 'jakarta.tags.*'
+* Updated Jakarta Tags to Java 11
+* Added JPMS Module Info Class
+* Removed dependency on XML Binding from the API pom
+* Updated tagdocs to include EFSL
+* Updated tlddoc generation to support jakarta.
 * General specification document cleanup.
-* Clean up issues found during the Jakarta EE9 review ballot process
-* Update tagdocs to include EFSL
-* Update tlddoc generation to jakarta.
-* Remove any deprecated methods from the API if they exist.
-* Rename java.sun.com / xmlns.jcp.org taglib URIs to new jakarta.tags.\* URNs. [Issue 144](https://github.com/eclipse-ee4j/jstl-api/issues/144)
-    * This alone should require a major release.
-* Other small clean up issues
+
 
 # Backwards compatibility
 Backward compatibility issue include:
