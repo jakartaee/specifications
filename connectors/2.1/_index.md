@@ -20,15 +20,15 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 # Compatible Implementations
   * [Eclipse GlassFish 7.0 M4](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/7.0.0-M4/glassfish-7.0.0-M4.zip)
 
-# New features, enhancements or additions
+## New features, enhancements or additions
 - Bug Fixes
 - Documentation clean up
 - Updates required to meet the Java version requirements of Jakarta EE 10
 
-# Removals, deprecations or backwards incompatible changes
+## Removals, deprecations or backwards incompatible changes
 none
 
-# Minimum Java SE Version
+## Minimum Java SE Version
 11
 
 # Ballots
