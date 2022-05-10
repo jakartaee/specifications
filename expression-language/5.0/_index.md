@@ -41,18 +41,20 @@ The Plan Review Specification Committee Ballot concluded successfully on 12/05/2
  
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on TBD with the following results.
+The Release Review Specification Committee Ballot concluded successfully on 09/05/2022 (May 9th 2022) with the following results.
 
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+| Representative                     | Representative for: | Vote   |
+|------------------------------------|---------------------|--------|
+| Kenji Kazumura                     | Fujitsu             |    +1  |
+| Tom Watson, Emily Jiang            | IBM                 |    +1  |
+| Ed Bratt, Dmitry Kornilov          | Oracle              |    +1  |
+| Andrew Pielage, Petr Aubrecht      | Payara              |    +1  |
+| David Blevins, Jean-Louis Monteiro | Tomitribe           |    +1  |
+| Ivar Grimstad                      | EE4J PMC            |    +1  |
+| Marcelo Ancelmo, Martijn Verburg   | Participant Members |    +1  |
+| Werner Keil                        | Committer Members   |    +1  |
+| Jun Qian                           | Enterprise Members  |    +1  |
+| Zhai Luchao                        | Enterprise Members  |    +1  |
+|                                    | **Total**           | **10** |
 
- This ballot was conducted on the public e-mail list [jakarta.ee-spec@eclipse.org](https://www.eclipse.org/lists/jakarta.ee-spec/). This ballot thread begins [here](TBD).
+ This ballot was conducted on the public e-mail list [jakarta.ee-spec@eclipse.org](https://www.eclipse.org/lists/jakarta.ee-spec/). This ballot thread begins [here](https://www.eclipse.org/lists/jakarta.ee-spec/msg02419.html).
