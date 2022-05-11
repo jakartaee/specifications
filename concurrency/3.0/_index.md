@@ -1,30 +1,60 @@
 ---
-title: "Jakarta Concurrency 3.0 (Under Development)"
-date: 2021-05-20
+title: "Jakarta Concurrency 3.0"
+date: 2022-04-27
 summary: "Jakarta EE 10 Release"
 ---
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
 
+
 # Plan
-Jakarta Concurrency 3.0 will target the Jakarta EE 10 platform release. 
 
-Jakarta Concurrency 3.0 will aim to contain.
+Jakarta Concurrency 3.0 contains the following features:
 
-Features identified by the community on GitHub tagged with 3.0 see 3.0 Milestone (github.com)
-
-Bug Fixes as they arise during the release cycle
-
-Documentation clean up as identified during the release cycle
-
-Any updates required to meet the Java version requirements of Jakarta EE 10
-
-Any requirements identified by other specifications or the Jakarta EE 10 platform projects during the release cycle.
-
-* [Jakarta Concurrency 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.cu/releases/3.0)
+* Asynchronous methods
+* Context-aware completion stages and completable futures
+* Context propagation to parallel streams operations
+* Modernization of the Trigger mechanism and Cron support
+* Propagation of third party context types
+* Resource definition annotations
 
 
+# Release Information
+
+* [Jakarta Concurrency 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.cu/releases/3.0.0)
+  * [Jakarta Concurrency 3.0 Release Plan](https://projects.eclipse.org/projects/ee4j.cu/releases/3.0/plan)
+  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta Concurrency 3.0 Specification Document](./jakarta-concurrency-spec-3.0.pdf) (PDF)
+* [Jakarta Concurrency 3.0 Specification Document](./jakarta-concurrency-spec-3.0.html) (HTML)
+* [Jakarta Concurrency 3.0 Javadoc](./apidocs)
+
+
+* [Jakarta Concurrency 3.0 TCK](https://download.eclipse.org/jakartaee/concurrency/3.0/jakarta-concurrency-tck-3.0.0.zip), ([sha](https://download.eclipse.org/jakartaee/concurrency/3.0/jakarta-concurrency-tck-3.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+  * Signature tests are included with the TCK and run automatically as part of it
+* Maven coordinates
+  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.0.0](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.0.0/jar) Currently located on [staging](https://jakarta.oss.sonatype.org/content/groups/staging/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/3.0.0/) until release is approved, and then we will push it to Maven.
+
+
+# Compatible Implementations
+
+* [Open Liberty 22.0.0.5-beta](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/beta/22.0.0.5-beta/openliberty-22.0.0.5-beta.zip)
 
 # Ballots
+
+## Release Review
+
+The Release Review Specification Committee Ballot needs to be started after the above is completely filled in. Results need to be reported below.
+
+|                       |  Yes    | No      | Abstain  |
+|-----------------------|---------|---------|----------|
+|Fujitsu                |         |         |          |
+|IBM                    |         |         |          |
+|Oracle                 |         |         |          |
+|Payara                 |         |         |          |
+|Red Hat                |         |         |          |
+|Tomitribe              |         |         |          |
+|EE4J PMC               |         |         |          |
+|Participant Members    |         |         |          |
+|Committer Members      |         |         |          |
 
 ## Plan Review
 
