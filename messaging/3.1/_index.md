@@ -1,29 +1,29 @@
 ---
-title: "Jakarta Messaging 3.1 (Under Development)"
-date: 2021-05-19
+title: "Jakarta Messaging 3.1"
+date: 2022-05-11
 summary: "Jakarta EE 10 Release"
 ---
 
 Jakarta Messaging describes a means for Java applications to create, send, and receive messages via loosely coupled, reliable asynchronous communication services.
 
-# Plan
-Jakarta Messaging 3.1 will target the Jakarta EE 10 platform release. 
+(Draft:  these are not live links)
+* [Jakarta Messaging 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.messaging/releases/3.1.0)
+* [Jakarta Messaging 3.1 Specification Document](./jakarta-messaging-spec-3.1.pdf) (PDF)
+* [Jakarta Messaging 3.1 Specification Document](./jakarta-messaging-spec-3.1.html) (HTML)
+* [Jakarta Messaging 3.1 Javadoc](./apidocs)
+* [Jakarta Messaging 3.1 TCK](https://download.eclipse.org/jakartaee/messaging/3.1/jakarta-messaging-tck-3.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/messaging/3.1/jakarta-messaging-tck-3.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/messaging/3.1/jakarta-messaging-tck-3.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+  * [jakarta.jms:jakarta.jms-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.jms/jakarta.jms-api/3.1.0/jar)
 
-Jakarta Messaging 3.1 will be a minor update with fixes and enhancements. 
+# Compatible Implementations
 
-It will contain:
-
-* Bug fixes as they arise during the release cycle
-* Small enhancements to take advantage of some newer Java features in the lowest supported Java version (for example repeatable annotations)
-* A standalone TCK separated from the Jakarta EE TCK so that it's easier to certify standalone implementations of Jakarta Messaging
-* Documentation clean up as identified during the release cycle
-* Any updates required to meet the Java version requirements of Jakarta EE 10
-* Any requirements identified by other specifications or the Jakarta EE 10 platform projects during the release cycle.
-
-
-[Jakarta Messaging 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jms/releases/3.1.0)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [Eclipse OpenMQ 6.3.0-RC1](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/mq/mq-distribution/6.3.0-RC1/mq-distribution-6.3.0-RC1.zip)
 
 # Ballots
+
+## Release Review
+
 
 ## Plan Review
 
