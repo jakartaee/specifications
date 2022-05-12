@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Messaging 3.1"
-date: 2022-03-15
+date: 2022-05-11
 summary: "Jakarta EE 10 Release"
 ---
 
