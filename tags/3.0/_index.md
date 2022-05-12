@@ -17,15 +17,13 @@ existing custom tags with Jakarta Standard Tag Library tags.
 * Maven coordinates
   * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/3.0.0/jar)
 
-# Summary of Changes:
-
 This release includes the following changes:
-* Renamed Tag URIs to 'jakarta.tags.*'
-* Updated Jakarta Tags to Java 11
-* Added JPMS Module Info Class
-* Removed dependency on XML Binding from the API pom
-* Updated tagdocs to include EFSL
-* Updated tlddoc generation to support jakarta.
+* [Issue #144](https://github.com/eclipse-ee4j/jstl-api/issues/144) Rename Tag URIs to 'jakarta.tags.*'
+* [Issue #156](https://github.com/eclipse-ee4j/jstl-api/issues/156) Update Jakarta Tags to Java 11
+* [Issue #157](https://github.com/eclipse-ee4j/jstl-api/issues/157) Add JPMS Module Info Class
+* [Issue #149](https://github.com/eclipse-ee4j/jstl-api/issues/149) Remove dependency on XML Binding from the API pom
+* Update tagdocs to include EFSL
+* Update tlddoc generation to support jakarta.
 * General specification document cleanup.
 
 
