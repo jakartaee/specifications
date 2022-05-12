@@ -535,7 +535,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <span id="author" class="author">Jakarta Servlet Team, https://projects.eclipse.org/projects/ee4j.servlet</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/servlet-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/servlet-dev</a></span><br>
 <span id="revnumber"> 6.0,</span>
-<span id="revdate">November 23, 2021</span>
+<span id="revdate">May 12, 2022</span>
 <br><span id="revremark"></span>
 </div>
 <div id="toc" class="toc2">
@@ -995,7 +995,7 @@ Version: 6.0
 
 Status: Final Release
 
-Release: November 23, 2021</pre>
+Release: May 12, 2022</pre>
 </div>
 </div>
 </div>
@@ -1004,7 +1004,7 @@ Release: November 23, 2021</pre>
 <h2 id="copyright"><a class="anchor" href="#copyright"></a>Copyright</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Copyright (c) 2019, 2021 Eclipse Foundation.</p>
+<p>Copyright (c) 2019, 2022 Eclipse Foundation.</p>
 </div>
 <div class="sect2">
 <h3 id="eclipse-foundation-specification-license"><a class="anchor" href="#eclipse-foundation-specification-license"></a>Eclipse Foundation Specification License</h3>
@@ -1093,7 +1093,7 @@ remain with copyright holders.</p>
 <h2 id="jakarta-servlet-specification-version-6-0"><a class="anchor" href="#jakarta-servlet-specification-version-6-0"></a>Jakarta Servlet Specification, Version 6.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Copyright (c) 2021 Contributors to the Eclipse Foundation.</p>
+<p>Copyright (c) 2022 Contributors to the Eclipse Foundation.</p>
 </div>
 <div class="paragraph">
 <p>Eclipse is a registered trademark of the Eclipse Foundation. Jakarta
@@ -12231,6 +12231,12 @@ to RFC 2109 and to replace them with RFC 6265.</p>
 <p>Provide generic attribute support to cookies, including session cookies, to
 provide support for additional attributes such as the <code>SameSite</code> attribute.</p>
 </dd>
+<dt class="hdlist1"><a href="https://github.com/eclipse-ee4j/servlet-api/issues/201">Issue 201</a></dt>
+<dd>
+<p>Add a <code>module-info.java</code> to support using the Servlet API in a modular
+environment as per the Java module system and the Jakarta EE 10
+<a href="https://github.com/jakartaee/specification-committee/blob/master/names.adoc">recommendations</a>.</p>
+</dd>
 <dt class="hdlist1"><a href="https://github.com/eclipse-ee4j/servlet-api/issues/225">Issue 225</a></dt>
 <dd>
 <p>Deprecated wrapped response handling in the <code>doHead</code> method in favour of container implementation of <code>HEAD</code> method behavior.</p>
@@ -12243,7 +12249,7 @@ provide support for additional attributes such as the <code>SameSite</code> attr
 <dd>
 <p>Correct the list of valid orderings for example 2 in <a href="#ordering-of-web-xml-and-web-fragment-xml">Section 8.2.2, &#8220;Ordering of web.xml and web-fragment.xml&#8221;</a>.</p>
 </dd>
-<dt class="hdlist1"><a href="https://github.com/eclipse-ee4j/servlet-api/issues/370">Issue 370</a></dt>
+<dt class="hdlist1"><a href="https://github.com/eclipse-ee4j/servlet-api/issues/368">Issue 368</a></dt>
 <dd>
 <p>Clarify the behaviour of <code>getRemoteAddress()</code>.</p>
 </dd>
@@ -12272,12 +12278,6 @@ implementing the <code>RequestDispatcher</code> functionality.</p>
 This includes removing the <code>SingleThreadModel</code> and <code>HttpSessionContext</code>
 interfaces and the <code>HttpUtils</code> class as well as various deprecated methods.</p>
 </dd>
-<dt class="hdlist1"><a href="https://github.com/eclipse-ee4j/servlet-api/issues/201">Issue 201</a></dt>
-<dd>
-<p>Add a <code>module-info.java</code> to support using the Servlet API in a modular
-environment as per the Java module system and the Jakarta EE 10
-<a href="https://github.com/jakartaee/specification-committee/blob/master/names.adoc">recommendations</a>.</p>
-</dd>
 </dl>
 </div>
 <div class="paragraph">
@@ -12287,6 +12287,10 @@ align with changes in the Jakarta Pages 3.1 specification.</p>
 <div class="paragraph">
 <p>Clarify the Javadoc for <code>ServletRequest.isAsyncStarted()</code> to align it with the
 specification text.</p>
+</div>
+<div class="paragraph">
+<p>Update the Javadoc to clarify the scheduling implications when <code>ServletInputStream.isReady()</code>
+or <code>ServletOutputStream.isReady()</code> return <code>false</code>.</p>
 </div>
 </div>
 <div class="sect2">
