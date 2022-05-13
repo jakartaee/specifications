@@ -36,7 +36,7 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 7.0.0-M4](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M3/glassfish-7.0.0-M4.zip)
+* [Eclipse Glassfish 7.0.0-M4](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M4/glassfish-7.0.0-M4.zip)
 
 # Ballots
 
