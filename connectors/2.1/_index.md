@@ -4,7 +4,17 @@ date: 2022-04-17
 summary: "Jakarta EE 10 Release"
 ---
 The Jakarta Connectors specification defines a standard architecture for Jakarta EE application components to connect to Enterprise Information Systems.
-.
+
+### New features, enhancements or additions
+- Bug Fixes
+- Documentation clean up
+- Updates required to meet the Java version requirements of Jakarta EE 10
+
+### Removals, deprecations or backwards incompatible changes
+none
+
+### Minimum Java SE Version
+11
 
 * [Jakarta Connectors 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jca/releases/2.1.0)
 * [Jakarta Connectors 2.1 Specification Document](./jakarta-connectors-spec-2.1.pdf) (PDF)
@@ -24,42 +34,40 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 
 ## Release Review
 
+The Specification Committee Ballot concluded successfully on 2022-05-09 with the following results.
 
+| Representative                                 | Representative for: | Vote    |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |    +1   |
+| Tom Watson, Emily Jiang                        | IBM                 |    +1   |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1   |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |    +1   |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1   |
+| Ivar Grimstad                                  | EE4J PMC            |    +1   |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |    +1   |
+| Werner Keil                                    | Committer Members   |    +1   |
+| Jun Qian                                       | Enterprise Members  |    +1   |
+| Zhai Luchao                                    | Enterprise Members  |    +1   |
+|                                                | **Total**           |  *10**  |
 
-# Plan
-Jakarta Connectors 2.1 will target the Jakarta EE 10 platform release. 
-
-Jakarta Connectors 2.1 will be a minor update without new features and will contain.
-
-Bug Fixes as they arise during the release cycle
-
-Documentation clean up as identified during the release cycle
-
-Any updates required to meet the Java version requirements of Jakarta EE 10
-
-Any requirements identified by other specifications or the Jakarta EE 10 platform projects during the release cycle.
-
-* [Jakarta Connectors 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jca/releases/2.1.0)
-
-
-
-# Ballots
-
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02415.html)
 
 ## Plan Review
 
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                | &check; |     |          |
-|IBM                    | &check; |     |          |
-|Oracle                 | &check; |     |          |
-|Payara                 | &check; |     |          |
-|Red Hat                | &check; |     |          |
-|Tomitribe              | &check; |     |          |
-|EE4J PMC               | &check; |     |          |
-|Participant Members    | &check; |     |          |
-|Committer Members      | &check; |     |          |
-|Enterprise Members     | &check; |     |          |
-|**Total**              | **10**  |     |          |
+The Specification Committee Ballot concluded successfully on 2021-06-04 with the following results.
+
+| Representative                                 | Representative for: | Vote    |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |    +1   |
+| Dan Bandera, Kevin Sutter                      | IBM                 |    +1   |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1   |
+| Andrew Pielage, Matt Gill                      | Payara              |    +1   |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1   |
+| Scott Start, Mark Little                       | REd Hat             |    +1   |
+| Ivar Grimstad                                  | EE4J PMC            |    +1   |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |    +1   |
+| Werner Keil                                    | Committer Members   |    +1   |
+| Jun Qian                                       | Enterprise Members  |    +1   |
+|                                                | **Total**           |  *10**  |
 
 The ballot was held over the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg01820.html)
