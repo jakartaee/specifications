@@ -31,7 +31,7 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 # Compatible Implementations
 
 * [Eclipse Exousia 2.1.0-M1](https://github.com/eclipse-ee4j/exousia/releases/download/2.1.0-M1-RELEASE/exousia-2.1.0-M1.jar)
-* [Eclipse Glassfish 7.0.0-M3](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M2/glassfish-7.0.0-M2.zip)
+* [Eclipse Glassfish 7.0.0-M4](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M4/glassfish-7.0.0-M4.zip)
 
 # Ballots
 
