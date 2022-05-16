@@ -534,7 +534,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <span id="author" class="author">Jakarta Faces Team, https://projects.eclipse.org/projects/ee4j.faces</span><br>
 <span id="email" class="email"><a href="https://accounts.eclipse.org/mailing-list/faces-dev" class="bare">https://accounts.eclipse.org/mailing-list/faces-dev</a></span><br>
 <span id="revnumber"> 4.0,</span>
-<span id="revdate">February 28, 2022</span>
+<span id="revdate">May 16, 2022</span>
 <br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
@@ -551,16 +551,6 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 <li><a href="#preface">Preface</a>
 <ul class="sectlevel2">
-<li><a href="#changes-between-4-0-and-3-0">Changes between 4.0 and 3.0</a>
-<ul class="sectlevel3">
-<li><a href="#backward-compatibility-with-previous-versions">Backward Compatibility with Previous Versions</a></li>
-</ul>
-</li>
-<li><a href="#changes-between-3-0-and-2-3">Changes between 3.0 and 2.3</a>
-<ul class="sectlevel3">
-<li><a href="#backward-compatibility-with-previous-versions-2">Backward Compatibility with Previous Versions</a></li>
-</ul>
-</li>
 <li><a href="#related-technologies">Related Technologies</a>
 <ul class="sectlevel3">
 <li><a href="#a173">Other Jakarta Platform Specifications</a></li>
@@ -1545,134 +1535,144 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 <li><a href="#change-log">Appendix B: Change Log</a>
 <ul class="sectlevel2">
-<li><a href="#changes-between-2-2-and-2-3">B.1. Changes between 2.2 and 2.3</a>
+<li><a href="#changes-between-4-0-and-3-0">B.1. Changes between 4.0 and 3.0</a>
 <ul class="sectlevel3">
-<li><a href="#big-ticket-features">B.1.1. Big Ticket Features</a></li>
-<li><a href="#other-features-by-functional-area">B.1.2. Other Features, by Functional Area</a>
-<ul class="sectlevel4">
-<li><a href="#componentsrenderers">B.1.2.1. Components/Renderers</a></li>
-<li><a href="#lifecycle">B.1.2.2. Lifecycle</a></li>
-<li><a href="#platform-integration">B.1.2.3. Platform Integration</a></li>
-<li><a href="#faceletsvdl">B.1.2.4. Facelets/VDL</a></li>
-<li><a href="#spec-clarifications">B.1.2.5. Spec Clarifications</a></li>
-<li><a href="#resources">B.1.2.6. Resources</a></li>
-<li><a href="#expression-language">B.1.2.7. Expression Language</a></li>
-<li><a href="#configuration-and-bootstrapping">B.1.2.8. Configuration and Bootstrapping</a></li>
-<li><a href="#miscellaneous">B.1.2.9. Miscellaneous</a></li>
+<li><a href="#backward-compatibility-with-previous-versions">B.1.1. Backward Compatibility with Previous Versions</a></li>
 </ul>
 </li>
-<li><a href="#backward-compatibility-with-previous-versions-3">B.1.3. Backward Compatibility with Previous Versions</a></li>
-<li><a href="#breakages-in-backward-compatibility">B.1.4. Breakages in Backward Compatibility</a></li>
-</ul>
-</li>
-<li><a href="#changes-between-2-1-and-2-2">B.2. Changes between 2.1 and 2.2</a>
+<li><a href="#changes-between-3-0-and-2-3">B.2. Changes between 3.0 and 2.3</a>
 <ul class="sectlevel3">
-<li><a href="#big-ticket-features-2">B.2.1. Big Ticket Features</a></li>
-<li><a href="#other-features-by-functional-area-2">B.2.2. Other Features, by Functional Area</a>
-<ul class="sectlevel4">
-<li><a href="#componentsrenderers-2">B.2.2.1. Components/Renderers</a></li>
-<li><a href="#lifecycle-2">B.2.2.2. Lifecycle</a></li>
-<li><a href="#platform-integration-2">B.2.2.3. Platform Integration</a></li>
-<li><a href="#faceletsvdl-2">B.2.2.4. Facelets/VDL</a></li>
-<li><a href="#spec-clarifications-2">B.2.2.5. Spec Clarifications</a></li>
-<li><a href="#resources-2">B.2.2.6. Resources</a></li>
-<li><a href="#expression-language-2">B.2.2.7. Expression Language</a></li>
-<li><a href="#configuration-and-bootstrapping-2">B.2.2.8. Configuration and Bootstrapping</a></li>
-<li><a href="#miscellaneous-2">B.2.2.9. Miscellaneous</a></li>
+<li><a href="#backward-compatibility-with-previous-versions-2">B.2.1. Backward Compatibility with Previous Versions</a></li>
 </ul>
 </li>
-<li><a href="#backward-compatibility-with-previous-versions-4">B.2.3. Backward Compatibility with Previous Versions</a></li>
-<li><a href="#breakages-in-backward-compatibility-2">B.2.4. Breakages in Backward Compatibility</a></li>
-</ul>
-</li>
-<li><a href="#changes-between-2-0-rev-a-and-2-1">B.3. Changes between 2.0 Rev a and 2.1</a>
+<li><a href="#changes-between-2-2-and-2-3">B.3. Changes between 2.2 and 2.3</a>
 <ul class="sectlevel3">
-<li><a href="#facelet-tag-library-mechanism">B.3.1. Facelet Tag Library mechanism</a></li>
-<li><a href="#new-feature-facelets-processing">B.3.2. New feature: &lt;facelets-processing&gt;</a></li>
-<li><a href="#update-schema-for-2-1">B.3.3. Update schema for 2.1</a></li>
-<li><a href="#change-restore-view-phase">B.3.4. Change Restore View Phase</a></li>
-<li><a href="#default-viewhandler-implementation">B.3.5. Default ViewHandler Implementation</a></li>
+<li><a href="#big-ticket-features">B.3.1. Big Ticket Features</a></li>
+<li><a href="#other-features-by-functional-area">B.3.2. Other Features, by Functional Area</a>
+<ul class="sectlevel4">
+<li><a href="#componentsrenderers">B.3.2.1. Components/Renderers</a></li>
+<li><a href="#lifecycle">B.3.2.2. Lifecycle</a></li>
+<li><a href="#platform-integration">B.3.2.3. Platform Integration</a></li>
+<li><a href="#faceletsvdl">B.3.2.4. Facelets/VDL</a></li>
+<li><a href="#spec-clarifications">B.3.2.5. Spec Clarifications</a></li>
+<li><a href="#resources">B.3.2.6. Resources</a></li>
+<li><a href="#expression-language">B.3.2.7. Expression Language</a></li>
+<li><a href="#configuration-and-bootstrapping">B.3.2.8. Configuration and Bootstrapping</a></li>
+<li><a href="#miscellaneous">B.3.2.9. Miscellaneous</a></li>
 </ul>
 </li>
-<li><a href="#changes-between-2-0-final-and-2-0-rev-a">B.4. Changes between 2.0 Final and 2.0 Rev a</a>
+<li><a href="#backward-compatibility-with-previous-versions-3">B.3.3. Backward Compatibility with Previous Versions</a></li>
+<li><a href="#breakages-in-backward-compatibility">B.3.4. Breakages in Backward Compatibility</a></li>
+</ul>
+</li>
+<li><a href="#changes-between-2-1-and-2-2">B.4. Changes between 2.1 and 2.2</a>
 <ul class="sectlevel3">
-<li><a href="#global-changes">B.4.1. Global changes</a>
+<li><a href="#big-ticket-features-2">B.4.1. Big Ticket Features</a></li>
+<li><a href="#other-features-by-functional-area-2">B.4.2. Other Features, by Functional Area</a>
 <ul class="sectlevel4">
-<li><a href="#exceptionqueuedevent">B.4.1.1. ExceptionQueuedEvent</a></li>
-<li><a href="#usage-of-the-term-page-in-the-jsf-2-0-spec">B.4.1.2. Usage of the term "page" in the JSF 2.0 spec</a></li>
+<li><a href="#componentsrenderers-2">B.4.2.1. Components/Renderers</a></li>
+<li><a href="#lifecycle-2">B.4.2.2. Lifecycle</a></li>
+<li><a href="#platform-integration-2">B.4.2.3. Platform Integration</a></li>
+<li><a href="#faceletsvdl-2">B.4.2.4. Facelets/VDL</a></li>
+<li><a href="#spec-clarifications-2">B.4.2.5. Spec Clarifications</a></li>
+<li><a href="#resources-2">B.4.2.6. Resources</a></li>
+<li><a href="#expression-language-2">B.4.2.7. Expression Language</a></li>
+<li><a href="#configuration-and-bootstrapping-2">B.4.2.8. Configuration and Bootstrapping</a></li>
+<li><a href="#miscellaneous-2">B.4.2.9. Miscellaneous</a></li>
 </ul>
 </li>
-<li><a href="#front-matter">B.4.2. Front Matter</a></li>
-<li><a href="#chapter-2">B.4.3. Chapter 2</a>
+<li><a href="#backward-compatibility-with-previous-versions-4">B.4.3. Backward Compatibility with Previous Versions</a></li>
+<li><a href="#breakages-in-backward-compatibility-2">B.4.4. Breakages in Backward Compatibility</a></li>
+</ul>
+</li>
+<li><a href="#changes-between-2-0-rev-a-and-2-1">B.5. Changes between 2.0 Rev a and 2.1</a>
+<ul class="sectlevel3">
+<li><a href="#facelet-tag-library-mechanism">B.5.1. Facelet Tag Library mechanism</a></li>
+<li><a href="#new-feature-facelets-processing">B.5.2. New feature: &lt;facelets-processing&gt;</a></li>
+<li><a href="#update-schema-for-2-1">B.5.3. Update schema for 2.1</a></li>
+<li><a href="#change-restore-view-phase">B.5.4. Change Restore View Phase</a></li>
+<li><a href="#default-viewhandler-implementation">B.5.5. Default ViewHandler Implementation</a></li>
+</ul>
+</li>
+<li><a href="#changes-between-2-0-final-and-2-0-rev-a">B.6. Changes between 2.0 Final and 2.0 Rev a</a>
+<ul class="sectlevel3">
+<li><a href="#global-changes">B.6.1. Global changes</a>
 <ul class="sectlevel4">
-<li><a href="#restore-view">B.4.3.1. Restore View</a></li>
-<li><a href="#localized-application-messages">B.4.3.2. Localized Application Messages</a></li>
-<li><a href="#jsr-303-bean-validation">B.4.3.3. JSR 303 Bean Validation</a></li>
-<li><a href="#jsr-303-bean-validation-needs-to-reference-bean-validation-integration-section">B.4.3.4. JSR 303 Bean Validation needs to reference "Bean Validation Integration" section</a></li>
-<li><a href="#resource-identifiers">B.4.3.5. Resource Identifiers</a></li>
+<li><a href="#exceptionqueuedevent">B.6.1.1. ExceptionQueuedEvent</a></li>
+<li><a href="#usage-of-the-term-page-in-the-jsf-2-0-spec">B.6.1.2. Usage of the term "page" in the JSF 2.0 spec</a></li>
 </ul>
 </li>
-<li><a href="#chapter-3">B.4.4. Chapter 3</a>
+<li><a href="#front-matter">B.6.2. Front Matter</a></li>
+<li><a href="#chapter-2">B.6.3. Chapter 2</a>
 <ul class="sectlevel4">
-<li><a href="#clarify-meaning-of-javax-faces-bean-in-bean-validator-activation">B.4.4.1. Clarify meaning of "javax.faces.bean" in Bean Validator Activation</a></li>
-<li><a href="#need-to-be-consistent-between-declarative-listener-registration-of-the-jsf-2-0-spec-and-the-vdldoc-for-fevent">B.4.4.2. Need to be consistent between Declarative Listener Registration of the JSF 2.0 Spec and the VDLDoc for f:event</a></li>
-<li><a href="#typo-in-declarative-listener-registration-of-the-jsf-2-0-spec-regarding-beforerender">B.4.4.3. Typo in Declarative Listener Registration of the JSF 2.0 Spec regarding "beforeRender"</a></li>
-<li><a href="#validation-registration-what-does-it-mean-to-be-a-jsf-user-interface-component">B.4.4.4. Validation Registration, What does it mean to be a JSF User Interface component?</a></li>
-<li><a href="#composite-component-metadata">B.4.4.5. Composite Component Metadata</a></li>
+<li><a href="#restore-view">B.6.3.1. Restore View</a></li>
+<li><a href="#localized-application-messages">B.6.3.2. Localized Application Messages</a></li>
+<li><a href="#jsr-303-bean-validation">B.6.3.3. JSR 303 Bean Validation</a></li>
+<li><a href="#jsr-303-bean-validation-needs-to-reference-bean-validation-integration-section">B.6.3.4. JSR 303 Bean Validation needs to reference "Bean Validation Integration" section</a></li>
+<li><a href="#resource-identifiers">B.6.3.5. Resource Identifiers</a></li>
 </ul>
 </li>
-<li><a href="#chapter-4">B.4.5. Chapter 4</a>
+<li><a href="#chapter-3">B.6.4. Chapter 3</a>
 <ul class="sectlevel4">
-<li><a href="#events-30">B.4.5.1. Events</a></li>
+<li><a href="#clarify-meaning-of-javax-faces-bean-in-bean-validator-activation">B.6.4.1. Clarify meaning of "javax.faces.bean" in Bean Validator Activation</a></li>
+<li><a href="#need-to-be-consistent-between-declarative-listener-registration-of-the-jsf-2-0-spec-and-the-vdldoc-for-fevent">B.6.4.2. Need to be consistent between Declarative Listener Registration of the JSF 2.0 Spec and the VDLDoc for f:event</a></li>
+<li><a href="#typo-in-declarative-listener-registration-of-the-jsf-2-0-spec-regarding-beforerender">B.6.4.3. Typo in Declarative Listener Registration of the JSF 2.0 Spec regarding "beforeRender"</a></li>
+<li><a href="#validation-registration-what-does-it-mean-to-be-a-jsf-user-interface-component">B.6.4.4. Validation Registration, What does it mean to be a JSF User Interface component?</a></li>
+<li><a href="#composite-component-metadata">B.6.4.5. Composite Component Metadata</a></li>
 </ul>
 </li>
-<li><a href="#chapter-7">B.4.6. Chapter 7</a>
+<li><a href="#chapter-4">B.6.5. Chapter 4</a>
 <ul class="sectlevel4">
-<li><a href="#overview-7">B.4.6.1. Overview</a></li>
-<li><a href="#default-navigationhandler-algorithm">B.4.6.2. Default NavigationHandler Algorithm</a></li>
-<li><a href="#default-viewhandler-implementation-2">B.4.6.3. Default ViewHandler Implementation</a></li>
+<li><a href="#events-30">B.6.5.1. Events</a></li>
 </ul>
 </li>
-<li><a href="#chapter-10">B.4.7. Chapter 10</a>
+<li><a href="#chapter-7">B.6.6. Chapter 7</a>
 <ul class="sectlevel4">
-<li><a href="#general-requirements">B.4.7.1. General Requirements</a></li>
-<li><a href="#facelet-tag-library-mechanism-2">B.4.7.2. Facelet Tag Library mechanism</a></li>
-<li><a href="#vdldocs">B.4.7.3. VDLDocs</a></li>
+<li><a href="#overview-7">B.6.6.1. Overview</a></li>
+<li><a href="#default-navigationhandler-algorithm">B.6.6.2. Default NavigationHandler Algorithm</a></li>
+<li><a href="#default-viewhandler-implementation-2">B.6.6.3. Default ViewHandler Implementation</a></li>
 </ul>
 </li>
-<li><a href="#chapter-13">B.4.8. Chapter 13</a>
+<li><a href="#chapter-10">B.6.7. Chapter 10</a>
 <ul class="sectlevel4">
-<li><a href="#redundancy-in-partial-view-processing-of-the-jsf-2-0-spec">B.4.8.1. Redundancy in Partial View Processing of the JSF 2.0 Spec</a></li>
-<li><a href="#execute-portions-of-the-jsf-request-processing-lifecycle-in-the-jsf-2-0-spec">B.4.8.2. "Execute portions" of the JSF request processing lifecycle in the JSF 2.0 Spec</a></li>
+<li><a href="#general-requirements">B.6.7.1. General Requirements</a></li>
+<li><a href="#facelet-tag-library-mechanism-2">B.6.7.2. Facelet Tag Library mechanism</a></li>
+<li><a href="#vdldocs">B.6.7.3. VDLDocs</a></li>
 </ul>
 </li>
-<li><a href="#chapter-14">B.4.9. Chapter 14</a>
+<li><a href="#chapter-13">B.6.8. Chapter 13</a>
 <ul class="sectlevel4">
-<li><a href="#initiating-an-ajax-request-typo-in-table-14-2-2-of-the-jsf-2-0-spec">B.4.9.1. Initiating an Ajax Request Typo in table 14.2.2 of the JSF 2.0 Spec</a></li>
-<li><a href="#requestresponse-event-handling-table-14-4-1">B.4.9.2. Request/Response Event Handling Table 14.4.1</a></li>
+<li><a href="#redundancy-in-partial-view-processing-of-the-jsf-2-0-spec">B.6.8.1. Redundancy in Partial View Processing of the JSF 2.0 Spec</a></li>
+<li><a href="#execute-portions-of-the-jsf-request-processing-lifecycle-in-the-jsf-2-0-spec">B.6.8.2. "Execute portions" of the JSF request processing lifecycle in the JSF 2.0 Spec</a></li>
 </ul>
 </li>
-<li><a href="#appendix-a-metadata">B.4.10. Appendix A Metadata</a></li>
-<li><a href="#vdldoc-changes">B.4.11. VDLDoc changes</a>
+<li><a href="#chapter-14">B.6.9. Chapter 14</a>
 <ul class="sectlevel4">
-<li><a href="#typo-in-fselectitems-vdldocs">B.4.11.1. Typo in f:selectItems VDLDocs</a></li>
-<li><a href="#need-clarification-on-execute-attribute-of-fajax">B.4.11.2. Need clarification on execute attribute of f:ajax</a></li>
-<li><a href="#spelling-error-in-vdldocs-for-fajax">B.4.11.3. Spelling error in VDLDocs for f:ajax</a></li>
-<li><a href="#need-clarification-on-required-attribute-in-vdldocs-for-tags-that-got-a-new-for-attribute-in-jsf-2-0">B.4.11.4. Need clarification on required attribute in VDLDocs for tags that got a new "for" attribute in JSF 2.0</a></li>
-<li><a href="#uppercase-typo-in-vdldocs-for-fevent">B.4.11.5. Uppercase typo in VDLDocs for f:event</a></li>
-<li><a href="#need-to-change-jsp-to-facelets-in-body-content-of-vdldocs">B.4.11.6. Need to change "JSP" to "Facelets" in "Body Content" of VDLDocs</a></li>
-<li><a href="#need-clarification-in-vdldocs-for-fmetadata">B.4.11.7. Need clarification in VDLDocs for f:metadata</a></li>
-<li><a href="#missing-description-in-vdldocs-for-name-attribute-of-fviewparam">B.4.11.8. Missing description in VDLDocs for name attribute of f:viewParam</a></li>
-<li><a href="#vlddocs-on-for-attribute-of-fviewparam-claim-it-can-be-used-in-a-cc">B.4.11.9. VLDDocs on "for" attribute of f:viewParam claim it can be used in a CC</a></li>
-<li><a href="#miscellaneous-vdldoc-items">B.4.11.10. Miscellaneous VDLDoc items</a></li>
-<li><a href="#should-tlddocs-now-be-vdldocs">B.4.11.11. Should TLDDocs now be VDLDocs?</a></li>
-<li><a href="#typo-in-vdldocs-for-fevent">B.4.11.12. Typo in VDLDocs for f:event.</a></li>
+<li><a href="#initiating-an-ajax-request-typo-in-table-14-2-2-of-the-jsf-2-0-spec">B.6.9.1. Initiating an Ajax Request Typo in table 14.2.2 of the JSF 2.0 Spec</a></li>
+<li><a href="#requestresponse-event-handling-table-14-4-1">B.6.9.2. Request/Response Event Handling Table 14.4.1</a></li>
 </ul>
 </li>
-<li><a href="#accepted-changes-from-jcp-change-log-for-jsf-2-0-rev-a">B.4.12. Accepted Changes from JCP Change Log for JSF 2.0 Rev a</a></li>
+<li><a href="#appendix-a-metadata">B.6.10. Appendix A Metadata</a></li>
+<li><a href="#vdldoc-changes">B.6.11. VDLDoc changes</a>
+<ul class="sectlevel4">
+<li><a href="#typo-in-fselectitems-vdldocs">B.6.11.1. Typo in f:selectItems VDLDocs</a></li>
+<li><a href="#need-clarification-on-execute-attribute-of-fajax">B.6.11.2. Need clarification on execute attribute of f:ajax</a></li>
+<li><a href="#spelling-error-in-vdldocs-for-fajax">B.6.11.3. Spelling error in VDLDocs for f:ajax</a></li>
+<li><a href="#need-clarification-on-required-attribute-in-vdldocs-for-tags-that-got-a-new-for-attribute-in-jsf-2-0">B.6.11.4. Need clarification on required attribute in VDLDocs for tags that got a new "for" attribute in JSF 2.0</a></li>
+<li><a href="#uppercase-typo-in-vdldocs-for-fevent">B.6.11.5. Uppercase typo in VDLDocs for f:event</a></li>
+<li><a href="#need-to-change-jsp-to-facelets-in-body-content-of-vdldocs">B.6.11.6. Need to change "JSP" to "Facelets" in "Body Content" of VDLDocs</a></li>
+<li><a href="#need-clarification-in-vdldocs-for-fmetadata">B.6.11.7. Need clarification in VDLDocs for f:metadata</a></li>
+<li><a href="#missing-description-in-vdldocs-for-name-attribute-of-fviewparam">B.6.11.8. Missing description in VDLDocs for name attribute of f:viewParam</a></li>
+<li><a href="#vlddocs-on-for-attribute-of-fviewparam-claim-it-can-be-used-in-a-cc">B.6.11.9. VLDDocs on "for" attribute of f:viewParam claim it can be used in a CC</a></li>
+<li><a href="#miscellaneous-vdldoc-items">B.6.11.10. Miscellaneous VDLDoc items</a></li>
+<li><a href="#should-tlddocs-now-be-vdldocs">B.6.11.11. Should TLDDocs now be VDLDocs?</a></li>
+<li><a href="#typo-in-vdldocs-for-fevent">B.6.11.12. Typo in VDLDocs for f:event.</a></li>
 </ul>
 </li>
-<li><a href="#changes-in-versions-below-2-0-final">B.5. Changes in versions below 2.0 Final</a></li>
+<li><a href="#accepted-changes-from-jcp-change-log-for-jsf-2-0-rev-a">B.6.12. Accepted Changes from JCP Change Log for JSF 2.0 Rev a</a></li>
+</ul>
+</li>
+<li><a href="#changes-in-versions-below-2-0-final">B.7. Changes in versions below 2.0 Final</a></li>
 </ul>
 </li>
 </ul>
@@ -1689,7 +1689,7 @@ Version: 4.0
 
 Status: Final
 
-Release: February 28, 2022</pre>
+Release: May 16, 2022</pre>
 </div>
 </div>
 </div>
@@ -1698,7 +1698,7 @@ Release: February 28, 2022</pre>
 <h2 id="copyright"><a class="anchor" href="#copyright"></a>Copyright</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Copyright &#169; 2022 Eclipse Foundation.
+<p>Copyright &#169; 2019, 2022 Eclipse Foundation.
 <a href="https://www.eclipse.org/legal/efsl.php" class="bare">https://www.eclipse.org/legal/efsl.php</a></p>
 </div>
 <div class="sect2">
@@ -1724,7 +1724,7 @@ document, or portions thereof, that you use:</p>
 <li>
 <p>All existing copyright notices, or if one does not exist, a notice
 (hypertext is preferred, but a textual representation is permitted)
-of the form: "Copyright (c) [$date-of-document]
+of the form: "Copyright (c) 2019, [$date-of-document]
 Eclipse Foundation, Inc. &lt;&lt;url to this license&gt;&gt;"</p>
 </li>
 </ul>
@@ -1750,7 +1750,7 @@ specification is expressly prohibited.</p>
 <p>The notice is:</p>
 </div>
 <div class="paragraph">
-<p>"Copyright (c) [$date-of-document] Eclipse Foundation. This software or
+<p>"Copyright (c) 2019, [$date-of-document] Eclipse Foundation. This software or
 document includes material copied from or derived from [title and URI
 of the Eclipse Foundation specification document]."</p>
 </div>
@@ -1788,30 +1788,6 @@ remain with copyright holders.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This is the Jakarta Faces Specification Document, version 4.0.</p>
-</div>
-<div class="sect2">
-<h3 id="changes-between-4-0-and-3-0"><a class="anchor" href="#changes-between-4-0-and-3-0"></a>Changes between 4.0 and 3.0</h3>
-<div class="paragraph">
-<p>TBD</p>
-</div>
-<div class="sect3">
-<h4 id="backward-compatibility-with-previous-versions"><a class="anchor" href="#backward-compatibility-with-previous-versions"></a>Backward Compatibility with Previous Versions</h4>
-<div class="paragraph">
-<p>TBD</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="changes-between-3-0-and-2-3"><a class="anchor" href="#changes-between-3-0-and-2-3"></a>Changes between 3.0 and 2.3</h3>
-<div class="paragraph">
-<p>Namespace has been changed from  <code>javax.faces</code> to <code>jakarta.faces</code>.</p>
-</div>
-<div class="sect3">
-<h4 id="backward-compatibility-with-previous-versions-2"><a class="anchor" href="#backward-compatibility-with-previous-versions-2"></a>Backward Compatibility with Previous Versions</h4>
-<div class="paragraph">
-<p>Jakarta Faces 3.0 has a breaking change due to the namespace change from  <code>javax.faces</code> to <code>jakarta.faces</code>.</p>
-</div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="related-technologies"><a class="anchor" href="#related-technologies"></a>Related Technologies</h3>
@@ -24178,9 +24154,6 @@ That is the canonical location of the schemas in the specification.</p>
 is included in a web browser optimized format along with the Javadoc.
 That is the canonical location of the schemas in the specification.</p>
 </div>
-<div class="paragraph">
-<p>issue_tracker_url: <a href="https://github.com/eclipse-ee4j/faces-api/issues/" class="bare">https://github.com/eclipse-ee4j/faces-api/issues/</a></p>
-</div>
 </div>
 </div>
 </div>
@@ -24192,29 +24165,164 @@ That is the canonical location of the schemas in the specification.</p>
 pre-Jakarta Faces specification under the JCP.</p>
 </div>
 <div class="sect2">
-<h3 id="changes-between-2-2-and-2-3"><a class="anchor" href="#changes-between-2-2-and-2-3"></a>B.1. Changes between 2.2 and 2.3</h3>
+<h3 id="changes-between-4-0-and-3-0"><a class="anchor" href="#changes-between-4-0-and-3-0"></a>B.1. Changes between 4.0 and 3.0</h3>
+<div class="paragraph">
+<p>This release contains the following changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1581">1581</a><br>
+New API to programmatically create Facelets</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1508">1508</a><br>
+New automatic extensionless mapping</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1509">1509</a><br>
+New annotation @ClientWindowScoped</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1570">1570</a><br>
+Support custom cookie attributes such as SameSite in ExternalContext#addResponseCookie()</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1555">1555</a><br>
+New attribute &lt;h:inputFile multiple="&#8230;&#8203;"&gt;</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1556">1556</a><br>
+New attribute &lt;h:inputFile accept="&#8230;&#8203;"&gt;</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1557">1557</a><br>
+New method FacesContext#getLifecycle()</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1559">1559</a><br>
+New tag &lt;f:selectItemGroups&gt;</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1560">1560</a><br>
+New attribute &lt;h:inputText type="&#8230;&#8203;"&gt;</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1563">1563</a><br>
+New tag &lt;f:selectItemGroup&gt;</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1568">1568</a><br>
+New method UIViewRoot#getDoctype()</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1573">1573</a><br>
+New attribute &lt;f:websocket onerror="&#8230;&#8203;"&gt;</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1574">1574</a><br>
+New layout="list" for &lt;h:selectManyCheckbox&gt; and &lt;h:selectOneRadio&gt;</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1582">1582</a><br>
+New annotation literals for all @Qualifiers</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1558">1558</a><br>
+Make UIComponent#subscribeToEvent() more convenient</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1565">1565</a><br>
+Skip type attribute from &lt;link&gt; and &lt;script&gt; when doctype is HTML5</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1567">1567</a><br>
+Improve &lt;f:ajax&gt; behavior in composite components</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This release now requires Java SE 11 or newer (aligned with Jakarta EE 10).</p>
+</div>
+<div class="sect3">
+<h4 id="backward-compatibility-with-previous-versions"><a class="anchor" href="#backward-compatibility-with-previous-versions"></a>B.1.1. Backward Compatibility with Previous Versions</h4>
+<div class="paragraph">
+<p>This release contains the following backwards incompatible changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1552">1552</a><br>
+Rename "JSF" to "Faces" over all place</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1553">1553</a><br>
+Rename "http://xmlns.jcp.org/jsf/<strong>" URL to "jakarta.faces.</strong>" URN</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1546">1546</a><br>
+Remove all JSP support</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1547">1547</a><br>
+Remove native Managed Beans (@ManagedBean and related)</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1548">1548</a><br>
+Remove MethodBinding, ValueBinding and friends</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1571">1571</a><br>
+Remove CURRENT_COMPONENT constants from UIComponent class</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1578">1578</a><br>
+Remove deprecated methods of StateManager class</p>
+</li>
+<li>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1583">1583</a><br>
+Remove entire ResourceResolver class</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="changes-between-3-0-and-2-3"><a class="anchor" href="#changes-between-3-0-and-2-3"></a>B.2. Changes between 3.0 and 2.3</h3>
+<div class="paragraph">
+<p>Namespace has been changed from  <code>javax.faces</code> to <code>jakarta.faces</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="backward-compatibility-with-previous-versions-2"><a class="anchor" href="#backward-compatibility-with-previous-versions-2"></a>B.2.1. Backward Compatibility with Previous Versions</h4>
+<div class="paragraph">
+<p>Jakarta Faces 3.0 has a breaking change due to the namespace change from  <code>javax.faces</code> to <code>jakarta.faces</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="changes-between-2-2-and-2-3"><a class="anchor" href="#changes-between-2-2-and-2-3"></a>B.3. Changes between 2.2 and 2.3</h3>
 <div class="paragraph">
 <p>This section gives the reader a survey of the changes between version 2.3
 of the specification and version 2.2, using the categories from the issue
-tracker at {issue_tracker_url}.</p>
+tracker at <a href="https://github.com/jakartaee/faces/issues/" class="bare">https://github.com/jakartaee/faces/issues/</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="big-ticket-features"><a class="anchor" href="#big-ticket-features"></a>B.1.1. Big Ticket Features</h4>
+<h4 id="big-ticket-features"><a class="anchor" href="#big-ticket-features"></a>B.3.1. Big Ticket Features</h4>
 <div class="ulist">
 <ul>
 <li>
 <p>WebSocket Integration<br>
-Issue ID {issue_tracker_url}1396[1396]<br>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/1396">1396</a><br>
 See the VDLDocs for &lt;f:websocket&gt;.</p>
 </li>
 <li>
 <p>Multi-field Validation<br>
-Issue ID {issue_tracker_url}1[1]<br>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/1">1</a><br>
 See the VDLDocs for &lt;f:validateWholeBean&gt;.</p>
 </li>
 <li>
 <p>Java Time Support<br>
-Issue ID {issue_tracker_url}1370[1370]<br>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/1370">1370</a><br>
 See the VDLDocs for &lt;f:convertDateTime&gt;.</p>
 </li>
 </ul>
@@ -24224,22 +24332,22 @@ See the VDLDocs for &lt;f:convertDateTime&gt;.</p>
 <li>
 <p>Use CDI for evaluation of JSF specific EL implicit Objects<br>
 Issue ID
-{issue_tracker_url}1311[1311],
-{issue_tracker_url}1322[1322],
-{issue_tracker_url}1325[1325],
-{issue_tracker_url}1327[1327],
-{issue_tracker_url}1328[1328],
-{issue_tracker_url}1334[1334],
-{issue_tracker_url}1332[1332],
-{issue_tracker_url}1331[1331],
-{issue_tracker_url}1384[1384],
-{issue_tracker_url}1385[1385],
-{issue_tracker_url}1383[1383],
-{issue_tracker_url}1386[1386] - {issue_tracker_url}1394[1394]<br>
+<a href="https://github.com/jakartaee/faces/issues/1311">1311</a>,
+<a href="https://github.com/jakartaee/faces/issues/1322">1322</a>,
+<a href="https://github.com/jakartaee/faces/issues/1325">1325</a>,
+<a href="https://github.com/jakartaee/faces/issues/1327">1327</a>,
+<a href="https://github.com/jakartaee/faces/issues/1328">1328</a>,
+<a href="https://github.com/jakartaee/faces/issues/1334">1334</a>,
+<a href="https://github.com/jakartaee/faces/issues/1332">1332</a>,
+<a href="https://github.com/jakartaee/faces/issues/1331">1331</a>,
+<a href="https://github.com/jakartaee/faces/issues/1384">1384</a>,
+<a href="https://github.com/jakartaee/faces/issues/1385">1385</a>,
+<a href="https://github.com/jakartaee/faces/issues/1383">1383</a>,
+<a href="https://github.com/jakartaee/faces/issues/1386">1386</a> - <a href="https://github.com/jakartaee/faces/issues/1394">1394</a><br>
 See <a href="#a3070">Expression Language Resolution</a></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1417[1417]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1417">1417</a><br>
 Deprecate javax.faces.bean.</p>
 </li>
 </ul>
@@ -24249,54 +24357,54 @@ Deprecate javax.faces.bean.</p>
 <li>
 <p>Support @Inject on JSF specific artifacts<br>
 Issue ID
-{issue_tracker_url}1316[1316],
-{issue_tracker_url}527[527],
-{issue_tracker_url}1309[1309],
-{issue_tracker_url}1323[1323],
-{issue_tracker_url}1283[1283],
-{issue_tracker_url}1353[1353],
-{issue_tracker_url}1335[1335],
-{issue_tracker_url}1333[1333],
-{issue_tracker_url}1349[1349],
-{issue_tracker_url}1351[1351],
-{issue_tracker_url}1350[1350],
-{issue_tracker_url}1345[1345]<br>
+<a href="https://github.com/jakartaee/faces/issues/1316">1316</a>,
+<a href="https://github.com/jakartaee/faces/issues/527">527</a>,
+<a href="https://github.com/jakartaee/faces/issues/1309">1309</a>,
+<a href="https://github.com/jakartaee/faces/issues/1323">1323</a>,
+<a href="https://github.com/jakartaee/faces/issues/1283">1283</a>,
+<a href="https://github.com/jakartaee/faces/issues/1353">1353</a>,
+<a href="https://github.com/jakartaee/faces/issues/1335">1335</a>,
+<a href="https://github.com/jakartaee/faces/issues/1333">1333</a>,
+<a href="https://github.com/jakartaee/faces/issues/1349">1349</a>,
+<a href="https://github.com/jakartaee/faces/issues/1351">1351</a>,
+<a href="https://github.com/jakartaee/faces/issues/1350">1350</a>,
+<a href="https://github.com/jakartaee/faces/issues/1345">1345</a><br>
 See <a href="#a3054">Jakarta Faces Objects Valid for @Inject Injection</a></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1364[1364]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1364">1364</a><br>
 UIData and &lt;ui:repeat&gt; supports Map and Iterable</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1102[1102]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1102">1102</a><br>
 ui:repeat condition check.<br></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1418[1418]<br>
-CDI Replacement for @ManagedProperty.
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1418">1418</a><br>
+CDI Replacement for @ManagedProperty.<br>
 See javadocs for javax.faces.annotation.ManagedProperty.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1103[1103], {issue_tracker_url}1364[1364]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1103">1103</a>, <a href="https://github.com/jakartaee/faces/issues/1364">1364</a><br>
 See the Javadoc for javax.faces.component.UIData,
 and javax.faces.model.IterableDataModel.</p>
 </li>
 <li>
 <p>DataModel implementations can be registered<br>
-Issue ID {issue_tracker_url}1078[1078]<br>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/1078">1078</a><br>
 See the javadoc for annotation javax.faces.model.FacesDataModel.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1412[1412]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1412">1412</a><br>
 See the javadoc for annotation
 javax.faces.partialViewContext.getEvalScripts().</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}613[613]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/613">613</a><br>
 Ajax Method Invocation. See vdldoc for &lt;h:commandScript&gt;.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1238[1238]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1238">1238</a><br>
 Enhanced component search facility.
 See the javadoc for package javax.faces.component.search.</p>
 </li>
@@ -24304,28 +24412,28 @@ See the javadoc for package javax.faces.component.search.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="other-features-by-functional-area"><a class="anchor" href="#other-features-by-functional-area"></a>B.1.2. Other Features, by Functional Area</h4>
+<h4 id="other-features-by-functional-area"><a class="anchor" href="#other-features-by-functional-area"></a>B.3.2. Other Features, by Functional Area</h4>
 <div class="sect4">
-<h5 id="componentsrenderers"><a class="anchor" href="#componentsrenderers"></a>B.1.2.1. Components/Renderers</h5>
+<h5 id="componentsrenderers"><a class="anchor" href="#componentsrenderers"></a>B.3.2.1. Components/Renderers</h5>
 <div class="ulist">
 <div class="title">Larger Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}217[217]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/217">217</a><br>
 styleClass attribute added to h:column</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}329[329]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/329">329</a><br>
 Add “group” attribute to &lt;h:selectOneRadio&gt;.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1423[1423], {issue_tracker_url}1404[1404]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1423">1423</a>, <a href="https://github.com/jakartaee/faces/issues/1404">1404</a><br>
 ResourceHandler.markResourceRendered(), and isResourceRendered(),
 UIViewRoot.getComponentResources() enable the discovery of
 dynamically added resources, even within Ajax requests.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1404[1404]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1404">1404</a><br>
 Add API to check if a resource has already been rendered.
 See Javadoc for
 javax.faces.application.ResourceHandler.markResourceRendered()
@@ -24336,7 +24444,7 @@ and isResourceRendered().</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1436[1436]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1436">1436</a><br>
 In <a href="#a457">Render Response</a>,
 specify how Server Push is utilized.</p>
 </li>
@@ -24346,43 +24454,43 @@ specify how Server Push is utilized.</p>
 <div class="title">Smaller Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1422[1422]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1422">1422</a><br>
 UISelectMany detects converter based on first item.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1007[1007]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1007">1007</a><br>
 Explicit support for dynamic component manipulation</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}819[819]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/819">819</a><br>
 Add “disabled” attribute for h:button</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1300[1300]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1300">1300</a><br>
 UIViewRoot.getViewMap() and publishEvent().</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1229[1229]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1229">1229</a><br>
 Document UIData.setRowStatePreserved() in VDLDoc and RenderKit Doc.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1135[1135]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1135">1135</a><br>
 Add PostRenderViewEvent.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1258[1258]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1258">1258</a><br>
 Clarify text escaping for &lt;h:outputText&gt; or equivalent EL expressions.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}807[807]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/807">807</a><br>
 Pass FacesContext to system event listeners.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1113[1113]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1113">1113</a><br>
 Remove onselect attribute from SELECT components.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1433[1433]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1433">1433</a><br>
 Add a context-param to enable forcing validation to happen even when
 there is no parameter corresponding to the current component.</p>
 </li>
@@ -24390,12 +24498,12 @@ there is no parameter corresponding to the current component.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="lifecycle"><a class="anchor" href="#lifecycle"></a>B.1.2.2. Lifecycle</h5>
+<h5 id="lifecycle"><a class="anchor" href="#lifecycle"></a>B.3.2.2. Lifecycle</h5>
 <div class="ulist">
 <div class="title">Larger Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}790[790]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/790">790</a><br>
 javax.faces.ViewState and ajax with cross form submit.</p>
 </li>
 </ul>
@@ -24404,75 +24512,75 @@ javax.faces.ViewState and ajax with cross form submit.</p>
 <div class="title">Smaller Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}473[473]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/473">473</a><br>
 FacesEvent.getFacesContext().</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1241[1241]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1241">1241</a><br>
 faces-config supports client-window-factory.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1346[1346]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1346">1346</a><br>
 Simplify decoration of FaceletCacheFactory.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1361[1361]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1361">1361</a><br>
 Correct oversight regarding re-entrancy of flow scoped beans.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}821[821]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/821">821</a><br>
 Implement ExternalContext.getRealPath() on startup and shutdown.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1401[1401]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1401">1401</a><br>
 Explicitly prohibit using NavigationHandler from within ExceptionHandler invoked during RENDER RESPONSE.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1306[1306]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1306">1306</a><br>
 @FlowScoped should be @NormalScope(passivating=true).</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1382[1382]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1382">1382</a><br>
 Generify return from ExternalContext.getInitParameterMap().</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1329[1329]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1329">1329</a><br>
 @NotNull and &lt;f:viewParam&gt;.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1403[1403]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1403">1403</a><br>
 Allow entry into flow via &lt;f:viewAction&gt;.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1216[1216]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1216">1216</a><br>
 Improve consistency in handling PhaseListener instances
 registered on UIViewRoot components.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1435[1435]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1435">1435</a><br>
 Add ResourceHandler.getViewResources() method.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="platform-integration"><a class="anchor" href="#platform-integration"></a>B.1.2.3. Platform Integration</h5>
+<h5 id="platform-integration"><a class="anchor" href="#platform-integration"></a>B.3.2.3. Platform Integration</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1379[1379]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1379">1379</a><br>
 ExternalContext.getResponseCharacterEncoding() and Portlet 3.0.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="faceletsvdl"><a class="anchor" href="#faceletsvdl"></a>B.1.2.4. Facelets/VDL</h5>
+<h5 id="faceletsvdl"><a class="anchor" href="#faceletsvdl"></a>B.3.2.4. Facelets/VDL</h5>
 <div class="ulist">
 <div class="title">Larger Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1424[1424]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1424">1424</a><br>
 Add tag &lt;f:importConstants&gt;, see VDLDoc for that tag.</p>
 </li>
 </ul>
@@ -24481,88 +24589,88 @@ Add tag &lt;f:importConstants&gt;, see VDLDoc for that tag.</p>
 <div class="title">Smaller Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1362[1362]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1362">1362</a><br>
 Revisit some cardinality rules regarding &lt;tag&gt; and &lt;component&gt; elements.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}936[936]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/936">936</a><br>
 Set FACELETS_REFRESH_PERIOD to -1 if ProjectStage is Production.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="spec-clarifications"><a class="anchor" href="#spec-clarifications"></a>B.1.2.5. Spec Clarifications</h5>
+<h5 id="spec-clarifications"><a class="anchor" href="#spec-clarifications"></a>B.3.2.5. Spec Clarifications</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1254[1254]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1254">1254</a><br>
 Loosen language regarding the contracts attribute on &lt;f:view&gt;.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1338[1338]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1338">1338</a><br>
 Clarify pseudocode for resource libraries.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1279[1279]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1279">1279</a><br>
 Specify UIInput.isEmpty()</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1242[1242]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1242">1242</a><br>
 Remove mentione of OpenAjax hub.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1215[1215]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1215">1215</a><br>
 Additional warning on DelegatingMetaTagHandler.getTagHandlerDelegate.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1131[1131]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1131">1131</a><br>
 “name” attribute not required.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1270[1270]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1270">1270</a><br>
 TagDecorator spec namespace modifications.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1401[1401]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1401">1401</a><br>
 Advisory text for ExceptionHandler.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1402[1402]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1402">1402</a><br>
 Explicitly declare that flow eagerness not supported.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}677[677]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/677">677</a><br>
 Document automatic UIPanel behavior for f:facet.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1095[1095]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1095">1095</a><br>
 Description for “rendered” attribute for repeat and fragment.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1066[1066]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1066">1066</a><br>
 Application.getNavigationHandler() and application element.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}803[803]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/803">803</a><br>
 VisitHint.EXECUTE_LIFECYCLE clarifications.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1217[1217]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1217">1217</a><br>
 EnumConverter.getAsString() clarifications.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1356[1356]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1356">1356</a><br>
 UIInput.processValidators() clarifications.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1424[1424]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1424">1424</a><br>
 Public constants for source, behavior, and partial.event.
 See the Javadocs for
 javax.faces.component.behavior.ClientBehaviorContext, and javax.faces.conetxt.PartialViewContext.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1428[1428]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1428">1428</a><br>
 API constants for jsf.js and javax.faces in JavaScript.</p>
 </li>
 </ul>
@@ -24570,7 +24678,7 @@ API constants for jsf.js and javax.faces in JavaScript.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1260[1260]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1260">1260</a><br>
 Support for exact mapping of FacesServlet.
 See <a href="#a3913">ViewHandler Methods that Derive Information From the Incoming Request</a>
 and <a href="#a3955">ViewHandler Methods Relating to Navigation</a>.</p>
@@ -24578,39 +24686,39 @@ and <a href="#a3955">ViewHandler Methods Relating to Navigation</a>.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Issue ID {issue_tracker_url}1250[1250]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1250">1250</a><br>
 Fix entries in table
 <a href="#a2541">Jakarta Faces Artifacts Eligible for Injection</a>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="resources"><a class="anchor" href="#resources"></a>B.1.2.6. Resources</h5>
+<h5 id="resources"><a class="anchor" href="#resources"></a>B.3.2.6. Resources</h5>
 
 </div>
 <div class="sect4">
-<h5 id="expression-language"><a class="anchor" href="#expression-language"></a>B.1.2.7. Expression Language</h5>
+<h5 id="expression-language"><a class="anchor" href="#expression-language"></a>B.3.2.7. Expression Language</h5>
 
 </div>
 <div class="sect4">
-<h5 id="configuration-and-bootstrapping"><a class="anchor" href="#configuration-and-bootstrapping"></a>B.1.2.8. Configuration and Bootstrapping</h5>
+<h5 id="configuration-and-bootstrapping"><a class="anchor" href="#configuration-and-bootstrapping"></a>B.3.2.8. Configuration and Bootstrapping</h5>
 
 </div>
 <div class="sect4">
-<h5 id="miscellaneous"><a class="anchor" href="#miscellaneous"></a>B.1.2.9. Miscellaneous</h5>
+<h5 id="miscellaneous"><a class="anchor" href="#miscellaneous"></a>B.3.2.9. Miscellaneous</h5>
 <div class="ulist">
 <div class="title">Smaller Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1225[1225]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1225">1225</a><br>
 Clarify requirements to support BCP-47 regarding localization.
 See <a href="#a554">Determining the active <em>Locale</em></a></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1429[1429]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1429">1429</a><br>
 Add constructor to make wrapping easier.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1430[1430]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1430">1430</a><br>
 Leverage Java SE 8 repeatable annotations where appropriate.</p>
 </li>
 </ul>
@@ -24618,7 +24726,7 @@ Leverage Java SE 8 repeatable annotations where appropriate.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="backward-compatibility-with-previous-versions-3"><a class="anchor" href="#backward-compatibility-with-previous-versions-3"></a>B.1.3. Backward Compatibility with Previous Versions</h4>
+<h4 id="backward-compatibility-with-previous-versions-3"><a class="anchor" href="#backward-compatibility-with-previous-versions-3"></a>B.3.3. Backward Compatibility with Previous Versions</h4>
 <div class="paragraph">
 <p>JSF 2.3 is fully backward compatible with previous releases of JSF,
 unless any of the following context-parameter values are specified.
@@ -24645,59 +24753,59 @@ See the javadocs for that annotation for details.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="breakages-in-backward-compatibility"><a class="anchor" href="#breakages-in-backward-compatibility"></a>B.1.4. Breakages in Backward Compatibility</h4>
+<h4 id="breakages-in-backward-compatibility"><a class="anchor" href="#breakages-in-backward-compatibility"></a>B.3.4. Breakages in Backward Compatibility</h4>
 
 </div>
 </div>
 <div class="sect2">
-<h3 id="changes-between-2-1-and-2-2"><a class="anchor" href="#changes-between-2-1-and-2-2"></a>B.2. Changes between 2.1 and 2.2</h3>
+<h3 id="changes-between-2-1-and-2-2"><a class="anchor" href="#changes-between-2-1-and-2-2"></a>B.4. Changes between 2.1 and 2.2</h3>
 <div class="paragraph">
 <p>This section gives the reader a survey of the
 changes between this version of the specification and the previous
 version, using the categories from the issue tracker at &lt;
-{issue_tracker_url} &gt;.</p>
+<a href="https://github.com/jakartaee/faces/issues/" class="bare">https://github.com/jakartaee/faces/issues/</a> &gt;.</p>
 </div>
 <div class="sect3">
-<h4 id="big-ticket-features-2"><a class="anchor" href="#big-ticket-features-2"></a>B.2.1. Big Ticket Features</h4>
+<h4 id="big-ticket-features-2"><a class="anchor" href="#big-ticket-features-2"></a>B.4.1. Big Ticket Features</h4>
 <div class="ulist">
 <ul>
 <li>
 <p>HTML5 Friendly Markup<br>
-Issue ID {issue_tracker_url}1090[1090]<br>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/1090">1090</a><br>
 Start with
 <a href="#a5581">HTML5 Friendly Markup</a></p>
 </li>
 <li>
 <p>Resource Library Contracts<br>
-Issue ID {issue_tracker_url}1142[1142]<br>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/1142">1142</a><br>
 Start with <a href="#a5526">Resource Library Contracts Background</a>.</p>
 </li>
 <li>
 <p>Faces Flows<br>
-Issue ID {issue_tracker_url}730[730]<br>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/730">730</a><br>
 Start with <a href="#a3840">FlowHandler</a>.</p>
 </li>
 <li>
 <p>Stateless Views<br>
-Issue ID {issue_tracker_url}1055[1055]<br>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/1055">1055</a><br>
 Start with <a href="#a4126">Stateless Views</a>.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="other-features-by-functional-area-2"><a class="anchor" href="#other-features-by-functional-area-2"></a>B.2.2. Other Features, by Functional Area</h4>
+<h4 id="other-features-by-functional-area-2"><a class="anchor" href="#other-features-by-functional-area-2"></a>B.4.2. Other Features, by Functional Area</h4>
 <div class="sect4">
-<h5 id="componentsrenderers-2"><a class="anchor" href="#componentsrenderers-2"></a>B.2.2.1. Components/Renderers</h5>
+<h5 id="componentsrenderers-2"><a class="anchor" href="#componentsrenderers-2"></a>B.4.2.1. Components/Renderers</h5>
 <div class="ulist">
 <div class="title">Larger Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}479[479]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/479">479</a><br>
 UIData supports the Collection Interface rather than List.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1134[1134]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1134">1134</a><br>
 Add the "role" pass through attribute.</p>
 </li>
 </ul>
@@ -24706,99 +24814,99 @@ Add the "role" pass through attribute.</p>
 <div class="title">Smaller Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1080[1080]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1080">1080</a><br>
 Warn about some important corner cases when
 <em>UIComponent.findComponent()</em> may not provide the expected results.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1068[1068]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1068">1068</a><br>
 New section describing what happens with
 respect to partial processing during render response. See
 <a href="#a480">Render Response Partial Processing</a>.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1067[1067]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1067">1067</a><br>
 Spec clarifications. See the VDLDoc for <em>cc:insertChildren</em>,
 <em>cc:insertFacet</em></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1061[1061]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1061">1061</a><br>
 Clarify that both
 <em>Application.publishEvent()</em> and the manual traversal based delivery are
 required for publishing the <em>PostRestoreStateEvent</em>.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1030[1030]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1030">1030</a><br>
 Clarify docs for h:message h:messages</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1023[1023]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1023">1023</a><br>
 Modify JavaDoc to relax requirements for PostAddToViewEvent publishing</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1019[1019]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1019">1019</a><br>
 Modify spec for ResponseWriter.writeURIAttribute() to explicitly require
 adherence to the W3C URI spec</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}997[997]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/997">997</a><br>
 javax.faces.component.ComponentSystemEvent: Override
 isAppropriateListener so that it first asks the listener, "are you a
 ComponentSystemEventListener", then, if not, asks
 super.isAppropriateListener()</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}984[984]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/984">984</a><br>
 Component Context Manager, see
 <em>javax.faces.component.visit.ComponentModificationManager</em>.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}943[943]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/943">943</a><br>
 See <em>javax.faces.view.ViewDeclarationLanguageWrapper</em></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}784[784]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/784">784</a><br>
 Deprecate the CURRENT_COMPONENT and CURRENT_COMPOSITE_COMPONENT
 attributes</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}599[599]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/599">599</a><br>
 Make it possible to programmatically create components in the same way
 as they are created by Facelets. See
 <em>javax.faces.application.Application.createComponent(FacesContext,
 String taglibUri, String tagName, Map attrs)</em></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}703[703]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/703">703</a><br>
 Make "value" optional for @FacesComponent.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}585[585]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/585">585</a><br>
 outputText and inputText do not render children by default</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}550[550]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/550">550</a><br>
 OutputStylesheet "media" attribute</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1125[1125]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1125">1125</a><br>
 <em>javax.faces.application.Application</em> event subscription clarifications.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="lifecycle-2"><a class="anchor" href="#lifecycle-2"></a>B.2.2.2. Lifecycle</h5>
+<h5 id="lifecycle-2"><a class="anchor" href="#lifecycle-2"></a>B.4.2.2. Lifecycle</h5>
 <div class="ulist">
 <div class="title">Larger Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}949[949], {issue_tracker_url}947[947]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/949">949</a>, <a href="https://github.com/jakartaee/faces/issues/947">947</a><br>
 Give JSF the ability to correctly handle browsing context (tab, browser
 window, pop-up, etc). See <em>javax.faces.lifecycle.ClientWindow</em>.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}758[758] and {issue_tracker_url}1042[1042]</p>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/758">758</a> and <a href="https://github.com/jakartaee/faces/issues/1042">1042</a></p>
 <div class="paragraph">
 <p>A jsf-api/src/main/java/javax/faces/component/UIViewAction.java</p>
 </div>
@@ -24841,15 +24949,15 @@ phase)</p>
 </div>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1062[1062] and {issue_tracker_url}802[802]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1062">1062</a> and <a href="https://github.com/jakartaee/faces/issues/802">802</a><br>
 File Upload</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}766[766]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/766">766</a><br>
 Events from the flash</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1050[1050]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1050">1050</a><br>
 Add support for delay value in options for Ajax requests</p>
 </li>
 </ul>
@@ -24858,17 +24966,17 @@ Add support for delay value in options for Ajax requests</p>
 <div class="title">Smaller Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1129[1129]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1129">1129</a><br>
 In validate(), clarify that setSubmittedValue() null must be called if
 validation succeeds.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1071[1071]
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1071">1071</a>
 Add FlashFactory. See
 <a href="#a6336">Delegating Implementation Support</a>.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1065[1065]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1065">1065</a><br>
 When calculating the locale for the
 resource library prefix, if there is a UIViewRoot, use its locale first,
 otherwise, just use the Applications’s ViewHandler’s calculateLocale()
@@ -24876,23 +24984,23 @@ method. See <a href="#a836">Libraries of Localized and
 Versioned Resources</a></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1039[1039]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1039">1039</a><br>
 In ApplicationWrapper, mark things as deprecated</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1028[1028]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1028">1028</a><br>
 Deprecate StateManager, point to StateManagementStrategy. In
 StateManagementStrategy, require the use of the visit API to perform the
 saving.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}993[993]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/993">993</a><br>
 Wrapper for ActionListener</p>
 </li>
 <li>
 <p>Tweak circumstances for skipping intervening
 lifecycle phases in the case of view metadata
-Issue ID {issue_tracker_url}762[762]</p>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/762">762</a></p>
 <div class="paragraph">
 <p>Section 2.2.1. Now has this text.</p>
 </div>
@@ -24919,11 +25027,11 @@ facesContext.renderResponse().</p>
 </div>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}566[566]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/566">566</a><br>
 UIOutput.getValue() value returns.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}220[220]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/220">220</a><br>
 In web-partialresponse_2_2.xsd, require that
 the &lt;partial-response&gt; element has an “id” attribute whose value is the
 return from <em>UIViewRoot.getContainerClientId()</em>.</p>
@@ -24932,34 +25040,34 @@ return from <em>UIViewRoot.getContainerClientId()</em>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="platform-integration-2"><a class="anchor" href="#platform-integration-2"></a>B.2.2.3. Platform Integration</h5>
+<h5 id="platform-integration-2"><a class="anchor" href="#platform-integration-2"></a>B.4.2.3. Platform Integration</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}763[763]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/763">763</a><br>
 Change
 Managed Bean Annotations to account for new injectability requirements.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}976[976]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/976">976</a><br>
 In Javadoc for “Faces Managed Bean Annotation Specification For
 Containers Conforming to Servlet 2.5 and Beyond”, indicate that
 <em>javax.faces.bean</em> will be deprecated in the next version.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1087[1087]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1087">1087</a><br>
 Introduce CDI based @ViewScoped annotation.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="faceletsvdl-2"><a class="anchor" href="#faceletsvdl-2"></a>B.2.2.4. Facelets/VDL</h5>
+<h5 id="faceletsvdl-2"><a class="anchor" href="#faceletsvdl-2"></a>B.4.2.4. Facelets/VDL</h5>
 <div class="ulist">
 <div class="title">Larger Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1001[1001]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1001">1001</a><br>
 Allow cc and non-cc components in one taglib</p>
 <div class="paragraph">
 <p>A jsf-api/doc/web-facelettaglibrary_2_2.xsd</p>
@@ -24987,7 +25095,7 @@ http://java.sun.com/jsf/composite/&lt;libraryName&gt;</p>
 <li>
 <p>The user employs a java component has a
 @FacesComponent on it that declares the necessary metadata.
-Issue ID {issue_tracker_url}594[594]</p>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/594">594</a></p>
 </li>
 </ul>
 </div>
@@ -25041,7 +25149,7 @@ identifier as specified in section 2.6.1.3.</p>
 </div>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}548[548]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/548">548</a><br>
 Require additional check to handle the case
 where, in one resource library, there are both localized and
 non-localized resources. See <a href="#a836">Libraries
@@ -25053,14 +25161,14 @@ of Localized and Versioned Resources</a>.</p>
 <div class="title">Smaller Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1038[1038]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1038">1038</a><br>
 Declare an annotation corresponding to the
 <em>javax.faces.FACELETS_RESOURCE_RESOLVER</em> application configuration
 parameter. See <a href="#a6598">Requirements for scanning
 of classes for annotations</a> and <a href="#a6088">Application Configuration Parameters</a>.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1082[1082]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1082">1082</a><br>
 Account for DOCTYPE discrepancy between
 server side representation of Facelet VDL files, which are proper XHTML,
 and processed files which are sent to the client, which now, by default,
@@ -25069,98 +25177,98 @@ facelets-processing element</a>.</p>
 </li>
 <li>
 <p>Fix incorrect VDLDoc
-Issue ID {issue_tracker_url}967[967]
+Issue ID <a href="https://github.com/jakartaee/faces/issues/967">967</a>
 f:selectItems itemValue description incorrect.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}922[922]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/922">922</a><br>
 Remove maxlength from f:viewParam</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}998[998]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/998">998</a><br>
 Document that ui:fragment should not be bound to a bean with wider than
 request scope, document that the type of the property must extend from
 UIComponent.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}999[999]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/999">999</a><br>
 Changes to "template" attribute requiredness for ui:decorate and
 ui:composition</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}901[901]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/901">901</a><br>
 Deprecate “targets” concept.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1088[1088]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1088">1088</a><br>
 add short-name to schema.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}746[746]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/746">746</a><br>
 Missing <em>method-signature</em> element in taglib xsd.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="spec-clarifications-2"><a class="anchor" href="#spec-clarifications-2"></a>B.2.2.5. Spec Clarifications</h5>
+<h5 id="spec-clarifications-2"><a class="anchor" href="#spec-clarifications-2"></a>B.4.2.5. Spec Clarifications</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1136[1136]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1136">1136</a><br>
 In <em>ExternalContext.dispatch()</em>, clarify what is to be done if
 <em>getRequestDispatcher()</em> returns <em>null</em>.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1132[1132]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1132">1132</a><br>
 Replace literal strings with symbolic constants where possible.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1127[1127]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1127">1127</a><br>
 State Saving Serializability concerns.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1114[1114]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1114">1114</a><br>
 <em>javax.faces.view.facelets.Facelet.apply()</em> spec version reference
 error.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1100[1100], {issue_tracker_url}1097[1097]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1100">1100</a>, <a href="https://github.com/jakartaee/faces/issues/1097">1097</a><br>
 HTML5 id attribute sensitivity</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1064[1064]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1064">1064</a><br>
 In <a href="JSFMetadata.html#a7061">The
 facelets-processing element</a>, clarify that in XML and JSPX modes, only
 the CDATA section start and end tags, not the entire CDATA section and
 contents, should be consumed.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1063[1063]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1063">1063</a><br>
 <em>javax.faces.component.UIViewParameter.getSubmittedValue()</em> return
 value.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1058[1058]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1058">1058</a><br>
 ui:repeat tag size attribute</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1036[1036]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1036">1036</a><br>
 In <a href="#a911">ValueExpression properties</a>, clarify which attributes are expression
 enabled,</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1035[1035]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1035">1035</a><br>
 Change section
 <a href="#a3300">FacesMessage</a> to clarify the meaning of
 having <em>FacesMessage</em> instances on the <em>FacesContext.</em></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1026[1026]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1026">1026</a><br>
 f:ajax event attribute is String (not VE)</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1014[1014]</p>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1014">1014</a></p>
 <div class="paragraph">
 <p>12.1.3</p>
 </div>
@@ -25182,12 +25290,12 @@ correct name, however.</p>
 </div>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1010[1010]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1010">1010</a><br>
 Check existing usages of the state saving method parameter to ensure
 case insensitivity.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1004[1004]</p>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1004">1004</a></p>
 <div class="paragraph">
 <p>M usingFacesInWebapps.fm</p>
 </div>
@@ -25205,15 +25313,15 @@ javax.faces.FACELETS_BUFFER_SIZE to be 1024.</p>
 </div>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}998[998]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/998">998</a><br>
 Additional clarification about binding attribute in VDLDocs</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}915[915], {issue_tracker_url}1015[1015]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/915">915</a>, <a href="https://github.com/jakartaee/faces/issues/1015">1015</a><br>
 Non-normative text about http methods and prefix mapping</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}2740[2740]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/2740">2740</a><br>
 In <a href="#a923">Component Bindings</a>, clarify a corner
 case regarding bean scope and component binding.</p>
 </li>
@@ -25221,12 +25329,12 @@ case regarding bean scope and component binding.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="resources-2"><a class="anchor" href="#resources-2"></a>B.2.2.6. Resources</h5>
+<h5 id="resources-2"><a class="anchor" href="#resources-2"></a>B.4.2.6. Resources</h5>
 <div class="ulist">
 <div class="title">Larger Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}809[809]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/809">809</a><br>
 This commit introduces a cleaner contract for allowing views to be
 loaded from the Filesystem (including inside of JAR files). All VDL
 resources must be loaded using ResourceHandler.createViewResource().</p>
@@ -25237,17 +25345,17 @@ resources must be loaded using ResourceHandler.createViewResource().</p>
 <div class="title">Smaller Changes</div>
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}996[996]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/996">996</a><br>
 Enable configuring the web app resources
 directory. See <a href="#a6088">Application Configuration
 Parameters</a>.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}719[719]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/719">719</a><br>
 Method to map a viewId to a resourcePath</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1130[1130]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1130">1130</a><br>
 Modify <a href="#a4135">State Saving Alternatives and
 Implications</a> to clarify there is no requirement to serialize server
 state by default when state saving method is server. Introduce a context
@@ -25258,11 +25366,11 @@ Configuration Parameters</a></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="expression-language-2"><a class="anchor" href="#expression-language-2"></a>B.2.2.7. Expression Language</h5>
+<h5 id="expression-language-2"><a class="anchor" href="#expression-language-2"></a>B.4.2.7. Expression Language</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1092[1092]</p>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1092">1092</a></p>
 <div class="paragraph">
 <p>Remove text from
 MethodExpressionValueChangeListener and MethodExpressionActionListener
@@ -25276,12 +25384,12 @@ exceptions that do not get to the <em>ExceptionHandler</em>.</p>
 </div>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1043[1043]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1043">1043</a><br>
 When publishing a ComponentSystemEvent, ensure the EL current component
 is pushed correctly</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1164[1164]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1164">1164</a><br>
 If running in a container that supports EL 3.0, add the necessary
 ELResolvers. See <a href="#a2966">Stream, StaticField,
 Map, List, Array, and Bean ELResolvers</a>.</p>
@@ -25290,11 +25398,11 @@ Map, List, Array, and Bean ELResolvers</a>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="configuration-and-bootstrapping-2"><a class="anchor" href="#configuration-and-bootstrapping-2"></a>B.2.2.8. Configuration and Bootstrapping</h5>
+<h5 id="configuration-and-bootstrapping-2"><a class="anchor" href="#configuration-and-bootstrapping-2"></a>B.4.2.8. Configuration and Bootstrapping</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}533[533]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/533">533</a><br>
 Modify <a href="#a6201">Application Startup Behavior</a> to account for requirement to call new API
 when starting up.</p>
 </li>
@@ -25302,11 +25410,11 @@ when starting up.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="miscellaneous-2"><a class="anchor" href="#miscellaneous-2"></a>B.2.2.9. Miscellaneous</h5>
+<h5 id="miscellaneous-2"><a class="anchor" href="#miscellaneous-2"></a>B.4.2.9. Miscellaneous</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1169[1169]</p>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1169">1169</a></p>
 <div class="paragraph">
 <p>New XML Namespace for XSD files introduced in
 JSF 2.2, and also for facelet tag libraries.</p>
@@ -25421,7 +25529,7 @@ from the New URI column, though both columns will work.</p>
 </div>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}997[997]</p>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/997">997</a></p>
 <div class="paragraph">
 <p>M jsf-api/src/main/java/javax/faces/event/ComponentSystemEvent.java</p>
 </div>
@@ -25471,7 +25579,7 @@ ComponentSystemEventListener.</p>
 </div>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}917[917]</p>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/917">917</a></p>
 <div class="paragraph">
 <p>javax.faces.application.ResourceWrapper:</p>
 </div>
@@ -25544,10 +25652,10 @@ runtime must ignore the case.</p>
 <li>
 <p>Add
 ExternalContext.getApplicationContextPath()
-Issue ID {issue_tracker_url}1012[1012]</p>
+Issue ID <a href="https://github.com/jakartaee/faces/issues/1012">1012</a></p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}787[787]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/787">787</a><br>
 restore ViewScope before templates are processed with buildView()</p>
 </li>
 <li>
@@ -25561,7 +25669,7 @@ descriptions of the cc and component implicit object from the getValue()
 specification for the composite component ELResolver in section 5.6.2.1.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}869[869]</p>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/869">869</a></p>
 <div class="paragraph">
 <p>Specify Cross Site Request Forgery
 protection.</p>
@@ -25599,19 +25707,19 @@ separate section, making the tables that list JSF related annotations
 redundant.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1082[1082]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1082">1082</a><br>
 Add new section
 <a href="#a5635">DOCTYPE and XML Declaration</a>.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1141[1141]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1141">1141</a><br>
 In <a href="#a758">Resource
 Identifiers</a>, declare that resourceName and resourceVersion, in addition
 to the already listed other segments, are subject to the same
 constraints.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}1129[1129]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1129">1129</a><br>
 In <a href="#a480">Render
 Response Partial Processing</a>, require calling <em>UIViewRoot.resetValues()</em>
 if necessary.</p>
@@ -25621,7 +25729,7 @@ if necessary.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="backward-compatibility-with-previous-versions-4"><a class="anchor" href="#backward-compatibility-with-previous-versions-4"></a>B.2.3. Backward Compatibility with Previous Versions</h4>
+<h4 id="backward-compatibility-with-previous-versions-4"><a class="anchor" href="#backward-compatibility-with-previous-versions-4"></a>B.4.3. Backward Compatibility with Previous Versions</h4>
 <div class="paragraph">
 <p>Faces 2.2 is backwards compatible with Faces
 2.1 and 2.0. This means that a web-application that was developed to run
@@ -25630,11 +25738,11 @@ with Faces 2.1 or 2.0 won’t require any modification when run with Faces
 </div>
 </div>
 <div class="sect3">
-<h4 id="breakages-in-backward-compatibility-2"><a class="anchor" href="#breakages-in-backward-compatibility-2"></a>B.2.4. Breakages in Backward Compatibility</h4>
+<h4 id="breakages-in-backward-compatibility-2"><a class="anchor" href="#breakages-in-backward-compatibility-2"></a>B.4.4. Breakages in Backward Compatibility</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Issue ID {issue_tracker_url}1092[1092]<br>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/1092">1092</a><br>
 Due to an error in previous versions of the
 specification, exceptions were silently being swallowed that now will
 bubble up to the exception handler. Code that was relying on this
@@ -25642,7 +25750,7 @@ incorrect behavior may need to be modified to account for fixing this
 problem.</p>
 </li>
 <li>
-<p>Issue ID {issue_tracker_url}745[745]</p>
+<p>Issue ID <a href="https://github.com/jakartaee/faces/issues/745">745</a></p>
 <div class="paragraph">
 <p>5.6.2.2 Table 5-11. Make the following
 changes to the spec for Composite Component Attribute ELResoler</p>
@@ -25708,23 +25816,23 @@ substantial, it was judged to be worth the cost.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="changes-between-2-0-rev-a-and-2-1"><a class="anchor" href="#changes-between-2-0-rev-a-and-2-1"></a>B.3. Changes between 2.0 Rev a and 2.1</h3>
+<h3 id="changes-between-2-0-rev-a-and-2-1"><a class="anchor" href="#changes-between-2-0-rev-a-and-2-1"></a>B.5. Changes between 2.0 Rev a and 2.1</h3>
 <div class="sect3">
-<h4 id="facelet-tag-library-mechanism"><a class="anchor" href="#facelet-tag-library-mechanism"></a>B.3.1. <a href="#a5638">Facelet Tag Library mechanism</a></h4>
+<h4 id="facelet-tag-library-mechanism"><a class="anchor" href="#facelet-tag-library-mechanism"></a>B.5.1. <a href="#a5638">Facelet Tag Library mechanism</a></h4>
 <div class="paragraph">
 <p>Document that the unprefixed namespace must
 pass through.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="new-feature-facelets-processing"><a class="anchor" href="#new-feature-facelets-processing"></a>B.3.2. New feature: &lt;facelets-processing&gt;</h4>
+<h4 id="new-feature-facelets-processing"><a class="anchor" href="#new-feature-facelets-processing"></a>B.5.2. New feature: &lt;facelets-processing&gt;</h4>
 <div class="paragraph">
 <p>See <a href="#a7040">Required Handling of *-extension elements in the application
 configuration resources files</a></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-schema-for-2-1"><a class="anchor" href="#update-schema-for-2-1"></a>B.3.3. Update schema for 2.1</h4>
+<h4 id="update-schema-for-2-1"><a class="anchor" href="#update-schema-for-2-1"></a>B.5.3. Update schema for 2.1</h4>
 <div class="paragraph">
 <p>The only new element is
 &lt;facelet-cache-factory&gt;. See the full schema in the Javadoc section of
@@ -25732,25 +25840,25 @@ the documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="change-restore-view-phase"><a class="anchor" href="#change-restore-view-phase"></a>B.3.4. Change Restore View Phase</h4>
+<h4 id="change-restore-view-phase"><a class="anchor" href="#change-restore-view-phase"></a>B.5.4. Change Restore View Phase</h4>
 <div class="paragraph">
 <p>Change <a href="#a404">Restore View</a> to require a call to <em>ViewHandler.deriveLogicalViewId()</em>
 before trying to find the <em>ViewDeclarationLanguage</em>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="default-viewhandler-implementation"><a class="anchor" href="#default-viewhandler-implementation"></a>B.3.5. <a href="#a3910">Default ViewHandler Implementation</a></h4>
+<h4 id="default-viewhandler-implementation"><a class="anchor" href="#default-viewhandler-implementation"></a>B.5.5. <a href="#a3910">Default ViewHandler Implementation</a></h4>
 <div class="paragraph">
 <p>Document <em>deriveLogicalViewId().</em></p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="changes-between-2-0-final-and-2-0-rev-a"><a class="anchor" href="#changes-between-2-0-final-and-2-0-rev-a"></a>B.4. Changes between 2.0 Final and 2.0 Rev a</h3>
+<h3 id="changes-between-2-0-final-and-2-0-rev-a"><a class="anchor" href="#changes-between-2-0-final-and-2-0-rev-a"></a>B.6. Changes between 2.0 Final and 2.0 Rev a</h3>
 <div class="sect3">
-<h4 id="global-changes"><a class="anchor" href="#global-changes"></a>B.4.1. Global changes</h4>
+<h4 id="global-changes"><a class="anchor" href="#global-changes"></a>B.6.1. Global changes</h4>
 <div class="sect4">
-<h5 id="exceptionqueuedevent"><a class="anchor" href="#exceptionqueuedevent"></a>B.4.1.1. ExceptionQueuedEvent</h5>
+<h5 id="exceptionqueuedevent"><a class="anchor" href="#exceptionqueuedevent"></a>B.6.1.1. ExceptionQueuedEvent</h5>
 <div class="paragraph">
 <p>The specification incorrectly refers to the
 ExceptionQueuedEvent as the ExceptionEvent. All instances should be
@@ -25758,7 +25866,7 @@ replaced, as there is no such class ExceptionEvent in JSF.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="usage-of-the-term-page-in-the-jsf-2-0-spec"><a class="anchor" href="#usage-of-the-term-page-in-the-jsf-2-0-spec"></a>B.4.1.2. Usage of the term "page" in the JSF 2.0 spec</h5>
+<h5 id="usage-of-the-term-page-in-the-jsf-2-0-spec"><a class="anchor" href="#usage-of-the-term-page-in-the-jsf-2-0-spec"></a>B.6.1.2. Usage of the term "page" in the JSF 2.0 spec</h5>
 <div class="paragraph">
 <p>This might be kind of nit-picky, but there
 are several occurrences of the term "Facelet page" in the JSF 2.0 spec,
@@ -25815,7 +25923,7 @@ or "Facelet View" for portlets would look like this:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="front-matter"><a class="anchor" href="#front-matter"></a>B.4.2. Front Matter</h4>
+<h4 id="front-matter"><a class="anchor" href="#front-matter"></a>B.6.2. Front Matter</h4>
 <div class="paragraph">
 <p>Change Sun logo to Oracle Logo. Sun postal
 address to Oracle postal address, and Sun phone number to Oracle phone
@@ -25826,9 +25934,9 @@ number</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="chapter-2"><a class="anchor" href="#chapter-2"></a>B.4.3. Chapter 2</h4>
+<h4 id="chapter-2"><a class="anchor" href="#chapter-2"></a>B.6.3. Chapter 2</h4>
 <div class="sect4">
-<h5 id="restore-view"><a class="anchor" href="#restore-view"></a>B.4.3.1. <a href="#a404">Restore View</a></h5>
+<h5 id="restore-view"><a class="anchor" href="#restore-view"></a>B.6.3.1. <a href="#a404">Restore View</a></h5>
 <div class="paragraph">
 <p>Per Andy Schwartz recommendation, loosen the
 spec requirements for the delivery of the PostRestoreStateEvent to be
@@ -25836,7 +25944,7 @@ spec requirements for the delivery of the PostRestoreStateEvent to be
 </div>
 </div>
 <div class="sect4">
-<h5 id="localized-application-messages"><a class="anchor" href="#localized-application-messages"></a>B.4.3.2. <a href="#a584">Localized Application Messages</a></h5>
+<h5 id="localized-application-messages"><a class="anchor" href="#localized-application-messages"></a>B.6.3.2. <a href="#a584">Localized Application Messages</a></h5>
 <div class="paragraph">
 <p>Suggestion: Change to</p>
 </div>
@@ -25846,13 +25954,13 @@ allowable minimum of 5.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="jsr-303-bean-validation"><a class="anchor" href="#jsr-303-bean-validation"></a>B.4.3.3. <a href="#a710">JSR 303 Bean Validation</a></h5>
+<h5 id="jsr-303-bean-validation"><a class="anchor" href="#jsr-303-bean-validation"></a>B.6.3.3. <a href="#a710">JSR 303 Bean Validation</a></h5>
 <div class="paragraph">
 <p>Change "leas" to "least"</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="jsr-303-bean-validation-needs-to-reference-bean-validation-integration-section"><a class="anchor" href="#jsr-303-bean-validation-needs-to-reference-bean-validation-integration-section"></a>B.4.3.4. <a href="#a710">JSR 303 Bean Validation</a> needs to reference "Bean Validation Integration" section</h5>
+<h5 id="jsr-303-bean-validation-needs-to-reference-bean-validation-integration-section"><a class="anchor" href="#jsr-303-bean-validation-needs-to-reference-bean-validation-integration-section"></a>B.6.3.4. <a href="#a710">JSR 303 Bean Validation</a> needs to reference "Bean Validation Integration" section</h5>
 <div class="paragraph">
 <p>While reading section 2.5.7, one becomes very
 disappointed with the limited about of information that it provides. But
@@ -25862,7 +25970,7 @@ if that makes sense.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="resource-identifiers"><a class="anchor" href="#resource-identifiers"></a>B.4.3.5. <a href="#a758">Resource Identifiers</a></h5>
+<h5 id="resource-identifiers"><a class="anchor" href="#resource-identifiers"></a>B.6.3.5. <a href="#a758">Resource Identifiers</a></h5>
 <div class="paragraph">
 <p>Tighten spec for the localePrefix,
 libraryName, and resourceVersion segments of the resource identifier.</p>
@@ -25870,9 +25978,9 @@ libraryName, and resourceVersion segments of the resource identifier.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="chapter-3"><a class="anchor" href="#chapter-3"></a>B.4.4. Chapter 3</h4>
+<h4 id="chapter-3"><a class="anchor" href="#chapter-3"></a>B.6.4. Chapter 3</h4>
 <div class="sect4">
-<h5 id="clarify-meaning-of-javax-faces-bean-in-bean-validator-activation"><a class="anchor" href="#clarify-meaning-of-javax-faces-bean-in-bean-validator-activation"></a>B.4.4.1. Clarify meaning of "javax.faces.bean" in <a href="#a1464">Bean Validator Activation</a></h5>
+<h5 id="clarify-meaning-of-javax-faces-bean-in-bean-validator-activation"><a class="anchor" href="#clarify-meaning-of-javax-faces-bean-in-bean-validator-activation"></a>B.6.4.1. Clarify meaning of "javax.faces.bean" in <a href="#a1464">Bean Validator Activation</a></h5>
 <div class="paragraph">
 <p>Section 3.5.6.1 says:</p>
 </div>
@@ -25892,7 +26000,7 @@ javax.faces.validator.BeanValidator class as mentioned in Section
 </div>
 </div>
 <div class="sect4">
-<h5 id="need-to-be-consistent-between-declarative-listener-registration-of-the-jsf-2-0-spec-and-the-vdldoc-for-fevent"><a class="anchor" href="#need-to-be-consistent-between-declarative-listener-registration-of-the-jsf-2-0-spec-and-the-vdldoc-for-fevent"></a>B.4.4.2. Need to be consistent between <a href="#a1393">Declarative Listener Registration</a> of the JSF 2.0 Spec and the VDLDoc for f:event</h5>
+<h5 id="need-to-be-consistent-between-declarative-listener-registration-of-the-jsf-2-0-spec-and-the-vdldoc-for-fevent"><a class="anchor" href="#need-to-be-consistent-between-declarative-listener-registration-of-the-jsf-2-0-spec-and-the-vdldoc-for-fevent"></a>B.6.4.2. Need to be consistent between <a href="#a1393">Declarative Listener Registration</a> of the JSF 2.0 Spec and the VDLDoc for f:event</h5>
 <div class="paragraph">
 <p>Section 3.4.3.4 of the JSF 2.0 Spec reads:</p>
 </div>
@@ -25918,7 +26026,7 @@ documents.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="typo-in-declarative-listener-registration-of-the-jsf-2-0-spec-regarding-beforerender"><a class="anchor" href="#typo-in-declarative-listener-registration-of-the-jsf-2-0-spec-regarding-beforerender"></a>B.4.4.3. Typo in <a href="#a1393">Declarative Listener Registration</a> of the JSF 2.0 Spec regarding "beforeRender"</h5>
+<h5 id="typo-in-declarative-listener-registration-of-the-jsf-2-0-spec-regarding-beforerender"><a class="anchor" href="#typo-in-declarative-listener-registration-of-the-jsf-2-0-spec-regarding-beforerender"></a>B.6.4.3. Typo in <a href="#a1393">Declarative Listener Registration</a> of the JSF 2.0 Spec regarding "beforeRender"</h5>
 <div class="paragraph">
 <p>Section 3.4.3.4 of the JSF 2.0 Spec has this
 example:</p>
@@ -25936,14 +26044,14 @@ value is "preRenderComponent" as stated in the f:event VDLDocs.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="validation-registration-what-does-it-mean-to-be-a-jsf-user-interface-component"><a class="anchor" href="#validation-registration-what-does-it-mean-to-be-a-jsf-user-interface-component"></a>B.4.4.4. <a href="#a1419">Validation Registration</a>, <a href="#a1518">What does it mean to be a JSF User Interface component?</a></h5>
+<h5 id="validation-registration-what-does-it-mean-to-be-a-jsf-user-interface-component"><a class="anchor" href="#validation-registration-what-does-it-mean-to-be-a-jsf-user-interface-component"></a>B.6.4.4. <a href="#a1419">Validation Registration</a>, <a href="#a1518">What does it mean to be a JSF User Interface component?</a></h5>
 <div class="paragraph">
 <p>Remove references to UInput.encodeEnd(). Not
 for a very long time has this method been used to instigate validation.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="composite-component-metadata"><a class="anchor" href="#composite-component-metadata"></a>B.4.4.5. <a href="#a1671">Composite Component Metadata</a></h5>
+<h5 id="composite-component-metadata"><a class="anchor" href="#composite-component-metadata"></a>B.6.4.5. <a href="#a1671">Composite Component Metadata</a></h5>
 <div class="paragraph">
 <p>Section 3.6.2.1 of the Spec indicates that
 the "hidden" property of the javax.bean.FeatureDescriptor is to appear
@@ -25954,9 +26062,9 @@ VDLDocs do not declare that the "hidden" property is available.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="chapter-4"><a class="anchor" href="#chapter-4"></a>B.4.5. Chapter 4</h4>
+<h4 id="chapter-4"><a class="anchor" href="#chapter-4"></a>B.6.5. Chapter 4</h4>
 <div class="sect4">
-<h5 id="events-30"><a class="anchor" href="#events-30"></a>B.4.5.1. <a href="#a2268">Events</a></h5>
+<h5 id="events-30"><a class="anchor" href="#events-30"></a>B.6.5.1. <a href="#a2268">Events</a></h5>
 <div class="paragraph">
 <p>Remove text pertaining to
 PostRestoreStateEvent, rely instead on text in setion 2.2.1.</p>
@@ -25964,22 +26072,22 @@ PostRestoreStateEvent, rely instead on text in setion 2.2.1.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="chapter-7"><a class="anchor" href="#chapter-7"></a>B.4.6. Chapter 7</h4>
+<h4 id="chapter-7"><a class="anchor" href="#chapter-7"></a>B.6.6. Chapter 7</h4>
 <div class="sect4">
-<h5 id="overview-7"><a class="anchor" href="#overview-7"></a>B.4.6.1. <a href="#a3562">Overview</a></h5>
+<h5 id="overview-7"><a class="anchor" href="#overview-7"></a>B.6.6.1. <a href="#a3562">Overview</a></h5>
 <div class="paragraph">
 <p>getNavigationCase should return
 NavigationCase and not void.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="default-navigationhandler-algorithm"><a class="anchor" href="#default-navigationhandler-algorithm"></a>B.4.6.2. <a href="#a3571">Default NavigationHandler Algorithm</a></h5>
+<h5 id="default-navigationhandler-algorithm"><a class="anchor" href="#default-navigationhandler-algorithm"></a>B.6.6.2. <a href="#a3571">Default NavigationHandler Algorithm</a></h5>
 <div class="paragraph">
 <p>Add faces-include-view-params</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="default-viewhandler-implementation-2"><a class="anchor" href="#default-viewhandler-implementation-2"></a>B.4.6.3. <a href="#a3910">Default ViewHandler Implementation</a></h5>
+<h5 id="default-viewhandler-implementation-2"><a class="anchor" href="#default-viewhandler-implementation-2"></a>B.6.6.3. <a href="#a3910">Default ViewHandler Implementation</a></h5>
 <div class="paragraph">
 <p>Fix typo the specified createView() should be
 called in renderView() and restoreView().</p>
@@ -25987,7 +26095,7 @@ called in renderView() and restoreView().</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="chapter-10"><a class="anchor" href="#chapter-10"></a>B.4.7. Chapter 10</h4>
+<h4 id="chapter-10"><a class="anchor" href="#chapter-10"></a>B.6.7. Chapter 10</h4>
 <div class="paragraph">
 <p>Need to change "confirm with" to "conform
 with".</p>
@@ -26011,7 +26119,7 @@ the distinction of "page templating" and "template text" here. Right now
 it kind of reads as a contradiction.</p>
 </div>
 <div class="sect4">
-<h5 id="general-requirements"><a class="anchor" href="#general-requirements"></a>B.4.7.1. <a href="#a5632">General Requirements</a></h5>
+<h5 id="general-requirements"><a class="anchor" href="#general-requirements"></a>B.6.7.1. <a href="#a5632">General Requirements</a></h5>
 <div class="paragraph">
 <p>Add an assertion to section 10.3.1 stating
 that EL expressions that appear in the facelet XHTML page must appear in
@@ -26020,7 +26128,7 @@ attribute of an at the same point in the page as the EL expression</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="facelet-tag-library-mechanism-2"><a class="anchor" href="#facelet-tag-library-mechanism-2"></a>B.4.7.2. <a href="#a5638">Facelet Tag Library mechanism</a></h5>
+<h5 id="facelet-tag-library-mechanism-2"><a class="anchor" href="#facelet-tag-library-mechanism-2"></a>B.6.7.2. <a href="#a5638">Facelet Tag Library mechanism</a></h5>
 <div class="paragraph">
 <p>Section 10.3.2. Correct xref to point to
 section in appendix that includes the facelet taglib schema.</p>
@@ -26031,7 +26139,7 @@ that includes the facelet taglib schema.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="vdldocs"><a class="anchor" href="#vdldocs"></a>B.4.7.3. VDLDocs</h5>
+<h5 id="vdldocs"><a class="anchor" href="#vdldocs"></a>B.6.7.3. VDLDocs</h5>
 <div class="paragraph">
 <p>See <a href="#a6043">Facelet Templating Tag Library</a>,
 and <a href="#a6047">Jakarta Tags Core and Function Tag Libraries</a>.
@@ -26040,9 +26148,9 @@ Refer the reader to the "VDLDocs" (View Declaration Language Documentations).</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="chapter-13"><a class="anchor" href="#chapter-13"></a>B.4.8. Chapter 13</h4>
+<h4 id="chapter-13"><a class="anchor" href="#chapter-13"></a>B.6.8. Chapter 13</h4>
 <div class="sect4">
-<h5 id="redundancy-in-partial-view-processing-of-the-jsf-2-0-spec"><a class="anchor" href="#redundancy-in-partial-view-processing-of-the-jsf-2-0-spec"></a>B.4.8.1. Redundancy in <a href="#a6831">Partial View Processing</a> of the JSF 2.0 Spec</h5>
+<h5 id="redundancy-in-partial-view-processing-of-the-jsf-2-0-spec"><a class="anchor" href="#redundancy-in-partial-view-processing-of-the-jsf-2-0-spec"></a>B.6.8.1. Redundancy in <a href="#a6831">Partial View Processing</a> of the JSF 2.0 Spec</h5>
 <div class="paragraph">
 <p>Section 13.4.2 of the JSF 2.0 spec has this
 sentence:</p>
@@ -26062,7 +26170,7 @@ Ajax) or a partial execute request (that was triggered using Ajax)</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="execute-portions-of-the-jsf-request-processing-lifecycle-in-the-jsf-2-0-spec"><a class="anchor" href="#execute-portions-of-the-jsf-request-processing-lifecycle-in-the-jsf-2-0-spec"></a>B.4.8.2. "Execute portions" of the JSF request processing lifecycle in the JSF 2.0 Spec</h5>
+<h5 id="execute-portions-of-the-jsf-request-processing-lifecycle-in-the-jsf-2-0-spec"><a class="anchor" href="#execute-portions-of-the-jsf-request-processing-lifecycle-in-the-jsf-2-0-spec"></a>B.6.8.2. "Execute portions" of the JSF request processing lifecycle in the JSF 2.0 Spec</h5>
 <div class="paragraph">
 <p>Section 13.4.2 reads:</p>
 </div>
@@ -26080,9 +26188,9 @@ the execute portions?</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="chapter-14"><a class="anchor" href="#chapter-14"></a>B.4.9. Chapter 14</h4>
+<h4 id="chapter-14"><a class="anchor" href="#chapter-14"></a>B.6.9. Chapter 14</h4>
 <div class="sect4">
-<h5 id="initiating-an-ajax-request-typo-in-table-14-2-2-of-the-jsf-2-0-spec"><a class="anchor" href="#initiating-an-ajax-request-typo-in-table-14-2-2-of-the-jsf-2-0-spec"></a>B.4.9.1. <a href="#a6856">Initiating an Ajax Request</a> Typo in table 14.2.2 of the JSF 2.0 Spec</h5>
+<h5 id="initiating-an-ajax-request-typo-in-table-14-2-2-of-the-jsf-2-0-spec"><a class="anchor" href="#initiating-an-ajax-request-typo-in-table-14-2-2-of-the-jsf-2-0-spec"></a>B.6.9.1. <a href="#a6856">Initiating an Ajax Request</a> Typo in table 14.2.2 of the JSF 2.0 Spec</h5>
 <div class="paragraph">
 <p>Table 14.2.2 reads:</p>
 </div>
@@ -26102,7 +26210,7 @@ word "portion" should be used instead of "phase".</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="requestresponse-event-handling-table-14-4-1"><a class="anchor" href="#requestresponse-event-handling-table-14-4-1"></a>B.4.9.2. <a href="#a6933">Request/Response Event Handling</a> Table 14.4.1</h5>
+<h5 id="requestresponse-event-handling-table-14-4-1"><a class="anchor" href="#requestresponse-event-handling-table-14-4-1"></a>B.6.9.2. <a href="#a6933">Request/Response Event Handling</a> Table 14.4.1</h5>
 <div class="paragraph">
 <p>Change responseTxt to responseText.</p>
 </div>
@@ -26112,22 +26220,22 @@ word "portion" should be used instead of "phase".</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="appendix-a-metadata"><a class="anchor" href="#appendix-a-metadata"></a>B.4.10. Appendix A Metadata</h4>
+<h4 id="appendix-a-metadata"><a class="anchor" href="#appendix-a-metadata"></a>B.6.10. Appendix A Metadata</h4>
 <div class="paragraph">
 <p>Update schema to remove partial-traversal, as
 well as fixing 768.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="vdldoc-changes"><a class="anchor" href="#vdldoc-changes"></a>B.4.11. VDLDoc changes</h4>
+<h4 id="vdldoc-changes"><a class="anchor" href="#vdldoc-changes"></a>B.6.11. VDLDoc changes</h4>
 <div class="sect4">
-<h5 id="typo-in-fselectitems-vdldocs"><a class="anchor" href="#typo-in-fselectitems-vdldocs"></a>B.4.11.1. Typo in f:selectItems VDLDocs</h5>
+<h5 id="typo-in-fselectitems-vdldocs"><a class="anchor" href="#typo-in-fselectitems-vdldocs"></a>B.6.11.1. Typo in f:selectItems VDLDocs</h5>
 <div class="paragraph">
 <p>Change "mest" to "must"</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="need-clarification-on-execute-attribute-of-fajax"><a class="anchor" href="#need-clarification-on-execute-attribute-of-fajax"></a>B.4.11.2. Need clarification on execute attribute of f:ajax</h5>
+<h5 id="need-clarification-on-execute-attribute-of-fajax"><a class="anchor" href="#need-clarification-on-execute-attribute-of-fajax"></a>B.6.11.2. Need clarification on execute attribute of f:ajax</h5>
 <div class="paragraph">
 <p>The VDLDocs for f:ajax say "Identifiers of
 components" but, for some reason, it wasn&#8217;t obvious to me that this term
@@ -26139,7 +26247,7 @@ this: "@this componentone componenttwo"</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="spelling-error-in-vdldocs-for-fajax"><a class="anchor" href="#spelling-error-in-vdldocs-for-fajax"></a>B.4.11.3. Spelling error in VDLDocs for f:ajax</h5>
+<h5 id="spelling-error-in-vdldocs-for-fajax"><a class="anchor" href="#spelling-error-in-vdldocs-for-fajax"></a>B.6.11.3. Spelling error in VDLDocs for f:ajax</h5>
 <div class="paragraph">
 <p>This one from Lincoln:</p>
 </div>
@@ -26151,7 +26259,7 @@ this: "@this componentone componenttwo"</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="need-clarification-on-required-attribute-in-vdldocs-for-tags-that-got-a-new-for-attribute-in-jsf-2-0"><a class="anchor" href="#need-clarification-on-required-attribute-in-vdldocs-for-tags-that-got-a-new-for-attribute-in-jsf-2-0"></a>B.4.11.4. Need clarification on required attribute in VDLDocs for tags that got a new "for" attribute in JSF 2.0</h5>
+<h5 id="need-clarification-on-required-attribute-in-vdldocs-for-tags-that-got-a-new-for-attribute-in-jsf-2-0"><a class="anchor" href="#need-clarification-on-required-attribute-in-vdldocs-for-tags-that-got-a-new-for-attribute-in-jsf-2-0"></a>B.6.11.4. Need clarification on required attribute in VDLDocs for tags that got a new "for" attribute in JSF 2.0</h5>
 <div class="paragraph">
 <p>The VDLDocs correctly have green for the new
 "for" attribute, but the "required" column says false, when that&#8217;s not
@@ -26166,21 +26274,21 @@ f:convertDateTime, f:convertNumber, etc.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="uppercase-typo-in-vdldocs-for-fevent"><a class="anchor" href="#uppercase-typo-in-vdldocs-for-fevent"></a>B.4.11.5. Uppercase typo in VDLDocs for f:event</h5>
+<h5 id="uppercase-typo-in-vdldocs-for-fevent"><a class="anchor" href="#uppercase-typo-in-vdldocs-for-fevent"></a>B.6.11.5. Uppercase typo in VDLDocs for f:event</h5>
 <div class="paragraph">
 <p>Change uppercase "P" to lowercase for:
 PostAddToView for the f:event VDLDocs</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="need-to-change-jsp-to-facelets-in-body-content-of-vdldocs"><a class="anchor" href="#need-to-change-jsp-to-facelets-in-body-content-of-vdldocs"></a>B.4.11.6. Need to change "JSP" to "Facelets" in "Body Content" of VDLDocs</h5>
+<h5 id="need-to-change-jsp-to-facelets-in-body-content-of-vdldocs"><a class="anchor" href="#need-to-change-jsp-to-facelets-in-body-content-of-vdldocs"></a>B.6.11.6. Need to change "JSP" to "Facelets" in "Body Content" of VDLDocs</h5>
 <div class="paragraph">
 <p>Search for "JSP" on the f:event VDLDocs.
 My suspicion is that this is a problem across the board.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="need-clarification-in-vdldocs-for-fmetadata"><a class="anchor" href="#need-clarification-in-vdldocs-for-fmetadata"></a>B.4.11.7. Need clarification in VDLDocs for f:metadata</h5>
+<h5 id="need-clarification-in-vdldocs-for-fmetadata"><a class="anchor" href="#need-clarification-in-vdldocs-for-fmetadata"></a>B.6.11.7. Need clarification in VDLDocs for f:metadata</h5>
 <div class="paragraph">
 <p>In the VDLDocs for f:metadata, recommend
 changing:</p>
@@ -26211,7 +26319,7 @@ page01.xhtml example is a template-client. So recommend changing this:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="missing-description-in-vdldocs-for-name-attribute-of-fviewparam"><a class="anchor" href="#missing-description-in-vdldocs-for-name-attribute-of-fviewparam"></a>B.4.11.8. Missing description in VDLDocs for name attribute of f:viewParam</h5>
+<h5 id="missing-description-in-vdldocs-for-name-attribute-of-fviewparam"><a class="anchor" href="#missing-description-in-vdldocs-for-name-attribute-of-fviewparam"></a>B.6.11.8. Missing description in VDLDocs for name attribute of f:viewParam</h5>
 <div class="paragraph">
 <p>The VDLDocs for f:viewParam are missing
 documentation of the "name" attribute, which is pretty important since
@@ -26219,7 +26327,7 @@ it is required.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="vlddocs-on-for-attribute-of-fviewparam-claim-it-can-be-used-in-a-cc"><a class="anchor" href="#vlddocs-on-for-attribute-of-fviewparam-claim-it-can-be-used-in-a-cc"></a>B.4.11.9. VLDDocs on "for" attribute of f:viewParam claim it can be used in a CC</h5>
+<h5 id="vlddocs-on-for-attribute-of-fviewparam-claim-it-can-be-used-in-a-cc"><a class="anchor" href="#vlddocs-on-for-attribute-of-fviewparam-claim-it-can-be-used-in-a-cc"></a>B.6.11.9. VLDDocs on "for" attribute of f:viewParam claim it can be used in a CC</h5>
 <div class="paragraph">
 <p>The VDLDocs for f:viewParam claim that the
 "for" attribute is supported. I just checked Mojarra&#8217;s jsf-api and
@@ -26233,7 +26341,7 @@ Composite Component. Therefore I recommend that the documentation of the
 </div>
 </div>
 <div class="sect4">
-<h5 id="miscellaneous-vdldoc-items"><a class="anchor" href="#miscellaneous-vdldoc-items"></a>B.4.11.10. Miscellaneous VDLDoc items</h5>
+<h5 id="miscellaneous-vdldoc-items"><a class="anchor" href="#miscellaneous-vdldoc-items"></a>B.6.11.10. Miscellaneous VDLDoc items</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -26318,7 +26426,7 @@ attributes specified. The second one should be the "value" attribute</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="should-tlddocs-now-be-vdldocs"><a class="anchor" href="#should-tlddocs-now-be-vdldocs"></a>B.4.11.11. Should TLDDocs now be VDLDocs?</h5>
+<h5 id="should-tlddocs-now-be-vdldocs"><a class="anchor" href="#should-tlddocs-now-be-vdldocs"></a>B.6.11.11. Should TLDDocs now be VDLDocs?</h5>
 <div class="paragraph">
 <p>The Spec introduces this term VDLDocs (which
 as I said in the other email, was formerly PDLDocs), but it also refers
@@ -26327,7 +26435,7 @@ standard term throughout the Spec?</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="typo-in-vdldocs-for-fevent"><a class="anchor" href="#typo-in-vdldocs-for-fevent"></a>B.4.11.12. Typo in VDLDocs for f:event.</h5>
+<h5 id="typo-in-vdldocs-for-fevent"><a class="anchor" href="#typo-in-vdldocs-for-fevent"></a>B.6.11.12. Typo in VDLDocs for f:event.</h5>
 <div class="paragraph">
 <p>The VDLDocs for f:event specify a "name"
 attribute, but the Description column of the page talks about a "type"
@@ -26342,11 +26450,11 @@ in the VDLDocs for f:event and that the "name" attribute is actually
 </div>
 </div>
 <div class="sect3">
-<h4 id="accepted-changes-from-jcp-change-log-for-jsf-2-0-rev-a"><a class="anchor" href="#accepted-changes-from-jcp-change-log-for-jsf-2-0-rev-a"></a>B.4.12. Accepted Changes from JCP Change Log for JSF 2.0 Rev a</h4>
+<h4 id="accepted-changes-from-jcp-change-log-for-jsf-2-0-rev-a"><a class="anchor" href="#accepted-changes-from-jcp-change-log-for-jsf-2-0-rev-a"></a>B.6.12. Accepted Changes from JCP Change Log for JSF 2.0 Rev a</h4>
 <div class="paragraph">
 <p>The referenced spec public issue number can
 be found in the issue tracker at<br>
-{issue_tracker_url}</p>
+<a href="https://github.com/jakartaee/faces/issues/" class="bare">https://github.com/jakartaee/faces/issues/</a></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -26371,7 +26479,7 @@ Specification</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Section 5.6.2.2 is out of sync with the
 current resolver implementation.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}848[Issue ID:848]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/848">Issue ID:848</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C004</p></td>
@@ -26381,7 +26489,7 @@ are incorrect with respect to intended design. Refer to
 <em><a href="appendixB-changelog.html#UNKNOWN" class="bare">appendixB-changelog.html#UNKNOWN</a>ChangeC006</em> in the
 footnotes section below.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}823[Issue ID:823]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/823">Issue ID:823</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C007</p></td>
@@ -26396,7 +26504,7 @@ resources mentioned by name in the &lt;ordering /&gt; section. If this set is
 the empty set, at the time the application configuration resources are
 being processed, the &lt;others &gt; element must be ignored."</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}824[Issue ID:824]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/824">Issue ID:824</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C008</p></td>
@@ -26404,7 +26512,7 @@ being processed, the &lt;others &gt; element must be ignored."</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">taglib docs for cc:interface are
 missing documentation for <em>componentType</em> attribute.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}849[Issue ID:849]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/849">Issue ID:849</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C011</p></td>
@@ -26413,7 +26521,7 @@ missing documentation for <em>componentType</em> attribute.</p></td>
 Metadata". Add <em>BehaviorHolderAttachedObjectTarget</em> after
 iii. <em>ActionSource2AttachedObjectTarget</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}825[Issue ID:825]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/825">Issue ID:825</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C012</p></td>
@@ -26423,7 +26531,7 @@ iii. <em>ActionSource2AttachedObjectTarget</em></p></td>
 to state that if there is an error in argument resourceId, null must be
 returned by this method.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}851[Issue ID:851]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/851">Issue ID:851</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C013</p></td>
@@ -26433,7 +26541,7 @@ clarification:Change description to: "A method expression that JSF
 invokes when an event occurs. That event is specified with the name
 attribute."</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}586[Issue ID:586]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/586">Issue ID:586</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C015</p></td>
@@ -26442,7 +26550,7 @@ attribute."</p></td>
 removed the statement that all phases including <em>RestoreView</em> will have
 their <em>beforePhaseListeners</em> called. Reverted to the way it was in 1.2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}826[Issue ID:826]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/826">Issue ID:826</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C016</p></td>
@@ -26450,7 +26558,7 @@ their <em>beforePhaseListeners</em> called. Reverted to the way it was in 1.2</p
 <td class="tableblock halign-left valign-top"><p class="tableblock">Section 2.6.2.1 Relocatable Resources: code
 snippet: &lt;f:view&#8230;&#8203;./&gt; should be &lt;f:view&#8230;&#8203;&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}565[Issue ID:565]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/565">Issue ID:565</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C017</p></td>
@@ -26458,7 +26566,7 @@ snippet: &lt;f:view&#8230;&#8203;./&gt; should be &lt;f:view&#8230;&#8203;&gt;</
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>UISelectItem</em> doesn&#8217;t mention
 <em>itemEscaped</em>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}430[Issue ID:430]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/430">Issue ID:430</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C018</p></td>
@@ -26466,7 +26574,7 @@ snippet: &lt;f:view&#8230;&#8203;./&gt; should be &lt;f:view&#8230;&#8203;&gt;</
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>ViewDeclarationLanguage.retargetAttachedObjects()</em> misses talking about
 Behaviors</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}827[Issue ID:827]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/827">Issue ID:827</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C021</p></td>
@@ -26474,7 +26582,7 @@ Behaviors</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ui:insert missing existing "name" attribute,
 implemented, tested, but not documented</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}667[Issue ID:667]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/667">Issue ID:667</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C022</p></td>
@@ -26482,7 +26590,7 @@ implemented, tested, but not documented</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>f:valueChangeListener</em> missing "for"
 attribute. Implemented, tested, but not documented</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}828[Issue ID:828]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/828">Issue ID:828</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C023</p></td>
@@ -26490,7 +26598,7 @@ attribute. Implemented, tested, but not documented</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">in facelets VDLdoc, mark f:verbatim and
 f:subview as deprecated</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}852[Issue ID:852]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/852">Issue ID:852</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C024</p></td>
@@ -26501,7 +26609,7 @@ the rendered view as if they were the right hand side of the value
 attribute of an <em>&lt;h:outputText&gt;</em> at the same point in the page as the EL
 expression</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}829[Issue ID:829]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/829">Issue ID:829</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C027</p></td>
@@ -26509,7 +26617,7 @@ expression</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">web-facelettaglibrary_2_0.xsd type incorrect
 for composite-library-name. Should be <strong><strong>javae:string</strong></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}854[Issue ID:854]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/854">Issue ID:854</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C028</p></td>
@@ -26517,7 +26625,7 @@ for composite-library-name. Should be <strong><strong>javae:string</strong></str
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>ui:remove</em> VDLDoc has attribute with no
 name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}842[Issue ID:842]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/842">Issue ID:842</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C029</p></td>
@@ -26525,7 +26633,7 @@ name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>ui:param</em> has attribute duplicated. One of
 them should be "value"</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}855[Issue ID:855]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/855">Issue ID:855</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C030</p></td>
@@ -26534,7 +26642,7 @@ them should be "value"</p></td>
 change " The implementation of <em>encodeBegin()</em>, must obtain " to be "
 The implementation of <em>encodeChildren()</em>, must obtain "</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}843[Issue ID:843]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/843">Issue ID:843</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C031</p></td>
@@ -26543,7 +26651,7 @@ The implementation of <em>encodeChildren()</em>, must obtain "</p></td>
 has a target attribute with <em>required="true"</em>. This attribute is not
 really required on <em>cc:attribute</em>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}644[Issue ID:644]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/644">Issue ID:644</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C032</p></td>
@@ -26551,7 +26659,7 @@ really required on <em>cc:attribute</em>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Mention in spec that Objects put in view
 scope may need to be Serializable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}830[Issue ID:830]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/830">Issue ID:830</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C033</p></td>
@@ -26562,7 +26670,7 @@ state that for resources residing at
 required to support the optional <em>libraryVersion</em> and <em>resourceVersion</em>
 segments</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}844[Issue ID:844]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/844">Issue ID:844</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C034</p></td>
@@ -26571,7 +26679,7 @@ segments</p></td>
 object cc returns the current composite component, relative to the
 composite component markup page in which the expression appears</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}831[Issue ID:831]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/831">Issue ID:831</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C035</p></td>
@@ -26581,7 +26689,7 @@ specification to state that, within the <em>cc:interface</em> element, the
 following attributes are not available unless <em>ProjectStage</em> is
 <em>Development</em>: displayName, expert, hidden, preferred, shortDescription</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}832[Issue ID:832]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/832">Issue ID:832</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C037</p></td>
@@ -26590,7 +26698,7 @@ following attributes are not available unless <em>ProjectStage</em> is
 be changed to <strong><strong>say</strong></strong> NPE is thrown if context is null, but no action
 is taken if state argument is null</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}845[Issue ID:845]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/845">Issue ID:845</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C040</p></td>
@@ -26599,7 +26707,7 @@ is taken if state argument is null</p></td>
 <em>f:view</em>. State, "This tag must reside within the top level facelet
 page whose filename corresponds ot the <em>viewid</em> being loaded."</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}856[Issue ID:856]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/856">Issue ID:856</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C043</p></td>
@@ -26607,7 +26715,7 @@ page whose filename corresponds ot the <em>viewid</em> being loaded."</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Document <em>SEPARATOR_CHAR</em> in section 11.1.3
 where all the other context-params are documented</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}833[Issue ID:833]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/833">Issue ID:833</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C044</p></td>
@@ -26617,7 +26725,7 @@ where all the other context-params are documented</p></td>
 <em>ExceptionHandlerFactory</em>, <em>PartialViewContext</em>,
 <em>TagHandlerDelegateFactory</em> as decoratable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}834[Issue ID:834]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/834">Issue ID:834</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C046</p></td>
@@ -26626,7 +26734,7 @@ where all the other context-params are documented</p></td>
 <em>AjaxBehaviors pushBehavior</em> but <em>AjaxBehaviors</em> is an implementation
 detail (the class exists under com package)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}836[Issue ID:836]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/836">Issue ID:836</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C047</p></td>
@@ -26634,7 +26742,7 @@ detail (the class exists under com package)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Add "defaults" for "execute", "render"
 <em>AjaxBehavior</em> in VDLDocs.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}568[Issue ID:568]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/568">Issue ID:568</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C048</p></td>
@@ -26642,14 +26750,14 @@ detail (the class exists under com package)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JSP should not have <em>f:viewParam</em>. Facelets
 <em>f:viewParam</em> must have <em>name</em> attribute.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}656[Issue ID:656]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/656">Issue ID:656</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C049</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Errata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec section 3.2.5 is empty. Fix that</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}835[Issue ID:835]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/835">Issue ID:835</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C050</p></td>
@@ -26657,14 +26765,14 @@ detail (the class exists under com package)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec for <em>UIComponent.setParent()</em>
 incomplete</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}837[Issue ID:837]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/837">Issue ID:837</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C054</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Errata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>f:event name</em> attribute should be type.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}639[Issue ID:639]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/639">Issue ID:639</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C058</p></td>
@@ -26674,7 +26782,7 @@ should be responseText. Table 14-4: Add <em>status</em> property; Table 14-4:
 There is no "name" property. Table 14-3: reorder "status" values to be
 in chronological order. Section 14.4.1.1: Fix use case.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}642[Issue ID:642]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/642">Issue ID:642</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C060</p></td>
@@ -26684,7 +26792,7 @@ in chronological order. Section 14.4.1.1: Fix use case.</p></td>
 <em>FacesContext.release()</em> is called within a finally block as late as
 possible in the processing for the JSF related portion of this request".</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}846[Issue ID:846]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/846">Issue ID:846</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C061</p></td>
@@ -26693,7 +26801,7 @@ possible in the processing for the JSF related portion of this request".</p></td
 PropertyEditors will be used for EL Coercion. Mention this in the
 context of JSF converters</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}838[Issue ID:838]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/838">Issue ID:838</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C062</p></td>
@@ -26701,7 +26809,7 @@ context of JSF converters</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">In 3.1.5, explicitly mention not to use view
 scope</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}839[Issue ID:839]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/839">Issue ID:839</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C063</p></td>
@@ -26710,7 +26818,7 @@ scope</p></td>
 navigation actions, an empty string should be treated the same way as
 null: stay on the same page.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}747[Issue ID:747]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/747">Issue ID:747</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C064</p></td>
@@ -26718,7 +26826,7 @@ null: stay on the same page.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Correct <em>StateHolder.setTransient</em> JavaDoc
 (specified backwards)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}840[Issue ID:840]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/840">Issue ID:840</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C065</p></td>
@@ -26728,7 +26836,7 @@ pdldocs). Specifically, quotes around <em>actionListener</em>,
 <em>method-signature</em> (spelling). Also clarify the default value "false"
 for "required" attribute.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}841[Issue ID:841]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/841">Issue ID:841</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C066</p></td>
@@ -26738,7 +26846,7 @@ container facet must be marked transient. Specifically, the JavaDocs for
 <em>UIViewRoot.getComponentResources</em> should include: "Set the transient
 property of the facet to true."</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}800[Issue ID:800]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/800">Issue ID:800</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C068</p></td>
@@ -26746,7 +26854,7 @@ property of the facet to true."</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Modify the facelet taglib xsd so that older
 versions of taglibs are acceptable.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}744[Issue ID:744]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/744">Issue ID:744</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C069</p></td>
@@ -26754,7 +26862,7 @@ versions of taglibs are acceptable.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Make sure VDLDocs for <em>f:event</em> list event
 all possible event types</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}712[Issue ID:712]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/712">Issue ID:712</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C072</p></td>
@@ -26762,7 +26870,7 @@ all possible event types</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Neither applyNextHandler of
 DelegatingMetaTagHandler or nextHandler of TagHandler are documented.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}780[Issue ID:780]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/780">Issue ID:780</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C073</p></td>
@@ -26770,7 +26878,7 @@ DelegatingMetaTagHandler or nextHandler of TagHandler are documented.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Specify f:ajax execute/render id behavior in
 VDLDocs (as outlined in Section 10.4.1.1 of the spec).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}567[Issue ID:567]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/567">Issue ID:567</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C074</p></td>
@@ -26778,7 +26886,7 @@ VDLDocs (as outlined in Section 10.4.1.1 of the spec).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;view-param&gt; has no business being a child
 of &lt;redirect&gt; and should be renamed to &lt;redirect-param&gt;.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}698[Issue ID:698]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/698">Issue ID:698</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C075</p></td>
@@ -26786,7 +26894,7 @@ of &lt;redirect&gt; and should be renamed to &lt;redirect-param&gt;.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">includeViewParams implicit navigation flag
 should be faces-include-view-params.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}699[Issue ID:699]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/699">Issue ID:699</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C077</p></td>
@@ -26794,7 +26902,7 @@ should be faces-include-view-params.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Event broadcasting should apply to Behaviors
 (not just ClientBehaviors).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}798[Issue ID:798]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/798">Issue ID:798</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C078</p></td>
@@ -26803,7 +26911,7 @@ should be faces-include-view-params.</p></td>
 needs clarification. Clarify UIComponent.getParent and getChildren for
 consistency.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}805[Issue ID:805]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/805">Issue ID:805</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C079</p></td>
@@ -26812,7 +26920,7 @@ consistency.</p></td>
 - the docs say to render the footer the same as the header which causes
 the problem.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}255[Issue ID:255]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/255">Issue ID:255</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C080</p></td>
@@ -26820,7 +26928,7 @@ the problem.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RenderKit Docs - ButtonRenderer Encode
 behavior w/r/t onclick attribute - should not be passthrough attribute.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}257[Issue ID:257]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/257">Issue ID:257</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C081</p></td>
@@ -26828,7 +26936,7 @@ behavior w/r/t onclick attribute - should not be passthrough attribute.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">h:message "for" attribute is
 mis-specified:"for" attribute should be relative id (not clientid).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}266[Issue ID:266]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/266">Issue ID:266</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C082</p></td>
@@ -26836,7 +26944,7 @@ mis-specified:"for" attribute should be relative id (not clientid).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">clarify whether expression of
 binding-attribute of f:xxxxListener should be evaluated on postback.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}320[Issue ID:320]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/320">Issue ID:320</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C083</p></td>
@@ -26844,7 +26952,7 @@ binding-attribute of f:xxxxListener should be evaluated on postback.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Option rendering, specifically when dealing
 with SelectItemGroups, is too generic.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}420[Issue ID:420]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/420">Issue ID:420</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C084</p></td>
@@ -26852,7 +26960,7 @@ with SelectItemGroups, is too generic.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">submittedValue get/set methods
 underspecified</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}434[Issue ID:434]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/434">Issue ID:434</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C085</p></td>
@@ -26860,14 +26968,14 @@ underspecified</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Current wording in renderkit docs leads to
 double encoding of query parameters</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}436[Issue ID:436]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/436">Issue ID:436</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C086</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Errata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SelectManyCheckBox Clarification</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}466[Issue ID:466]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/466">Issue ID:466</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C087</p></td>
@@ -26875,14 +26983,14 @@ double encoding of query parameters</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">PDL document for JSTL(Facelets) has the
 incorrect URI for the NameSpace.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}509[Issue ID:509]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/509">Issue ID:509</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C088</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Errata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API docs missing for ExceptionEventContext.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}515[Issue ID:515]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/515">Issue ID:515</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C089</p></td>
@@ -26890,7 +26998,7 @@ incorrect URI for the NameSpace.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cc:attribute component documentation
 for the attribute type should be for attribute method-signature.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}524[Issue ID:524]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/524">Issue ID:524</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C090</p></td>
@@ -26898,7 +27006,7 @@ for the attribute type should be for attribute method-signature.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The UML Diagram for javax.faces.event is out
 of date.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}525[Issue ID:525]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/525">Issue ID:525</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C091</p></td>
@@ -26906,7 +27014,7 @@ of date.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Minor typo in the Interface BehaviorHolder
 API.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}534[Issue ID:534]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/534">Issue ID:534</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C092</p></td>
@@ -26914,7 +27022,7 @@ API.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Two references to the itemLabelEscaped
 attribute.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}536[Issue ID:536]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/536">Issue ID:536</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C093</p></td>
@@ -26923,7 +27031,7 @@ attribute.</p></td>
 javax.faces.event.PostValidateEvent and
 javax.faces.event.PreValidateEvent.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}537[Issue ID:537]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/537">Issue ID:537</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C094</p></td>
@@ -26931,7 +27039,7 @@ javax.faces.event.PreValidateEvent.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Section 3.7.5 typo - ClientBehavorHolder
 should be ClientBehaviorHolder.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}540[Issue ID:540]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/540">Issue ID:540</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C095</p></td>
@@ -26939,7 +27047,7 @@ should be ClientBehaviorHolder.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Section 4.1.3 typo - NamingContaier should
 be NamingContainer.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}541[Issue ID:541]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/541">Issue ID:541</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C096</p></td>
@@ -26948,7 +27056,7 @@ be NamingContainer.</p></td>
 to throw NPE if any of the arguments is null. However, sourceBaseType
 arg can be null.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}553[Issue ID:553]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/553">Issue ID:553</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C097</p></td>
@@ -26956,7 +27064,7 @@ arg can be null.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Facelets TLD Docs: Missing "for" attribute
 for "message" and "messages" tags.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}558[Issue ID:558]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/558">Issue ID:558</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C099</p></td>
@@ -26964,7 +27072,7 @@ for "message" and "messages" tags.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ResourceHandler docs: Clarify that relative
 paths are disallowed in library names.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}577[Issue ID:577]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/577">Issue ID:577</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C100</p></td>
@@ -26972,7 +27080,7 @@ paths are disallowed in library names.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Renderkit Docs: h:link - Formatting - add
 paragraphs</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}588[Issue ID:588]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/588">Issue ID:588</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C101</p></td>
@@ -26982,7 +27090,7 @@ client behavior to provided by the JSF specification is the
 AjaxBehavior." should be: "The first client behavior provided by the JSF
 specification is the AjaxBehavior."</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}590[Issue ID:590]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/590">Issue ID:590</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C102</p></td>
@@ -26990,7 +27098,7 @@ specification is the AjaxBehavior."</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec Section 9.4 doesn&#8217;t list all the
 validation tags and it lists the validateDoubleRange tag twice.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}591[Issue ID:591]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/591">Issue ID:591</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C103</p></td>
@@ -26999,7 +27107,7 @@ validation tags and it lists the validateDoubleRange tag twice.</p></td>
 component:actionSource target attribute with commas as delimiters -
 should be "space" as delimiter.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}592[Issue ID:592]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/592">Issue ID:592</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C104</p></td>
@@ -27007,7 +27115,7 @@ should be "space" as delimiter.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec Section 7.4.1: getNavigationCase should
 return NavigationCase and not void.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}605[Issue ID:605]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/605">Issue ID:605</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C105</p></td>
@@ -27015,7 +27123,7 @@ return NavigationCase and not void.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec Section 10.4.1.4 says: f:validateBean
 should extend validateHandler. Should be ValidatorHandler.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}615[Issue ID:615]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/615">Issue ID:615</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C106</p></td>
@@ -27023,14 +27131,14 @@ should extend validateHandler. Should be ValidatorHandler.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Typo: Pages in the TLD docs says "JSF 2.0
 Page Decraration Language". Should be "Declaration".</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}617[Issue ID:617]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/617">Issue ID:617</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C107</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Errata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Typos: Table 14-1, 14-2, page 14-3.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}629[Issue ID:629]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/629">Issue ID:629</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C108</p></td>
@@ -27038,7 +27146,7 @@ Page Decraration Language". Should be "Declaration".</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UIData.invokeOnComponent docs need to be
 updated to include handling of column level facets.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}632[Issue ID:632]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/632">Issue ID:632</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C109</p></td>
@@ -27046,7 +27154,7 @@ updated to include handling of column level facets.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec Section 3.5.6.1 needs to be corrected
 to state that default validators are added during tag execution time.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}635[Issue ID:635]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/635">Issue ID:635</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C110</p></td>
@@ -27054,7 +27162,7 @@ to state that default validators are added during tag execution time.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">validateBean and validateRequired tags need
 to be removed from the Jakarta Server Pages PDL documentation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}645[Issue ID:645]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/645">Issue ID:645</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C111</p></td>
@@ -27062,7 +27170,7 @@ to be removed from the Jakarta Server Pages PDL documentation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">faces.ajax.response update element
 clarification needed in JavaScript docs.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}646[Issue ID:646]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/646">Issue ID:646</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C112</p></td>
@@ -27070,7 +27178,7 @@ clarification needed in JavaScript docs.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec Section 10.4.1.1: Clarify what happens
 when nesting and wrapping f:ajax tags collide.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}652[Issue ID:652]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/652">Issue ID:652</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C113</p></td>
@@ -27078,7 +27186,7 @@ when nesting and wrapping f:ajax tags collide.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Typo: Spec Section 8.3.1: "renderkit-id"
 should be "render-kit-id" and "renderkit" should be "render-kit".</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}660[Issue ID:660]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/660">Issue ID:660</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C114</p></td>
@@ -27086,7 +27194,7 @@ should be "render-kit-id" and "renderkit" should be "render-kit".</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Add "rendered" attribute to VDL docs for
 ui:component and ui:fragment.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}661[Issue ID:661]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/661">Issue ID:661</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C115</p></td>
@@ -27094,14 +27202,14 @@ ui:component and ui:fragment.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JavaDocs for UIComponent.processValidators
 is incomplete. It should mention <em>popComponentFromEL</em>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}664[Issue ID:664]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/664">Issue ID:664</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C116</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Errata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Dead link in VDL docs.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}666[Issue ID:666]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/666">Issue ID:666</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C117</p></td>
@@ -27109,7 +27217,7 @@ is incomplete. It should mention <em>popComponentFromEL</em>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec Section 2.5.2.4: Standard messages for
 LengthValidator are confusing.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}668[Issue ID:668]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/668">Issue ID:668</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C118</p></td>
@@ -27117,7 +27225,7 @@ LengthValidator are confusing.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec/pdldocs don&#8217;t say what the default is
 for "target" in h:outputScript.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}673[Issue ID:673]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/673">Issue ID:673</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C119</p></td>
@@ -27126,14 +27234,14 @@ for "target" in h:outputScript.</p></td>
 mentioned in the schema part of the spec. Houls be added to Spec Section
 13.4.2.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}705[Issue ID:705]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/705">Issue ID:705</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C120</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Errata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Specification edits needed</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}714[Issue ID:714]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/714">Issue ID:714</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C121</p></td>
@@ -27143,7 +27251,7 @@ should be "ViewHandler"; "renderView" and "restoreView" methods should
 call "ViewDeclarationLanguage.renderView" and
 "ViewDeclarationLanguage.restoreView".</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}729[Issue ID:729]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/729">Issue ID:729</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C122</p></td>
@@ -27153,14 +27261,14 @@ libraryName or resourceName contains only XML NameChar, but not a colon;
 a libraryName or resourceName does not match the regex
 "[0-9]+(_[0-9]+)* or [A-Za-z]{2}(_[A-Za-z]{2}(_[A- Za-z]+)*)?"</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}740[Issue ID:740]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/740">Issue ID:740</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C123</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Errata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Typos in PDLDocs for ui:repeat</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}743[Issue ID:743]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/743">Issue ID:743</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C124</p></td>
@@ -27168,7 +27276,7 @@ a libraryName or resourceName does not match the regex
 <td class="tableblock halign-left valign-top"><p class="tableblock">Remove "partial-traversal" application
 element from the spec as it does not exist in the schema.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}767[Issue ID:767]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/767">Issue ID:767</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C125</p></td>
@@ -27176,7 +27284,7 @@ element from the spec as it does not exist in the schema.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Add mssing ID attributes to schema for:
 faces-config-orderingType,faces-config-ordering-orderingType,faces-config-absoluteOrderingType,faces-config-default-valueType,faces-config-from-view-idType,faces-config-client-behavior-rendererType,faces-config-behaviorType,faces-config-value-classType,faces-config-rendererType</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}768[Issue ID:768]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/768">Issue ID:768</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C126</p></td>
@@ -27184,7 +27292,7 @@ faces-config-orderingType,faces-config-ordering-orderingType,faces-config-absolu
 <td class="tableblock halign-left valign-top"><p class="tableblock">UIInput JavaDocs: Specify the handling of
 conversion failures.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}775[Issue ID:775]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/775">Issue ID:775</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C127</p></td>
@@ -27192,7 +27300,7 @@ conversion failures.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EditableValueHodler JavaDocs: Missing
 "@Since 2.0" for "resetValue" method.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}779[Issue ID:779]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/779">Issue ID:779</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C128</p></td>
@@ -27200,7 +27308,7 @@ conversion failures.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VDL documentation for f:selectItem
 references the "escape" attribute. It should be "itemEscaped".</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}788[Issue ID:788]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/788">Issue ID:788</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C129</p></td>
@@ -27208,7 +27316,7 @@ references the "escape" attribute. It should be "itemEscaped".</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Specify description for "f:param" "disabled"
 attribute.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}794[Issue ID:794]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/794">Issue ID:794</a></em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C130</p></td>
@@ -27216,14 +27324,14 @@ attribute.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Simplify PostRestoreStateEvent delivery
 requirements.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>{issue_tracker_url}806[Issue ID:806]</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="https://github.com/jakartaee/faces/issues/806">Issue ID:806</a></em></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="changes-in-versions-below-2-0-final"><a class="anchor" href="#changes-in-versions-below-2-0-final"></a>B.5. Changes in versions below 2.0 Final</h3>
+<h3 id="changes-in-versions-below-2-0-final"><a class="anchor" href="#changes-in-versions-below-2-0-final"></a>B.7. Changes in versions below 2.0 Final</h3>
 <div class="paragraph">
 <p>See the "JavaServer™ Faces Specification Version 2.3" for these changes.
 The change log items are removed from this document in Jakarta Faces 3.0.</p>
@@ -27302,7 +27410,7 @@ selection expressions.</p>
 <div id="footer">
 <div id="footer-text">
  4.0<br>
-Last updated 2022-02-21 15:09:22 +0100
+Last updated 2022-04-24 13:26:06 +0200
 </div>
 </div>
 </body>
