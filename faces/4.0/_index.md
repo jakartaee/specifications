@@ -55,7 +55,7 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 
 # Compatible Implementations
 
-* [Mojarra 4.0.0-M5](https://github.com/eclipse-ee4j/mojarra/releases/download/4.0.0-M5-RELEASE/jakarta.faces-4.0.0-M5.jar)
+* [Mojarra 4.0.0-M7](https://github.com/eclipse-ee4j/mojarra/releases/download/4.0.0-M7-RELEASE/jakarta.faces-4.0.0-M7.jar)
 
 # Ballots
 
