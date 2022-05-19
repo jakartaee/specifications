@@ -51,7 +51,9 @@ the ELResolver or the resolved property is read-only. This changes the
 documented behaviour of the StaticFieldELResolver.
 
 ### Minimum Java SE Version
-Java 11
+**11**
+
+# Details
 
 * [Jakarta Expression Language 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.el/releases/5.0.0)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
