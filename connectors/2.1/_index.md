@@ -6,15 +6,17 @@ summary: "Jakarta EE 10 Release"
 The Jakarta Connectors specification defines a standard architecture for Jakarta EE application components to connect to Enterprise Information Systems.
 
 ### New features, enhancements or additions
-- Bug Fixes
-- Documentation clean up
-- Updates required to meet the Java version requirements of Jakarta EE 10
+* Bug Fixes
+* Documentation clean up
+* Updates required to meet the Java version requirements of Jakarta EE 10
 
 ### Removals, deprecations or backwards incompatible changes
 none
 
 ### Minimum Java SE Version
-11
+**11**
+
+# Details
 
 * [Jakarta Connectors 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jca/releases/2.1.0)
 * [Jakarta Connectors 2.1 Specification Document](./jakarta-connectors-spec-2.1.pdf) (PDF)
