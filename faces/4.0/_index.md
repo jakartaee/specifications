@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Faces 4.0"
-date: 2022-02-28
+date: 2022-05-18
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Faces defines an MVC framework for building user interfaces for web applications,
@@ -58,6 +58,25 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 * [Mojarra 4.0.0-M7](https://github.com/eclipse-ee4j/mojarra/releases/download/4.0.0-M7-RELEASE/jakarta.faces-4.0.0-M7.jar)
 
 # Ballots
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2022-05-18 with the following results.
+
+| Representative                                 | Representative for: | Vote   |
+|------------------------------------------------|---------------------|--------|
+| Kenji Kazumura                                 | Fujitsu             |    +1  |
+| Tom Watson, Emily Jiang                        | IBM                 |    +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1  |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |    +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1  |
+| Ivar Grimstad                                  | EE4J PMC            |    +1  |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members |    +1  |
+| Werner Keil                                    | Committer Members   | no vote|
+| Jun Qian                                       | Enterprise Members  |    +1  |
+| Zhai Luchao                                    | Enterprise Members  |    +1  |
+|                                                | **Total**           |  **9** |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02500.html)
 
 ## Plan Review
 
