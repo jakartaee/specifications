@@ -47,7 +47,7 @@ The Specification Committee Ballot concluded successfully on 2022-05-17 with the
 | Andrew Pielage, Petr Aubrecht                  | Payara              |    +1   |
 | David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1   |
 | Ivar Grimstad                                  | EE4J PMC            |    +1   |
-| Marcelo Ancelmo, Martijn Verburg               | Participant Members |         |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members | no vote |
 | Werner Keil                                    | Committer Members   |    +1   |
 | Jun Qian                                       | Enterprise Members  |    +1   |
 | Zhai Luchao                                    | Enterprise Members  |    +1   |
