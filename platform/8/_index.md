@@ -1,7 +1,8 @@
 ---
 title: "Jakarta EE Platform 8"
 date: 2019-09-10
-summary: "Initial release of the Jakarta EE 8 Platform"
+summary: "Jakarta EE Platform 8 defines a standard platform for hosting Jakarta EE (Java EE) applications. Find specifications and compatible implementations."
+seo_title: "Jakarta EE Platform 8 | Standards for Jakarta EE (Java EE) applications"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
 
