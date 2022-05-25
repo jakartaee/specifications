@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.15">
 <meta name="author" content="Jakarta EE Platform Team, https://projects.eclipse.org/projects/ee4j.jakartaee-platform">
-<title>Jakarta EE CoreProfile</title>
+<title>Jakarta EE Core Profile</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,12 +439,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Jakarta EE CoreProfile</h1>
+<h1>Jakarta EE Core Profile</h1>
 <div class="details">
 <span id="author" class="author">Jakarta EE Platform Team, https://projects.eclipse.org/projects/ee4j.jakartaee-platform</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev</a></span><br>
 <span id="revnumber"> 10.0,</span>
-<span id="revdate">May 23, 2022</span>
+<span id="revdate">May 25, 2022</span>
 <br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
@@ -484,13 +484,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre>Specification: Jakarta EE CoreProfile
+<pre>Specification: Jakarta EE Core Profile
 
 Version: 10.0
 
 Status: Final
 
-Release: May 23, 2022</pre>
+Release: May 25, 2022</pre>
 </div>
 </div>
 </div>
@@ -499,7 +499,7 @@ Release: May 23, 2022</pre>
 <h2 id="copyright"><a class="anchor" href="#copyright"></a>Copyright</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Copyright (c) 2018, 2022 Eclipse Foundation.</p>
+<p>Copyright (c) 2022 Eclipse Foundation</p>
 </div>
 </div>
 </div>
@@ -669,8 +669,7 @@ self-explanatory. For example, Core Profile products must implement the Jakarta 
 <h3 id="acknowledgements-for-jakarta-ee-10-0"><a class="anchor" href="#acknowledgements-for-jakarta-ee-10-0"></a>1.3. Acknowledgements for Jakarta EE 10.0</h3>
 <div class="paragraph">
 <p>The Jakarta EE 10.0 specification was created by the Jakarta EE Platform
-Specification Project with guidance provided by the Jakarta EE Working Group
-(<em><a href="https://jakarta.ee/about/working-group/" class="bare">https://jakarta.ee/about/working-group/</a></em>).</p>
+Specification Project with guidance provided by the Jakarta EE Working Group.</p>
 </div>
 </div>
 </div>
@@ -692,7 +691,7 @@ Specification Project with guidance provided by the Jakarta EE Working Group
 <p>Jakarta Annotations 2.1</p>
 </li>
 <li>
-<p>Jakarta Contexts and Dependency Injection Lite 4.0</p>
+<p>Jakarta Contexts and Dependency Injection 4.0 (CDI Lite section)</p>
 </li>
 <li>
 <p>Jakarta Dependency Injection 2.0</p>
@@ -757,7 +756,10 @@ documents. The terms used to refer to the documents in this
 specification are included in parentheses.</p>
 </div>
 <div class="paragraph">
-<p><em>Java™ Platform, Standard Edition, v11 API Specification (Java SE specification)</em>. Available at: <em><a href="https://docs.oracle.com/en/java/javase/11/" class="bare">https://docs.oracle.com/en/java/javase/11/</a></em></p>
+<p><em>Java™ Platform, Standard Edition (Java SE specification), v11</em>. Available at: <a href="https://www.jcp.org/en/jsr/detail?id=384" class="bare">https://www.jcp.org/en/jsr/detail?id=384</a></p>
+</div>
+<div class="paragraph">
+<p><em>Java™ Platform, Standard Edition, v11 API Specification</em>. Available at: <em><a href="https://docs.oracle.com/en/java/javase/11/" class="bare">https://docs.oracle.com/en/java/javase/11/</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Jakarta™ RESTful Web Services Specification, Version 3.1</em>. Available at: <em><a href="https://jakarta.ee/specifications/restful-ws/3.1" class="bare">https://jakarta.ee/specifications/restful-ws/3.1</a></em></p>
@@ -769,7 +771,7 @@ specification are included in parentheses.</p>
 <p><em>Jakarta™ Interceptors Specification, Version 2.1</em>. Available at: <em><a href="https://jakarta.ee/specifications/interceptors/2.1" class="bare">https://jakarta.ee/specifications/interceptors/2.1</a></em></p>
 </div>
 <div class="paragraph">
-<p><em>Jakarta™ Contexts and Dependency Injection Lite Specification, Version 4.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/cdi/4.0" class="bare">https://jakarta.ee/specifications/cdi/4.0</a></em></p>
+<p><em>Jakarta™ Contexts and Dependency Injection Specification (CDI Lite section), Version 4.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/cdi/4.0" class="bare">https://jakarta.ee/specifications/cdi/4.0</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Jakarta™ Dependency Injection Specification, Version 2.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/dependency-injection/2.0" class="bare">https://jakarta.ee/specifications/dependency-injection/2.0</a></em></p>
@@ -780,13 +782,17 @@ specification are included in parentheses.</p>
 <div class="paragraph">
 <p><em>Jakarta™ JSON Binding Specification, Version 3.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/jsonb/3.0" class="bare">https://jakarta.ee/specifications/jsonb/3.0</a></em></p>
 </div>
+<div class="paragraph">
+<p><em>Jakarta™ EE Working Group</em>
+(<em><a href="https://jakarta.ee/about/working-group/" class="bare">https://jakarta.ee/about/working-group/</a></em>)</p>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
  10.0<br>
-Last updated 2022-04-19 09:59:29 -0500
+Last updated 2022-05-25 07:08:12 -0500
 </div>
 </div>
 </body>
