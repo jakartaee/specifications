@@ -11,3 +11,7 @@ jakarta.enterprise.inject.se
 jakarta.enterprise.inject.spi
 jakarta.enterprise.inject.spi.configurator
 jakarta.enterprise.util
+module:jakarta.cdi.lang.model
+jakarta.enterprise.lang.model
+jakarta.enterprise.lang.model.declarations
+jakarta.enterprise.lang.model.types
