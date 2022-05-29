@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, 2020, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2013, 2021, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -106,6 +106,26 @@ function indexFilesLoaded() {
         && tagSearchIndex;
 }
 
+function copySnippet(button) {
+    var textarea = document.createElement("textarea");
+    textarea.style.height = 0;
+    document.body.appendChild(textarea);
+    textarea.value = button.nextElementSibling.innerText;
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    var span = button.firstElementChild;
+    var copied = span.getAttribute("data-copied");
+    if (span.innerHTML !== copied) {
+        var initialLabel = span.innerHTML;
+        span.innerHTML = copied;
+        var parent = button.parentElement;
+        parent.onmouseleave = parent.ontouchend = function() {
+            span.innerHTML = initialLabel;
+        };
+    }
+}
+
 // Workaround for scroll position not being included in browser history (8249133)
 document.addEventListener("DOMContentLoaded", function(e) {
     var contentDiv = document.querySelector("div.flex-content");
@@ -117,14 +137,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
     window.addEventListener("hashchange", function(e) {
         history.replaceState(contentDiv.scrollTop, document.title);
     });
+    var timeoutId;
     contentDiv.addEventListener("scroll", function(e) {
-        var timeoutID;
-        if (!timeoutID) {
-            timeoutID = setTimeout(function() {
-                history.replaceState(contentDiv.scrollTop, document.title);
-                timeoutID = null;
-            }, 100);
+        if (timeoutId) {
+            clearTimeout(timeoutId);
         }
+        timeoutId = setTimeout(function() {
+            history.replaceState(contentDiv.scrollTop, document.title);
+        }, 100);
     });
     if (!location.hash) {
         history.replaceState(contentDiv.scrollTop, document.title);
