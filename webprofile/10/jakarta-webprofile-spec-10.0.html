@@ -444,8 +444,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jakarta EE Platform Team, https://projects.eclipse.org/projects/ee4j.jakartaee-platform</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev</a></span><br>
 <span id="revnumber"> 10.0,</span>
-<span id="revdate">May 24, 2022</span>
-<br><span id="revremark">Final</span>
+<span id="revdate">May 31, 2022</span>
+<br><span id="revremark">DRAFT</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -480,12 +480,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#changes-in-final-release-for-ee10">A.1. Changes in Final Release for EE10</a>
 <ul class="sectlevel3">
-<li><a href="#editorial-changes">A.1.1. Editorial Changes</a></li>
+<li><a href="#editorial-changes-for-ee10">A.1.1. Editorial Changes for EE10</a></li>
 </ul>
 </li>
 <li><a href="#changes-in-final-release-for-ee9-1">A.2. Changes in Final Release for EE9.1</a>
 <ul class="sectlevel3">
-<li><a href="#editorial-changes-2">A.2.1. Editorial Changes</a></li>
+<li><a href="#editorial-changes">A.2.1. Editorial Changes</a></li>
 </ul>
 </li>
 </ul>
@@ -504,9 +504,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 Version: 10.0
 
-Status: Final
+Status: DRAFT
 
-Release: May 24, 2022</pre>
+Release: May 31, 2022</pre>
 </div>
 </div>
 </div>
@@ -515,7 +515,7 @@ Release: May 24, 2022</pre>
 <h2 id="copyright"><a class="anchor" href="#copyright"></a>Copyright</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Copyright (c) 2018, 2022 Eclipse Foundation.</p>
+<p>Copyright (c) 2018, 2022 Eclipse Foundation</p>
 </div>
 </div>
 </div>
@@ -871,9 +871,6 @@ Specification Project with guidance provided by the Jakarta EE Working Group
 <div class="sect2">
 <h3 id="acknowledgements-for-jakarta-ee-10-0"><a class="anchor" href="#acknowledgements-for-jakarta-ee-10-0"></a>1.9. Acknowledgements for Jakarta EE 10.0</h3>
 <div class="paragraph">
-<p>TBD</p>
-</div>
-<div class="paragraph">
 <p>The Jakarta EE 10 specification was created by the Jakarta EE Platform Specification Project with guidance provided by the Jakarta EE Working Group
 (<em><a href="https://jakarta.ee/" class="bare">https://jakarta.ee/</a></em>).</p>
 </div>
@@ -885,13 +882,12 @@ Specification Project with guidance provided by the Jakarta EE Working Group
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter defines the contents of the
-Jakarta™ EE 9.1 Web Profile.</p>
+Jakarta™ EE 10 Web Profile.</p>
 </div>
 <div class="sect2">
 <h3 id="a43"><a class="anchor" href="#a43"></a>2.1. Required Components</h3>
 <div class="paragraph">
-<p>The following technologies are required
-components of the Web Profile:</p>
+<p>The following technologies are required components of the Web Profile:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -908,19 +904,19 @@ components of the Web Profile:</p>
 <p>Jakarta Concurrency 3.0*</p>
 </li>
 <li>
-<p>Jakarta Contexts and Dependency Injection 4.0*</p>
+<p>Jakarta Enterprise Beans 4.0 Lite</p>
 </li>
 <li>
-<p>Jakarta Debugging Support for Other Languages 2.0</p>
+<p>Jakarta Expression Language  5.0*</p>
+</li>
+<li>
+<p>Jakarta Contexts and Dependency Injection 4.0*</p>
 </li>
 <li>
 <p>Jakarta Dependency Injection  2.0</p>
 </li>
 <li>
-<p>Jakarta Enterprise Beans 4.0 Lite</p>
-</li>
-<li>
-<p>Jakarta Expression Language  5.0*</p>
+<p>Jakarta Debugging Support for Other Languages 2.0</p>
 </li>
 <li>
 <p>Jakarta Interceptors 2.1*</p>
@@ -941,16 +937,16 @@ components of the Web Profile:</p>
 <p>Jakarta Security  3.0*</p>
 </li>
 <li>
-<p>Jakarta Standard Tag Library 3.0*</p>
+<p>Jakarta Servlet 6.0*</p>
 </li>
 <li>
-<p>Jakarta Servlet 6.0*</p>
+<p>Jakarta Server Faces 4.0*</p>
 </li>
 <li>
 <p>Jakarta Server Pages 3.1*</p>
 </li>
 <li>
-<p>Jakarta Server Faces 4.0*</p>
+<p>Jakarta Standard Tag Library 3.0*</p>
 </li>
 <li>
 <p>Jakarta Transactions 2.0</p>
@@ -1011,15 +1007,12 @@ modules types are required to be supported.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Major and minor updates to most specifications.</p>
-</li>
-<li>
-<p>Addition of Jakarta Concurrency to Web Profile.</p>
+<p>Major or minor updates to most component specifications in the Web Profile.</p>
 </li>
 </ul>
 </div>
 <div class="sect3">
-<h4 id="editorial-changes"><a class="anchor" href="#editorial-changes"></a>A.1.1. Editorial Changes</h4>
+<h4 id="editorial-changes-for-ee10"><a class="anchor" href="#editorial-changes-for-ee10"></a>A.1.1. Editorial Changes for EE10</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1032,7 +1025,7 @@ modules types are required to be supported.</p>
 <div class="sect2">
 <h3 id="changes-in-final-release-for-ee9-1"><a class="anchor" href="#changes-in-final-release-for-ee9-1"></a>A.2. Changes in Final Release for EE9.1</h3>
 <div class="sect3">
-<h4 id="editorial-changes-2"><a class="anchor" href="#editorial-changes-2"></a>A.2.1. Editorial Changes</h4>
+<h4 id="editorial-changes"><a class="anchor" href="#editorial-changes"></a>A.2.1. Editorial Changes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1056,7 +1049,10 @@ specification are included in parentheses.</p>
 <p><em>Jakarta™ EE Platform Specification Version 10.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/platform/10.0" class="bare">https://jakarta.ee/specifications/platform/10.0</a></em></p>
 </div>
 <div class="paragraph">
-<p><em>Java™ Platform, Standard Edition, v11 API Specification (Java SE specification)</em>. Available at: <em><a href="https://docs.oracle.com/en/java/javase/11/" class="bare">https://docs.oracle.com/en/java/javase/11/</a></em></p>
+<p><em>Java™ Platform, Standard Edition (Java SE specification), v11</em>. Available at: <a href="https://www.jcp.org/en/jsr/detail?id=384" class="bare">https://www.jcp.org/en/jsr/detail?id=384</a></p>
+</div>
+<div class="paragraph">
+<p><em>Java™ Platform, Standard Edition, v11 API Specification</em>. Available at: <em><a href="https://docs.oracle.com/en/java/javase/11/" class="bare">https://docs.oracle.com/en/java/javase/11/</a></em></p>
 </div>
 <div class="paragraph">
 <p><em>Jakarta™ Enterprise Beans Specification, Version 4.0</em>. Available at: <em><a href="https://jakarta.ee/specifications/enterprise-beans/4.0" class="bare">https://jakarta.ee/specifications/enterprise-beans/4.0</a></em></p>
@@ -1137,7 +1133,7 @@ specification are included in parentheses.</p>
 <div id="footer">
 <div id="footer-text">
  10.0<br>
-Last updated 2022-04-25 22:02:20 -0500
+Last updated 2022-05-24 16:55:40 -0500
 </div>
 </div>
 </body>
