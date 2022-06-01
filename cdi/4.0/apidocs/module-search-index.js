@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"jakarta.cdi"}]
+moduleSearchIndex = [{"l":"jakarta.cdi"},{"l":"jakarta.cdi.lang.model"}]
