@@ -444,7 +444,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jakarta EE Platform Team, https://projects.eclipse.org/projects/ee4j.jakartaee-platform</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jakartaee-platform-dev</a></span><br>
 <span id="revnumber"> 10.0,</span>
-<span id="revdate">May 25, 2022</span>
+<span id="revdate">June 02, 2022</span>
 <br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
@@ -490,7 +490,7 @@ Version: 10.0
 
 Status: Final
 
-Release: May 25, 2022</pre>
+Release: June 02, 2022</pre>
 </div>
 </div>
 </div>
@@ -662,7 +662,7 @@ that Jakarta XML Binding support is not required for Jakarta RESTful Web Service
 self-explanatory. For example, Core Profile products must implement the Jakarta RESTful Web Services API, which in turn means they need to satisfy all the requirements listed in the Jakarta RESTful Web Services specification.</p>
 </div>
 <div class="paragraph">
-<p>The fourth category is the most complex. The Jakarta Core Profile TCK attempts to validate the ability to combine the individual component specifications into single test applications.</p>
+<p>The fourth category is the most complex. The Jakarta Core Profile TCK attempts to validate the ability to combine the individual component specifications into composite test applications.</p>
 </div>
 </div>
 <div class="sect2">
@@ -691,7 +691,7 @@ Specification Project with guidance provided by the Jakarta EE Working Group.</p
 <p>Jakarta Annotations 2.1</p>
 </li>
 <li>
-<p>Jakarta Contexts and Dependency Injection 4.0 (CDI Lite section)</p>
+<p>Jakarta Contexts and Dependency Injection (CDI) 4.0 (CDI Lite section)</p>
 </li>
 <li>
 <p>Jakarta Dependency Injection 2.0</p>
@@ -714,7 +714,13 @@ Specification Project with guidance provided by the Jakarta EE Working Group.</p
 <div class="sect2">
 <h3 id="optional-components"><a class="anchor" href="#optional-components"></a>2.2. Optional Components</h3>
 <div class="paragraph">
-<p>There are no optional components in the Core Profile.</p>
+<p>The optional Jakarta XML Binding support in Jakarta RESTful Web Services implementations is not required for the Core Profile.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta Expression Language support is not required in Jakarta Contexts and Dependency Injection Lite implementations since this is part of the Full CDI specification.</p>
+</div>
+<div class="paragraph">
+<p>The Java SE section of the CDI 4.0 specification is not required for Core Profile implementations. Only Full CDI implementations are required to support the (CDI) Java SE API classes.</p>
 </div>
 </div>
 <div class="sect2">
@@ -722,12 +728,6 @@ Specification Project with guidance provided by the Jakarta EE Working Group.</p
 <div class="paragraph">
 <p>There are currently no requirements on the deployment packaging of
 core profile based applications.</p>
-</div>
-<div class="paragraph">
-<p>Jakarta XML Binding support is not required for Jakarta RESTful Web Services implementations in the Core Profile.</p>
-</div>
-<div class="paragraph">
-<p>Jakarta Expression Language support is not required in  Jakarta Contexts and Dependency Injection Lite implementations.</p>
 </div>
 </div>
 </div>
