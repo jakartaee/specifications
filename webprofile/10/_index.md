@@ -22,7 +22,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta EE 10 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-schedule)
 
 # Compatible Implementations
-* [Jakarta EE 10 Compatible Implementations](https://jakarta.ee/compatibility/#tab-10)
+* [Jakarta EE 10 Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
 
 # Ballots
 
