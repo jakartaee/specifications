@@ -25,8 +25,9 @@ The goals for this release were:
 
 * Maven coordinates
     * [jakarta.platform:jakarta.jakartaee-core-api:jar:10.0.0](https://search.maven.org/artifact/jakarta.platform/jakartaee-core-api/10.0.0/jar)
-* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-    * [WildFly Preview 27.0.0.Alpha1 (JDK 11)](https://github.com/wildfly/wildfly/releases/download/27.0.0.Alpha1/wildfly-preview-27.0.0.Alpha1.zip)
+
+# Compatible Implementations
+* [Jakarta EE 10 Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
 
 # Ballots
 
