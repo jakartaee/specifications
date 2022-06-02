@@ -1,8 +1,8 @@
 ---
 title: "Jakarta EE Platform 10 (under development)"
 date: 2021-08-11
-summary: "Jakarta EE Platform 10 defines a standard platform for hosting Jakarta EE (Java EE) applications. Find specifications and compatible implementations."
-seo_title: "Jakarta EE Platform 10 (Under Development) | Standards for hosting Jakarta EE (Java EE) applications"
+summary: "Jakarta EE Platform 10 defines a standard platform for hosting Jakarta EE applications. Find specifications and compatible implementations."
+seo_title: "Jakarta EE Platform 10 (Under Development) | Standards for hosting Jakarta EE applications"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
 

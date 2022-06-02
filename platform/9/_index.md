@@ -1,8 +1,8 @@
 ---
 title: "Jakarta EE Platform 9"
 date: 2020-11-20
-summary: "Jakarta EE Platform 9 defines a standard platform for hosting Jakarta EE (Java EE) applications. Find specifications and compatible implementations."
-seo_title: "Jakarta EE Platform 9 | Standards for Jakarta EE (Java EE) applications"
+summary: "Jakarta EE Platform 9 defines a standard platform for hosting Jakarta EE applications. Find specifications and compatible implementations."
+seo_title: "Jakarta EE Platform 9 | Standards for Jakarta EE applications"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
 

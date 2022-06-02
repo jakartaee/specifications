@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Faces"
-summary: "Jakarta Faces (JSF) defines an MVC framework for building user interfaces for web applications, 
+summary: "Jakarta Faces defines an MVC framework for building user interfaces for web applications, 
 including UI components, state management, event handling, input validation, page navigation, and 
 support for internationalization and accessibility."
 seo_title: "Jakarta Faces Specifications | JSF formerly JavaServer Faces"

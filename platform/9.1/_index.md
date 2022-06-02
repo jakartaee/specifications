@@ -1,8 +1,8 @@
 ---
 title: "Jakarta EE Platform 9.1"
 date: 2021-05-14
-summary: "Jakarta EE Platform 9.1 defines a standard platform for hosting Jakarta EE (Java EE) applications. Find specifications and compatible implementations."
-seo_title: "Jakarta EE Platform 9.1 | Standards for Jakarta EE (Java EE) applications"
+summary: "Jakarta EE Platform 9.1 defines a standard platform for hosting Jakarta EE applications. Find specifications and compatible implementations."
+seo_title: "Jakarta EE Platform 9.1 | Standards for Jakarta EE applications"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
 
