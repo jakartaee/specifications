@@ -21,10 +21,11 @@ The goals for this release were:
   ([sig](https://download.eclipse.org/jakartaee/coreprofile/10/jakarta-coreprofile-10.0.0.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/coreprofile/10/jakarta-coreprofile-10.0.0.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-    * TCK Summary Results [WildFly 27.0.0.Alpha1](https://github.com/jakartaredhat/wf-core-tck-runner/wiki/Jakarta-Core-Profile-10.0.0-TCK-Results)
-
 * Maven coordinates
     * [jakarta.platform:jakarta.jakartaee-core-api:jar:10.0.0](https://search.maven.org/artifact/jakarta.platform/jakartaee-core-api/10.0.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [WildFly Preview 27.0.0.Alpha1 (JDK 17)](https://github.com/wildfly/wildfly/releases/download/27.0.0.Alpha1/wildfly-preview-27.0.0.Alpha1.zip)
+  * [WildFly Preview 27.0.0.Alpha1 (JDK 11)](https://github.com/wildfly/wildfly/releases/download/27.0.0.Alpha1/wildfly-preview-27.0.0.Alpha1.zip)
 
 # Compatible Implementations
 * [Jakarta EE 10 Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
