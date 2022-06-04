@@ -19,7 +19,15 @@ A point that we are also studying is the [Quarkus](https://quarkus.io/) and [Mic
 We've removed the Duke references in the spec docs and also in all GitHub repositories.
 We replaced the "artemis" and "diana" package names and put "mapping" and communication respectively instead.
 
-We are still waiting to discuss the integration between Eclipse MicroProfile and Jakarta EE to check how the MicroProfile dependency will work.
+
+
+We could keep the compatibility in all changes in the last three months, which is very good. We are still waiting for the Jakarta Configuration Specification to use instead of Eclipse MicroProfile Configuration.
+
+The JPA e-mail list appears the prospects to create a specification to work with several patterns where the data is agnostic; therefore, this specification will work with NoSQL, Relational, or even Rest Applications.
+
+Next quarter, we'll work on JPA and NoSQL integration and move the API forward to use Java 11 as a minimum requirement, and upgrade the API to the Jakarta EE 10 as soon it gets a release.
+
+
 
 
 * [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
