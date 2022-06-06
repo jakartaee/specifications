@@ -1,0 +1,12 @@
+name: 'Jakarta Specification PR review action'
+description: 'Review submitted content'
+inputs:
+  content:
+    description: 'Modified files'
+    required: true
+outputs:
+  review:
+    description: 'review comment'
+runs:
+  using: 'node12'
+  main: 'index.js'
