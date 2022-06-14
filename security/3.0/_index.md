@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Security 3.0 (under development)"
-date: 2021-04-15
+title: "Jakarta Security 3.0"
+date: 2022-06-14
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Security defines a standard for creating secure Jakarta EE applications in modern application paradigms.
@@ -33,6 +33,26 @@ The JDK version required will be aligned with Jakarta EE 10.
 * [Jakarta Security 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.es/releases/3.0)
 
 # Ballots
+
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2022-05-17 with the following results.
+
+| Representative                                 | Representative for: | Vote    |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |    +1   |
+| Tom Watson, Emily Jiang                        | IBM                 |    +1   |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1   |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |    +1   |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1   |
+| Ivar Grimstad                                  | EE4J PMC            |    +1   |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members | no vote |
+| Werner Keil                                    | Committer Members   | no vote |
+| Jun Qian                                       | Enterprise Members  |    +1   |
+| Zhai Luchao                                    | Enterprise Members  |    +1   |
+|                                                | **Total**           |  **8**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02641.html).
 
 ## Plan Review
 
