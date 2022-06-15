@@ -12,6 +12,9 @@ jakarta.enterprise.inject.literal
 jakarta.enterprise.inject.se
 jakarta.enterprise.inject.spi
 jakarta.enterprise.inject.spi.configurator
+jakarta.enterprise.lang.model
+jakarta.enterprise.lang.model.declarations
+jakarta.enterprise.lang.model.types
 jakarta.enterprise.util
 jakarta.inject
 jakarta.interceptor
