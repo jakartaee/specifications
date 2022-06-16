@@ -1,7 +1,7 @@
 ---
 title: "Jakarta Security 3.0"
-date: 2022-03-28
-summary: "Release for Jakarta EE 9"
+date: 2022-06-14
+summary: "Release for Jakarta EE 10"
 ---
 Jakarta Security defines a standard for creating secure Jakarta EE applications in modern application paradigms.
 
