@@ -18,6 +18,9 @@ jakarta.enterprise.inject.literal
 jakarta.enterprise.inject.se
 jakarta.enterprise.inject.spi
 jakarta.enterprise.inject.spi.configurator
+jakarta.enterprise.lang.model
+jakarta.enterprise.lang.model.declarations
+jakarta.enterprise.lang.model.types
 jakarta.enterprise.util
 jakarta.faces
 jakarta.faces.annotation
@@ -95,9 +98,3 @@ jakarta.ws.rs.container
 jakarta.ws.rs.core
 jakarta.ws.rs.ext
 jakarta.ws.rs.sse
-jakarta.xml.bind
-jakarta.xml.bind.annotation
-jakarta.xml.bind.annotation.adapters
-jakarta.xml.bind.attachment
-jakarta.xml.bind.helpers
-jakarta.xml.bind.util
