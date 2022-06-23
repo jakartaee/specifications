@@ -21,7 +21,7 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 * [Jakarta Batch 2.1 TCK](https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.1.zip) ([sig](https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.1.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.batch:jakarta.batch-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.1.0/jar)
+  * [jakarta.batch:jakarta.batch-api:jar:2.1.1](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.1.1/jar)
 
 * Schemas
   * [XML Schema for the Jakarta Batch artifacts XML file (batch.xml)](https://jakarta.ee/xml/ns/jakartaee/batchXML_2_0.xsd)
