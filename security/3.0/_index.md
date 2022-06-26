@@ -36,7 +36,7 @@ The JDK version required will be aligned with Jakarta EE 10.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2022-05-17 with the following results.
+The Specification Committee Ballot concluded successfully on 2022-06-14 with the following results.
 
 | Representative                                 | Representative for: | Vote    |
 |------------------------------------------------|---------------------|---------|
