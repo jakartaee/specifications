@@ -15,7 +15,12 @@ Jakarta Dependency Injection specifies a means for obtaining objects in such a w
 ([sig](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.1-bin.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.1-bin.zip.sha256),
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * TCK Summary Results [Weld 4.0.0.Alpha2](https://github.com/jakartaredhat/weld-inject-tck/wiki/Jakarta-Dependency-Injection-2.0-TCK-Results)
+    * Service Release, 2022-06-13 --  [Jakarta Dependency Injection 2.0 TCK](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.2-bin.zip)
+([sig](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.2-bin.zip.sig), 
+[sha](https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.2-bin.zip.sha256), 
+[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+
+* TCK Summary Results [Weld 4.0.0.Alpha2](https://github.com/jakartaredhat/weld-inject-tck/wiki/Jakarta-Dependency-Injection-2.0-TCK-Results)
 
 * Maven coordinates
   * [jakarta.inject:jakarta.inject-api:jar:2.0.0](https://repo1.maven.org/maven2/jakarta/inject/jakarta.inject-api/2.0.0/)
