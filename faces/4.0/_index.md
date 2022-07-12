@@ -48,7 +48,7 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 * [Jakarta Faces 4.0 Jsdoc](./jsdoc)
 * [Jakarta Faces 4.0 Renderkitdoc](./renderkitdoc)
 * [Jakarta Faces 4.0 VDLDoc](./vdldoc)
-* [Jakarta Faces 4.0 TCK](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.0.zip)([sig](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Faces 4.0 TCK](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip)([sig](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/4.0.0/jar)
 
