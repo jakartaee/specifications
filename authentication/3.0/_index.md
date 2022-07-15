@@ -30,13 +30,14 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 * [Jakarta Authentication 3.0 Specification Document](./jakarta-authentication-spec-3.0.html) (HTML)
 * [Jakarta Authentication 3.0 Javadoc](./apidocs)
 * [Jakarta Authentication 3.0 TCK](https://download.eclipse.org/jakartaee/authentication/3.0/jakarta-authentication-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/authentication/3.0/jakarta-authentication-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/authentication/3.0/jakarta-authentication-tck-3.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+  * First service release [Jakarta Authentication 3.0 TCK](https://download.eclipse.org/jakartaee/authentication/3.0/jakarta-authentication-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/authentication/3.0/jakarta-authentication-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/authentication/3.0/jakarta-authentication-tck-3.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.authentication:jakarta.authentication-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.authentication/jakarta.authentication-api/3.0.0/jar)
 
 
 # Compatible Implementations
 
-* [Eclipse Glassfish 7.0.0-M4](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M4/glassfish-7.0.0-M4.zip)
+* [Eclipse Glassfish 7.0.0-M7](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M7/glassfish-7.0.0-M7.zip)
 
 # Ballots
 
