@@ -1,38 +1,44 @@
 ---
-title: "Jakarta Security 3.0 (under development)"
-date: 2021-04-15
+title: "Jakarta Security 3.0"
+date: 2022-06-14
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta Security defines a standard for creating secure Jakarta EE applications in modern application paradigms.
 
-The goal of this release is to continue adding features and evolving the API. A number of those had been discussed and even had prototype implementations during the development of the previous version, but didn't make it in.
-
-More specifically:
-
-Additional authentication mechanisms:
-* Client-cert and Digest [SECURITY #120](https://github.com/eclipse-ee4j/security-api/issues/120)
-* OpenID Connect [SECURITY #183](https://github.com/eclipse-ee4j/security-api/issues/183)
-* OAuth2 
-
-Extended authentication mechanisms:
-* Authentication mechanism per URL [SECURIY #86](https://github.com/eclipse-ee4j/security-api/issues/86)
-* User choice of authentication mechanism (login with provider X, login with provider Y, etc)
-* Multiple authentication mechanisms (try JWT, fallback to BASIC, etc)
-
-
-CDI:
-* @RolesAllowed alternative
-* Easily adding an interceptor to a build-in CDI bean [blog](https://arjan-tijms.omnifaces.org/2017/08/dynamically-adding-interceptor-to-build.html) 
-
-
-Features
-* Authorization modules [blog](https://arjan-tijms.omnifaces.org/2016/07/simplified-custom-authorization-rules.html)
-
-The JDK version required will be aligned with Jakarta EE 10.
-
 * [Jakarta Security 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.es/releases/3.0)
+   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta Security 3.0 Specification Document](./jakarta-security-spec-3.0.pdf) (PDF)
+* [Jakarta Security 3.0 Specification Document](./jakarta-security-spec-3.0.html) (HTML)
+* [Jakarta Security 3.0 Javadoc](./apidocs)
+* [Jakarta Security 3.0 TCK](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+  * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/3.0.0/jar)
+
+# Compatible Implementations
+
+* [Eclipse Soteria 3.0.0-RC1](https://eclipse-ee4j.github.io/soteria)
 
 # Ballots
+
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2022-06-14 with the following results.
+
+| Representative                                 | Representative for: | Vote    |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |    +1   |
+| Tom Watson, Emily Jiang                        | IBM                 |    +1   |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1   |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |    +1   |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    +1   |
+| Ivar Grimstad                                  | EE4J PMC            |    +1   |
+| Marcelo Ancelmo, Martijn Verburg               | Participant Members | no vote |
+| Werner Keil                                    | Committer Members   | no vote |
+| Jun Qian                                       | Enterprise Members  |    +1   |
+| Zhai Luchao                                    | Enterprise Members  |    +1   |
+|                                                | **Total**           |  **8**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02641.html).
 
 ## Plan Review
 

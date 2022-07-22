@@ -11,20 +11,20 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 * [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.0 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.zip)
-([sig](TBD_post_ballot),
-[sha](905cc2ccd35ab3900737b8ec1c65e1c0b53f1d19ed5503d229342f1f739cc2cc),
+* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.6-dist.zip)
+([sig](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.6-dist.zip.sig),
+[sha](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.6-dist.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.enterprise:jakarta.cdi-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.0/jar)
+  * [jakarta.enterprise:jakarta.cdi-api:jar:4.0.1](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.1/jar)
 
 * Schemas
   * [XML Schema for the CDI 4.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd)
 
 # Compatible Implementations
 
-* [Weld 5.0.0.CR2](https://weld.cdi-spec.org/download/)
+* [Weld 5.0.0.SP2](https://weld.cdi-spec.org/download/)
 
 The Jakarta Contexts and Dependency Injection 4.0 goals for this release are:
 
