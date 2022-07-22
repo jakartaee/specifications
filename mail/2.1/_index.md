@@ -7,7 +7,16 @@ summary: "Release for Jakarta EE 10"
 The goal of this release is to provide standalone API jar fully independent
 on the particular implementation.
 
-The JDK version required will be aligned with Jakarta EE 10.
+### New Features, Enhancements, or Additions
+The API is now standalone from what was previously the reference implementation.
+
+### Removals, Deprecations or Backwards Incompatible Changes
+None
+
+### Minimum Java SE Version
+**11**
+
+# Details
 
 * [Jakarta Mail 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.mail/releases/2.1)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
