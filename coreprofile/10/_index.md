@@ -28,7 +28,7 @@ The goals for this release were:
   * [WildFly Preview 27.0.0.Alpha1 (JDK 11)](https://github.com/wildfly/wildfly/releases/download/27.0.0.Alpha1/wildfly-preview-27.0.0.Alpha1.zip)
 
 # Compatible Implementations
-* [Jakarta EE 10 Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
+* [Jakarta EE 10 Core Profile Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
 
 # Ballots
 
