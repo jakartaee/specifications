@@ -17,7 +17,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * Maven coordinates
   * [jakarta.platform:jakarta.jakartaee-api:jar:10.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/10.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-  * [GlassFish-7.0.0-M7](https://download.eclipse.org/ee4j/glassfish/glassfish-7.0.0-M7.zip)
+  * [Eclipse GlassFish-7.0.0-M8](https://download.eclipse.org/ee4j/glassfish/glassfish-7.0.0-M8.zip)
 
 # Jakarta EE 10 Schedule
 * [Jakarta EE 10 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-schedule)
