@@ -16,8 +16,8 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * Maven coordinates
   * [jakarta.platform:jakarta.webprofile-api:jar:10.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/10.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-  * [Eclipse GlassFish Web Profile](https://download.eclipse.org/ee4j/glassfish/web-7.0.0-M8.zip)
-  
+  * [Eclipse GlassFish Web Profile 7.0.0-M8](https://download.eclipse.org/ee4j/glassfish/web-7.0.0-M8.zip)
+
 # Jakarta EE 10 Schedule
 * [Jakarta EE 10 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-schedule)
 
