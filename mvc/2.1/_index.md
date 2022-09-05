@@ -10,7 +10,7 @@ The goal of this release is to make necessary adjustments to ensure alignment wi
 
 ### New features, enhancements or additions
 <!-- List here -->
-* Standartized way to override HTTP methods in forms
+* Standardized way to override HTTP methods in forms
 * Added module-info
 
 ### Removals, deprecations or backwards incompatible changes
