@@ -1,5 +1,5 @@
 ---
-title: "Jakarta MVC 2.1 (under development)"
+title: "Jakarta MVC 2.1"
 date: 2021-04-15
 summary: "Release for Jakarta EE 10"
 ---
