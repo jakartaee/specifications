@@ -35,7 +35,7 @@ The goal of this release is to make necessary adjustments to ensure alignment wi
 
 # Ballots
 <!--
-## Plan Review
+## Release Review
 The Specification Committee Ballot concluded successfully on 2022-xx-xx with the following results.
 
 | Representative                     | Representative for: | Vote   |
