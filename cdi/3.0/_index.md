@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Context Dependency Injection 3.0"
+title: "Jakarta Contexts and Dependency Injection 3.0"
 date: 2020-08-26
 summary: "Release for Jakarta EE 9"
 ---

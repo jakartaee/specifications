@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Context Dependency Injection 2.0"
+title: "Jakarta Contexts and Dependency Injection 2.0"
 date: 2019-09-10
 summary: "Final for Jakarta EE 8"
 ---
