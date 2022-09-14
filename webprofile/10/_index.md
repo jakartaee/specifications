@@ -53,15 +53,15 @@ The Specification Committee Ballot concluded successfully on 2022-09-13 with the
 | Representative                                 | Representative for: |  Vote  |
 |------------------------------------------------|---------------------|--------|
 | Kenji Kazumura                                 | Fujitsu             |   +1   |
-| Dan Bandera, Kevin Sutter                      | IBM                 |   +1   |
+| Tom Watson, Emily Jiang                        | IBM                 |   +1   |
 | Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1   |
-| Andrew Pielage, Matt Gill                      | Payara              |   +1   |
-| Scott Stark, Mark Little                       | Red Hat             |   +1   |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1   |
 | David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1   |
 | Ivar Grimstad                                  | EE4J PMC            |   +1   |
 | Marcelo Ancelmo, Martijn Verburg               | Participant Members |   +1   |
 | Werner Keil                                    | Committer Members   |   +1   |
 | Jun Qian                                       | Enterprise Members  |   +1   |
+| Zhai Luchao                                    | Enterprise Members  |   +1   |
 |                                                | **Total**           | **10** |
 
 Non-binding votes
