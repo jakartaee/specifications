@@ -61,8 +61,8 @@ The Specification Committee Ballot concluded successfully on 2022-03-11 with the
 |Committer Members                  | &check; |         |          |
 |Enterprise Members (Jun Qian)      | &check; |         |          |
 |Committer Members (Zhai Luchao)    | &check; |         |          |
+|**Total**                          | **10**  |         |          |
 
-(10 Yes votes)
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02245.html)
 

@@ -52,7 +52,6 @@ This release adds the following
 
 The Specification Committee Ballot for Concurrency 3.0 successfully concluded on May 11, 2022. The results were as follows:
 
-
 |Organization                       |  Yes    | No      | Abstain  |
 |-----------------------------------|---------|---------|----------|
 |Fujitsu                            | &check; |         |          |
@@ -65,9 +64,7 @@ The Specification Committee Ballot for Concurrency 3.0 successfully concluded on
 |Committer Members                  | &check; |         |          |
 |Enterprise Members (Jun Qian)      | &check; |         |          |
 |Committer Members (Zhai Luchao)    | &check; |         |          |
-
-(10 Yes votes)
-
+|**Total**                          | **10**  |         |          |
 
 The ballot was conducted over the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02441.html)
 
