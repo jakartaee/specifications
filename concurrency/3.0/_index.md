@@ -1,7 +1,7 @@
 ---
 title: "Jakarta Concurrency 3.0"
 date: 2022-04-27
-summary: "Jakarta EE 10 Release"
+summary: "Concurrency 3.0 for Jakarta EE 10 Release"
 ---
 <!-- Please provide a short description of the specification. -->
 <!-- Typically this will not change cfrom version to version. -->
@@ -20,7 +20,7 @@ This release adds the following
 * Modernization of the Trigger mechanism with time zone support
 * Propagation of third party context types (See Chapter 4, *Thread Context Providers*)
 * Resource definition annotations and corresponding deployment descriptor elements
-### Incompatibilities
+###  Removals, deprecations or backwards incompatible changes
 
 ### Minimum Java SE Version
 * This release requires Java SE 11 or higher
