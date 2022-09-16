@@ -6,19 +6,28 @@ summary: "Release for Jakarta EE 10"
 Jakarta SOAP with Attachments defines an API enabling developers to produce
 and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments Feature.
 
-This release contains following changes:
+<!-- Please describe the high-level changes made to Jakarta Wombat 1.0. --> 
+<!-- The intent is for the first two sections to be an executive summary in the range of 300 to 800 characters. -->
+<!-- Links can accompany the executive summary, but cannot substitute for an executive summary. -->
+
+### New features, enhancements or additions
 
 * adds SOAPEnvelope.createName(String, String): Name method
-* does not allow null arguments in SOAPFault.createFault(String, String)
 * extends SOAPConnection to implement java.io.Autocloseable
 * adds API to allow setting timeouts for set timeout for SOAPConnection.call
-* drops all references to JAXM
-* drops the search through Java SE instalation in the implementation lookup
-* removes deprecated SOAPElementFactory
 * editorial updates and clarifications in the specification
 
-This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* removes deprecated SOAPElementFactory
+* does not allow null arguments in SOAPFault.createFault(String, String)
+* drops all references to JAXM
+* drops the search through Java SE instalation in the implementation lookup
 
+### Minimum Java SE Version
+* This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
+
+# Details
 * [Jakarta SOAP Attachments 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/3.0-jakarta-soap-attachments)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta SOAP Attachments 3.0 Specification Document](./jakarta-soap-spec-3.0.pdf) (PDF)
@@ -57,6 +66,7 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 ## Plan Review
 
 The Specification Committee Ballot concluded successfully on 2021-05-10 with the following results.
+
 | Representative                                 | Representative for: | Vote |
 |------------------------------------------------|---------------------|------|
 | Kenji Kazumura                                 | Fujitsu             |  +1  |
