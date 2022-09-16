@@ -1,7 +1,7 @@
 ---
 title: "Jakarta Concurrency 3.0"
 date: 2022-04-27
-summary: "Concurrency 3.0 for Jakarta EE 10 Release"
+summary: "Jakarta EE 10 Release"
 ---
 <!-- Please provide a short description of the specification. -->
 <!-- Typically this will not change cfrom version to version. -->
