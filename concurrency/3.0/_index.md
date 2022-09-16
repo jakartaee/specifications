@@ -15,7 +15,7 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 ### New Features
 This release adds the following
 * Asynchronous methods (See Chapter 5, *Asynchronous Methods*)
-* Context-aware completion stages and Completable Futures
+* Context-aware completion stages and completable futures
 * Context propagation to parallel streams operations
 * Modernization of the Trigger mechanism with time zone support
 * Propagation of third party context types (See Chapter 4, *Thread Context Providers*)
