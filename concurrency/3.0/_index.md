@@ -23,7 +23,7 @@ This release adds the following
 ###  Removals, deprecations or backwards incompatible changes
 
 ### Minimum Java SE Version
-* This release requires Java SE 11 or higher
+* **Java SE 11 or higher**
 
 # Details
 

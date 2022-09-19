@@ -25,7 +25,7 @@ and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments 
 * drops the search through Java SE instalation in the implementation lookup
 
 ### Minimum Java SE Version
-* This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
+* **Java SE 11 or higher**
 
 # Details
 * [Jakarta SOAP Attachments 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/3.0-jakarta-soap-attachments)
