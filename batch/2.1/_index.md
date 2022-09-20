@@ -6,12 +6,20 @@ summary: "Release for Jakarta EE 10"
 
 Jakarta Batch specifies a Java API plus an XML-based job specification language (JSL), which lets you compose batch jobs in XML from reusable Java application artifacts and conveniently parameterize different executions of a single job.
 
-The goal of this release is to:
+### New features, enhancements or additions
+<!-- List here -->
+* Defines Jakarta Batch integration with Jakarta Contexts and Dependency Injection (CDI) within and outside of the Jakarta EE Platform
+* Require Jakarta Batch + CDI integration (which in previous releases was optional from the Jakarta Batch perspective
 
-* define Jakarta Batch integration with Jakarta Contexts and Dependency Injection (CDI) within and outside of the Jakarta EE Platform
-* require Jakarta Batch + CDI integration (which in previous releases was optional from the Jakarta Batch perspective
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
 
-This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta Batch 2.1.0 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.1.0)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
@@ -19,16 +27,13 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
 * [Jakarta Batch 2.1 Specification Document](./jakarta-batch-spec-2.1.html) (HTML)
 * [Jakarta Batch 2.1 Javadoc](./apidocs)
 * [Jakarta Batch 2.1 TCK](https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.1.zip) ([sig](https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.1.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-
 * Maven coordinates
   * [jakarta.batch:jakarta.batch-api:jar:2.1.1](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/2.1.1/jar)
-
 * Schemas
   * [XML Schema for the Jakarta Batch artifacts XML file (batch.xml)](https://jakarta.ee/xml/ns/jakartaee/batchXML_2_0.xsd)
   * [XML Schema for the Jakarta Batch Job Specification Language](https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd)
-
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-* [**"jbatch"** v2.1.0-M2](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.1.0-M2) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.  Maven links: [implementation](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.container/2.1.0-M2/com.ibm.jbatch.container-2.1.0-M2.jar) and [SPI](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.spi/2.1.0-M2/com.ibm.jbatch.spi-2.1.0-M2.jar).
+  * [**"jbatch"** v2.1.0-M2](https://github.com/WASdev/standards.jsr352.jbatch/releases/tag/2.1.0-M2) =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages.  Maven links: [implementation](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.container/2.1.0-M2/com.ibm.jbatch.container-2.1.0-M2.jar) and [SPI](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.spi/2.1.0-M2/com.ibm.jbatch.spi-2.1.0-M2.jar).
 
 # Ballots
 
