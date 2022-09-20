@@ -10,7 +10,7 @@ binding, and configuration.
 
 ### New features, enhancements or additions
 <!-- List here -->
-* Move to the `jakarta.*' namespace
+* Moved to the `jakarta.*` namespace
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
