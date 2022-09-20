@@ -10,48 +10,39 @@ While this is a major release due to the removal of a long deprecated method, th
 This release also laid the groundwork for the removal of the dependency on the java.desktop module which is planned for the next release.
 
 ### New Features, Enhancements, or Additions
-The BeanELResolver has been updated to consider default method 
+* The BeanELResolver has been updated to consider default method 
 implementations when looking for property getters, property setters and 
 methods.
-
-Support has been added for coercing a LambdaExpression instance to a 
+* Support has been added for coercing a LambdaExpression instance to a 
 functional interface method invocation.
-
-Support has been added for coercing arrays.
-
-The MethodReference class has been added to provide access to details of 
+* Support has been added for coercing arrays.
+* The MethodReference class has been added to provide access to details of 
 the method to which a MethodExpression resolves, including any 
 annotations present on the method.
-
-Generics are now used throughout the API.
-
-The expected behaviour when matching expressions to methods based on 
+* Generics are now used throughout the API.
+* The expected behaviour when matching expressions to methods based on 
 parameter types has been clarified.
-
-The EL specification now explicitly states that specifications that 
+* The EL specification now explicitly states that specifications that 
 depend on the EL specification may define further packages, in 
 additional to java.lang.*, that are imported by default into the EL 
 environment.
 
-
 ### Removals, Deprecations or Backwards Incompatible Changes
-The deprecated, misspelt method MethodExpression.isParmetersProvided() 
+* The deprecated, misspelt method MethodExpression.isParmetersProvided() 
 has been removed.
-
-The ELResolver method getFeatureDescriptors() has been deprecated with 
+* The ELResolver method getFeatureDescriptors() has been deprecated with 
 removal planed for EL 6.0. This is to remove the dependency on the 
 java.desktop module from the EL API.
-A default implementation that returns null has been added to the 
+* A default implementation that returns null has been added to the 
 ELResolver method getFeatureDescriptors() since it has been deprecated 
 so that custom ELResolver implementations do not need to implement the 
 method.
-
-Explicitly document that ELResolver.getType() must return null if either 
+* Explicitly document that ELResolver.getType() must return null if either 
 the ELResolver or the resolved property is read-only. This changes the 
 documented behaviour of the StaticFieldELResolver.
 
 ### Minimum Java SE Version
-**11**
+**Java SE 11 or higher**
 
 # Details
 
