@@ -6,6 +6,20 @@ summary: "Release for Jakarta EE 9"
 Jakarta Managed Beans defines a set of basic services for container-managed objects
 with minimal requirements, otherwise known under the acronym POJOs (Plain Old Java Objects).
 
+### New features, enhancements or additions
+<!-- List here -->
+* Moved to the `jakarta.*` namespace
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 8 or higher**
+
+# Details
+
 * [Jakarta Managed Beans 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/managed-beans-2.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Managed Beans 2.0 Specification Document](./jakarta-managed-beans-spec-2.0.pdf) (PDF)
@@ -14,7 +28,6 @@ with minimal requirements, otherwise known under the acronym POJOs (Plain Old Ja
 * Jakarta Managed Beans 2.0 TCK - N/A  (covered by [Jakarta EE 9 Platform TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub)))
 * Maven coordinates (provided by Jakarta Annotations)
   * [jakarta.annotation:jakarta.annotation-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.0.0/jar)
-
 
 # Compatible Implementations
 
