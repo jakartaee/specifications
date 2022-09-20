@@ -6,8 +6,8 @@ summary: "Release for Jakarta EE 10"
 Jakarta JSON Processing defines a Java(R) based framework for parsing, generating, transforming, and
 querying JSON documents.
 
-This release contains following changes:
-
+### New features, enhancements or additions
+<!-- List here -->
 * added API to create JsonValue from primitive types
 * added API to create get JsonValue from java.lang.Number type
 * added API to get current event from the JsonParser
@@ -19,7 +19,15 @@ This release contains following changes:
 * removed (default) implementation from the specification API artifact and moved the implementation to the separate project
 * provided standalone TCK based on Apache Maven
 
-Requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta JSON Processing 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsonp/releases/2.1)
   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
