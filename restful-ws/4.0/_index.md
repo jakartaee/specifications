@@ -1,6 +1,6 @@
 ---
 title: "Jakarta RESTful Web Services 4.0 (under development)"
-date: 2021-04-15
+date: 2022-04-15
 summary: "Release for Jakarta EE 10"
 ---
 Jakarta RESTful Web Services provides a foundational API to develop web services following the Representational
