@@ -5,6 +5,20 @@ summary: "Release for Jakarta EE 9"
 ---
 Jakarta Bean Validation defines a metadata model and API for JavaBean and method validation.
 
+### New features, enhancements or additions
+<!-- List here -->
+* Moved to the `jakarta.*` namespace
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 8 or higher**
+
+# Details
+
 * [Jakarta Bean Validation 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.bean-validation/releases/3.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Bean Validation 3.0 Specification Document](jakarta-bean-validation-spec-3.0.pdf) (PDF)
@@ -18,12 +32,10 @@ Jakarta Bean Validation defines a metadata model and API for JavaBean and method
 ([sig](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.0.1.zip.sig), 
 [sha](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.0.1.zip.sha256), 
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-
 * Maven coordinates
   * [jakarta.validation:jakarta.validation-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.validation/jakarta.validation-api/3.0.0/jar)
 
 # Compatible Implementations
-
 * [Hibernate Validator 7.0.0.Alpha5](https://hibernate.org/validator/releases/7.0/)
 
 # Ballots
