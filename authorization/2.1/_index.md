@@ -8,14 +8,21 @@ facilitating subject based security by determining whether a given subject has a
 to transform security constraints for specific containers (such as Jakarta Servlet or Jakarta Enterprise Beans) into
 these permissions.
 
-This release contains the following changes:
-
+### New features, enhancements or additions
+<!-- List here -->
 * [Issue #53](https://github.com/jakartaee/authorization/issues/53): Add getPolicyConfiguration methods without state requirement
 * [Issue #52](https://github.com/jakartaee/authorization/issues/52): Add methods to PolicyConfiguation to read permissions
 * [Issue #105](https://github.com/jakartaee/authorization/issues/105): Generic return value for getContext  
 
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None 
 
-This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta Authorization 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jacc/releases/2.1)
   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
