@@ -1,5 +1,5 @@
 ---
-title: "Jakarta XML Web Services Specification"
+title: "Jakarta XML Web Services"
 summary: "Jakarta XML Web Services defines a means for implementing XML-Based Web Services
 based on Jakarta SOAP with Attachments and Jakarta Web Services Metadata."
 #<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
