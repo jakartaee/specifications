@@ -6,21 +6,25 @@ summary: "Release for Jakarta EE 10"
 Jakarta RESTful Web Services provides a foundational API to develop web services following the Representational
 State Transfer (REST) architectural pattern.
 
-The goal of this release is to provide an update of the API with some recently requested features while maintaining 
-backward compatibility with earlier releases. Originally planned to be an independent release, it is now
-being proposed for inclusion in Jakarta EE 10.
-
-Summary of changes:
-
+The goal of this release was to provide an update of the API with some recently requested features while maintaining 
+backward compatibility with earlier releases.
+  
+### New features, enhancements or additions
+<!-- List here -->
 * Java SE Bootstrap API - [Issue #509](https://github.com/eclipse-ee4j/jaxrs-api/issues/509)
 * Support for multipart media type - [Issue #418](https://github.com/eclipse-ee4j/jaxrs-api/issues/418)
 * Better alignment with JSON-B - [Issue #742](https://github.com/eclipse-ee4j/jaxrs-api/issues/742)
 * Automatic loading of provider extensions - [Issue #751](https://github.com/eclipse-ee4j/jaxrs-api/issues/751)
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
 * Deprecation of `@Context` in preparation for better alignment with CDI
-    
-The JDK version required will be aligned with Jakarta EE 10. The latest details and progress for this work 
-may be found on the [Project Site](https://projects.eclipse.org/projects/ee4j.jaxrs) as well as the
-[Github Wiki](https://github.com/eclipse-ee4j/jaxrs-api/wiki).
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta RESTful Web Services 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/3.1.0)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
