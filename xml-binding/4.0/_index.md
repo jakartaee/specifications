@@ -6,20 +6,27 @@ summary: "Release for Jakarta EE 10"
 The Jakarta XML Binding provides an API and tools that automate the mapping
 between XML documents and Java objects.
 
-The release contains following changes:
+### New features, enhancements or additions
+<!-- List here -->
+* adds implementation lookup through the properties Map passed to JAXBContext.newInstance(...) methods
+* provided implementation of the DatatypeConverterInterface throws exception on invalid input
+* adds https scheme to the list of required to be removed schemes when mapping namespace to java package
+* fixes cross-references in the specification document
 
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
 * drops compatibility with JAXB 1.0
 * removes constraints on using java.desktop/java.beans.Introspector
 * removes deprecated jakarta.xml.bind.Validator
 * removes deprecated jakarta.xml.bind.context.factory property
 * drops implementation lookup through META-INF/services/jakarta.xml.bind.JAXBContext
 * drops implementation lookup through jaxb.properties file
-* adds implementation lookup through the properties Map passed to JAXBContext.newInstance(...) methods
-* provided implementation of the DatatypeConverterInterface throws exception on invalid input
-* adds https scheme to the list of required to be removed schemes when mapping namespace to java package
-* fixes cross-references in the specification document
 
-Requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta XML Binding 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxb/releases/4.0)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
