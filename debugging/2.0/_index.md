@@ -8,6 +8,20 @@ programs executed under the Java virtual machine but written in languages
 other than the Java programming language, can be debugged with references to
 the original source (for example, source file and line number references).
 
+### New features, enhancements or additions
+<!-- List here -->
+* Moved to the `jakarta.*` namespace
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 8 or higher**
+
+# Details
+
 * [Jakarta Debugging Support for Other Languages 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/2.0-debugging-support-other-languages)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0.pdf) (PDF)
