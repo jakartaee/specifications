@@ -10,7 +10,19 @@ The goals for this release were:
 2. The TCK(s) for the Core profile run independently of the Full Platform TCK.
 3. Java SE version will be aligned with the Platform Project's decision regarding Java SE versions.
 
-# Artifacts
+### New features, enhancements or additions
+<!-- List here -->
+* Initial version
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta EE Core Profile 10 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/core-profile-10)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
