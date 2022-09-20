@@ -6,19 +6,6 @@ summary: "Release for Jakarta EE 10"
 
 Jakarta Contexts Dependency Injection specifies a means for obtaining objects in such a way as to maximize reusability, testability and maintainability compared to traditional approaches such as constructors, factories, and service locators (e.g., JNDI).
 
-* Split the existing 3.0 specification into pieces that separate out requirements based on the target runtime container support; Java SE, Jakarta Servlet, Jakarta Message Service, etc.
-* Breakup the TCK to separate out the concers along the lines of the target runtime requirements as outlined in 1.
-* Introduce a new CDI-lite specification that targets supporting build time compliation of applications.
-* Java SE version will be aligned with the Core profile requirements regarding Java SE versions.
-* Consider addressing open issues:
-    * [Executable methods](https://github.com/eclipse-ee4j/cdi/issues/460)
-    * [Removal of deprecated bits](https://github.com/eclipse-ee4j/cdi/issues/472)
-    * [Improve constructor injection](https://github.com/eclipse-ee4j/cdi/issues/464)
-    * [AFTER_SUCCESS Observers and Events fired from within EntityListeners](https://github.com/eclipse-ee4j/cdi/issues/467)
-    * [Add methods to BeanConfigurator for applying decorators](https://github.com/eclipse-ee4j/cdi/issues/459)
-    * [All issues with a Lite label](https://github.com/eclipse-ee4j/cdi/issues?q=is%3Aissue+label%3ALite)
-
-
 ### New features, enhancements or additions
 <!-- List here -->
 * Splits the CDI core into Lite and Full. Lite contains a subset of original features which are designed to work in more restricted environments
