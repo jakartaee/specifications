@@ -6,8 +6,8 @@ summary: "Release for Jakarta EE 10"
 Jakarta Persistence defines a standard for management of persistence
 and object/relational mapping in Java(R) environments.
 
-The release contains following changes:
-
+### New features, enhancements or additions
+<!-- List here -->
 * EntityManagerFactory and EntityManager interfaces extend java.lang.AutoCloseable interface
 * Fixes ClassTransformer.transform to throw Persistence API specific exception
 * Adds support for java.util.UUID and GenerationType.UUID
@@ -24,7 +24,15 @@ corresponding localDate(), localDateTime(), and localTime() to Criteria API
 * Clarifies the order of parameters in the LOCATE function
 * Clarifies SqlResultSetMapping with multiple EntityResults and conflicting aliases
 
-Requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta Persistence 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.1)
 * [Jakarta Persistence 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.1-jakarta-persistence-api)
