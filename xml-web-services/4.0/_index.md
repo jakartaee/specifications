@@ -6,16 +6,23 @@ summary: "Release for Jakarta EE 10"
 Jakarta XML Web Services defines a means for implementing XML-Based Web Services
 based on Jakarta SOAP with Attachments and Jakarta Web Services Metadata.
 
-The release contains following changes:
-
+### New features, enhancements or additions
+<!-- List here -->
 * annotates jakarta.xml.ws.AsyncHandler with @FunctionalInterface
 * extends jakarta.xml.ws.wsaddressing.W3CEndpointReference API with getters
-* drops implementation lookup through the "jaxws.properties" configuration file
 * makes implementation lookup through the system property as the first step
-* removes required fallback to some default implementation from the implementation lookup
 * folds Jakarta Web Services Metadata Specification into this/Jakarta Web Services Specification (Jakarta Web Services Metadata Specification is no longer available as a standalone API/project/jar)
 
-Requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* drops implementation lookup through the "jaxws.properties" configuration file
+* removes required fallback to some default implementation from the implementation lookup
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta XML Web Services 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/4.0-jakarta-xml-web-services)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
