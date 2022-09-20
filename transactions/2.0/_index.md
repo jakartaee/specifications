@@ -5,6 +5,20 @@ summary: "Release for Jakarta EE 9"
 ---
 Jakarta Transactions - Need scope statement
 
+### New features, enhancements or additions
+<!-- List here -->
+* Moved to the `jakarta.*` namespace
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 8 or higher**
+
+# Details
+
 * [Jakarta Transactions 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jta/releases/2.0.0)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Transactions 2.0 Specification Document](./jakarta-transactions-spec-2.0.pdf) (PDF)
