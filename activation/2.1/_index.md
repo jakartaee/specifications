@@ -9,10 +9,19 @@ MIME type of an arbitrary piece of data; encapsulate access to it;
 discover the operations available on it; and instantiate the
 appropriate bean to perform the operation(s).
 
-The goal of this release is to provide standalone API jar fully independent
-on the particular implementation.
+### New features, enhancements or additions
+<!-- List here -->
+* Provided standalone API jar fully independent on the particular implementation
 
-The JDK version required will be aligned with Jakarta EE 10.
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta Activation 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jaf/releases/2.1)
 * [Jakarta Activation 2.1 Specification Document](./jakarta-activation-spec-2.1.pdf) (PDF)
