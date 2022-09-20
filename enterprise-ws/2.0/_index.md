@@ -6,6 +6,20 @@ summary: "Release for Jakarta EE 9"
 
 This specification defines the Web Services for Jakarta EE architecture.
 
+### New features, enhancements or additions
+<!-- List here -->
+* Moved to the `jakarta.*` namespace
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 8 or higher**
+
+# Details
+
 * [Jakarta Enterprise Web Services 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/2.0-enterprise-web-services)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Enterprise Web Services 2.0 Specification Document](./enterprise-ws-spec-2.0.pdf) (PDF)
@@ -14,7 +28,6 @@ This specification defines the Web Services for Jakarta EE architecture.
   * [Web Services deployment descriptor](https://jakarta.ee/xml/ns/jakartaee/jakartaee_web_services_2_0.xsd)
   * [Web Services Client deployment descriptor](https://jakarta.ee/xml/ns/jakartaee/jakartaee_web_services_client_2_0.xsd)
 * [Jakarta Platform 9.0 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-
 
 # Compatible Implementations
 
