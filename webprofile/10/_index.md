@@ -5,7 +5,20 @@ summary: "Release of the Jakarta EE 10 Web Profile"
 ---
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
 
-# Artifacts
+### New features, enhancements or additions
+<!-- List here -->
+* Major and minor updates to most specifications
+* Addition of Jakarta Concurrency to Web Profile
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta Web Profile 10 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/web-profile-10)
   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
