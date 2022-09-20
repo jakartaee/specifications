@@ -5,18 +5,22 @@ summary: "Release for Jakarta EE 10"
 ---
 Jakarta JSON Binding defines a binding framework for converting Java(R) objects to and from JSON documents.
 
-This release contains following changes:
-
+### New features, enhancements or additions
+<!-- List here -->
 * Deserialization of the null to the JsonValue.NULL_VALUE
 * @JsonbTypeDeserializer and @JsonbTypeAdapter supported as a parameter/type annotation
 * Support for handling polymorphic types
 * Deprecate @JsonbProperty.nillable()
 
-Including the following backwards incompatible changes:
-
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
 * Optional @JsonbCreator parameters
 
-This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta JSON Binding 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonb/releases/3.0.0)
   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
