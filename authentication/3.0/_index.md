@@ -10,8 +10,8 @@ and pass an authenticated identity (such as name and groups) to the container.
 Jakarta Authentication consists of several profiles, with each profile telling how a specific container
 (such as Jakarta Servlet) can integrate with- and adapt to this SPI.
 
-This release contains the following changes:
-
+### New features, enhancements or additions
+<!-- List here -->
 * [Issue #87](https://github.com/jakartaee/authentication/issues/87): Add generics to the API
 * [Issue #128](https://github.com/jakartaee/authentication/issues/128): Add methods for adding and removing a single server auth module
 * [Issue #5](https://github.com/jakartaee/authentication/issues/5): Add key for isAuthenticationRequest to server container profile.
@@ -20,9 +20,16 @@ This release contains the following changes:
 * [Issue #134](https://github.com/jakartaee/authentication/issues/134): Clarify interaction of Servlet profile with some other specs
 * [Issue #136](https://github.com/jakartaee/authentication/issues/136): Clarify PasswordValidationCallback
 * [Issue #119](https://github.com/jakartaee/authentication/issues/119): Clarified state expectations of callbackhander for per-request state
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
 * [Issue #138](https://github.com/jakartaee/authentication/issues/138): Deprecate SecurityManager usage in light of JDK 17/JEP 411
 
-This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta Authentication 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.authentication/releases/3.0)
   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
