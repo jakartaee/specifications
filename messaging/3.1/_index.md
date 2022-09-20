@@ -6,7 +6,23 @@ summary: "Jakarta EE 10 Release"
 
 Jakarta Messaging describes a means for Java applications to create, send, and receive messages via loosely coupled, reliable asynchronous communication services.
 
-(Draft:  these are not live links)
+### New features, enhancements or additions
+<!-- List here -->
+* Bump maven-bundle-plugin version from 4.2.1 to 5.1.4
+* Remove useless parentheses
+* Repeatable annotation for the connection factory
+* Repeatable annotation for the destination definition
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
+
 * [Jakarta Messaging 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.messaging/releases/3.1.0)
 * [Jakarta Messaging 3.1 Specification Document](./jakarta-messaging-spec-3.1.pdf) (PDF)
 * [Jakarta Messaging 3.1 Specification Document](./jakarta-messaging-spec-3.1.html) (HTML)
