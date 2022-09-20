@@ -5,7 +5,26 @@ summary: "Release of the Jakarta EE 10 Platform"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
 
-# Artifacts
+### New features, enhancements or additions
+<!-- List here -->
+* Added basic module-info.class requirements to API artifacts
+* Added restrictions concerning where jakarta package name usage is appropriate
+* Added SecurityManager deprecation
+* Refactored profile requirements to reduce base requirements in Core Profile
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* Removed applet requirements
+* Removed requirement for Entity Beans, both Container and Bean Managed Persistence (Jakarta
+Enterprise Beans 4.0, Optional Features, Chapters 3 - 7)
+* Removed requirement for embeddable EJB Container (Jakarta Enterprise Beans, Core Features 4.0,
+Chapter 17)
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta EE Platform 10 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/10)
   * [Staged Jakarta EE 10 Release Plan](https://docs.google.com/document/d/1U24VmTzAfXcn3WBnVcolb8vhZO-Pnk_bit0CKh_d2jM/edit#)
