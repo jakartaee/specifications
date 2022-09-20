@@ -8,6 +8,20 @@ use of metadata, a non-normative processing model for metadata annotated web ser
 source files, runtime requirements for a container, and annotations used for WSDL,
 binding, and configuration.
 
+### New features, enhancements or additions
+<!-- List here -->
+* Moved to the `jakarta.*` namespace
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 8 or higher**
+
+# Details
+
 * [Jakarta Web Services Metadata 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/3.0-jakarta-web-services-metadata)
   * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Web Services Metadata 3.0 Specification Document](./ws-metadata-spec-3.0.pdf) (PDF)
