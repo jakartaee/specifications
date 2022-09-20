@@ -7,7 +7,20 @@ Jakarta Interceptors defines a means of interposing on business method invocatio
 events—such as lifecycle events and timeout events—that occur on instances of Jakarta EE components
 and other managed classes.
 
-The 2.1 release updates dependencies for EE 10 and adds a JPMS module-info descriptor.
+### New features, enhancements or additions
+<!-- List here -->
+* Updated dependencies for Jakarta EE 10
+* Added module-info descriptor
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* None
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta Interceptors 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.interceptors/releases/2.1)
 * [Jakarta Interceptors 2.1 Specification Document](./jakarta-interceptors-spec-2.1.pdf) (PDF)
