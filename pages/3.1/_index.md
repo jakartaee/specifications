@@ -7,6 +7,32 @@ Jakarta Server Pages defines a template engine for web applications that support
 (including HTML and XML) with custom tags, expression language, and embedded Java code, that gets compiled
 into a Jakarta Servlet.
 
+### New features, enhancements or additions
+<!-- List here -->
+* [40](https://github.com/eclipse-ee4j/jsp-api/issues/40) Add an option to raise a PropertyNotFoundException
+when an EL expression contains an unknown identifier
+* [42](https://github.com/eclipse-ee4j/jsp-api/issues/42) Clarify the meaning of 'scope' in the context of
+scripting variables associated with custom actions
+* [44](https://github.com/eclipse-ee4j/jsp-api/issues/44) Clarify that the EL environment within a JSP has a
+set of default imports consistent with the default imports for the scripting environment. Refactor
+the ScopedAttributeELResolver to remove the special handling for imports and unresolved
+variables
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* Deprecate methods that override ELResolver.getFeatureDescriptors() as that method has been
+deprecated as of EL 5.0
+* Deprecate the isThreadSafe page directive attribute as the related Servlet API interface
+SingleThreadModel has been removed as of the Servlet 6.0 specification
+* [226](https://github.com/eclipse-ee4j/jsp-api/issues/226) Deprecate the jsp:plugin action and related
+actions as the associated HTML elements are no longer supported by any major borowser
+ 
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
+
 * [Jakarta Server Pages 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/3.1.0)
   * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Server Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.pdf) (PDF)
