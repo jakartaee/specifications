@@ -7,8 +7,8 @@ Jakarta Faces defines an MVC framework for building user interfaces for web appl
 including UI components, state management, event handing, input validation, page navigation, and
 support for internationalization and accessibility.
 
-This release contains the following changes:
-
+### New features, enhancements or additions
+<!-- List here -->
 * [Issue #1581](https://github.com/eclipse-ee4j/faces-api/issues/1581): New API to programmatically create Facelets
 * [Issue #1508](https://github.com/eclipse-ee4j/faces-api/issues/1508): New automatic extensionless mapping
 * [Issue #1509](https://github.com/eclipse-ee4j/faces-api/issues/1509): New annotation @ClientWindowScoped
@@ -27,8 +27,8 @@ This release contains the following changes:
 * [Issue #1565](https://github.com/eclipse-ee4j/faces-api/issues/1565): Skip type attribute from &lt;link> and &lt;script> when doctype is HTML5
 * [Issue #1567](https://github.com/eclipse-ee4j/faces-api/issues/1567): Improve &lt;f:ajax> behavior in composite components
 
-Including the following backwards incompatible changes:
-
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
 * [Issue #1552](https://github.com/eclipse-ee4j/faces-api/issues/1552): Rename "JSF" to "Faces" over all place
 * [Issue #1553](https://github.com/eclipse-ee4j/faces-api/issues/1553): Rename "http://xmlns.jcp.org/jsf/*" URL to "jakarta.faces.*" URN
 * [Issue #1546](https://github.com/eclipse-ee4j/faces-api/issues/1546): Remove all JSP support
@@ -38,7 +38,11 @@ Including the following backwards incompatible changes:
 * [Issue #1578](https://github.com/eclipse-ee4j/faces-api/issues/1578): Remove deprecated methods of StateManager class
 * [Issue #1583](https://github.com/eclipse-ee4j/faces-api/issues/1583): Remove entire ResourceResolver class
 
-This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
+
+# Details
 
 * [Jakarta Faces 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/4.0)
     * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
@@ -52,7 +56,6 @@ This release requires Java SE 11 or newer (aligned with Jakarta EE 10).
    * First service release [Jakarta Faces 4.0 TCK](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip)([sig](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:4.0.1](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/4.0.1/jar)
-
 
 # Compatible Implementations
 
