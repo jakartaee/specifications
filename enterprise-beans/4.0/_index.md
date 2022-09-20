@@ -6,6 +6,24 @@ summary: "Release for Jakarta EE 9"
 
 Jakarta Enterprise Beans defines an architecture for the development and deployment of component-based business applications.
 
+### New features, enhancements or additions
+<!-- List here -->
+* Moved to the `jakarta.*` namespace
+
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* Removal of methods relying on `java.security.Identity`
+* Removal of methods relying on JAX-RPC
+* Removal of deprecated `EJBContext.getEnvironment()` method
+* Removal of Support for Distributed Interoperability
+* Mark optional EJB 2.x API Group
+
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 8 or higher**
+
+# Details
+
 * [Jakarta Enterprise Beans 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.ejb/releases/4.0/plan)
   * [Jakarta Enterprise Beans 4.0 Release Plan](https://github.com/eclipse-ee4j/ejb-api/blob/master/4.0-PLAN.adoc)
 * [Jakarta Enterprise Beans, Core Features 4.0 Specification Document](./jakarta-enterprise-beans-spec-core-4.0.pdf) (PDF)
@@ -19,18 +37,6 @@ Jakarta Enterprise Beans defines an architecture for the development and deploym
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.ejb:jakarta.ejb-api:jar:4.0.0](https://repo.maven.apache.org/maven2/jakarta/ejb/jakarta.ejb-api/4.0.0/)
-
-The Jakarta Enterprise Beans 4.0 intended scope includes all plans detailed in the [Jakarta EE 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan), 
-which in essence involves a backwards incompatible namespace change from `javax.ejb` to `jakarta.ejb`.  
-In addition the Jakarta Enterprise Beans 4.0 Release Plan will involve:
-
- - Removal of methods relying on `java.security.Identity`
- - Removal of methods relying on JAX-RPC
- - Removal of deprecated `EJBContext.getEnvironment()` method
- - Removal of Support for Distributed Interoperability
- - Mark optional EJB 2.x API Group
-
-See the [Jakarta Enterprise Beans 4.0 Release Plan](https://github.com/eclipse-ee4j/ejb-api/blob/master/4.0-PLAN.adoc) for full details.
 
 # Compatible Implementations
 
