@@ -14,7 +14,7 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 none
 
 ### Minimum Java SE Version
-**11**
+**Java SE 11 or higher**
 
 # Details
 
