@@ -19,7 +19,7 @@ This release ensures alignment with Jakarta RESTful Web Services 3.1 as well as 
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**11**
+**Java SE 11 or higher**
 
 # Details
 
