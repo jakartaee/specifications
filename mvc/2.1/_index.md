@@ -31,7 +31,12 @@ This release ensures alignment with Jakarta RESTful Web Services 3.1 as well as 
 * Maven coordinates
   * [jakarta.mvc:jakarta.mvc-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.mvc/jakarta.mvc-api/2.1.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-  * [Eclipse Krazo 3.0.0](https://eclipse-ee4j.github.io/krazo/downloads/3.0.0.html)
+  * [Eclipse Krazo for Jersey 3.0.0](https://eclipse-ee4j.github.io/krazo/downloads/3.0.0.html)
+
+# Compatible Implementations
+* [Eclipse Krazo for Jersey 3.0.0](https://eclipse-ee4j.github.io/krazo/downloads/3.0.0.html)
+* [Eclipse Krazo for RESTEasy 3.0.1](https://eclipse-ee4j.github.io/krazo/downloads/3.0.1.html)
+* [Eclipse GlassFish 7.0.0-M9](https://download.eclipse.org/ee4j/glassfish/glassfish-7.0.0-M9.zip)
 
 # Ballots
 
