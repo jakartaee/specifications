@@ -34,26 +34,25 @@ This release ensures alignment with Jakarta RESTful Web Services 3.1 as well as 
   * [Eclipse Krazo 3.0.0](https://eclipse-ee4j.github.io/krazo/downloads/3.0.0.html)
 
 # Ballots
-<!--
+
 ## Release Review
-The Specification Committee Ballot concluded successfully on 2022-xx-xx with the following results.
+The Specification Committee Ballot concluded successfully on 2022-09-30 with the following results.
 
 | Representative                     | Representative for: | Vote   |
 |------------------------------------|---------------------|--------|
-| Kenji Kazumura                     | Fujitsu             |        |
-| Tom Watson, Emily Jiang            | IBM                 |        |
-| Ed Bratt, Dmitry Kornilov          | Oracle              |        |
-| Andrew Pielage                     | Payara              |        |
-| David Blevins, Jean-Louis Monteiro | Tomitribe           |        |
-| Ivar Grimstad                      | EE4J PMC            |        |
-| Marcelo Ancelmo, Martijn Verburg   | Participant Members |        |
-| Werner Keil                        | Committer Members   |        |
-| Jun Qian                           | Enterprise Members  |        |
-| Zhai Luchao                        | Enterprise Members  |        |  
-|                                    | **Total**           | **** |
+| Kenji Kazumura                     | Fujitsu             |   +1   |
+| Tom Watson, Emily Jiang            | IBM                 |   +1   |
+| Ed Bratt, Dmitry Kornilov          | Oracle              |   +1   |
+| Andrew Pielage                     | Payara              | no vote|
+| David Blevins, Jean-Louis Monteiro | Tomitribe           | no vote|
+| Ivar Grimstad                      | EE4J PMC            |   +1   |
+| Marcelo Ancelmo, Martijn Verburg   | Participant Members |   +1   |
+| Werner Keil                        | Committer Members   |   +1   |
+| Jun Qian                           | Enterprise Members  |   +1   |
+| Zhai Luchao                        | Enterprise Members  |   +1   |  
+|                                    | **Total**           | **8** |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
--->
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02763.html)
 
 ## Plan Review
 
