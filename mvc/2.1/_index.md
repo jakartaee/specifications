@@ -1,7 +1,7 @@
 ---
 title: "Jakarta MVC 2.1"
 date: 2021-04-15
-summary: "Release for Jakarta EE 10"
+summary: "Release supporing Jakarta EE 10"
 ---
 
 Jakarta MVC defines a standard for creating web applications following the action-based model-view-controller pattern.
