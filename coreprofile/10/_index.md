@@ -28,9 +28,9 @@ The goals for this release were:
 * [Jakarta Core Profile 10.0 Specification Document](jakarta-coreprofile-spec-10.0.pdf) (PDF)
 * [Jakarta Core Profile 10.0 Specification Document](jakarta-coreprofile-spec-10.0.html) (HTML)
 * [Jakarta Core Profile 10.0 Javadoc](./apidocs)
-* [Jakarta Core Profile 10.0 TCK](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.0.zip)
-  ([sig](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.0.zip.sig),
-  [sha](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.0.zip.sha256),
+* [Jakarta Core Profile 10.0 TCK](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.1.zip)
+  ([sig](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.1.zip.sig),
+  [sha](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.1.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.platform:jakarta.jakartaee-core-api:jar:10.0.0](https://search.maven.org/artifact/jakarta.platform/jakartaee-core-api/10.0.0/jar)
