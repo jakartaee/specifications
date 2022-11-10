@@ -1,6 +1,6 @@
 ---
 title: "Jakarta NoSQL 1.0 (under development)"
-date: 2021-03-01
+date: 2021-06-04
 summary: "Under Development"
 ---
 
@@ -19,24 +19,32 @@ A point that we are also studying is the [Quarkus](https://quarkus.io/) and [Mic
 We've removed the Duke references in the spec docs and also in all GitHub repositories.
 We replaced the "artemis" and "diana" package names and put "mapping" and communication respectively instead.
 
-We are still waiting to discuss the integration between Eclipse MicroProfile and Jakarta EE to check how the MicroProfile dependency will work.
+
+
+We could keep the compatibility in all changes in the last three months, which is very good. We are still waiting for the Jakarta Configuration Specification to use instead of Eclipse MicroProfile Configuration.
+
+The JPA e-mail list appears the prospects to create a specification to work with several patterns where the data is agnostic; therefore, this specification will work with NoSQL, Relational, or even Rest Applications.
+
+Next quarter, we'll work on JPA and NoSQL integration and move the API forward to use Java 11 as a minimum requirement, and upgrade the API to the Jakarta EE 10 as soon it gets a release.
+
+
 
 
 * [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b3.pdf) (PDF)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b3.html) (HTML)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b4.pdf) (PDF)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b4.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
-* [Jakarta NoSQL 1.0 Specification Document TCK](https://github.com/eclipse/jnosql/archive/1.0.0-b3.zip)([sig](),[sha](),[pub]())
+* [Jakarta NoSQL 1.0 Specification Document TCK](https://github.com/eclipse/jnosql/archive/1.0.0-b4.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.nosql.communication:communication-core:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-core/1.0.0-b3/)
-  * [jakarta.nosql.communication:communication-column:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-column/1.0.0-b3/)
-  * [jakarta.nosql.communication:communication-document:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-document/1.0.0-b3/)
-  * [jakarta.nosql.communication:communication-key-value:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-key-value/1.0.0-b3/)
-  * [jakarta.nosql.mapping:mapping-core:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-core/1.0.0-b3/)
-  * [jakarta.nosql.mapping:mapping-key-value:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-key-value/1.0.0-b3/)
-  * [jakarta.nosql.mapping:mapping-column:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-column/1.0.0-b3/)
-  * [jakarta.nosql.mapping:mapping-document:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-document/1.0.0-b3/)
-  * [jakarta.nosql.mapping:mapping-api:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-api/1.0.0-b3/)
+  * [jakarta.nosql.communication:communication-core:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-core/1.0.0-b4/)
+  * [jakarta.nosql.communication:communication-column:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-column/1.0.0-b4/)
+  * [jakarta.nosql.communication:communication-document:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-document/1.0.0-b4/)
+  * [jakarta.nosql.communication:communication-key-value:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-key-value/1.0.0-b4/)
+  * [jakarta.nosql.mapping:mapping-core:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-core/1.0.0-b4/)
+  * [jakarta.nosql.mapping:mapping-key-value:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-key-value/1.0.0-b4/)
+  * [jakarta.nosql.mapping:mapping-column:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-column/1.0.0-b4/)
+  * [jakarta.nosql.mapping:mapping-document:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-document/1.0.0-b4/)
+  * [jakarta.nosql.mapping:mapping-api:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-api/1.0.0-b4/)
 
 # Compatible Implementations
 
