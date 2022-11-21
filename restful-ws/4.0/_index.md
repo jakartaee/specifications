@@ -23,7 +23,7 @@ Jakarta REST.
 * Review integration with legacy Jakarta EE specifications (e.g., EJB) - [Issue #954](https://github.com/eclipse-ee4j/jaxrs-api/issues/954)
 
 ### Minimum Java SE Version
-* Aligned with Jakarta EE 11 (likely 17+)
+* Likely Java 17+
 
 # Details
 The latest details and progress for this work
