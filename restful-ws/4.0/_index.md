@@ -36,7 +36,7 @@ may be found on the [Project Site](https://projects.eclipse.org/projects/ee4j.ja
 
 # Ballots
 
-## Release Review
+## Plan Review
 
 The Specification Committee Ballot concluded successfully on 2021-06-01 with the following results.
 
