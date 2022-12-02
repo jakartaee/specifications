@@ -20,7 +20,7 @@ Jakarta REST.
 
 ### Removals, deprecations or backwards incompatible changes
 * Drop support for @Context injection and related artifacts - [Issue #951](https://github.com/eclipse-ee4j/jaxrs-api/issues/951)
-* Review integration with legacy Jakarta EE specifications (e.g., EJB) - [Issue #954](https://github.com/eclipse-ee4j/jaxrs-api/issues/954)
+* Review integration with legacy Jakarta EE specifications (e.g. EJB) - [Issue #954](https://github.com/eclipse-ee4j/jaxrs-api/issues/954)
 
 ### Minimum Java SE Version
 * Likely Java 17+
