@@ -23,7 +23,7 @@ Jakarta REST.
 * Review integration with legacy Jakarta EE specifications (e.g. EJB) - [Issue #954](https://github.com/jakartaee/rest/issues/954)
 
 ### Minimum Java SE Version
-* Likely Java 17+
+* **Likely Java SE 17 or higher**
 
 # Details
 The latest details and progress for this work
@@ -35,6 +35,35 @@ may be found on the [Project Site](https://projects.eclipse.org/projects/ee4j.re
 * [Eclipse Jersey 4.0](https://projects.eclipse.org/projects/ee4j.jersey)
 
 # Ballots
+
+## Plan Review
+
+The Specification Committee Ballot concluded successfully on 2022-12-08 with the following results.
+Note that this is a revised plan from the approved plan review of June 2021.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Tom Watson, Emily Jiang                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Scott Stark, Scott Marlo0w                     | Enterprise Members  |   +1    |
+|                                                | **Total**           | **10**  |
+
+Non-binding votes
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Arjan Tijms                                    | Omnifish            |   +1    |
+| Dr. Jun Qian                                   | Primeton            |   +1    |
+|                                                | **Total**           |  **2**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02802.html)
 
 ## Plan Review
 
