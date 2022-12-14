@@ -8,7 +8,7 @@ Jakarta Config defines a core framework for the Jakarta EE platform allowing app
 
 Jakarta Config is planning to release the first MVP (Minimum Viable Product) version. The main goal is to demonstrate progress and collect feedback from the community.
 
-# MVP Scope
+## MVP Scope
 
 1. Configuration is provided by configuration objects only
 
@@ -37,4 +37,12 @@ MyConfig myConfig;
 
 Samples don't represent the real APIs to create and provided only for idea demonstration.
 
-Minimum Java SE version is 17.
+## Additional Information
+
+- Minimum Java SE version is 17.
+- [Jakarta Config 0.1 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaconfig/releases/0.1)
+
+## How to communicate with the team
+
+- [config-dev mailing list](https://accounts.eclipse.org/mailing-list/config-dev)
+- [Issues Tracker](https://github.com/eclipse-ee4j/config/issues)
