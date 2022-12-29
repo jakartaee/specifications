@@ -17,12 +17,11 @@ A repository abstraction aims to significantly reduce the boilerplate code requi
 
 
 
-* [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
+* [Jakarta Data Release Plan](https://projects.eclipse.org/projects/ee4j.data/governance)
 * [Jakarta Data 1.0 Specification Document](./data-1.0.0-b1.pdf) (PDF)
 * [Jakarta Data 1.0 Specification Document](./data-1.0.0-b1.html) (HTML)
 * [Jakarta Data 1.0 Specification Javadoc](./apidocs)
-* [Jakarta Data 1.0 Specification Document TCK](https://github.com/eclipse/jnosql/archive/1.0.0-b4.zip)([sig](),[sha](),[pub]())
+* [Jakarta Data 1.0 Specification Document TCK](https://github.com/jakartaee/data/archive/1.0.0-b1.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.nosql.communication:communication-core:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-core/1.0.0-b4/)
-  * 
+  * [jakarta.data:jakarta-data-api:1.0.0-b1](https://repo1.maven.org/maven2/jakarta/data/jakarta-data-api/)
 
