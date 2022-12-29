@@ -6,6 +6,6 @@ summary_sixty_char: "Standardized Data Access with the Repository pattern."
 project_id: "ee4j.data"
 ---
 
-Jakarta Data provides an API to allow easy data access technologies. 
-Thus, a Java developer can split the persistence and the model with several features such as a Repository interface with the method by query, 
-where the framework will implement it.
+The Jakarta Data specification provides an API for easier data access. A Java developer can split the persistence from the model with several features, such as the ability to compose custom query methods on a Repository interface.
+
+Jakarta Data’s goal is to provide a familiar and consistent, Jakarta-based programming model for data access while still retaining the particular traits of the underlying data store.
