@@ -1,0 +1,26 @@
+--patch-module
+jakarta.data.api='/home/otaviojava/Environment/code/workspace-jakarta/data/api/src/main/java'
+-encoding
+'UTF-8'
+-protected
+--release
+11
+--module-source-path
+'/home/otaviojava/Environment/code/workspace-jakarta/data/api/target/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2017&#x2013;2022 <a href="https://www.eclipse.org">Eclipse Foundation</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/otaviojava/Environment/code/workspace-jakarta/data/api/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Jakarta Data API 1.0.0-b1 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/otaviojava/Environment/code/workspace-jakarta/data/api/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Jakarta Data API 1.0.0-b1 API'

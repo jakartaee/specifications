@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"jakarta.data.api"}]
