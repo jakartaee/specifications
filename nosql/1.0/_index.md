@@ -4,47 +4,57 @@ date: 2021-06-04
 summary: "Under Development"
 ---
 
-Jakarta NoSQL is a Java API standard that streamlines the integration of Java applications with NoSQL databases. It defines a set of APIs and provides a standard implementation for most NoSQL databases. 
-The goal is to create the specification in Jakarta EE to help Jakarta EE developers create enterprise-grade applications using Java® and NoSQL technologies. It helps them create scalable applications while maintaining low coupling with the underlying NoSQL technology.
-
-In general, we made some progress, especially with the creation of TCKs:
-https://github.com/eclipse-ee4j/nosql/tree/master/tck
-All APIs proved to be quite stable, except for the Graph API, and that is why there is no API for graphs. We are waiting for the definition of a standard graphical communication API, either [Apache TinkerPop](http://tinkerpop.apache.org/) or [Open Cypher](https://www.opencypher.org/), led by [Neo4J](https://neo4j.com/). Therefore, we only have a Graph implementation side, but not in the API, at least for a while.
-Regarding the migration to Jakarta EE facilities, we already have a Draft PR ready as soon as the new version of Jakarta EE is released: 
-
-https://github.com/eclipse-ee4j/nosql/pull/55
-
-A point that we are also studying is the [Quarkus](https://quarkus.io/) and [Micronaut](https://micronaut.io/) effect that uses the Annotation Processor instead of reflection and seeing how to make an API that is possible in both directions.
-
-We've removed the Duke references in the spec docs and also in all GitHub repositories.
-We replaced the "artemis" and "diana" package names and put "mapping" and communication respectively instead.
+Jakarta NoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases.
 
 
+## Goals
 
-We could keep the compatibility in all changes in the last three months, which is very good. We are still waiting for the Jakarta Configuration Specification to use instead of Eclipse MicroProfile Configuration.
+* Increase productivity performing common NoSQL operations
+* Rich Object Mapping integrated
+* Java-based Query and Fluent-API
+* Specific template API to each NoSQL category (Key-value, Column and Document)
+* Annotation-oriented using JPA-like naming when it makes sense
 
-The JPA e-mail list appears the prospects to create a specification to work with several patterns where the data is agnostic; therefore, this specification will work with NoSQL, Relational, or even Rest Applications.
 
-Next quarter, we'll work on JPA and NoSQL integration and move the API forward to use Java 11 as a minimum requirement, and upgrade the API to the Jakarta EE 10 as soon it gets a release.
+### New features, enhancements or additions
+<!-- List here -->
+* The mapping annotations (Entity, Id and Column)
+* The Template that increase productivity on NoSQL operations.
+* Three Template specializations (DocumentTemplate, ColumnTemplate, KeyValueTemplate)
 
+### Removals, deprecations or backwards incompatible changes
+<!-- List here -->
+* N/A 
 
+### Minimum Java SE Version
+<!-- Specify the minimum required Java SE version for this specification -->
+**Java SE 11 or higher**
 
+```java
+@Inject
+Template template;
+...
+
+Car ferrari = Car.id(1L)
+        .name("Ferrari")
+        .type(CarType.SPORT);
+
+template.insert(ferrari);
+Optional<Car> car = template.find(Car.class, 1L);
+template.delete(Car.class, 1L);
+```
 
 * [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b4.pdf) (PDF)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b4.html) (HTML)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b6.pdf) (PDF)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b6.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
-* [Jakarta NoSQL 1.0 Specification Document TCK](https://github.com/eclipse/jnosql/archive/1.0.0-b4.zip)([sig](),[sha](),[pub]())
+* [Jakarta NoSQL 1.0 Specification Document TCK](https://github.com/eclipse/jnosql/archive/1.0.0-b6.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
-  * [jakarta.nosql.communication:communication-core:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-core/1.0.0-b4/)
-  * [jakarta.nosql.communication:communication-column:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-column/1.0.0-b4/)
-  * [jakarta.nosql.communication:communication-document:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-document/1.0.0-b4/)
-  * [jakarta.nosql.communication:communication-key-value:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/communication/communication-key-value/1.0.0-b4/)
-  * [jakarta.nosql.mapping:mapping-core:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-core/1.0.0-b4/)
-  * [jakarta.nosql.mapping:mapping-key-value:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-key-value/1.0.0-b4/)
-  * [jakarta.nosql.mapping:mapping-column:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-column/1.0.0-b4/)
-  * [jakarta.nosql.mapping:mapping-document:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-document/1.0.0-b4/)
-  * [jakarta.nosql.mapping:mapping-api:jar:1.0.0-b4](https://repo1.maven.org/maven2/jakarta/nosql/mapping/mapping-api/1.0.0-b4/)
+  * [jakarta.nosql:nosql-core:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-core/1.0.0-b6/)
+  * [jakarta.nosql:nosql-key-value:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-key-value/1.0.0-b6/)
+  * [jakarta.nosql:mapping-column:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-column/1.0.0-b6/)
+  * [jakarta.nosql:mapping-document:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-document/1.0.0-b6/)
+
 
 # Compatible Implementations
 
