@@ -15,6 +15,19 @@ Jakarta NoSQL is a Java framework that streamlines the integration of Java appli
 * Specific template API to each NoSQL category (Key-value, Column and Document)
 * Annotation-oriented using JPA-like naming when it makes sense
 
+```java
+@Inject
+Template template;
+...
+
+Car ferrari = Car.id(1L)
+        .name("Ferrari")
+        .type(CarType.SPORT);
+
+template.insert(ferrari);
+Optional<Car> car = template.find(Car.class, 1L);
+template.delete(Car.class, 1L);
+```
 
 ### New features, enhancements or additions
 <!-- List here -->
@@ -30,19 +43,6 @@ Jakarta NoSQL is a Java framework that streamlines the integration of Java appli
 <!-- Specify the minimum required Java SE version for this specification -->
 **Java SE 11 or higher**
 
-```java
-@Inject
-Template template;
-...
-
-Car ferrari = Car.id(1L)
-        .name("Ferrari")
-        .type(CarType.SPORT);
-
-template.insert(ferrari);
-Optional<Car> car = template.find(Car.class, 1L);
-template.delete(Car.class, 1L);
-```
 
 * [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
 * [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b6.pdf) (PDF)
