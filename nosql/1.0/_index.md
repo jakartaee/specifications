@@ -48,7 +48,6 @@ template.delete(Car.class, 1L);
 * [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b6.pdf) (PDF)
 * [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b6.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
-* [Jakarta NoSQL 1.0 Specification Document TCK](https://github.com/eclipse/jnosql/archive/1.0.0-b6.zip)([sig](),[sha](),[pub]())
 * Maven coordinates
   * [jakarta.nosql:nosql-core:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-core/1.0.0-b6/)
   * [jakarta.nosql:nosql-key-value:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-key-value/1.0.0-b6/)
