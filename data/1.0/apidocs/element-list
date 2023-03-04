@@ -1,0 +1,3 @@
+module:jakarta.data.api
+jakarta.data.exceptions
+jakarta.data.repository
