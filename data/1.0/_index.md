@@ -15,17 +15,21 @@ Jakarta Data’s goal is to provide a familiar and consistent, Jakarta-based pro
 * Define Reposities
 
 ```java
-@Inject
-Template template;
+@Repository
+public interface Garage extends CrudRepository<Car, Long> {
+
+  List<Car> findByType(CarType type);
+
+  Optional<Car> findByName(String name);
+
+}
 ...
 
-Car ferrari = Car.id(1L)
-        .name("Ferrari")
-        .type(CarType.SPORT);
-
-template.insert(ferrari);
-Optional<Car> car = template.find(Car.class, 1L);
-template.delete(Car.class, 1L);
+@Inject
+Garage garage;
+...
+Car ferrari = Car.id(10L).name("Ferrari").type(CarType.SPORT);
+garage.save(ferrari);
 ```
 
 ### New features, enhancements or additions
