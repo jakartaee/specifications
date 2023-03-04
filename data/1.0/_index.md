@@ -51,7 +51,7 @@ garage.save(ferrari);
 * [Jakarta NoSQL 1.0 Specification Document](./data-1.0.0-b2.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
 * Maven coordinates
-  * [jakarta.nosql:nosql-core:jar:1.0.0-b2](https://repo1.maven.org/maven2/jakarta/nosql/nosql-core/1.0.0-b6/)
+  * [jakarta-data-api:jakarta.data:jar:1.0.0-b2](https://repo1.maven.org/maven2/jakarta/data/jakarta-data-api/1.0.0-b2/)
 
 
 
