@@ -43,6 +43,13 @@ Chapter 17)
 * [Jakarta EE 10 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-schedule)
 
 # Compatible Implementations
+
+Compatible Implementations of the Jakarta EE Platform are eligible to use the _Jakarta EE Compatible_ logo.
+
+{{< figure src="/images/jakarta/jakarta-ee-compatible-logo-color.svg" alt="Jakarta EE Compatible logo" width="250" >}}
+
+For more information, see [Get Listed](/compatibility/get-listed/)
+
 * [Jakarta EE 10 Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
 
 # Ballots

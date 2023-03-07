@@ -39,6 +39,13 @@ The goals for this release were:
   * [WildFly Preview 27.0.0.Alpha1 (JDK 11)](https://github.com/wildfly/wildfly/releases/download/27.0.0.Alpha1/wildfly-preview-27.0.0.Alpha1.zip)
 
 # Compatible Implementations
+
+Compatible Implementations of the Jakarta EE Core Profile are eligible to use the _Jakarta EE Compatible_ logo.
+
+{{< figure src="/images/jakarta/jakarta-ee-compatible-logo-color.svg" alt="Jakarta EE Compatible logo" width="250" >}}
+
+For more information, see [Get Listed](/compatibility/get-listed/)
+
 * [Jakarta EE 10 Core Profile Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
 
 # Ballots
