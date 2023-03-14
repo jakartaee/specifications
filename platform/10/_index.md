@@ -44,11 +44,9 @@ Chapter 17)
 
 # Compatible Implementations
 
-Compatible Implementations of the Jakarta EE Platform are eligible to use the _Jakarta EE Compatible_ logo.
+Compatible Implementations of the Jakarta EE Platform specification are eligible to use the _Jakarta EE Compatible_ logo. For more information, see [Get Listed](/compatibility/get-listed/).
 
 {{< figure src="/images/jakarta/jakarta-ee-compatible-logo-color.svg" alt="Jakarta EE Compatible logo" width="250" >}}
-
-For more information, see [Get Listed](/compatibility/get-listed/)
 
 * [Jakarta EE 10 Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
 

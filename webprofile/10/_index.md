@@ -36,11 +36,9 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 
 # Compatible Implementations
 
-Compatible Implementations of the Jakarta EE Web Profile are eligible to use the _Jakarta EE Compatible_ logo.
+Compatible Implementations of the Jakarta EE Web Profile specification are eligible to use the _Jakarta EE Compatible_ logo. For more information, see [Get Listed](/compatibility/get-listed/).
 
 {{< figure src="/images/jakarta/jakarta-ee-compatible-logo-color.svg" alt="Jakarta EE Compatible logo" width="250" >}}
-
-For more information, see [Get Listed](/compatibility/get-listed/)
 
 * [Jakarta EE 10 Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
 

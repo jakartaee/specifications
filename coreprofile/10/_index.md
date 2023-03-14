@@ -40,11 +40,9 @@ The goals for this release were:
 
 # Compatible Implementations
 
-Compatible Implementations of the Jakarta EE Core Profile are eligible to use the _Jakarta EE Compatible_ logo.
+Compatible Implementations of the Jakarta EE Core Profile specification are eligible to use the _Jakarta EE Compatible_ logo. For more information, see [Get Listed](/compatibility/get-listed/).
 
 {{< figure src="/images/jakarta/jakarta-ee-compatible-logo-color.svg" alt="Jakarta EE Compatible logo" width="250" >}}
-
-For more information, see [Get Listed](/compatibility/get-listed/)
 
 * [Jakarta EE 10 Core Profile Compatible Implementations](https://jakarta.ee/compatibility/certification/10/)
 
