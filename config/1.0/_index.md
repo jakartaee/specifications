@@ -46,3 +46,33 @@ Samples don't represent the real APIs to create and provided only for idea demon
 
 - [config-dev mailing list](https://accounts.eclipse.org/mailing-list/config-dev)
 - [Issues Tracker](https://github.com/eclipse-ee4j/config/issues)
+
+# Ballots
+
+## Plan Review
+
+The Specification Committee Ballot concluded successfully on 2023/01/26 with the following results.
+
+| Representative                     | Representative for: |  Vote   |
+|------------------------------------|---------------------|---------|
+| Kenji Kazumura                     | Fujitsu             |   +1    |
+| Tom Watson, Emily Jiang            | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov          | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht      | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro | Tomitribe           |   +1    |
+| Ivar Grimstad                      | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Martijn Verburg   | Participant Members |   +1    |
+| Werner Keil                        | Committer Members   |   +1    |
+| Zhai Luchao                        | Enterprise Members  |   +1    |
+| Scott Stark                        | Enterprise Members  |   +1    |
+|                                    | **Total**           | **10**  |
+
+Non-binding votes
+
+| Representative | Representative for: |  Vote   |
+|----------------|---------------------|---------|
+| Reza Rahman    |                     |   +1    |
+| Jun Qian       | Primeton            |   +1    |
+|                | **Total**           |  **2**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02821.html)
