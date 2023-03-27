@@ -46,19 +46,13 @@ garage.save(ferrari);
 **Java SE 11 or higher**
 
 
-* [Jakarta Data Release Plan](https://projects.eclipse.org/projects/ee4j.data/governance)
+* [Jakarta Data Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.0)
 * [Jakarta NoSQL 1.0 Specification Document](./data-1.0.0-b2.pdf) (PDF)
 * [Jakarta NoSQL 1.0 Specification Document](./data-1.0.0-b2.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
 * Maven coordinates
   * [jakarta-data-api:jakarta.data:jar:1.0.0-b2](https://repo1.maven.org/maven2/jakarta/data/jakarta-data-api/1.0.0-b2/)
 
-
-
-# Compatible Implementations
-
-* [Eclipse JNoSQL](http://www.jnosql.org/)
-* [Open Liberty](https://openliberty.io/)
 
 # Ballots
 
