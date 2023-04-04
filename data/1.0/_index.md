@@ -71,7 +71,7 @@ The Specification Committee Ballot concluded successfully on 2023-04-03 with the
 | Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
 | Werner Keil                                    | Committer Members   |   +1    |
 | Zhai Luchao                                    | Enterprise Members  |   +1    |
-| Scott Stark, Scott Marlo0w                     | Enterprise Members  | no vote |
+| Scott Stark, Scott Marlow                     | Enterprise Members  | no vote |
 |                                                | **Total**           |  **8**  |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02857.html)
