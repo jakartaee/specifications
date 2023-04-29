@@ -6,7 +6,6 @@ summary: "Release for Jakarta EE 10"
 
 ### CHANGES IN THE 2.1.2 RELEASE
 
-* fixes a bug in integration with OSGi Mediator Specification
 * adds missing javadoc description
 * removes wrongly compiled package-info files
 
