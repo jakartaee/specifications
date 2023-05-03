@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -327,7 +327,7 @@ extends <a href="MailEvent.html" title="class in jakarta.mail.event">MailEvent</
 <td class="colFirst"><code><a href="../Address.html" title="class in jakarta.mail">Address</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getValidUnsentAddresses()">getValidUnsentAddresses</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Return the addresses that are valid but to which this message 
+<div class="block">Return the addresses that are valid but to which this message
  was not sent.</div>
 </td>
 </tr>
@@ -371,7 +371,7 @@ extends <a href="MailEvent.html" title="class in jakarta.mail.event">MailEvent</
 <pre>public static final&nbsp;int MESSAGE_DELIVERED</pre>
 <div class="block">Message has been        successfully delivered to all recipients by the
  transport firing this event. validSent[] contains all the addresses
- this transport sent to successfully. validUnsent[] and invalid[] 
+ this transport sent to successfully. validUnsent[] and invalid[]
  should be null,</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -386,7 +386,7 @@ extends <a href="MailEvent.html" title="class in jakarta.mail.event">MailEvent</
 <li class="blockList">
 <h4>MESSAGE_NOT_DELIVERED</h4>
 <pre>public static final&nbsp;int MESSAGE_NOT_DELIVERED</pre>
-<div class="block">Message was not sent for some reason. validSent[] should be null. 
+<div class="block">Message was not sent for some reason. validSent[] should be null.
  validUnsent[] may have addresses that are valid (but the message
  wasn't sent to them). invalid[] should likely contain invalid addresses.</div>
 <dl>
@@ -402,7 +402,7 @@ extends <a href="MailEvent.html" title="class in jakarta.mail.event">MailEvent</
 <li class="blockList">
 <h4>MESSAGE_PARTIALLY_DELIVERED</h4>
 <pre>public static final&nbsp;int MESSAGE_PARTIALLY_DELIVERED</pre>
-<div class="block">Message was successfully sent to some recipients but not to all. 
+<div class="block">Message was successfully sent to some recipients but not to all.
  validSent[] holds addresses of recipients to whom the message was sent.
  validUnsent[] holds valid addresses to which the message was not sent.
  invalid[] holds invalid addresses, if any.</div>
@@ -491,7 +491,7 @@ extends <a href="MailEvent.html" title="class in jakarta.mail.event">MailEvent</
 <dd><code>type</code> - the event type (MESSAGE_DELIVERED, etc.)</dd>
 <dd><code>validSent</code> - the valid addresses to which the message was sent</dd>
 <dd><code>validUnsent</code> - the valid addresses to which the message was
-                                not sent</dd>
+                    not sent</dd>
 <dd><code>invalid</code> - the invalid addresses</dd>
 <dd><code>msg</code> - the message being sent</dd>
 </dl>
@@ -542,12 +542,12 @@ extends <a href="MailEvent.html" title="class in jakarta.mail.event">MailEvent</
 <li class="blockList">
 <h4>getValidUnsentAddresses</h4>
 <pre class="methodSignature">public&nbsp;<a href="../Address.html" title="class in jakarta.mail">Address</a>[]&nbsp;getValidUnsentAddresses()</pre>
-<div class="block">Return the addresses that are valid but to which this message 
+<div class="block">Return the addresses that are valid but to which this message
  was not sent.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>Addresses that are valid but to which the message was 
-         not sent successfully or null</dd>
+<dd>Addresses that are valid but to which the message was
+ not sent successfully or null</dd>
 </dl>
 </li>
 </ul>
@@ -623,7 +623,7 @@ extends <a href="MailEvent.html" title="class in jakarta.mail.event">MailEvent</
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -664,7 +664,7 @@ extends <a href="MailEvent.html" title="class in jakarta.mail.event">MailEvent</
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2023 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

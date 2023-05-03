@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -138,19 +138,19 @@ extends java.lang.Object</pre>
 <div class="block">InternetHeaders is a utility class that manages RFC822 style
  headers. Given an RFC822 format message stream, it reads lines
  until the blank line that indicates end of header. The input stream
- is positioned at the start of the body. The lines are stored 
+ is positioned at the start of the body. The lines are stored
  within the object and can be extracted as either Strings or
  <a href="../Header.html" title="class in jakarta.mail"><code>Header</code></a> objects. <p>
 
  This class is mostly intended for service providers. MimeMessage
  and MimeBody use this class for holding their headers.
- 
+
  <hr> <strong>A note on RFC822 and MIME headers</strong><p>
 
- RFC822 and MIME header fields <strong>must</strong> contain only 
+ RFC822 and MIME header fields <strong>must</strong> contain only
  US-ASCII characters. If a header contains non US-ASCII characters,
  it must be encoded as per the rules in RFC 2047. The MimeUtility
- class provided in this package can be used to to achieve this. 
+ class provided in this package can be used to to achieve this.
  Callers of the <code>setHeader</code>, <code>addHeader</code>, and
  <code>addHeaderLine</code> methods are responsible for enforcing
  the MIME requirements for the specified headers.  In addition, these
@@ -247,7 +247,7 @@ extends java.lang.Object</pre>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.InputStream)">InternetHeaders</a></span>&#8203;(java.io.InputStream&nbsp;is)</code></th>
 <td class="colLast">
-<div class="block">Read and parse the given RFC822 message stream till the 
+<div class="block">Read and parse the given RFC822 message stream till the
  blank line separating the header from the body.</div>
 </td>
 </tr>
@@ -255,7 +255,7 @@ extends java.lang.Object</pre>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.InputStream,boolean)">InternetHeaders</a></span>&#8203;(java.io.InputStream&nbsp;is,
                boolean&nbsp;allowutf8)</code></th>
 <td class="colLast">
-<div class="block">Read and parse the given RFC822 message stream till the 
+<div class="block">Read and parse the given RFC822 message stream till the
  blank line separating the header from the body.</div>
 </td>
 </tr>
@@ -458,9 +458,9 @@ extends java.lang.Object</pre>
 <h4>InternetHeaders</h4>
 <pre>public&nbsp;InternetHeaders&#8203;(java.io.InputStream&nbsp;is)
                 throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Read and parse the given RFC822 message stream till the 
- blank line separating the header from the body. The input 
- stream is left positioned at the start of the body. The 
+<div class="block">Read and parse the given RFC822 message stream till the
+ blank line separating the header from the body. The input
+ stream is left positioned at the start of the body. The
  header lines are stored internally. <p>
 
  For efficiency, wrap a BufferedInputStream around the actual
@@ -485,9 +485,9 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;InternetHeaders&#8203;(java.io.InputStream&nbsp;is,
                        boolean&nbsp;allowutf8)
                 throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Read and parse the given RFC822 message stream till the 
- blank line separating the header from the body. The input 
- stream is left positioned at the start of the body. The 
+<div class="block">Read and parse the given RFC822 message stream till the
+ blank line separating the header from the body. The input
+ stream is left positioned at the start of the body. The
  header lines are stored internally. <p>
 
  For efficiency, wrap a BufferedInputStream around the actual
@@ -594,16 +594,16 @@ extends java.lang.Object</pre>
                                   java.lang.String&nbsp;delimiter)</pre>
 <div class="block">Get all the headers for this header name, returned as a single
  String, with headers separated by the delimiter. If the
- delimiter is <code>null</code>, only the first header is 
+ delimiter is <code>null</code>, only the first header is
  returned.  Returns <code>null</code>
  if no headers with the specified name exist.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - header name</dd>
 <dd><code>delimiter</code> - delimiter</dd>
+<dd><code>name</code> - header name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value fields for all headers with
-                                this name, or null if none</dd>
+ this name, or null if none</dd>
 </dl>
 </li>
 </ul>
@@ -806,7 +806,7 @@ extends java.lang.Object</pre>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -847,7 +847,7 @@ extends java.lang.Object</pre>
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2023 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

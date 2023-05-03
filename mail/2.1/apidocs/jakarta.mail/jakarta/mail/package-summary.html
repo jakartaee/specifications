@@ -53,7 +53,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -118,22 +118,22 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  The code to send a plain text message can be as simple as the following:
  </P>
  <PRE>
-     Properties props = new Properties();
-     props.put("mail.smtp.host", "my-mail-server");
-     Session session = Session.getInstance(props, null);
+ Properties props = new Properties();
+ props.put("mail.smtp.host", "my-mail-server");
+ Session session = Session.getInstance(props, null);
 
-     try {
-        MimeMessage msg = new MimeMessage(session);
-        msg.setFrom("me@example.com");
-        msg.setRecipients(Message.RecipientType.TO,
-                          "you@example.com");
-        msg.setSubject("Jakarta Mail hello world example");
-        msg.setSentDate(new Date());
-        msg.setText("Hello, world!\n");
-        Transport.send(msg, "me@example.com", "my-password");
-     } catch (MessagingException mex) {
-        System.out.println("send failed, exception: " + mex);
-     }
+ try {
+ MimeMessage msg = new MimeMessage(session);
+ msg.setFrom("me@example.com");
+ msg.setRecipients(Message.RecipientType.TO,
+ "you@example.com");
+ msg.setSubject("Jakarta Mail hello world example");
+ msg.setSentDate(new Date());
+ msg.setText("Hello, world!\n");
+ Transport.send(msg, "me@example.com", "my-password");
+ } catch (MessagingException mex) {
+ System.out.println("send failed, exception: " + mex);
+ }
  </PRE>
  <P>
  The Jakarta Mail download bundle contains many more complete examples
@@ -157,7 +157,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  how the string is interpreted.  For example, use
  </P>
  <PRE>
-        props.put("mail.debug", "true");
+ props.put("mail.debug", "true");
  </PRE>
  <P>
  to set the <code>mail.debug</code> property, which is of type boolean.
@@ -457,7 +457,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr class="rowColor">
 <th class="colFirst" scope="row"><a href="Part.html" title="interface in jakarta.mail">Part</a></th>
 <td class="colLast">
-<div class="block">The <code>Part</code> interface is the common base interface for 
+<div class="block">The <code>Part</code> interface is the common base interface for
  Messages and BodyParts.</div>
 </td>
 </tr>
@@ -470,8 +470,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr class="rowColor">
 <th class="colFirst" scope="row"><a href="UIDFolder.html" title="interface in jakarta.mail">UIDFolder</a></th>
 <td class="colLast">
-<div class="block">The <code>UIDFolder</code> interface is implemented by Folders 
- that can support the "disconnected" mode of operation, by providing 
+<div class="block">The <code>UIDFolder</code> interface is implemented by Folders
+ that can support the "disconnected" mode of operation, by providing
  unique-ids for messages in the folder.</div>
 </td>
 </tr>
@@ -508,7 +508,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr class="rowColor">
 <th class="colFirst" scope="row"><a href="FetchProfile.html" title="class in jakarta.mail">FetchProfile</a></th>
 <td class="colLast">
-<div class="block">Clients use a FetchProfile to list the Message attributes that 
+<div class="block">Clients use a FetchProfile to list the Message attributes that
  it wishes to prefetch from the server for a range of messages.</div>
 </td>
 </tr>
@@ -579,7 +579,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr class="altColor">
 <th class="colFirst" scope="row"><a href="Provider.html" title="class in jakarta.mail">Provider</a></th>
 <td class="colLast">
-<div class="block">The Provider is a class that describes a protocol 
+<div class="block">The Provider is a class that describes a protocol
  implementation.</div>
 </td>
 </tr>
@@ -695,14 +695,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr class="altColor">
 <th class="colFirst" scope="row"><a href="MethodNotSupportedException.html" title="class in jakarta.mail">MethodNotSupportedException</a></th>
 <td class="colLast">
-<div class="block">The exception thrown when a method is not supported by the 
+<div class="block">The exception thrown when a method is not supported by the
  implementation</div>
 </td>
 </tr>
 <tr class="rowColor">
 <th class="colFirst" scope="row"><a href="NoSuchProviderException.html" title="class in jakarta.mail">NoSuchProviderException</a></th>
 <td class="colLast">
-<div class="block">This exception is thrown when Session attempts to instantiate a  
+<div class="block">This exception is thrown when Session attempts to instantiate a
  Provider that doesn't exist.</div>
 </td>
 </tr>
@@ -775,7 +775,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -801,7 +801,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2023 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -140,21 +140,21 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
 
  MimePart extends the Part interface to add additional RFC822 and MIME
  specific semantics and attributes. It provides the base interface for
- the MimeMessage and  MimeBodyPart classes 
- 
+ the MimeMessage and  MimeBodyPart classes
+
  <hr> <strong>A note on RFC822 and MIME headers</strong><p>
 
- RFC822 and MIME header fields <strong>must</strong> contain only 
+ RFC822 and MIME header fields <strong>must</strong> contain only
  US-ASCII characters. If a header contains non US-ASCII characters,
  it must be encoded as per the rules in RFC 2047. The MimeUtility
- class provided in this package can be used to to achieve this. 
+ class provided in this package can be used to to achieve this.
  Callers of the <code>setHeader</code>, <code>addHeader</code>, and
  <code>addHeaderLine</code> methods are responsible for enforcing
  the MIME requirements for the specified headers.  In addition, these
  header fields must be folded (wrapped) before being sent if they
  exceed the line length limitation for the transport (1000 bytes for
  SMTP).  Received headers may have been folded.  The application is
- responsible for folding and unfolding headers as appropriate. <p></div>
+ responsible for folding and unfolding headers as appropriate.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>John Mani</dd>
@@ -248,7 +248,7 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
          java.lang.String&nbsp;delimiter)</code></th>
 <td class="colLast">
 <div class="block">Get the values of all header fields available for this header,
- returned as a single String, with the values separated by the 
+ returned as a single String, with the values separated by the
  delimiter.</div>
 </td>
 </tr>
@@ -343,16 +343,16 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
                            java.lang.String&nbsp;delimiter)
                     throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Get the values of all header fields available for this header,
- returned as a single String, with the values separated by the 
- delimiter. If the delimiter is <code>null</code>, only the 
+ returned as a single String, with the values separated by the
+ delimiter. If the delimiter is <code>null</code>, only the
  first value is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the name of this header</dd>
 <dd><code>delimiter</code> - delimiter between fields in returned string</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the value fields for all headers with 
-                                this name</dd>
+<dd>the value fields for all headers with
+ this name</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for failures</dd>
 </dl>
@@ -372,9 +372,9 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
 <dd><code>line</code> - the line to add</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this Part is
-                        obtained from a READ_ONLY folder</dd>
+                                  obtained from a READ_ONLY folder</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -388,7 +388,7 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
 <pre class="methodSignature">java.util.Enumeration&lt;java.lang.String&gt;&nbsp;getAllHeaderLines()
                                                    throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Get all header lines as an Enumeration of Strings. A Header
- line is a raw RFC822 header-line, containing both the "name" 
+ line is a raw RFC822 header-line, containing both the "name"
  and "value" field.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -406,8 +406,8 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
 <h4>getMatchingHeaderLines</h4>
 <pre class="methodSignature">java.util.Enumeration&lt;java.lang.String&gt;&nbsp;getMatchingHeaderLines&#8203;(java.lang.String[]&nbsp;names)
                                                         throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Get matching header lines as an Enumeration of Strings. 
- A Header line is a raw RFC822 header-line, containing both 
+<div class="block">Get matching header lines as an Enumeration of Strings.
+ A Header line is a raw RFC822 header-line, containing both
  the "name" and "value" field.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -427,8 +427,8 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
 <h4>getNonMatchingHeaderLines</h4>
 <pre class="methodSignature">java.util.Enumeration&lt;java.lang.String&gt;&nbsp;getNonMatchingHeaderLines&#8203;(java.lang.String[]&nbsp;names)
                                                            throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Get non-matching header lines as an Enumeration of Strings. 
- A Header line is a raw RFC822 header-line, containing both 
+<div class="block">Get non-matching header lines as an Enumeration of Strings.
+ A Header line is a raw RFC822 header-line, containing both
  the "name"  and "value" field.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -506,9 +506,9 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
 <dd><code>md5</code> - the MD5 value</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this Part is
-                        obtained from a READ_ONLY folder</dd>
+                                  obtained from a READ_ONLY folder</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code></dd>
 </dl>
 </li>
@@ -548,9 +548,9 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
 <dd><code>languages</code> - array of language tags</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this Part is
-                        obtained from a READ_ONLY folder</dd>
+                                  obtained from a READ_ONLY folder</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code></dd>
 </dl>
 </li>
@@ -664,7 +664,7 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -705,7 +705,7 @@ extends <a href="../Part.html" title="interface in jakarta.mail">Part</a></pre>
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2023 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

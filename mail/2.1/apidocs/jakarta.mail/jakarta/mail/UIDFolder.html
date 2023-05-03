@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -126,22 +126,22 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <hr>
 <pre>public interface <span class="typeNameLabel">UIDFolder</span></pre>
-<div class="block">The <code>UIDFolder</code> interface is implemented by Folders 
- that can support the "disconnected" mode of operation, by providing 
+<div class="block">The <code>UIDFolder</code> interface is implemented by Folders
+ that can support the "disconnected" mode of operation, by providing
  unique-ids for messages in the folder. This interface is based on
  the IMAP model for supporting disconnected operation. <p>
 
  A Unique identifier (UID) is a positive long value, assigned to
  each message in a specific folder. Unique identifiers are assigned
- in a strictly <strong>ascending</strong> fashion in the mailbox. 
- That is, as each message is added to the mailbox it is assigned a 
+ in a strictly <strong>ascending</strong> fashion in the mailbox.
+ That is, as each message is added to the mailbox it is assigned a
  higher UID than the message(s) which were added previously. Unique
- identifiers persist across sessions. This permits a client to 
+ identifiers persist across sessions. This permits a client to
  resynchronize its state from a previous session with the server. <p>
 
  Associated with every mailbox is a unique identifier validity value.
- If unique identifiers from an earlier session fail to persist to 
- this session, the unique identifier validity value 
+ If unique identifiers from an earlier session fail to persist to
+ this session, the unique identifier validity value
  <strong>must</strong> be greater than the one used in the earlier
  session. <p>
 
@@ -156,7 +156,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
         UIDFolder uf = (UIDFolder)f;
         long uid = uf.getUID(msg);
 
- </pre></blockquote><p></div>
+ </pre></blockquote></div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Bill Shannon, John Mani</dd>
@@ -335,7 +335,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
         Message[] newMsgs =
                 uf.getMessagesByUID(lastSeenUID + 1, UIDFolder.MAXUID);
 
- </pre></blockquote><p></div>
+ </pre></blockquote></div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#jakarta.mail.UIDFolder.MAXUID">Constant Field Values</a></dd>
@@ -361,9 +361,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">long&nbsp;getUIDValidity()
              throws <a href="MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Returns the UIDValidity value associated with this folder. <p>
- 
+
  Clients typically compare this value against a UIDValidity
- value saved from a previous session to insure that any cached 
+ value saved from a previous session to insure that any cached
  UIDs are not stale.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -381,14 +381,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>getMessageByUID</h4>
 <pre class="methodSignature"><a href="Message.html" title="class in jakarta.mail">Message</a>&nbsp;getMessageByUID&#8203;(long&nbsp;uid)
                  throws <a href="MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Get the Message corresponding to the given UID. If no such 
+<div class="block">Get the Message corresponding to the given UID. If no such
  message exists, <code>null</code> is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>uid</code> - UID for the desired message</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the Message object. <code>null</code> is returned
-                        if no message corresponding to this UID is obtained.</dd>
+ if no message corresponding to this UID is obtained.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for failures</dd>
 </dl>
@@ -433,7 +433,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>getMessagesByUID</h4>
 <pre class="methodSignature"><a href="Message.html" title="class in jakarta.mail">Message</a>[]&nbsp;getMessagesByUID&#8203;(long[]&nbsp;uids)
                     throws <a href="MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Get the Messages specified by the given array of UIDs. If any UID is 
+<div class="block">Get the Messages specified by the given array of UIDs. If any UID is
  invalid, <code>null</code> is returned for that entry. <p>
 
  Note that the returned array will be of the same size as the specified
@@ -467,7 +467,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>UID for this message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.util.NoSuchElementException</code> - if the given Message
-                        is not in this Folder.</dd>
+                                   is not in this Folder.</dd>
 <dd><code><a href="MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -489,7 +489,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  while it was open and thus this value may be out of
  date. <p>
 
- If the value is unknown, -1 is returned.  <p></div>
+ If the value is unknown, -1 is returned.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the UIDNEXT value, or -1 if unknown</dd>
@@ -526,7 +526,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -567,7 +567,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2023 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

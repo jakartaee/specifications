@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -145,7 +145,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public abstract class <span class="typeNameLabel">Store</span>
 extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
 <div class="block">An abstract class that models a message store and its
- access protocol, for storing and retrieving messages. 
+ access protocol, for storing and retrieving messages.
  Subclasses provide actual implementations. <p>
 
  Note that <code>Store</code> extends the <code>Service</code>
@@ -226,7 +226,7 @@ extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addFolderListener(jakarta.mail.event.FolderListener)">addFolderListener</a></span>&#8203;(<a href="event/FolderListener.html" title="interface in jakarta.mail.event">FolderListener</a>&nbsp;l)</code></th>
 <td class="colLast">
-<div class="block">Add a listener for Folder events on any Folder object 
+<div class="block">Add a listener for Folder events on any Folder object
  obtained from this Store.</div>
 </td>
 </tr>
@@ -249,7 +249,7 @@ extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
 <td class="colFirst"><code>abstract <a href="Folder.html" title="class in jakarta.mail">Folder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFolder(jakarta.mail.URLName)">getFolder</a></span>&#8203;(<a href="URLName.html" title="class in jakarta.mail">URLName</a>&nbsp;url)</code></th>
 <td class="colLast">
-<div class="block">Return a closed Folder object, corresponding to the given 
+<div class="block">Return a closed Folder object, corresponding to the given
  URLName.</div>
 </td>
 </tr>
@@ -407,7 +407,7 @@ extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
                           throws <a href="MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Return the Folder object corresponding to the given name. Note
  that a Folder object is returned even if the named folder does
- not physically exist on the Store. The <code>exists()</code> 
+ not physically exist on the Store. The <code>exists()</code>
  method on the folder object indicates whether this folder really
  exists. <p>
 
@@ -417,17 +417,17 @@ extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - The name of the Folder. In some Stores, name can
-                        be an absolute path if it starts with the
-                        hierarchy delimiter. Else it is interpreted
-                        relative to the 'root' of this namespace.</dd>
+             be an absolute path if it starts with the
+             hierarchy delimiter. Else it is interpreted
+             relative to the 'root' of this namespace.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Folder object</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.IllegalStateException</code> - if this Store is not connected.</dd>
 <dd><code><a href="MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="Folder.html#exists()"><code>Folder.exists()</code></a>, 
-<a href="Folder.html#create(int)"><code>Folder.create(int)</code></a></dd>
+<dd><a href="Folder.html#create(int)"><code>Folder.create(int)</code></a>, 
+<a href="Folder.html#exists()"><code>Folder.exists()</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -439,7 +439,7 @@ extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
 <h4>getFolder</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="Folder.html" title="class in jakarta.mail">Folder</a>&nbsp;getFolder&#8203;(<a href="URLName.html" title="class in jakarta.mail">URLName</a>&nbsp;url)
                           throws <a href="MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Return a closed Folder object, corresponding to the given 
+<div class="block">Return a closed Folder object, corresponding to the given
  URLName. The store specified in the given URLName should
  refer to this Store object. <p>
 
@@ -609,9 +609,9 @@ extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
 <li class="blockList">
 <h4>addFolderListener</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;addFolderListener&#8203;(<a href="event/FolderListener.html" title="interface in jakarta.mail.event">FolderListener</a>&nbsp;l)</pre>
-<div class="block">Add a listener for Folder events on any Folder object 
+<div class="block">Add a listener for Folder events on any Folder object
  obtained from this Store. FolderEvents are delivered to
- FolderListeners on the affected Folder as well as to 
+ FolderListeners on the affected Folder as well as to
  FolderListeners on the containing Store. <p>
 
  The default implementation provided here adds this listener
@@ -677,7 +677,7 @@ extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
 <pre class="methodSignature">protected&nbsp;void&nbsp;notifyFolderRenamedListeners&#8203;(<a href="Folder.html" title="class in jakarta.mail">Folder</a>&nbsp;oldF,
                                             <a href="Folder.html" title="class in jakarta.mail">Folder</a>&nbsp;newF)</pre>
 <div class="block">Notify all FolderListeners about the renaming of a folder.
- Store implementations are expected to use this method to broadcast 
+ Store implementations are expected to use this method to broadcast
  Folder events indicating the renaming of folders. <p>
 
  The provided default implementation queues the event into
@@ -720,7 +720,7 @@ extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -761,7 +761,7 @@ extends <a href="Service.html" title="class in jakarta.mail">Service</a></pre>
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2023 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>

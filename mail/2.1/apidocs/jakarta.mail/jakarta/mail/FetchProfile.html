@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -135,12 +135,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">FetchProfile</span>
 extends java.lang.Object</pre>
-<div class="block">Clients use a FetchProfile to list the Message attributes that 
+<div class="block">Clients use a FetchProfile to list the Message attributes that
  it wishes to prefetch from the server for a range of messages.<p>
 
- Messages obtained from a Folder are light-weight objects that 
+ Messages obtained from a Folder are light-weight objects that
  typically start off as empty references to the actual messages.
- Such a Message object is filled in "on-demand" when the appropriate 
+ Such a Message object is filled in "on-demand" when the appropriate
  get*() methods are invoked on that particular Message. Certain
  server-based message access protocols (Ex: IMAP) allow batch
  fetching of message attributes for a range of messages in a single
@@ -151,7 +151,7 @@ extends java.lang.Object</pre>
  to the server. <p>
 
  Note that implementations are not obligated to support
- FetchProfiles, since there might be cases where the backend service 
+ FetchProfiles, since there might be cases where the backend service
  does not allow easy, efficient fetching of such profiles. <p>
 
  Sample code that illustrates the use of a FetchProfile is given
@@ -166,7 +166,7 @@ extends java.lang.Object</pre>
   fp.add("X-mailer");
   folder.fetch(msgs, fp);
 
- </pre></blockquote><p></div>
+ </pre></blockquote></div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>John Mani, Bill Shannon</dd>
@@ -452,7 +452,7 @@ extends java.lang.Object</pre>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -493,7 +493,7 @@ extends java.lang.Object</pre>
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2023 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>
