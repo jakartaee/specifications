@@ -36,10 +36,12 @@ querying JSON documents.
 * [Jakarta JSON Processing 2.1 TCK](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.json:jakarta.json-api:jar:2.1.1](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/2.1.1/jar)
+* [Change Log](./changelog)
+
 
 # Compatible Implementations
 
-* [Eclipse Parsson 1.1.1](https://github.com/eclipse-ee4j/parsson/releases/tag/1.1.1)
+* [Eclipse Parsson 1.1.2](https://github.com/eclipse-ee4j/parsson/releases/tag/1.1.2)
 
 # Ballots
 
