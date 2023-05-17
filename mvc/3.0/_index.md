@@ -12,6 +12,7 @@ This release ensures alignment with Jakarta RESTful Web Services 4.0, removes th
 <!-- List here -->
 * Switch CSRF default to implicit
 * Add accessor for form method overwrite field name
+* Replace org.eclipse.krazo.defaultViewFileExtension with API constant
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
