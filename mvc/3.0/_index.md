@@ -16,7 +16,7 @@ This release ensures alignment with Jakarta RESTful Web Services 4.0, removes th
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
-* Deprecate requirement for Facelets view engine
+* Remove requirement for Facelets view engine
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
