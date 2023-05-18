@@ -1,6 +1,6 @@
 ---
 title: "Jakarta MVC 3.0 (Under Development)"
-date: 2021-04-15
+date: 2023-05-17
 summary: "Release supporing Jakarta EE 11"
 ---
 
