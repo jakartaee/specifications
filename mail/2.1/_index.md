@@ -26,12 +26,13 @@ None
 * [Jakarta Mail 2.1 TCK](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
     * Addresses Mail Challenge (Issue [#625](https://github.com/jakartaee/mail-api/issues/625))  [Jakarta Mail 2.1.1 TCK](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.mail:jakarta.mail-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.mail/jakarta.mail-api/2.1.0/jar)
+    * [jakarta.mail:jakarta.mail-api:jar:2.1.2](https://search.maven.org/artifact/jakarta.mail/jakarta.mail-api/2.1.2/jar)
+* [Change Log](./changelog)
 
 
 # Compatible Implementations
 
-* [Angus Mail 1.0.0](https://github.com/eclipse-ee4j/angus-mail/releases/tag/1.0.0)
+* [Angus Mail 2.0.2](https://eclipse-ee4j.github.io/angus-mail)
 
 # Ballots
 

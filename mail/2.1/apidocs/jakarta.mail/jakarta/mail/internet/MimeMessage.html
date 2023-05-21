@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_top">
@@ -150,9 +150,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
  interface. <p>
 
  Clients wanting to create new MIME style messages will instantiate
- an empty MimeMessage object and then fill it with appropriate 
+ an empty MimeMessage object and then fill it with appropriate
  attributes and content. <p>
- 
+
  Service providers that implement MIME compliant backend stores may
  want to subclass MimeMessage and override certain methods to provide
  specific implementations. The simplest case is probably a provider
@@ -171,7 +171,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 
  <hr><strong>A note on RFC 822 and MIME headers</strong><p>
 
- RFC 822 header fields <strong>must</strong> contain only 
+ RFC 822 header fields <strong>must</strong> contain only
  US-ASCII characters. MIME allows non ASCII characters to be present
  in certain portions of certain headers, by encoding those characters.
  RFC 2047 specifies the rules for doing this. The MimeUtility
@@ -182,7 +182,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
  header fields must be folded (wrapped) before being sent if they
  exceed the line length limitation for the transport (1000 bytes for
  SMTP).  Received headers may have been folded.  The application is
- responsible for folding and unfolding headers as appropriate. <p></div>
+ responsible for folding and unfolding headers as appropriate.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>John Mani, Bill Shannon, Max Spivak, Kanwar Oberoi</dd>
@@ -566,7 +566,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <td class="colFirst"><code><a href="../Flags.html" title="class in jakarta.mail">Flags</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFlags()">getFlags</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Return a <code>Flags</code> object containing the flags for 
+<div class="block">Return a <code>Flags</code> object containing the flags for
  this message.</div>
 </td>
 </tr>
@@ -706,7 +706,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMimeType(java.lang.String)">isMimeType</a></span>&#8203;(java.lang.String&nbsp;mimeType)</code></th>
 <td class="colLast">
 <div class="block">Is this Part of the specified MIME type?  This method
- compares <strong>only the <code>primaryType</code> and 
+ compares <strong>only the <code>primaryType</code> and
  <code>subType</code></strong>.</div>
 </td>
 </tr>
@@ -1298,8 +1298,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getFrom</h4>
 <pre class="methodSignature">public&nbsp;<a href="../Address.html" title="class in jakarta.mail">Address</a>[]&nbsp;getFrom()
                   throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Returns the value of the RFC 822 "From" header fields. If this 
- header field is absent, the "Sender" header field is used. 
+<div class="block">Returns the value of the RFC 822 "From" header fields. If this
+ header field is absent, the "Sender" header field is used.
  If the "Sender" header field is also absent, <code>null</code>
  is returned.<p>
 
@@ -1325,7 +1325,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>setFrom</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setFrom&#8203;(<a href="../Address.html" title="class in jakarta.mail">Address</a>&nbsp;address)
              throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Set the RFC 822 "From" header field. Any existing values are 
+<div class="block">Set the RFC 822 "From" header field. Any existing values are
  replaced with the given address. If address is <code>null</code>,
  this header is removed.</div>
 <dl>
@@ -1335,10 +1335,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>address</code> - the sender of this message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification
-                        of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1351,7 +1351,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>setFrom</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setFrom&#8203;(java.lang.String&nbsp;address)
              throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Set the RFC 822 "From" header field. Any existing values are 
+<div class="block">Set the RFC 822 "From" header field. Any existing values are
  replaced with the given addresses. If address is <code>null</code>,
  this header is removed.</div>
 <dl>
@@ -1359,10 +1359,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>address</code> - the sender(s) of this message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification
-                        of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1382,10 +1382,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code><a href="../Message.html#setFrom()">setFrom</a></code>&nbsp;in class&nbsp;<code><a href="../Message.html" title="class in jakarta.mail">Message</a></code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification
-                        of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1407,10 +1407,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>addresses</code> - the senders of this message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification
-                        of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1447,7 +1447,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>setSender</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setSender&#8203;(<a href="../Address.html" title="class in jakarta.mail">Address</a>&nbsp;address)
                throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Set the RFC 822 "Sender" header field. Any existing values are 
+<div class="block">Set the RFC 822 "Sender" header field. Any existing values are
  replaced with the given address. If address is <code>null</code>,
  this header is removed.</div>
 <dl>
@@ -1455,10 +1455,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>address</code> - the sender of this message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification
-                        of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1495,7 +1495,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd>array of Address objects</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - if header could not
-                  be retrieved</dd>
+                               be retrieved</dd>
 <dd><code><a href="AddressException.html" title="class in jakarta.mail.internet">AddressException</a></code> - if the header is misformatted</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#headers"><code>headers</code></a>, 
@@ -1551,10 +1551,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>addresses</code> - Addresses</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification
-                        of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#getRecipients(jakarta.mail.Message.RecipientType)"><code>getRecipients(jakarta.mail.Message.RecipientType)</code></a></dd>
@@ -1579,12 +1579,12 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>addresses</code> - Addresses</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="AddressException.html" title="class in jakarta.mail.internet">AddressException</a></code> - if the attempt to parse the
-                  addresses String fails</dd>
+                                  addresses String fails</dd>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                  implementation does not support modification
-                  of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                  obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#getRecipients(jakarta.mail.Message.RecipientType)"><code>getRecipients(jakarta.mail.Message.RecipientType)</code></a></dd>
@@ -1609,10 +1609,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>addresses</code> - Addresses</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification
-                        of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1633,12 +1633,12 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>addresses</code> - Addresses</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="AddressException.html" title="class in jakarta.mail.internet">AddressException</a></code> - if the attempt to parse the
-                  addresses String fails</dd>
+                                  addresses String fails</dd>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                  implementation does not support modification
-                  of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                  obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1677,7 +1677,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>setReplyTo</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setReplyTo&#8203;(<a href="../Address.html" title="class in jakarta.mail">Address</a>[]&nbsp;addresses)
                 throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Set the RFC 822 "Reply-To" header field. If the address 
+<div class="block">Set the RFC 822 "Reply-To" header field. If the address
  parameter is <code>null</code>, this header is removed.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -1686,10 +1686,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>addresses</code> - addresses to which replies should be directed</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification
-                        of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1702,7 +1702,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getSubject</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getSubject()
                             throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Returns the value of the "Subject" header field. Returns null 
+<div class="block">Returns the value of the "Subject" header field. Returns null
  if the subject field is unavailable or its value is absent. <p>
 
  If the subject is encoded as per RFC 2047, it is decoded and
@@ -1731,10 +1731,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>setSubject</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setSubject&#8203;(java.lang.String&nbsp;subject)
                 throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Set the "Subject" header field. If the subject contains 
- non US-ASCII characters, it will be encoded using the 
- platform's default charset. If the subject contains only 
- US-ASCII characters, no encoding is done and it is used 
+<div class="block">Set the "Subject" header field. If the subject contains
+ non US-ASCII characters, it will be encoded using the
+ platform's default charset. If the subject contains only
+ US-ASCII characters, no encoding is done and it is used
  as-is. If the subject is null, the existing "Subject" field
  is removed. <p>
 
@@ -1752,10 +1752,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>subject</code> - The subject</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification
-                        of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1769,10 +1769,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;void&nbsp;setSubject&#8203;(java.lang.String&nbsp;subject,
                        java.lang.String&nbsp;charset)
                 throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Set the "Subject" header field. If the subject contains non 
+<div class="block">Set the "Subject" header field. If the subject contains non
  US-ASCII characters, it will be encoded using the specified
- charset. If the subject contains only US-ASCII characters, no 
- encoding is done and it is used as-is. If the subject is null, 
+ charset. If the subject contains only US-ASCII characters, no
+ encoding is done and it is used as-is. If the subject is null,
  the existing "Subject" header field is removed. <p>
 
  The application must ensure that the subject does not contain
@@ -1788,10 +1788,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>charset</code> - The charset</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                                implementation does not support modification
-                                of existing values</dd>
+                                  implementation does not support modification
+                                  of existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                                obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1804,10 +1804,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getSentDate</h4>
 <pre class="methodSignature">public&nbsp;java.util.Date&nbsp;getSentDate()
                            throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Returns the value of the RFC 822 "Date" field. This is the date 
- on which this message was sent. Returns null if this field is 
+<div class="block">Returns the value of the RFC 822 "Date" field. This is the date
+ on which this message was sent. Returns null if this field is
  unavailable or its value is absent. <p>
- 
+
  This implementation uses the <code>getHeader</code> method
  to obtain the requisite header field.</div>
 <dl>
@@ -1830,7 +1830,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
                  throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Set the RFC 822 "Date" header field. This is the date on which the
  creator of the message indicates that the message is complete
- and ready for delivery. If the date parameter is 
+ and ready for delivery. If the date parameter is
  <code>null</code>, the existing "Date" field is removed.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -1839,9 +1839,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>d</code> - the sent date of this message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -1854,7 +1854,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getReceivedDate</h4>
 <pre class="methodSignature">public&nbsp;java.util.Date&nbsp;getReceivedDate()
                                throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Returns the Date on this message was received. Returns 
+<div class="block">Returns the Date on this message was received. Returns
  <code>null</code> if this date cannot be obtained. <p>
 
  Note that RFC 822 does not define a field for the received
@@ -1880,7 +1880,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getSize</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getSize()
             throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Return the size of the content of this message in bytes. 
+<div class="block">Return the size of the content of this message in bytes.
  Return -1 if the size cannot be determined. <p>
 
  Note that this number may not be an exact measure of the
@@ -1913,8 +1913,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <div class="block">Return the number of lines for the content of this message.
  Return -1 if this number cannot be determined. <p>
 
- Note that this number may not be an exact measure of the 
- content length and may or may not account for any transfer 
+ Note that this number may not be an exact measure of the
+ content length and may or may not account for any transfer
  encoding of the content. <p>
 
  This implementation returns -1.</div>
@@ -1936,9 +1936,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getContentType</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getContentType()
                                 throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Returns the value of the RFC 822 "Content-Type" header field. 
- This represents the content-type of the content of this 
- message. This value must not be null. If this field is 
+<div class="block">Returns the value of the RFC 822 "Content-Type" header field.
+ This represents the content-type of the content of this
+ message. This value must not be null. If this field is
  unavailable, "text/plain" should be returned. <p>
 
  This implementation uses the <code>getHeader</code> method
@@ -1964,7 +1964,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isMimeType&#8203;(java.lang.String&nbsp;mimeType)
                    throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Is this Part of the specified MIME type?  This method
- compares <strong>only the <code>primaryType</code> and 
+ compares <strong>only the <code>primaryType</code> and
  <code>subType</code></strong>.
  The parameters of the content types are ignored. <p>
 
@@ -1999,7 +1999,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
  This represents the disposition of this part. The disposition
  describes how the part should be presented to the user. <p>
 
- If the Content-Disposition field is unavailable, 
+ If the Content-Disposition field is unavailable,
  <code>null</code> is returned. <p>
 
  This implementation uses the <code>getHeader</code> method
@@ -2036,9 +2036,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>disposition</code> - disposition of this part</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../Part.html#ATTACHMENT"><code>Part.ATTACHMENT</code></a>, 
@@ -2081,7 +2081,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getContentID()
                               throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Returns the value of the "Content-ID" header field. Returns
- <code>null</code> if the field is unavailable or its value is 
+ <code>null</code> if the field is unavailable or its value is
  absent. <p>
 
  This implementation uses the <code>getHeader</code> method
@@ -2105,16 +2105,16 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;void&nbsp;setContentID&#8203;(java.lang.String&nbsp;cid)
                   throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Set the "Content-ID" header field of this Message.
- If the <code>cid</code> parameter is null, any existing 
+ If the <code>cid</code> parameter is null, any existing
  "Content-ID" is removed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cid</code> - the content ID</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -2127,7 +2127,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getContentMD5</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getContentMD5()
                                throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Return the value of the "Content-MD5" header field. Returns 
+<div class="block">Return the value of the "Content-MD5" header field. Returns
  <code>null</code> if this field is unavailable or its value
  is absent. <p>
 
@@ -2159,9 +2159,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>md5</code> - the MD5 value</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -2175,12 +2175,12 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getDescription()
                                 throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Returns the "Content-Description" header field of this Message.
- This typically associates some descriptive information with 
+ This typically associates some descriptive information with
  this part. Returns null if this field is unavailable or its
  value is absent. <p>
 
  If the Content-Description field is encoded as per RFC 2047,
- it is decoded and converted into Unicode. If the decoding or 
+ it is decoded and converted into Unicode. If the decoding or
  conversion fails, the raw data is returned as-is <p>
 
  This implementation uses the <code>getHeader</code> method
@@ -2204,12 +2204,12 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;void&nbsp;setDescription&#8203;(java.lang.String&nbsp;description)
                     throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Set the "Content-Description" header field for this Message.
- If the description parameter is <code>null</code>, then any 
+ If the description parameter is <code>null</code>, then any
  existing "Content-Description" fields are removed. <p>
 
- If the description contains non US-ASCII characters, it will 
- be encoded using the platform's default charset. If the 
- description contains only US-ASCII characters, no encoding 
+ If the description contains non US-ASCII characters, it will
+ be encoded using the platform's default charset. If the
+ description contains only US-ASCII characters, no encoding
  is done and it is used as-is. <p>
 
  Note that if the charset encoding process fails, a
@@ -2223,13 +2223,13 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>description</code> - content-description</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - An
-                        UnsupportedEncodingException may be included
-                        in the exception chain if the charset
-                        conversion fails.</dd>
+                                  UnsupportedEncodingException may be included
+                                  in the exception chain if the charset
+                                  conversion fails.</dd>
 </dl>
 </li>
 </ul>
@@ -2243,12 +2243,12 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
                            java.lang.String&nbsp;charset)
                     throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Set the "Content-Description" header field for this Message.
- If the description parameter is <code>null</code>, then any 
+ If the description parameter is <code>null</code>, then any
  existing "Content-Description" fields are removed. <p>
 
- If the description contains non US-ASCII characters, it will 
- be encoded using the specified charset. If the description 
- contains only US-ASCII characters, no encoding  is done and 
+ If the description contains non US-ASCII characters, it will
+ be encoded using the specified charset. If the description
+ contains only US-ASCII characters, no encoding  is done and
  it is used as-is. <p>
 
  Note that if the charset encoding process fails, a
@@ -2261,13 +2261,13 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>charset</code> - Charset for encoding</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                                implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                                obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - An
-                                UnsupportedEncodingException may be included
-                                in the exception chain if the charset
-                                conversion fails.</dd>
+                                  UnsupportedEncodingException may be included
+                                  in the exception chain if the charset
+                                  conversion fails.</dd>
 </dl>
 </li>
 </ul>
@@ -2313,9 +2313,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>languages</code> - array of language tags</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                                implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                                obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -2339,7 +2339,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd>Message-ID</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - if the retrieval of this field
-                        causes any exception.</dd>
+                               causes any exception.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../search/MessageIDTerm.html" title="class in jakarta.mail.search"><code>MessageIDTerm</code></a></dd>
 </dl>
@@ -2403,9 +2403,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>filename</code> - Filename to associate with this part</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                                implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                                obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -2430,8 +2430,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd>an InputStream</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - this is typically thrown by the
-                        DataHandler. Refer to the documentation for
-                        jakarta.activation.DataHandler for more details.</dd>
+                               DataHandler. Refer to the documentation for
+                               jakarta.activation.DataHandler for more details.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#getContentStream()"><code>getContentStream()</code></a>, 
@@ -2449,7 +2449,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
                                         throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Produce the raw bytes of the content. This method is used during
  parsing, to create a DataHandler object for the content. Subclasses
- that can provide a separate input stream for just the message 
+ that can provide a separate input stream for just the message
  content might want to override this method. <p>
 
  This implementation returns a SharedInputStream, if
@@ -2505,7 +2505,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <div class="block">Return a DataHandler for this Message's content. <p>
 
  The implementation provided here works approximately as follows.
- Note the use of the <code>getContentStream</code> method to 
+ Note the use of the <code>getContentStream</code> method to
  generate the byte stream for the content. Also note that
  any transfer-decoding is done automatically within this method.
 
@@ -2522,10 +2522,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
           return MimeUtility.decode(
                      getContentStream(), getEncoding());
       }
-        
+
                 .... &lt;other DataSource methods&gt;
   }
- </pre></blockquote><p></div>
+ </pre></blockquote></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../Part.html#getDataHandler()">getDataHandler</a></code>&nbsp;in interface&nbsp;<code><a href="../Part.html" title="interface in jakarta.mail">Part</a></code></dd>
@@ -2546,7 +2546,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
                             throws java.io.IOException,
                                    <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Return the content as a Java object. The type of this
- object is dependent on the content itself. For 
+ object is dependent on the content itself. For
  example, the native format of a "text/plain" content
  is usually a String object. The native format for a "multipart"
  message is always a Multipart subclass. For content types that are
@@ -2565,8 +2565,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd>Object</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - this is typically thrown by the
-                        DataHandler. Refer to the documentation for
-                        jakarta.activation.DataHandler for more details.</dd>
+                               DataHandler. Refer to the documentation for
+                               jakarta.activation.DataHandler for more details.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../Part.html" title="interface in jakarta.mail"><code>Part</code></a>, 
@@ -2591,9 +2591,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>dh</code> - The DataHandler for the content.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -2623,10 +2623,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>type</code> - Mime type of the object</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification of
-                        existing values</dd>
+                                  implementation does not support modification of
+                                  existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -2734,10 +2734,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>mp</code> - The multipart object that is the Message's content</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification of
-                        existing values</dd>
+                                  implementation does not support modification of
+                                  existing values</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -2751,7 +2751,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;<a href="../Message.html" title="class in jakarta.mail">Message</a>&nbsp;reply&#8203;(boolean&nbsp;replyToAll)
               throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Get a new Message suitable for a reply to this message.
- The new Message will have its attributes and headers 
+ The new Message will have its attributes and headers
  set up appropriately.  Note that this new message object
  will be empty, i.e., it will <strong>not</strong> have a "content".
  These will have to be suitably filled in by the client. <p>
@@ -2777,7 +2777,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code><a href="../Message.html#reply(boolean)">reply</a></code>&nbsp;in class&nbsp;<code><a href="../Message.html" title="class in jakarta.mail">Message</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>replyToAll</code> - reply should be sent to all recipients
-                                of this message</dd>
+                   of this message</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the reply Message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -2795,7 +2795,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
                      boolean&nbsp;setAnswered)
               throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Get a new Message suitable for a reply to this message.
- The new Message will have its attributes and headers 
+ The new Message will have its attributes and headers
  set up appropriately.  Note that this new message object
  will be empty, i.e., it will <strong>not</strong> have a "content".
  These will have to be suitably filled in by the client. <p>
@@ -2822,7 +2822,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>replyToAll</code> - reply should be sent to all recipients
-                                of this message</dd>
+                    of this message</dd>
 <dd><code>setAnswered</code> - set the ANSWERED flag in this message?</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the reply Message</dd>
@@ -2859,8 +2859,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>os</code> - the stream to write to</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - if an error occurs writing to the stream
-                                or if an error is generated by the
-                                jakarta.activation layer.</dd>
+                               or if an error is generated by the
+                               jakarta.activation layer.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><code>DataHandler.writeTo(java.io.OutputStream)</code></dd>
@@ -2890,8 +2890,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>ignoreList</code> - the headers to not include in the output</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - if an error occurs writing to the stream
-                                or if an error is generated by the
-                                jakarta.activation layer.</dd>
+                                            or if an error is generated by the
+                                            jakarta.activation layer.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><code>DataHandler.writeTo(java.io.OutputStream)</code></dd>
@@ -2907,10 +2907,10 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;java.lang.String[]&nbsp;getHeader&#8203;(java.lang.String&nbsp;name)
                              throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Get all the headers for this header_name. Note that certain
- headers may be encoded as per RFC 2047 if they contain 
+ headers may be encoded as per RFC 2047 if they contain
  non US-ASCII characters and these should be decoded. <p>
 
- This implementation obtains the headers from the 
+ This implementation obtains the headers from the
  <code>headers</code> InternetHeaders object.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -2937,7 +2937,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
                            throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Get all the headers for this header name, returned as a single
  String, with headers separated by the delimiter. If the
- delimiter is <code>null</code>, only the first header is 
+ delimiter is <code>null</code>, only the first header is
  returned.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -2946,8 +2946,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>name</code> - the name of this header</dd>
 <dd><code>delimiter</code> - separator between values</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the value fields for all headers with 
-                                this name</dd>
+<dd>the value fields for all headers with
+ this name</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for failures</dd>
 </dl>
@@ -2975,9 +2975,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>value</code> - header value</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="MimeUtility.html" title="class in jakarta.mail.internet"><code>MimeUtility</code></a></dd>
@@ -2994,8 +2994,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
                       java.lang.String&nbsp;value)
                throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Add this value to the existing values for this header_name.
- Note that RFC 822 headers must contain only US-ASCII 
- characters, so a header that contains non US-ASCII characters 
+ Note that RFC 822 headers must contain only US-ASCII
+ characters, so a header that contains non US-ASCII characters
  must have been encoded as per the rules of RFC 2047.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -3005,9 +3005,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>value</code> - header value</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="MimeUtility.html" title="class in jakarta.mail.internet"><code>MimeUtility</code></a></dd>
@@ -3030,9 +3030,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>name</code> - the name of this header</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -3048,11 +3048,11 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <div class="block">Return all the headers from this Message as an enumeration
  of Header objects. <p>
 
- Note that certain headers may be encoded as per RFC 2047 
- if they contain non US-ASCII characters and these should 
+ Note that certain headers may be encoded as per RFC 2047
+ if they contain non US-ASCII characters and these should
  be decoded. <p>
 
- This implementation obtains the headers from the 
+ This implementation obtains the headers from the
  <code>headers</code> InternetHeaders object.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -3098,7 +3098,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;java.util.Enumeration&lt;<a href="../Header.html" title="class in jakarta.mail">Header</a>&gt;&nbsp;getNonMatchingHeaders&#8203;(java.lang.String[]&nbsp;names)
                                                     throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Return non-matching headers from this Message as an
- Enumeration of Header objects. This implementation 
+ Enumeration of Header objects. This implementation
  obtains the header from the <code>headers</code> InternetHeaders object.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -3128,9 +3128,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>line</code> - the line to add</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -3144,7 +3144,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <pre class="methodSignature">public&nbsp;java.util.Enumeration&lt;java.lang.String&gt;&nbsp;getAllHeaderLines()
                                                           throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
 <div class="block">Get all header lines as an Enumeration of Strings. A Header
- line is a raw RFC 822 header-line, containing both the "name" 
+ line is a raw RFC 822 header-line, containing both the "name"
  and "value" field.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -3164,8 +3164,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getMatchingHeaderLines</h4>
 <pre class="methodSignature">public&nbsp;java.util.Enumeration&lt;java.lang.String&gt;&nbsp;getMatchingHeaderLines&#8203;(java.lang.String[]&nbsp;names)
                                                                throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Get matching header lines as an Enumeration of Strings. 
- A Header line is a raw RFC 822 header-line, containing both 
+<div class="block">Get matching header lines as an Enumeration of Strings.
+ A Header line is a raw RFC 822 header-line, containing both
  the "name" and "value" field.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -3187,8 +3187,8 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getNonMatchingHeaderLines</h4>
 <pre class="methodSignature">public&nbsp;java.util.Enumeration&lt;java.lang.String&gt;&nbsp;getNonMatchingHeaderLines&#8203;(java.lang.String[]&nbsp;names)
                                                                   throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Get non-matching header lines as an Enumeration of Strings. 
- A Header line is a raw RFC 822 header-line, containing both 
+<div class="block">Get non-matching header lines as an Enumeration of Strings.
+ A Header line is a raw RFC 822 header-line, containing both
  the "name" and "value" field.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -3210,7 +3210,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <h4>getFlags</h4>
 <pre class="methodSignature">public&nbsp;<a href="../Flags.html" title="class in jakarta.mail">Flags</a>&nbsp;getFlags()
                throws <a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></pre>
-<div class="block">Return a <code>Flags</code> object containing the flags for 
+<div class="block">Return a <code>Flags</code> object containing the flags for
  this message. <p>
 
  Note that a clone of the internal Flags object is returned, so
@@ -3239,7 +3239,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <div class="block">Check whether the flag specified in the <code>flag</code>
  argument is set in this message. <p>
 
- This implementation checks this message's internal 
+ This implementation checks this message's internal
  <code>flags</code> object.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -3251,13 +3251,13 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../Flags.Flag.html" title="class in jakarta.mail"><code>Flags.Flag</code></a>, 
-<a href="../Flags.Flag.html#ANSWERED"><code>Flags.Flag.ANSWERED</code></a>, 
+<dd><a href="../Flags.Flag.html#ANSWERED"><code>Flags.Flag.ANSWERED</code></a>, 
 <a href="../Flags.Flag.html#DELETED"><code>Flags.Flag.DELETED</code></a>, 
 <a href="../Flags.Flag.html#DRAFT"><code>Flags.Flag.DRAFT</code></a>, 
 <a href="../Flags.Flag.html#FLAGGED"><code>Flags.Flag.FLAGGED</code></a>, 
 <a href="../Flags.Flag.html#RECENT"><code>Flags.Flag.RECENT</code></a>, 
-<a href="../Flags.Flag.html#SEEN"><code>Flags.Flag.SEEN</code></a></dd>
+<a href="../Flags.Flag.html#SEEN"><code>Flags.Flag.SEEN</code></a>, 
+<a href="../Flags.Flag.html" title="class in jakarta.mail"><code>Flags.Flag</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -3281,9 +3281,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code>set</code> - the value to be set</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../event/MessageChangedEvent.html" title="class in jakarta.mail.event"><code>MessageChangedEvent</code></a></dd>
@@ -3305,7 +3305,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 
  If any part of a message's headers or contents are changed,
  <code>saveChanges</code> must be called to ensure that those
- changes are permanent. Otherwise, any such modifications may or 
+ changes are permanent. Otherwise, any such modifications may or
  may not be saved, depending on the folder implementation. <p>
 
  Messages obtained from folders opened READ_ONLY should not be
@@ -3319,9 +3319,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dd><code><a href="../Message.html#saveChanges()">saveChanges</a></code>&nbsp;in class&nbsp;<code><a href="../Message.html" title="class in jakarta.mail">Message</a></code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -3368,9 +3368,9 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../IllegalWriteException.html" title="class in jakarta.mail">IllegalWriteException</a></code> - if the underlying
-                        implementation does not support modification</dd>
+                                  implementation does not support modification</dd>
 <dd><code>java.lang.IllegalStateException</code> - if this message is
-                        obtained from a READ_ONLY folder.</dd>
+                                  obtained from a READ_ONLY folder.</dd>
 <dd><code><a href="../MessagingException.html" title="class in jakarta.mail">MessagingException</a></code> - for other failures</dd>
 </dl>
 </li>
@@ -3449,7 +3449,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage">Jakarta Mail<br>v2.1.0</div>
+<div class="aboutLanguage">Jakarta Mail<br>v2.1.2</div>
 </div>
 <div class="subNav">
 <ul class="navList" id="allclasses_navbar_bottom">
@@ -3490,7 +3490,7 @@ implements <a href="MimePart.html" title="interface in jakarta.mail.internet">Mi
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 </nav>
-<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2021 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legalCopy"><small>Comments to : <a href="mailto:mail-dev@eclipse.org">mail-dev@eclipse.org</a>.<br> Copyright &#169; 2019, 2023 Eclipse Foundation. All rights reserved.<br> Use is subject to <a href="../../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
 </footer>
 </body>
 </html>
