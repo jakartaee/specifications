@@ -33,11 +33,12 @@ appropriate bean to perform the operation(s).
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
   * Addresses Activation Challenge (Issue [#98](https://github.com/jakartaee/jaf-api/issues/98))  [Jakarta Activation 2.1.1 TCK](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.activation:jakarta.activation-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.1.0/jar)
+    * [jakarta.activation:jakarta.activation-api:jar:2.1.2](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.1.2/jar)
+* [Change Log](./changelog)
 
 # Compatible Implementations
 
-* [Eclipse Angus/Activation 1.0.0](https://github.com/eclipse-ee4j/angus-activation/releases)
+* [Eclipse Angus/Activation 2.0.1](https://eclipse-ee4j.github.io/angus-activation/)
 
 
 # Ballots
