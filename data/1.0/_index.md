@@ -1,7 +1,7 @@
 ---
 title: "Jakarta Data 1.0 (under development)"
-date: 2023-03-04
-summary: "Under Development"
+date: 2023-05-30
+summary: "Release supporing Jakarta EE 11"
 ---
 
 The Jakarta Data specification provides an API for easier data access. A Java developer can split the persistence from the model with several features, such as the ability to compose custom query methods on a Repository interface.
@@ -33,17 +33,14 @@ garage.save(ferrari);
 ```
 
 ### New features, enhancements or additions
-<!-- List here -->
+
 * The CrudRepository feature
 * Allows pagination on repository with PageableRepository
 
-### Removals, deprecations or backwards incompatible changes
-<!-- List here -->
-* N/A 
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 11 or higher**
+**Java SE 17 or higher**
 
 
 * [Jakarta Data Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.0)
@@ -53,6 +50,10 @@ garage.save(ferrari);
 * Maven coordinates
   * [jakarta-data-api:jakarta.data:jar:1.0.0-b2](https://repo1.maven.org/maven2/jakarta/data/jakarta-data-api/1.0.0-b2/)
 
+
+# Details
+
+* [Jakarta Data 1.0 Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.0)
 
 # Ballots
 
