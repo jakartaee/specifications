@@ -1,7 +1,7 @@
 ---
 title: "Jakarta Data 1.0 (under development)"
 date: 2023-05-30
-summary: "Release supporing Jakarta EE 11"
+summary: "Release supporting Jakarta EE 11"
 ---
 
 The Jakarta Data specification provides an API for easier data access. A Java developer can split the persistence from the model with several features, such as the ability to compose custom query methods on a Repository interface.
