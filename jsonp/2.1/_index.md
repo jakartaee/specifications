@@ -30,7 +30,7 @@ querying JSON documents.
 # Details
 
 * [Jakarta JSON Processing 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsonp/releases/2.1)
-  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta JSON Processing 2.1 Specification Document](./apidocs) (Javadoc is the specification document of this project)
 * [Jakarta JSON Processing 2.1 Javadoc](./apidocs)
 * [Jakarta JSON Processing 2.1 TCK](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))

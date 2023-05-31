@@ -21,7 +21,7 @@ Jakarta Annotations defines a collection of annotations representing common sema
 # Details
 
 * [Jakarta Annotations 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.ca/releases/2.1)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Annotations 2.1 Specification Document](./annotations-spec-2.1.pdf) (PDF)
 * [Jakarta Annotations 2.1 Specification Document](./annotations-spec-2.1.html) (HTML)
 * [Jakarta Annotations 2.1 Javadoc](./apidocs)

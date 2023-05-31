@@ -29,7 +29,7 @@ between XML documents and Java objects.
 # Details
 
 * [Jakarta XML Binding 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxb/releases/4.0)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta XML Binding 4.0 Specification Document](./jakarta-xml-binding-spec-4.0.pdf) (PDF)
 * [Jakarta XML Binding 4.0 Specification Document](./jakarta-xml-binding-spec-4.0.html) (HTML)
 * [Jakarta XML Binding 4.0 Javadoc](./apidocs)

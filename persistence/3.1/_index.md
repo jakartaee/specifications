@@ -35,8 +35,7 @@ corresponding localDate(), localDateTime(), and localTime() to Criteria API
 # Details
 
 * [Jakarta Persistence 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.1)
-* [Jakarta Persistence 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.1-jakarta-persistence-api)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Persistence 3.1 Specification Document](./jakarta-persistence-spec-3.1.pdf) (PDF)
 * [Jakarta Persistence 3.1 Specification Document](./jakarta-persistence-spec-3.1.html) (HTML)
 * [Jakarta Persistence 3.1 Javadoc](./apidocs)

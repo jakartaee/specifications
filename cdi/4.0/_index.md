@@ -24,7 +24,7 @@ Compatible (Reflection-Free)
 # Details
 
 * [Jakarta Contexts Dependency Injection 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/4.0)
-* [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+* [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.0 Javadoc](./apidocs)

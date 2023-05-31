@@ -32,7 +32,7 @@ Jakarta Authentication consists of several profiles, with each profile telling h
 # Details
 
 * [Jakarta Authentication 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.authentication/releases/3.0)
-  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Authentication 3.0 Specification Document](./jakarta-authentication-spec-3.0.pdf) (PDF)
 * [Jakarta Authentication 3.0 Specification Document](./jakarta-authentication-spec-3.0.html) (HTML)
 * [Jakarta Authentication 3.0 Javadoc](./apidocs)
