@@ -24,7 +24,7 @@ The goals for this release were:
 # Details
 
 * [Jakarta EE Core Profile 10 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/core-profile-10)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Core Profile 10.0 Specification Document](jakarta-coreprofile-spec-10.0.pdf) (PDF)
 * [Jakarta Core Profile 10.0 Specification Document](jakarta-coreprofile-spec-10.0.html) (HTML)
 * [Jakarta Core Profile 10.0 Javadoc](./apidocs)
