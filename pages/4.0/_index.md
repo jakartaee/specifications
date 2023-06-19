@@ -13,7 +13,10 @@ This release removes deprecated code and provides any additional updates necessa
 * Updated ErrorData to add support for the new attribute jakarta.servlet.error.query_string
 
 ### Removals, deprecations or backwards incompatible changes
-* All code deprecated as of Jakarta Server Pages 3.1 has been removed.
+* All code deprecated as of Jakarta Server Pages 3.1 has been removed. Specifically:
+  * Remove methods that override ELResolver.getFeatureDescriptors() as that method will be removed as of EL 6.0
+  * Remove the isThreadSafe page directive attribute as the related Servlet API interface SingleThreadModel has been removed as of the Servlet 6.0 specification
+  * Remove the jsp:plugin action and related actions as the associated HTML elements are no longer supported by any major browser
 
 ### Minimum Java SE Version
 **Java SE 11 or higher**
