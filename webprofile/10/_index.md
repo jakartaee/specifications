@@ -21,7 +21,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 # Details
 
 * [Jakarta Web Profile 10 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/web-profile-10)
-  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Web Profile 10 Specification Document](./jakarta-webprofile-spec-10.0.pdf) (PDF)
 * [Jakarta Web Profile 10 Specification Document](./jakarta-webprofile-spec-10.0.html) (HTML)
 * [Jakarta Web Profile 10 Javadoc](./apidocs)

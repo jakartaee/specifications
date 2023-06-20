@@ -34,7 +34,7 @@ actions as the associated HTML elements are no longer supported by any major bor
 # Details
 
 * [Jakarta Server Pages 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/3.1.0)
-  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Server Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.pdf) (PDF)
 * [Jakarta Server Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.html) (HTML)
 * [Jakarta Server Pages 3.1 Javadoc](./apidocs)
