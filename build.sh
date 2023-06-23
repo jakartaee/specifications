@@ -1,14 +1,14 @@
 #!/bin/bash
 # ===========================================================================
 # Copyright (c) 2019 Eclipse Foundation and others.
-# 
+#
 # This program and the accompanying materials are made
 # available under the terms of the Eclipse Public License 2.0
 # which is available at https://www.eclipse.org/legal/epl-2.0/
-# 
+#
 # Contributors:
 # Christopher Guindon (Eclipse Foundation)
-# 
+#
 # SPDX-License-Identifier: EPL-2.0
 # ===========================================================================
 
@@ -17,7 +17,7 @@ echo -e "Prepare Jakarta EE Specifications Preview...\n"
 echo -e "Step 1: Fetch a current copy of jakarta.ee\n"
 rm -rf website
 git clone https://github.com/jakartaee/jakarta.ee.git website
-cd website && npm install && npm run production && cd ../
+cd website && yarn install && yarn run production && cd ../
 
 echo -e "Step 2: Reset specifications content\n"
 mkdir -p website/static/specifications && mkdir -p website/content/specifications
@@ -73,4 +73,4 @@ done
 echo "Done!"
 
 echo -e "Step 7: Remove jakarta.ee _redirect file."
-rm ../static/_redirects 
+rm ../static/_redirects
