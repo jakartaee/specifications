@@ -3,7 +3,7 @@ publish = "website/public"
 command = "./build.sh && cd website && hugo --buildFuture"
 
 [build.environment]
-NODE_VERSION = "18.16.1"
+NODE_VERSION = "18.13.0"
 
 [context.production.environment]
 HUGO_VERSION = "0.76.5"
