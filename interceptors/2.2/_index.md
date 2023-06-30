@@ -26,7 +26,7 @@ and other managed classes.
 * [Jakarta Interceptors 2.2 Specification Document](./jakarta-interceptors-spec-2.2.pdf) (PDF)
 * [Jakarta Interceptors 2.2 Specification Document](./jakarta-interceptors-spec-2.2.html) (HTML)
 * [Jakarta Interceptors 2.2 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.0-dist.zip)
+* [Jakarta Contexts Dependency Injection 4.1 TCK](https://download.eclipse.org/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip)
    ([sig](TBD_post_ballot),
    [sha](7671d6895eb57b74b52e46b63adfeb57adf965dd91efc673db21a781fedc452f),
    [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
