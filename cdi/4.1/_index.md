@@ -13,8 +13,8 @@ Several minor issues in the Specification, APIs and TCK will be addresses as det
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
 * The Expression Language SPI methods on the BeanManager will be deprecated in preparation for a move to a new subinterface
-that will be part of a new artifact. This removes the dependency from the Jakarta Expression Language core API, bot the
-clean-up dependencies and refactor features that are not client facing.
+that will be part of a new artifact. This removes the dependency on the Jakarta Expression Language from core API,
+and refactors features that are not client facing into the subinterface.
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
