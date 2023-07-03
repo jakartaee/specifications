@@ -18,7 +18,7 @@ This release removes references to the SecurityManager and provides some minor u
 **Java SE 8 or higher**
 
 # Details
-* [Jakarta WebSocket 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.2)
+* [Jakarta WebSocket 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.2.0)
 
 <!--
 The following can be uncommented and version information updated as they become available.
