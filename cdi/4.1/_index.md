@@ -9,6 +9,20 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 ### New features, enhancements or additions
 <!-- List here -->
 Several minor issues in the Specification, APIs and TCK will be addresses as detailed in the [CDI 4.1 Milestone](https://github.com/jakartaee/cdi/milestone/1)
+The overview of currently suggested topics includes:
+* Executable methods
+* Getting interceptor bindings in standard way
+* @Priority on producers
+* Review unused imports in classes in CDI 4
+* How can getReference() legally be invoked during AfterDeploymentValidation event if contexts have not been created
+* Programmatic access to Assignability rules
+* Add methods to BeanConfigurator for applying decorators
+* List of potential changes/features for next CDI version
+* Improve wording of managed bean requirements WRT non-static public fields
+* Inconsistent behavior when finding unproxyable bean
+( possibly remove the references to the Managed Beans specification
+* possible rename of Jakarta Bean Validation to Jakarta Validation
+* Assignability of raw and parameterized types for type variables with multiple bounds (CDI-440) spec-clarificationAn issue requesting clarification in the specification
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
