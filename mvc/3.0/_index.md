@@ -26,3 +26,22 @@ This release ensures alignment with Jakarta RESTful Web Services 4.0, removes th
 
 * [Jakarta MVC 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.mvc/releases/3.0)
 
+### Balot result
+
+The Specification Committee Ballot concluded successfully on 2023-07-07 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Scott Stark, Scott Marlow                      | Enterprise Members  |   +1    |
+|                                                | **Total**           | **10**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02937.html).
