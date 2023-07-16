@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Context Dependency Injection 4.1"
+title: "Jakarta Context Dependency Injection 4.1 (Under development)"
 date: 2022-05-30
 summary: "Release for Jakarta EE 11"
 ---
@@ -37,7 +37,7 @@ and refactors features that are not client facing into the subinterface.
 # Details
 
 * [Jakarta Contexts Dependency Injection 4.1 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/4.1)
-* [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+<!--* [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.1 Javadoc](./apidocs)
@@ -52,7 +52,7 @@ and refactors features that are not client facing into the subinterface.
 * Schemas
   * [XML Schema for the CDI 4.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd)
   * No changes currently planed for the schema
-
+-->
 # Compatible Implementations
 
 * [Weld 6.0.0](https://weld.cdi-spec.org/download/) TBD
