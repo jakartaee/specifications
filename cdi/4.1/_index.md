@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Context Dependency Injection 4.1 (Under development)"
+title: "Jakarta Contexts and Dependency Injection 4.1 (Under development)"
 date: 2022-05-30
 summary: "Release for Jakarta EE 11"
 ---
