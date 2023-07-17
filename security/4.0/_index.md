@@ -17,7 +17,7 @@ The release splits focuses on evolving the API in various ways, and specifically
 * Authorization modules
 
 ### Removals, deprecations or backwards incompatible changes
-* Remove references to the SecurityManager
+* Remove references to the SecurityManager (as listed here: https://github.com/search?q=repo%3Ajakartaee%2Fsecurity%20SecurityManager&type=code)
 
 ### Minimum Java SE Version
 **Java SE 17 or higher**
