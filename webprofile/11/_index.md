@@ -1,5 +1,5 @@
 ---
-title: "Jakarta EE Web Profile 11"
+title: "Jakarta EE Web Profile 11 (Under development)"
 date: 2023-07-17
 summary: "Release of the Jakarta EE 11 Web Profile"
 ---
