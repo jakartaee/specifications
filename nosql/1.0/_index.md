@@ -46,14 +46,14 @@ template.delete(Car.class, 1L);
 
 
 * [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b6.pdf) (PDF)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b6.html) (HTML)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b7.pdf) (PDF)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b7.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
 * Maven coordinates
-  * [jakarta.nosql:nosql-core:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-core/1.0.0-b6/)
-  * [jakarta.nosql:nosql-key-value:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-key-value/1.0.0-b6/)
-  * [jakarta.nosql:mapping-column:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-column/1.0.0-b6/)
-  * [jakarta.nosql:mapping-document:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-document/1.0.0-b6/)
+  * [jakarta.nosql:nosql-core:jar:1.0.0-b7](https://repo1.maven.org/maven2/jakarta/nosql/nosql-core/1.0.0-b7/)
+  * [jakarta.nosql:nosql-key-value:jar:1.0.0-b7](https://repo1.maven.org/maven2/jakarta/nosql/nosql-key-value/1.0.0-b7/)
+  * [jakarta.nosql:mapping-column:jar:1.0.0-b7](https://repo1.maven.org/maven2/jakarta/nosql/nosql-column/1.0.0-b7/)
+  * [jakarta.nosql:mapping-document:jar:1.0.0-b7](https://repo1.maven.org/maven2/jakarta/nosql/nosql-document/1.0.0-b7/)
 
 
 # Compatible Implementations
