@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Interceptors 2.2"
+title: "Jakarta Interceptors 2.2 (Under development)"
 date: 2023-07-11
 summary: "Release for Jakarta EE 11"
 ---
