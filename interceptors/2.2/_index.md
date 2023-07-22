@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Interceptors 2.2"
-date: 2023-012-26
+date: 2023-07-11
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Interceptors defines a means of interposing on business method invocations and specific
