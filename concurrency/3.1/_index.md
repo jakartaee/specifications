@@ -1,18 +1,20 @@
 ---
 title: "Jakarta Concurrency 3.1 (under development)"
-date: 2023-05-24
+date: 2023-07-22
 summary: "Release for Jakarta EE 11"
 ---
 
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
 
 ### New features, enhancements or additions
-* Integration with Java 21 Virtual Threads
-* Java Flow/ReactiveStreams and context propagation
-* Replace more features from EJB, such as Schedule and Lock annotations
-* Become more CDI-centric
+* [Integration with Java 21 Virtual Threads](https://github.com/jakartaee/concurrency/issues/268)
+* [Java Flow/ReactiveStreams and context propagation](https://github.com/jakartaee/concurrency/issues/257)
+* [Replace more features from EJB](https://github.com/jakartaee/concurrency/issues/252), such as [Schedule](https://github.com/jakartaee/concurrency/issues/98) and [Lock](https://github.com/jakartaee/concurrency/issues/135) annotations
+* [Become more CDI-centric](https://github.com/jakartaee/concurrency/issues/229)
 * Specification bug fixes and clarifications
-* TCK fixes and enhancements
+* TCK fixes and [enhancements](https://github.com/jakartaee/concurrency/issues/269)
+
+Community input is encouraged. Add your comments to issues in our [issue tracker](https://github.com/jakartaee/concurrency/issues) or join the Concurrency Developer mailing list by following the instructions to subscribe on [this page](https://accounts.eclipse.org/mailing-list/cu-dev).
 
 ###  Removals, deprecations or backwards incompatible changes
 
