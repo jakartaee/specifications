@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Annotations 3.0"
+title: "Jakarta Annotations 3.0 (Under development)"
 date: 2023-07-24
 summary: "Release for Jakarta EE 11"
 ---
