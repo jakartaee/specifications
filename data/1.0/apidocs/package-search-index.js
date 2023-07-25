@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"jakarta.data.api","l":"jakarta.data.exceptions"},{"m":"jakarta.data.api","l":"jakarta.data.repository"}]
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"jakarta.data.api","l":"jakarta.data.exceptions"},{"m":"jakarta.data.api","l":"jakarta.data.repository"}];updateSearchResults();
