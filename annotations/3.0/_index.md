@@ -5,6 +5,8 @@ summary: "Release for Jakarta EE 11"
 ---
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that enable a declarative style of programming that applies across a variety of Java technologies.
 
+The purpose of this release is to fully remove the deprecated @ManagedBean annotation.
+
 ### New features, enhancements or additions
 <!-- List here -->
 * **N/A**
