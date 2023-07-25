@@ -44,11 +44,11 @@ garage.save(ferrari);
 
 
 * [Jakarta Data Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.0)
-* [Jakarta NoSQL 1.0 Specification Document](./data-1.0.0-b2.pdf) (PDF)
-* [Jakarta NoSQL 1.0 Specification Document](./data-1.0.0-b2.html) (HTML)
+* [Jakarta NoSQL 1.0 Specification Document](./data-1.0.0-b3.pdf) (PDF)
+* [Jakarta NoSQL 1.0 Specification Document](./data-1.0.0-b3.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
 * Maven coordinates
-  * [jakarta-data-api:jakarta.data:jar:1.0.0-b2](https://repo1.maven.org/maven2/jakarta/data/jakarta-data-api/1.0.0-b2/)
+  * [jakarta-data-api:jakarta.data:jar:1.0.0-b3](https://repo1.maven.org/maven2/jakarta/data/jakarta-data-api/1.0.0-b3/)
 
 
 # Details

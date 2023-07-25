@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"jakarta.data.api"}]
+moduleSearchIndex = [{"l":"jakarta.data.api"}];updateSearchResults();
