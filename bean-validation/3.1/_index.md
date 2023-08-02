@@ -1,9 +1,11 @@
 ---
-title: "Jakarta Bean Validation 3.1"
+title: "Jakarta Bean Validation 3.1 (Under development)"
 date: 2023-07-18
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Bean Validation defines a metadata model and API for JavaBean and method validation.
+
+This release is targetting Jakarta EE 11 and is looking to add support for Records introduced by https://openjdk.org/jeps/395.
 
 ### New features, enhancements or additions
 <!-- List here -->
@@ -43,12 +45,27 @@ Jakarta Bean Validation defines a metadata model and API for JavaBean and method
 # Ballots
 
 ## Plan Review
-The Specification Committee Ballot concluded successfully on TBD with the following results.
 
-TBD
+The Specification Committee Ballot concluded successfully on 2023-08-01 with the following results.
 
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Scott Stark, Scott Marlow                      | Enterprise Members  |   +1    |
+|                                                | **Total**           | **10**  |
+
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03048.html)
+
+<!--
 ## Release Review
 
 The Specification Committee Ballot concluded successfully on TBD with the following results.
-
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/)
+-->
