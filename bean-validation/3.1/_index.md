@@ -1,9 +1,11 @@
 ---
-title: "Jakarta Bean Validation 3.1"
+title: "Jakarta Bean Validation 3.1 (Under development)"
 date: 2023-07-18
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Bean Validation defines a metadata model and API for JavaBean and method validation.
+
+This release is targetting Jakarta EE 11 and is looking to add support for Records introduced by https://openjdk.org/jeps/395.
 
 ### New features, enhancements or additions
 <!-- List here -->
