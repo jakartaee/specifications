@@ -16,7 +16,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
-* Prune Managed Beans
+* Prune ManagedBeans
 * Remove use of SecurityManager
 * Remove optional specifications
 
