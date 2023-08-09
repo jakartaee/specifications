@@ -68,6 +68,26 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 ## Plan Review
 
 This Specification Project's Plan Review will be covered by the [CDI 4.1 Plan Review](https://projects.eclipse.org/projects/ee4j.cdi/releases/4.1/plan).  
-The Specification Committee Ballot is TBD.
 
-The ballot will run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/)
+The Specification Committee Ballot completed on 11th July 2023.
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              | No vote |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Scott Stark                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           | **9**   |
+Non-binding votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Jun Qian                                       | Primeton            |   +1    |
+|                                                | **Total**           |  **1**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02950.html)
+
