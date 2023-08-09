@@ -7,9 +7,11 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
 
 ### New features, enhancements or additions
 <!-- List here -->
+* Support for Java Records 
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
+* None
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
