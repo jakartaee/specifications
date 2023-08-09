@@ -7,9 +7,13 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 
 ### New features, enhancements or additions
 <!-- List here -->
+* Support for Java Records 
+* Support for Virtual Threads
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
+* Prune ManagedBeans
+* Remove use of SecurityManager
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
