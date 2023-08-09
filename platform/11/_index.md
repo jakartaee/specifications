@@ -18,7 +18,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 <!-- List here -->
 * Prune ManagedBeans
 * Remove use of SecurityManager
-* Remove optional specifications
+* Remove all optional specifications
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
