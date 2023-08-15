@@ -9,15 +9,12 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 <!-- List here -->
 * Support for Java Records 
 * Support for Virtual Threads
-* Possible additions (under discussion):
-  * Jakarta Data 1.0
-  * Jakarta MVC 3.0
-  * Jakarta NoSQL 1.0
+* Jakarta Data 1.0
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
 * Prune ManagedBeans
-* Remove use of SecurityManager
+* Remove all use of SecurityManager
 * Remove all optional specifications
 
 ### Minimum Java SE Version
