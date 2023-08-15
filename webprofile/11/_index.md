@@ -13,7 +13,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
 * Prune ManagedBeans
-* Remove use of SecurityManager
+* Remove all use of SecurityManager
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
