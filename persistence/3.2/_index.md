@@ -81,11 +81,12 @@ methods should be used as direct replacement
 
 * [Jakarta Persistence 3.2 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.2)
     * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee11/JakartaEE11ReleasePlan)
-* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-DRAFT01.pdf) (PDF) - DRAFT 01
-* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-DRAFT01.html) (HTML) - DRAFT 01
-* [Jakarta Persistence 3.2 Javadoc](./apidocs)  - DRAFT 01
-* Maven coordinates
-  * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0-B01](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0-B01/jar)
+* DRAFT 1
+  * [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-DRAFT01.pdf) (PDF)
+  * [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-DRAFT01.html) (HTML)
+  * [Jakarta Persistence 3.2 Javadoc](./apidocs)
+  * Maven coordinates
+    * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0-B01](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0-B01/jar)
 
 <!-- fix/uncomment once available: -->
 <!--
