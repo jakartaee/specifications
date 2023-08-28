@@ -12,8 +12,7 @@ and object/relational mapping in Java(R) environments.
 * Adds support for _java.time.Instant_ and _java.time.Year_ and Clarifies JDBC mappings for basic types
 * Adds `union`, `intersect`, `except`, `cast`, `left`, `right`, and `replace` for Jakarta Persistence QL and criteria queries
 * Adds `||` string concatenation operator to Jakarta Persistence QL
-* Adds _extract()_ to _CriteriaBuilder_
-* Adds _subquery(EntityType)_ to _CommonAbstractCriteria_
+* Adds _subquery(EntityType)_ and joins on _EntityType_ Criteria API
 * Adds support for specifying null precedence when ordering Jakarta Persistence QL and criteria queries
 * Adds _getSingleResultOrNull()_ to _Query_, _TypedQuery_, _StoredProcedureQuery_
 * Adds _entities()_, _classes()_ and _columns()_ to _NamedNativeQuery_
@@ -21,20 +20,18 @@ and object/relational mapping in Java(R) environments.
 * Adds _getVersion()_, _isLoaded()_, _load()_, _isInstance()_ and _getClass()_ methods to _PersistenceUnitUtil_
 * Adds overload of _entity()_ accepting an entity name to _Metamodel_
 * Adds _javax.annotation.processing.Generated_ to the list of defined annotations on _StaticMetamodel_
-* Adds joins on _EntityType_
 * Adds constants for managed types, named queries, named graphs and named result set mappings to generated _StaticMetamodel_
 * Adds _LocalDateTime_ and _Instant_ to supported _Version_ types
 * Adds _where()_, _having()_, _and()_, and _or()_ overloads accepting _List<Predicate>_ to _CriteriaQuery_ and _CriteriaBuilder_
 * Adds _equalTo()_ and _notEqualTo()_ to _Expression_
-* Adds _concat()_ overload accepting list of expressions to _CriteriaBuilder_
+* Adds _concat()_ overload accepting list of expressions and _extract()_ to _CriteriaBuilder_
 * Adds _Graph_ interface as parent of _EntityGraph_ and _Subgraph_ and moved common operations there
 * Adds _addAttributeNode()_, _removeAttributeNode()_, _addTreatedSubgraph()_, _addElementSubgraph()_, _addTreatedElementSubgraph()_,
 _addMapKeySubgraph()_, and _addTreatedMapKeySubgraph()_ methods to _Graph_
+* Adds _getReference_ overload, _runWithConnection()_ and _callWithConnection()_ to _EntityManager_
 * Adds _find()_, _refresh()_, _lock()_ overloads to _EntityManager_ taking newly introduced _FindOption_, _RefreshOption_,
 and _LockOption_ respectively
 * Adds _setCacheStoreMode()_, and _setCacheRetrieveMode()_ methods to _EntityManager_ and _Query_
-* Adds _getReference_ overload to _EntityManager_
-* Adds _runWithConnection()_ and _callWithConnection()_ to _EntityManager_
 * Adds _runInTransaction()_ and _callInTransaction()_ to _EntityManagerFactory_
 * Adds programmatic API to obtain _EntityManagerFactory_ using _PersistenceConfiguration_
 * Adds constants for properties defined by the specification to the _PersistenceConfiguration_
