@@ -21,7 +21,7 @@ and object/relational mapping in Java(R) environments.
 * Adds _getVersion()_, _isLoaded()_, _load()_, _isInstance()_ and _getClass()_ methods to _PersistenceUnitUtil_
 * Adds overload of _entity()_ accepting an entity name to _Metamodel_
 * Adds _javax.annotation.processing.Generated_ to the list of defined annotations on _StaticMetamodel_
-* Adds joins on __EntityType__s
+* Adds joins on _EntityType_
 * Adds constants for managed types, named queries, named graphs and named result set mappings to generated _StaticMetamodel_
 * Adds _LocalDateTime_ and _Instant_ to supported _Version_ types
 * Adds _where()_, _having()_, _and()_, and _or()_ overloads accepting _List<Predicate>_ to _CriteriaQuery_ and _CriteriaBuilder_
@@ -30,9 +30,9 @@ and object/relational mapping in Java(R) environments.
 * Adds _Graph_ interface as parent of _EntityGraph_ and _Subgraph_ and moved common operations there
 * Adds _addAttributeNode()_, _removeAttributeNode()_, _addTreatedSubgraph()_, _addElementSubgraph()_, _addTreatedElementSubgraph()_,
 _addMapKeySubgraph()_, and _addTreatedMapKeySubgraph()_ methods to _Graph_
-* Adds _find()_, _refresh()_, _lock()_ overloads to _EntityManager_ taking newly introduced __FindOption__s, __RefreshOption__s,
-and __LockOption__s respectively
-* Adds _setCacheStoreMode()_, and _setCacheRetreiveMode()_ methods to _EntityManager_ and _Query_
+* Adds _find()_, _refresh()_, _lock()_ overloads to _EntityManager_ taking newly introduced _FindOption_, _RefreshOption_,
+and _LockOption_ respectively
+* Adds _setCacheStoreMode()_, and _setCacheRetrieveMode()_ methods to _EntityManager_ and _Query_
 * Adds _getReference_ overload to _EntityManager_
 * Adds _runWithConnection()_ and _callWithConnection()_ to _EntityManager_
 * Adds _runInTransaction()_ and _callInTransaction()_ to _EntityManagerFactory_
@@ -47,7 +47,7 @@ and __LockOption__s respectively
 * Clarifies availability of _SEQUENCE_, _TABLE_ and _UUID_ generated IDs on _PrePersist_
 * Clarifies semantics of numeric literals and Adds support for `bi` and `bd` suffixes
 * Clarifies rules around distinction of entity names and identification variables and case-sensitivity in Jakarta Persistence QL queries
-* Clarifies the semantics of __Bindable.ENTITY_TYPE__ in javadoc
+* Clarifies the semantics of _Bindable.ENTITY_TYPE_ in javadoc
 * Entity and embeddable classes may now be static inner classes
 * Primary key classes are no longer required to be public and serializable
 * Pulls _getParameters()_ up from _CriteriaQuery_ to _CommonAbstractCriteria_
