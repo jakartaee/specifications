@@ -9,7 +9,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 <!-- List here -->
 * Support for Java Records 
 * Support for Virtual Threads
-
+* Jakarta Data 1.0
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
 * Prune ManagedBeans
