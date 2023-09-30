@@ -27,7 +27,7 @@ backward compatibility with earlier releases.
 # Details
 
 * [Jakarta RESTful Web Services 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/3.1.0)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
 * [Jakarta RESTful Web Services 3.1 Specification Document](./jakarta-restful-ws-spec-3.1.pdf) (PDF)
 * [Jakarta RESTful Web Services 3.1 Specification Document](./jakarta-restful-ws-spec-3.1.html) (HTML)
 * [Jakarta RESTful Web Services 3.1 Javadoc](./apidocs)

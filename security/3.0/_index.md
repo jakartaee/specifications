@@ -20,7 +20,7 @@ Jakarta Security defines a standard for creating secure Jakarta EE applications 
 # Details
 
 * [Jakarta Security 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.es/releases/3.0)
-   * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+   * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Security 3.0 Specification Document](./jakarta-security-spec-3.0.pdf) (PDF)
 * [Jakarta Security 3.0 Specification Document](./jakarta-security-spec-3.0.html) (HTML)
 * [Jakarta Security 3.0 Javadoc](./apidocs)

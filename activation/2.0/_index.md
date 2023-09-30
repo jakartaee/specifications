@@ -9,7 +9,7 @@ discover the operations available on it; and instantiate the
 appropriate bean to perform the operation(s).
 
 * [Jakarta Activation 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaf/releases/2.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Activation 2.0 Specification Document](./jakarta-activation-spec-2.0.pdf) (PDF)
 * [Jakarta Activation 2.0 Specification Document](./jakarta-activation-spec-2.0.html) (HTML)
 * [Jakarta Activation 2.0 Javadoc](./apidocs)

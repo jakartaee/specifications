@@ -6,7 +6,7 @@ summary: "Release for Jakarta EE 9"
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
 
 * [Jakarta Concurrency 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.cu/releases/2.0.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Concurrency 2.0 Specification Document](./concurrency-spec-2.0.pdf) (PDF)
 * [Jakarta Concurrency 2.0 Specification Document](./concurrency-spec-2.0.html) (HTML)
 * [Jakarta Concurrency 2.0 Javadoc](./apidocs)

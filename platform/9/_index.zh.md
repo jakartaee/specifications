@@ -6,7 +6,7 @@ summary: "Jakarta EE 9 Platform 版本发布"
 Jakarta EE Platform 定义了承载 Jakarta EE 应用的标准平台.
 
 * [Jakarta EE Platform 9 发布记录](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/9)
-  * [Jakarta EE Platform 9 发布计划](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 发布计划](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta EE Platform 9 规范文档](./platform-spec-9-SNAPSHOT.pdf) (PDF)
 * [Jakarta EE Platform 9 规范文档](./platform-spec-9-SNAPSHOT.html) (HTML)
 * [Jakarta EE Platform 9 Javadoc](./apidocs)
@@ -15,7 +15,7 @@ Jakarta EE Platform 定义了承载 Jakarta EE 应用的标准平台.
   * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/9.0.0-RC2/jar)
 
 # Jakarta EE 9 日程
-* [Jakarta EE 9 日程](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
+* [Jakarta EE 9 日程](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
 
 # 兼容实现
 * [Eclipse Glassfish 6.0.0-M1](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-6.0.0-M1.zip)

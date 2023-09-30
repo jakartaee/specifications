@@ -9,7 +9,7 @@ for manipulating XML documents, internationalization tags, and SQL tags. It also
 existing custom tags with Jakarta Standard Tag Library tags.
 
 * [Jakarta Standard Tag Library 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jstl/releases/2.0.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Standard Tag Library 2.0 Specification Document](./jakarta-tags-spec-2.0.pdf) (PDF)
 * [Jakarta Standard Tag Library 2.0 Specification Document](./jakarta-tags-spec-2.0.html) (HTML)
 * [Jakarta Standard Tag Library 2.0 Javadoc](./apidocs)

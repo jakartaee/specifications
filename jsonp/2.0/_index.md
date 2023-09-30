@@ -7,7 +7,7 @@ Jakarta JSON Processing defines a Java(R) based framework for parsing, generatin
 querying JSON documents.
 
 * [Jakarta JSON Processing 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonp/releases/2.0.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta JSON Processing 2.0 Javadoc](./apidocs)
 * [Jakarta JSON Processing 2.0 TCK](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Adds JDK 11 support [Jakarta JSON Processing 2.0.1 TCK](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))

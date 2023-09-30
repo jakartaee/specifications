@@ -22,7 +22,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 # Details
 
 * [Jakarta Web Profile 11 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/web-profile-11)
-  * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee11/JakartaEE11ReleasePlan)
+  * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
 
 # Compatible Implementations
 

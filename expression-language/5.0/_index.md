@@ -47,7 +47,7 @@ documented behaviour of the StaticFieldELResolver.
 # Details
 
 * [Jakarta Expression Language 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.el/releases/5.0.0)
-    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Expression Language 5.0 Specification Document](./jakarta-expression-language-spec-5.0.pdf) (PDF)
 * [Jakarta Expression Language 5.0 Specification Document](./jakarta-expression-language-spec-5.0.html) (HTML)
 * [Jakarta Expression Language 5.0 Javadoc](./apidocs)

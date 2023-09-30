@@ -6,7 +6,7 @@ summary: "Release of the Jakarta EE 9.1 Web Profile"
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
 
 * [Jakarta Web Profile 9.1 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/web-profile-9.1)
-  * [Jakarta EE Platform 9.1 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9.1ReleasePlan)
+  * [Jakarta EE Platform 9.1 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9.1ReleasePlan)
 * [Jakarta Web Profile 9.1 Specification Document](./jakarta-webprofile-spec-9.1.pdf) (PDF)
 * [Jakarta Web Profile 9.1 Specification Document](./jakarta-webprofile-spec-9.1.html) (HTML)
 * [Jakarta Web Profile 9.1 Javadoc](./apidocs)
@@ -23,7 +23,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
   * [WildFly Preview 23.0.2.Final (JDK 8)](https://download.jboss.org/wildfly/23.0.2.Final/wildfly-preview-23.0.2.Final.zip)
   
 # Jakarta EE 9.1 Schedule
-* [Jakarta EE 9.1 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9.1#jakarta-ee-9.1-schedule)
+* [Jakarta EE 9.1 Schedule](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9.1#jakarta-ee-9.1-schedule)
 
 # Compatible Implementations
 * [Jakarta EE 9.1 Compatible Implementations](https://jakarta.ee/compatibility/#tab-9_1)

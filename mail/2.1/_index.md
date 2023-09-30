@@ -19,7 +19,7 @@ None
 # Details
 
 * [Jakarta Mail 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.mail/releases/2.1)
-    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Mail 2.1 Specification Document](./jakarta-mail-spec-2.1.pdf) (PDF)
 * [Jakarta Mail 2.1 Specification Document](./jakarta-mail-spec-2.1.html) (HTML)
 * [Jakarta Mail 2.1 Javadoc](./apidocs)
