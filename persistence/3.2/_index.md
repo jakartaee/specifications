@@ -77,7 +77,7 @@ methods should be used as direct replacement
 # Details
 
 * [Jakarta Persistence 3.2 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.2)
-    * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee11/JakartaEE11ReleasePlan)
+    * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
 * DRAFT 1
   * [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-DRAFT01.pdf) (PDF)
   * [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-DRAFT01.html) (HTML)
