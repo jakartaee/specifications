@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Platform 11 (Under development)"
-date: 2023-07-17
+date: 2023-10-06
 summary: "Release of the Jakarta EE 11 Platform"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
