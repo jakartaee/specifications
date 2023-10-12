@@ -28,9 +28,9 @@ Compatible (Reflection-Free)
 * [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 4.0 Specification Document](./jakarta-cdi-spec-4.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.0 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.11-dist.zip)
-([sig](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.11-dist.zip.sig),
-[sha](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.11-dist.zip.sha256),
+* [Jakarta Contexts Dependency Injection 4.0 TCK](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.12-dist.zip)
+([sig](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.12-dist.zip.sig),
+[sha](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.12-dist.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
