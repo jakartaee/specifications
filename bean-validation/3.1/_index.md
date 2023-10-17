@@ -1,9 +1,9 @@
 ---
-title: "Jakarta Bean Validation 3.1 (Under development)"
+title: "Jakarta Validation 3.1 (Under development)"
 date: 2023-07-18
 summary: "Release for Jakarta EE 11"
 ---
-Jakarta Bean Validation defines a metadata model and API for JavaBean and method validation.
+Jakarta Validation defines a metadata model and API for JavaBean and method validation.
 
 This release is targetting Jakarta EE 11 and is looking to add support for Records introduced by https://openjdk.org/jeps/395.
 
@@ -21,13 +21,13 @@ This release is targetting Jakarta EE 11 and is looking to add support for Recor
 
 # Details
 
-* [Jakarta Bean Validation 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.bean-validation/releases/3.1)
+* [Jakarta Validation 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.bean-validation/releases/3.1)
 <!--
   * [Jakarta EE Platform 11 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Bean Validation 3.1 Specification Document](jakarta-bean-validation-spec-3.1.pdf) (PDF)
-* [Jakarta Bean Validation 3.1 Specification Document](jakarta-bean-validation-spec-3.1.html) (HTML)
-* [Jakarta Bean Validation 3.1 Javadoc](./apidocs)
-* [Jakarta Bean Validation 3.1 TCK](https://download.eclipse.org/jakartaee/bean-validation/3.1/beanvalidation-tck-dist-3.1.0.zip)
+* [Jakarta Validation 3.1 Specification Document](jakarta-bean-validation-spec-3.1.pdf) (PDF)
+* [Jakarta Validation 3.1 Specification Document](jakarta-bean-validation-spec-3.1.html) (HTML)
+* [Jakarta Validation 3.1 Javadoc](./apidocs)
+* [Jakarta Validation 3.1 TCK](https://download.eclipse.org/jakartaee/bean-validation/3.1/beanvalidation-tck-dist-3.1.0.zip)
 ([sig](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.1.0.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.1.0.zip.sha256),
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
