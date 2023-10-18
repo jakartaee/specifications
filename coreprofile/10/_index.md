@@ -32,6 +32,7 @@ The goals for this release were:
   ([sig](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.1.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.1.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+   * Core Profile TCK's cdi-lite-tck-suite.xml out of sync with CDI's tck-tests.xml [#1196](https://github.com/jakartaee/platform-tck/issues/1196) [Jakarta Core Profile 10.0.3 TCK](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.3.zip)  ([sig](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.3.zip.sig),  [sha](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.3.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))  
 * Maven coordinates
     * [jakarta.platform:jakarta.jakartaee-core-api:jar:10.0.0](https://search.maven.org/artifact/jakarta.platform/jakartaee-core-api/10.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
