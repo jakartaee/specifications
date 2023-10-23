@@ -28,7 +28,7 @@ Chapter 17)
 
 * [Jakarta EE Platform 10 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/10)
   * [Staged Jakarta EE 10 Release Plan](https://docs.google.com/document/d/1U24VmTzAfXcn3WBnVcolb8vhZO-Pnk_bit0CKh_d2jM/edit#)
-  * [Final Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+  * [Final Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta EE Platform 10 Specification Document](./jakarta-platform-spec-10.0.pdf) (PDF)
 * [Jakarta EE Platform 10 Specification Document](./jakarta-platform-spec-10.0.html) (HTML)
 * [Jakarta EE Platform 10 Javadoc](./apidocs)
