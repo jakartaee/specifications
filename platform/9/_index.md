@@ -7,7 +7,7 @@ seo_title: "Jakarta EE Platform 9 | Standards for Jakarta EE applications"
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
 
 * [Jakarta EE Platform 9 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/9)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta EE Platform 9 Specification Document](./jakarta-platform-spec-9.pdf) (PDF)
 * [Jakarta EE Platform 9 Specification Document](./jakarta-platform-spec-9.html) (HTML)
 * [Jakarta EE Platform 9 Javadoc](./apidocs)
