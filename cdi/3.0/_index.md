@@ -7,7 +7,7 @@ summary: "Release for Jakarta EE 9"
 Jakarta Contexts Dependency Injection specifies a means for obtaining objects in such a way as to maximize reusability, testability and maintainability compared to traditional approaches such as constructors, factories, and service locators (e.g., JNDI).
 
 * [Jakarta Contexts Dependency Injection 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/3.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Contexts Dependency Injection 3.0 Specification Document](jakarta-cdi-spec-3.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 3.0 Specification Document](jakarta-cdi-spec-3.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 3.0 Javadoc](./apidocs)

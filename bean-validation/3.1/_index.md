@@ -23,7 +23,7 @@ This release is targetting Jakarta EE 11 and is looking to add support for Recor
 
 * [Jakarta Validation 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.bean-validation/releases/3.1)
 <!--
-  * [Jakarta EE Platform 11 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Validation 3.1 Specification Document](jakarta-bean-validation-spec-3.1.pdf) (PDF)
 * [Jakarta Validation 3.1 Specification Document](jakarta-bean-validation-spec-3.1.html) (HTML)
 * [Jakarta Validation 3.1 Javadoc](./apidocs)

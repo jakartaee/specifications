@@ -8,7 +8,7 @@ events—such as lifecycle events and timeout events—that occur on instances o
 and other managed classes.
 
 * [Jakarta Interceptors 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.interceptors/releases/2.0.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0.pdf) (PDF)
 * [Jakarta Interceptors 2.0 Specification Document](./interceptors-spec-2.0.html) (HTML)
 * [Jakarta Interceptors 2.0 Javadoc](./apidocs)

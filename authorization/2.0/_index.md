@@ -9,7 +9,7 @@ to transform security constraints for specific containers (such as Jakarta Servl
 these permissions.
 
 * [Jakarta Authorization 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jacc/releases/2.0.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Authorization 2.0 Specification Document](./authorization-spec-2.0.pdf) (PDF)
 * [Jakarta Authorization 2.0 Specification Document](./authorization-spec-2.0.html) (HTML)
 * [Jakarta Authorization 2.0 Javadoc](./apidocs)

@@ -28,7 +28,7 @@ This release removes deprecated code and provides any additional updates necessa
 
 The following can be uncommented and version information updated as they become available.
 
-  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.pdf) (PDF)
 * [Jakarta Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.html) (HTML)
 * [Jakarta Pages 3.1 Javadoc](./apidocs)

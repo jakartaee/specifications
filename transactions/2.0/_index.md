@@ -20,7 +20,7 @@ Jakarta Transactions - Need scope statement
 # Details
 
 * [Jakarta Transactions 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jta/releases/2.0.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Transactions 2.0 Specification Document](./jakarta-transactions-spec-2.0.pdf) (PDF)
 * [Jakarta Transactions 2.0 Specification Document](./jakarta-transactions-spec-2.0.html) (HTML)
 * [Jakarta Transactions 2.0 Javadoc](./apidocs)

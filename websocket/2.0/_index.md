@@ -7,7 +7,7 @@ Jakarta WebSocket defines a API for Server and Client Endpoints
 for the WebSocket protocol (RFC6455).
 
 * [Jakarta WebSocket 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta WebSocket 2.0 Specification Document](./websocket-spec-2.0.pdf) (PDF)
 * [Jakarta WebSocket 2.0 Specification Document](./websocket-spec-2.0.html) (HTML)
 * [Jakarta WebSocket 2.0 Javadoc](./apidocs)

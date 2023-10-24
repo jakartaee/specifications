@@ -20,7 +20,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
   * [Eclipse Glassfish 6.0.0 RC2](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-6.0.0-RC2.zip)
   
 # Jakarta EE 9 Schedule
-* [Jakarta EE 9 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
+* [Jakarta EE 9 Schedule](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
 
 # Compatible Implementations
 * [Jakarta EE 9 Compatible Implementations](https://jakarta.ee/compatibility/#tab-9)

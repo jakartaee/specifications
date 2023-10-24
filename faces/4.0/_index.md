@@ -45,7 +45,7 @@ support for internationalization and accessibility.
 # Details
 
 * [Jakarta Faces 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/4.0)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
 * [Jakarta Faces 4.0 Specification Document](./jakarta-faces-4.0.pdf) (PDF)
 * [Jakarta Faces 4.0 Specification Document](./jakarta-faces-4.0.html) (HTML)
 * [Jakarta Faces 4.0 Javadoc](./apidocs)

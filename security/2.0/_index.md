@@ -6,7 +6,7 @@ summary: "Release for Jakarta EE 9"
 Jakarta Security defines a standard for creating secure Jakarta EE applications in modern application paradigms.
 
 * [Jakarta Security 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.es/releases/2.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Security 2.0 Specification Document](./jakarta-security-spec-2.0.pdf) (PDF)
 * [Jakarta Security 2.0 Specification Document](./jakarta-security-spec-2.0.html) (HTML)
 * [Jakarta Security 2.0 Javadoc](./apidocs)

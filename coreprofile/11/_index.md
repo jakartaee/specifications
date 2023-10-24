@@ -20,7 +20,7 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
 # Details
 
 * [Jakarta EE Core Profile 11 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/core-profile-11)
-    * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee11/JakartaEE11ReleasePlan)
+    * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
 
 # Compatible Implementations
 

@@ -25,7 +25,7 @@ based on Jakarta SOAP with Attachments and Jakarta Web Services Metadata.
 # Details
 
 * [Jakarta XML Web Services 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/4.0-jakarta-xml-web-services)
-    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta XML Web Services 4.0 Specification Document](./jakarta-xml-ws-spec-4.0.pdf) (PDF)
 * [Jakarta XML Web Services 4.0 Specification Document](./jakarta-xml-ws-spec-4.0.html) (HTML)
 * [Jakarta XML Web Services 4.0 Javadoc](./apidocs)

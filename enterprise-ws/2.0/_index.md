@@ -21,7 +21,7 @@ This specification defines the Web Services for Jakarta EE architecture.
 # Details
 
 * [Jakarta Enterprise Web Services 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/2.0-enterprise-web-services)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Enterprise Web Services 2.0 Specification Document](./enterprise-ws-spec-2.0.pdf) (PDF)
 * [Jakarta Enterprise Web Services 2.0 Specification Document](./enterprise-ws-spec-2.0.html) (HTML)
 * Jakarta Enterprise Web Services 2.0 XML Schemas

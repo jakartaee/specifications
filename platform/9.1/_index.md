@@ -24,7 +24,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
   * [WildFly Preview 23.0.2.Final (JDK 8)](https://download.jboss.org/wildfly/23.0.2.Final/wildfly-preview-23.0.2.Final.zip)
 
 # Jakarta EE 9.1 Schedule
-* [Jakarta EE 9.1 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9.1#jakarta-ee-9.1-schedule)
+* [Jakarta EE 9.1 Schedule](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9.1#jakarta-ee-9.1-schedule)
 
 # Compatible Implementations
 * [Jakarta EE 9.1 Compatible Implementations](https://jakarta.ee/compatibility/#tab-9_1)

@@ -7,7 +7,7 @@ summary: "Release for Jakarta EE 9"
 Jakarta Mail defines a platform-independent and protocol-independent framework to build mail and messaging applications.
 
 * [Jakarta Mail 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.mail/releases/2.0.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Mail 2.0 Specification Document](./jakarta-mail-spec-2.0.pdf) (PDF)
 * [Jakarta Mail 2.0 Specification Document](./jakarta-mail-spec-2.0.html) (HTML)
 * [Jakarta Mail 2.0 Javadoc](./apidocs)

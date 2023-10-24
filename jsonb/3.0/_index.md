@@ -23,7 +23,7 @@ Jakarta JSON Binding defines a binding framework for converting Java(R) objects 
 # Details
 
 * [Jakarta JSON Binding 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsonb/releases/3.0.0)
-  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta JSON Binding 3.0 Specification Document](./jakarta-jsonb-spec-3.0.pdf) (PDF)
 * [Jakarta JSON Binding 3.0 Specification Document](./jakarta-jsonb-spec-3.0.html) (HTML)
 * [Jakarta JSON Binding 3.0 Javadoc](./apidocs)
