@@ -531,8 +531,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div id="header">
 <h1>Jakarta Data</h1>
 <div class="details">
-<span id="revnumber"> 1.0.0-b3,</span>
-<span id="revdate">July 25, 2023</span>
+<span id="revnumber"> 1.0.0-M1,</span>
+<span id="revdate">October 26, 2023</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -564,50 +564,75 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_repository">2. Repository</a>
 <ul class="sectlevel2">
 <li><a href="#_repositories_on_jakarta_data">2.1. Repositories on Jakarta Data</a></li>
-<li><a href="#_entity_classes">2.2. Entity Classes</a></li>
-<li><a href="#_query_methods">2.3. Query Methods</a>
+<li><a href="#_repository_interfaces">2.2. Repository interfaces</a>
 <ul class="sectlevel3">
-<li><a href="#_using_the_query_annotation">2.3.1. Using the Query Annotation</a></li>
-<li><a href="#_query_by_method">2.3.2. Query by Method</a></li>
-<li><a href="#_entity_property_names">2.3.3. Entity Property Names</a></li>
+<li><a href="#_lifecycle_methods">2.2.1. Lifecycle methods</a></li>
+<li><a href="#_annotated_query_methods">2.2.2. Annotated query methods</a></li>
+<li><a href="#_automatic_query_methods">2.2.3. Automatic query methods</a></li>
+<li><a href="#_resource_accessor_method">2.2.4. Resource accessor method</a></li>
+<li><a href="#_additional_examples">2.2.5. Additional examples</a></li>
 </ul>
 </li>
-<li><a href="#_special_parameter_handling">2.4. Special Parameter Handling</a></li>
-<li><a href="#_precedence_of_sort_criteria">2.5. Precedence of Sort Criteria</a>
+<li><a href="#_entity_classes">2.3. Entity Classes</a>
 <ul class="sectlevel3">
-<li><a href="#_sort_criteria_within_query_language">2.5.1. Sort Criteria within Query Language</a></li>
-<li><a href="#_static_mechanisms_for_sort_criteria">2.5.2. Static Mechanisms for Sort Criteria</a></li>
-<li><a href="#_dynamic_mechanisms_for_sort_criteria">2.5.3. Dynamic Mechanisms for Sort Criteria</a></li>
-<li><a href="#_examples_of_sort_criteria_precedence">2.5.4. Examples of Sort Criteria Precedence</a></li>
+<li><a href="#_programming_model_for_entity_data_in_jakarta_data">2.3.1. Programming Model for Entity Data in Jakarta Data</a></li>
+<li><a href="#_type_safe_access_to_entity_attributes">2.3.2. Type-safe Access to Entity Attributes</a></li>
 </ul>
 </li>
-<li><a href="#_keyset_pagination">2.6. Keyset Pagination</a>
+<li><a href="#_query_by_method_name">2.4. Query by Method Name</a>
 <ul class="sectlevel3">
-<li><a href="#_example_of_appending_to_queries_for_keyset_pagination">2.6.1. Example of Appending to Queries for Keyset Pagination</a></li>
-<li><a href="#_avoiding_missed_and_duplicate_results">2.6.2. Avoiding Missed and Duplicate Results</a></li>
-<li><a href="#_restrictions_on_use_of_keyset_pagination">2.6.3. Restrictions on use of Keyset Pagination</a></li>
-<li><a href="#_keyset_pagination_example_with_sorts">2.6.4. Keyset Pagination Example with Sorts</a></li>
+<li><a href="#_bnf_grammar_for_query_methods">2.4.1. BNF Grammar for Query Methods</a></li>
+<li><a href="#_entity_property_names">2.4.2. Entity Property Names</a></li>
+<li><a href="#_query_by_method_name_keywords">2.4.3. Query by Method Name Keywords</a></li>
+</ul>
+</li>
+<li><a href="#_special_parameter_handling">2.5. Special Parameter Handling</a></li>
+<li><a href="#_precedence_of_sort_criteria">2.6. Precedence of Sort Criteria</a>
+<ul class="sectlevel3">
+<li><a href="#_sort_criteria_within_query_language">2.6.1. Sort Criteria within Query Language</a></li>
+<li><a href="#_static_mechanisms_for_sort_criteria">2.6.2. Static Mechanisms for Sort Criteria</a></li>
+<li><a href="#_dynamic_mechanisms_for_sort_criteria">2.6.3. Dynamic Mechanisms for Sort Criteria</a></li>
+<li><a href="#_examples_of_sort_criteria_precedence">2.6.4. Examples of Sort Criteria Precedence</a></li>
+</ul>
+</li>
+<li><a href="#_keyset_pagination">2.7. Keyset Pagination</a>
+<ul class="sectlevel3">
+<li><a href="#_example_of_appending_to_queries_for_keyset_pagination">2.7.1. Example of Appending to Queries for Keyset Pagination</a></li>
+<li><a href="#_avoiding_missed_and_duplicate_results">2.7.2. Avoiding Missed and Duplicate Results</a></li>
+<li><a href="#_restrictions_on_use_of_keyset_pagination">2.7.3. Restrictions on use of Keyset Pagination</a></li>
+<li><a href="#_keyset_pagination_example_with_sorts">2.7.4. Keyset Pagination Example with Sorts</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#_interoperability_with_other_jakarta_ee_specifications">3. Interoperability with other Jakarta EE Specifications</a>
 <ul class="sectlevel2">
-<li><a href="#_jakarta_context_dependency_injection">3.1. Jakarta Context Dependency Injection</a>
+<li><a href="#_jakarta_contexts_and_dependency_injection">3.1. Jakarta Contexts and Dependency Injection</a></li>
+<li><a href="#_jakarta_data_providers">3.2. Jakarta Data Providers</a>
 <ul class="sectlevel3">
-<li><a href="#_cdi_extension">3.1.1. CDI Extension</a></li>
-</ul>
-</li>
-<li><a href="#_mapping_an_entity">3.2. Mapping an Entity</a>
-<ul class="sectlevel3">
-<li><a href="#_jakarta_data_provider_name">3.2.1. Jakarta Data Provider Name</a></li>
+<li><a href="#_using_cdi_extensions">3.2.1. Using CDI Extensions</a></li>
+<li><a href="#_mapping_an_entity">3.2.2. Mapping an Entity</a></li>
+<li><a href="#_jakarta_data_provider_name">3.2.3. Jakarta Data Provider Name</a></li>
 </ul>
 </li>
 <li><a href="#_jakarta_transactions_usage">3.3. Jakarta Transactions Usage</a></li>
 <li><a href="#_interceptor_annotations_on_repository_methods">3.4. Interceptor Annotations on Repository Methods</a></li>
 <li><a href="#_jakarta_persistence">3.5. Jakarta Persistence</a></li>
 <li><a href="#_jakarta_nosql">3.6. Jakarta NoSQL</a></li>
-<li><a href="#_jakarta_bean_validation">3.7. Jakarta Bean Validation</a></li>
+<li><a href="#_jakarta_bean_validation">3.7. Jakarta Bean Validation</a>
+<ul class="sectlevel3">
+<li><a href="#_avoiding_overlap_with_validation_from_jakarta_persistence">3.7.1. Avoiding Overlap with Validation from Jakarta Persistence</a></li>
+</ul>
+</li>
+<li><a href="#_portability_in_relational_databases">3.8. Portability in Relational Databases</a></li>
+<li><a href="#_portability_in_nosql_databases">3.9. Portability in NoSQL Databases</a>
+<ul class="sectlevel3">
+<li><a href="#_key_value_databases">3.9.1. Key-Value Databases</a></li>
+<li><a href="#_wide_column_databases">3.9.2. Wide-Column Databases</a></li>
+<li><a href="#_document_databases">3.9.3. Document Databases</a></li>
+<li><a href="#_graph_databases">3.9.4. Graph Databases</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -622,11 +647,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta Data
 
-Version: 1.0.0-b3
+Version: 1.0.0-M1
 
 Status: Draft
 
-Release: July 25, 2023</pre>
+Release: October 26, 2023</pre>
 </div>
 </div>
 </div>
@@ -730,23 +755,50 @@ such as the ability to compose custom query methods on a Repository interface wh
 will implement it.</p>
 </div>
 <div class="paragraph">
-<p>There is no doubt about the importance of data around the application. We often talk about a stateless application, where we delegate the application&#8217;s state to the database.</p>
+<p>There is no doubt about the importance of data within the context of an application. We often discuss the concept of a stateless application, where we delegate the management of the application&#8217;s state to the database.</p>
 </div>
 <div class="paragraph">
-<p>Dealing with a database is one of the biggest challenges within a software architecture. In addition to choosing one of several options on the market, it is necessary to consider the persistence integrations. Jakarta Data makes life easier for Java developers.</p>
+<p>Dealing with a database presents one of the most significant challenges within software architecture. Beyond selecting from the various database options available in the market, it&#8217;s essential to consider the intricacies of persistence integrations. Jakarta Data simplifies the lives of Java developers by providing a solution that streamlines data access and manipulation.</p>
+</div>
+<div class="paragraph">
+<p>In this context, a "domain-centric" approach refers to designing the application&#8217;s architecture primarily focusing on the domain model. It means that the application&#8217;s data and logic structure and organization revolve around the core domain concepts and business rules, ensuring that the domain model plays a central role in shaping the application&#8217;s structure.</p>
 </div>
 <div class="sect2">
 <h3 id="_goals">1.1. Goals</h3>
 <div class="paragraph">
-<p>Jakarta Data works in a tight integration between Java and a persistence layer, where it has the following specification goals:</p>
+<p>Jakarta Data is a pivotal solution that addresses a fundamental challenge in Java application development: the seamless integration of diverse data sources. This integration is crucial for applications with many databases and storage technologies.</p>
+</div>
+<div class="paragraph">
+<p>The primary problem Jakarta Data sets out to solve is the complexity and inconsistency that arises when Java applications encounter various database systems—some relational, some NoSQL, and others unique. Managing these diverse data sources can be daunting, often requiring developers to write specialized code for each storage technology.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta Data combines the concept of a persistence agnostic API with a domain-centric approach. This approach enables developers to work with different databases and storage engines while aligning their data access strategies with the core principles of a domain-centric architecture, where the domain model plays a central role in shaping the application&#8217;s structure.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta Data is guided by a set of clear and well-defined objectives to simplify data integration and enhance data access for Java developers. These objectives serve as the pillars of its design philosophy, ensuring that it addresses real-world challenges and provides concrete advantages to developers:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Be a persistence agnostic API. Therefore, through abstractions, it will connect different types of databases and storage sources.</p>
+<p><strong>Jakarta Data is engineered to tackle a fundamental problem:</strong> simplifying data access and manipulation within Java applications that interact with diverse databases and storage sources.</p>
 </li>
 <li>
-<p>Be a pluggable and extensible API. Even when the API won&#8217;t support a particular behavior of a storage engine, it might provide an extensible API to make it possible.</p>
+<p><strong>Jakarta Data is designed to be persistence agnostic.</strong> In this context, agnostic does not mean that you can switch the underlying persistence without changes but implies that Jakarta Data is not tied to a specific database technology. It offers a flexible, adaptable framework that allows you to work with the databases and storage sources that best suit your project&#8217;s needs. This agnostic approach ensures that Jakarta Data can cater to various use cases.</p>
+</li>
+<li>
+<p><strong>Enhancing a Domain-Centric Approach:</strong> Jakarta Data enhances the concept of a "persistence agnostic API" by incorporating a domain-centric approach. It enables developers to align their data access strategies with the core principles of a domain-centric architecture, where the domain model plays a central role in shaping the application&#8217;s structure.</p>
+</li>
+<li>
+<p><strong>Unified API:</strong> Jakarta Data provides a unified and standardized API for interacting with various data sources. This consistency simplifies development by allowing developers to use the same tools and practices regardless of the underlying database technology.</p>
+</li>
+<li>
+<p><strong>Pluggable and Extensible:</strong> Jakarta Data is designed to be pluggable and extensible. Even in cases where the API doesn&#8217;t directly support a specific behavior of a storage engine, Jakarta Data aims to provide an extensible API to enable developers to customize and adapt as needed.</p>
+</li>
+<li>
+<p><strong>Simplified and Domain-Centric Querying and Database Operations:</strong> Jakarta Data strongly emphasizes simplifying and aligning querying and database operations with your application&#8217;s domain model. By offering domain-centric query capabilities through annotations, a driver, or query-by-method, Jakarta Data strives to be compatible with multiple databases and inherently closer to your application&#8217;s domain logic. This approach ensures that your queries and operations are more versatile among various persistence engines, making working with different data sources easier while maintaining a cohesive and domain-focused codebase.</p>
+</li>
+<li>
+<p><strong>Seamless Integration:</strong> Jakarta Data enables seamless integration between Java applications and various persistence layers, making it easier for developers to work with different databases and storage sources without extensive customization.</p>
 </li>
 </ul>
 </div>
@@ -754,17 +806,20 @@ will implement it.</p>
 <div class="sect2">
 <h3 id="_non_goals">1.2. Non-Goals</h3>
 <div class="paragraph">
-<p>As with any software component, these decisions come with trade-offs and the following non-goals:</p>
+<p>In the development of any software component, important decisions are made to strike a balance between various considerations. It&#8217;s equally important to define what Jakarta Data does not aim to achieve—its non-goals:</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Provide specific features of Jakarta Persistence, Jakarta NoSQL, etc. Those APIs have their own specifications.</p>
+<p><strong>Specific Features of Jakarta Persistence, Jakarta NoSQL, etc., and Specializations:</strong> Jakarta Data does not intend to replicate or replace the specific features provided by other Jakarta specifications, such as Jakarta Persistence and Jakarta NoSQL, along with their associated specializations and extensions. These specifications have well-defined scopes and functionalities that cater to specific use cases. Jakarta Data operates with the understanding that it complements these specifications by providing a higher-level, agnostic API. It does not seek to duplicate its capabilities but aims to simplify data access and integration across diverse data sources. The specialized features, specializations, and extensions that address particular behaviors and use cases are crucial within the Jakarta ecosystem but distinct from Jakarta Data&#8217;s core API. Jakarta Data&#8217;s core primarily provides a persistence-agnostic data access and integration framework. It establishes a consistent foundation that abstracts the complexities of data sources and storage engines, offering developers a unified approach.</p>
 </li>
 <li>
-<p>Replace the Jakarta Persistence or Jakarta NoSQL specifications. Indeed, Jakarta Data will work as a complement to these specifications as an agnostic API.</p>
+<p><strong>Replacement of Jakarta Persistence or Jakarta NoSQL Specifications:</strong> Jakarta Data&#8217;s primary goal is not to replace or supersede the Jakarta Persistence or Jakarta NoSQL specifications. Instead, it works in harmony with these specifications, serving as an additional layer that abstracts the complexities of data access. Jakarta Data enhances the developer experience by offering a persistence-agnostic approach while leveraging the capabilities of Jakarta Persistence and Jakarta NoSQL. Its role is to complement and simplify, not replace, these established specifications."</p>
 </li>
-</ul>
+</ol>
+</div>
+<div class="paragraph">
+<p>These clarifications emphasize Jakarta Data&#8217;s role as a complementary and simplifying layer within the Jakarta ecosystem, highlighting that it does not aim to replicate existing functionality or replace established specifications.</p>
 </div>
 </div>
 <div class="sect2">
@@ -851,7 +906,7 @@ of the project committers and various contributors.</p>
 <h2 id="_repository">2. Repository</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In Domain-Driven Design (DDD) the repository pattern encapsulates the logic required to access data sources. The repository pattern consolidates data access functionality, providing better maintainability and decoupling the infrastructure or technology used to access databases from the domain model layer.</p>
+<p>In the realm of software design, the repository pattern encapsulates the logic required to access data sources. This pattern consolidates data access functionality, offering improved maintainability and decoupling the infrastructure or technology used to access databases from the domain model layer.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -859,44 +914,84 @@ of the project committers and various contributors.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This pattern focuses on the closest proximity of entities and hides where the data comes from.</p>
+<p>The Repository pattern is a fundamental concept within Jakarta Data that plays a central role in data access and management. Essentially, a repository is a mediator between your application&#8217;s domain logic and the underlying data storage, be it a relational database, NoSQL database, or any other data source.</p>
 </div>
 <div class="paragraph">
-<p>The Repository pattern is a well-documented way of working with a data source. In the book Patterns of Enterprise Application Architecture, Martin Fowler describes a repository as follows:</p>
-</div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>A repository performs the tasks of an intermediary between the domain model layers and data mapping, acting in a similar way to a set of domain objects in memory. Client objects declaratively build queries and send them to the repositories for answers. Conceptually, a repository encapsulates a set of objects stored in the database and operations that can be performed on them, providing a way that is closer to the persistence layer. Repositories also support the purpose of separating, clearly and in one direction, the dependency between the work domain and the data allocation or mapping.</p>
-</div>
-</blockquote>
+<p>In Jakarta Data, a Repository provides a structured and organized way to interact with your data. It abstracts data storage and retrieval complexities, allowing you to work with domain-specific objects and perform everyday data operations without writing low-level database queries.</p>
 </div>
 <div class="paragraph">
-<p>It also becomes very famous in Domain-Driven Design: Tackling Complexity in the Heart of Software by Eric Evans.</p>
+<p>As employed in Jakarta Data, the Repository pattern exhibits several key characteristics that make it a powerful tool for managing data access within your Java applications. These characteristics collectively define how repositories function within Jakarta Data, providing a structured and domain-centric approach to working with data. By understanding these key characteristics, you&#8217;ll gain insight into how repositories simplify data access and enhance the maintainability of your code.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Abstraction:</strong> Repositories abstract the details of how data is stored, enabling you to focus on your application&#8217;s domain logic without being tightly coupled to a specific database technology.</p>
+</li>
+<li>
+<p><strong>Structured Data Access:</strong> Jakarta Data repositories offer a structured and consistent way to perform data access operations. This structured approach ensures that your codebase remains organized and maintainable.</p>
+</li>
+<li>
+<p><strong>Domain-Centric:</strong> Repositories are designed to be domain-centric, aligning with your application&#8217;s domain model. It means that data access operations are closely tied to your business entities, making your code more intuitive and expressive.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In summary, the Repository pattern in Jakarta Data offers a structured and domain-centric approach to data access, providing a balance between abstraction and ease of use. It simplifies data access by encapsulating the details of the data source while aligning closely with your application&#8217;s domain model. It makes it a valuable choice for many Java developers, especially in projects where a clean separation of concerns and maintainable codebase are essential.</p>
 </div>
 <div class="sect2">
 <h3 id="_repositories_on_jakarta_data">2.1. Repositories on Jakarta Data</h3>
 <div class="paragraph">
-<p>A repository abstraction aims to significantly reduce the boilerplate code required to implement data access layers for various persistence stores.</p>
+<p>Within the context of Jakarta Data, a repository plays a pivotal role in simplifying data access layers for various persistence stores. It is a Java interface that acts as a gateway for accessing persistent data of one or more entity types. Repositories offer a streamlined approach to working with data by exposing operations for querying, retrieving, and modifying entity class instances that represent persistent instances of the entities they are associated with.</p>
 </div>
 <div class="paragraph">
-<p>The parent interface in Jakarta Data repository abstraction is DataRepository.</p>
+<p>Several vital characteristics define repositories:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Reduced Boilerplate Code:</strong> One of the primary goals of a repository abstraction is to significantly reduce the boilerplate code required to implement data access layers for diverse persistence stores. This reduction in repetitive code enhances code maintainability and developer productivity.</p>
+</li>
+<li>
+<p><strong>Jakarta Data Annotations:</strong> In Jakarta Data, repositories are defined as interfaces and are annotated with the <code>@Repository</code> annotation. This annotation serves as a marker to indicate that the interface represents a repository.</p>
+</li>
+<li>
+<p><strong>Built-In Interfaces:</strong> The Jakarta Data specification provides a set of built-in interfaces from which repositories can inherit. These built-in interfaces offer a convenient way to include a variety of pre-defined methods for common operations. They also declare the entity type to use for methods where the entity type cannot otherwise be inferred.</p>
+</li>
+<li>
+<p><strong>Data Retrieval and Modification:</strong> Repositories facilitate data retrieval and modification operations. This includes querying for persistent instances in the data store, creating new persistent instances in the data store, removing existing persistent instances, and modifying the state of persistent instances. Conventionally, these operations are named save and delete for modifying operations and find, count, and exists for retrieval operations.</p>
+</li>
+<li>
+<p><strong>Subset of Data:</strong> Repositories may expose only a subset of the full data set available in the data store, providing a focused and controlled access point to the data.</p>
+</li>
+<li>
+<p><strong>Entity Associations:</strong> Entities within a repository may have associations between them, especially in the case of relational data access. However, this specification does not define the semantics of associations between entities belonging to different repositories.</p>
+</li>
+<li>
+<p><strong>Stateless Repositories:</strong> Repositories are typically designed to be stateless. However, it&#8217;s important to note that this specification does not address the definition of repositories backed by Jakarta Persistence-style stateful persistence contexts.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>By default, Jakarta Data has support for two interfaces. However, the core is extensible. Therefore, a provider might extend one or more interfaces to a specific data target.</p>
+<p>Repositories in Jakarta Data serve as efficient gateways for managing and interacting with persistent data, offering a simplified and consistent approach to data access and modification within Java applications.</p>
+</div>
+<div class="paragraph">
+<p>The Jakarta Data specification supports two types of repositories.</p>
+</div>
+<div class="paragraph">
+<p>The first type consists of built-in interfaces that are parent interfaces from which repositories can inherit. At the root of this hierarchy is the <code>DataRepository</code> interface. These built-in interfaces are extensible, meaning a repository can extend one or more of them or none at all. When a repository extends a built-in interface, the method signatures copied from the built-in interfaces must retain the same behavior as defined in the built-in interfaces.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="data:image/png;base64,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" alt="Diagram" width="500" height="266">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAEKCAIAAABrLDC0AAAfy0lEQVR4Xu3cf3AU9f3H8QVFwFRoiFJ/URGaQaEDSin+GEawgHVkEAoVsVVkiGSU4YdYFcoIgqIDjDDQsaIobRlpqQx/8Ae/O3Uqgo442gAyo0CxgWCAGjiMBIPJ976vubfZbD/kLjS5vVw2z8cfzu7n1+5xn3vt53ZzenEAQOR4bgEAoPkj3AEggmrD/f8AAM0c4Q4AEUS4A0AEEe4AEEGEOwBEEOEOABFEuANABBHuABBBhDsARBDhDgARRLgDQAQR7gAQQYQ7AEQQ4Q4AEUS4A0AEEe4AEEGEOwBEEOEOABFEuANABBHuABBBhDsARBDhDgARRLgDQAQR7gAQQYQ7AEQQ4Q4AEUS4A0AEEe4AEEGEOwBEEOEOABFEuANABBHuABBBhDsQory8PA8tld59d0JkEOEOhEifcP+ThZZG734sFisvL6+oqKisrKyqqnLnR5hqT8PfcpsAaCjCvSXTu19cXFxaWlpWVqaIV7678yNMtafhb7lNADQU4d6S6d3fu3fvgQMHSkpKlO9av7vzI0y1p+FvuU0ANBTh3pLp3d+xY0dRUZHyXet3Ld7d+RGm2tPwt9wmABqKcG/J9O5v2rRJ+a71e3FxcSwWc+dHmGpPw99ymwBoKMK9JdO7v2bNmi1btuzatUuL97KyMnd+hKn2NPwttwmAhiLcWzLCHYiskMJ97ty5vwqYPn368uXLjx496rZrtOCBHn744QULFpw+fdptFL7bb79d/5LPP/+8W5HdCHcgskIK99tuu00jX3TRRe3bt/dqXHbZZW+88Ybb9DwfffSRmm3bts2tqIsd6OKLL27VqpUdJS8vTyHltgvZsGHDrrjiiiVLltju//QSmhDhDkRWqOE+efJkbZ86deof//hHt27dLIX37NnjN6uoqDh+/Hh1dXVtz3h89OjRavnYY48FC+NJGtuBFi9efPLkyVdffdXyfdWqVcE2VVVVJ06cCJYEnTlzRiO7pQk6nPq6pYkIOnbsmHMmQcleQjz5mKa8vPzs2bNuaWgIdyCyMhDu5tNPP7XkffDBB7X75JNP9uzZU0t7lXTt2nXdunXWbPbs2VbYpk2bDh06vPvuuykaxwPhHk/E9CWXXKLd119/3Wq//PLLsWPHtmvXzkus6P3vDXfddZcGf+6550aOHKkuGnnMmDFff/211cZiscLCQn3PUC/VDhkyRCdvVQcPHlRLLdLtDCdOnBgccNGiRfEkLyHFmNZ33rx5w4cPV5fVq1drQyUjRoywBjJlyhSV6AuBX5IWHuEORJWXqXCX66+/XoU/+clPtH3rrbfec889L7300v3336/Cjh07njt3TuUbN27Mz89XSZ8+fZ5++ulDhw6laBwPhLtWxLNmzfIS94K0rLbaO+64QyV9+/Z94oknLOI/+eQTv5eStFOnTtdee62XMHPmTOs1dOhQL3ET6fHHH7dz7ty5s74ZqGrQoEHaHTBgwLJlyyZNmqQcD56GrhbxJC8hxZjBO0vXXXfd2rVrdXHyEi/EnlLoEtW+fftbbrnFjpVGHuEORJWXwXAfN26cCq+88spgoZbbyjWV+8vSFPc0zm9sB1Jo2j135f7mzZutavv27V7C/v37tatFurZ1AfB73XTTTadOndJ14s4779Ruly5dVLVz507rtX79eu0qf1u3bq3d+fPnx2uuT7rGOI9tg+EeP+8lpB7T+l5zzTWfffaZtdfg9qzCvgq8+OKL2g5+X0kXj3AHosrLYLiPGjVKhf3799f2vn37JkyYoHi96qqrLPg++OADa3Z+uKdobAfq0aPHjTfeqI0bbrjBv2f9yiuvWOPeCbm5uV7NTSEnixWy2lXgfvvtt3bjXpcK/6msFuBeItC1/cILL9iYOTk5Wrn7XxFSh3vqMZ2+5oEHHlBhr169dO1R7nfv3j3FLf4G8wh3IKq8TIW7Mtei+aGHHjp69Gjnzp21PXjw4GeeecbuUCcL99SN/dsyX3zxRYcOHbQ9ZcoUq3rttde8hKlTp86sYc9anTydN2+edi+99NJ4zSVBQRyLxay2X79+Krnvvvts96233urZs6eN3K1bN8vc1OGeesw6w12Ba4eYPn26/vvyyy8Ha9PFI9yBqPIyEu5K9okTJ3qJ1fGHH364cOFCbefn5+sEqqqq7Cno+++/b43Hjh2rXS3zbTd1Yz/ctb106VIvkaFbt27V7nvvvWf56D9f9VkvXSpsd8iQIV7iLo2233nnHeu1cePGeOLM27Rpo925c+cGR1i+fLk1s+elTkA7LyH1mHWGu17p1Vdfbb3y8vLOnDkTrE0Xj3AHosoLM9x/9KMfKeaGDh1qS2+vJk83b97sJf5oZNq0ad27d7eqgoICu6NijxO1jp41a9bu3btTNw6GuwLRbncoFu0GyN13363ddu3ajRw58tlnn9V/J0yY4Pdq27at1vJ2L96ruQbo38Qew15++eVz5syxJXZubu7x48dV26NHj3HjxinZJ02apHJ9V7Bnnk5AOy8h9Zh1hrs89dRTdmL+Y9u08wh3IKq8cMLdfrFptJTu2rXrsGHD/v73v1ttdXX16NGj7e9DlP7jx4+3lkeOHFGtIkaBaw9OV6xYkbqxHcj/9dDOnTvtyapaxhN/Yl9YWKgQty6dOnWyLxOWpwMGDFDaeok/m5kxY4Z/U/vEiRNjxoyxE9Bo/fv3//jjj63q5ptvtr+6Ue3AgQM3bNhg5c4vVJ2XkHrMZL9u3bNnj5e4Mtk1IAwe4Q5ElRdOuF8IRYnC17ZLS0ud3xlp9/Dhw/5u6sapaUX/+eefB7v4i2UF+qFDh7755ptA8+9UVlYePHiwvLzcKVcXndiF/E8OnJcQTz5mnewxrP+n9GEg3IHIasJwb0LJ7oRkD13AOnbsqDW+/1unMBDuQGS1zHAvKCjo16/fypUr3YqssXDhQp3ho48+6lakFeEORFbLDHcYwh2ILMK9JSPcgcgi3Fsywh2ILMK9JSPcgcgi3Fsywh2ILMK9JSPcgcjKy8vz0FLl5OQQ7kBkxWKx4uLivXv37tixY9OmTWvQkugd1/uud19zQDPBnRxhItyBcJWXl5eWlmrhVlRUpM/5FrQkesf1vuvd1xzQTHAnR5gIdyBcFRUV+j5eUlKiT7hWcLvQkugd1/uud19zQDPBnRxhItyBcFVWVmrJps+21m76bn4ALYnecb3vevc1BzQT3MkRJsIdCFdVVZU+1Vq16eMdi8XK0JLoHdf7rndfc0AzwZ0cYSLcASCCCHcA6bE7wS1FEyHcAaTHjAS3FE2EcAeQBtXV1V0StOHWoSkQ7gDS4O2337afZWrDrUNTINwBpMEjjzxi4a4Ntw5NgXAH0Fhnz57Nzc21cNeGdt0WyDjCHUBjrVu3zpLdaNdtgYwj3AE01qhRo4Lhrl23BTKOcAfQKCdPnmzbtm0w3LWrQrcdMotwB9AoK1asCCa7UaHbDplFuANolEGDBrnR7nkqdNshswh3AA1XXFzcunVrN9o9T4Wqclsjgwh3AA23YMECN9drqMptjQwi3AE0XO/evd1Qr6EqtzUyiHAHkDbKdLcITYRwB5A2hHv2INwBpA3hnj0IdwBpQ7hnD8IdQNoQ7tmDcAeQNoR79iDcAaQN4Z49CHcAaUO4Zw/CHUDaEO7Zg3AHkDaEe/Yg3AGkDeGePQh3AGlDuGcPwh1A2hDu2YNwB5A2hHv2INwBpA3hnj0IdwBpQ7hnD8IdQNoQ7tmDcAeQNoR79iDcAaQN4Z49CHcAaUO4Zw/CHUDaEO7Zg3AHkDb5+fluEZoI4Q4AEUS4A0AEEe4AEEGEOwBEEOEOABFEuANABBHuABBBhDsARBDhDgARRLgDQAQR7gAQQYQ7AEQQ4Q4AEUS4AyHKy8vzgLpobrjTJa0IdyBE+gz7nywgSHMjFouVl5dXVFRUVlZWVVW5s6dxag/kb7lNADQU4Y5kNDeKi4tLS0vLysoU8cp3d/Y0Tu2B/C23CYCGItyRjObG3r17Dxw4UFJSonzX+t2dPY1TeyB/y20CoKEIdySjubFjx46ioiLlu9bvWry7s6dxag/kb7lNADQU4Y5kNDc2bdqkfNf6vbi4OBaLubOncWoP5G+5TQA0FOGOZDQ31qxZs2XLll27dmnxXlZW5s6exqk9kL/lNgHQUIQ7kiHcgWYs7HCfO3fur2oUFhauW7fuzJkzbqMLdvvtt+uEn3/+ebfivwUP+vDDDy9YsOD06dNuo/Bd4NlmLcIdaMbCDvfbbrtNh7jooou8Gv379/+/wAf7fzJs2LArrrhiyZIlbsV/s4NefPHFrVq1soPm5eUpm9x2IXPO9qOPPnrjjTe2bdv2362yF+EONGOZCffFixf/5z//mTp1qkXtv/71L79BRUXF8ePHq6urA52+o9M7duxYnVUODa5x/F3/oCdPnnz11VftoKtWrQr0iFdVVZ04cSJYEqSvF8EBg3S26uuWXsDZjh49Wqfx2GOPuRXJxzTl5eVnz551S8NHuAPNWMbCXdu///3vtd2mTRu7M/Pkk0/27NnTFvVdu3Zdt26d3+vgwYNjxozRstfaT5w40crvuuuuDh06LFq0yHZPnz6tC0Zubq6aaZF+zTXXfPXVV/H/PqiOdckll2j39ddft15ffvnl2LFj27Vr5yVW9FpNBwd/7rnnRo4cqS46MZ3D119/bbWxWKywsPCyyy5TL9UOGTLk008/taoLOdvZs2fbK1UDFb777rupx7S+8+bNGz58uLqsXr1aGyoZMWKENZApU6aoRF8I/JL0ItyBZiwz4T5hwoQ5c+b84Ac/UAS//PLLVnXrrbfec889L7300v333682HTt2PHfunFUNGjRIJQMGDFi2bNmkSZOUjMHRlL+2+/Of/9xi/d5771WzW265xQl3rYhnzZrlJe4LaVltve644w6V9O3b94knnrCI/+STT/xeStJOnTpde+21XsLMmTOt19ChQ7WrIH788cevv/56bXfu3FnfDOIXdrYbN27Mz8/Xbp8+fZ5++ulDhw6lHjN4Z+m6665bu3atLk5e4oUcPXo0nrhEtW/fXi/ZjhUGj3AHmi8vI+HuU8R/++23ThstrpViqvUXoZZ0Cn3nQWgwLnfu3Glj+lcLp5lC0+6567KxefNmq9q+fbv12r9/v3a1SNe2LgB+r5tuuunUqVO6zNx5553a7dKlSzxwrPXr12tX+du6dWvtzp8/P35hZxs/77ZM6jGtr76LfPbZZ9ZegyvNVWhfBV588UVtB7/upJ1HuAPNl5eRcB8/fvxvf/vbrl27anvw4MEWgvv27dOKXmF61VVXWcx98MEH1uuFF16wkpycHK2F/UV3MC7tJo988cUXNUf7jjXr0aPHjTfeqI0bbrjBv2f9yiuvWK/eCXZL58EHH/R7+VmskNWuAldXI7txr0uF/1RWC3AvEejxCzvb+HnhnnpMp6954IEHVNirVy9de5T73bt3T3GLv/E8wh1ovryMhLvd/i4qKrKl9IoVK44ePdq5c2cvkfXPPPOM3Y/2w13eeuutnj17Wmh269bNUiwYeRbTGtBuUwT5B1Xud+jQQdtTpkyxqtdee83GnDp16swa9qzVydN58+Zp99JLL40HjhWLxay2X79+Krnvvvtst96zjZ8X7qnHrDPclbN2iOnTp3t1fWVJL49wB5ovL4PhfvjwYbv9ooBbuHChNvLz83UOVVVV9szz/fffd7ovX77c4syeQAYj75133rGq3/3ud06v4EGXLl3qJTJ069at2n3vvfesl/981emlK43tDhkyxEvcpYkHjrVx40bt6ntAmzZttDt37tzgCCnOVsaOHavdUaNG2W7qMesMd/1DXX311dYrLy+vMb8YuBAe4Q40X15Gwr1Pnz7Dhg278sorLZi2b9++efNmL/EnItOmTevevbuVFxQU2P2THj16jBs3Tlk5adIklWv1bcvzYOTp5O3RaOvWrUeOHKnC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ARctWqTt2bNn2+tVAxW+++67qce0vrq4Dh8+XF1Wr16tDZWMGDHCGsiUKVNUoi8EfknaeYQ7EDYvU+GuZFcOegl/+tOfVHXrrbfec889L7300v33369C5f65c+esl91WvvTSS3/zm98MGjTIevlxeccdd2i3b9++TzzxhIXpJ598knpAOw3FWadOna699lobcObMmcFaP9yTje+Hu1bEuk5oW8GqZfWF9Ep26KFDh2pXQfz4449ff/312u7cubO+GajKXviAAQOWLVs2adIk5bh1CZ7txo0b8/PztdunT5+nn3760KFDqccM3lm67rrr1q5da2+KXoguqPHEJap9+/a33HKLHSskHuEOhM3LSLgrR5QviVjzbrrpJufWhFbBihtV2Wrxww8/tJZ//vOf44kbHVdeeaVXE+7bt2+32v3792tXy2EvsSRPMWC85jR06FOnTinx77zzTu126dIlWGtxmWJ8a6bQtHvuunhs3rzZRqi3V52H3rlzp/Vav369dpW/+rKi3fnz52vXclkXKuexrXMpcm7LpB7T+l5zzTWfffaZtdfgSnMV2leBF198UdvBLz1h8Ah3IGxeRsI9Jyena9euAwcOVMT4dyT27ds3YcIEpd5VV11lefTBBx+o/M0337RdW0vKD3/4Q68m3F955RWr7Z2Qm5ur7QcffDDFgP5p+IGo09CuUu/bb791alOMb8169Ohx4403auOGG27w71nX26vOQ9uNe10q/KeyWoB7iUDX9gsvvGBj6l9PK3f/K0LqcE89ptPXPPDAAyrs1auXrj3K/e7du6e4xZ8WHuEOhM3LSLjbPfcgBbet5QcPHvzMM8/YjWPL4j/84Q8WaiUlJdZY61yvJtxfe+01q506derMGqtWrUoxYPy8UJs3b56XuO1zfm2y8f1mixcv/uKLLzp06KDtKVOm2Aj19qrz0HZJUBDHYjGr7devn0ruu+8+233rrbd69uxpI3fr1s0yN3W4px6zznBXyNohpk+frv++/PLLwdoweIQ7EDavicJ94cKFKs/Pz9c5VFVV2cPJ999/Px64xaE2qlqyZIntWri/9957tus/yax3wHjNaSj0bXfIkCFe4lZJsNYiL9n4fjN7oLp06VIvkaFbt269kF51Hvqdd96xXhs3btSuvge0adNGu3Pnzg2OsHz5cmtmz0udgB47dqx2R40aZbupx6wz3PXPdfXVV1uvvLy8M2fOBGvD4BHuQNi8Jgr3zZs3e4m/5Zg2bVr37t0tWQoKChRGWp/6y9V27dppkWvx9Mc//tH63n333VY1cuTIZ599Vv+dMGFCigHjNafRtm1bLajthrgXeELrRF6d4/vNLNwViHa7Q7FoN0BS93IObdcA/fvbY9jLL798zpw5tsTOzc09fvy4anv06DFu3Dgl+6RJk1Su7wp2n8o5W3siqn+lWbNm7d69O/WYdYa7PPXUU3Zi/mPbUHmEOxA2L+Rwt797mVnzxyE+Jfjo0aPtzza09hw/fryFy5EjR1R76NChwYMH5+TkKJvWrl37ve99T1XasL6nTp0qLCxUXFqXTp06TZ48OfWAdhrKejX2En+7Yn/AYwM6v/msc3y/mf/roZ07d9qTVR0uRS/L0wEDBihtzz/0iRMnxowZY49/NVr//v0//vhjq7r55pvtr25UO3DgwA0bNli5c7ZKRl0zbIQVK1akHjPZr1v37NnjJa5Mdg0Im0e4A2HzQg731PSpVibadmlpqf/zn4MHD/rPA//6179aXP7zn/+0EqO18+eff+78YijZgD710pXjm2++ccrPV+f49Tq/l79YVqAnO3RlZaVecnl5uVOuLocPH76Q/8mBjqiWwZJkY9bJHsP6f0ofNsIdCF3ThnsyDz30kJacP/7xj+2PuEWLU7dRM5HsTkj20FWwY8eO+gf3f+sUNsIdCF12hvvatWt//etf9+rV6/vf/37v3r1nz5791VdfuY2aiYKCgn79+q1cudKtyBoLFy7UGT766KNuRWgIdyB02RnuiDbCHQgd4Y7MI9yB0BHuyDzCHQgd4Y7MI9yB0BHuyDzCHQgd4Y7MI9yB0OXl5XlAZuXk5BDuQOhisVhxcfHevXt37NixadOmNUD4NNM03zTrNPc0A91JWR/CHahfeXl5aWmpFlBFRUX6vG0BwqeZpvmmWae5pxnoTsr6EO5A/SoqKvS9uKSkRJ80raR2AeHTTNN806zT3NMMdCdlfQh3oH6VlZVaOukzpjWUviMfAMKnmab5plmnuacZ6E7K+hDuQP2qqqr06dLqSR+zWCxWBoRPM03zTbNOc08z0J2U9SHcASCCCHcAiCDCHQAiiHAHgAgi3AEgggh3AIggwh0AIohwB4AIItwBIIIIdwCIIMIdACKIcAeACCLcASCCCHcAiCDCHQAiiHAHgAgi3AEgggh3AIggwh0AIohwB4AIItwBIIIIdwCIIMIdACKIcAeACCLcASCCCHcAiKA6wh0AEBmEOwBEEOEOABH0/+BBDQEWpAkOAAAAAElFTkSuQmCC" alt="Diagram" width="500" height="266">
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Interface with generic CRUD operations on a repository for a specific type. This one we can see more often on several Java implementations.</p>
+<p>Interface with basic operations on a repository for a specific type. This one we can see more often on several Java implementations.</p>
 </li>
 <li>
-<p>Interface with generic CRUD operations using the pagination feature.</p>
+<p>Interface with basic operations using the pagination feature.</p>
 </li>
 </ul>
 </div>
@@ -909,7 +1004,7 @@ of the project committers and various contributors.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> CrudRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> BasicRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
 
 }</code></pre>
 </div>
@@ -920,93 +1015,1034 @@ of the project committers and various contributors.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">Garage</span> <span class="directive">extends</span> CrudRepository&lt;Car, <span class="predefined-type">String</span>&gt; {
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">Garage</span> <span class="directive">extends</span> BasicRepository&lt;Car, <span class="predefined-type">String</span>&gt; {
 
 }</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Jakarta Data empowers developers to take control of their data access and management by providing the flexibility to define two essential components:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Entity Classes and Mappings:</strong> Developers can define a set of entity classes and mappings tailored to a specific data store. These entities represent the data structure and schema, offering a powerful means to interact with the underlying data.</p>
+</li>
+<li>
+<p><strong>Repository Interfaces:</strong> Jakarta Data encourages the creation of one or more repository interfaces, following predefined rules that include the guidelines set forth by this specification. These interfaces are the gateways to accessing and manipulating the data, offering a structured and efficient way to perform data operations.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Subsequently, an implementation of Jakarta Data, specifically tailored to the chosen data store, assumes the responsibility of implementing each repository interface. This symbiotic relationship between developers and Jakarta Data ensures that data access and manipulation remain consistent, efficient, and aligned with best practices.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta Data empowers developers to shape their data access strategies by defining entity classes and repositories, with implementations seamlessly adapting to the chosen data store. This flexibility and Jakarta Data&#8217;s persistence-agnostic approach promote robust data management within Java applications.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, Jakarta Data allows for custom interfaces that do not extend any built-in interfaces. These non-built-in interfaces enable developers to define their repository structures and behavior.</p>
+</div>
+<div class="paragraph">
+<p>Non-built-in interfaces play a pivotal role in Jakarta Data, offering a powerful mechanism for creating custom repository interfaces that align seamlessly with your specific domain requirements. These custom interfaces provide a means to define your domain&#8217;s ubiquitous language precisely.</p>
+</div>
+<div class="paragraph">
+<p>In this context, database operations involving fundamental data changes, such as insertion, update, and removal, are realized through the strategic utilization of annotations like <code>Insert</code>, <code>Update</code>, <code>Delete</code>, and <code>Save</code>. These annotations enable the crafting of expressive and contextually meaningful repository methods, resulting in a repository that closely mirrors the semantics of your domain.</p>
+</div>
+<div class="paragraph">
+<p>For instance, consider the 'Garage' repository interface below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">Garage</span> {
+
+    <span class="annotation">@Insert</span>
+    Car park(Car car);
+
+    <span class="annotation">@Delete</span>
+    <span class="type">void</span> unpark(Car car);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, the <code>@Insert</code> annotation is used for the <code>park</code> method, allowing you to design a repository interface that encapsulates the essence of your domain. This approach fosters a shared understanding and more intuitive communication within your development team, ensuring that your database operations are integral to your domain&#8217;s language.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_entity_classes">2.2. Entity Classes</h3>
+<h3 id="_repository_interfaces">2.2. Repository interfaces</h3>
 <div class="paragraph">
-<p>Entity classes are simple Java objects with fields or accessor methods designating each entity property.</p>
-</div>
-<div class="paragraph">
-<p>You may use <code>jakarta.persistence.Entity</code> and the corresponding entity-related annotations of the Jakarta Persistence specification in the same package (such as <code>jakarta.persistence.Id</code> and <code>jakarta.persistence.Column</code>) to define and customize entities for relational databases.</p>
-</div>
-<div class="paragraph">
-<p>You may use <code>jakarta.nosql.Entity</code> and the corresponding entity-related annotations of the Jakarta NoSQL specification in the same package (such as <code>jakarta.nosql.Id</code> and <code>jakarta.nosql.Column</code>) to define and customize entities for NoSQL databases.</p>
-</div>
-<div class="paragraph">
-<p>Applications are recommended not to mix Entity annotations from different models for the sake of clarity and to allow for the Entity annotation to identify which provider is desired in cases where multiple types of Jakarta Data providers are available.</p>
-</div>
-<div class="paragraph">
-<p>Repository implementations will search for the Entity annotation(s) they support and ignore other annotations.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_query_methods">2.3. Query Methods</h3>
-<div class="paragraph">
-<p>In Jakarta Data, besides finding by an ID, custom queries can be written in two ways:</p>
+<p>A Jakarta Data repository is a Java interface annotated <code>@Repository</code>.
+A repository interface may declare:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>@Query</code> annotation: Defines a query string in the annotation.</p>
+<p><em>abstract</em> (non-<code>default</code>) methods, and</p>
 </li>
 <li>
-<p>Query by method name: Defines a query based on naming convention used in the method name.</p>
+<p><em>concrete</em> (<code>default</code>) methods.</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock warning">
+<div class="paragraph">
+<p>A concrete method may call other methods of the repository, including abstract methods.</p>
+</div>
+<div class="paragraph">
+<p>Every abstract method of the interface is usually either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>an entity instance <em>lifecycle method</em>,</p>
+</li>
+<li>
+<p>an <em>annotated query method</em>,</p>
+</li>
+<li>
+<p>an <em>automatic query method</em>, or</p>
+</li>
+<li>
+<p>a <em>resource accessor method</em>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A repository may declare lifecycle methods for a single entity type, or for multiple related entity types.
+Similarly, a repository might have query methods which return different entity types.</p>
+</div>
+<div class="paragraph">
+<p>A repository interface may inherit methods from a superinterface.
+A Jakarta Data implementation must treat inherited abstract methods as if they were directly declared by the repository interface.
+For example, a repository interface may inherit the <code>CrudRepository</code> interface defined by this specification.</p>
+</div>
+<div class="paragraph">
+<p>Repositories perform operations on entities. For repository methods that are annotated with <code>@Insert</code>, <code>@Update</code>, <code>@Save</code>, or <code>@Delete</code>, the entity type is determined from the method parameter type.  For <code>find</code> and <code>delete</code> methods where the return type is an entity, array of entity, or parameterized type such as <code>List&lt;MyEntity&gt;</code> or <code>Page&lt;MyEntity&gt;</code>, the entity type is determined from the method return type.  For <code>count</code>, <code>exists</code>, and other <code>delete</code> methods that do not return the entity or accept the entity as a parameter, the entity type cannot be determined from the method signature and a primary entity type must be defined for the repository.</p>
+</div>
+<div class="paragraph">
+<p>Users of Jakarta Data declare a primary entity type for a repository by inheriting from a built-in repository super interface, such as <code>BasicRepository</code>, and specifying the primary entity type as the first type variable.  The primary entity type is assumed for methods that do not otherwise specify an entity type, such as <code>countByPriceLessThan</code>. Methods that require a primary entity type raise <code>MappingException</code> if a primary entity type is not provided.</p>
+</div>
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Due to the variety of data sources, those resources might not work; it varies based on the Jakarta Data implementation and the database engine, which can provide queries on more than a Key or ID or not, such as a Key-value database.
+A Jakarta Data provider might go beyond what is required by this specification and support abstract methods which do not fall into any of the above categories.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Such functionality is not defined by this specification, and so programs with repositories which declare such methods are not portable between providers.</p>
+</div>
+<div class="paragraph">
+<p>The subsections below specify the rules that an abstract method declaration must observe so that the Jakarta Data implementation is able to provide an implementation of the abstract method.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If every abstract method of a repository complies with the rules specified below, then the Jakarta Data implementation must provide an implementation of the repository.</p>
+</li>
+<li>
+<p>Otherwise, if a repository declares an abstract method which does not comply with the rules specified below, or makes use of functionality which is not supported by the Jakarta Data implementation, then an error might be produced by the Jakarta Data implementation at build time or at runtime.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The portability of a given repository interface between Jakarta Data implementations depends on the portability of the entity types it uses.
+If an entity class is not portable between given implementations, then any repository which uses the entity class is also unportable between those implementations.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Additional portability guarantees may be provided by specifications which extend this specification, specializing to a given class of datastore.
 </td>
 </tr>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_using_the_query_annotation">2.3.1. Using the Query Annotation</h4>
+<h4 id="_lifecycle_methods">2.2.1. Lifecycle methods</h4>
 <div class="paragraph">
-<p>The <code>@Query</code> annotation supports providing a search expression as a String. The specification does not define the query syntax, which may vary between vendors and data sources, such as SQL, JPQL, Cypher, CQL, etc.</p>
+<p>A <strong>lifecycle method</strong> is an abstract method annotated with a <em>lifecycle annotation</em>.
+Lifecycle methods allow the program to make changes to persistent data in the data store.</p>
+</div>
+<div class="paragraph">
+<p>A lifecycle method must be annotated with a lifecycle annotation. The method signature of the lifecycle method, including its return type, must follow the requirements that are specified by the JavaDoc of the lifecycle annotation.</p>
+</div>
+<div class="paragraph">
+<p>Lifecycle methods follow the general pattern:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Lifecycle</span>
+ReturnType lifecycle(<span class="predefined-type">Entity</span> e);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>lifecycle</code> is the arbitrary name of the method, <code>Entity</code> is a concrete entity class or an <code>Iterable</code> or array of this entity, <code>Lifecycle</code> is a lifecycle annotation, and <code>ReturnType</code> is a return type that is permitted by the lifecycle annotation JavaDoc.</p>
+</div>
+<div class="paragraph">
+<p>This specification defines four built-in lifecycle annotations: <code>@Insert</code>, <code>@Update</code>, <code>@Delete</code>, and <code>@Save</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Insert</span>
+<span class="type">void</span> insertBook(<span class="predefined-type">Book</span> book);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Lifecycle methods are not guaranteed to be portable between all providers.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta Data providers must support lifecycle methods to the extent that the data store is capable of the corresponding operation. If the data store is not capable of the operation, the Jakarta Data provider must raise <code>UnsupportedOperationException</code> when the operation is attempted, per the requirements of the JavaDoc for the lifecycle annotation, or the Jakarta Data provider must report the error at compile time.</p>
+</div>
+<div class="paragraph">
+<p>There is no special programming model for lifecycle annotations.
+The Jakarta Data implementation automatically recognizes the lifecycle annotations it supports.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A Jakarta Data provider might extend this specification to define additional lifecycle annotations, or to support lifecycle methods with signatures other than the usual signatures defined above. For example, a provider might support "merge" methods declared as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Merge</span>
+<span class="predefined-type">Book</span> mergeBook(<span class="predefined-type">Book</span> book);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Such lifecycle methods are not portable between Jakarta Data providers.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_annotated_query_methods">2.2.2. Annotated query methods</h4>
+<div class="paragraph">
+<p>An <em>annotated query method</em> is an abstract method annotated by a <em>query annotation</em> type.
+The query annotation specifies a query in some datastore-native query language.</p>
+</div>
+<div class="paragraph">
+<p>Each parameter of an annotated query method must either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>have exactly the same name and type as a named parameter of the query,</p>
+</li>
+<li>
+<p>have exactly the same type and position within the parameter list of the method as a positional parameter of the query, or</p>
+</li>
+<li>
+<p>be of type <code>Limit</code>, <code>Pageable</code>, or <code>Sort</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A repository with annotated query methods with named parameters must be compiled so that parameter names are preserved in the class file (for example, using <code>javac -parameters</code>), or the parameter names must be specified explicitly using the <code>@Param</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>An annotated query method must not also be annotated with a lifecycle annotation.</p>
+</div>
+<div class="paragraph">
+<p>The return type of the annotated query method must be consistent with the result type of the query specified by the query annotation.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The result type of a query depends on datastore-native semantics, and so the return type of an annotated query method cannot be specified here.
+However, Jakarta Data implementations are strongly encouraged to support the following return types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>for a query which returns a single result of type <code>T</code>, the type <code>T</code> itself, or <code>Optional&lt;T&gt;</code>,</p>
+</li>
+<li>
+<p>for a query which returns many results of type <code>T</code>, the types <code>List&lt;T&gt;</code>, <code>Page&lt;T&gt;</code>, and <code>T[]</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Furthermore, implementations are encouraged to support <code>void</code> as the return type for a query which never returns a result.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This specification defines the built-in <code>@Query</code> annotation, which may be used to specify a query in an arbitrary query language understood by the Jakarta Data provider.</p>
+</div>
+<div class="paragraph">
+<p>For example, using a named parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="error">“</span>where title like :title order by title<span class="error">”</span>)
+Page&lt;<span class="predefined-type">Book</span>&gt; booksByTitle(<span class="predefined-type">String</span> title, <span class="predefined-type">Pageable</span> page);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, using a positional parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="error">“</span>delete from <span class="predefined-type">Book</span> where isbn = ?<span class="integer">1</span><span class="error">”</span>)
+<span class="type">void</span> deleteBook(<span class="predefined-type">String</span> isbn);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Programs which make use of annotated query methods are not portable between providers.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A Jakarta Data provider might extend this specification to define its own query annotation types.
+For example, a provider might define a <code>@SQL</code> annotation for declaring queries written in SQL.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>There is no special programming model for query annotations.
+The Jakarta Data implementation automatically recognizes the query annotations it supports.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_automatic_query_methods">2.2.3. Automatic query methods</h4>
+<div class="paragraph">
+<p>An <em>automatic query method</em> is an abstract method that either follows the Query by Method Name pattern where the Jakarta Data provider generates a query based on the name of the method, or follows a pattern for whereby the Jakarta Data provider automatically generates a find query based on the names of parameters that are supplied to the method, where the method has return type that identifies the entity, such as <code>E</code>, <code>Optional&lt;E&gt;</code>, <code>Page&lt;E&gt;</code>, or <code>List&lt;E&gt;</code>, where <code>E</code> is an entity class. Each parameter must either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>have exactly the same type and name as a persistent field or property of the entity class, or</p>
+</li>
+<li>
+<p>be of type <code>Limit</code>, <code>Pageable</code>, or <code>Sort</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A repository with automatic query methods that are based on parameters must either be compiled so that parameter names are preserved in the class file (for example, using <code>javac -parameters</code>), or the parameter names must be specified explicitly using the <code>@Param</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Book</span> bookByIsbn(<span class="predefined-type">String</span> isbn);
+
+<span class="predefined-type">List</span>&lt;<span class="predefined-type">Book</span>&gt; booksByYear(Year year, Sort order, Limit limit)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Automatic query methods <em>are</em> portable between providers.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_resource_accessor_method">2.2.4. Resource accessor method</h4>
+<div class="paragraph">
+<p>A <em>resource accessor method</em> is a method with no parameters which returns a type supported by the Jakarta Data provider.
+The purpose of this method is to provide the program with direct access to the data store.</p>
+</div>
+<div class="paragraph">
+<p>For example, if the Jakarta Data provider is based on JDBC, the return type might be <code>java.sql.Connection</code> or <code>javax.sql.DataSource</code>.
+Or, if the Jakarta Data provider is backed by Jakarta Persistence, the return type might be <code>jakarta.persistence.EntityManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>The Jakarta Data provider recognizes the connection types it supports and implements the method such that it returns an instance of the type of resource. If the resource type implements <code>java.lang.AutoCloseable</code> and the resource is obtained within the scope of a default method of the repository, then the Jakarta Data provider automatically closes the resource upon completion of the default method. If the method for obtaining the resource is invoked outside the scope of a default method of the repository, then the user is responsible for closing the resource instance.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A Jakarta Data implementation might allow a resource accessor method to be annotated with additional metadata providing information about the connection.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Connection</span> connection();
+
+<span class="keyword">default</span> <span class="type">void</span> cleanup() {
+    <span class="keyword">try</span> (<span class="predefined-type">Statement</span> s = connection().createStatement()) {
+        s.executeUpdate(<span class="string"><span class="delimiter">&quot;</span><span class="content">truncate table books</span><span class="delimiter">&quot;</span></span>);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A repository may have at most one resource accessor method.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_additional_examples">2.2.5. Additional examples</h4>
+<div class="paragraph">
+<p>The following examples demonstrate the use of annotated and automatic query methods with <code>CrudRepository</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> CrudRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
-  <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT p FROM Products p WHERE p.name=?1</span><span class="delimiter">&quot;</span></span>)  <span class="comment">// example in JPQL</span>
+  <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT p FROM Product p WHERE p.name=?1</span><span class="delimiter">&quot;</span></span>)  <span class="comment">// example in JPQL</span>
   Optional&lt;Product&gt; findByName(<span class="predefined-type">String</span> name);
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Jakarta Data also includes the <code>@Param</code> annotation to define a binder annotation, where as with the query expression, each vendor will express the syntax freely such as <code>?</code>, <code>@</code>, etc..</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> CrudRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
+  <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT p FROM Product p WHERE p.name=:name</span><span class="delimiter">&quot;</span></span>)  <span class="comment">// example in JPQL</span>
+  Optional&lt;Product&gt; findByName(<span class="annotation">@Param</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>) <span class="predefined-type">String</span> name);
+}</code></pre>
+</div>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> CrudRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
-  <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT p FROM Products p WHERE p.name=:name</span><span class="delimiter">&quot;</span></span>)  <span class="comment">// example in JPQL</span>
-  Optional&lt;Product&gt; findByName(<span class="annotation">@Param</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>) <span class="predefined-type">String</span> name);
+
+  <span class="comment">// Assumes that the Product entity has attributes: yearProduced</span>
+  <span class="predefined-type">List</span>&lt;Product&gt; findMadeIn(<span class="type">int</span> yearProduced, Sort... sorts);
+
+  <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT count(p) FROM Product p WHERE p.name=?1 AND p.status=?2</span><span class="delimiter">&quot;</span></span>)
+  <span class="type">int</span> countWithStatus(<span class="predefined-type">String</span> name, Status status);
+
+  <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">DELETE FROM Product p WHERE p.yearProduced=?1</span><span class="delimiter">&quot;</span></span>)
+  <span class="type">void</span> deleteOutdated(<span class="type">int</span> yearProduced);
 }</code></pre>
 </div>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_entity_classes">2.3. Entity Classes</h3>
+<div class="paragraph">
+<p>In Jakarta Data, an entity refers to a fundamental data representation and management building block. It can be conceptually understood in several aspects:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Entity Classes</strong>: Entity classes are simple Java objects equipped with fields or accessor methods that designate each property of the entity. Depending on your data storage needs, you may use annotations from the Jakarta Persistence specification, such as <code>jakarta.persistence.Entity</code>, <code>jakarta.persistence.Id</code>, and <code>jakarta.persistence.Column</code>, to define and customize entities for relational databases. Alternatively, for NoSQL databases, you can use annotations from the Jakarta NoSQL specification, including <code>jakarta.nosql.Entity</code>, <code>jakarta.nosql.Id</code>, and <code>jakarta.nosql.Column</code>.</p>
+</li>
+<li>
+<p><strong>Data Schema</strong>: Abstractly, an entity or entity type serves as a schema for data. It defines the structure and properties of the data it represents. This schema can be as simple as a set of typed fields, similar to the relational model, or more structured, as found in document data stores. The schema can be explicitly defined, as in the case of SQL Data Definition Language (DDL) declarations for relational tables, or it can be implicit, common in key/value stores.</p>
+</li>
+<li>
+<p><strong>Persistence and Representation</strong>: Entities are associated with persistent data, meaning the data outlives any specific Java process utilizing it. Each persistent instantiation of the schema is distinguishable by a unique identifier. For example, a row of a relational database table is identifiable by the value of its primary key. In Java, these entities are represented as classes, referred to as entity classes. It&#8217;s important to note that multiple instances of the entity class within a Java program can represent a single persistent instance of the schema.</p>
+</li>
+<li>
+<p><strong>Provider Differentiation</strong>: To maintain clarity and specify the desired provider when using Jakarta Data, it&#8217;s recommended that applications do not mix Entity annotations from different models. This practice allows the Entity annotation to indicate the desired provider, especially in cases where multiple types of Jakarta Data providers are available. A Jakarta Data provider must provide implementation of repositories for Entity types having the Entity annotations that it supports, ignoring Entity types only having identifiable Entity annotations that the Jakarta Data provider does not support. The latter are to be handled by other Jakarta Data providers that do support the other types of Entity annotations.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>An entity within Jakarta Data encompasses the Java class representing the data and the schema, persistence characteristics, and provider-specific annotations, all working together to simplify data access and management within Java applications. While a Jakarta Data provider might require a default constructor and work primarily with mutable entities, Jakarta Data allows for the use of immutable entity classes, which are best represented as Java records.</p>
+</div>
 <div class="sect3">
-<h4 id="_query_by_method">2.3.2. Query by Method</h4>
+<h4 id="_programming_model_for_entity_data_in_jakarta_data">2.3.1. Programming Model for Entity Data in Jakarta Data</h4>
+<div class="paragraph">
+<p>Jakarta Data does not define an entity model of its own, instead borrowing the entity models of other Jakarta standards (Jakarta Persistence and Jakarta NoSQL) and allowing for vendor-specific entity models to be used.  This section defines core concepts that entity models must follow in order to be used with Jakarta Data.  The entity model allows the user to define Java classes that represent data entities. These entities can be stored, retrieved, and manipulated in various databases, including key-value, wide-column, document, graph, and relational databases. A programming model for entities ensures that entity classes are well-defined and can be seamlessly integrated with different database technologies.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta Data places requirements on two types of fields within entity classes: basic fields and relation fields. Basic fields represent fundamental data types natively supported by Jakarta Data Providers. Support for basic types is mandatory for all Jakarta Data providers. On the other hand, Domain-Relation fields allow entities to interact with other domain classes or types, enriching data structures, but also making them more complex. Support for Domain-Relation fields varies depending on the Jakarta Data provider and the database type. Jakarta Data does not require support for Domain-Relation entity fields when using Graph databases.</p>
+</div>
+<div class="sect4">
+<h5 id="_basic_types">2.3.1.1. Basic Types</h5>
+<div class="paragraph">
+<p>A variety of basic types can be used for fields or properties of entity classes. The basic types include:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Basic Data Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primitive Types and Wrappers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All Java primitive types, such as int, double, boolean, etc., and their corresponding java.lang wrapper types (e.g., Integer, Double, Boolean).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents text data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LocalDate, LocalDateTime, LocalTime, Instant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represent date and time-related data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UUID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Universally Unique Identifier for identifying entities.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BigInteger, BigDecimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represent large integer and decimal numbers.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">byte[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents binary data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enum Types</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom enumerated types defined by developers.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Every entity in Jakarta Data must have a unique identifier composed of one or more supported basic types. This unique identifier is crucial for distinguishing individual entities in the database. Entity models that are used with Jakarta Data must define a way for developers to specify the unique identifier. Typically this is done with an <code>@Id</code> annotation, but other means are permitted, such as <code>@EmbeddedId</code> in Jakarta Persistence which defines a compound unique identifier based on an embeddable class, or by naming convention (for example, considering a property to be the unique identifier if it is named id or ends in Id).</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+It&#8217;s important to note that key-value, wide-column, document, and relational databases support Collection specializations and Maps of the basic types. However, these databases may have different serialization processes, impacting performance and causing impedance mismatch. Developers should consider these side effects when working with collections and maps in their entity models.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In addition to the basic types, entity models might also choose to support additional types that represent data in a domain-specific manner. These custom types may include complex data structures and objects. Entity models can choose to provide mechanisms to convert these custom types to the supported basic types.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_domain_relation_fields_in_jakarta_data">2.3.1.2. Domain-Relation Fields in Jakarta Data</h5>
+<div class="paragraph">
+<p>In Jakarta Data, the concept of "Domain-Relation" fields encompasses two distinct types: "component" and "association" fields. These fields enable developers to establish relationships between entities and other domain concepts, enriching the complexity and structure of data entities.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Component Fields</strong>: A component field represents a relationship where one entity is treated as a component of another entity. It implies that the component does not have a life cycle outside the entity to which it belongs. It is an embedded object that exists solely within the context of the owning entity.</p>
+</li>
+<li>
+<p><strong>Association Fields</strong>: Association fields represent semantically weak relationships, often called semantic dependencies, between objects that may not have a direct or strong connection. Unlike component fields, association fields may exist between entities that are otherwise unrelated. Associations can further specialize into aggregation, a specific form of association in which each object involved has its life cycle, yet a notion of ownership also exists.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Definition and implementation of Domain-Relation fields may vary across different Jakarta Data providers. Providers can create annotations, define conventions, or leverage standards like Jakarta Persistence to establish these relationships effectively.</p>
+</div>
+<div class="paragraph">
+<p>The topic of serialization of Domain-Relation fields within databases is crucial for maintaining data consistency and integrity. The next section discussed how Jakarta Data providers handle the persistence and serialization of Domain-Relation fields for various database types.</p>
+</div>
+<div class="paragraph">
+<p>In Jakarta Data, the serialization of Domain-Relation fields, such as components, can be achieved in two ways.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Merging Fields Directly in the Entity (Component Embedding):</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In this approach, a component merges its fields directly within the entity. From the perspective of the persistence layer, the component itself doesn&#8217;t exist as a separate table or document. Instead, it becomes part of the entity&#8217;s structure. This approach leads to a flat representation in the database.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">Address</span> {
+
+    <span class="directive">private</span> <span class="predefined-type">String</span> street;
+    <span class="directive">private</span> <span class="predefined-type">String</span> city;
+    <span class="directive">private</span> <span class="predefined-type">String</span> postalCode;
+}
+
+<span class="comment">//the entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Person</span> {
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+
+    <span class="directive">private</span> <span class="predefined-type">String</span> name;
+    <span class="directive">private</span> Address address;  <span class="comment">// This is a component field</span>
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The structure of the entity in a Document, Wide-Column, and Graph database will be like the JSON representation below. The JSON representation is for illustration; the actual representation is an implementation detail of the database. The JSON and the following SQL table are representations resulting from the Java classes.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="json">{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="integer">1</span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">John Doe</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">street</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">123 Main St</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">city</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Sampleville</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">postalCode</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">12345</span><span class="delimiter">&quot;</span></span>
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">id</th>
+<th class="tableblock halign-left valign-top">name</th>
+<th class="tableblock halign-left valign-top">street</th>
+<th class="tableblock halign-left valign-top">city</th>
+<th class="tableblock halign-left valign-top">postalCode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">John Doe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">123 Main St</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sampleville</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12345</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This approach allows for a flat and denormalized structure in the database, making it suitable for a variety of database types.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>* Second Approach: Storing Components in Separate Tables (Relational Databases) or as Subdocuments/UDTs (NoSQL Databases)*</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This approach is typically employed for more complex relationships and associations within the domain model, allowing for greater flexibility and scalability. It involves storing components, such as the <code>Passport</code> in the example, in separate tables for relational databases or as subdocuments or User-Defined Types (UDTs) for NoSQL databases. This method is suitable for scenarios where an association exists between one entity and another.</p>
+</div>
+<div class="paragraph">
+<p>For instance, consider the <code>Citizen</code> and <code>Passport</code> classes. In a relational database, this approach results in two separate tables, each representing an entity with its associated persistence context. In contrast, for a NoSQL database like a Document database, the <code>Passport</code> can still act as a component within the <code>Citizen</code> entity, signifying that a <code>Passport</code> is closely tied to a <code>Citizen</code>. However, the modeling may vary depending on the specific NoSQL database and its capabilities.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">Passport</span> {
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+    <span class="directive">private</span> <span class="predefined-type">String</span> passportNumber;
+    <span class="directive">private</span> LocalDate expirationDate;
+}
+
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Citizen</span> {
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+    <span class="directive">private</span> <span class="predefined-type">String</span> name;
+    <span class="directive">private</span> Passport passport; <span class="comment">// One-to-One relationship with Passport for relational database</span>
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here are some possible representations of the <code>Citizen</code> and <code>Passport</code> entities in table and JSON formats:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Citizen Table:</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">id (Primary Key)</th>
+<th class="tableblock halign-left valign-top">name</th>
+<th class="tableblock halign-left valign-top">passport_id (Foreign Key)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">John Doe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Passport Table:</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">id (Primary Key)</th>
+<th class="tableblock halign-left valign-top">passportNumber</th>
+<th class="tableblock halign-left valign-top">expirationDate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A123456</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2023-12-31</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>These tables represent the data from the JSON structure you provided earlier.
+In a relational database, the <code>Citizen</code> and <code>Passport</code> entities are stored in separate tables, connected by a foreign key relationship.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="json">{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="integer">1</span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">John Doe</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">passport</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">passportNumber</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">A123456</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">expirationDate</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">2023-12-31</span><span class="delimiter">&quot;</span></span>
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Entities in a domain model often have relationships with other entities. In some cases, an entity may have a collection of another type of entity, creating a one-to-many or many-to-many relationship. This scenario explores how such relationships are represented and managed in the context of Jakarta Data.</p>
+</div>
+<div class="paragraph">
+<p>Consider the example of an <code>Author</code> entity associated with multiple <code>Book</code> entities. This relationship allows an author to be linked to multiple books they have authored. While this structure remains relatively unchanged for NoSQL databases, it introduces specific considerations in relational databases, where it typically generates auxiliary tables to manage the relationship. We&#8217;ll explore these representations in both JSON and relational database formats.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Author</span> {
+
+    <span class="directive">private</span> <span class="predefined-type">UUID</span> id;
+
+    <span class="directive">private</span> <span class="predefined-type">String</span> name;
+
+    <span class="directive">private</span> <span class="predefined-type">List</span>&lt;<span class="predefined-type">Book</span>&gt; books;
+}
+
+<span class="comment">// If in a relational database, Book might also be an entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Book</span> {
+
+    <span class="comment">// This field might not be required for some NoSQL database modeling</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+
+    <span class="directive">private</span> <span class="predefined-type">String</span> title;
+
+    <span class="directive">private</span> <span class="predefined-type">String</span> category;
+
+    <span class="comment">// Other fields and methods</span>
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="json">{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">6f6d665d-5585-46cd-8b9b-61a559de0e13</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">John Doe</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">books</span><span class="delimiter">&quot;</span></span>: [
+    {
+      <span class="key"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Sample Book 1</span><span class="delimiter">&quot;</span></span>,
+      <span class="key"><span class="delimiter">&quot;</span><span class="content">category</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Fiction</span><span class="delimiter">&quot;</span></span>
+    },
+    {
+      <span class="key"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Sample Book 2</span><span class="delimiter">&quot;</span></span>,
+      <span class="key"><span class="delimiter">&quot;</span><span class="content">category</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Non-fiction</span><span class="delimiter">&quot;</span></span>
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the JSON representation, an <code>Author</code> entity can be associated with multiple <code>Book</code> entities within an array.</p>
+</div>
+<div class="paragraph">
+<p>Here are the tables with content based on the JSON data structure:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Author Table:</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">id (Primary Key)</th>
+<th class="tableblock halign-left valign-top">name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">John Doe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jane Smith</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Book Table:</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">id (Primary Key)</th>
+<th class="tableblock halign-left valign-top">title</th>
+<th class="tableblock halign-left valign-top">category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sample Book 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fiction</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sample Book 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Non-fiction</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Author_Book (Auxiliary) Table:</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">author_id (Foreign Key)</th>
+<th class="tableblock halign-left valign-top">book_id (Foreign Key)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>These tables represent the data from the JSON structure you provided earlier, illustrating a many-to-many relationship between authors and books using an auxiliary table.</p>
+</div>
+<div class="paragraph">
+<p>In a relational database, this relationship typically generates three tables: <code>Author</code>, <code>Book</code>, and an auxiliary table <code>Author_Book</code> to manage the many-to-many relationship between authors and books.</p>
+</div>
+<div class="paragraph">
+<p>In some scenarios, books can have multiple authors, and authors can contribute to several books, resulting in a many-to-many (N-N) cardinality relationship. Jakarta Data offers flexibility in representing and managing such complex relationships.</p>
+</div>
+<div class="paragraph">
+<p>This N-N relationship typically generates a dedicated table to manage the associations between books and authors in a relational database. However, NoSQL databases may take a different approach, especially in cases where denormalization and data duplication are favored for query-driven designs.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The key-value database might support these fields, generating a single BLOB value. However, the serialization process for such fields may vary depending on the Jakarta Data provider and the specific key-value database used.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Graph database is not required to support Domain-Relation types, but it might be used for aggregate query returns or as a read-only field.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_recursion_at_domain_relation_fields_in_jakarta_data">2.3.1.3. Recursion at Domain-Relation Fields in Jakarta Data</h5>
+<div class="paragraph">
+<p>In the context of Jakarta Data, the term "recursion" pertains to the ability to manage hierarchical or nested relationships between entities. This capability is essential when dealing with complex domain models involving associations, aggregations, or compositions between various entity types. Jakarta Data ensures these relationships are correctly mapped and maintained within the database, enabling consistent data retrieval and manipulation.</p>
+</div>
+<div class="paragraph">
+<p>For relational databases, Jakarta Data requires support of recursive relationships. If one entity type is associated with or contains another entity type, the Jakarta Data provider for relational databases must establish the required table structures and foreign key constraints to uphold these relationships. This approach guarantees data integrity and consistency when working with the database.</p>
+</div>
+<div class="paragraph">
+<p>For other types of databases, Jakarta Data does not require explicit support for recursive relationships.  In NoSQL databases, data is often stored in a denormalized or nested document format, making it more challenging to enforce strict hierarchical relationships. Instead, NoSQL databases may emphasize query-driven design rather than explicit mapping or management of recursive relationships.</p>
+</div>
+<div class="paragraph">
+<p>In instances where a Jakarta Data provider for NoSQL databases encounters a recursive relationship that it cannot support due to the specific characteristics of the database, it must throw a <code>jakarta.data.exceptions.MappingException</code> or an appropriate subclass of <code>MappingException</code>. This exception notifies developers that the database does not support the relationship.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_safe_access_to_entity_attributes">2.3.2. Type-safe Access to Entity Attributes</h4>
+<div class="paragraph">
+<p>Jakarta Data provides a static metamodel that allows entity attributes to be accessed by applications in a type-safe manner.</p>
+</div>
+<div class="paragraph">
+<p>For each entity class, the application developer can choose to define a separate class, referred to as the metamodel class, following a prescribed set of conventions. The application developer annotates the metamodel class with <code>@StaticMetamodel</code>, specifying the entity class as its <code>value</code>. The metamodel class must contain one or more fields of type <code>jakarta.data.model.Attribute</code> with modifiers <code>public</code>, <code>static</code>, <code>final</code>, with each field named after an entity attribute. The application sets the value of each field to an uninitialized instance obtained from the <code>Attribute.get</code> method. A Jakarta Data provider that provides a repository for the entity class must initialize each <code>Attribute</code> field for which the field name corresponds to an entity attribute name.</p>
+</div>
+<div class="sect4">
+<h5 id="_application_requirements_for_a_metamodel_class">2.3.2.1. Application Requirements for a Metamodel Class</h5>
+<div class="paragraph">
+<p>For each entity class for which the application wishes to access the metamodel,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The application defines a class (the metamodel class) and annotates it with the <code>@StaticMetamodel</code> annotation.</p>
+</li>
+<li>
+<p>The application specifies the <code>value</code> of the <code>@StaticMetamodel</code> annotation to be an entity class that the application uses in a repository as the result type of a find method or the parameter type of an insert, update, save, or delete method.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For each field of the metamodel class,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The field type must be <code>jakarta.data.model.Attribute</code>.</p>
+</li>
+<li>
+<p>The field must have the <code>public</code> modifier.</p>
+</li>
+<li>
+<p>The field must have the <code>static</code> modifier.</p>
+</li>
+<li>
+<p>The field must have the <code>final</code> modifier.</p>
+</li>
+<li>
+<p>The name of the field, ignoring case, must match the name of an entity attribute, with the <code>_</code> character in the field name delimiting the attribute names of hierarchical structures or relationships, such as embedded classes.</p>
+</li>
+<li>
+<p>The value of the field must be a unique instance obtained from the <code>Attribute.get</code> method.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the entity class has a unique identifier that is represented by a single entity attribute, then the application can also include a field that follows the above criteria, except that it has a field name of <code>id</code>.</p>
+</div>
+<div class="paragraph">
+<p>The application is not required to include fields for all entity attributes.</p>
+</div>
+<div class="paragraph">
+<p>The application can use the field values of the metamodel class to obtain artifacts relating to the entity attribute in a type-safe manner, for example, <code>Book_.title.asc()</code> or <code>Sort.asc(Book_.title.name())</code> rather than <code>Sort.asc("title")</code>.</p>
+</div>
+<div class="paragraph">
+<p>If the application defines repositories for the same entity class across multiple Jakarta Data providers, no guarantee is made of the order in which the fields of the metamodel class are assigned by the Jakarta Data providers.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_jakarta_data_provider_requirements_for_a_metamodel_class">2.3.2.2. Jakarta Data Provider Requirements for a Metamodel Class</h5>
+<div class="paragraph">
+<p>The Jakarta Data provider observes classes that are annotated with the <code>@StaticMetamodel</code> annotation. If the <code>value</code> of the <code>@StaticMetamodel</code> annotation is an entity class for which the Jakarta Data provides a repository implementation, then the Jakarta Data provider must initialize, via the <code>Attribute.init</code> method, the value of each field meeting the criteria that is defined in the "Application Requirements for a Metamodel Class" above with the corresponding entity attribute name. The value of the field that is named <code>id</code>, if present, must be initialized by the Jakarta Data provider with the attribute information for the unique identifier if the unique identifier is a single entity attribute.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_example_metamodel_class_and_usage">2.3.2.3. Example Metamodel Class and Usage</h5>
+<div class="paragraph">
+<p>Example entity class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Product</span> {
+  <span class="directive">public</span> <span class="type">long</span> id;
+  <span class="directive">public</span> <span class="predefined-type">String</span> name;
+  <span class="directive">public</span> <span class="type">float</span> price;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example metamodel class for the entity:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@StaticMetamodel</span>(Product.class)
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Product_</span> {
+  <span class="directive">public</span> <span class="directive">static</span> <span class="directive">final</span> <span class="predefined-type">Attribute</span> id = <span class="predefined-type">Attribute</span>.get();
+  <span class="directive">public</span> <span class="directive">static</span> <span class="directive">final</span> <span class="predefined-type">Attribute</span> name = <span class="predefined-type">Attribute</span>.get();
+  <span class="directive">public</span> <span class="directive">static</span> <span class="directive">final</span> <span class="predefined-type">Attribute</span> price = <span class="predefined-type">Attribute</span>.get();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example usage:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">List</span>&lt;Product&gt; found = products.findByNameContains(searchPattern,
+                                                  Product_.price.desc(),
+                                                  Product_.name.asc(),
+                                                  Product_.id.asc());</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_query_by_method_name">2.4. Query by Method Name</h3>
 <div class="paragraph">
 <p>The Query by method mechanism allows for creating query commands by naming convention.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> CrudRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> BasicRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
 
   <span class="predefined-type">List</span>&lt;Product&gt; findByName(<span class="predefined-type">String</span> name);
 
@@ -1020,17 +2056,116 @@ Due to the variety of data sources, those resources might not work; it varies ba
 </div>
 </div>
 <div class="paragraph">
-<p>The parsing query method name has two parts: the subject and the property.</p>
+<p>The parsing of query method names follows a specific format:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The method name consists of the subject, the predicate, and optionally the order clause.</p>
+</li>
+<li>
+<p>The subject, defines the action (such as <code>find</code> or <code>delete</code>) , optionally followed by an expression (for example, <code>First10</code>), followed by <code>By</code></p>
+</li>
+<li>
+<p>The predicate defines the query&#8217;s condition or filtering criteria, where multiple conditions are delimited by <code>And</code> or <code>Or</code>. For example, <code>PriceLessThanAndNameLike</code>.</p>
+</li>
+<li>
+<p>The order clause, which is optional, begins with <code>OrderBy</code> and consists of an ordered collection of entity attributes by which to sort results, delimited by <code>Asc</code> or <code>Desc</code> to specify the sort direction of the preceding attribute.</p>
+</li>
+<li>
+<p>The method name is formed by combining the subject, predicate, and order clause, in that order.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The first part defines the query&#8217;s subject or condition, and the second the condition value; both forms the predicate.</p>
+<p>Queries can also handle entities with related classes by specifying the relationship using dot notation.</p>
 </div>
 <div class="paragraph">
-<p>A predicate can refer only to a direct property of the managed entity. We also have the option to handle entities with another class on them.</p>
+<p>Example query methods:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findByName(String name)</code>: Find entities by the 'name' property.</p>
+</li>
+<li>
+<p><code>findByAgeGreaterThan(int age)</code>: Find entities where 'age' is greater than the specified value.</p>
+</li>
+<li>
+<p><code>findByAuthorName(String authorName)</code>: Find entities by the 'authorName' property of a related entity.</p>
+</li>
+<li>
+<p><code>findByCategoryNameAndPriceLessThan(String categoryName, double price)</code>: Find entities by 'categoryName' and 'price' properties, applying an 'And' condition.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_bnf_grammar_for_query_methods">2.4.1. BNF Grammar for Query Methods</h4>
+<div class="paragraph">
+<p>Query methods allow developers to create database queries using method naming conventions. These methods consist of a subject, predicate, and optional order clause. This BNF notation provides a structured representation for understanding and implementing these powerful querying techniques in your applications.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bnf">&lt;query-method&gt; ::= &lt;subject&gt; &lt;predicate&gt; [&lt;order-clause&gt;]
+&lt;subject&gt; ::= (&lt;action&gt; | &quot;find&quot; &lt;find-expression&gt;) &quot;By&quot;
+&lt;action&gt; ::= &quot;find&quot; | &quot;delete&quot; | &quot;update&quot; | &quot;count&quot; | &quot;exists&quot;
+&lt;find-expression&gt; ::= &quot;First&quot; [&lt;positive-integer&gt;]
+&lt;predicate&gt; ::= &lt;condition&gt; { (&quot;And&quot; | &quot;Or&quot;) &lt;condition&gt; }
+&lt;condition&gt; ::= &lt;property&gt; [&quot;IgnoreCase&quot;] [&quot;Not&quot;] [&lt;operator&gt;]
+&lt;operator&gt; ::= &quot;Contains&quot; | &quot;EndsWith&quot; | &quot;StartsWith&quot; | &quot;LessThan&quot;| &quot;LessThanEqual&quot; | &quot;GreaterThan&quot; | &quot;GreaterThanEqual&quot; | &quot;Between&quot; | &quot;Empty&quot; | &quot;Like&quot; | &quot;In&quot; | &quot;Null&quot; | &quot;True&quot; | &quot;False&quot;
+&lt;property&gt; ::= &lt;identifier&gt; | &lt;identifier&gt; &quot;_&quot; &lt;property&gt;
+&lt;identifier&gt; ::= &lt;word&gt;
+&lt;positive-integer&gt; ::= &lt;digit&gt; { &lt;digit&gt; }
+&lt;order-clause&gt; ::= &quot;OrderBy&quot; { &lt;order-item&gt; } ( &lt;order-item&gt; | &lt;property&gt; )
+&lt;order-item&gt; ::= &lt;property&gt; (&quot;Asc&quot; | &quot;Desc&quot;)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Explanation of the BNF elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;query-method&gt;</code>: Represents a query method, which consists of a subject, a predicate, and an optional order clause.</p>
+</li>
+<li>
+<p><code>&lt;subject&gt;</code>: Defines the action (e.g., "find" or "delete") followed by an optional expression and "By."</p>
+</li>
+<li>
+<p><code>&lt;action&gt;</code>: Specifies the action, such as "find" or "delete."</p>
+</li>
+<li>
+<p><code>&lt;find-expression&gt;</code>: Represents an optional expression for find operations, such as "First10."</p>
+</li>
+<li>
+<p><code>&lt;predicate&gt;</code>: Represents the query&#8217;s condition or filtering criteria, which can include multiple conditions separated by "And" or "Or."</p>
+</li>
+<li>
+<p><code>&lt;condition&gt;</code>: Specifies a property and an operator for the condition.</p>
+</li>
+<li>
+<p><code>&lt;operator&gt;</code>: Defines the operator for the condition, like "Between" or "LessThan."</p>
+</li>
+<li>
+<p><code>&lt;property&gt;</code>: Represents a property name, which can include underscores for nested properties.</p>
+</li>
+<li>
+<p><code>&lt;identifier&gt;</code>: Represents a word (e.g., property names, action names, etc.).</p>
+</li>
+<li>
+<p><code>&lt;positive-integer&gt;</code>: Represents a whole number greater than zero.</p>
+</li>
+<li>
+<p><code>&lt;order-clause&gt;</code>: Specifies the optional order clause, starting with "OrderBy" and followed by one or more order items.</p>
+</li>
+<li>
+<p><code>&lt;order-item&gt;</code>: Represents an ordered collection of entity attributes by which to sort results, including an optional "Asc" or "Desc" to specify the sort direction.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_entity_property_names">2.3.3. Entity Property Names</h4>
+<h4 id="_entity_property_names">2.4.2. Entity Property Names</h4>
 <div class="paragraph">
 <p>Within an entity, property names must be unique ignoring case. For simple entity properties, the field or accessor method name serves as the entity property name. In the case of embedded classes, entity property names are computed by concatenating the field or accessor method names at each level.</p>
 </div>
@@ -1040,7 +2175,7 @@ Due to the variety of data sources, those resources might not work; it varies ba
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">OrderRepository</span> <span class="directive">extends</span> CrudRepository&lt;Order, <span class="predefined-type">Long</span>&gt; {
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">OrderRepository</span> <span class="directive">extends</span> BasicRepository&lt;Order, <span class="predefined-type">Long</span>&gt; {
 
   <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT order FROM Order order WHERE order.address.zipCode=?1</span><span class="delimiter">&quot;</span></span>)
   <span class="predefined-type">List</span>&lt;Order&gt; withZipCode(ZipCode zipCode);
@@ -1049,30 +2184,170 @@ Due to the variety of data sources, those resources might not work; it varies ba
 </div>
 </div>
 <div class="paragraph">
-<p>For queries by method name, the resolution algorithm starts by interpreting the whole part (AddressZipCode) as the property and checks the domain class for a property with that name (uncapitalized). If the algorithm succeeds, it uses that property.</p>
+<p>The resolution algorithm for identifying properties in query methods by method name, with manual traversal points, is defined as follows:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">OrderRepository</span> <span class="directive">extends</span> CrudRepository&lt;Order, <span class="predefined-type">Long</span>&gt; {
-
-  Stream&lt;Order&gt; findByAddressZipCode(ZipCode zipCode);
-
-}</code></pre>
-</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Method Name Parsing</strong>:: The query method&#8217;s name is parsed to identify the property or properties being referenced. Method names in query methods typically follow a pattern of "findBy[Property]", where "[Property]" represents the name of the property you want to query by.</p>
+</li>
+<li>
+<p><strong>Property Extraction</strong>:: The property name is extracted from the method name by removing the "findBy" prefix. For example, in the query method <code>findByAddressZipCode</code>, the property name extracted is <code>AddressZipCode</code>.</p>
+</li>
+<li>
+<p><strong>Property Name Capitalization</strong>:: The extracted property name is treated as is, with its original capitalization. For example, if the property name is <code>AddressZipCode</code>, it remains in camel case.</p>
+</li>
+<li>
+<p><strong>Manual Traversal Points</strong>:: To resolve ambiguity or to specify traversal through nested properties, underscores (<code>_</code>) can be used within the method name. Each underscore represents a traversal point to access nested properties. For example, <code>findByAddress_ZipCode</code> explicitly indicates traversal to the <code>Address</code> object&#8217;s <code>ZipCode</code> property.</p>
+</li>
+<li>
+<p><strong>Domain Class Property Lookup</strong>: The framework checks the domain class associated with the repository for a property with the same name as the extracted property name (uncapitalized) in a case-insensitive manner. If the domain class has a property named <code>addressZipCode</code> or <code>addresszipcode</code>, this is considered a successful resolution.</p>
+</li>
+<li>
+<p><strong>Nested Property Handling</strong>:: If the extracted property name includes underscores (<code>_</code>) indicating nested traversal, the framework follows the specified path to resolve the property.</p>
+</li>
+<li>
+<p><strong>Resolution Outcome</strong>:: If the framework successfully identifies a property in the domain class or along the specified traversal path that matches the extracted property name, it uses that property in the query to filter data.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>Although this should work for most cases, to resolve this ambiguity, you can use <code>_</code> inside your method name to manually define traversal points.</p>
+<p>Users are encouraged to follow Java&#8217;s naming standards in formalizing Jakarta Data queries using name conventions, avoiding underscores in field names. The resolution algorithm for property identification relies on "findBy[Property]" naming, allowing manual traversal with underscores. Adhering to the camel case for property names ensures consistency and seamless query method naming in Jakarta Data, enabling effective data filtering and retrieval from domain classes.</p>
+</div>
+<div class="paragraph">
+<p><strong>Scenario 1: Person Repository with findByAddressZipCode(ZipCode zipCode)</strong></p>
+</div>
+<div class="paragraph">
+<p>In this scenario, we have the following data models:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">OrderRepository</span> <span class="directive">extends</span> CrudRepository&lt;Order, <span class="predefined-type">Long</span>&gt; {
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">class</span> <span class="class">Person</span> {
+  <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+  <span class="directive">private</span> Address address;
+}
 
-  Stream&lt;Order&gt; findByAddress_ZipCode(ZipCode zipCode);
-
+<span class="type">class</span> <span class="class">Address</span> {
+  <span class="directive">private</span> Zipcode zipcode;
 }</code></pre>
 </div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The query method <code>findByAddressZipCode</code> takes a <code>ZipCode</code> object as a parameter.</p>
+</li>
+<li>
+<p>The Property Resolution Algorithm will parse the method name and extract <code>AddressZipCode</code>.</p>
+</li>
+<li>
+<p>It will then attempt to resolve the property named <code>addressZipCode</code> in the <code>Person</code> class, following automatic class splitting by camel case.</p>
+</li>
+<li>
+<p>Since the <code>Person</code> class has an <code>Address</code> property, it will recursively follow the path to the <code>Address</code> class.</p>
+</li>
+<li>
+<p>In the <code>Address</code> class, it will identify the <code>zipcode</code> property and filter <code>Person</code> records based on the provided <code>Zipcode</code> object within the <code>Address</code> object.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Scenario 2: People Repository with findByAddressZipCode(String addressZipCode)</strong></p>
+</div>
+<div class="paragraph">
+<p>In this scenario, we have the following data model:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">class</span> <span class="class">Person</span> {
+  <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+  <span class="directive">private</span> <span class="predefined-type">String</span> addressZipCode;
+}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The query method <code>findByAddressZipCode</code> takes a <code>String</code> parameter named <code>addressZipCode</code>.</p>
+</li>
+<li>
+<p>The Property Resolution Algorithm will parse the method name and extract <code>AddressZipCode</code>.</p>
+</li>
+<li>
+<p>It will then attempt to resolve the property named <code>addressZipCode</code> in the <code>Person</code> class, following automatic class splitting by camel case.</p>
+</li>
+<li>
+<p>If a property named <code>addressZipCode</code> of type <code>String</code> exists in the <code>Person</code> class or its nested objects, the query will filter <code>Person</code> records based on the provided <code>addressZipCode</code> string.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Scenario 3: OrderRepository` Repository with `findByAddress_ZipCode(ZipCode zipCode)</strong></p>
+</div>
+<div class="paragraph">
+<p>In this scenario, we have the following data models:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">class</span> <span class="class">Order</span> {
+  <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+  <span class="directive">private</span> <span class="predefined-type">String</span> addressZipCode;
+  <span class="directive">private</span> Address address;
+}
+
+<span class="type">class</span> <span class="class">Address</span> {
+  <span class="directive">private</span> Zipcode zipcode;
+}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The query method <code>findByAddress_ZipCode</code> takes a <code>Zipcode</code> object as a parameter.</p>
+</li>
+<li>
+<p>The method name includes an underscore (<code>_</code>) indicating manual traversal points.</p>
+</li>
+<li>
+<p>The Property Resolution Algorithm will parse the method name and extract <code>Address_ZipCode</code>, recognizing the underscore as a traversal point.</p>
+</li>
+<li>
+<p>It will then attempt to resolve the property named <code>Address</code> within the <code>Order</code> class, followed by the <code>zipcode</code> property within the <code>Address</code> class, following manual traversal points.</p>
+</li>
+<li>
+<p>If properties <code>Address</code> and <code>ZipCode</code> are found in the appropriate classes or their nested objects, the query will filter <code>Order</code> records based on the provided <code>Zipcode</code> object within the <code>Address</code> object.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Scenario 4: People Repository with findByAddressZipCode(String addressZipCode)</strong></p>
+</div>
+<div class="paragraph">
+<p>In this scenario, we have the following data model:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">class</span> <span class="class">Person</span> {
+  <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+  <span class="directive">private</span> <span class="predefined-type">String</span> addressZipcode;
+}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The query method <code>findByAddressZipCode</code> takes a <code>String</code> parameter named <code>addressZipCode</code>.</p>
+</li>
+<li>
+<p>The Property Resolution Algorithm will parse the method name and extract <code>AddressZipCode</code>.</p>
+</li>
+<li>
+<p>It will then attempt to resolve the property named <code>addressZipcode</code> in the <code>Person</code> class, following automatic class splitting by case-insensitive.</p>
+</li>
+<li>
+<p>If a property named <code>addressZipCode</code> of type <code>String</code> exists in the <code>Person</code> class or its nested objects, the query will filter <code>Person</code> records based on the provided <code>addressZipCode</code> string.</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1089,43 +2364,11 @@ Define as a priority following standard Java naming conventions, camel case,  us
 <div class="paragraph">
 <p>In queries by method name, <code>Id</code> is an alias for the entity property that is designated as the id. Entity property names that are used in queries by method name must not contain reserved words.</p>
 </div>
-<div class="sect4">
-<h5 id="_query_methods_keywords">2.3.3.1. Query Methods Keywords</h5>
-<div class="paragraph">
-<p>The following table lists the subject keywords generally supported by Jakarta Data.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Keyword</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">General query method returning the repository type.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">deleteBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete query method returning either no result (void) or the delete count.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">countBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Count projection returning a numeric result.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">existsBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exists projection, returning typically a <code>boolean</code> result.</p></td>
-</tr>
-</tbody>
-</table>
+<div class="sect3">
+<h4 id="_query_by_method_name_keywords">2.4.3. Query by Method Name Keywords</h4>
 <div class="paragraph">
-<p>Jakarta Data implementations support the following list of predicate keywords to the extent that the database is capable of the behavior. A repository method will raise <code>jakarta.data.exceptions.DataException</code> or a more specific subclass of the exception if the database does not provide the requested functionality.</p>
+<p>The following table lists the query-by-method keywords that must be supported by Jakarta Data providers, except where explicitly indicated for a type of database.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1137,7 +2380,56 @@ Define as a priority following standard Java naming conventions, camel case,  us
 <tr>
 <th class="tableblock halign-left valign-top">Keyword</th>
 <th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Not Required For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">findBy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">General query method returning the repository type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deleteBy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete query method returning either no result (void) or the delete count.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">countBy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Count projection returning a numeric result.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">existsBy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exists projection, returning as a <code>boolean</code> result.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist NOTE">
+<div class="title">Note</div>
+<ul class="NOTE">
+<li>
+<p>The "Not Required For" column indicates the database types for which the respective keyword is not required or applicable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Jakarta Data implementations must support the following list of query-by-method keywords, except where indicated for a database type. A repository method must raise <code>java.lang.UnsupportedOperationException</code> or a more specific subclass of the exception if the database does not provide the requested functionality.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Keyword</th>
+<th class="tableblock halign-left valign-top">Description</th>
 <th class="tableblock halign-left valign-top">Method signature Sample</th>
+<th class="tableblock halign-left valign-top">Not Required For</th>
 </tr>
 </thead>
 <tbody>
@@ -1145,105 +2437,166 @@ Define as a priority following standard Java naming conventions, camel case,  us
 <td class="tableblock halign-left valign-top"><p class="tableblock">And</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The <code>and</code> operator.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByNameAndYear</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Or</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The <code>or</code> operator.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByNameOrYear</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Negates the condition that immediately follows the <code>Not</code> keyword. When used without a subsequent keyword, means not equal to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">findByNameNotLike</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Between</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is between the given values</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByDateBetween</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For Collection attributes, matches if the collection includes the value. For String attributes, a substring of the String must match the value, which can be a pattern.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">findByPhoneNumbersContains</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is an empty collection or has a null value.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">deleteByPendingTasksEmpty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EndsWith</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matches String values with the given ending, which can be a pattern.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">findByProductNameEndsWith</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For a query with ordered results, limits the quantity of results to the number following First, or if there is no subsequent number, to a single result.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">findFirst10By</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LessThan</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is less than the given value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByAgeLessThan</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GreaterThan</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is greater than the given value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByAgeGreaterThan</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LessThanEqual</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is less than or equal to the given value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByAgeLessThanEqual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GreaterThanEqual</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is greater than or equal to the given value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByAgeGreaterThanEqual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Like</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Finds string values "like" the given expression</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matches String values against the given pattern.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByTitleLike</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IgnoreCase</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Requests that string values be compared independent of case for query conditions and ordering.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByStreetNameIgnoreCaseLike</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">In</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is one of the values that are contained within the given list</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByIdIn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Null</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Finds results where the property has a null value.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByYearRetiredNull</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">StartsWith</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matches String values with the given beginning, which can be a pattern.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">findByFirstNameStartsWith</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">True</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Finds results where the property has a boolean value of true.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findBySalariedTrue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">False</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Finds results where the property has a boolean value of false.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByCompletedFalse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OrderBy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Specify a static sorting order followed by the property path and direction of ascending.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByNameOrderByAge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OrderBy____Desc</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Specify a static sorting order followed by the property path and direction of descending.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByNameOrderByAgeDesc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OrderBy____Asc</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Specify a static sorting order followed by the property path and direction of ascending.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByNameOrderByAgeAsc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OrderBy____(Asc|Desc)*(Asc|Desc)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Specify several static sorting orders</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">findByNameOrderByAgeAscNameDescYearAsc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
 </tr>
 </tbody>
 </table>
-<div class="sect5">
-<h6 id="_logical_operator_precedence">Logical Operator Precedence</h6>
+<div class="ulist NOTE">
+<div class="title">Note:</div>
+<ul class="NOTE">
+<li>
+<p>The "Not Required For" column indicates the database types for which the respective keyword is not required or applicable.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_patterns">2.4.3.1. Patterns</h5>
+<div class="paragraph">
+<p>Wildcard characters for patterns are determined by the data access provider. For relational databases, <code>_</code> matches any one character and <code>%</code> matches 0 or more characters.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_logical_operator_precedence">2.4.3.2. Logical Operator Precedence</h5>
 <div class="paragraph">
 <p>For relational databases, the logical operator <code>And</code> takes precedence over <code>Or</code>, meaning that <code>And</code> is evaluated on conditions before <code>Or</code> when both are specified on the same method. For other database types, the precedence is limited to the capabilities of the database. For example, some graph databases are limited to precedence in traversal order.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
 <div class="sect2">
-<h3 id="_special_parameter_handling">2.4. Special Parameter Handling</h3>
+<h3 id="_special_parameter_handling">2.5. Special Parameter Handling</h3>
 <div class="paragraph">
 <p>Jakarta Data also supports particular parameters to define pagination and sorting.</p>
 </div>
@@ -1253,7 +2606,7 @@ Define as a priority following standard Java naming conventions, camel case,  us
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> CrudRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> BasicRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
 
   <span class="predefined-type">List</span>&lt;Product&gt; findByName(<span class="predefined-type">String</span> name, <span class="predefined-type">Pageable</span> pageable);
 
@@ -1279,14 +2632,17 @@ Define as a priority following standard Java naming conventions, camel case,  us
 first20 = products.findByNameLike(name, pageable);</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Refer to the Jakarta Data module JavaDoc section on "Return Types for Repository Methods" for a listing of valid return types for methods with entity parameters.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_precedence_of_sort_criteria">2.5. Precedence of Sort Criteria</h3>
+<h3 id="_precedence_of_sort_criteria">2.6. Precedence of Sort Criteria</h3>
 <div class="paragraph">
 <p>The specification defines different ways of providing sort criteria on queries. This section discusses how these different mechanisms relate to each other.</p>
 </div>
 <div class="sect3">
-<h4 id="_sort_criteria_within_query_language">2.5.1. Sort Criteria within Query Language</h4>
+<h4 id="_sort_criteria_within_query_language">2.6.1. Sort Criteria within Query Language</h4>
 <div class="paragraph">
 <p>Sort criteria can be hard-coded directly within query language by making use of the <code>@Query</code> annotation. A repository method that is annotated with <code>@Query</code> with a value that contains an <code>ORDER BY</code> clause (or query language equivalent) must not provide sort criteria via the other mechanisms.</p>
 </div>
@@ -1295,19 +2651,19 @@ first20 = products.findByNameLike(name, pageable);</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_static_mechanisms_for_sort_criteria">2.5.2. Static Mechanisms for Sort Criteria</h4>
+<h4 id="_static_mechanisms_for_sort_criteria">2.6.2. Static Mechanisms for Sort Criteria</h4>
 <div class="paragraph">
 <p>Sort criteria is provided statically for a repository method by using the <code>OrderBy</code> keyword or by annotating the method with one or more <code>@OrderBy</code> annotations. The <code>OrderBy</code> keyword cannot be intermixed with the <code>@OrderBy</code> annotation or the <code>@Query</code> annotation. Static sort criteria takes precedence over dynamic sort criteria in that static sort criteria is evaluated first. When static sort criteria sorts entities to the same position, dynamic sort criteria is applied to further order those entities.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_dynamic_mechanisms_for_sort_criteria">2.5.3. Dynamic Mechanisms for Sort Criteria</h4>
+<h4 id="_dynamic_mechanisms_for_sort_criteria">2.6.3. Dynamic Mechanisms for Sort Criteria</h4>
 <div class="paragraph">
 <p>Sort criteria is provided dynamically to repository methods either via <code>Sort</code> parameters or via a <code>Pageable</code> parameter that has one or more <code>Sort</code> values. <code>Sort</code> and <code>Pageable</code> containing <code>Sort</code> must not both be provided to the same method.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_examples_of_sort_criteria_precedence">2.5.4. Examples of Sort Criteria Precedence</h4>
+<h4 id="_examples_of_sort_criteria_precedence">2.6.4. Examples of Sort Criteria Precedence</h4>
 <div class="paragraph">
 <p>The following examples work through scenarios where static and dynamic sort criteria are provided to the same method.</p>
 </div>
@@ -1336,7 +2692,7 @@ KeysetAwarePage&lt;User&gt; olderThan(<span class="type">int</span> age, <span c
 </div>
 </div>
 <div class="sect2">
-<h3 id="_keyset_pagination">2.6. Keyset Pagination</h3>
+<h3 id="_keyset_pagination">2.7. Keyset Pagination</h3>
 <div class="paragraph">
 <p>Keyset pagination aims to reduce missed and duplicate results across pages by querying relative to the observed values of entity properties that constitute the sorting criteria. Keyset pagination can also offer an improvement in performance because it avoids fetching and ordering results from prior pages by causing those results to be non-matching. A Jakarta Data provider appends additional conditions to the query and tracks keyset values automatically when <code>KeysetAwareSlice</code> or <code>KeysetAwarePage</code> are used as the repository method return type. The application invokes <code>nextPageable</code> or <code>previousPageable</code> on the keyset aware slice or page to obtain a <code>Pageable</code> which keeps track of the keyset values.</p>
 </div>
@@ -1346,7 +2702,7 @@ KeysetAwarePage&lt;User&gt; olderThan(<span class="type">int</span> age, <span c
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">CustomerRepository</span> <span class="directive">extends</span> CrudRepository&lt;Customer, <span class="predefined-type">Long</span>&gt; {
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">CustomerRepository</span> <span class="directive">extends</span> BasicRepository&lt;Customer, <span class="predefined-type">Long</span>&gt; {
   KeysetAwareSlice&lt;Customer&gt; findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(
                                  <span class="type">int</span> zipcode, <span class="predefined-type">Pageable</span> pageable);
 }</code></pre>
@@ -1388,7 +2744,7 @@ page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="i
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_example_of_appending_to_queries_for_keyset_pagination">2.6.1. Example of Appending to Queries for Keyset Pagination</h4>
+<h4 id="_example_of_appending_to_queries_for_keyset_pagination">2.7.1. Example of Appending to Queries for Keyset Pagination</h4>
 <div class="paragraph">
 <p>Without keyset pagination, a Jakarta Data provider that is based on Jakarta Persistence might compose the following JPQL for the <code>findByZipcodeOrderByLastNameAscFirstNameAscIdAsc</code> repository method from the prior example:</p>
 </div>
@@ -1413,7 +2769,7 @@ page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="i
 </div>
 </div>
 <div class="sect3">
-<h4 id="_avoiding_missed_and_duplicate_results">2.6.2. Avoiding Missed and Duplicate Results</h4>
+<h4 id="_avoiding_missed_and_duplicate_results">2.7.2. Avoiding Missed and Duplicate Results</h4>
 <div class="paragraph">
 <p>Because searching for the next page of results is relative to a last known position, it is possible with keyset pagination to allow some types of updates to data while pages are being traversed without causing missed results or duplicates to appear. If you add entities to a prior position in the traversal of pages, the shift forward of numerical position of existing entities will not cause duplicates entities to appear in your continued traversal of subsequent pages because keyset pagination does not query based on a numerical position. If you remove entities from a prior position in the traversal of pages, the shift backward of numerical position of existing entities will not cause missed entities in your continued traversal of subsequent pages because keyset pagination does not query based on a numerical position.</p>
 </div>
@@ -1422,7 +2778,7 @@ page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="i
 </div>
 </div>
 <div class="sect3">
-<h4 id="_restrictions_on_use_of_keyset_pagination">2.6.3. Restrictions on use of Keyset Pagination</h4>
+<h4 id="_restrictions_on_use_of_keyset_pagination">2.7.3. Restrictions on use of Keyset Pagination</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1453,14 +2809,14 @@ page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="i
 </div>
 </div>
 <div class="sect3">
-<h4 id="_keyset_pagination_example_with_sorts">2.6.4. Keyset Pagination Example with Sorts</h4>
+<h4 id="_keyset_pagination_example_with_sorts">2.7.4. Keyset Pagination Example with Sorts</h4>
 <div class="paragraph">
 <p>Here is an example where an application uses <code>@Query</code> to provide a partial query to which the Jakarta Data provider can generate and append additional query conditions and an <code>ORDER BY</code> clause.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">CustomerRepository</span> <span class="directive">extends</span> CrudRepository&lt;Customer, <span class="predefined-type">Long</span>&gt; {
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">CustomerRepository</span> <span class="directive">extends</span> BasicRepository&lt;Customer, <span class="predefined-type">Long</span>&gt; {
   <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">SELECT o FROM Customer o WHERE (o.totalSpent / o.totalPurchases &gt; ?1)</span><span class="delimiter">&quot;</span></span>)
   KeysetAwareSlice&lt;Customer&gt; withAveragePurchaseAbove(<span class="type">float</span> minimum, <span class="predefined-type">Pageable</span> pagination);
 }</code></pre>
@@ -1490,7 +2846,7 @@ page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="i
 <p>In this section, we will delve into the robust capabilities of Jakarta EE Data and its seamless integration with other Jakarta EE specifications. This integration offers a comprehensive data persistence and management solution in Java applications. When operating within a Jakarta EE product, the availability of other Jakarta EE Technologies depends on the profile. This section outlines how related technologies from other Jakarta EE Specifications work together with Jakarta Data to achieve interoperability.</p>
 </div>
 <div class="sect2">
-<h3 id="_jakarta_context_dependency_injection">3.1. Jakarta Context Dependency Injection</h3>
+<h3 id="_jakarta_contexts_and_dependency_injection">3.1. Jakarta Contexts and Dependency Injection</h3>
 <div class="paragraph">
 <p>Contexts and Dependency Injection (CDI) is a core specification in Jakarta EE that provides a powerful and flexible dependency injection framework for Java applications. CDI lets you decouple components and manage their lifecycle through dependency injection, enabling loose coupling and promoting modular and reusable code.</p>
 </div>
@@ -1500,7 +2856,7 @@ page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="i
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">CarRepository</span> <span class="directive">extends</span> CrudRepository&lt;Car, <span class="predefined-type">Long</span>&gt; {
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">CarRepository</span> <span class="directive">extends</span> BasicRepository&lt;Car, <span class="predefined-type">Long</span>&gt; {
 
   <span class="predefined-type">List</span>&lt;Car&gt; findByType(CarType type);
 
@@ -1510,7 +2866,7 @@ page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="i
 </div>
 </div>
 <div class="paragraph">
-<p>In the above example, we have a <code>CarRepository</code> interface that extends the <code>CrudRepository</code> interface provided by Jakarta EE Data. The <code>CrudRepository</code> interface offers a set of generic CRUD (Create, Read, Update, Delete) operations for entities.</p>
+<p>In the above example, we have a <code>CarRepository</code> interface that extends the <code>BasicRepository</code> interface provided by Jakarta EE Data. The <code>BasicRepository</code> interface offers a set of basic operations for entities.</p>
 </div>
 <div class="paragraph">
 <p>By annotating the <code>CarRepository</code> interface with <code>@Repository</code>, we indicate that it is a repository component managed by the Jakarta EE Data framework. It allows the Jakarta Data provider to automatically generate the necessary implementations for the defined methods, saving us from writing boilerplate code.</p>
@@ -1533,41 +2889,46 @@ repository.save(ferrari);</code></pre>
 <p>In the above snippet, we inject the <code>CarRepository</code> instance into our code using the <code>@Inject</code> annotation. Once injected, we can use the repository object to invoke various data access methods provided by the <code>CarRepository</code> interface, such as <code>save()</code>, <code>findByType()</code>, and <code>findByName()</code>.
 This integration between CDI and Jakarta EE Data allows for seamless management of repository instances and enables easy data access and manipulation within your Jakarta EE applications.</p>
 </div>
-<div class="sect3">
-<h4 id="_cdi_extension">3.1.1. CDI Extension</h4>
-<div class="paragraph">
-<p>Jakarta Data and CDI integrate through CDI extensions, which provide a mechanism to customize and enhance the behavior of CDI in your Jakarta EE application. Jakarta Data integration with Jakarta CDI applies to both CDI full and CDI Lite.</p>
-</div>
-<div class="paragraph">
-<p><strong>CDI Full Integration</strong>:</p>
-</div>
-<div class="paragraph">
-<p>For CDI Full integration, Jakarta Data providers must implement the <code>jakarta.enterprise.inject.spi.Extension</code> interface to produce the bean instances defined via the <code>@Repository</code> annotation and injected using the <code>@Inject</code> annotation. By implementing this interface, Jakarta Data providers can define custom logic to create and manage the repository instances within the CDI container.</p>
-</div>
-<div class="paragraph">
-<p>The CDI specification employs strategies to reduce conflicts between Jakarta EE Data providers. The primary approach is based on the entity annotation class, which ensures that different providers can coexist harmoniously within the same application. The secondary strategy is based on the Jakarta EE Data provider name, which further helps avoid conflicts and provides flexibility in choosing the desired provider for a specific repository.</p>
-</div>
-<div class="paragraph">
-<p><strong>CDI Lite Integration</strong>:</p>
-</div>
-<div class="paragraph">
-<p>CDI Lite is a lightweight version of CDI that focuses on compile-time exploration and build-time extensions. For CDI Lite integration, Jakarta Data providers must implement the <code>jakarta.enterprise.inject.build.compatible.spi.BuildCompatibleExtension</code> interface to produce the bean instances defined via the <code>@Repository</code> annotation and injected using the <code>@Inject</code> annotation.</p>
-</div>
-<div class="paragraph">
-<p>CDI Lite leverages compile-time and build-time exploration to ensure compatibility and reduce conflicts between Jakarta EE Data providers. The primary strategy for conflict reduction is similar to CDI Full and is based on the entity annotation class. The secondary approach relies on the Jakarta EE Data provider name, providing additional flexibility in choosing the appropriate provider for a given repository.</p>
-</div>
-<div class="paragraph">
-<p>CDI Full and CDI Lite approaches enable seamless integration between CDI and Jakarta EE Data. They provide mechanisms to produce and manage repository instances, ensuring that the desired implementation is available for injection when using the <code>@Inject</code> annotation.</p>
-</div>
-<div class="paragraph">
-<p>By leveraging CDI extensions and the provided strategies, Jakarta Data providers effectively integrate Jakarta EE Data with CDI and take advantage of its powerful dependency injection capabilities, promoting modular and reusable code.</p>
-</div>
-</div>
 </div>
 <div class="sect2">
-<h3 id="_mapping_an_entity">3.2. Mapping an Entity</h3>
+<h3 id="_jakarta_data_providers">3.2. Jakarta Data Providers</h3>
 <div class="paragraph">
-<p>A Jakarta Data provider is an implementation of Jakarta Data for one or more types of entities. An entity refers to a class that represents objects in a storage engine, such as SQL or NoSQL databases.</p>
+<p>Jakarta Data providers implement repository interfaces, performing queries and other operations related to entities per the rules of the Jakarta Data specification. A Jakarta Data provider makes the repository implementation available to the application via dependency injection. The Jakarta Data specification defines the rules by which Jakarta Data providers must abide to ensure that multiple Jakarta Data providers are able to coexist in a system without interfering or overlapping on the same injection points.</p>
+</div>
+<div class="sect3">
+<h4 id="_using_cdi_extensions">3.2.1. Using CDI Extensions</h4>
+<div class="paragraph">
+<p>In environments where CDI Full or CDI Lite is available, Jakarta Data providers can make use of CDI extensions - <code>jakarta.enterprise.inject.spi.Extension</code> and <code>jakarta.enterprise.inject.build.compatible.spi.BuildCompatibleExtension</code> - to discover interfaces that are annotated with <code>@Repository</code> and provide their implementations to be injected into injection points within the application. Jakarta Data does not mandate the use of a specific type of CDI extension but places the general requirement on the Jakarta Data provider to arrange for injection of the provided repository implementation into injection points having a type that is the repository interface and having no qualifiers (other than <code>Default</code> or <code>Any</code>).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+CDI Lite (corresponding to Jakarta Core profile) does not include a requirement to support <code>jakarta.enterprise.inject.spi.Extension</code>, which is part of CDI Full (Jakarta Web profile and Jakarta Platform). The <code>jakarta.enterprise.inject.build.compatible.spi.BuildCompatibleExtension</code> applies to both CDI Lite and CDI Full.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Jakarta Data providers that wish to provide both extensions can use CDI&#8217;s <code>@SkipIfPortableExtensionPresent</code> to prevent the <code>BuildCompatibleExtension</code> from colliding with the portable <code>Extension</code> when running in the Jakarta Web Profile or Jakarta Platform where CDI Full is present.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_an_entity">3.2.2. Mapping an Entity</h4>
+<div class="paragraph">
+<p>A Jakarta Data provider supplies an implementation of repository interfaces in Jakarta Data for one or more types of entities. An entity refers to a class that represents objects in a storage engine, such as SQL or NoSQL databases.</p>
 </div>
 <div class="paragraph">
 <p>The <code>jakarta.persistence.Entity</code> annotation from the Jakarta Persistence specification can be used by repository entity classes for Jakarta Data providers that are backed by a Jakarta Persistence provider. Other Jakarta Data providers must not support the <code>jakarta.persistence.Entity</code> annotation.</p>
@@ -1579,15 +2940,16 @@ This integration between CDI and Jakarta EE Data allows for seamless management 
 <p>Jakarta Data providers that define custom entity annotations must follow the convention that the class name of all supported entity annotation types ends with <code>Entity</code>. This enables Jakarta Data providers to identify if a repository entity class contains entity annotations from different Jakarta Data providers so that the corresponding <code>Repository</code> can be ignored by Jakarta Data providers that should not provide it.</p>
 </div>
 <div class="paragraph">
-<p>Jakarta Data provider CDI Extensions must ignore all <code>Repository</code> annotations where annotations for the corresponding entity are available at run time and none of the entity annotations are supported by the Jakarta Data provider. Ignoring these <code>Repository</code> annotations allows other Jakarta Data providers to handle them.</p>
+<p>Jakarta Data providers must ignore all <code>Repository</code> annotations where annotations for the corresponding entity are available at run time and none of the entity annotations are supported by the Jakarta Data provider. Ignoring these <code>Repository</code> annotations allows other Jakarta Data providers to handle them.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_jakarta_data_provider_name">3.2.1. Jakarta Data Provider Name</h4>
+<h4 id="_jakarta_data_provider_name">3.2.3. Jakarta Data Provider Name</h4>
 <div class="paragraph">
-<p>The entity annotation class is the primary strategy to avoid conflicts between Jakarta Data providers. In most cases, it is sufficient to differentiate between providers. However, there may be situations where more than the entity annotation class is needed. In such cases, the application can specify the name of the desired Jakarta Data provider using the optional <code>provider</code> attribute of the <code>Repository</code> annotation.</p>
+<p>The entity annotation class is the primary strategy to avoid conflicts between Jakarta Data providers. In most cases, it is sufficient to differentiate between providers. In situations where multiple Jakarta Data providers support the same entity annotation class, the application can specify the name of the desired Jakarta Data provider using the optional <code>provider</code> attribute of the <code>Repository</code> annotation.</p>
 </div>
 <div class="paragraph">
-<p>To ensure compatibility and prevent conflicts, CDI extensions of Jakarta Data providers must disregard any <code>Repository</code> annotations that specify a different provider&#8217;s name through the <code>Repository.provider()</code> attribute. By ignoring these annotations, CDI extensions allow other Jakarta Data providers to handle them appropriately and avoid any conflicts that may arise.</p>
+<p>To ensure compatibility and prevent conflicts, Jakarta Data providers must disregard all <code>Repository</code> annotations that specify a different provider&#8217;s name through the <code>Repository.provider()</code> attribute. By ignoring these annotations, Jakarta Data providers allow other Jakarta Data providers to handle them.</p>
 </div>
 </div>
 </div>
@@ -1636,18 +2998,17 @@ This integration between CDI and Jakarta EE Data allows for seamless management 
 <p>Integrating with Jakarta Validation ensures data consistency within the Java layer. By applying validation rules to the data, developers can enforce constraints and business rules, preventing invalid or inconsistent information from being processed or persisted.</p>
 </div>
 <div class="paragraph">
-<p>Incorporating Jakarta Validation into your Jakarta Data applications helps enforce data consistency at the Java layer. When you invoke the <code>save</code> or <code>saveAll</code> method on repositories, the Jakarta Data provider ensures that the validation rules defined in the entity are automatically executed prior to updating the database if a Jakarta Validation provider is present. For instance, when persisting a <code>Student</code> object, the <code>name</code> field will be validated to ensure it is not blank.</p>
+<p>Using Jakarta Validation brings several advantages. It helps maintain data integrity, improves data quality, and enhances the reliability of the application. Catching validation errors early in the Java layer can identify and resolve potential issues before further processing or persistence occurs. Additionally, Jakarta Validation allows for declarative validation rules, simplifying the validation logic and promoting cleaner and more maintainable code.</p>
 </div>
 <div class="paragraph">
-<p>Using Jakarta Validation brings several advantages. It helps maintain data integrity, improves data quality, and enhances the reliability of the application. Catching validation errors early in the Java layer can identify and resolve potential issues before further processing or persistence occurs. Additionally, Jakarta Validation allows for declarative validation rules, simplifying the validation logic and promoting cleaner and more maintainable code.</p>
+<p>In Jakarta Data, repository methods participate in method validation as defined by the section "Method and constructor validation" of the Jakarta Validation specification. Method validation includes validation of constraints on method parameters and results. The <code>jakarta.validation.Valid</code> annotation is used to opt in to cascading validation that validates constraints that are found on an object that is supplied as a parameter or returned as a result.</p>
 </div>
 <div class="paragraph">
 <p>The following code snippet demonstrates the usage of Jakarta Validation annotations in the <code>Student</code> entity class:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Schema</span>(name = <span class="string"><span class="delimiter">&quot;</span><span class="content">Student</span><span class="delimiter">&quot;</span></span>)
-<span class="annotation">@Entity</span>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Student</span> {
 
     <span class="annotation">@Id</span>
@@ -1668,21 +3029,100 @@ This integration between CDI and Jakarta EE Data allows for seamless management 
 <p>In this example, the <code>name</code> field is annotated with <code>@NotBlank</code>, indicating that it must not be blank. The <code>age</code> field is annotated with both <code>@Positive</code> and <code>@Min(18)</code>, ensuring it is a positive integer greater than or equal to 18.</p>
 </div>
 <div class="paragraph">
-<p>The <code>School</code> repository interface, shown below, utilizes the validation rules defined in the <code>Student</code> entity:</p>
+<p>The <code>School</code> repository interface, shown below, uses the <code>jakarta.validation.Valid</code> annotation to cause the constraints from the <code>Student</code> entity to be validated during the <code>save</code> operation, whereas the validation constraints are not applied to the <code>Student</code> entities returned as a result of the <code>findByAgeLessThanEqual</code> operation because the <code>findByAgeLessThanEqual</code> method does not include a <code>jakarta.validation.Valid</code> annotation that applies to the return value.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">School</span> <span class="directive">extends</span> PageableRepository&lt;Student, <span class="predefined-type">String</span>&gt; {
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">School</span> <span class="directive">extends</span> DataRepository&lt;Student, <span class="predefined-type">String</span>&gt; {
+    <span class="type">void</span> save(<span class="annotation">@Valid</span> Student s);
 
+    <span class="predefined-type">List</span>&lt;Student&gt; findByAgeLessThanEqual(<span class="annotation">@Min</span>(<span class="integer">18</span>) <span class="type">int</span> age);
 }</code></pre>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_avoiding_overlap_with_validation_from_jakarta_persistence">3.7.1. Avoiding Overlap with Validation from Jakarta Persistence</h4>
 <div class="paragraph">
-<p>In the Jakarta Data specification, when integrating with Jakarta Bean Validation, the validation process must occur for <code>save</code> and <code>saveAll</code> methods of Repository interfaces prior to making inserts or updates in the database. It means that when using the save methods to perform an insert or update operation on a database, Jakarta Bean Validation will execute the defined constraints to validate the data being inserted or updated.</p>
+<p>Jakarta Data providers that are built using Jakarta Persistence might require the user to define persistence units for repositories or might handle the details of defining the persistence units internally. A user that defines the persistence unit for a Jakarta Data repository must specify the <code>validation-mode</code> as <code>NONE</code> per the "Enabling Automatic Validation" section of the Jakarta Persistence specification to avoid duplicate validation of entities. Similarly, the Jakarta Data provider must specify either the <code>validation-mode</code> of <code>NONE</code> or the <code>jakarta.persistence.validation.mode</code> map key with value of <code>none</code> that is defined in the "Enabling Automatic Validation" section of the Jakarta Persistence specification to avoid duplicate validation of entities.
+== Portability in Jakarta Data</p>
 </div>
 <div class="paragraph">
-<p>Regarding the delete and find operations, the integration with Jakarta Bean Validation can be included or made optional by the provider. It means that the validation process for delete and find operations may or may not be applied, depending on the configuration or implementation of a provider. It is up to the provider to determine whether or not to include validation for these database operations.</p>
+<p>Portability is a critical aspect of Jakarta Data, ensuring flexibility and adaptability across different data stores while maintaining consistent functionality. Jakarta Data offers a comprehensive approach to portability, which is discussed separately for relational databases and NoSQL databases.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_portability_in_relational_databases">3.8. Portability in Relational Databases</h3>
+<div class="paragraph">
+<p>All functionality defined by Jakarta Data must be supported when using relational databases.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Support for Jakarta Persistence Annotations:</strong> Jakarta Data, when used in conjunction with a Jakarta Persistence provider, ensures comprehensive support for all Jakarta Persistence entity annotations. This support covers a wide range of functionality, including entity definitions, primary keys, and relationships.</p>
+</li>
+<li>
+<p><strong>Built-In Repositories:</strong> Jakarta Data&#8217;s built-in repositories, such as <code>PageableRepository</code> and <code>BasicRepository</code>, are designed to offer consistent and well-defined methods compatible with relational databases. Developers can rely on these repositories to perform common data access tasks.</p>
+</li>
+<li>
+<p><strong>Query Methods:</strong> Jakarta Data&#8217;s support for query methods, including pagination, ordering, and limiting, is designed to work seamlessly with relational databases.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>By aligning Jakarta Data closely with relational databases, developers can expect high portability and compatibility. This approach ensures that Jakarta Data remains a powerful tool for simplifying data access, irrespective of the specific relational database used.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_portability_in_nosql_databases">3.9. Portability in NoSQL Databases</h3>
+<div class="paragraph">
+<p>Portability in Jakarta Data extends to various NoSQL databases, each presenting unique challenges and capabilities. Jakarta Data aims to provide a consistent experience across these NoSQL database types. Here, we delve into the key portability aspects for four primary NoSQL database categories: key-value, wide-column, document, and graph databases.</p>
+</div>
+<div class="sect3">
+<h4 id="_key_value_databases">3.9.1. Key-Value Databases</h4>
+<div class="paragraph">
+<p>Key-value databases resemble dictionaries or Maps in Java, where data is primarily accessed using a key. In such databases, queries unrelated to keys are typically limited. To ensure a minimum level of support, Jakarta Data mandates the implementation of <code>BasicRepository</code> built-in methods that require an identifier or a key. However, the deleteAll and count methods are not required. Methods relying on complex queries, which are defined as queries that do not use the Key or identifier, raise <code>java.lang.UnsupportedOperationException</code> due to the fundamental nature of key-value databases.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+For any NoSQL database type not covered here, such as time series databases, the Key-value support serves as the minimum required level of compatibility.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_wide_column_databases">3.9.2. Wide-Column Databases</h4>
+<div class="paragraph">
+<p>Wide-column databases offer more query flexibility, even allowing the use of secondary indexes, albeit potentially impacting performance. When interacting with wide-column databases, Jakarta Data requires the implementation of the <code>BasicRepository</code> along with all of its methods, including query by method. However, developers should be mindful that certain query keywords, such as "And" or "Or," may not be universally supported in these databases. The full set of required keywords is documented in the section "Query Methods Keywords".</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_document_databases">3.9.3. Document Databases</h4>
+<div class="paragraph">
+<p>Document databases provide query flexibility akin to relational databases, offering robust query capabilities. They encourage denormalization for performance optimization. When interfacing with document databases, Jakarta Data goes a step further by supporting both built-in repositories: <code>BasicRepository</code> and <code>PageableRepository</code>. Additionally, method by query is implemented, though developers should be aware that some keywords may not be universally supported.  The full set of required keywords is documented in the section "Query Methods Keywords".</p>
+</div>
+<div class="paragraph">
+<p>These portability considerations reflect Jakarta Data&#8217;s commitment to providing a consistent data access experience across diverse NoSQL database types. While specific capabilities and query support may vary, Jakarta Data aims to simplify data access, promoting flexibility and compatibility in NoSQL database interactions.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_graph_databases">3.9.4. Graph Databases</h4>
+<div class="paragraph">
+<p>A Graph database, a specialized NoSQL variant, excels in managing intricate data relationships, rivaling traditional relational databases. Its unique strength lies in its ability to handle both directed and undirected edges (or relationships) between vertices (or nodes) and store properties on both vertices and edges.</p>
+</div>
+<div class="paragraph">
+<p>Graph databases excel at answering queries that return rows containing flat objects, collections, or a combination of flat objects and connections. However, portability is only guaranteed when mapping rows to classes, and when queries specified via annotations or other supported means are used. It should be noted that queries derived from keywords and combinations of mapped classes/properties will be translated into vendor-specific queries.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to note that in Jakarta Data the Graph database supports both built-in repositories: <code>BasicRepository</code> and <code>PageableRepository</code>. Additionally, query-by-method is implemented, though developers should be aware that some keywords may not be universally supported. The full set of required keywords is documented in the section "Query Methods Keywords."</p>
+</div>
 </div>
 </div>
 </div>
@@ -1690,8 +3130,8 @@ This integration between CDI and Jakarta EE Data allows for seamless management 
 </div>
 <div id="footer">
 <div id="footer-text">
- 1.0.0-b3<br>
-Last updated 2023-07-13 06:25:18 +0100
+ 1.0.0-M1<br>
+Last updated 2023-09-09 05:39:45 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">
