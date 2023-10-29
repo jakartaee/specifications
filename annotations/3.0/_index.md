@@ -22,6 +22,12 @@ The purpose of this release is to fully remove the deprecated @ManagedBean annot
 # Details
 
 * [Jakarta Annotations 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.ca/releases/3.0)
+    * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
+* [Jakarta Annotations 3.0 Specification Document](./annotations-spec-3.0-M1.pdf) (PDF)
+* [Jakarta Annotations 3.0 Specification Document](./annotations-spec-3.0-M1.html) (HTML)
+* [Jakarta Annotations 3.0 Javadoc](./apidocs)
+* Maven coordinates
+    * [jakarta.annotation:jakarta.annotation-api:jar:3.0.0-M1](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/3.0.0-M1/jar)
 
 # Compatible Implementations
 
