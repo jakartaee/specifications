@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Contexts and Dependency Injection 4.1 (Under development)"
-date: 2022-05-30
+date: 2023-11-06
 summary: "Release for Jakarta EE 11"
 ---
 
@@ -10,6 +10,9 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 <!-- List here -->
 Several minor issues in the Specification, APIs and TCK will be addresses as detailed in the [CDI 4.1 Milestone](https://github.com/jakartaee/cdi/milestone/1)
 The overview of currently suggested topics includes:
+* Breaking up spec/TCK to remove circular dependencies
+* Delegate integration requirements to the CDI EE specification
+* Method invokers
 * Executable methods
 * Getting interceptor bindings in standard way
 * @Priority on producers
@@ -32,7 +35,7 @@ and refactors features that are not client facing into the subinterface.
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 11 or higher**
+**Java SE 21 or higher**
 
 # Details
 
@@ -41,9 +44,9 @@ and refactors features that are not client facing into the subinterface.
 * [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.1 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 4.1 TCK](https://download.eclipse.org/jakartaee/cdi/4.1/cdi-tck-4.1.0-dist.zip)
-([sig](https://download.eclipse.org/jakartaee/cdi/4.1/cdi-tck-4.1.9-dist.zip.sig),
-[sha](https://download.eclipse.org/jakartaee/cdi/4.1/cdi-tck-4.1.9-dist.zip.sha256),
+* [Jakarta Contexts Dependency Injection 4.1 TCK](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.zip)
+([sig](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.sig),
+[sha](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
