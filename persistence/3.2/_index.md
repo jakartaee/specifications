@@ -12,7 +12,7 @@ and object/relational mapping in Java(R) environments.
 * Adds support for _java.time.Instant_ and _java.time.Year_ and Clarifies JDBC mappings for basic types
 * Adds `union`, `intersect`, `except`, `cast`, `left`, `right`, and `replace` for Jakarta Persistence QL and criteria queries
 * Adds `||` string concatenation operator to Jakarta Persistence QL
-* Adds _subquery(EntityType)_ and joins on _EntityType_ Criteria API
+* Adds _CriteriaSelect_, _subquery(EntityType)_ and joins on _EntityType_ to Criteria API
 * Adds support for specifying null precedence when ordering Jakarta Persistence QL and criteria queries
 * Adds _getSingleResultOrNull()_ to _Query_, _TypedQuery_, _StoredProcedureQuery_
 * Adds _entities()_, _classes()_ and _columns()_ to _NamedNativeQuery_
@@ -33,16 +33,19 @@ _addMapKeySubgraph()_, and _addTreatedMapKeySubgraph()_ methods to _Graph_
 and _LockOption_ respectively
 * Adds _setCacheStoreMode()_, and _setCacheRetrieveMode()_ methods to _EntityManager_ and _Query_
 * Adds _runInTransaction()_ and _callInTransaction()_ to _EntityManagerFactory_
+* Adds _getName()_ to _EntityManagerFactory_
 * Adds programmatic API to obtain _EntityManagerFactory_ using _PersistenceConfiguration_
 * Adds constants for properties defined by the specification to the _PersistenceConfiguration_
 * Adds _SchemaManager_ API
 * Adds options member to elements which result in DDL generation
 * Adds _EnumeratedValue_ allowing custom mapping of fields of Java enums
 * Adds _comment_ and _check_ members to table and column annotations, along with _CheckConstraint_
-* Made the _name_ member of _TableGenerator_ and _SequenceGenerator_ optional
+* Allows usage of _TableGenerator_ and _SequenceGenerator_ at the java package level
+* Makes the _name_ member of _TableGenerator_ and _SequenceGenerator_ optional
 * Clarifies the primary key types supported for each _GenerationType_
 * Clarifies availability of _SEQUENCE_, _TABLE_ and _UUID_ generated IDs on _PrePersist_
 * Clarifies semantics of numeric literals and Adds support for `bi` and `bd` suffixes
+* Clarifies semantics of _Convert_/_Converter_ annotations
 * Clarifies rules around distinction of entity names and identification variables and case-sensitivity in Jakarta Persistence QL queries
 * Clarifies the semantics of _Bindable.ENTITY_TYPE_ in javadoc
 * Entity and embeddable classes may now be static inner classes
@@ -61,6 +64,7 @@ and _LockOption_ respectively
 
 * Deprecates usage of _Calendar_, _Date_, _Time_, _Timestamp_, _Temporal_, _MapKeyTemporal_ and _TemporalType_
 in new applications in favour of _java.time_ API
+* Deprecates _multiselect_ methods in _CriteriaQuery_. The preference is to use _array_ or _tuple_ method defined in _CriteriaBuilder_
 
 #### Deprecations for removal
 
@@ -69,6 +73,8 @@ in new applications in favour of _java.time_ API
 and _addMapKeySubgraph()_ methods should be used as direct replacements
 * Deprecates _jakarta.persistence.spi.PersistenceUnitTransactionType_ for removal; _jakarta.persistence.PersistenceUnitTransactionType_
 methods should be used as direct replacement
+* Deprecates default public no-arg constructor in _jakarta.persistence.Persistence_ and _PERSISTENCE_PROVIDER_ and _providers_ fields 
+in this class for removal with no replacement. This class is not designed for extensibility
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
@@ -78,12 +84,13 @@ methods should be used as direct replacement
 
 * [Jakarta Persistence 3.2 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.2)
     * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
-* DRAFT 1
-  * [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-DRAFT01.pdf) (PDF)
-  * [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-DRAFT01.html) (HTML)
-  * [Jakarta Persistence 3.2 Javadoc](./apidocs)
-  * Maven coordinates
-    * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0-B01](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0-B01/jar)
+* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-M1.pdf) (PDF)
+* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-M1.html) (HTML)
+* [Jakarta Persistence 3.2 Javadoc](./apidocs)
+* Jakarta Persistence 3.2 XML Schemas
+  * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_2.xsd)
+* Maven coordinates
+  * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0-M1](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0-M1/jar)
 
 <!-- fix/uncomment once available: -->
 <!--
@@ -92,7 +99,6 @@ methods should be used as direct replacement
 * [Jakarta Persistence 3.2 Javadoc](./apidocs)
 * Jakarta Persistence 3.2 XML Schemas
     * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd)
-    * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_2.xsd)
 * [Jakarta Persistence 3.2 TCK](https://download.eclipse.org/jakartaee/persistence/3.2/jakarta-persistence-tck-3.2.0.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.2/jakarta-persistence-tck-3.2.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.2/jakarta-persistence-tck-3.2.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0/jar)
