@@ -627,16 +627,15 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <ul class="sectlevel3">
 <li><a href="#_relationship_to_the_jakarta_ee_platform_specification">1.2.1. Relationship to the Jakarta EE platform specification</a></li>
 <li><a href="#_relationship_to_jakarta_enterprise_bean">1.2.2. Relationship to Jakarta Enterprise Bean</a></li>
-<li><a href="#_relationship_to_managed_beans">1.2.3. Relationship to managed beans</a></li>
-<li><a href="#_relationship_to_jakarta_dependency_injection">1.2.4. Relationship to Jakarta Dependency Injection</a></li>
-<li><a href="#_relationship_to_jakarta_interceptors">1.2.5. Relationship to Jakarta Interceptors</a></li>
-<li><a href="#_relationship_to_jakarta_server_faces">1.2.6. Relationship to Jakarta Server Faces</a></li>
-<li><a href="#_relationship_to_jakarta_bean_validation">1.2.7. Relationship to Jakarta Bean Validation</a></li>
+<li><a href="#_relationship_to_jakarta_dependency_injection">1.2.3. Relationship to Jakarta Dependency Injection</a></li>
+<li><a href="#_relationship_to_jakarta_interceptors">1.2.4. Relationship to Jakarta Interceptors</a></li>
+<li><a href="#_relationship_to_jakarta_faces">1.2.5. Relationship to Jakarta Faces</a></li>
+<li><a href="#_relationship_to_jakarta_validation">1.2.6. Relationship to Jakarta Validation</a></li>
 </ul>
 </li>
 <li><a href="#_introductory_examples">1.3. Introductory examples</a>
 <ul class="sectlevel3">
-<li><a href="#_jakarta_server_faces_example">1.3.1. Jakarta Server Faces example</a></li>
+<li><a href="#_jakarta_faces_example">1.3.1. Jakarta Faces example</a></li>
 <li><a href="#_jakarta_enterprise_bean_example">1.3.2. Jakarta Enterprise Bean example</a></li>
 <li><a href="#_jakarta_ee_component_environment_example">1.3.3. Jakarta EE component environment example</a></li>
 <li><a href="#_event_example">1.3.4. Event example</a></li>
@@ -1607,7 +1606,7 @@ This supplemental artifact declares a JPMS module <code>jakarta.cdi.el</code>, w
 <p>Support for Jakarta EE modularity and the Jakarta EE component architecture - the modular structure of a Jakarta EE application is taken into account when resolving dependencies between Jakarta EE components</p>
 </li>
 <li>
-<p>Integration with the Jakarta Unified Expression Language (EL), allowing any contextual object to be used directly within a Jakarta Server Faces or JSP page</p>
+<p>Integration with the Jakarta Unified Expression Language (EL), allowing any contextual object to be used directly within a Jakarta Faces or JSP page</p>
 </li>
 <li>
 <p>The ability to <em>decorate</em> injected objects (only in CDI Full environment)</p>
@@ -1628,7 +1627,7 @@ This supplemental artifact declares a JPMS module <code>jakarta.cdi.el</code>, w
 </div>
 <div class="paragraph">
 <p>The services defined by this specification allow objects to be bound to lifecycle contexts, to be injected, to be associated with interceptors and decorators, and to interact in a loosely coupled fashion by firing and observing events.
-Various kinds of objects are injectable, including Jakarta Enterprise Bean 3 session beans, managed beans and Jakarta EE resources.
+Various kinds of objects are injectable, including Jakarta Enterprise Bean 3 session beans, and Jakarta EE resources.
 We refer to these objects in general terms as <em>beans</em> and to instances of beans that belong to contexts as <em>contextual instances</em>.
 Contextual instances may be injected into other objects by the dependency injection service.</p>
 </div>
@@ -1637,7 +1636,7 @@ Contextual instances may be injected into other objects by the dependency inject
 </div>
 <div class="paragraph">
 <p>The use of these services significantly simplifies the task of creating Jakarta EE applications by integrating the Jakarta EE web tier with Jakarta EE enterprise services.
-In particular, Jakarta Enterprise Bean components may be used as Jakarta Server Faces managed beans, thus integrating the programming models of Jakarta Enterprise Bean and Jakarta Server Faces.</p>
+In particular, Jakarta Enterprise Bean components may be used as Jakarta Faces managed beans, thus integrating the programming models of Jakarta Enterprise Bean and Jakarta Faces.</p>
 </div>
 <div class="paragraph">
 <p>It&#8217;s even possible to integrate with third-party frameworks.
@@ -1727,57 +1726,37 @@ When the context ends, the container automatically destroys the instance.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relationship_to_managed_beans"><a class="anchor" href="#_relationship_to_managed_beans"></a>1.2.3. Relationship to managed beans</h4>
-<div class="paragraph">
-<p>The Managed Beans specification defines the basic programming model for application components managed by the Jakarta EE container.</p>
-</div>
-<div class="paragraph">
-<p>As defined by this specification, most Java classes, including all Jakarta Enterprise Beans, are managed beans.</p>
-</div>
-<div class="paragraph">
-<p>This specification defines contextual lifecycle management and dependency injection as generic services applicable to all managed beans.</p>
-</div>
-<div class="paragraph">
-<p>Any managed bean instance obtained via the dependency injection service is a contextual instance. It is bound to a lifecycle context and is available to other objects that execute in that context.
-The container automatically creates the instance when it is needed by a client.
-When the context ends, the container automatically destroys the instance.</p>
-</div>
-<div class="paragraph">
-<p>The container performs dependency injection on all managed bean instances, even those which are not contextual instances.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_relationship_to_jakarta_dependency_injection"><a class="anchor" href="#_relationship_to_jakarta_dependency_injection"></a>1.2.4. Relationship to Jakarta Dependency Injection</h4>
+<h4 id="_relationship_to_jakarta_dependency_injection"><a class="anchor" href="#_relationship_to_jakarta_dependency_injection"></a>1.2.3. Relationship to Jakarta Dependency Injection</h4>
 <div class="paragraph">
 <p>The Jakarta Dependency Injection specification defines a set of annotations for the declaring injected fields, methods and constructors of a bean.
 The dependency injection service makes use of these annotations.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relationship_to_jakarta_interceptors"><a class="anchor" href="#_relationship_to_jakarta_interceptors"></a>1.2.5. Relationship to Jakarta Interceptors</h4>
+<h4 id="_relationship_to_jakarta_interceptors"><a class="anchor" href="#_relationship_to_jakarta_interceptors"></a>1.2.4. Relationship to Jakarta Interceptors</h4>
 <div class="paragraph">
 <p>The Jakarta Interceptors specification defines the basic programming model and semantics for interceptors.
 This specification enhances that model by providing the ability to associate interceptors with beans using typesafe interceptor bindings.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relationship_to_jakarta_server_faces"><a class="anchor" href="#_relationship_to_jakarta_server_faces"></a>1.2.6. Relationship to Jakarta Server Faces</h4>
+<h4 id="_relationship_to_jakarta_faces"><a class="anchor" href="#_relationship_to_jakarta_faces"></a>1.2.5. Relationship to Jakarta Faces</h4>
 <div class="paragraph">
-<p>Jakarta Server Faces is a web-tier presentation framework that provides a component model for graphical user interface components and an event-driven interaction model that binds user interface components to objects accessible via Unified EL.</p>
+<p>Jakarta Faces is a web-tier presentation framework that provides a component model for graphical user interface components and an event-driven interaction model that binds user interface components to objects accessible via Unified EL.</p>
 </div>
 <div class="paragraph">
-<p>This specification allows any bean to be assigned a name. Thus, a Jakarta Server Faces application may take advantage of the sophisticated context and dependency injection model defined by this specification.</p>
+<p>This specification allows any bean to be assigned a name. Thus, a Jakarta Faces application may take advantage of the sophisticated context and dependency injection model defined by this specification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relationship_to_jakarta_bean_validation"><a class="anchor" href="#_relationship_to_jakarta_bean_validation"></a>1.2.7. Relationship to Jakarta Bean Validation</h4>
+<h4 id="_relationship_to_jakarta_validation"><a class="anchor" href="#_relationship_to_jakarta_validation"></a>1.2.6. Relationship to Jakarta Validation</h4>
 <div class="paragraph">
-<p>Jakarta Bean Validation provides a unified way of declaring and defining constraints on an object model, defines a runtime engine to validate objects and provides method validation.</p>
+<p>Jakarta Validation provides a unified way of declaring and defining constraints on an object model, defines a runtime engine to validate objects and provides method validation.</p>
 </div>
 <div class="paragraph">
-<p>The Jakarta Bean Validation specification defines beans for Bean Validation managed objects including <code>Validator</code> and <code>ValidatorFactory</code>.
-A number of Bean Validation managed instances, including <code>ConstraintValidator</code> s can take advantage of dependency injection.
-Bean Validation also provides support for method parameter validation on any bean.</p>
+<p>The Jakarta Validation specification defines beans for certain managed objects, including <code>Validator</code> and <code>ValidatorFactory</code>.
+A number of Jakarta Validation managed instances, including <code>ConstraintValidator</code>s, can take advantage of dependency injection.
+Jakarta Validation also provides support for method parameter validation on any bean.</p>
 </div>
 </div>
 </div>
@@ -1787,9 +1766,9 @@ Bean Validation also provides support for method parameter validation on any bea
 <p>The following examples demonstrate the use of lifecycle contexts and dependency injection.</p>
 </div>
 <div class="sect3">
-<h4 id="_jakarta_server_faces_example"><a class="anchor" href="#_jakarta_server_faces_example"></a>1.3.1. Jakarta Server Faces example</h4>
+<h4 id="_jakarta_faces_example"><a class="anchor" href="#_jakarta_faces_example"></a>1.3.1. Jakarta Faces example</h4>
 <div class="paragraph">
-<p>The following Jakarta Server Faces page defines a login prompt for a web application:</p>
+<p>The following Jakarta Faces page defines a login prompt for a web application:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1811,7 +1790,7 @@ Bean Validation also provides support for method parameter validation on any bea
 <p>The Jakarta EL expressions in this page refer to beans named <code>credentials</code> and <code>login</code>.</p>
 </div>
 <div class="paragraph">
-<p>The <code>Credentials</code> bean has a lifecycle that is bound to the Jakarta Server Faces request:</p>
+<p>The <code>Credentials</code> bean has a lifecycle that is bound to the Jakarta Faces request:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1947,8 +1926,8 @@ Bean Validation also provides support for method parameter validation on any bea
 <p>The <code>@Documents</code> annotation is another application-defined qualifier type. The use of distinct qualifier types enables the container to distinguish which Jakarta Persistence persistence unit is required.</p>
 </div>
 <div class="paragraph">
-<p>When the login form is submitted, Jakarta Server Faces assigns the entered username and password to an instance of the <code>Credentials</code> bean that is automatically instantiated by the container.
-Next, Jakarta Server Faces calls the <code>login()</code> method of an instance of <code>Login</code> that is automatically instantiated by the container.
+<p>When the login form is submitted, Jakarta Faces assigns the entered username and password to an instance of the <code>Credentials</code> bean that is automatically instantiated by the container.
+Next, Jakarta Faces calls the <code>login()</code> method of an instance of <code>Login</code> that is automatically instantiated by the container.
 This instance continues to exist for and be available to other requests in the same HTTP session, and provides the <code>User</code> object representing the current user to any other bean that requires it (for example, <code>DocumentEditor</code>). If the producer method is called before the <code>login()</code> method initializes the user object, it throws a <code>NotLoggedInException</code>.</p>
 </div>
 </div>
@@ -3564,8 +3543,7 @@ All exceptions defined by this specification may be safely caught and handled by
 <h3 id="managed_beans"><a class="anchor" href="#managed_beans"></a>3.1. Managed beans</h3>
 <div class="paragraph">
 <p>A <em>managed bean</em> is a bean that is implemented by a Java class.
-This class is called the <em>bean class</em> of the managed bean.
-The basic lifecycle and semantics of managed beans are defined by the Managed Beans specification.</p>
+This class is called the <em>bean class</em> of the managed bean.</p>
 </div>
 <div class="paragraph">
 <p>If a managed bean has a non-static public field, its scope must be a <a href="#normal_scope">pseudo-scope</a> (for example, <code>@Dependent</code> or <code>@Singleton</code>).
@@ -6523,10 +6501,10 @@ However, if the object is not a contextual reference for another bean, the objec
 <div class="sect3">
 <h4 id="managed_bean_lifecycle"><a class="anchor" href="#managed_bean_lifecycle"></a>7.3.1. Lifecycle of managed beans</h4>
 <div class="paragraph">
-<p>When the <code>create()</code> method of the <code>Bean</code> object that represents a managed bean is called, the container obtains an instance of the bean, as defined by the Managed Beans specification, calling the bean constructor as defined by <a href="#instantiation">Injection using the bean constructor</a>, and performing dependency injection as defined in <a href="#fields_initializer_methods">Injection of fields and initializer methods</a>.</p>
+<p>When the <code>create()</code> method of the <code>Bean</code> object that represents a managed bean is called, the container obtains an instance of the bean, calling the bean constructor as defined by <a href="#instantiation">Injection using the bean constructor</a>, and performing dependency injection as defined in <a href="#fields_initializer_methods">Injection of fields and initializer methods</a>.</p>
 </div>
 <div class="paragraph">
-<p>When the <code>destroy()</code> method is called, the container destroys the instance, as defined by the Managed Beans specification, and any dependent objects, as defined in <a href="#dependent_objects_destruction">Destruction of dependent objects</a>.</p>
+<p>When the <code>destroy()</code> method is called, the container destroys the instance, and any dependent objects, as defined in <a href="#dependent_objects_destruction">Destruction of dependent objects</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -14577,7 +14555,7 @@ When a Unified EL expression is evaluated using a <code>MethodExpression</code> 
 <div id="footer">
 <div id="footer-text">
  4.1<br>
-Last updated 2023-11-29 19:51:33 -0600
+Last updated 2023-11-30 18:06:43 UTC
 </div>
 </div>
 </body>
