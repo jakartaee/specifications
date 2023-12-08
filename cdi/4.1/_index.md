@@ -69,11 +69,31 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 
 ## Restructuring Review
 
-This Specification Project's Restructuring Review will be covered by the [CDI 4.1 Plan Review](https://projects.eclipse.org/projects/ee4j.cdi/releases/cdi-4.1).  
+This Specification Project's Restructuring Review is covered by the [CDI 4.1 Plan Review](https://projects.eclipse.org/projects/ee4j.cdi/releases/cdi-4.1).  
 
-The Specification Committee Ballot is pending.
 
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02354.html)
+The Specification Committee Ballot completed on 8th December 2023.
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              | No vote |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           | No vote |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+|                                                | **Total**           | **8**   |
+Non-binding votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Angelo Rubini                                  |                     |   +1    |
+|                                                | **Total**           |  **1**  |
+
+
+The ballot was run in the [jakarta.ee-spec mailing list]([https://www.eclipse.org/lists/jakarta.ee-spec/msg03150.html)
 
 ## Plan Review
 
