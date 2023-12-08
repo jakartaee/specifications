@@ -10,6 +10,9 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 <!-- List here -->
 Several minor issues in the Specification, APIs and TCK will be addresses as detailed in the [CDI 4.1 Milestone](https://github.com/jakartaee/cdi/milestone/1)
 The overview of currently suggested topics includes:
+* Breaking up spec/TCK to remove circular dependencies
+* Delegate integration requirements to the Jakarta Platform specifications
+* Method invokers
 * Executable methods
 * Getting interceptor bindings in standard way
 * @Priority on producers
@@ -63,6 +66,34 @@ and refactors features that are not client facing into the subinterface.
 The Specification Committee Ballot is TBD.
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02354.html)
+
+## Restructuring Review
+
+This Specification Project's Restructuring Review is covered by the [CDI 4.1 Plan Review](https://projects.eclipse.org/projects/ee4j.cdi/releases/cdi-4.1).  
+
+
+The Specification Committee Ballot completed on 8th December 2023.
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              | No vote |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           | No vote |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+|                                                | **Total**           | **8**   |
+Non-binding votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Angelo Rubini                                  |                     |   +1    |
+|                                                | **Total**           |  **1**  |
+
+
+The ballot was run in the [jakarta.ee-spec mailing list]([https://www.eclipse.org/lists/jakarta.ee-spec/msg03150.html)
 
 ## Plan Review
 
