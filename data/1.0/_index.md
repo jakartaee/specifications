@@ -12,7 +12,7 @@ Jakarta Data’s goal is to provide a familiar and consistent, Jakarta-based pro
 
 * Increase productivity performing common database operations
 * Rich Object Mapping integrated
-* Define Reposities
+* Define Repositories
 
 ```java
 @Repository
