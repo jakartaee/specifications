@@ -46,7 +46,7 @@ describe the installation and configuration of the authorization providers.
 Jakarta Authorization provides a standard means for working within the
 boundaries of each of the three subcontracts.  The Policy Configuration
 Subcontract works along with the standard java.security.Policy to provide
-standard policies for a container.  It also provides a means of configuring
+standard policies for a container. It also provides a means of configuring
 policies using policy providers, such that the policy can be changed to reflect
 what is needed for the specific environment. Jakarta Authorization also
 provides a means for configuring security groups, roles, and constraints for
