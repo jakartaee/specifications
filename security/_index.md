@@ -1,6 +1,9 @@
 ---
 title: "Jakarta Security"
 summary: "Jakarta Security defines a standard for creating secure Jakarta EE applications in modern application paradigms."
+description: "Find all releases of the Jakarta Security specification. Jakarta
+Security defines a standard for creating secure Jakarta EE applications."
+seo_title: Jakarta Security Specification | Jakarta EE
 #<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
 summary_sixty_char: "Defines a standard for creating secure EE applications"
 project_id: "ee4j.es"
