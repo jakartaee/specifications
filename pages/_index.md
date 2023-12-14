@@ -4,10 +4,16 @@ summary: "Jakarta Pages defines a template engine for web applications that supp
 (including HTML and XML) with custom tags, expression language, and embedded Java code, that gets compiled
 into a Jakarta Servlet."
 seo_title: "Jakarta Server Pages Specification | Jakarta EE"
+description: "Find all releases of the Jakarta Server Pages specification which
+defines a template engine for web applications that supports mixing of textual
+content with custom tags, expression language, and embedded Java code, that
+gets compiled into a Jakarta Servlet."
 #<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
 summary_sixty_char: "Defines a template engine for web applications"
 project_id: "ee4j.jsp"
 ---
+
+## Jakarta Server Pages Explained
 
 Jakarta Server Pages (JSP) was first released in 1999, and it enables
 developers to create web based user interfaces using a mixture of HTML markup
