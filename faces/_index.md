@@ -190,13 +190,13 @@ components cover converters, validators, and others. The body of the XHTML
 form contains opening and closing `<h:head>` and `<h:body>` tags. Any
 parameters that need to be placed into the head of the view would be placed
 within the `h:head` section, and any components that will be used to compose
-the view would be placed within the h:body section. In the example, the
-Jakarta Faces `h:outputText` component is contained within the h:body and it is
-used to display the data which is stored within the message property of the CDI
-bean. Note that the CDI bean has the `@ViewScoped` annotation applied, which
-makes this bean hold state for the life of the view. When the user navigates
-away from the page, the state is lost. However, a CDI bean can contain any of
-the valid CDI scopes.
+the view would be placed within the `h:body` section. In the example, the
+Jakarta Faces `h:outputText` component is contained within the `h:body` and it
+is used to display the data which is stored within the message property of the
+CDI bean. Note that the CDI bean has the `@ViewScoped` annotation applied,
+which makes this bean hold state for the life of the view. When the user
+navigates away from the page, the state is lost. However, a CDI bean can
+contain any of the valid CDI scopes.
 
 Jakarta Faces makes templating easy, providing the ability to create portions
 of a page such as a footer once, and then apply that portion to other pages.
@@ -224,7 +224,7 @@ within the views, and they can be easily wired up to save values and
 communicate with backend business logic via CDI beans. To name a few, the
 `inputText` component translates to an HTML input component of type text, the
 `commandButton` component translates to a button which submits form contents,
-and the dataTable component allows data to be displayed within an HTML table.
+and the `dataTable` component allows data to be displayed within an HTML table.
 It is easy to develop a create, remove, update, delete data application using a
 `dataTable` component. The Jakarta Faces HTML components that ship with the
 platform are basic without much styling applied, but there are many third party
@@ -316,8 +316,8 @@ more easily. The Jakarta Faces components are ready to use with AJAX by
 applying the core ajax component to corresponding Faces tags. There is no
 JavaScript code necessary, as Jakarta Faces abstracts the code intricacies from
 the developer. The following code demonstrates how to apply AJAX to a command
-button and process the inputMessage and the `commandButton` action, and then
-finally refresh the value of the component assigned to an ID of “message”.
+button and process the `inputMessage` and the `commandButton` action, and then
+finally refresh the value of the component assigned to an ID of `“message”`.
 
 ```xml
 <h:commandButton id="ajaxSubmitButton"
