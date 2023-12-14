@@ -112,7 +112,7 @@ message, which is assigned the value of `Jakarta EE!`. The message will be
 displayed when the page is viewed. This JSP is the equivalent of the servlet
 example from the previous section.
 
-```jsp
+```txt
 <%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -169,7 +169,7 @@ conditionally display content. In the example, if the message field within
 `HelloBean` is not null, then it will be displayed, otherwise a default message
 of “No value in bean” will be displayed.
 
-```jsp
+```txt
 <%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -204,7 +204,7 @@ are less than, equal to, or greater than other values by specifying `lt`, `eq`,
 or `gt`, respectively. For example the following would produce the value
 `true`:
 
-```jsp
+```txt
 ${ 10 lt 50 }
 ```
 
