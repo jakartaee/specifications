@@ -3,11 +3,9 @@ title: "Jakarta Authentication"
 summary: "Jakarta Authentication defines a general low-level SPI for authentication mechanisms, which are controllers
 that interact with a caller and a container's environment to obtain the caller's credentials, validate these,
 and pass an authenticated identity (such as name and groups) to the container."
-description: "Jakarta Authentication defines a general low-level SPI for
-authentication mechanisms, which are controllers that interact with a caller
-and a container's environment to obtain the caller's credentials, validate
-these, and pass an authenticated identity (such as name and groups) to the
-container."
+description: "Find all releases of the Jakarta Authentication specification
+which defines a general low-level SPI for authentication mechanisms in Jakarta
+EE."
 seo_title: "Jakarta Authentication Specification | Jakarta EE"
 #<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
 summary_sixty_char: "Low-level container SPI for authentication mechanisms"
@@ -26,8 +24,6 @@ annotations and minimal XML configurations. Jakarta EE compliant containers and
 deployment environments adhere to the constructs of the Authentication and
 Authorization policies to ensure that applications can be secured in a standard
 way and deployed across a number of different environments.
-
-### Jakarta Authentication
 
 Jakarta Authentication is integrated into Jakarta Security as a low level
 Service Provider Implementation (SPI) for authentication mechanisms.  Mentioned
