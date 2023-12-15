@@ -11,6 +11,8 @@ summary_sixty_char: "MVC framework for building user interfaces for web apps"
 project_id: "ee4j.faces"
 ---
 
+{{< grid/div class="specifications-content" >}}
+
 ## Jakarta Faces Explained
 
 Jakarta Faces was initially released in 2004, and it provides the ability to
@@ -342,3 +344,5 @@ also use extensionless pages so that each page no longer requires the .xhtml
 suffix. Some of the components have also been updated with new attributes and
 options. So many other features haven’t even been mentioned in this brief
 overvew, and to learn more about them, please refer to the specification.
+
+{{</ grid/div >}}
