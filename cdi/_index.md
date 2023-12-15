@@ -6,6 +6,7 @@ seo_title: "Jakarta CDI Specification | Jakarta EE"
 #<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
 summary_sixty_char: "Declarative dependency injection and supporting services"
 project_id: "ee4j.cdi"
+container: container specifications-subpage
 ---
 
 ## Jakarta Contexts Dependency Injection Explained
@@ -29,7 +30,7 @@ Jakarta CDI is comprised of three main parts: Jakarta CDI SE, Jakarta CDI EE, an
   * Jakarta CDI Full: Includes the entire suite of features, including those available in Jakarta CDI Lite
   * Jakarta CDI Lite: Includes a powerful subset of the features to provide a leaner implementation which is more suitable for build-time oriented applications
 
-### Configuration for Jakarta Contexts and Dependency Injection { .margin-top-30 }
+### Configuration for Jakarta Contexts and Dependency Injection
 
 To utilize [Jakarta CDI 4.0](/specifications/cdi/4.0/), include the following Maven dependency:
 
@@ -49,7 +50,7 @@ An optional XML file named `beans.xml` can be used to configure Jakarta CDI for 
 In [Jakarta CDI 4.0](/specifications/cdi/4.0/) the bean-management-mode has changed from “all” to “annotated”, which means only beans that are annotated with a Jakarta CDI annotation are managed.
 This is a breaking change in functionality that developers must be aware of when moving to Jakarta EE 10.
 
-### Dependency Injection { .margin-top-30 }
+### Dependency Injection
 
 In many cases, it makes sense to reuse or share object content across classes within an application. Dependency Injection enables objects to be utilized across other classes, retaining context.
 All of this can be done in a lightweight and loosely coupled manner via the use of annotations. To inject a valid Jakarta CDI object at the class level, place the `@Inject` annotation on a field designating the type of bean that needs to be injected.
@@ -69,7 +70,7 @@ It is possible to specify more than one bean of the same type, but use those bea
 be specified in order to tell Jakarta CDI which bean to inject. Applying `@Named` at the class level also enables a bean to become referenced within web views via the Jakarta Expression Language.
 It is also possible to exclude beans from injection by applying the `@Vetoed` annotation at the class level.
 
-### Contexts and Scopes { .margin-top-30 }
+### Contexts and Scopes
 
 As beans can be injected into other beans, they maintain context so that the values which are assigned to the fields of a bean can be used from within their injection points.
 These contextual objects can be assigned scopes that prescribe the duration of a bean context. There are a number of different Jakarta CDI scopes that can be applied to a bean.
@@ -83,7 +84,7 @@ The scopes and their respective behaviors are as follows:
 
 To assign scope to a Jakarta CDI bean, place the annotation pertaining to the desired scope at the class level.
 
-### Producers { .margin-top-30 }
+### Producers
 
 Jakarta CDI provides the ability to encapsulate the business logic required to automatically construct beans of a specified type in such a way that the constructed beans are ready for use.
 A Producer method is a way to abstract bean construction details and automatically produce objects that can be consumed. Producer methods require the following:
@@ -101,13 +102,13 @@ public MyBean getMyBean() {
 }
 ```
 
-### Qualifiers { .margin-top-30 }
+### Qualifiers
 
 At times, there may be more than one implementation of a particular interface. In such cases, a qualifier can be used to help differentiate between which implementation needs to be invoked or injected into another bean.
 Qualifiers are simply annotations that can be placed on a class, method, or field in order to specify type. To develop a qualifier, create a public `@interface`, and specify the `@Qualifier` annotation.
 The `@Retention` and `@Target` must also be specified to indicate how long the qualifier should be retained as well as the constructs to which the qualifier pertains, respectively.
 
-### Alternatives { .margin-top-30 }
+### Alternatives
 
 While qualifiers provide a clean way to differentiate between beans of the same type, another solution is alternatives. Alternatives are a deployment-time solution for specifying which bean implementation to use.
 To use alternatives, apply the `@Alternative` annotation to two or more bean implementations of a type, and then specify the `<alternatives>` element within the `beans.xml` file to designate which class to use.
@@ -119,7 +120,7 @@ Alternatives provide a great way to utilize different implementations of classes
 </alternatives>
 ```
 
-### Interceptors { .margin-top-30 }
+### Interceptors
 
 A Jakarta CDI interceptor is a cross cutting action that can be invoked when certain application logic is initiated. An action or event invocation within an application causes the interceptor to execute and perform a task.
 Interceptors require an interceptor binding to be created, as well as an interceptor class. An interceptor binding is coded in much the same way as a qualifier, and it is used by Jakarta CDI to determine the interceptor association.
@@ -146,7 +147,7 @@ Lastly, the `beans.xml` file must include a reference to the interceptor within 
 
 Once these pieces are in place, a class or method can be annotated with the interceptor binding, in this case `@Notify`, to apply the interceptor.
 
-### Events and Observers { .margin-top-30 }
+### Events and Observers
 
 Jakarta CDI contains an event handling API which enables synchronous or asynchronous action methods to be invoked when events are fired. The API requires an interface, one or more implementation classes, and a business method which fires the event.
 Much like interceptors, the event handling system makes use of qualifiers to differentiate between more than one action implementing the same interface. The event API includes an observer method, which listens for an event to occur on the payload.
@@ -177,13 +178,13 @@ If working with asynchronous events, a handler should be coded by calling the Ev
             });
 ```
 
-### Java SE { .margin-top-30 }
+### Java SE
 
 Jakarta CDI can be utilized within a Java SE application using the bootstrap API. An initializer class named `SeContainerInitializer` can be used to create a new instance, and subsequently it can create an `SeContainer` object,
 which can be used to work with the Jakarta CDI APIs. A synthetic bean archive becomes available for use within the `SeContainer`, which is dependent upon bean discovery enablement.
 If bean discovery is not enabled, then the synthetic bean archive contains only programmatically added beans.
 
-### Extensions { .margin-top-30 }
+### Extensions
 
 Jakarta CDI provides SPIs for development of portable extensions and build compatible extensions. CDI extensions are a means of implementing additional functionality for the CDI container enabling various ways for integrating with the container.
 Build compatible extensions are new as of Jakarta EE 10, and they are available for use within more restricted environments than portable extensions. They are processed at build-time, enabling extensions while compiling to native.
@@ -208,14 +209,11 @@ The following are the extension annotations/phases, along with the functionality
 * `@Synthesis`: Register synthetic beans and observers
 * `@Validation`: Perform custom validation
 
-### Additional Functionality { .margin-top-30 }
+### Additional Functionality
 
 There are many more APIs available for use within Jakarta CDI. Stereotypes provide a means to produce a set of recurring bean roles, including metadata, as needed. Decorators are a way to inject additional business logic into an existing bean.
 
-### Conclusion { .margin-top-30 }
+### Conclusion
 
 Jakarta Contexts and Dependency Injection is an important specification for all Jakarta EE solutions. It utilizes the Jakarta Dependency Injection specification, and also provides a number of other useful APIs to enhance application capability.
 The most recent releases of Jakarta CDI that are available with Jakarta EE 10 include a new Jakarta CDI Lite, which can be beneficial for built-time oriented applications.
-
-&nbsp;
-&nbsp;
