@@ -12,6 +12,8 @@ summary_sixty_char: "Low-level container SPI for authentication mechanisms"
 project_id: "ee4j.authentication"
 ---
 
+{{< grid/div class="specifications-content" >}}
+
 ## Jakarta Authentication Explained
 
 Security is a major component of application development.  Jakarta EE provides
@@ -73,3 +75,5 @@ message. The authentication modules contexts return `AuthStatus` values with
 the status, and `AuthExceptions` if an exception occurs. It should be noted
 that there can be more than one authentication module, and these can be invoked
 independently and concurrently.
+
+{{</ grid/div >}}
