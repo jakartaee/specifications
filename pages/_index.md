@@ -13,6 +13,8 @@ summary_sixty_char: "Defines a template engine for web applications"
 project_id: "ee4j.jsp"
 ---
 
+{{< grid/div class="specifications-content" >}}
+
 ## Jakarta Server Pages Explained
 
 Jakarta Server Pages (JSP) was first released in 1999, and it enables
@@ -298,3 +300,4 @@ is not recommended, as it is a best practice to code business logic within Java
 classes. To learn more about the details of Jakarta Server Pages, please refer
 to the specification.
 
+{{</ grid/div >}}
