@@ -9,6 +9,8 @@ summary_sixty_char: "Low-level container SPI for authorization modules"
 project_id: "ee4j.authorization"
 ---
 
+{{< grid/div class="specifications-content" >}}
+
 ## Jakarta Authorization Explained
 
 Security is a major component of application development. Jakarta EE provides
@@ -57,3 +59,4 @@ Lastly, the Policy Decision and Enforcement Subcontract ensures that policies
 are enforced in a standard way across Jakarta Servlets and Jakarta Enterprise
 Beans.
 
+{{</ grid/div >}}
