@@ -9,6 +9,8 @@ summary_sixty_char: "Defines a standard for creating secure EE applications"
 project_id: "ee4j.es"
 ---
 
+{{< grid/div class="specifications-content" >}}
+
 ## Jakarta Security Explained
 
 Security is a major component of application development.  Jakarta EE provides
@@ -155,3 +157,5 @@ The SecurityContext provides an elegant way to programmatically work with
 security APIs via a Jakarta CDI bean.  The `SecurityContext` interface is
 available at runtime, so it can be injected and utilized to do things such as
 authenticate a user, check role membership, and more.
+
+{{</ grid/div >}}
