@@ -10,6 +10,8 @@ summary_sixty_char: "API to develop web services following the REST pattern"
 project_id: "ee4j.rest"
 ---
 
+{{< grid/div class="specifications-content" >}}
+
 ## Jakarta RESTful Web Services Explained
 
 Jakarta REST is the solution for development of building Representational State
@@ -313,3 +315,4 @@ produce or consume data. There is also a full featured client available with
 Jakarta REST, as well as advanced features such as asynchronous invocation and
 server sent events.
 
+{{</ grid/div >}}
