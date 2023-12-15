@@ -6,8 +6,9 @@ seo_title: "Jakarta CDI Specification | Jakarta EE"
 #<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
 summary_sixty_char: "Declarative dependency injection and supporting services"
 project_id: "ee4j.cdi"
-container: container specifications-subpage
 ---
+
+{{ grid/div class="specifications-content"}}
 
 ## Jakarta Contexts Dependency Injection Explained
 
@@ -217,3 +218,5 @@ There are many more APIs available for use within Jakarta CDI. Stereotypes provi
 
 Jakarta Contexts and Dependency Injection is an important specification for all Jakarta EE solutions. It utilizes the Jakarta Dependency Injection specification, and also provides a number of other useful APIs to enhance application capability.
 The most recent releases of Jakarta CDI that are available with Jakarta EE 10 include a new Jakarta CDI Lite, which can be beneficial for built-time oriented applications.
+
+{{/ grid/div  }}
