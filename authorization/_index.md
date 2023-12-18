@@ -4,6 +4,8 @@ summary: "Jakarta Authorization defines a low-level SPI for authorization module
 facilitating subject based security by determining whether a given subject has a given permission, and algorithms
 to transform security constraints for specific containers (such as Jakarta Servlet or Jakarta Enterprise Beans) into 
 these permissions."
+description: "Find all releases of the Jakarta Authentication specification. This specification defines a low-level SPI for authorization modules in Jakarta EE."
+seo_title: "Jakarta Authorization Specification | Jakarta EE | The Eclipse Foundation"
 #<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
 summary_sixty_char: "Low-level container SPI for authorization modules"
 project_id: "ee4j.authorization"
