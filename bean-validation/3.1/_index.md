@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Validation 3.1 (Under development)"
-date: 2023-07-18
+date: 2023-11-29
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Validation defines a metadata model and API for JavaBean and method validation.
@@ -22,22 +22,18 @@ This release is targetting Jakarta EE 11 and is looking to add support for Recor
 # Details
 
 * [Jakarta Validation 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.bean-validation/releases/3.1)
-<!--
-  * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
-* [Jakarta Validation 3.1 Specification Document](jakarta-bean-validation-spec-3.1.pdf) (PDF)
-* [Jakarta Validation 3.1 Specification Document](jakarta-bean-validation-spec-3.1.html) (HTML)
-* [Jakarta Validation 3.1 Javadoc](./apidocs)
-* [Jakarta Validation 3.1 TCK](https://download.eclipse.org/jakartaee/bean-validation/3.1/beanvalidation-tck-dist-3.1.0.zip)
-([sig](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.1.0.zip.sig),
-[sha](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.1.0.zip.sha256),
+* [Jakarta Validation 3.1-M1 Specification Document](jakarta-validation-spec-3.1-M1.pdf) (PDF)
+* [Jakarta Validation 3.1-M1 Specification Document](jakarta-validation-spec-3.1-M1.html) (HTML)
+* [Jakarta Validation 3.1-M1 Javadoc](./apidocs)
+* [Jakarta Validation 3.1 TCK](https://download.eclipse.org/jakartaee/bean-validation/3.1/TBD.zip)
+([sig](https://download.eclipse.org/jakartaee/bean-validation/3.1/TBD.sig),
+[sha](https://download.eclipse.org/jakartaee/bean-validation/3.1/TBD.zip.sha256),
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-    * Service Release, 2022-06-02 -- [Jakarta Bean Validation 3.0 TCK](https://download.eclipse.org/jakartaee/bean-validation/3.1/beanvalidation-tck-dist-3.1.0.zip)
 ([sig](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.1.0.zip.sig), 
 [sha](https://download.eclipse.org/jakartaee/bean-validation/3.0/beanvalidation-tck-dist-3.1.0.zip.sha256), 
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.validation:jakarta.validation-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.validation/jakarta.validation-api/3.0.0/jar)
--->
+  * [jakarta.validation:jakarta.validation-api:jar:3.1.0-M1](https://search.maven.org/artifact/jakarta.validation/jakarta.validation-api/3.1.0-M1/jar)
 
 # Compatible Implementations
 * [Hibernate Validator TBD](https://hibernate.org/validator/releases/)
