@@ -25,7 +25,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 
 * [Jakarta EE Platform 11 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/11)
   * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
-<!-->
+<!--
 * [Jakarta EE Platform 11 M1 Specification Document](./jakarta-platform-spec-11.0.pdf) (PDF)
 * [Jakarta EE Platform 11 M1 Specification Document](./jakarta-platform-spec-11.0.html) (HTML)
 -->
