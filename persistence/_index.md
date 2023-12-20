@@ -43,7 +43,11 @@ The benefit of registering the database within the application server container 
 The following XML demonstrates how to register an application server defined data source to an application within the persistence context:
 
 ```xml
-<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+<persistence 
+    version="3.0" 
+    xmlns="https://jakarta.ee/xml/ns/persistence" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
     <!-- Define Persistence Unit -->
     <persistence-unit name="PetServicePU" transaction-type="JTA">
         <jta-data-source>jdbc/sample</jta-data-source>
@@ -122,8 +126,7 @@ public class PetOwner implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
+        return hash += Objects.hashCode(this.id);
     }
 
     @Override
@@ -132,10 +135,7 @@ public class PetOwner implements Serializable {
             return false;
         }
         PetOwner other = (PetOwner) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.id, other.id);
     }
 
     @Override
@@ -183,13 +183,17 @@ Generators can be developed using one of the following techniques:
 - `IDENTITY`: Relies upon database to automatically increment with each insertion
 - `SEQUENCE`: Relies upon a database sequence to generate the number
 - `TABLE`: Simulates a sequence using by storing the numeric value in a database table
+- `UUID`: Indicates that the persistence provider must assign primary keys for the entity by generating an RFC 4122 Universally Unique IDentifier.
 
 The following code demonstrates how to configure a generator using a database sequence:
 
 ```Java
 @Id
-@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pet_owner_s_generator")
-@SequenceGenerator(name = "pet_owner_s_generator", sequenceName =" pet_owner_s", allocationSize = 1)
+@GeneratedValue(strategy = GenerationType.SEQUENCE, 
+                generator = "pet_owner_s_generator")
+@SequenceGenerator(name = "pet_owner_s_generator", 
+                sequenceName =" pet_owner_s", 
+                allocationSize = 1)
 ```
 
 ### Entity Manager
@@ -264,7 +268,8 @@ It is also possible to utilize positional numbers, rather than bind variables, w
 In the following example, the `:lastName` bind variable will be used to substitute the value passed into the query using `setParameter()`.
 
 ```Java
-Long countOfOwners = (Long) em.createQuery("select count(o) from PetOwner o where o.lastName = :lastName")
+Long countOfOwners = (Long) em.createQuery("select count(o) from PetOwner o " +
+            "where o.lastName = :lastName")
         .setParameter("lastName", "JONES")
         .getSingleResult();
 ```
@@ -275,7 +280,8 @@ After obtaining the data within the collection, it can be traversed and the data
 For instance, to return the count of records within an entity, the `count()` function can be used as follows:
 
 ```Java
-Long countOfOwners = (Long) em.createQuery("select count(o) from PetOwner o").getSingleResult();
+Long countOfOwners = (Long) em.createQuery("select count(o) from PetOwner o")
+        .getSingleResult();
 ```
 
 One can also use native SQL to construct a query in situations where JPQL will not accommodate the required query by calling upon `createNativeSql()` and passing a String-based SQL query.
@@ -332,16 +338,17 @@ Named queries can be specified within an entity class using the `@NamedQueries` 
 The `@NamedNativeQuery` annotation provides the ability to specify native SQL within a named query. The following code shows how to create a named query for the `PetOwner` entity class:
 
 ```Java
-@NamedQueries({
-    @NamedQuery(name = "PetOwner.findAll", query = "SELECT o FROM PetOwner o"),
-    @NamedQuery(name = "PetOwner.findByLast", query = "SELECT o FROM PetOwner o where o.lastName = :lastName")
-})
+@NamedQuery(name = "PetOwner.findAll", 
+            query = "SELECT o FROM PetOwner o")
+@NamedQuery(name = "PetOwner.findByLast", 
+            query = "SELECT o FROM PetOwner o where o.lastName = :lastName")
 ```
 
 The entity manager can also be used to create a named query by calling upon its `createNamedQuery()` method and passing a string based JPQL query to it. The named query can be executed by the Entity Manager, as shown in the following code:
 
 ```Java
-List<PetOwner> owners = em.getResultSet("PetOwner.findByLast").setParameter("lastName","JONES");
+List<PetOwner> owners = em.getResultSet("PetOwner.findByLast")
+        .setParameter("lastName","JONES");
 ```
 
 ### Sql Result Set Mappings
