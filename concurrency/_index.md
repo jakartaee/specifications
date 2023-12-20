@@ -75,7 +75,7 @@ ManagedExecutorService managedExecutorService;
 Future<ResultType> futureObject = managedExecutorService.submit(myTask);
 ```
 
-If there are a number of tasks which need to be executed in parallel, it is possible to do so by passing a list of `Runnable` or `Callable` tasks to the `ManagedExecutorService` `invokeAll()` method.
+If there are a number of tasks which need to be executed in parallel, it is possible to do so by passing a list of `Callable` tasks to the `ManagedExecutorService` `invokeAll()` method.
 The following code demonstrates how to construct a list of builder tasks and submit them to the `ManagedExecutorService`.
 
 ```Java
