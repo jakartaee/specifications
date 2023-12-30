@@ -36,7 +36,7 @@ Jakarta Servlet defines a server-side API for handling HTTP requests and respons
 # Details
 
 * [Jakarta Servlet 6.0 Release Record](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.0)
-  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Servlet 6.0 Specification Document](./jakarta-servlet-spec-6.0.pdf) (PDF)
 * [Jakarta Servlet 6.0 Specification Document](./jakarta-servlet-spec-6.0.html) (HTML)
 * [Jakarta Servlet 6.0 Javadoc](./apidocs)

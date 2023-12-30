@@ -8,7 +8,7 @@ including UI components, state management, event handing, input validation, page
 support for internationalization and accessibility.
 
 * [Jakarta Server Faces 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/3.0.0/plan)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Server Faces 3.0 Specification Document](./jakarta-faces-3.0.pdf) (PDF)
 * [Jakarta Server Faces 3.0 Specification Document](./jakarta-faces-3.0.html) (HTML)
 * [Jakarta Server Faces 3.0 Javadoc](./apidocs)

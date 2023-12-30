@@ -25,7 +25,7 @@ these permissions.
 # Details
 
 * [Jakarta Authorization 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.jacc/releases/2.1)
-  * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta Authorization 2.1 Specification Document](./jakarta-authorization-spec-2.1.pdf) (PDF)
 * [Jakarta Authorization 2.1 Specification Document](./jakarta-authorization-spec-2.1.html) (HTML)
 * [Jakarta Authorization 2.1 Javadoc](./apidocs)

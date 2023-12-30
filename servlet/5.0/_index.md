@@ -6,7 +6,7 @@ summary: "Release for Jakarta EE 9"
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
 
 * [Jakarta Servlet 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.servlet/releases/5.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Servlet 5.0 Specification Document](./jakarta-servlet-spec-5.0.pdf) (PDF)
 * [Jakarta Servlet 5.0 Specification Document](./jakarta-servlet-spec-5.0.html) (HTML)
 * [Jakarta Servlet 5.0 Javadoc](./apidocs)

@@ -23,7 +23,7 @@ binding, and configuration.
 # Details
 
 * [Jakarta Web Services Metadata 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/3.0-jakarta-web-services-metadata)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Web Services Metadata 3.0 Specification Document](./ws-metadata-spec-3.0.pdf) (PDF)
 * [Jakarta Web Services Metadata 3.0 Specification Document](./ws-metadata-spec-3.0.html) (HTML)
 * [Jakarta Web Services Metadata 3.0 Javadoc](./apidocs)

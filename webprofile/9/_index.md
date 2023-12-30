@@ -6,7 +6,7 @@ summary: "Release of the Jakarta EE 9 Web Profile"
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
 
 * [Jakarta Web Profile 9 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/web-profile-9)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Web Profile 9 Specification Document](./jakarta-webprofile-spec-9.pdf) (PDF)
 * [Jakarta Web Profile 9 Specification Document](./jakarta-webprofile-spec-9.html) (HTML)
 * [Jakarta Web Profile 9 Javadoc](./apidocs)
@@ -19,7 +19,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
   * [Eclipse Glassfish 6.0.0 RC2](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-6.0.0-RC2.zip)
     
 # Jakarta EE 9 Schedule
-* [Jakarta EE 9 Schedule](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
+* [Jakarta EE 9 Schedule](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
 
 # Compatible Implementations
 * [Jakarta EE 9 Compatible Implementations](https://jakarta.ee/compatibility/#tab-9)

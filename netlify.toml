@@ -3,10 +3,10 @@ publish = "website/public"
 command = "./build.sh && cd website && hugo --buildFuture"
 
 [build.environment]
-NODE_VERSION = "12.18.3"
+NODE_VERSION = "18.13.0"
 
 [context.production.environment]
-HUGO_VERSION = "0.76.5"
+HUGO_VERSION = "0.110.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
@@ -14,20 +14,20 @@ HUGO_ENABLEGITINFO = "true"
 command = "./build.sh && cd website && npm run disallow_robots_txt && hugo --buildFuture --enableGitInfo"
 
 [context.split1.environment]
-HUGO_VERSION = "0.76.5"
+HUGO_VERSION = "0.110.0"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
 command = "./build.sh && cd website && npm run disallow_robots_txt && hugo --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.76.5"
+HUGO_VERSION = "0.110.0"
 
 [context.branch-deploy]
 command = "./build.sh && cd website && npm run disallow_robots_txt && hugo --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-HUGO_VERSION = "0.76.5"
+HUGO_VERSION = "0.110.0"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"

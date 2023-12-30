@@ -27,7 +27,7 @@ backward compatibility with earlier releases.
 # Details
 
 * [Jakarta RESTful Web Services 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/3.1.0)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
 * [Jakarta RESTful Web Services 3.1 Specification Document](./jakarta-restful-ws-spec-3.1.pdf) (PDF)
 * [Jakarta RESTful Web Services 3.1 Specification Document](./jakarta-restful-ws-spec-3.1.html) (HTML)
 * [Jakarta RESTful Web Services 3.1 Javadoc](./apidocs)
@@ -35,6 +35,7 @@ backward compatibility with earlier releases.
    * First service release [Jakarta RESTful Web Services 3.1.1 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Second service release [Jakarta RESTful Web Services 3.1.2 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.2.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.2.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.2.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Third service release [Jakarta RESTful Web Services 3.1.3 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.3.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.3.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.3.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+   * Fourth service release [Jakarta RESTful Web Services 3.1.4 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.4.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.4.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.4.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.jaxrs:jakarta.jaxrs-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.ws.rs/jakarta.ws.rs-api/3.1.0/jar)
 

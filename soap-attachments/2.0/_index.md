@@ -7,7 +7,7 @@ Jakarta SOAP with Attachments defines an API enabling developers to produce
 and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments Feature.
 
 * [Jakarta SOAP Attachments 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/2.0-jakarta-soap-attachments)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta SOAP Attachments 2.0 Specification Document](./jakarta-soap-spec-2.0.pdf) (PDF)
 * [Jakarta SOAP Attachments 2.0 Specification Document](./jakarta-soap-spec-2.0.html) (HTML)
 * [Jakarta SOAP Attachments 2.0 Javadoc](./apidocs)

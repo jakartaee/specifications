@@ -1,7 +1,7 @@
 ---
 title: "Jakarta NoSQL 1.0 (under development)"
-date: 2021-06-04
-summary: "Under Development"
+date: 2023-05-30
+summary: "Release supporting Jakarta EE 11"
 ---
 
 Jakarta NoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases.
@@ -12,7 +12,8 @@ Jakarta NoSQL is a Java framework that streamlines the integration of Java appli
 * Increase productivity performing common NoSQL operations
 * Rich Object Mapping integrated
 * Java-based Query and Fluent-API
-* Specific template API to each NoSQL category (Key-value, Column and Document)
+* Template API to do NoSQL operations
+* Template specializations by NoSQL types (Key-value, Column and Document)
 * Annotation-oriented using JPA-like naming when it makes sense
 
 ```java
@@ -35,24 +36,24 @@ template.delete(Car.class, 1L);
 * The Template that increase productivity on NoSQL operations.
 * Three Template specializations (DocumentTemplate, ColumnTemplate, KeyValueTemplate)
 
-### Removals, deprecations or backwards incompatible changes
-<!-- List here -->
-* N/A 
-
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 11 or higher**
+**Java SE 17 or higher**
+
+# Details
+
+* [Jakarta NoSQL 1.0 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.0)
 
 
 * [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b6.pdf) (PDF)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b6.html) (HTML)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b7.pdf) (PDF)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-b7.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
 * Maven coordinates
-  * [jakarta.nosql:nosql-core:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-core/1.0.0-b6/)
-  * [jakarta.nosql:nosql-key-value:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-key-value/1.0.0-b6/)
-  * [jakarta.nosql:mapping-column:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-column/1.0.0-b6/)
-  * [jakarta.nosql:mapping-document:jar:1.0.0-b6](https://repo1.maven.org/maven2/jakarta/nosql/nosql-document/1.0.0-b6/)
+  * [jakarta.nosql:nosql-core:jar:1.0.0-b7](https://repo1.maven.org/maven2/jakarta/nosql/nosql-core/1.0.0-b7/)
+  * [jakarta.nosql:nosql-key-value:jar:1.0.0-b7](https://repo1.maven.org/maven2/jakarta/nosql/nosql-key-value/1.0.0-b7/)
+  * [jakarta.nosql:mapping-column:jar:1.0.0-b7](https://repo1.maven.org/maven2/jakarta/nosql/nosql-column/1.0.0-b7/)
+  * [jakarta.nosql:mapping-document:jar:1.0.0-b7](https://repo1.maven.org/maven2/jakarta/nosql/nosql-document/1.0.0-b7/)
 
 
 # Compatible Implementations

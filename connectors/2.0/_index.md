@@ -6,7 +6,7 @@ summary: "Release for Jakarta EE 9"
 The Jakarta Connectors specification defines a standard architecture for Jakarta EE application components to connect to Enterprise Information Systems.
 
 * [Jakarta Connectors 2.0 Release Record](https://projects.eclipse.org/projects/ee4j.jca/releases/2.0.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta Connectors 2.0 Specification Document](https://download.eclipse.org/jakartaee/connectors/2.0/connectors-spec-2.0.pdf) (PDF)
 * [Jakarta Connectors 2.0 Specification Document](https://download.eclipse.org/jakartaee/connectors/2.0/connectors-spec-2.0.html) (HTML)
 * [Jakarta Connectors 2.0 Javadoc](./apidocs)

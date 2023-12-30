@@ -45,22 +45,20 @@ support for internationalization and accessibility.
 # Details
 
 * [Jakarta Faces 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/4.0)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10#jakarta-ee-10-release-plan)
 * [Jakarta Faces 4.0 Specification Document](./jakarta-faces-4.0.pdf) (PDF)
 * [Jakarta Faces 4.0 Specification Document](./jakarta-faces-4.0.html) (HTML)
 * [Jakarta Faces 4.0 Javadoc](./apidocs)
 * [Jakarta Faces 4.0 Jsdoc](./jsdoc)
 * [Jakarta Faces 4.0 Renderkitdoc](./renderkitdoc)
 * [Jakarta Faces 4.0 VDLDoc](./vdldoc)
-* [Jakarta Faces 4.0 TCK](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.0.zip)([sig](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
-   * First service release [Jakarta Faces 4.0.1 TCK](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip)([sig](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
-   * Second service release [Jakarta Faces 4.0.2 TCK](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.2.zip)([sig](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.2.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Faces 4.0 TCK](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.3.zip)([sig](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.3.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.3.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:4.0.1](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/4.0.1/jar)
 
 # Compatible Implementations
 
-* [Mojarra 4.0.2](https://github.com/eclipse-ee4j/mojarra/releases/download/4.0.2-RELEASE/jakarta.faces-4.0.2.jar)
+* [Mojarra 4.0.4](https://github.com/eclipse-ee4j/mojarra/releases/download/4.0.4-RELEASE/jakarta.faces-4.0.4.jar)
 
 # Ballots
 ## Release Review

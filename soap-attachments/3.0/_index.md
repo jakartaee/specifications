@@ -29,7 +29,7 @@ and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments 
 
 # Details
 * [Jakarta SOAP Attachments 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxws/releases/3.0-jakarta-soap-attachments)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta SOAP Attachments 3.0 Specification Document](./jakarta-soap-spec-3.0.pdf) (PDF)
 * [Jakarta SOAP Attachments 3.0 Specification Document](./jakarta-soap-spec-3.0.html) (HTML)
 * [Jakarta SOAP Attachments 3.0 Javadoc](./apidocs)

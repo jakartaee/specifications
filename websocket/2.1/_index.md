@@ -39,7 +39,7 @@ module.
 # Details
 
 * [Jakarta WebSocket 2.1 Release Record](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.1)
-    * [Jakarta EE Platform 10 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee10/JakartaEE10ReleasePlan)
+    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
 * [Jakarta WebSocket 2.1 Specification Document](./jakarta-websocket-spec-2.1.pdf) (PDF)
 * [Jakarta WebSocket 2.1 Specification Document](./jakarta-websocket-spec-2.1.html) (HTML)
 * [Jakarta WebSocket 2.1 Javadoc]

@@ -7,7 +7,7 @@ The Jakarta XML Binding provides an API and tools that automate the mapping
 between XML documents and Java objects.
 
 * [Jakarta XML Binding 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxb/releases/3.0)
-  * [Jakarta EE Platform 9 Release Plan](https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9ReleasePlan)
+  * [Jakarta EE Platform 9 Release Plan](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9ReleasePlan)
 * [Jakarta XML Binding 3.0 Specification Document](./jakarta-xml-binding-spec-3.0.pdf) (PDF)
 * [Jakarta XML Binding 3.0 Specification Document](./jakarta-xml-binding-spec-3.0.html) (HTML)
 * [Jakarta XML Binding 3.0 Javadoc](./apidocs)
