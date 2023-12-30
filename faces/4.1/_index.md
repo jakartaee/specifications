@@ -7,7 +7,7 @@ Jakarta Server Faces defines an MVC framework for building user interfaces for w
 including UI components, state management, event handing, input validation, page navigation, and
 support for internationalization and accessibility.
 
-The release removes references to the SecurityManager, further aligns with CDI where possible, and provides various small enhancements and clarifications.
+The removes references to the SecurityManager, further aligns with CDI where possible, and provides various small enhancements and clarifications.
 
 ### New features, enhancements or additions
 * Make FacesMessage#VALUES / VALUES_MAP generic
@@ -22,7 +22,6 @@ The release removes references to the SecurityManager, further aligns with CDI w
 * Make SelectItem#value generic Component: Components/Renderers
 
 ### Removals, deprecations or backwards incompatible changes
-* Remove class scanning and rely on CDI only
 * Remove unused PreDestroyCustomScopeEvent and PostConstructCustomScopeEvent
 * Remove unused composite:extension
 * Remove references to the SecurityManager
@@ -37,8 +36,8 @@ The release removes references to the SecurityManager, further aligns with CDI w
 <!--
 The following can be uncommented and version information updated as they become available.
 
-* [Jakarta Faces 4.1 Specification Document](./jakarta-faces-5.0.pdf) (PDF)
-* [Jakarta Faces 4.1 Specification Document](./jakarta-faces-5.0.html) (HTML)
+* [Jakarta Faces 4.1 Specification Document](./jakarta-faces-4.1.pdf) (PDF)
+* [Jakarta Faces 4.1 Specification Document](./jakarta-faces-4.1.html) (HTML)
 * [Jakarta Faces 4.1 Javadoc](./apidocs)
 * [Jakarta Faces 4.1 Jsdoc](./jsdoc)
 * [Jakarta Faces 4.1 Renderkitdoc](./renderkitdoc)
@@ -48,13 +47,29 @@ The following can be uncommented and version information updated as they become 
 
 # Compatible Implementations
 
-* Mojarra 4.1 (TBC)
+* Mojarra (TBC)
 
 # Ballots
 
 ## Plan Review
 
-TBD
+The Specification Committee Ballot completed on 11th July 2023.
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Scott Stark                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           | **10**  |
+
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02949.html)
 
 ## Release Review
 
