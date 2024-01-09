@@ -33,7 +33,7 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
   -->
 * Maven coordinates
-    * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0-M1](https://search.maven.org/artifact/jakarta.platform/jakartaee-core-api/11.0.0-M1/jar)
+    * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0-M1](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-core-api/11.0.0-M1/jar)
 
 # Compatible Implementations
 
