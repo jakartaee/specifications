@@ -15,7 +15,7 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 21 or higher**
+**Java SE 17 or higher**
 
 # Details
 

@@ -8,7 +8,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 ### New features, enhancements or additions
 <!-- List here -->
 * Support for Java Records 
-* Support for Virtual Threads
+* JDK Runtime aware support for Virtual Threads
 * Jakarta Data 1.0
 
 ### Removals, deprecations or backwards incompatible changes
@@ -19,7 +19,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 21 or higher**
+**Java SE 17 or higher**
 
 # Details
 
