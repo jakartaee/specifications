@@ -45,6 +45,34 @@ Compatible Implementations of the Jakarta EE Core Profile specification are elig
 
 # Ballots
 
+<!--## Release Review-->
+
+## Progress Review
+
+The Specification Committee Ballot concluded successfully on 2024-02-07 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   -1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   -1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   -1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **7**  |
+
+Non-binding Votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Scott Stark                                    | Red Hat             |   +1    |
+|                                                | **Total**           |  **1**  |
+
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03173.html)
+
 ## Plan Review
 The Specification Committee Ballot concluded successfully on 2023-08-30 with the following results.
 
@@ -63,5 +91,3 @@ The Specification Committee Ballot concluded successfully on 2023-08-30 with the
 |                                                | **Total**           | **10**  |
 
 The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03113.html)
-
-## Release Review
