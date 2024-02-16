@@ -8,7 +8,7 @@ Jakarta Annotations defines a collection of annotations representing common sema
 ### New features, enhancements or additions
 <!-- List here -->
 * Allow @Priority to be used everywhere [Issue #86](https://github.com/eclipse-ee4j/common-annotations-api/issues/86)
-* Add @Nullable and @NotNull annotations [Issue #89](https://github.com/eclipse-ee4j/common-annotations-api/issues/89)
+* Add @Nullable and @Nonnull annotations [Issue #89](https://github.com/eclipse-ee4j/common-annotations-api/issues/89)
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
