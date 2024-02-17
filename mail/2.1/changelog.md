@@ -4,6 +4,14 @@ date: 2023-05-05
 summary: "Release for Jakarta EE 10"
 ---
 
+### CHANGES IN THE 2.1.3 RELEASE
+
+* fixes the classloader used by `Session.getService` in OSGI environment
+  API erroneously assumes that classes can be loaded from `Thread#getContextClassLoader`
+* API jar allows reproducible build
+* fixes `SharedFileInputStream` compliance with the spec
+* fixes parsing messages without a session
+ 
 ### CHANGES IN THE 2.1.2 RELEASE
 
 * adds missing javadoc description
