@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"jakarta.xml.bind"}]
+moduleSearchIndex = [{"l":"jakarta.xml.bind"}];updateSearchResults();
