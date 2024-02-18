@@ -39,6 +39,7 @@ between XML documents and Java objects.
     * Allows certification on Java SE 21+  [Jakarta XML Binding 4.0.2 TCK](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.2.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.2.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.2.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2](https://search.maven.org/artifact/jakarta.xml.bind/jakarta.xml.bind-api/4.0.2/jar)
+* [Change Log](./changelog)
 
 # Compatible Implementations
 
