@@ -18,7 +18,7 @@ This release makes the dependency on the java.desktop module optional, removes r
 * All references to the Java SecurityManager and associated APIs have been removed.
 
 ### Minimum Java SE Version
-**Java SE 11 or higher**
+**Java SE 17 or higher**
 
 # Details
 
