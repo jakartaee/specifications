@@ -39,15 +39,19 @@ and _LockOption_ respectively
 * Adds _SchemaManager_ API
 * Adds options member to elements which result in DDL generation
 * Adds _EnumeratedValue_ allowing custom mapping of fields of Java enums
-* Adds _comment_ and _check_ members to table and column annotations, along with _CheckConstraint_
+* Adds _comment_ and _check_ members to Table and Column annotations, along with _CheckConstraint_
+* Adds _secondPrecision_ to Column annotation and clarified semantics of Column members
+* Adds factory-level access to named queries and named entity graphs
+* Adds integration points for dependency injection
 * Allows usage of _TableGenerator_ and _SequenceGenerator_ at the java package level
 * Makes the _name_ member of _TableGenerator_ and _SequenceGenerator_ optional
 * Clarifies the primary key types supported for each _GenerationType_
 * Clarifies availability of _SEQUENCE_, _TABLE_ and _UUID_ generated IDs on _PrePersist_
-* Clarifies semantics of numeric literals and Adds support for `bi` and `bd` suffixes
+* Clarifies semantics of numeric literals and numeric type promotions, and adds support for `bi` and `bd` suffixes
 * Clarifies semantics of _Convert_/_Converter_ annotations
 * Clarifies rules around distinction of entity names and identification variables and case-sensitivity in Jakarta Persistence QL queries
 * Clarifies the semantics of _Bindable.ENTITY_TYPE_ in javadoc
+* Clarifies the semantics of collection-valued query parameters
 * Entity and embeddable classes may now be static inner classes
 * Primary key classes are no longer required to be public and serializable
 * Pulls _getParameters()_ up from _CriteriaQuery_ to _CommonAbstractCriteria_
@@ -65,6 +69,7 @@ and _LockOption_ respectively
 * Deprecates usage of _Calendar_, _Date_, _Time_, _Timestamp_, _Temporal_, _MapKeyTemporal_ and _TemporalType_
 in new applications in favour of _java.time_ API
 * Deprecates _multiselect_ methods in _CriteriaQuery_. The preference is to use _array_ or _tuple_ method defined in _CriteriaBuilder_
+* Deprecates use of `Byte[]` and `Character[]` arrays types for basic attributes, in favor of primitive array types
 
 #### Deprecations for removal
 
@@ -84,13 +89,14 @@ in this class for removal with no replacement. This class is not designed for ex
 
 * [Jakarta Persistence 3.2 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.2)
     * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
-* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-M1.pdf) (PDF)
-* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-M1.html) (HTML)
+* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-M2.pdf) (PDF)
+* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-M2.html) (HTML)
 * [Jakarta Persistence 3.2 Javadoc](./apidocs)
 * Jakarta Persistence 3.2 XML Schemas
+  * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd)
   * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_2.xsd)
 * Maven coordinates
-  * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0-M1](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0-M1/jar)
+  * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0-M2](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0-M2/jar)
 
 <!-- fix/uncomment once available: -->
 <!--
