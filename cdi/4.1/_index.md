@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Contexts and Dependency Injection 4.1 (Under development)"
-date: 2023-11-30
+title: "Jakarta Contexts and Dependency Injection 4.1"
+date: 2024-02-29
 summary: "Release for Jakarta EE 11"
 ---
 
@@ -35,21 +35,21 @@ and refactors features that are not client facing into the subinterface.
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 21 or higher**
+**Java SE 17 or higher**
 
 # Details
 
 * [Jakarta Contexts Dependency Injection 4.1 Release Record](https://projects.eclipse.org/projects/ee4j.cdi/releases/4.1)
-* [Jakarta Contexts Dependency Injection 4.1-M1 Specification Document](./jakarta-cdi-spec-4.1-M1.pdf) (PDF)
-* [Jakarta Contexts Dependency Injection 4.1-M1 Specification Document](./jakarta-cdi-spec-4.1-M1.html) (HTML)
-* [Jakarta Contexts Dependency Injection 4.1-M1 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 4.1-M1 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/cdi/4.1/cdi-tck-4.1.0-M1-dist.zip)
+* [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.pdf) (PDF)
+* [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.html) (HTML)
+* [Jakarta Contexts Dependency Injection 4.1 Javadoc](./apidocs)
+* [Jakarta Contexts Dependency Injection 4.1.0 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip)
 ([sig](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0-M1](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.1.0-M1/jar)
+  * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.1.0/jar)
 
 * Schemas
   * [XML Schema for the CDI 4.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd)
@@ -57,7 +57,7 @@ and refactors features that are not client facing into the subinterface.
 
 # Compatible Implementations
 
-* [Weld 6.0.0](https://weld.cdi-spec.org/download/) TBD
+* [Weld 6.0.0.Beta1](https://weld.cdi-spec.org/download/) TBD
 
 # Ballots
 
