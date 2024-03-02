@@ -10,5 +10,6 @@ jakarta.enterprise.inject.literal
 jakarta.enterprise.inject.se
 jakarta.enterprise.inject.spi
 jakarta.enterprise.inject.spi.configurator
+jakarta.enterprise.inject.spi.el
 jakarta.enterprise.invoke
 jakarta.enterprise.util
