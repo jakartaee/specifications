@@ -4,6 +4,11 @@ date: 2023-04-29
 summary: "Release for Jakarta EE 10"
 ---
 
+### CHANGES IN THE 2.1.3 RELEASE
+
+* API erroneously assumes that classes can be loaded from `Thread#getContextClassLoader`
+* API jar allows reproducible build
+
 ### CHANGES IN THE 2.1.2 RELEASE
 
 * adds missing javadoc description
