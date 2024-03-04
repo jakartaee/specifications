@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Annotations 3.0 (Under development)"
+title: "Jakarta Annotations 3.0"
 date: 2023-07-24
 summary: "Release for Jakarta EE 11"
 ---
@@ -13,7 +13,7 @@ The purpose of this release is to fully remove the deprecated @ManagedBean annot
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
-* Remove @ManagedBean [Issue #114](https://github.com/jakartaee/common-annotations-api/issues/114)
+* This release fully removes the deprecated `@ManagedBean` annotation. [Issue #114](https://github.com/jakartaee/common-annotations-api/issues/114)
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
