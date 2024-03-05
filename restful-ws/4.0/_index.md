@@ -1,29 +1,29 @@
 ---
 title: "Jakarta RESTful Web Services 4.0 (under development)"
-date: 2022-04-15
+date: 2024-03-05
 summary: "Release for Jakarta EE 11"
 ---
 
 Jakarta RESTful Web Services provides a foundational API to develop web services following the Representational
 State Transfer (REST) architectural pattern.
 
-The goal of this release is to provide better alignment between Jakarta RESTful Web Services and 
-Jakarta Contexts Dependency Injection (CDI). This will be the first _backward incompatible_ release of 
-Jakarta REST.  
+The goal of this release is to remove the JAXB dependency and ManagedBean support from Jakarta RESTful
+Web Services and add TCK test to fill verification gaps while maintaining  backward compatibility with
+earlier releases.  
 
 ### New features, enhancements or additions
-* Define CDI scopes for all Jakarta REST types - [Issue #952](https://github.com/jakartaee/rest/issues/952)
-* Define CDI integration and startup for Java SE applications - [Issue #953](https://github.com/jakartaee/rest/issues/953)
-* Enhance discovery of application artifacts using CDI scanning - [Issue #953](https://github.com/jakartaee/rest/issues/953)
-* Explore integration with Jakarta Concurrency - [Issue #950](https://github.com/jakartaee/rest/issues/950)
-* Explore alignment with CDI lite and potentially built-time injection support - [Issue #1137](https://github.com/jakartaee/rest/issues/1137)
+* Add TCK tests for multipart/form-data API - [Issue #962](https://github.com/jakartaee/rest/issues/962)
+* Add TCK tests for default ExceptionMapper - [Issue #1188](https://github.com/jakartaee/rest/issues/1188)
+* Convenience method for checking header value lists - [PR #1066](https://github.com/jakartaee/rest/pull/1066 )
+* Add Required TCK for convenience method merged in PR 1066 - [Issue #1227](https://github.com/jakartaee/rest/issues/1227)
+* Clarify JavaSE support in Section 2.3 of specification - [Issue #1127](https://github.com/jakartaee/rest/issues/1127)
 
 ### Removals, deprecations or backwards incompatible changes
-* Drop support for @Context injection and related artifacts - [Issue #951](https://github.com/jakartaee/rest/issues/951)
-* Review integration with legacy Jakarta EE specifications (e.g. EJB) - [Issue #954](https://github.com/jakartaee/rest/issues/954)
+* Remove JAXB dependency from Jakarta Rest - [Issue #1226](https://github.com/jakartaee/rest/issues/1226)
+* Remove ManagedBean support from Jakarta Rest specification - [Issue #1216](https://github.com/jakartaee/rest/issues/1216)
 
 ### Minimum Java SE Version
-* **Likely Java SE 17 or higher**
+* **Java SE 17 or higher**
 
 # Details
 The latest details and progress for this work
