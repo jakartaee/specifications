@@ -57,7 +57,7 @@ and refactors features that are not client facing into the subinterface.
 
 # Compatible Implementations
 
-* [Weld 6.0.0.Beta1](https://weld.cdi-spec.org/download/) TBD
+* [Weld 6.0.0.Beta1](https://weld.cdi-spec.org/download/)
 
 # Ballots
 
