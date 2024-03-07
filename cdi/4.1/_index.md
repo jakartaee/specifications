@@ -35,7 +35,7 @@ and refactors features that are not client facing into the subinterface.
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 17 or higher**
+**Java SE 11 or higher**
 
 # Details
 
@@ -50,6 +50,8 @@ and refactors features that are not client facing into the subinterface.
 
 * Maven coordinates
   * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.1.0/jar)
+  * [jakarta.enterprise:jakarta.enterprise.lang-model:4.1.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.lang-model/4.1.0/jar)
+  * [jakarta.enterprise:jakarta.enterprise.cdi-el-api:4.1.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-el-api/4.1.0/jar)
 
 * Schemas
   * [XML Schema for the CDI 4.1 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_1.xsd)
