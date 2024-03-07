@@ -52,8 +52,8 @@ and refactors features that are not client facing into the subinterface.
   * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.1.0/jar)
 
 * Schemas
-  * [XML Schema for the CDI 4.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd)
-  * No changes currently planed for the schema
+  * [XML Schema for the CDI 4.1 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_1.xsd)
+  * The only change in the schema is the version number. The schema is backward compatible with CDI 4.0.
 
 # Compatible Implementations
 
