@@ -23,6 +23,7 @@ This release makes the dependency on the java.desktop module optional, removes r
 # Details
 
 * [Jakarta Expression Language 6.0 Release Record](https://projects.eclipse.org/projects/ee4j.el/releases/6.0.0)
+    * [Jakarta Expression Language 6.0 Release Plan](https://projects.eclipse.org/projects/ee4j.el/releases/6.0.0/plan)
     * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
 * [Jakarta Expression Language 6.0 Specification Document](./jakarta-expression-language-spec-6.0.pdf) (PDF)
 * [Jakarta Expression Language 6.0 Specification Document](./jakarta-expression-language-spec-6.0.html) (HTML)
