@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Expression Language 6.0 (under development)"
+title: "Jakarta Expression Language 6.0"
 date: 2024-02-29
 summary: "Release for Jakarta EE 11"
 ---
