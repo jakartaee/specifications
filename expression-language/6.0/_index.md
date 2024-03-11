@@ -37,7 +37,6 @@ This release makes the dependency on the java.desktop module optional, removes r
 
 * Tomcat 11.0.0-M18-SNAPSHOT (Java 17)
 * Tomcat 11.0.0-M18-SNAPSHOT (Java 21)
-* ExpressLY (TBD)
 
 # Ballots
 
