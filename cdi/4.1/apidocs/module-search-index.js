@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"jakarta.cdi"}];updateSearchResults();
+moduleSearchIndex = [];updateSearchResults();
