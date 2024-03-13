@@ -531,8 +531,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <span id="author" class="author">Jakarta Interceptors Team, https://projects.eclipse.org/projects/ee4j.interceptors</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/interceptors-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/interceptors-dev</a></span><br>
 <span id="revnumber"> 2.2,</span>
-<span id="revdate">February 21, 2024</span>
-<br><span id="revremark">FINAL</span>
+<span id="revdate">March 13, 2024</span>
+<br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -609,8 +609,9 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#bibliography">Appendix A: Bibliography</a></li>
 <li><a href="#change_log">Appendix B: Change Log</a>
 <ul class="sectlevel2">
-<li><a href="#changes-for-2-1">B.1. Changes for 2.1</a></li>
-<li><a href="#changes-for-2-0">B.2. Changes for 2.0</a></li>
+<li><a href="#changes-for-2-2">B.1. Changes for 2.2</a></li>
+<li><a href="#changes-for-2-1">B.2. Changes for 2.1</a></li>
+<li><a href="#changes-for-2-0">B.3. Changes for 2.0</a></li>
 </ul>
 </li>
 </ul>
@@ -625,9 +626,9 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 
 Version: 2.2
 
-Status: FINAL
+Status: Final
 
-Release: February 21, 2024</pre>
+Release: March 13, 2024</pre>
 </div>
 </div>
 </div>
@@ -2517,88 +2518,110 @@ invocation of the default interceptors (if any).</p>
 <h2 id="change_log"><a class="anchor" href="#change_log"></a>Appendix B: Change Log</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="changes-for-2-1"><a class="anchor" href="#changes-for-2-1"></a>B.1. Changes for 2.1</h3>
-<div class="paragraph">
-<p>Updated dependencies for Jakarta EE 10.</p>
+<h3 id="changes-for-2-2"><a class="anchor" href="#changes-for-2-2"></a>B.1. Changes for 2.2</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated dependencies for Jakarta EE 11.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Annotations 3.0.0</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Added JPMS module-info.</p>
+</li>
+<li>
+<p>Provide access to interceptor bindings from <code>InvocationContext</code> via an <code>getInterceptorBindings()</code> method.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="changes-for-2-0"><a class="anchor" href="#changes-for-2-0"></a>B.2. Changes for 2.0</h3>
-<div class="paragraph">
-<p>Clarified <a href="#relationship_to_other_specifications">Relationship to Other Specifications</a> to be consistent with the Jakarta EE Platform specification
-with regard to when interceptors defined by means of the <em>Interceptors</em>
-annotation and interceptors defined by means of interceptor bindings are
-required to be supported.</p>
+<h3 id="changes-for-2-1"><a class="anchor" href="#changes-for-2-1"></a>B.2. Changes for 2.1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated dependencies for Jakarta EE 10.</p>
+</li>
+<li>
+<p>Added JPMS module-info.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
+</div>
+<div class="sect2">
+<h3 id="changes-for-2-0"><a class="anchor" href="#changes-for-2-0"></a>B.3. Changes for 2.0</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Clarified <a href="#relationship_to_other_specifications">Relationship to Other Specifications</a> to be consistent with the Jakarta EE Platform specification
+with regard to when interceptors defined by means of the <em>Interceptors</em> annotation and interceptors defined by means of interceptor bindings are required to be supported.</p>
+</li>
+<li>
 <p>Clarified terminology in sections <a href="#terminology">Terminology</a> and
 <a href="#definition_of_interceptor_classes_and_interceptor_methods">Definition of Interceptor Classes and Interceptor Methods</a>.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Noted that around-construct interceptors run
 in the same thread as the target constructor in section
 <a href="#interceptor_environment">Interceptor Environment</a>.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Clarified that around-construct interceptor
 methods may throw checked exceptions.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Clarified distinction between core
 requirements and the latitude available to extension specifications.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Reworded to indicate that deployment
 descriptors are specific to extension specifications.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Clarified that interceptor binding may not be
 used to associate interceptors with decorators.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Corrected bug in section
 <a href="#interceptor_binding_types_with_additional_interceptor_bindings">Interceptor binding types with additional interceptor bindings</a>:
 An interceptor binding type can only
 be applied to an interceptor binding type defining a subset of its
 target types.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Removed inconsistency whereby only
 around-construct lifecycle callback interceptors could declare
 interceptor binding types defined other than as <em>Target(TYPE)</em> .</p>
-</div>
-<div class="paragraph">
-<p>Clarified when <em>Priority</em> annotation is
-ignored.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
+<p>Clarified when <em>Priority</em> annotation is ignored.</p>
+</li>
+<li>
 <p>Added section
 <a href="#enabling_interceptors">Enabling Interceptors</a> to
 <a href="#interceptor_ordering">Interceptor Ordering</a> to
 centralize existing requirements on enabling interceptors and separate
 concept of the enabling of interceptors from the ordering of
 interceptors.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Combined interceptor ordering rules into a
 single algorithm in section <a href="#interceptor_ordering_rules">Interceptor Ordering Rules</a>.</p>
-</div>
-<div class="paragraph">
-<p>Factored out section
-<a href="#excluding_interceptors">Excluding Interceptors</a> on
-excluding interceptors.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
+<p>Factored out section<a href="#excluding_interceptors">Excluding Interceptors</a> on excluding interceptors.</p>
+</li>
+<li>
 <p>Clarified that <em>ExcludeClassInterceptors</em>
 applies only to interceptors defined by means of the <em>Interceptors</em>
 annotation.</p>
-</div>
-<div class="paragraph">
-<p>Made numerous editorial cleanup changes, and
-reorganized document for clarity.</p>
+</li>
+<li>
+<p>Made numerous editorial cleanup changes, and reorganized document for clarity.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -2634,7 +2657,7 @@ reorganized document for clarity.</p>
 <div id="footer">
 <div id="footer-text">
  2.2<br>
-Last updated 2024-02-21 20:02:40 UTC
+Last updated 2024-02-15 12:06:51 -0600
 </div>
 </div>
 </body>
