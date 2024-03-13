@@ -11,8 +11,11 @@ and other managed classes.
 <!-- List here -->
 * Updated dependencies for Jakarta EE 11
   * Jakart Annotations to 3.0.0
-* Add [standard accessor to interceptor bindings](https://github.com/jakartaee/interceptors/issues/100)
+* [Add standard accessor to interceptor bindings](https://github.com/jakartaee/interceptors/issues/100)
+* [Provide access to interceptor bindings from InvocationContext](#https://github.com/jakartaee/interceptors/pull/99)
 * Improve InvocationContext.getInterceptorBindings() language
+  * [More precise language for InvocationContext.getInterceptorBindings()](https://github.com/jakartaee/interceptors/pull/103)
+  * [Clarify behavior of InvocationContext.getInterceptorBindings() in case of inherited/transitive bindings](https://github.com/jakartaee/interceptors/pull/106)
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
@@ -28,8 +31,7 @@ and other managed classes.
 * [Jakarta Interceptors 2.2 Specification Document](./jakarta-interceptors-spec-2.2.pdf) (PDF)
 * [Jakarta Interceptors 2.2 Specification Document](./jakarta-interceptors-spec-2.2.html) (HTML)
 * [Jakarta Interceptors 2.2 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 4.1 TCK](https://download.eclipse.org/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip)
-   ([sig](TBD_post_ballot),
+* [Jakarta Contexts Dependency Injection 4.1.0 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip),
    [sha](7671d6895eb57b74b52e46b63adfeb57adf965dd91efc673db21a781fedc452f),
    [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
@@ -38,7 +40,7 @@ and other managed classes.
 
 # Compatible Implementations
 
-* TBD
+* [Weld 6.0.0.Beta1](https://weld.cdi-spec.org/download/)
 
 # Ballots
 ## Release Review
