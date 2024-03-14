@@ -35,9 +35,9 @@ This release makes the dependency on the java.desktop module optional, removes r
 
 # Compatible Implementations
 
-* Tomcat 11.0.0-M18-SNAPSHOT (Java 17)
-* Tomcat 11.0.0-M18-SNAPSHOT (Java 21)
-
+* Tomcat 11.0.0-M18 (Java 17) ([cdn](https://downloads.apache.org/tomcat/tomcat-11/v11.0.0-M18), [archive](https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.0-M18))
+* Tomcat 11.0.0-M18 (Java 21) ([cdn](https://downloads.apache.org/tomcat/tomcat-11/v11.0.0-M18), [archive](https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.0-M18))
+  
 # Ballots
 
 ## Plan Review
