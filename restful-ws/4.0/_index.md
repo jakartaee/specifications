@@ -36,6 +36,33 @@ may be found on the [Project Site](https://projects.eclipse.org/projects/ee4j.re
 
 # Ballots
 
+## Progress Review
+
+The Specification Committee Ballot concluded successfully on 2024-03-20 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           | no vote |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Dr. Jun Qian                                   | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **9**  |
+
+Non-binding votes
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Dr. Jun Qian                                   | Primeton            |   +1    |
+|                                                | **Total**           |  **1**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03204.html)
+
 ## Plan Review
 
 The Specification Committee Ballot concluded successfully on 2022-12-08 with the following results.
