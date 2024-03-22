@@ -35,7 +35,7 @@ The purpose of this release is to fully remove the deprecated @ManagedBean annot
 
 # Compatible Implementations
 
-TBD
+[GlassFish 8.0.0-M3](https://github.com/eclipse-ee4j/glassfish/releases/tag/8.0.0-M3)
 
 # Ballots
 
