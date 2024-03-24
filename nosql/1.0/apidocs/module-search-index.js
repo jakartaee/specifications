@@ -1,1 +1,0 @@
-moduleSearchIndex = [{"l":"jakarta.nosql.column"},{"l":"jakarta.nosql.core"},{"l":"jakarta.nosql.document"},{"l":"jakarta.nosql.keyvalue"}];updateSearchResults();
