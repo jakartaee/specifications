@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"jakarta.nosql.core","l":"jakarta.nosql"},{"m":"jakarta.nosql.column","l":"jakarta.nosql.column"},{"m":"jakarta.nosql.document","l":"jakarta.nosql.document"},{"m":"jakarta.nosql.keyvalue","l":"jakarta.nosql.keyvalue"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"jakarta.nosql.core","l":"jakarta.nosql"}];updateSearchResults();

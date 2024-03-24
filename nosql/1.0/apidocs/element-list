@@ -1,8 +1,2 @@
-module:jakarta.nosql.column
-jakarta.nosql.column
 module:jakarta.nosql.core
 jakarta.nosql
-module:jakarta.nosql.document
-jakarta.nosql.document
-module:jakarta.nosql.keyvalue
-jakarta.nosql.keyvalue
