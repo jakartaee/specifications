@@ -1,6 +1,6 @@
 ---
-title: "Jakarta WebSocket 2.2 (under development)"
-date: 2023-05-23
+title: "Jakarta WebSocket 2.2"
+date: 2024-05-31
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta WebSocket defines a API for Server and Client Endpoints for the WebSocket protocol (RFC6455).
@@ -9,10 +9,14 @@ This release removes references to the SecurityManager and provides some minor u
 
 
 ### New features, enhancements or additions
-* None
+* Clarify the responsibilities for sending ping and pong messages.
+
+* Add the `getSession()` method to `SendResult`.
+
+* Clarify the behaviour if `@OnMessage.maxMessageSize` it is set to a value larger than `Integer.MAX_VALUE`.
 
 ### Removals, deprecations or backwards incompatible changes
-* All references to the SecurityManager have been removed
+* None
 
 ### Minimum Java SE Version
 **Java SE 8 or higher**
@@ -37,7 +41,7 @@ The following can be uncommented and version information updated as they become 
 
 # Compatible Implementations
 
-* Eclipse Tyrus (TBC)
+* Apache Tomcat 11.0.0-M19-SNAPSHOT
 
 # Ballots
 
