@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Expression Language 6.0 (under development)"
-date: 2023-05-22
+title: "Jakarta Expression Language 6.0"
+date: 2024-02-29
 summary: "Release for Jakarta EE 11"
 ---
 
@@ -10,7 +10,9 @@ This release makes the dependency on the java.desktop module optional, removes r
 
 ### New features, enhancements or additions
 * The java.desktop module is no longer required at runtime.
-* A new property, length, is now supported for arrays
+* A new property, length, is now supported for arrays.
+* Added support, enabled by default, for java.lang.Record instances via the new RecordELResolver.
+* Added support, disabled by default, for java.lang.Optional instances via the new OptionalELResolver.
 
 ### Removals, deprecations or backwards incompatible changes
 * All code deprecated as of Expression Language 5.0 has been removed. Specifically:
@@ -18,30 +20,26 @@ This release makes the dependency on the java.desktop module optional, removes r
 * All references to the Java SecurityManager and associated APIs have been removed.
 
 ### Minimum Java SE Version
-**Java SE 11 or higher**
+**Java SE 17 or higher**
 
 # Details
 
 * [Jakarta Expression Language 6.0 Release Record](https://projects.eclipse.org/projects/ee4j.el/releases/6.0.0)
-
-<!--
-
-The following can be uncommented and version information updated as they become available.
-
-    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
-* [Jakarta Expression Language 5.0 Specification Document](./jakarta-expression-language-spec-5.0.pdf) (PDF)
-* [Jakarta Expression Language 5.0 Specification Document](./jakarta-expression-language-spec-5.0.html) (HTML)
-* [Jakarta Expression Language 5.0 Javadoc](./apidocs)
-* [Jakarta Expression Language 5.0 TCK](https://download.eclipse.org/jakartaee/expression-language/5.0/jakarta-expression-language-tck-5.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/expression-language/5.0/jakarta-expression-language-tck-5.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/expression-language/5.0/jakarta-expression-language-tck-5.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+    * [Jakarta Expression Language 6.0 Release Plan](https://projects.eclipse.org/projects/ee4j.el/releases/6.0.0/plan)
+    * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
+* [Jakarta Expression Language 6.0 Specification Document](./jakarta-expression-language-spec-6.0.pdf) (PDF)
+* [Jakarta Expression Language 6.0 Specification Document](./jakarta-expression-language-spec-6.0.html) (HTML)
+* [Jakarta Expression Language 6.0 Javadoc](./apidocs)
+* [Jakarta Expression Language 6.0 TCK](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.el:jakarta.el-api:jar:5.0.0](https://search.maven.org/artifact/jakarta.el/jakarta.el-api/5.0.0/jar)
--->
+  * [jakarta.el:jakarta.el-api:jar:6.0.0](https://search.maven.org/artifact/jakarta.el/jakarta.el-api/6.0.0/jar)
 
 
 # Compatible Implementations
 
-* Eclipse ExpressLy (TBC)
-
+* Tomcat 11.0.0-M18 (Java 17) ([cdn](https://downloads.apache.org/tomcat/tomcat-11/v11.0.0-M18), [archive](https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.0-M18))
+* Tomcat 11.0.0-M18 (Java 21) ([cdn](https://downloads.apache.org/tomcat/tomcat-11/v11.0.0-M18), [archive](https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.0-M18))
+  
 # Ballots
 
 ## Plan Review
