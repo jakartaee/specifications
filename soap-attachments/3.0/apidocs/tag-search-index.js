@@ -1,1 +1,1 @@
-tagSearchIndex = [{"l":"Constant Field Values","h":"","u":"constant-values.html"},{"l":"Serialized Form","h":"","u":"serialized-form.html"}];updateSearchResults();
+tagSearchIndex = [{"l":"Constant Field Values","h":"","u":"constant-values.html"},{"l":"Discovery of SAAJ implementation","h":"package jakarta.xml.soap","d":"Section","u":"jakarta.xml.soap/jakarta/xml/soap/package-summary.html#discovery-of-saaj-implementation-heading"},{"l":"Serialized Form","h":"","u":"serialized-form.html"}];updateSearchResults();
