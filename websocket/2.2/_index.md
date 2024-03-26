@@ -29,14 +29,10 @@ This release removes references to the SecurityManager and provides some minor u
 * [Jakarta WebSocket 2.1 Javadoc]
     * [Client](./apidocs/client)
     * [Server](./apidocs/server)
-<!--
-The following can be uncommented and version information updated as they become available.
-
-* [Jakarta WebSocket 2.1 TCK](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta WebSocket 2.2 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-websocket-tck-2.2.0.zip) ([sig](tbd), [sha](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-websocket-tck-2.2.0.zip#btn-ajax-checksum-sha512), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.websocket:jakarta.websocket-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/2.1.0/jar)
-    * [jakarta.websocket:jakarta.websocket-client-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-client-api/2.1.0/jar)
--->
+    * [jakarta.websocket:jakarta.websocket-api:jar:2.2.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/2.2.0/jar)
+    * [jakarta.websocket:jakarta.websocket-client-api:jar:2.2.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-client-api/2.2.0/jar)
 
 # Compatible Implementations
 
