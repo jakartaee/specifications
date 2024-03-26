@@ -22,14 +22,13 @@ This release removes references to the SecurityManager and provides some minor u
 **Java SE 8 or higher**
 
 # Details
-* [Jakarta WebSocket 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.2.0)
-
+* [Jakarta WebSocket 2.2 Release Plan](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.2.0/plan)
+* [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
+* [Jakarta WebSocket 2.2 Specification Document](./jakarta-websocket-spec-2.2.pdf) (PDF)
+* [Jakarta WebSocket 2.2 Specification Document](./jakarta-websocket-spec-2.2.html) (HTML)
 <!--
 The following can be uncommented and version information updated as they become available.
 
-    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
-* [Jakarta WebSocket 2.1 Specification Document](./jakarta-websocket-spec-2.1.pdf) (PDF)
-* [Jakarta WebSocket 2.1 Specification Document](./jakarta-websocket-spec-2.1.html) (HTML)
 * [Jakarta WebSocket 2.1 Javadoc]
     * [Client](./apidocs/client)
     * [Server](./apidocs/server)
