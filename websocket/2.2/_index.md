@@ -26,12 +26,12 @@ This release removes references to the SecurityManager and provides some minor u
 * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
 * [Jakarta WebSocket 2.2 Specification Document](./jakarta-websocket-spec-2.2.pdf) (PDF)
 * [Jakarta WebSocket 2.2 Specification Document](./jakarta-websocket-spec-2.2.html) (HTML)
-<!--
-The following can be uncommented and version information updated as they become available.
-
 * [Jakarta WebSocket 2.1 Javadoc]
     * [Client](./apidocs/client)
     * [Server](./apidocs/server)
+<!--
+The following can be uncommented and version information updated as they become available.
+
 * [Jakarta WebSocket 2.1 TCK](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.websocket:jakarta.websocket-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/2.1.0/jar)
