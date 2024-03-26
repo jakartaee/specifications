@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Persistence 3.2 (under development)"
+title: "Jakarta Persistence 3.2"
 date: 2023-05-30
 summary: "Release for Jakarta EE 11"
 ---
@@ -11,7 +11,7 @@ and object/relational mapping in Java(R) environments.
 * Adds support for Java record types as embeddable classes
 * Adds support for _java.time.Instant_ and _java.time.Year_ and Clarifies JDBC mappings for basic types
 * Adds `union`, `intersect`, `except`, `cast`, `left`, `right`, and `replace` for Jakarta Persistence QL and criteria queries
-* Adds `||` string concatenation operator to Jakarta Persistence QL
+* Adds `||` string concatenation operator and `id` and `version` functions to Jakarta Persistence QL
 * Adds _CriteriaSelect_, _subquery(EntityType)_ and joins on _EntityType_ to Criteria API
 * Adds support for specifying null precedence when ordering Jakarta Persistence QL and criteria queries
 * Adds _getSingleResultOrNull()_ to _Query_, _TypedQuery_, _StoredProcedureQuery_
@@ -43,8 +43,10 @@ and _LockOption_ respectively
 * Adds _secondPrecision_ to Column annotation and clarified semantics of Column members
 * Adds factory-level access to named queries and named entity graphs
 * Adds integration points for dependency injection
+* Allows scalar expressions in the _ORDER BY_ clause in Jakarta Persistence QL
 * Allows usage of _TableGenerator_ and _SequenceGenerator_ at the java package level
 * Makes the _name_ member of _TableGenerator_ and _SequenceGenerator_ optional
+* Makes identification variables and the _SELECT_ clause in Jakarta Persistence QL optional
 * Clarifies the primary key types supported for each _GenerationType_
 * Clarifies availability of _SEQUENCE_, _TABLE_ and _UUID_ generated IDs on _PrePersist_
 * Clarifies semantics of numeric literals and numeric type promotions, and adds support for `bi` and `bd` suffixes
@@ -89,26 +91,15 @@ in this class for removal with no replacement. This class is not designed for ex
 
 * [Jakarta Persistence 3.2 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/3.2)
     * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
-* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-M2.pdf) (PDF)
-* [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2-M2.html) (HTML)
-* [Jakarta Persistence 3.2 Javadoc](./apidocs)
-* Jakarta Persistence 3.2 XML Schemas
-  * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd)
-  * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_2.xsd)
-* Maven coordinates
-  * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0-M2](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0-M2/jar)
-
-<!-- fix/uncomment once available: -->
-<!--
 * [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2.pdf) (PDF)
 * [Jakarta Persistence 3.2 Specification Document](./jakarta-persistence-spec-3.2.html) (HTML)
 * [Jakarta Persistence 3.2 Javadoc](./apidocs)
 * Jakarta Persistence 3.2 XML Schemas
-    * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd)
+  * [XML Schema for the persistence configuration file](https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd)
+  * [XML Schema for the persistence object/relational mapping file](https://jakarta.ee/xml/ns/persistence/orm/orm_3_2.xsd)
 * [Jakarta Persistence 3.2 TCK](https://download.eclipse.org/jakartaee/persistence/3.2/jakarta-persistence-tck-3.2.0.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.2/jakarta-persistence-tck-3.2.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.2/jakarta-persistence-tck-3.2.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0/jar)
--->
+  * [jakarta.persistence:jakarta.persistence-api:jar:3.2.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.2.0/jar)
 
 # Compatible Implementations
 
