@@ -1,6 +1,6 @@
 ---
-title: "Jakarta WebSocket 2.2 (under development)"
-date: 2023-05-23
+title: "Jakarta WebSocket 2.2"
+date: 2024-05-31
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta WebSocket defines a API for Server and Client Endpoints for the WebSocket protocol (RFC6455).
@@ -9,35 +9,34 @@ This release removes references to the SecurityManager and provides some minor u
 
 
 ### New features, enhancements or additions
-* None
+* Clarify the responsibilities for sending ping and pong messages.
+
+* Add the `getSession()` method to `SendResult`.
+
+* Clarify the behaviour if `@OnMessage.maxMessageSize` it is set to a value larger than `Integer.MAX_VALUE`.
 
 ### Removals, deprecations or backwards incompatible changes
-* All references to the SecurityManager have been removed
+* None
 
 ### Minimum Java SE Version
 **Java SE 8 or higher**
 
 # Details
-* [Jakarta WebSocket 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.2.0)
-
-<!--
-The following can be uncommented and version information updated as they become available.
-
-    * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
-* [Jakarta WebSocket 2.1 Specification Document](./jakarta-websocket-spec-2.1.pdf) (PDF)
-* [Jakarta WebSocket 2.1 Specification Document](./jakarta-websocket-spec-2.1.html) (HTML)
+* [Jakarta WebSocket 2.2 Release Plan](https://projects.eclipse.org/projects/ee4j.websocket/releases/2.2.0/plan)
+* [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
+* [Jakarta WebSocket 2.2 Specification Document](./jakarta-websocket-spec-2.2.pdf) (PDF)
+* [Jakarta WebSocket 2.2 Specification Document](./jakarta-websocket-spec-2.2.html) (HTML)
 * [Jakarta WebSocket 2.1 Javadoc]
     * [Client](./apidocs/client)
     * [Server](./apidocs/server)
-* [Jakarta WebSocket 2.1 TCK](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/websocket/2.1/jakarta-websocket-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta WebSocket 2.2 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-websocket-tck-2.2.0.zip) ([sig](tbd), [sha](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-websocket-tck-2.2.0.zip#btn-ajax-checksum-sha512), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.websocket:jakarta.websocket-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/2.1.0/jar)
-    * [jakarta.websocket:jakarta.websocket-client-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-client-api/2.1.0/jar)
--->
+    * [jakarta.websocket:jakarta.websocket-api:jar:2.2.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/2.2.0/jar)
+    * [jakarta.websocket:jakarta.websocket-client-api:jar:2.2.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-client-api/2.2.0/jar)
 
 # Compatible Implementations
 
-* Eclipse Tyrus (TBC)
+* Apache Tomcat 11.0.0-M19-SNAPSHOT
 
 # Ballots
 
