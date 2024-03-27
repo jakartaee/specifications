@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Servlet 6.1 (under development)"
-date: 2023-05-23
+title: "Jakarta Servlet 6.1"
+date: 2024-04-05
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
@@ -19,7 +19,7 @@ The release removes references to the SecurityManager and provides various small
 * All references to the SecurityManager and associated APIs have been removed
 
 ### Minimum Java SE Version
-**Java SE 11 or higher**
+**Java SE 17 or higher**
 
 # Details
 
@@ -66,5 +66,3 @@ The Specification Committee Ballot concluded successfully on 2023-07-26 with the
 |                                                | **Total**           | **9**   |
 
 The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03017.html)
-
-
