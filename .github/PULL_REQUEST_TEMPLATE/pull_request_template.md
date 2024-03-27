@@ -12,7 +12,7 @@ Include the following in the PR:
 Instructions MAY be by reference.
    - [ ] Updated release record
    - [ ] Send an email to the EMO (with cc to the PMC) that contains a link to **this** PR and a request to the PMC for approval. *The EMO will append a checklist to the PR to track the review*
-- [ ] - [ ] The URL of the OSSRH staging repository for the api, javadoc:
+- [ ] The URL of the OSSRH staging repository for the api, javadoc:
       <add URL here>
 - [ ] The URL of the staging directory on downloads.eclipse.org for the proposed EFTL TCK binary:
       <add URL here>
