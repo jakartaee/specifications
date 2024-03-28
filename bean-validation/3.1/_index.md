@@ -34,7 +34,7 @@ This release is targeting Jakarta EE 11 and has clarified support for Records in
   * [jakarta.validation:jakarta.validation-api:jar:3.1.0-M1](https://search.maven.org/artifact/jakarta.validation/jakarta.validation-api/3.1.0-M1/jar)
 
 # Compatible Implementations
-* [Hibernate Validator TBD](https://hibernate.org/validator/releases/)
+* [Hibernate Validator 8.0.1.Final](https://hibernate.org/validator/releases/8.0/)
 
 # Ballots
 
