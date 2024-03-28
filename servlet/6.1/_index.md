@@ -28,22 +28,22 @@ The release removes references to the SecurityManager and provides various small
 * [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.pdf) (PDF)
 * [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.html) (HTML)
 * [Jakarta Servlet 6.0 Javadoc](./apidocs)
-<!--
-The following can be uncommented and version information updated as they become available.
-
-
-* [Jakarta Servlet 6.0.0 TCK](https://download.eclipse.org/jakartaee/servlet/6.0/jakarta-servlet-tck-6.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/servlet/6.0/jakarta-servlet-tck-6.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/servlet/6.0/jakarta-servlet-tck-6.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Servlet 6.1.0 TCK](https://jakarta.oss.sonatype.org/content/repositories/jakartaservlet-1027/jakarta/servlet/)
+  * [POM](https://jakarta.oss.sonatype.org/content/repositories/jakartaservlet-1027/jakarta/servlet/tck/6.1.0/)
+  * [util](https://jakarta.oss.sonatype.org/content/repositories/jakartaservlet-1027/jakarta/servlet/tck-util/6.1.0/)
+  * [runtime](https://jakarta.oss.sonatype.org/content/repositories/jakartaservlet-1027/jakarta/servlet/tck-runtime/6.1.0/)
 * XML Schema
-  * web-app_6_0.xsd
-  * web-common_6_0.xsd
-  * web-fragment_6_0.xsd
+  * web-app_6_1.xsd
+  * web-common_6_1.xsd
+  * web-fragment_6_1.xsd
+  * jsp_4_0.xsd
+  * web-jsptaglibrary_4_0.xsd
 * Maven coordinates
-  * [jakarta.servlet:jakarta.servlet-api:jar:6.0.0](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/6.0.0/jar)
--->
+  * [jakarta.servlet:jakarta.servlet-api:jar:6.1.0](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/6.1.0/jar)
 
 # Compatible Implementations
 
-* Glassfish (TBC)
+* Tomcat 11.0.0-M19-SNAPSHOT
 
 # Ballots
 
