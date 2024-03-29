@@ -71,4 +71,18 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 
 ## Release Review
 
-TBD
+| Representative                                 | Representative for: | Vote    |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             | +1      |
+| Emily Jiang, Tom Watson                        | IBM                 | +1      |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              | +1      |
+| Andrew Pielage, Petr Aubrecht                  | Payara              | +1      |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           | +1      |
+| Ivar Grimstad                                  | EE4J PMC            | +1      |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members | +1      |
+| Werner Keil                                    | Committer Members   | +1      |
+| Zhai Luchao                                    | Enterprise Members  | +1      |
+| Jun Qian                                       | Enterprise Members  | No vote |
+|                                                | **Total**           | **9**   |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03222.html)
