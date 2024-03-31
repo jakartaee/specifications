@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Pages 4.0 (under development)"
-date: 2023-05-22
+title: "Jakarta Pages 4.0"
+date: 2024-04-09
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Pages defines a template engine for web applications that supports mixing of textual content
@@ -10,7 +10,7 @@ into a Jakarta Servlet.
 This release removes deprecated code and provides any additional updates necessary to align with changes in the Jakarta Servlet and/or Expression Language specifications.
 
 ### New features, enhancements or additions
-* Updated ErrorData to add support for the new attribute jakarta.servlet.error.query_string
+* Updated ErrorData to add support for the new attributes jakarta.servlet.error.query_string and jakarta.servlet.error.method.
 
 ### Removals, deprecations or backwards incompatible changes
 * All code deprecated as of Jakarta Server Pages 3.1 has been removed. Specifically:
@@ -19,7 +19,7 @@ This release removes deprecated code and provides any additional updates necessa
   * Remove the jsp:plugin action and related actions as the associated HTML elements are no longer supported by any major browser
 
 ### Minimum Java SE Version
-**Java SE 11 or higher**
+**Java SE 17 or higher**
 
 # Details
 * [Jakarta Pages 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/4.0.0)
@@ -39,7 +39,7 @@ The following can be uncommented and version information updated as they become 
 
 # Compatible Implementations
 
-* Eclipse WaSP (TBC)
+* Apache Tomcat 11.0.0-M19-SNAPSHOT
 
 
 # Ballots
