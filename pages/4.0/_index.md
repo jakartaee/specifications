@@ -23,14 +23,14 @@ This release removes deprecated code and provides any additional updates necessa
 
 # Details
 * [Jakarta Pages 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/4.0.0)
+  * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
+* [Jakarta Pages 4.0 Specification Document](./jakarta-server-pages-spec-4.0.pdf) (PDF)
+* [Jakarta Pages 4.0 Specification Document](./jakarta-server-pages-spec-4.0.html) (HTML)
 
 <!--
 
 The following can be uncommented and version information updated as they become available.
 
-  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
-* [Jakarta Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.pdf) (PDF)
-* [Jakarta Pages 3.1 Specification Document](./jakarta-server-pages-spec-3.1.html) (HTML)
 * [Jakarta Pages 3.1 Javadoc](./apidocs)
 * [Jakarta Pages 3.1 TCK](https://download.eclipse.org/jakartaee/pages/3.1/jakarta-pages-tck-3.1.0.zip)([sig](https://download.eclipse.org/jakartaee/pages/3.1/jakarta-pages-tck-3.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/pages/3.1/jakarta-pages-tck-3.1.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
