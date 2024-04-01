@@ -27,15 +27,9 @@ This release removes deprecated code and provides any additional updates necessa
 * [Jakarta Pages 4.0 Specification Document](./jakarta-server-pages-spec-4.0.pdf) (PDF)
 * [Jakarta Pages 4.0 Specification Document](./jakarta-server-pages-spec-4.0.html) (HTML)
 * [Jakarta Pages 4.0 Javadoc](./apidocs)
-
-<!--
-
-The following can be uncommented and version information updated as they become available.
-
-* [Jakarta Pages 3.1 TCK](https://download.eclipse.org/jakartaee/pages/3.1/jakarta-pages-tck-3.1.0.zip)([sig](https://download.eclipse.org/jakartaee/pages/3.1/jakarta-pages-tck-3.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/pages/3.1/jakarta-pages-tck-3.1.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+* [Jakarta Pages 4.0 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-pages-tck-4.0.0.zip), sig (not avaialble),[sha](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-pages-tck-4.0.0-tckinfo.txt),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.pages:jakarta.pages-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/3.1.0/jar)
--->
+  * [jakarta.pages:jakarta.pages-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/4.0.0/jar)
 
 # Compatible Implementations
 
