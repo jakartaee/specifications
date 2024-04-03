@@ -11,9 +11,7 @@ Include the following in the PR:
 - [ ] For a [Release Review](https://www.eclipse.org/projects/handbook/#release-review), a summary that a Compatible Implementation is complete, passes the TCK, and that the TCK includes sufficient coverage of the specification. The TCK users guide MUST include the instructions to run the compatible implementations used to validate the release.
 Instructions MAY be by reference.
    - [ ] Updated release record
-   - [ ] Generated IP Log
-   - [ ] Email to PMC
-   - [ ] Start release review as described in the EDP (is done from the Project PMI page). The link to the Gitlab Issue created by EMO (here)[<link>]  
+   - [ ] Send an email to the EMO (with cc to the PMC) that contains a link to **this** PR and a request to the PMC for approval. *The EMO will append a checklist to the PR to track the review*
 - [ ] The URL of the OSSRH staging repository for the api, javadoc:
       <add URL here>
 - [ ] The URL of the staging directory on downloads.eclipse.org for the proposed EFTL TCK binary:
