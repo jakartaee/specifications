@@ -1,5 +1,5 @@
 ---
-title: "Jakarta RESTful Web Services 4.0 (under development)"
+title: "Jakarta RESTful Web Services 4.0"
 date: 2024-03-05
 summary: "Release for Jakarta EE 11"
 ---
@@ -17,6 +17,9 @@ earlier releases.
 * Convenience method for checking header value lists - [PR #1066](https://github.com/jakartaee/rest/pull/1066 )
 * Add Required TCK for convenience method merged in PR 1066 - [Issue #1227](https://github.com/jakartaee/rest/issues/1227)
 * Clarify JavaSE support in Section 2.3 of specification - [Issue #1127](https://github.com/jakartaee/rest/issues/1127)
+* Add getMatchedResourceTemplate method to UriInfo - [Issue #1191](https://github.com/jakartaee/rest/issues/1191)
+* Add JSON Merge Patch: [Issue #1141](https://github.com/jakartaee/rest/issues/1141)
+
 
 ### Removals, deprecations or backwards incompatible changes
 * Remove JAXB dependency from Jakarta Rest - [Issue #1226](https://github.com/jakartaee/rest/issues/1226)
