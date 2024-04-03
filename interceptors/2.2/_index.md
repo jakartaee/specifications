@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Interceptors 2.2"
-date: 2024-02-22
+date: 2024-04-05
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Interceptors defines a means of interposing on business method invocations and specific
@@ -10,7 +10,7 @@ and other managed classes.
 ### New features, enhancements or additions
 <!-- List here -->
 * Updated dependencies for Jakarta EE 11
-  * Jakart Annotations to 3.0.0
+  * Jakarta Annotations to 3.0.0
 * [Add standard accessor to interceptor bindings](https://github.com/jakartaee/interceptors/issues/100)
 * [Provide access to interceptor bindings from InvocationContext](#https://github.com/jakartaee/interceptors/pull/99)
 * Improve InvocationContext.getInterceptorBindings() language
@@ -24,6 +24,7 @@ and other managed classes.
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
 **Java SE 11 or higher**
+The binary target level is 11.
 
 # Details
 
