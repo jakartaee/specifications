@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"jakarta.ws.rs","l":"jakarta.ws.rs"},{"m":"jakarta.ws.rs","l":"jakarta.ws.rs.client"},{"m":"jakarta.ws.rs","l":"jakarta.ws.rs.container"},{"m":"jakarta.ws.rs","l":"jakarta.ws.rs.core"},{"m":"jakarta.ws.rs","l":"jakarta.ws.rs.ext"},{"m":"jakarta.ws.rs","l":"jakarta.ws.rs.sse"}];updateSearchResults();
