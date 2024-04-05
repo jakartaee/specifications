@@ -29,7 +29,8 @@ Jakarta JSON Binding defines a binding framework for converting Java(R) objects 
 * [Jakarta JSON Binding 3.0 Javadoc](./apidocs)
 * [Jakarta JSON Binding 3.0 TCK](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.json.bind:jakarta.json.bind-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.json.bind/jakarta.json.bind-api/3.0.0/jar)
+  * [jakarta.json.bind:jakarta.json.bind-api:jar:3.0.1](https://search.maven.org/artifact/jakarta.json.bind/jakarta.json.bind-api/3.0.1/jar)
+* [Change Log](./changelog)
 
 # Compatible Implementations
 
