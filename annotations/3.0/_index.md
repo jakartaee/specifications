@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Annotations 3.0"
-date: 2023-07-24
+date: 2023-07-06
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that enable a declarative style of programming that applies across a variety of Java technologies.
@@ -31,13 +31,33 @@ The purpose of this release is to fully remove the deprecated @ManagedBean annot
     * [jakarta.annotation:jakarta.annotation-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/3.0.0/jar)
 
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-  * TBD
+  * [GlassFish 8.0.0-M3](https://github.com/eclipse-ee4j/glassfish/releases/tag/8.0.0-M3)
 
 # Compatible Implementations
 
 [GlassFish 8.0.0-M3](https://github.com/eclipse-ee4j/glassfish/releases/tag/8.0.0-M3)
 
 # Ballots
+
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2024-04-07 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           | **10**  |
+
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03249.html)
 
 ## Plan Review
 
