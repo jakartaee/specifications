@@ -531,8 +531,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <span id="author" class="author">Jakarta Authorization Team, https://projects.eclipse.org/projects/ee4j.authorization</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jacc-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jacc-dev</a></span><br>
 <span id="revnumber"> 3.0,</span>
-<span id="revdate">March 29, 2024</span>
-<br><span id="revremark"></span>
+<span id="revdate">April 07, 2024</span>
+<br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -894,9 +894,9 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 
 Version: 3.0
 
-Status: 
+Status: Final
 
-Release: March 29, 2024</pre>
+Release: April 07, 2024</pre>
 </div>
 </div>
 </div>
@@ -1731,6 +1731,29 @@ Jakarta EE environments with the default <code>jakarta.security.jacc.Policy</cod
 <code>jakarta.security.jacc.Policy</code> object used by the application server for all applications running on it,
 in addition to supporting a <code>jakarta.security.jacc.Policy</code> object for individual applications.</p>
 </div>
+<div class="paragraph">
+<p>Replacement is done via the <code>jakarta.security.jacc.PolicyFactory</code> abstract factory class. A
+default static method, <code>getPolicyFactory</code> is provided that uses the system property
+<code>jakarta.security.jacc.PolicyFactory.provider</code> to locate a concrete implementation. The
+container or an application can alternatively set a custom <code>PolicyFactory</code> using the
+<code>setPolicyFactory</code> method. In that case the <code>PolicyFactory</code> implementation
+can come from a container specific configuration, or in case of the Servlet Container
+from the web application&#8217;s servlet context initialization parameter (context-param in web.xml) <code>jakarta.security.jacc.PolicyFactory.provider</code>.</p>
+</div>
+<div class="paragraph">
+<p>If the  <code>PolicyFactory</code> has a public constructor with one  argument of type <code>PolicyFactory</code>,
+then the container should call this constructor with as argument the
+ <code>PolicyFactory</code> instance that is being replaced. This allows a replacement <code>PolicyFactory</code> to wrap
+ the existing one and selectively provide extra functionality.</p>
+</div>
+<div class="paragraph">
+<p>From this factory class a concrete implementation of the Policy of type <code>jakarta.security.jacc.Policy</code> can be
+obtained using the method <code>getPolicy</code>.</p>
+</div>
+<div class="paragraph">
+<p>In addition to replacing the <code>PolicyFactory</code>, the default <code>PolicyFactory</code> must also allow replacing just the
+<code>Policy</code> instance. This is detailed below in <a href="#a196">What the Jakarta Authorization Implementation Must Do</a>.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="permission-implementation-classes"><a class="anchor" href="#permission-implementation-classes"></a>2.2. Permission Implementation Classes</h3>
@@ -1753,8 +1776,10 @@ default static method, <code>getPolicyConfigurationFactory</code> is provided th
 container can alternatively set a custom <code>PolicyConfigurationFactory</code> using the
 <code>setPolicyConfigurationFactory</code> method. In that case the <code>PolicyConfigurationFactory</code> implementation
 can come from a container specific configuration, or in case of the Servlet Container
-from the context property <code>jakarta.security.jacc.PolicyConfigurationFactory.provider</code>. If the
-<code>PolicyConfigurationFactory</code> has a public constructor with one argument of type <code>PolicyConfigurationFactory</code>,
+from the web application&#8217;s servlet context initialization parameter (context-param in web.xml) <code>jakarta.security.jacc.PolicyConfigurationFactory.provider</code>.</p>
+</div>
+<div class="paragraph">
+<p>If the <code>PolicyConfigurationFactory</code> has a public constructor with one argument of type <code>PolicyConfigurationFactory</code>,
 then the container should call this constructor with as argument the <code>PolicyConfigurationFactory</code> instance
 that is being replaced. This allows a replacement <code>PolicyConfigurationFactory</code> to wrap the existing one
 and selectively provide extra functionality.</p>
@@ -7343,7 +7368,7 @@ defined by Jakarta Authorization.</p>
 <div id="footer">
 <div id="footer-text">
  3.0<br>
-Last updated 2024-03-28 17:04:22 +0100
+Last updated 2024-04-05 08:49:37 -0400
 </div>
 </div>
 </body>
