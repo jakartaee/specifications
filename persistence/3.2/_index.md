@@ -29,8 +29,7 @@ and object/relational mapping in Java(R) environments.
 * Adds _addAttributeNode()_, _removeAttributeNode()_, _addTreatedSubgraph()_, _addElementSubgraph()_, _addTreatedElementSubgraph()_,
 _addMapKeySubgraph()_, and _addTreatedMapKeySubgraph()_ methods to _Graph_
 * Adds _getReference_ overload, _runWithConnection()_ and _callWithConnection()_ to _EntityManager_
-* Adds _find()_, _refresh()_, _lock()_ overloads to _EntityManager_ taking newly introduced _FindOption_, _RefreshOption_,
-and _LockOption_ respectively
+* Adds _find()_, _refresh()_, _lock()_ overloads to _EntityManager_ taking newly introduced _FindOption_, _RefreshOption_, and _LockOption_ respectively
 * Adds _setCacheStoreMode()_, and _setCacheRetrieveMode()_ methods to _EntityManager_ and _Query_
 * Adds _runInTransaction()_ and _callInTransaction()_ to _EntityManagerFactory_
 * Adds _getName()_ to _EntityManagerFactory_
@@ -41,7 +40,7 @@ and _LockOption_ respectively
 * Adds _EnumeratedValue_ allowing custom mapping of fields of Java enums
 * Adds _comment_ and _check_ members to Table and Column annotations, along with _CheckConstraint_
 * Adds _secondPrecision_ to Column annotation and clarified semantics of Column members
-* Adds factory-level access to named queries and named entity graphs
+* Adds factory-level access to named queries and named entity graphs, along with _TypedQueryReference_
 * Adds integration points for dependency injection
 * Allows scalar expressions in the _ORDER BY_ clause in Jakarta Persistence QL
 * Allows usage of _TableGenerator_ and _SequenceGenerator_ at the java package level
@@ -103,7 +102,7 @@ in this class for removal with no replacement. This class is not designed for ex
 
 # Compatible Implementations
 
-* TBD
+* [EclipseLink 5.0.0-B02](https://jakarta.oss.sonatype.org/content/repositories/staging/org/eclipse/persistence/eclipselink/5.0.0-B02/eclipselink-5.0.0-B02.zip)
 
 # Ballots
 

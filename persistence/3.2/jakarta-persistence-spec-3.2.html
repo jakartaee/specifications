@@ -531,7 +531,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <span id="author" class="author">Jakarta Persistence Team, https://projects.eclipse.org/projects/ee4j.jpa</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jpa-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jpa-dev</a></span><br>
 <span id="revnumber"> 3.2,</span>
-<span id="revdate">March 28, 2024</span>
+<span id="revdate">April 10, 2024</span>
 <br><span id="revremark"></span>
 </div>
 <div id="toc" class="toc2">
@@ -1371,7 +1371,7 @@ Version: 3.2
 
 Status: Final Release
 
-Release: March 28, 2024</pre>
+Release: April 10, 2024</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9565,28 +9565,28 @@ metadata annotation or XML descriptor element.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>a SELECT clause, which determines the type of
+<p>a <code>SELECT</code> clause, which determines the type of
 the objects or values to be selected.</p>
 </li>
 <li>
-<p>a FROM clause, which provides declarations
+<p>a <code>FROM</code> clause, which provides declarations
 that designate the domain to which the expressions specified in the
 other clauses of the query apply.</p>
 </li>
 <li>
-<p>an optional WHERE clause, which may be used
+<p>an optional <code>WHERE</code> clause, which may be used
 to restrict the results that are returned by the query.</p>
 </li>
 <li>
-<p>an optional GROUP BY clause, which allows
+<p>an optional <code>GROUP BY</code> clause, which allows
 query results to be aggregated in terms of groups.</p>
 </li>
 <li>
-<p>an optional HAVING clause, which allows
+<p>an optional <code>HAVING</code> clause, which allows
 filtering over aggregated groups.</p>
 </li>
 <li>
-<p>an optional ORDER BY clause, which may be
+<p>an optional <code>ORDER BY</code> clause, which may be
 used to order the results that are returned by the query.</p>
 </li>
 </ul>
@@ -9600,7 +9600,7 @@ used to order the results that are returned by the query.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Every select statement has a FROM clause. The square brackets <code>[]</code> in the
+<p>Every select statement has a <code>FROM</code> clause. The square brackets <code>[]</code> in the
 BNF indicate that the other clauses are optional.</p>
 </div>
 <div class="sect4">
@@ -9659,7 +9659,7 @@ delete_statement ::= delete_clause [where_clause]</pre>
 </div>
 <div class="paragraph">
 <p>The update and delete clauses determine the
-type of the entities to be updated or deleted. The WHERE clause may be
+type of the entities to be updated or deleted. The <code>WHERE</code> clause may be
 used to restrict the scope of the update or delete operation.</p>
 </div>
 <div class="paragraph">
@@ -9715,7 +9715,7 @@ in the same persistence unit.</p>
 </div>
 <div class="paragraph">
 <p>The domain of a query may be restricted by
-the <code>navigability</code> of the relationships of the entity and associated
+the <em>navigability</em> of the relationships of the entity and associated
 embeddable classes on which it is based. The association fields of an
 entity&#8217;s or embeddable&#8217;s abstract schema type determine navigability.
 Using the association fields and their values, a query can select
@@ -9773,13 +9773,13 @@ that this query does not select orders that have no line items.)</p>
 </div>
 <div class="paragraph">
 <p>Although reserved identifiers, such as
-DISTINCT, FROM, AS, JOIN, WHERE, and FALSE appear in upper case in this
-example, reserved identifiers are case
+<code>DISTINCT</code>, <code>FROM</code>, <code>AS</code>, <code>JOIN</code>, <code>WHERE</code>, and <code>FALSE</code> appear in upper
+case in this example, reserved identifiers are case
 insensitive.<sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnotedef_63" title="View footnote.">63</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>The SELECT clause of this example designates
-the return type of this query to be of type Order.</p>
+<p>The <code>SELECT</code> clause of this example designates
+the return type of this query to be of type <code>Order</code>.</p>
 </div>
 <div class="paragraph">
 <p>Because the same persistence unit defines the
@@ -9807,14 +9807,14 @@ means of the relationships between <code>Order</code> and <code>LineItem</code> 
 specified by using the entity name <code>Order</code>, which designates the
 abstract schema type over which the query ranges. The basis for the
 navigation is provided by the association fields <code>lineItems</code> and
-<code>product</code> of the abstract schema types Order and LineItem respectively.</p>
+<code>product</code> of the abstract schema types <code>Order</code> and <code>LineItem</code> respectively.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="the-from-clause-and-navigational-declarations"><a class="anchor" href="#the-from-clause-and-navigational-declarations"></a>4.4. The FROM Clause and Navigational Declarations</h3>
 <div class="paragraph">
-<p>The FROM clause of a query defines the <em>domain</em> of the query:</p>
+<p>The <code>FROM</code> clause of a query defines the <em>domain</em> of the query:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -9829,7 +9829,7 @@ below in <a href="#joins">Section 4.4.5</a>.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>An <em>identification variable</em> is an identifier declared in the FROM
+<p>An <em>identification variable</em> is an identifier declared in the <code>FROM</code>
 clause of a query. Each identification variable is assigned an
 abstract schema type. Each element of the domain may declare an
 identification variable.</p>
@@ -9843,7 +9843,7 @@ identification variable, and its identification variable defaults
 to the <em>implicit identification variable,</em> <code>this</code>.</p>
 </li>
 <li>
-<p>Otherwise, every element of the FROM clause&#8212;&#8203;that is, every
+<p>Otherwise, every element of the <code>FROM</code> clause&#8212;&#8203;that is, every
 named entity abstract schema types and every join&#8212;&#8203;must
 declare an identification variable.</p>
 </li>
@@ -9891,7 +9891,7 @@ collection_member_declaration ::= IN (collection_valued_path_expression) [AS] id
 </div>
 </div>
 <div class="paragraph">
-<p>The following subsections discuss the constructs used in the FROM clause.</p>
+<p>The following subsections discuss the constructs used in the <code>FROM</code> clause.</p>
 </div>
 <div class="sect3">
 <h4 id="a4760"><a class="anchor" href="#a4760"></a>4.4.1. Identifiers</h4>
@@ -9908,17 +9908,20 @@ question mark (<code>?</code>) character is reserved for use by the Jakarta
 Persistence query language.</p>
 </div>
 <div class="paragraph">
-<p>The following<sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnotedef_64" title="View footnote.">64</a>]</sup> are reserved identifiers: ABS, ALL, AND, ANY, AS, ASC,
-AVG, BETWEEN, BIT_LENGTH, BOTH, BY, CASE, CEILING, CHAR_LENGTH,
-CHARACTER_LENGTH, CLASS, COALESCE, CONCAT, COUNT, CURRENT_DATE,
-CURRENT_TIME, CURRENT_TIMESTAMP, DELETE, DESC, DISTINCT, ELSE, EMPTY,
-END, ENTRY, ESCAPE, EXISTS, EXP, EXTRACT, FALSE, FETCH, FIRST, FLOOR,
-FROM, FUNCTION, GROUP, HAVING, IN, INDEX, INNER, IS, JOIN, KEY, LEADING,
-LAST, LEFT, LENGTH, LIKE, LOCAL, LN, LOCATE, LOWER, MAX, MEMBER, MIN, MOD,
-NEW, NOT, NULL, NULLS, NULLIF, OBJECT, OF, ON, OR, ORDER, OUTER, POSITION,
-POWER, REPLACE, RIGHT, ROUND, SELECT, SET, SIGN, SIZE, SOME, SQRT, SUBSTRING, SUM,
-THEN, TRAILING, TREAT, TRIM, TRUE, TYPE, UNKNOWN, UPDATE, UPPER,
-VALUE, WHEN, WHERE.</p>
+<p>The following<sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnotedef_64" title="View footnote.">64</a>]</sup> are reserved identifiers: <code>ABS</code>, <code>ALL</code>, <code>AND</code>, <code>ANY</code>,
+<code>AS</code>, <code>ASC</code>, <code>AVG</code>, <code>BETWEEN</code>, <code>BIT_LENGTH</code>, <code>BOTH</code>, <code>BY</code>, <code>CASE</code>,
+<code>CEILING</code>, <code>CHAR_LENGTH</code>, <code>CHARACTER_LENGTH</code>, <code>CLASS</code>, <code>COALESCE</code>,
+<code>CONCAT</code>, <code>COUNT</code>, <code>CURRENT_DATE</code>, <code>CURRENT_TIME</code>, <code>CURRENT_TIMESTAMP</code>,
+<code>DELETE</code>, <code>DESC</code>, <code>DISTINCT</code>, <code>ELSE</code>, <code>EMPTY</code>, <code>END</code>, <code>ENTRY</code>, <code>ESCAPE</code>,
+<code>EXISTS</code>, <code>EXP</code>, <code>EXTRACT</code>, <code>FALSE</code>, <code>FETCH</code>, <code>FIRST</code>, <code>FLOOR</code>, <code>FROM</code>,
+<code>FUNCTION</code>, <code>GROUP</code>, <code>HAVING</code>, <code>IN</code>, <code>INDEX</code>, <code>INNER</code>, <code>IS</code>, <code>JOIN</code>,
+<code>KEY</code>, <code>LEADING</code>, <code>LAST</code>, <code>LEFT</code>, <code>LENGTH</code>, <code>LIKE</code>, <code>LOCAL</code>, <code>LN</code>,
+<code>LOCATE</code>, <code>LOWER</code>, <code>MAX</code>, <code>MEMBER</code>, <code>MIN</code>, <code>MOD</code>, <code>NEW</code>, <code>NOT</code>, <code>NULL</code>,
+<code>NULLS</code>, <code>NULLIF</code>, <code>OBJECT</code>, <code>OF</code>, <code>ON</code>, <code>OR</code>, <code>ORDER</code>, <code>OUTER</code>,
+<code>POSITION</code>, <code>POWER</code>, <code>REPLACE</code>, <code>RIGHT</code>, <code>ROUND</code>, <code>SELECT</code>, <code>SET</code>,
+<code>SIGN</code>, <code>SIZE</code>, <code>SOME</code>, <code>SQRT</code>, <code>SUBSTRING</code>, <code>SUM</code>, <code>THEN</code>, <code>TRAILING</code>,
+<code>TREAT</code>, <code>TRIM</code>, <code>TRUE</code>, <code>TYPE</code>, <code>UNKNOWN</code>, <code>UPDATE</code>, <code>UPPER</code>, <code>VALUE</code>,
+<code>WHEN</code>, <code>WHERE</code>.</p>
 </div>
 <div class="paragraph">
 <p>Reserved identifiers are case-insensitive.
@@ -9946,11 +9949,11 @@ releases of this specification.</p>
 <div class="sect3">
 <h4 id="a4765"><a class="anchor" href="#a4765"></a>4.4.2. Identification Variables</h4>
 <div class="paragraph">
-<p>An identification variable is a valid identifier declared in the FROM
+<p>An identification variable is a valid identifier declared in the <code>FROM</code>
 clause of a query.</p>
 </div>
 <div class="paragraph">
-<p>Every identification variable must be declared in the FROM clause,
+<p>Every identification variable must be declared in the <code>FROM</code> clause,
 except for the implicit identification variable <code>this</code>. Identification
 variables are never declared in other clauses.</p>
 </div>
@@ -9976,9 +9979,9 @@ example, consider the previous query:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In the FROM clause declaration <code>o.lineItems</code>
-<code>l</code>, the identification variable <code>l</code> evaluates to any LineItem value
-directly reachable from Order. The association field <code>lineItems</code> is a
+<p>In the <code>FROM</code> clause declaration <code>o.lineItems</code>
+<code>l</code>, the identification variable <code>l</code> evaluates to any <code>LineItem</code> value
+directly reachable from <code>Order</code>. The association field <code>lineItems</code> is a
 collection of instances of the abstract schema type LineItem and the
 identification variable <code>l</code> refers to an element of this collection. The
 type of <code>l</code> is the abstract schema type of <code>LineItem</code>.</p>
@@ -10000,16 +10003,16 @@ schema type of the map <code>value</code>.</p>
 a reference to a single value. It is declared in one of three ways: in a
 range variable declaration, in a join clause, or in a collection member
 declaration. The identification variable declarations are evaluated from
-left to right in the FROM clause, and an identification variable
+left to right in the <code>FROM</code> clause, and an identification variable
 declaration can use the result of a preceding identification variable
 declaration of the query string.</p>
 </div>
 <div class="paragraph">
 <p>All identification variables used in the
-SELECT, WHERE, ORDER BY, GROUP BY, or HAVING clause of a SELECT or
-DELETE statement must be declared in the FROM clause. The identification
-variables used in the WHERE clause of an UPDATE statement must be
-declared in the UPDATE clause.</p>
+<code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code>, <code>GROUP BY</code>, or <code>HAVING</code> clause of a <code>SELECT</code> or
+<code>DELETE</code> statement must be declared in the <code>FROM</code> clause. The identification
+variables used in the <code>WHERE</code> clause of an <code>UPDATE</code> statement must be
+declared in the <code>UPDATE</code> clause.</p>
 </div>
 <div class="paragraph">
 <p>Identification variables are existentially
@@ -10034,7 +10037,7 @@ identification variable.</p>
 </div>
 <div class="paragraph">
 <p>The syntax for declaring an identification variable as a range variable
-is similar to that of SQL; optionally, it may use the AS keyword. A
+is similar to that of SQL; optionally, it may use the <code>AS</code> keyword. A
 range variable declaration designates an entity abstract schema type by
 its entity name, as defined above in <a href="#naming">Section 4.3.1</a>.<sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnotedef_65" title="View footnote.">65</a>]</sup></p>
 </div>
@@ -10055,13 +10058,13 @@ by navigation.</p>
 <p>In order to select values by comparing more
 than one instance of an entity abstract schema type, more than one
 identification variable ranging over the abstract schema type is needed
-in the FROM clause.</p>
+in the <code>FROM</code> clause.</p>
 </div>
 <div class="paragraph">
 <p>The following query returns orders whose
 quantity is greater than the order quantity for John Smith. This example
 illustrates the use of two different identification variables in the
-FROM clause, both of the abstract schema type Order. The SELECT clause
+<code>FROM</code> clause, both of the abstract schema type <code>Order</code>. The <code>SELECT</code> clause
 of this query determines that it is the orders with quantities larger
 than John Smith&#8217;s that are returned.</p>
 </div>
@@ -10104,7 +10107,7 @@ variable declaration is optional. These queries are equivalent:</p>
 </div>
 <div class="paragraph">
 <p>Otherwise, if the query domain has more than one element, each named
-entity abstract schema type listed in the FROM clause must be a range
+entity abstract schema type listed in the <code>FROM</code> clause must be a range
 variable declaration, and the implicit identification variable is not
 implicitly assigned an abstract schema type.</p>
 </div>
@@ -10139,16 +10142,16 @@ the result of navigation; that is, the type of the state field or
 association field to which the expression navigates. The type of a path
 expression that navigates to an association field may be specified as a
 subtype of the declared type of the association field by means of the
-TREAT operator. See <a href="#a4965">Section 4.4.9</a>.</p>
+<code>TREAT</code> operator. See <a href="#a4965">Section 4.4.9</a>.</p>
 </div>
 <div class="paragraph">
 <p>An identification variable qualified
-by the KEY, VALUE, or ENTRY operator is a path expression. The KEY,
-VALUE, and ENTRY operators may only be applied to identification
+by the <code>KEY</code>, <code>VALUE</code>, or <code>ENTRY</code> operator is a path expression. The <code>KEY</code>,
+<code>VALUE</code>, and <code>ENTRY</code> operators may only be applied to identification
 variables that correspond to map-valued associations or map-valued
 element collections. The type of the path expression is the type
 computed as the result of the operation; that is, the abstract schema
-type of the field that is the value of the KEY, VALUE, or ENTRY operator
+type of the field that is the value of the <code>KEY</code>, <code>VALUE</code>, or <code>ENTRY</code> operator
 (the map key, map value, or map entry
 respectively).<sup class="footnote">[<a id="_footnoteref_66" class="footnote" href="#_footnotedef_66" title="View footnote.">66</a>]</sup></p>
 </div>
@@ -10177,10 +10180,10 @@ equivalent:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>A path expression using the KEY or VALUE
-operator can be further composed. A path expression using the ENTRY
+<p>A path expression using the <code>KEY</code> or <code>VALUE</code>
+operator can be further composed. A path expression using the <code>ENTRY</code>
 operator is terminal. It cannot be further composed and can only appear
-in the SELECT list of a query.</p>
+in the <code>SELECT</code> list of a query.</p>
 </div>
 <div class="paragraph">
 <p>The syntax for qualified identification variables is as follows.</p>
@@ -10277,7 +10280,7 @@ and collection-valued path expressions is as follows.</p>
 <p>An identification variable used in a
 <code>single_valued_object_path_expression</code> or in a
 <code>collection_valued_path_expression</code> may be an unqualified identification
-variable or an identification variable to which the KEY or VALUE
+variable or an identification variable to which the <code>KEY</code> or <code>VALUE</code>
 function has been applied.</p>
 </div>
 <div class="listingblock">
@@ -10289,9 +10292,9 @@ function has been applied.</p>
 </div>
 <div class="paragraph">
 <p>The type of an entity-valued path expression
-or an entity-valued subpath of a path expression used in a WHERE clause
+or an entity-valued subpath of a path expression used in a <code>WHERE</code> clause
 may be specified as a subtype of the corresponding declared type by
-means of the TREAT operator. See <a href="#a4965">Section 4.4.9</a>.</p>
+means of the <code>TREAT</code> operator. See <a href="#a4965">Section 4.4.9</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -10330,7 +10333,7 @@ entity or embeddable class.</p>
 of a field of embeddable class type.</p>
 </div>
 <div class="paragraph">
-<p>A _state <code>field</code> is designated by the name of
+<p>A <code>state_field</code> is designated by the name of
 an entity or embeddable class state field that corresponds to a basic
 type.</p>
 </div>
@@ -10344,13 +10347,13 @@ or element type.</p>
 <div class="paragraph">
 <p>It is syntactically illegal to compose a path
 expression from a path expression that evaluates to a collection. For
-example, if o designates Order, the path expression <code>o.lineItems.product</code>
+example, if <code>o</code> designates <code>Order</code>, the path expression <code>o.lineItems.product</code>
 is illegal since navigation to <code>lineItems</code> results in a collection. This
 case should produce an error when the query string is verified. To
 handle such a navigation, an identification variable must be declared in
-the FROM clause to range over the elements of the <code>lineItems</code>
+the <code>FROM</code> clause to range over the elements of the <code>lineItems</code>
 collection. Another path expression must be used to navigate over each
-such element in the WHERE clause of the query, as in the following:</p>
+such element in the <code>WHERE</code> clause of the query, as in the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -10364,7 +10367,7 @@ such element in the WHERE clause of the query, as in the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>the FROM clause of a query,</p>
+<p>the <code>FROM</code> clause of a query,</p>
 </li>
 <li>
 <p>an <code>empty_collection_comparison_expression</code>,</p>
@@ -10417,7 +10420,7 @@ specified in <a href="#a4766">Section 4.4.3</a>).</p>
 </div>
 <div class="paragraph">
 <p>An inner join may be implicitly specified by the use of a cartesian
-product in the FROM clause and a join condition in the WHERE clause.
+product in the <code>FROM</code> clause and a join condition in the <code>WHERE</code> clause.
 In the absence of a join condition, this reduces to the cartesian
 product.</p>
 </div>
@@ -10484,7 +10487,7 @@ and <a href="#a4931">Section 4.4.5.3</a> are supported.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The keyword INNER is optional and does not affect the semantics
+<p>The keyword <code>INNER</code> is optional and does not affect the semantics
 of the query.</p>
 </div>
 <div class="listingblock">
@@ -10550,7 +10553,7 @@ join over a foreign key relationship in the database.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This is equivalent to the following query using the earlier IN
+<p>This is equivalent to the following query using the earlier <code>IN</code>
 construct, defined in <a href="#a19497">[4]</a>. It selects those customers of
 status 1 for which at least one order exists:</p>
 </div>
@@ -10575,7 +10578,7 @@ and set of phones. <code>Phone</code> is an entity.</p>
 </div>
 <div class="paragraph">
 <p>A join condition may be specified for an inner join. This is equivalent
-to specification of the same condition in the WHERE clause.</p>
+to specification of the same condition in the <code>WHERE</code> clause.</p>
 </div>
 </div>
 <div class="sect4">
@@ -10589,7 +10592,7 @@ to specification of the same condition in the WHERE clause.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The keyword OUTER is optional and does not affect the semantics of
+<p>The keyword <code>OUTER</code> is optional and does not affect the semantics of
 the query.</p>
 </div>
 <div class="listingblock">
@@ -10628,7 +10631,7 @@ above return <code>Customer</code> instances with no matching <code>Order</code>
 <p>An association outer join without no explicit <code>join_condition</code> has an
 implicit join condition inferred from the foreign key relationship
 mapped by the <code>join_association_path_expression</code>. Typically, a JPQL
-join of this form is translated to a SQL outer join with an ON condition
+join of this form is translated to a SQL outer join with an <code>ON</code> condition
 specifying the foreign key relationship, as in the following examples.</p>
 </div>
 <div class="paragraph">
@@ -10653,8 +10656,8 @@ specifying the foreign key relationship, as in the following examples.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>An explicit <code>join_condition</code> (that is, an ON condition in the JOIN)
-results in an additional restriction in the ON condition of the
+<p>An explicit <code>join_condition</code> (that is, an <code>ON</code> condition in the <code>JOIN</code>)
+results in an additional restriction in the <code>ON</code> condition of the
 generated SQL.</p>
 </div>
 <div class="paragraph">
@@ -10696,15 +10699,15 @@ following query:</p>
 products in stock whereas the former query will include them.</p>
 </div>
 <div class="paragraph">
-<p>An important use case for LEFT JOIN is in enabling the prefetching of
+<p>An important use case for <code>LEFT JOIN</code> is in enabling the prefetching of
 related data items as a side effect of a query. This is accomplished by
-specifying the LEFT JOIN as a FETCH JOIN, as described below.</p>
+specifying the <code>LEFT JOIN</code> as a <code>FETCH JOIN</code>, as described below.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="a4931"><a class="anchor" href="#a4931"></a>4.4.5.3. Fetch Joins</h5>
 <div class="paragraph">
-<p>A FETCH JOIN clause in a query results in eager fetching of an association
+<p>A <code>FETCH JOIN</code> clause in a query results in eager fetching of an association
 or element collection as a side effect of execution of the query.</p>
 </div>
 <div class="paragraph">
@@ -10716,15 +10719,15 @@ or element collection as a side effect of execution of the query.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>A FETCH JOIN must be an INNER or LEFT (OUTER) join. A FETCH JOIN does not
+<p>A <code>FETCH JOIN</code> must be an <code>INNER</code> or <code>LEFT</code> (<code>OUTER</code>) join. A <code>FETCH JOIN</code> does not
 have an explicit join condition or identification variable.</p>
 </div>
 <div class="paragraph">
 <p>The association referenced by the right side
-of the FETCH JOIN clause must be an association or element collection
+of the <code>FETCH JOIN</code> clause must be an association or element collection
 that is referenced from an entity or embeddable that is returned as a
 result of the query. It is not permitted to specify an identification
-variable for the objects referenced by the right side of the FETCH JOIN
+variable for the objects referenced by the right side of the <code>FETCH JOIN</code>
 clause, and hence references to the implicitly fetched entities or
 elements cannot appear elsewhere in the query.</p>
 </div>
@@ -10753,8 +10756,8 @@ example, if department 1 has five employees, the above query returns
 five references to the department 1 entity.</p>
 </div>
 <div class="paragraph">
-<p>The FETCH JOIN construct must not be used in
-the FROM clause of a subquery.</p>
+<p>The <code>FETCH JOIN</code> construct must not be used in
+the <code>FROM</code> clause of a subquery.</p>
 </div>
 </div>
 </div>
@@ -10768,7 +10771,7 @@ obtained by navigation using a path expression.</p>
 <div class="paragraph">
 <p>An identification variable of a collection
 member declaration is declared using a special operator, the reserved
-identifier IN. The argument to the IN operator is a collection-valued
+identifier <code>IN</code>. The argument to the <code>IN</code> operator is a collection-valued
 path expression. The path expression evaluates to a collection type
 specified as a result of navigation to a collection-valued association
 field of an entity or embeddable class abstract schema type.</p>
@@ -10794,7 +10797,7 @@ identification variable is as follows:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>can equivalently be expressed as follows, using the IN operator:</p>
+<p>can equivalently be expressed as follows, using the <code>IN</code> operator:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -10807,23 +10810,23 @@ identification variable is as follows:</p>
 <p>In this example, <code>lineItems</code> is the name of an
 association field whose value is a collection of instances of the
 abstract schema type <code>LineItem</code>. The identification variable <code>l</code>
-designates a member of this collection, a single LineItem abstract
+designates a member of this collection, a single <code>LineItem</code> abstract
 schema type instance. In this example, <code>o</code> is an identification variable
-of the abstract schema type Order.</p>
+of the abstract schema type <code>Order</code>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="a4957"><a class="anchor" href="#a4957"></a>4.4.7. FROM Clause and SQL</h4>
 <div class="paragraph">
 <p>The Jakarta Persistence query language treats
-the FROM clause similarly to SQL in that the declared identification
+the <code>FROM</code> clause similarly to SQL in that the declared identification
 variables affect the results of the query even if they are not used in
-the WHERE clause. Application developers should use caution in defining
+the <code>WHERE</code> clause. Application developers should use caution in defining
 identification variables because the domain of the query can depend on
 whether there are any values of the declared type.</p>
 </div>
 <div class="paragraph">
-<p>For example, the FROM clause below defines a
+<p>For example, the <code>FROM</code> clause below defines a
 query over all orders that have line items and existing products. If
 there are no <code>Product</code> instances in the database, the domain of the
 query is empty and no order is selected.</p>
@@ -10839,7 +10842,7 @@ query is empty and no order is selected.</p>
 <h4 id="polymorphism"><a class="anchor" href="#polymorphism"></a>4.4.8. Polymorphism</h4>
 <div class="paragraph">
 <p>Jakarta Persistence queries are automatically
-polymorphic. The FROM clause of a query designates not only instances of
+polymorphic. The <code>FROM</code> clause of a query designates not only instances of
 the specific entity class(es) to which it explicitly refers but
 instances of subclasses of those classes as well. The instances returned
 by a query thus include instances of the subclasses that satisfy the
@@ -10848,25 +10851,25 @@ query criteria.</p>
 <div class="paragraph">
 <p>Non-polymorphic queries or queries whose
 polymorphism is restricted can be specified using entity type
-expressions in the WHERE clause to restrict the domain of the query. See
+expressions in the <code>WHERE</code> clause to restrict the domain of the query. See
 <a href="#a5381">Section 4.7.12</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="a4965"><a class="anchor" href="#a4965"></a>4.4.9. Downcasting</h4>
 <div class="paragraph">
-<p>The use of the TREAT operator is supported
-for downcasting within path expressions in the FROM and WHERE clauses.
-Use of the TREAT operator allows access to subclass-specific state.</p>
+<p>The use of the <code>TREAT</code> operator is supported
+for downcasting within path expressions in the <code>FROM</code> and <code>WHERE</code> clauses.
+Use of the <code>TREAT</code> operator allows access to subclass-specific state.</p>
 </div>
 <div class="paragraph">
 <p>If during query execution the first argument
-to the TREAT operator is not a subtype (proper or improper) of the
+to the <code>TREAT</code> operator is not a subtype (proper or improper) of the
 target type, the path is considered to have no value, and does not
 participate in the determination of the result. That is, in the case of
 a join, the referenced object does not participate in the result, and in
 the case of a restriction, the associated predicate is false. Use of the
-TREAT operator therefore also has the effect of filtering on the
+<code>TREAT</code> operator therefore also has the effect of filtering on the
 specified type (and its subtypes) as well as performing the downcast. If
 the target type is not a subtype (proper or improper) of the static type
 of the first argument, the query is invalid.</p>
@@ -10897,13 +10900,13 @@ of the first argument, the query is invalid.</p>
 <div class="sect2">
 <h3 id="a4985"><a class="anchor" href="#a4985"></a>4.5. WHERE Clause</h3>
 <div class="paragraph">
-<p>The WHERE clause of a query consists of a
+<p>The <code>WHERE</code> clause of a query consists of a
 conditional expression used to select objects or values that satisfy the
-expression. The WHERE clause restricts the result of a select statement
+expression. The <code>WHERE</code> clause restricts the result of a select statement
 or the scope of an update or delete operation.</p>
 </div>
 <div class="paragraph">
-<p>A WHERE clause is defined as follows:</p>
+<p>A <code>WHERE</code> clause is defined as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -10911,13 +10914,13 @@ or the scope of an update or delete operation.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The GROUP BY construct enables the
+<p>The <code>GROUP BY</code> construct enables the
 aggregation of values according to the properties of an entity class.
-The HAVING construct enables conditions to be specified that further
+The <code>HAVING</code> construct enables conditions to be specified that further
 restrict the query result as restrictions upon the groups.</p>
 </div>
 <div class="paragraph">
-<p>The syntax of the HAVING clause is as follows:</p>
+<p>The syntax of the <code>HAVING</code> clause is as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -10925,7 +10928,7 @@ restrict the query result as restrictions upon the groups.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The GROUP BY and HAVING constructs are
+<p>The <code>GROUP BY</code> and <code>HAVING</code> constructs are
 further discussed in <a href="#a5410">Section 4.8</a>.</p>
 </div>
 </div>
@@ -10933,8 +10936,8 @@ further discussed in <a href="#a5410">Section 4.8</a>.</p>
 <h3 id="a4994"><a class="anchor" href="#a4994"></a>4.6. Conditional Expressions</h3>
 <div class="paragraph">
 <p>The following sections describe language
-constructs that can be used in a conditional expression of the WHERE
-clause, the HAVING clause, or in an ON condition.</p>
+constructs that can be used in a conditional expression of the <code>WHERE</code>
+clause, the <code>HAVING</code> clause, or in an <code>ON</code> condition.</p>
 </div>
 <div class="paragraph">
 <p>State fields that are mapped in serialized
@@ -10955,7 +10958,7 @@ conditional expressions.</p>
 </div>
 <div class="paragraph">
 <p>Aggregate functions can only be used in
-conditional expressions in a HAVING clause. See <a href="#a5410">Section 4.8</a>.</p>
+conditional expressions in a <code>HAVING</code> clause. See <a href="#a5410">Section 4.8</a>.</p>
 </div>
 <div class="paragraph">
 <p>Standard bracketing <code>()</code> for ordering expression evaluation is supported.</p>
@@ -10996,25 +10999,25 @@ simple_cond_expression ::=
 <div class="ulist">
 <ul>
 <li>
-<p>+, - unary</p>
+<p><code>+</code>, <code>-</code> unary</p>
 </li>
 <li>
-<p>*, / multiplication and division</p>
+<p><code>*</code>, <code>/</code> multiplication and division</p>
 </li>
 <li>
-<p>+, - addition and subtraction</p>
+<p><code>+</code>, <code>-</code> addition and subtraction</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>String concatenation (<em>||</em>)</p>
+<p>String concatenation (<code>||</code>)</p>
 </li>
 <li>
-<p>Comparison operators: <em>=</em>, <em>&gt;</em>, <em>&gt;=</em>, <em>&lt;</em>
-, <em>&lt;=</em>, <em>&lt;&gt;</em> (not equal), <em>[NOT]</em> <em>BETWEEN</em>, <em>[NOT]</em> <em>LIKE</em>, <em>[NOT]</em>
-<em>IN</em>, <em>IS</em> <em>[NOT]</em> <em>NULL</em>, <em>IS</em> <em>[NOT]</em> <em>EMPTY</em>, <em>[NOT]</em> <em>MEMBER</em>
-<em>[OF]</em>, <em>[NOT]</em> <em>EXISTS</em></p>
+<p>Comparison operators: <code>=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>
+, <code>&lt;=</code>, <code>&lt;&gt;</code> (not equal), <code>[NOT] BETWEEN</code>, <code>[NOT] LIKE</code>, <code>[NOT]
+IN</code>, <code>IS [NOT] NULL</code>, <code>IS [NOT] EMPTY</code>, <code>[NOT] MEMBER
+[OF]</code>, <code>[NOT] EXISTS</code></p>
 </li>
 <li>
 <p>Logical operators:</p>
@@ -11076,7 +11079,7 @@ TYPE(e) = ExemptEmployee</pre>
 <div class="sect3">
 <h4 id="between-expressions"><a class="anchor" href="#between-expressions"></a>4.6.4. Between Expressions</h4>
 <div class="paragraph">
-<p>The syntax for the use of the comparison operator [NOT] BETWEEN in a
+<p>The syntax for the use of the comparison operator <code>[NOT] BETWEEN</code> in a
 conditional expression is as follows:</p>
 </div>
 <div class="listingblock">
@@ -11088,7 +11091,7 @@ conditional expression is as follows:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The BETWEEN expression</p>
+<p>The <code>BETWEEN</code> expression</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -11104,7 +11107,7 @@ conditional expression is as follows:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The rules for unknown and NULL values in
+<p>The rules for unknown and <code>NULL</code> values in
 comparison operations apply. See <a href="#a5676">Section 4.6.13</a>.</p>
 </div>
 <div class="paragraph">
@@ -11137,7 +11140,7 @@ an order column.</p>
 <h4 id="a5107"><a class="anchor" href="#a5107"></a>4.6.5. In Expressions</h4>
 <div class="paragraph">
 <p>The syntax for the use of the comparison
-operator [NOT] IN in a conditional expression is as follows:</p>
+operator <code>[NOT] IN</code> in a conditional expression is as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -11194,7 +11197,7 @@ type. Subqueries are discussed in <a href="#a5196">Section 4.6.12</a>.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If an IN or NOT IN expression has a list of <code>in_item</code> expressions,
+<p>If an <code>IN</code> or <code>NOT IN</code> expression has a list of <code>in_item</code> expressions,
 there must be at least one item in the list.
 The value of such expressions is determined according to the
 following rules:</p>
@@ -11202,19 +11205,19 @@ following rules:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>If the <code>state_valued_path_expression</code> in an IN or NOT IN expression
-evaluates to <code>NULL</code> or unknown, then the whole IN or NOT IN
+<p>If the <code>state_valued_path_expression</code> in an <code>IN</code> or <code>NOT IN</code> expression
+evaluates to <code>NULL</code> or unknown, then the whole <code>IN</code> or <code>NOT IN</code>
 expression evaluates to <code>NULL</code> or unknown.</p>
 </li>
 <li>
 <p>Otherwise, if the <code>state_valued_path_expression</code> and at least one
-<code>in_item</code> evaluate to the same value, the whole IN or NOT IN
+<code>in_item</code> evaluate to the same value, the whole <code>IN</code> or <code>NOT IN</code>
 expression evaluates to true.</p>
 </li>
 <li>
 <p>Otherwise, if the value of a <code>state_valued_path_expression</code>
 evaluates to a value distinct from the value of every <code>in_item</code>
-expression, the whole IN or NOT IN expression evaluates to:</p>
+expression, the whole <code>IN</code> or <code>NOT IN</code> expression evaluates to:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -11244,7 +11247,7 @@ to null.</p>
 <h4 id="like-expressions"><a class="anchor" href="#like-expressions"></a>4.6.6. Like Expressions</h4>
 <div class="paragraph">
 <p>The syntax for the use of the comparison
-operator [NOT] LIKE in a conditional expression is as follows:</p>
+operator <code>[NOT] LIKE</code> in a conditional expression is as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -11255,14 +11258,14 @@ operator [NOT] LIKE in a conditional expression is as follows:</p>
 <div class="paragraph">
 <p>The <code>string_expression</code> must have a string
 value. The <code>pattern_value</code> is a string literal or a string-valued input
-parameter in which an underscore (<code><em></code>) stands for any single
-character, a percent (</em>%<em>) character stands for any sequence of
+parameter in which an underscore (<code>_</code>) stands for any single
+character, a percent (<code>%</code>) character stands for any sequence of
 characters (including the empty sequence), and all other characters
-stand for themselves. The optional <code>escape_character</code> _</em> is a
+stand for themselves. The optional <code>escape_character</code> is a
 single-character string literal or a character-valued input parameter
 (i.e., <code>char</code> or <code>Character</code>) and is used to escape the special meaning
-of the underscore and percent characters in <code>pattern_value</code>
-_.<sup class="footnote">[<a id="_footnoteref_71" class="footnote" href="#_footnotedef_71" title="View footnote.">71</a>]</sup></p>
+of the underscore and percent characters in <code>pattern_value</code>.
+<sup class="footnote">[<a id="_footnoteref_71" class="footnote" href="#_footnotedef_71" title="View footnote.">71</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -11270,31 +11273,31 @@ _.<sup class="footnote">[<a id="_footnoteref_71" class="footnote" href="#_footno
 <div class="ulist">
 <ul>
 <li>
-<p><em>address.phone LIKE '12%3'</em> is true for '123', '12993' and false for '1234'</p>
+<p><code>address.phone LIKE '12%3'</code> is true for <code>'123'</code>, <code>'12993'</code> and false for <code>'1234'</code></p>
 </li>
 <li>
-<p><em>asentence.word LIKE 'l_se'</em> is true for 'lose' and false for 'loose'</p>
+<p><code>asentence.word LIKE 'l_se'</code> is true for <code>'lose'</code> and false for <code>'loose'</code></p>
 </li>
 <li>
-<p><em>aword.underscored LIKE '\</em>%' ESCAPE '\'_ is true for '_foo' and false for 'bar'</p>
+<p><code>aword.underscored LIKE '_%' ESCAPE '\'</code> is true for <code>'_foo'</code> and false for <code>'bar'</code></p>
 </li>
 <li>
-<p><em>address.phone NOT LIKE '12%3'</em> is false for '123' and '12993' and true for '1234'</p>
+<p><code>address.phone NOT LIKE '12%3'</code> is false for <code>'123'</code> and <code>'12993'</code> and true for <code>'1234'</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>If the value of the <code>string_expression</code> or
-<code>pattern_value</code> is <code>NULL</code> or unknown, the value of the LIKE expression
+<code>pattern_value</code> is <code>NULL</code> or unknown, the value of the <code>LIKE</code> expression
 is unknown. If the <code>escape_character</code> is specified and is <code>NULL</code>, the
-value of the LIKE expression is unknown.</p>
+value of the <code>LIKE</code> expression is unknown.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="null-comparison-expressions"><a class="anchor" href="#null-comparison-expressions"></a>4.6.7. Null Comparison Expressions</h4>
 <div class="paragraph">
 <p>The syntax for the use of the comparison
-operator IS NULL in a conditional expression is as follows:</p>
+operator IS <code>NULL</code> in a conditional expression is as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -11317,7 +11320,7 @@ may be added in a future release of this specification.</p>
 <h4 id="a5139"><a class="anchor" href="#a5139"></a>4.6.8. Empty Collection Comparison Expressions</h4>
 <div class="paragraph">
 <p>The syntax for the use of the comparison
-operator IS EMPTY in an <code>empty_collection_comparison_expression</code> is as
+operator <code>IS EMPTY</code> in an <code>empty_collection_comparison_expression</code> is as
 follows:</p>
 </div>
 <div class="listingblock">
@@ -11351,7 +11354,7 @@ value of the empty comparison expression is unknown.</p>
 <h4 id="a5150"><a class="anchor" href="#a5150"></a>4.6.9. Collection Member Expressions</h4>
 <div class="paragraph">
 <p>The syntax for the use of the comparison
-operator MEMBER OF<sup class="footnote">[<a id="_footnoteref_72" class="footnote" href="#_footnotedef_72" title="View footnote.">72</a>]</sup> in an
+operator <code>MEMBER OF</code> <sup class="footnote">[<a id="_footnoteref_72" class="footnote" href="#_footnotedef_72" title="View footnote.">72</a>]</sup> in a
 <code>collection_member_expression</code> is as follows:</p>
 </div>
 <div class="listingblock">
@@ -11381,8 +11384,8 @@ release of this specification.</p>
 </div>
 <div class="paragraph">
 <p>If the collection valued path expression
-designates an empty collection, the value of the MEMBER OF expression is
-FALSE and the value of the NOT MEMBER OF expression is TRUE. Otherwise,
+designates an empty collection, the value of the <code>MEMBER OF</code> expression is
+<code>FALSE</code> and the value of the <code>NOT MEMBER OF</code> expression is <code>TRUE</code>. Otherwise,
 if the value of the <code>collection_valued_path_expression</code>
 or <code>entity_or_value_expression</code> in the
 collection member expression is <code>NULL</code> or unknown, the value of the
@@ -11402,7 +11405,7 @@ collection member expression is unknown.</p>
 <div class="sect3">
 <h4 id="exists-expressions"><a class="anchor" href="#exists-expressions"></a>4.6.10. Exists Expressions</h4>
 <div class="paragraph">
-<p>An EXISTS expression is a predicate that is
+<p>An <code>EXISTS</code> expression is a predicate that is
 true only if the result of the subquery consists of one or more values
 and that is false otherwise.</p>
 </div>
@@ -11435,30 +11438,30 @@ employees whose spouses are also employees.</p>
 <div class="sect3">
 <h4 id="all-or-any-expressions"><a class="anchor" href="#all-or-any-expressions"></a>4.6.11. All or Any Expressions</h4>
 <div class="paragraph">
-<p>An ALL conditional expression is a predicate
+<p>An <code>ALL</code> conditional expression is a predicate
 over a subquery that is true if the comparison operation is true for all
 values in the result of the subquery or the result of the subquery is
-empty. An ALL conditional expression is false if the result of the
+empty. An <code>ALL</code> conditional expression is false if the result of the
 comparison is false for at least one value of the result of the
 subquery, and is unknown if neither true nor false.</p>
 </div>
 <div class="paragraph">
-<p>An ANY conditional expression is a predicate
+<p>An <code>ANY</code> conditional expression is a predicate
 over a subquery that is true if the comparison operation is true for
-some value in the result of the subquery. An ANY conditional expression
+some value in the result of the subquery. An <code>ANY</code> conditional expression
 is false if the result of the subquery is empty or if the comparison
 operation is false for every value in the result of the subquery, and is
-unknown if neither true nor false. The keyword SOME is synonymous with
-ANY.</p>
+unknown if neither true nor false. The keyword <code>SOME</code> is synonymous with
+<code>ANY</code>.</p>
 </div>
 <div class="paragraph">
-<p>The comparison operators used with ALL or ANY
-conditional expressions are =, &lt;, &lt;=, &gt;, &gt;=, &lt;&gt;. The result of the
+<p>The comparison operators used with <code>ALL</code> or <code>ANY</code>
+conditional expressions are <code>=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;&gt;</code>. The result of the
 subquery must be like that of the other argument to the comparison
 operator in type. See <a href="#a5735">Section 4.6.14</a>.</p>
 </div>
 <div class="paragraph">
-<p>The syntax of an ALL or ANY expression is
+<p>The syntax of an <code>ALL</code> or <code>ANY</code> expression is
 specified as follows:</p>
 </div>
 <div class="listingblock">
@@ -11488,7 +11491,7 @@ department.</p>
 <div class="sect3">
 <h4 id="a5196"><a class="anchor" href="#a5196"></a>4.6.12. Subqueries</h4>
 <div class="paragraph">
-<p>Subqueries may be used in the WHERE or HAVING clause.<sup class="footnote">[<a id="_footnoteref_73" class="footnote" href="#_footnotedef_73" title="View footnote.">73</a>]</sup></p>
+<p>Subqueries may be used in the <code>WHERE</code> or <code>HAVING</code> clause.<sup class="footnote">[<a id="_footnoteref_73" class="footnote" href="#_footnotedef_73" title="View footnote.">73</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>The syntax for subqueries is as follows:</p>
@@ -11570,10 +11573,10 @@ conditional expressions containing <code>NULL</code> values.</p>
 <ul>
 <li>
 <p>Comparison or arithmetic operations with a
-NULL value always yield an unknown value.</p>
+<code>NULL</code> value always yield an unknown value.</p>
 </li>
 <li>
-<p>Two NULL values are not considered to be
+<p>Two <code>NULL</code> values are not considered to be
 equal, the comparison yields an unknown value.</p>
 </li>
 <li>
@@ -11581,9 +11584,9 @@ equal, the comparison yields an unknown value.</p>
 unknown value always yield an unknown value.</p>
 </li>
 <li>
-<p>The IS NULL and IS NOT NULL operators convert
+<p>The <code>IS NULL</code> and <code>IS NOT NULL</code> operators convert
 a <code>NULL</code> state field or single-valued object field value into the
-respective TRUE or FALSE value.</p>
+respective <code>TRUE</code> or <code>FALSE</code> value.</p>
 </li>
 <li>
 <p>Boolean operators use three valued logic,
@@ -11701,12 +11704,12 @@ defined by <a href="#a5686">Table 1</a>, <a href="#a5705">Table 2</a>, and <a hr
 <td class="content">
 <div class="paragraph">
 <p>The Jakarta Persistence query language
-defines the empty string, '', as a string
-with 0 length, which is not equal to a NULL value. However, NULL values
+defines the empty string, <code>''</code>, as a string
+with length zero, which is not equal to a <code>NULL</code> value. However, <code>NULL</code> values
 and empty strings may not always be distinguished when queries are
 mapped to some databases. Application developers should therefore not
 rely on the semantics of query comparisons involving the empty string
-and NULL value.</p>
+and <code>NULL</code> value.</p>
 </div>
 </td>
 </tr>
@@ -11890,9 +11893,9 @@ of the type of the state field name, i.e., a string.</p>
 type expressions result in scalar values.</p>
 </div>
 <div class="paragraph">
-<p>Scalar expressions may be used in the SELECT
-clause of a query as well as in the WHERE<sup class="footnote">[<a id="_footnoteref_74" class="footnote" href="#_footnotedef_74" title="View footnote.">74</a>]</sup> and
-HAVING clauses.</p>
+<p>Scalar expressions may be used in the <code>SELECT</code>
+clause of a query as well as in the <code>WHERE</code> <sup class="footnote">[<a id="_footnoteref_74" class="footnote" href="#_footnotedef_74" title="View footnote.">74</a>]</sup> and
+<code>HAVING</code> clauses.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -11911,8 +11914,8 @@ HAVING clauses.</p>
 <h4 id="literals"><a class="anchor" href="#literals"></a>4.7.1. Literals</h4>
 <div class="paragraph">
 <p>A string literal is enclosed in single
-quotes—for example: 'literal'. A string literal that includes a single
-quote is represented by two single quotes—for example: 'literal''s'.
+quotes—for example: <code>'literal'</code>. A string literal that includes a single
+quote is represented by two single quotes—for example: <code>'literal''s'</code>.
 String literals in queries, like Java <code>String</code> literals, use unicode
 character encoding. The use of Java escape notation is not supported in
 query string literals.</p>
@@ -11952,10 +11955,10 @@ literal, the numeric value must be an exact integer literal.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>an integer literal is interpreted as a Java int, and</p>
+<p>an integer literal is interpreted as a Java <code>int</code>, and</p>
 </li>
 <li>
-<p>a floating point literal is interpreted as a Java double.</p>
+<p>a floating point literal is interpreted as a Java <code>double</code>.</p>
 </li>
 </ul>
 </div>
@@ -11999,14 +12002,14 @@ into the native syntax of the database or driver.</p>
 <h4 id="identification-variables"><a class="anchor" href="#identification-variables"></a>4.7.2. Identification Variables</h4>
 <div class="paragraph">
 <p>All identification variables used in the
-WHERE or HAVING clause of a SELECT or DELETE statement must be declared
-in the FROM clause, as described in <a href="#a4765">Section 4.4.2</a>. The identification variables used in the
-WHERE clause of an UPDATE statement must be declared in the UPDATE
+<code>WHERE</code> or <code>HAVING</code> clause of a <code>SELECT</code> or <code>DELETE</code> statement must be declared
+in the <code>FROM</code> clause, as described in <a href="#a4765">Section 4.4.2</a>. The identification variables used in the
+<code>WHERE</code> clause of an <code>UPDATE</code> statement must be declared in the <code>UPDATE</code>
 clause.</p>
 </div>
 <div class="paragraph">
 <p>Identification variables are existentially
-quantified in the WHERE and HAVING clause.
+quantified in the <code>WHERE</code> and <code>HAVING</code> clause.
 This means that an identification variable represents a member of a
 collection or an instance of an entity&#8217;s abstract schema type. An
 identification variable never designates a collection in its entirety.</p>
@@ -12016,10 +12019,10 @@ identification variable never designates a collection in its entirety.</p>
 <h4 id="path-expressions"><a class="anchor" href="#path-expressions"></a>4.7.3. Path Expressions</h4>
 <div class="paragraph">
 <p>It is illegal to use a
-<code>collection_valued_path_expression</code> within a WHERE or HAVING clause as
+<code>collection_valued_path_expression</code> within a <code>WHERE</code> or <code>HAVING</code> clause as
 part of a conditional expression except in an
 <code>empty_collection_comparison_expression</code>, in a
-<code>collection_member_expression</code>, or as an argument to the SIZE operator.</p>
+<code>collection_member_expression</code>, or as an argument to the <code>SIZE</code> operator.</p>
 </div>
 </div>
 <div class="sect3">
@@ -12072,8 +12075,8 @@ in <a href="#a3125">Section 3.11</a>.</p>
 <ul>
 <li>
 <p>A positional parameter is designated by an integer, and prefixed with a
-<em>?</em> symbol (question mark) in the text of the query string.
-For example: <em>?1</em>.</p>
+<code>?</code> symbol (question mark) in the text of the query string.
+For example: <code>?1</code>.</p>
 </li>
 <li>
 <p>Input parameters are numbered starting from 1.</p>
@@ -12091,7 +12094,7 @@ need not match the numbering of the positional parameters.</p>
 <div class="sect4">
 <h5 id="named-parameters"><a class="anchor" href="#named-parameters"></a>4.7.4.2. Named Parameters</h5>
 <div class="paragraph">
-<p>A named parameter is denoted by an identifier, and prefixed by the <em>:</em> symbol
+<p>A named parameter is denoted by an identifier, and prefixed by the <code>:</code> symbol
 (colon) in the text of the query string. The identifier name must follow the
 usual rules for identifiers specified in <a href="#a4760">Section 4.4.1</a>. Named parameters are
 case-sensitive.</p>
@@ -12149,7 +12152,7 @@ Its operands must be string expressions.</p>
 <p>The Jakarta Persistence query language includes
 the built-in functions described in <a href="#a5264">Section 4.7.7.1</a>, <a href="#a5284">Section 4.7.7.2</a>,
 <a href="#a5304">Section 4.7.7.3</a>, which may be used
-in the SELECT, WHERE or HAVING clause of a query. The invocation of
+in the <code>SELECT</code>, <code>WHERE</code> or <code>HAVING</code> clause of a query. The invocation of
 predefined database functions and user-defined database functions is
 described in <a href="#a5311">Section 4.7.9</a>.</p>
 </div>
@@ -12180,42 +12183,42 @@ functions_returning_numerics ::=
 </div>
 </div>
 <div class="paragraph">
-<p>The CONCAT function returns a string that is
+<p>The <code>CONCAT</code> function returns a string that is
 a concatenation of its arguments.</p>
 </div>
 <div class="paragraph">
 <p>The second and third arguments of the
-SUBSTRING function denote the starting position and length of the
+<code>SUBSTRING</code> function denote the starting position and length of the
 substring to be returned. These arguments are integers. The third
 argument is optional. If it is not specified, the substring from the
 start position to the end of the string is returned. The first position
-of a string is denoted by 1. The SUBSTRING function returns a string.</p>
+of a string is denoted by 1. The <code>SUBSTRING</code> function returns a string.</p>
 </div>
 <div class="paragraph">
-<p>The TRIM function trims the specified
+<p>The <code>TRIM</code> function trims the specified
 character from a string. If the character to be trimmed is not
 specified, it will be assumed to be space (or blank). The optional
-<code>trim_character</code> __ is a single-character string literal or a
-character-valued input parameter (i.e., <code>char</code> or <code>Character</code>
-)<sup class="footnote">[<a id="_footnoteref_75" class="footnote" href="#_footnotedef_75" title="View footnote.">75</a>]</sup>. If a trim specification is not provided, it
-defaults to BOTH. The TRIM function returns the trimmed string.</p>
+<code>trim_character</code> is a single-character string literal or a
+character-valued input parameter (i.e., <code>char</code> or <code>Character</code>)
+<sup class="footnote">[<a id="_footnoteref_75" class="footnote" href="#_footnotedef_75" title="View footnote.">75</a>]</sup>. If a trim specification is not provided, it
+defaults to <code>BOTH</code>. The <code>TRIM</code> function returns the trimmed string.</p>
 </div>
 <div class="paragraph">
-<p>The LOWER and UPPER functions convert a
+<p>The <code>LOWER</code> and <code>UPPER</code> functions convert a
 string to lower and upper case, respectively, with regard to the locale
 of the database. They return a string.</p>
 </div>
 <div class="paragraph">
-<p>The LEFT and RIGHT functions return the leftmost or rightmost substring,
+<p>The <code>LEFT</code> and <code>RIGHT</code> functions return the leftmost or rightmost substring,
 respectively, of the first argument whose length is given by the second
 argument.</p>
 </div>
 <div class="paragraph">
-<p>The REPLACE function replaces all occurrences within the first argument
+<p>The <code>REPLACE</code> function replaces all occurrences within the first argument
 string of the second argument string with the third argument string.</p>
 </div>
 <div class="paragraph">
-<p>The LOCATE function returns the position at which one string occurs within
+<p>The <code>LOCATE</code> function returns the position at which one string occurs within
 a second string, optionally ignoring any occurrences that begin before a
 specified character position in the second string. It returns the first
 character position within the second string (after the specified character
@@ -12228,7 +12231,7 @@ character of the second string). If the first string does not occur within
 the second string, 0 is returned.<sup class="footnote">[<a id="_footnoteref_76" class="footnote" href="#_footnotedef_76" title="View footnote.">76</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>The LENGTH function returns the length of the
+<p>The <code>LENGTH</code> function returns the length of the
 string in characters as an integer.</p>
 </div>
 </div>
@@ -12253,26 +12256,26 @@ string in characters as an integer.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The ABS, CEILING, and FLOOR functions accept a numeric argument and
+<p>The <code>ABS</code>, <code>CEILING</code>, and <code>FLOOR</code> functions accept a numeric argument and
 return a number (integer, float, or double) of the same type as the
 argument.</p>
 </div>
 <div class="paragraph">
-<p>The SIGN function accepts a numeric argument and returns an integer.</p>
+<p>The <code>SIGN</code> function accepts a numeric argument and returns an integer.</p>
 </div>
 <div class="paragraph">
-<p>The SQRT, EXP, and LN functions accept a numeric argument and return
+<p>The <code>SQRT</code>, <code>EXP</code>, and <code>LN</code> functions accept a numeric argument and return
 a double.</p>
 </div>
 <div class="paragraph">
-<p>The MOD function accepts two integer arguments and returns an integer.</p>
+<p>The <code>MOD</code> function accepts two integer arguments and returns an integer.</p>
 </div>
 <div class="paragraph">
-<p>The ROUND function accepts a numeric argument and an integer argument
+<p>The <code>ROUND</code> function accepts a numeric argument and an integer argument
 and returns a number of the same type as the first argument.</p>
 </div>
 <div class="paragraph">
-<p>The POWER function accepts two numeric arguments and returns a double.</p>
+<p>The <code>POWER</code> function accepts two numeric arguments and returns a double.</p>
 </div>
 <div class="paragraph">
 <p>Numeric arguments to these functions may
@@ -12280,18 +12283,18 @@ correspond to the numeric Java object types as well as the primitive
 numeric types.</p>
 </div>
 <div class="paragraph">
-<p>The SIZE function returns an integer value,
+<p>The <code>SIZE</code> function returns an integer value,
 the number of elements of the collection. If the collection is empty,
-the SIZE function evaluates to zero.</p>
+the <code>SIZE</code> function evaluates to zero.</p>
 </div>
 <div class="paragraph">
-<p>The INDEX function returns an integer value
+<p>The <code>INDEX</code> function returns an integer value
 corresponding to the position of its argument in an ordered list. The
-INDEX function can only be applied to identification variables denoting
+<code>INDEX</code> function can only be applied to identification variables denoting
 types for which an order column has been specified.</p>
 </div>
 <div class="paragraph">
-<p>In the following example, <em>studentWaitlist</em>
+<p>In the following example, <code>studentWaitlist</code>
 is a list of students for which an order column has been specified:</p>
 </div>
 <div class="listingblock">
@@ -12318,24 +12321,24 @@ is a list of students for which an order column has been specified:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The functions LOCAL DATE, LOCAL TIME, and LOCAL DATETIME return the value
+<p>The functions <code>LOCAL DATE</code>, <code>LOCAL TIME</code>, and <code>LOCAL DATETIME</code> return the value
 of the current date, time, or timestamp on the database server, respectively.
 Their types are <code>java.time.LocalDate</code>, <code>java.time.LocalTime</code>, and
 <code>java.time.LocalDateTime</code> respectively.</p>
 </div>
 <div class="paragraph">
-<p>The functions CURRENT_DATE, CURRENT_TIME, and CURRENT_TIMESTAMP
+<p>The functions <code>CURRENT_DATE</code>, <code>CURRENT_TIME</code>, and <code>CURRENT_TIMESTAMP</code>
 return the value of the current date, time, or timestamp on the database
 server, respectively. Their types are <code>java.sql.Date</code>, <code>java.sql.Time</code>,
 and <code>java.sql.Timestamp</code> respectively.</p>
 </div>
 <div class="paragraph">
 <p>The EXTRACT function takes a datetime argument and one of the following
-field type identifiers: YEAR, QUARTER, MONTH, WEEK, DAY, HOUR, MINUTE,
-SECOND, DATE, TIME.</p>
+field type identifiers: <code>YEAR</code>, <code>QUARTER</code>, <code>MONTH</code>, <code>WEEK</code>, <code>DAY</code>, <code>HOUR</code>, <code>MINUTE</code>,
+<code>SECOND</code>, <code>DATE</code>, <code>TIME</code>.</p>
 </div>
 <div class="paragraph">
-<p>EXTRACT returns the value of the corresponding field or part of the
+<p><code>EXTRACT</code> returns the value of the corresponding field or part of the
 datetime.</p>
 </div>
 <div class="listingblock">
@@ -12347,49 +12350,49 @@ datetime_field := identification_variable</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>For the following field type identifiers, EXTRACT returns an integer
+<p>For the following field type identifiers, <code>EXTRACT</code> returns an integer
 value:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>YEAR means the calendar year.</p>
+<p><code>YEAR</code> means the calendar year.</p>
 </li>
 <li>
-<p>QUARTER means the calendar quarter, numbered from 1 to 4.</p>
+<p><code>QUARTER</code> means the calendar quarter, numbered from 1 to 4.</p>
 </li>
 <li>
-<p>MONTH means the calendar month of the year, numbered from 1.</p>
+<p><code>MONTH</code> means the calendar month of the year, numbered from 1.</p>
 </li>
 <li>
-<p>WEEK means the ISO-8601 week number.</p>
+<p><code>WEEK</code> means the ISO-8601 week number.</p>
 </li>
 <li>
-<p>DAY means the calendar day of the month, numbered from 1.</p>
+<p><code>DAY</code> means the calendar day of the month, numbered from 1.</p>
 </li>
 <li>
-<p>HOUR means the hour of the day in 24-hour time, numbered from 0 to 23.</p>
+<p><code>HOUR</code> means the hour of the day in 24-hour time, numbered from 0 to 23.</p>
 </li>
 <li>
-<p>MINUTE means the minute of the hour, numbered from 0 to 59.</p>
+<p><code>MINUTE</code> means the minute of the hour, numbered from 0 to 59.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>For the SECOND field type identifier, EXTRACT returns a floating point
+<p>For the <code>SECOND</code> field type identifier, <code>EXTRACT</code> returns a floating point
 value:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>SECOND means the second of the minute, numbered from 0 to 59, including
+<p><code>SECOND</code> means the second of the minute, numbered from 0 to 59, including
 a fractional part representing fractions of a second.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>It is illegal to pass a datetime argument which does not have the given
-field type to EXTRACT.</p>
+field type to <code>EXTRACT</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12400,22 +12403,22 @@ datetime_part := identification_variable</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>For the following field type identifiers, EXTRACT returns a part of the
+<p>For the following field type identifiers, <code>EXTRACT</code> returns a part of the
 datetime value:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>DATE means the date part of a datetime.</p>
+<p><code>DATE</code> means the date part of a datetime.</p>
 </li>
 <li>
-<p>TIME means the time part of a datetime.</p>
+<p><code>TIME</code> means the time part of a datetime.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>It is illegal to pass a datetime argument which does not have the given
-part to EXTRACT.</p>
+part to <code>EXTRACT</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12427,7 +12430,7 @@ part to EXTRACT.</p>
 <div class="sect3">
 <h4 id="typecasts"><a class="anchor" href="#typecasts"></a>4.7.8. Typecasts</h4>
 <div class="paragraph">
-<p>The CAST function converts an expression of one type to an expression
+<p>The <code>CAST</code> function converts an expression of one type to an expression
 of a different type.</p>
 </div>
 <div class="listingblock">
@@ -12445,10 +12448,10 @@ forms:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>any scalar expression to STRING</p>
+<p>any scalar expression to <code>STRING</code></p>
 </li>
 <li>
-<p>any string expression to INTEGER, LONG, FLOAT, or DOUBLE</p>
+<p>any string expression to <code>INTEGER</code>, <code>LONG</code>, <code>FLOAT</code>, or <code>DOUBLE</code></p>
 </li>
 </ul>
 </div>
@@ -12463,11 +12466,11 @@ select expression is:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>java.lang.String</code> for a cast to STRING</p>
+<p><code>java.lang.String</code> for a cast to <code>STRING</code></p>
 </li>
 <li>
 <p><code>java.lang.Integer</code>, <code>java.lang.Long</code>, <code>java.lang.Float</code>, or <code>java.lang.Double</code>
-for a cast to INTEGER, LONG, FLOAT, or DOUBLE, respectively</p>
+for a cast to <code>INTEGER</code>, <code>LONG</code>, <code>FLOAT</code>, or <code>DOUBLE</code>, respectively</p>
 </li>
 </ul>
 </div>
@@ -12592,7 +12595,7 @@ nullif_expression ::= NULLIF(scalar_expression, scalar_expression)</pre>
 <div class="sect3">
 <h4 id="identifier-and-version-functions"><a class="anchor" href="#identifier-and-version-functions"></a>4.7.11. Identifier and Version Functions</h4>
 <div class="paragraph">
-<p>The ID and VERSION functions evaluate to the primary key or version,
+<p>The <code>ID</code> and <code>VERSION</code> functions evaluate to the primary key or version,
 respectively, of their argument, which must be an identification variable
 assigned an entity abstract schema type or a path expression resolving to
 a one-to-one or many-to-one relationship field. For example, if <code>Person</code>
@@ -12611,7 +12614,7 @@ version_function ::=
 </div>
 </div>
 <div class="paragraph">
-<p>The result type of an ID or VERSION function expression is the primary
+<p>The result type of an <code>ID</code> or <code>VERSION</code> function expression is the primary
 key type or version type of the argument entity, respectively.</p>
 </div>
 <div class="paragraph">
@@ -12625,7 +12628,7 @@ key type or version type of the argument entity, respectively.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>A persistence provider is not required to support the use of the ID
+<p>A persistence provider is not required to support the use of the <code>ID</code>
 function for entities with composite primary keys.</p>
 </div>
 </div>
@@ -12648,7 +12651,7 @@ type_discriminator ::=
 </div>
 </div>
 <div class="paragraph">
-<p>The TYPE operator returns the exact type of its argument, which must be
+<p>The <code>TYPE</code> operator returns the exact type of its argument, which must be
 an identification variable assigned an entity abstract schema type, a
 path expression resolving to a one-to-one or many-to-one relationship
 field, or an input parameter.</p>
@@ -12763,7 +12766,7 @@ particular result type.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>For numeric expressions occurring in the SELECT clause, these rules
+<p>For numeric expressions occurring in the <code>SELECT</code> clause, these rules
 determine the Java object type returned in the query result list.</p>
 </div>
 </div>
@@ -12771,14 +12774,14 @@ determine the Java object type returned in the query result list.</p>
 <div class="sect2">
 <h3 id="a5410"><a class="anchor" href="#a5410"></a>4.8. GROUP BY, HAVING</h3>
 <div class="paragraph">
-<p>The GROUP BY construct enables the
+<p>The <code>GROUP BY</code> construct enables the
 aggregation of result values according to a set of properties. The
-HAVING construct enables conditions to be specified that further
+<code>HAVING</code> construct enables conditions to be specified that further
 restrict the query result. Such conditions are restrictions upon the
 groups.</p>
 </div>
 <div class="paragraph">
-<p>The syntax of the GROUP BY and HAVING clauses is as follows:</p>
+<p>The syntax of the <code>GROUP BY</code> and <code>HAVING</code> clauses is as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12789,17 +12792,17 @@ having_clause ::= HAVING conditional_expression</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If a query contains both a WHERE clause and a
-GROUP BY clause, the effect is that of first applying the where clause,
-and then forming the groups and filtering them according to the HAVING
-clause. The HAVING clause causes those groups to be retained that
-satisfy the condition of the HAVING clause.</p>
+<p>If a query contains both a <code>WHERE</code> clause and a
+<code>GROUP BY</code> clause, the effect is that of first applying the where clause,
+and then forming the groups and filtering them according to the <code>HAVING</code>
+clause. The <code>HAVING</code> clause causes those groups to be retained that
+satisfy the condition of the <code>HAVING</code> clause.</p>
 </div>
 <div class="paragraph">
-<p>The requirements for the SELECT clause when
-GROUP BY is used follow those of SQL: namely, any item that appears in
-the SELECT clause (other than as an aggregate function or as an argument
-to an aggregate function) must also appear in the GROUP BY clause. In
+<p>The requirements for the <code>SELECT</code> clause when
+<code>GROUP BY</code> is used follow those of SQL: namely, any item that appears in
+the <code>SELECT</code> clause (other than as an aggregate function or as an argument
+to an aggregate function) must also appear in the <code>GROUP BY</code> clause. In
 forming the groups, null values are treated as the same for grouping
 purposes.</p>
 </div>
@@ -12809,26 +12812,26 @@ case, the entity must contain no serialized state fields or lob-valued
 state fields that are eagerly fetched. Grouping by an entity that
 contains serialized state fields or lob-valued state fields is not
 portable, since the implementation is permitted to eagerly fetch fields
-or properties that have been specified as LAZY.</p>
+or properties that have been specified as <code>LAZY</code>.</p>
 </div>
 <div class="paragraph">
 <p>Grouping by embeddables is not supported.</p>
 </div>
 <div class="paragraph">
-<p>The HAVING clause is used to filter over the
+<p>The <code>HAVING</code> clause is used to filter over the
 groups, and can contain aggregate functions over attributes included in
 the groups and/or functions or other query language operators over the
 attributes that are used for grouping. It is not required that an
-aggregate function used in the HAVING clause also be used in the SELECT
+aggregate function used in the <code>HAVING</code> clause also be used in the <code>SELECT</code>
 clause.</p>
 </div>
 <div class="paragraph">
-<p>If there is no GROUP BY clause and the HAVING
+<p>If there is no <code>GROUP BY</code> clause and the <code>HAVING</code>
 clause is used, the result is treated as a single group, and the select
-list can only consist of aggregate functions. The use of HAVING in the
-absence of GROUP BY is not required to be supported by an implementation
-of this specification. Portable applications should not rely on HAVING
-without the use of GROUP BY.</p>
+list can only consist of aggregate functions. The use of <code>HAVING</code> in the
+absence of <code>GROUP BY</code> is not required to be supported by an implementation
+of this specification. Portable applications should not rely on <code>HAVING</code>
+without the use of <code>GROUP BY</code>.</p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -12855,11 +12858,11 @@ without the use of GROUP BY.</p>
 <div class="sect2">
 <h3 id="a5438"><a class="anchor" href="#a5438"></a>4.9. SELECT Clause</h3>
 <div class="paragraph">
-<p>The SELECT clause specifies the query result, as a list of items to
+<p>The <code>SELECT</code> clause specifies the query result, as a list of items to
 be returned by the query.</p>
 </div>
 <div class="paragraph">
-<p>The SELECT clause can contain one or more of the following elements:</p>
+<p>The <code>SELECT</code> clause can contain one or more of the following elements:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -12881,7 +12884,7 @@ be returned by the query.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>The SELECT clause has the following syntax:</p>
+<p>The <code>SELECT</code> clause has the following syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12930,7 +12933,7 @@ a Map from the entity <code>Movie</code> to the number of copies in stock:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Note that the SELECT clause must be specified
+<p>Note that the <code>SELECT</code> clause must be specified
 to return only single-valued expressions. The query below is therefore
 not valid:</p>
 </div>
@@ -12940,32 +12943,32 @@ not valid:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The DISTINCT
+<p>The <code>DISTINCT</code>
 keyword is used to specify that duplicate values must be eliminated from
 the query result.</p>
 </div>
 <div class="paragraph">
-<p>If DISTINCT is not specified, duplicate
+<p>If <code>DISTINCT</code> is not specified, duplicate
 values are not eliminated.</p>
 </div>
 <div class="paragraph">
-<p>The result of DISTINCT over embeddable
+<p>The result of <code>DISTINCT</code> over embeddable
 objects or map <code>entry</code> results is undefined.</p>
 </div>
 <div class="paragraph">
 <p>Standalone identification variables in the
-SELECT clause may optionally be qualified by the
-OBJECT operator.<sup class="footnote">[<a id="_footnoteref_79" class="footnote" href="#_footnotedef_79" title="View footnote.">79</a>]</sup> The
-SELECT clause must not use the OBJECT operator to qualify path
+<code>SELECT</code> clause may optionally be qualified by the
+<code>OBJECT</code> operator.<sup class="footnote">[<a id="_footnoteref_79" class="footnote" href="#_footnotedef_79" title="View footnote.">79</a>]</sup> The
+<code>SELECT</code> clause must not use the <code>OBJECT</code> operator to qualify path
 expressions.</p>
 </div>
 <div class="paragraph">
 <p>A <code>result_variable</code> assigns a name to a <code>select_item</code> in the query result.
 The <code>result variable</code> must be a valid identifier, as defined in <a href="#a4760">Section 4.4.1</a>,
 must not be a reserved identifier, and must not collide with any
-identification variable declared in the FROM clause. A result variable may
+identification variable declared in the <code>FROM</code> clause. A result variable may
 be used to refer to an element of the select clause from an item in the
-ORDER BY clause, as specified in <a href="#a5587">Section 4.10</a>. Like identification variables,
+<code>ORDER BY</code> clause, as specified in <a href="#a5587">Section 4.10</a>. Like identification variables,
 result variables are case-insensitive.</p>
 </div>
 <div class="paragraph">
@@ -12974,15 +12977,15 @@ result variables are case-insensitive.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="sql"><span class="class">SELECT</span> c, <span class="predefined">COUNT</span>(l) <span class="keyword">AS</span> itemCount
-<span class="keyword">FROM</span> Customer c <span class="keyword">JOIN</span> c.Orders o <span class="keyword">JOIN</span> o.lineItems l
+<span class="keyword">FROM</span> Customer c <span class="keyword">JOIN</span> c.orders o <span class="keyword">JOIN</span> o.lineItems l
 <span class="keyword">WHERE</span> c.address.state = <span class="string"><span class="delimiter">'</span><span class="content">CA</span><span class="delimiter">'</span></span>
 <span class="keyword">GROUP</span> <span class="keyword">BY</span> c
 <span class="keyword">ORDER</span> <span class="keyword">BY</span> itemCount</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The SELECT clause is optional. A query with a missing SELECT clause
-is interpreted as if it had the following single-item SELECT clause:
+<p>The <code>SELECT</code> clause is optional. A query with a missing <code>SELECT</code> clause
+is interpreted as if it had the following single-item <code>SELECT</code> clause:
 <code>select this</code>, where <code>this</code> is the implicit identification variable.</p>
 </div>
 <div class="paragraph">
@@ -13013,36 +13016,36 @@ is interpreted as if it had the following single-item SELECT clause:
 </div>
 <div class="paragraph">
 <p>If the implicit identification variable has not been assigned an
-abstract schema type, the SELECT clause is required.</p>
+abstract schema type, the <code>SELECT</code> clause is required.</p>
 </div>
 <div class="sect3">
 <h4 id="a5439"><a class="anchor" href="#a5439"></a>4.9.1. Result Type of the SELECT Clause</h4>
 <div class="paragraph">
 <p>The type of the query result specified by the
-SELECT clause of a query is an entity
+<code>SELECT</code> clause of a query is an entity
 abstract schema type, a state field type,
 the result of a scalar expression, the result of an aggregate function,
 the result of a construction operation, or some sequence of these.</p>
 </div>
 <div class="paragraph">
-<p>The result type of the SELECT clause is
-defined by the the result types of the select expressions contained in
-it. When multiple select expressions are used in the SELECT clause, the
+<p>The result type of the <code>SELECT</code> clause is
+defined by the result types of the select expressions contained in
+it. When multiple select expressions are used in the <code>SELECT</code> clause, the
 elements in this result correspond in order to the order of their
-specification in the SELECT clause and in type to the result types of
+specification in the <code>SELECT</code> clause and in type to the result types of
 each of the select expressions.</p>
 </div>
 <div class="paragraph">
-<p>The type of the result of a select_expression
+<p>The type of the result of a <code>select_expression</code>
 is as follows:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The result type of an identification_variable
+<p>The result type of an <code>identification_variable</code>
 is the type of the entity object or embeddable object to which the
 identification variable corresponds. The type of an
-identification_variable that refers to an entity abstract schema type is
+<code>identification_variable</code> that refers to an entity abstract schema type is
 the type of the entity to which that identification variable corresponds
 or a subtype as determined by the object/relational mapping.</p>
 </li>
@@ -13066,14 +13069,14 @@ the object/relational mapping.</p>
 <li>
 <p>The result type of a
 <code>single_valued_path_expression</code> that is an <code>identification_variable</code> to
-which the KEY or VALUE function has been applied is determined by the
+which the <code>KEY</code> or <code>VALUE</code> function has been applied is determined by the
 type of the map key or value respectively, as defined by the above
 rules.</p>
 </li>
 <li>
 <p>The result type of a
 <code>single_valued_path_expression</code> that is an <code>identification_variable</code> to
-which the ENTRY function has been applied is <code>java.util.Map.Entry</code>,
+which the <code>ENTRY</code> function has been applied is <code>java.util.Map.Entry</code>,
 where the key and value types of the map entry are determined by the
 above rules as applied to the map key and map value respectively.</p>
 </li>
@@ -13088,11 +13091,11 @@ result type of a numeric <code>scalar_expression</code> is defined in <a href="#
 the resulting abstract schema type corresponds.</p>
 </li>
 <li>
-<p>The result type of aggregate_expression is
+<p>The result type of <code>aggregate_expression</code> is
 defined in <a href="#a5538">Section 4.9.5</a>.</p>
 </li>
 <li>
-<p>The result type of a constructor_expression
+<p>The result type of a <code>constructor_expression</code>
 is the type of the class for which the constructor is defined. The types
 of the arguments to the constructor are defined by the above rules.</p>
 </li>
@@ -13102,14 +13105,14 @@ of the arguments to the constructor are defined by the above rules.</p>
 <div class="sect3">
 <h4 id="a5500"><a class="anchor" href="#a5500"></a>4.9.2. Constructor Expressions in the SELECT Clause</h4>
 <div class="paragraph">
-<p>A constructor may be used in the SELECT list
+<p>A constructor may be used in the <code>SELECT</code> list
 to return an instance of a Java class. The specified class is not
 required to be an entity or to be mapped to the database. The
 constructor name must be fully qualified.</p>
 </div>
 <div class="paragraph">
 <p>If an entity class name is specified as the
-constructor name in the SELECT NEW clause, the resulting entity
+constructor name in the <code>SELECT NEW</code> clause, the resulting entity
 instances will be in either the new or the detached state, depending on
 whether a primary key is retrieved for the constructed object.</p>
 </div>
@@ -13136,13 +13139,13 @@ the managed state.</p>
 <div class="paragraph">
 <p>If the result of a query corresponds to an
 association field or state field whose value is null, that null value is
-returned in the result of the query method. The IS NOT NULL construct
+returned in the result of the query method. The <code>IS NOT NULL</code> construct
 can be used to eliminate such null values from the result set of the
 query.</p>
 </div>
 <div class="paragraph">
 <p>Note, however, that state field types defined
-in terms of Java numeric primitive types cannot produce NULL values in
+in terms of Java numeric primitive types cannot produce <code>NULL</code> values in
 the query result. A query that returns such a state field type as a
 result type must not return a null value.</p>
 </div>
@@ -13211,19 +13214,19 @@ aggregate function applied to a path expression.</p>
 </div>
 <div class="paragraph">
 <p>The following aggregate functions can be used
-in the SELECT clause of a query: AVG, COUNT, MAX, MIN, SUM, aggregate
+in the <code>SELECT</code> clause of a query: <code>AVG</code>, <code>COUNT</code>, <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, aggregate
 functions defined in the database.</p>
 </div>
 <div class="paragraph">
-<p>For all aggregate functions except COUNT, the
+<p>For all aggregate functions except <code>COUNT</code>, the
 path expression that is the argument to the aggregate function must
-terminate in a state field. The path expression argument to COUNT may
+terminate in a state field. The path expression argument to <code>COUNT</code> may
 terminate in either a state field or a association field, or the
-argument to COUNT may be an identification variable.</p>
+argument to <code>COUNT</code> may be an identification variable.</p>
 </div>
 <div class="paragraph">
-<p>Arguments to the functions SUM and AVG must
-be numeric. Arguments to the functions MAX and MIN must correspond to
+<p>Arguments to the functions <code>SUM</code> and <code>AVG</code> must
+be numeric. Arguments to the functions <code>MAX</code> and <code>MIN</code> must correspond to
 orderable state field types (i.e., numeric types, string types,
 character types, or date types).</p>
 </div>
@@ -13234,51 +13237,51 @@ of a query using an aggregate function is as follows:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>COUNT returns Long.</p>
+<p><code>COUNT</code> returns Long.</p>
 </li>
 <li>
-<p>MAX, MIN return the type of the state field to which they are applied.</p>
+<p><code>MAX</code>, <code>MIN</code> return the type of the state field to which they are applied.</p>
 </li>
 <li>
-<p>AVG returns Double.</p>
+<p><code>AVG</code> returns Double.</p>
 </li>
 <li>
-<p>SUM returns Long when applied to state fields
-of integral types (other than BigInteger); Double when applied to state
-fields of floating point types; BigInteger when applied to state fields
-of type BigInteger; and BigDecimal when applied to state fields of type
-BigDecimal.</p>
+<p><code>SUM</code> returns Long when applied to state fields
+of integral types (other than <code>BigInteger</code>); <code>Double</code> when applied to state
+fields of floating point types; <code>BigInteger</code> when applied to state fields
+of type <code>BigInteger</code>; and <code>BigDecimal</code> when applied to state fields of type
+<code>BigDecimal</code>.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>Null values are eliminated before the
 aggregate function is applied, regardless of whether the keyword
-DISTINCT is specified.</p>
+<code>DISTINCT</code> is specified.</p>
 </div>
 <div class="paragraph">
-<p>If SUM, AVG, MAX, or MIN is used, and there
+<p>If <code>SUM</code>, <code>AVG</code>, <code>MAX</code>, or <code>MIN</code> is used, and there
 are no values to which the aggregate function can be applied, the result
-of the aggregate function is NULL.</p>
+of the aggregate function is <code>NULL</code>.</p>
 </div>
 <div class="paragraph">
-<p>If COUNT is used, and there are no values to
-which COUNT can be applied, the result of the aggregate function is 0.</p>
+<p>If <code>COUNT</code> is used, and there are no values to
+which <code>COUNT</code> can be applied, the result of the aggregate function is <code>0</code>.</p>
 </div>
 <div class="paragraph">
 <p>The argument to an aggregate function
-may be preceded by the keyword DISTINCT to specify that duplicate values
+may be preceded by the keyword <code>DISTINCT</code> to specify that duplicate values
 are to be eliminated before the aggregate function is
 applied.<sup class="footnote">[<a id="_footnoteref_80" class="footnote" href="#_footnotedef_80" title="View footnote.">80</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>The use of DISTINCT with COUNT is not
+<p>The use of <code>DISTINCT</code> with <code>COUNT</code> is not
 supported for arguments of embeddable types or map entry types.</p>
 </div>
 <div class="paragraph">
 <p>The invocation of aggregate database
 functions, including user defined functions, is supported by means of
-the FUNCTION operator. See <a href="#a5311">Section 4.7.9</a>.</p>
+the <code>FUNCTION</code> operator. See <a href="#a5311">Section 4.7.9</a>.</p>
 </div>
 <div class="paragraph">
 <p>The following query returns the average order quantity:</p>
@@ -13333,8 +13336,8 @@ items in John Smith&#8217;s order for which prices have been specified.</p>
 <div class="sect2">
 <h3 id="a5587"><a class="anchor" href="#a5587"></a>4.10. ORDER BY Clause</h3>
 <div class="paragraph">
-<p>The ORDER BY clause specifies how the results of a query should be sorted.
-The syntax of the ORDER BY clause is:</p>
+<p>The <code>ORDER BY</code> clause specifies how the results of a query should be sorted.
+The syntax of the <code>ORDER BY</code> clause is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -13348,7 +13351,7 @@ orderby_expression ::=
 </div>
 </div>
 <div class="paragraph">
-<p>The ORDER BY clause specifies a list of items. Each <code>orderby_expression</code>
+<p>The <code>ORDER BY</code> clause specifies a list of items. Each <code>orderby_expression</code>
 must be one of the following:</p>
 </div>
 <div class="olist arabic">
@@ -13356,7 +13359,7 @@ must be one of the following:</p>
 <li>
 <p>A <code>state_field_path_expression</code> evaluating to an orderable state field
 of an entity or embeddable class abstract schema type designated in the
-SELECT clause by either:</p>
+<code>SELECT</code> clause by either:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -13371,16 +13374,16 @@ SELECT clause by either:</p>
 <li>
 <p>A <code>state_field_path_expression</code> evaluating to the same state field of
 the same entity or embeddable abstract schema type as a
-<code>state_field_path_expression</code> in the SELECT clause.</p>
+<code>state_field_path_expression</code> in the <code>SELECT</code> clause.</p>
 </li>
 <li>
 <p>A <code>general_identification_variable</code> evaluating to the same map field of
 the same entity or embeddable abstract schema type as a
-<code>general_identification_variable</code> in the SELECT clause.</p>
+<code>general_identification_variable</code> in the <code>SELECT</code> clause.</p>
 </li>
 <li>
 <p>A reference to a <code>result_variable</code> declared by an orderable item in the
-SELECT clause. The orderable item must be an <code>aggregate_expression</code>, a
+<code>SELECT</code> clause. The orderable item must be an <code>aggregate_expression</code>, a
 <code>scalar_expression</code>, or a <code>state_field_path_expression</code>.</p>
 </li>
 <li>
@@ -13391,9 +13394,9 @@ which would be allowed according to items 1 or 2 above.</p>
 </div>
 <div class="paragraph">
 <p>Depending on the database, arbitrary scalar expressions may not be allowed
-in the ORDER BY clause. Therefore, applications which require portability
+in the <code>ORDER BY</code> clause. Therefore, applications which require portability
 between databases should not depend on the use of a scalar expression in
-ORDER BY if it is only permitted by item 5.</p>
+<code>ORDER BY</code> if it is only permitted by item 5.</p>
 </div>
 <div class="paragraph">
 <p>For example, the four queries below are legal.</p>
@@ -13435,7 +13438,7 @@ ORDER BY if it is only permitted by item 5.</p>
 </div>
 <div class="paragraph">
 <p>The following two queries are <em>not</em> legal
-because the <code>orderby_item</code> is not reflected in the SELECT clause of the
+because the <code>orderby_item</code> is not reflected in the <code>SELECT</code> clause of the
 query.</p>
 </div>
 <div class="listingblock">
@@ -13452,8 +13455,8 @@ query.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The keyword ASC specifies that ascending ordering is used for the associated
-<code>orderby_item</code>; the keyword DESC specifies that descending ordering is used.
+<p>The keyword <code>ASC</code> specifies that ascending ordering is used for the associated
+<code>orderby_item</code>; the keyword <code>DESC</code> specifies that descending ordering is used.
 If neither keyword is explicitly specified, ascending ordering is the default.</p>
 </div>
 <div class="paragraph">
@@ -13472,33 +13475,33 @@ descending order means larger values first, and</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>The keyword NULLS specifies the ordering of null values, either FIRST or LAST.</p>
+<p>The keyword <code>NULLS</code> specifies the ordering of null values, either <code>FIRST</code> or <code>LAST</code>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>FIRST means that results are sorted so that all null values occur before
+<p><code>FIRST</code> means that results are sorted so that all null values occur before
 all non-null values.</p>
 </li>
 <li>
-<p>LAST means that results are sorted so that all null values occur after
+<p><code>LAST</code> means that results are sorted so that all null values occur after
 all non-null values.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>If NULLS is not specified, the database determines whether null values occur
+<p>If <code>NULLS</code> is not specified, the database determines whether null values occur
 first or last.</p>
 </div>
 <div class="paragraph">
-<p>Items occurring earlier in the ORDER BY clause take precedence. That is,
-an item occurring later in the ORDER BY clause is only used to resolve
+<p>Items occurring earlier in the <code>ORDER BY</code> clause take precedence. That is,
+an item occurring later in the <code>ORDER BY</code> clause is only used to resolve
 "ties" between results which cannot be unambiguously ordered using only
 earlier items.</p>
 </div>
 <div class="paragraph">
 <p>The order of query results must be preserved in the result list or stream
-returned by a query execution method when an ORDER BY clause is specified.</p>
+returned by a query execution method when an <code>ORDER BY</code> clause is specified.</p>
 </div>
 </div>
 <div class="sect2">
@@ -13506,8 +13509,8 @@ returned by a query execution method when an ORDER BY clause is specified.</p>
 <div class="paragraph">
 <p>Bulk update and delete operations apply to
 entities of a single entity class (together with its subclasses, if
-any). Only one entity abstract schema type may be specified in the FROM
-or UPDATE clause.</p>
+any). Only one entity abstract schema type may be specified in the <code>FROM</code>
+or <code>UPDATE</code> clause.</p>
 </div>
 <div class="paragraph">
 <p>The syntax of these operations is as follows:</p>
@@ -13529,7 +13532,7 @@ delete_clause ::= DELETE FROM entity_name [[AS] identification_variable]</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The syntax of the WHERE clause is described
+<p>The syntax of the <code>WHERE</code> clause is described
 in <a href="#a4985">Section 4.5</a>.</p>
 </div>
 <div class="paragraph">
@@ -13538,7 +13541,7 @@ of the specified class and its subclasses. It does not cascade to
 related entities.</p>
 </div>
 <div class="paragraph">
-<p>The new_value specified for an update
+<p>The <code>new_value</code> specified for an update
 operation must be compatible in type with the field to which it is
 assigned.</p>
 </div>
@@ -32909,7 +32912,7 @@ and <code>LockOption</code>s respectively</p>
 <p>Added <code>secondPrecision</code> to <code>@Column</code> annotation and clarified semantics of <code>@Column</code> members</p>
 </div>
 <div class="paragraph">
-<p>Added factory-level access to named queries and named entity graphs</p>
+<p>Added factory-level access to named queries and named entity graphs, along with <code>TypedQueryReference</code></p>
 </div>
 <div class="paragraph">
 <p>Added integration points for dependency injection</p>
@@ -33729,6 +33732,7 @@ reference to Java SE service provider requirements.</p>
      *         an entity, or if it is neither persistent nor detached
      * @throws EntityNotFoundException if the entity state cannot be
      *         accessed
+     * @since 3.2
      */</span>
     &lt;T&gt; T getReference(T entity);
 
@@ -35001,6 +35005,8 @@ reference to Java SE service provider requirements.</p>
      *                   meaning all queries
      * @return a map keyed by query name
      * @param &lt;R&gt; the specified upper bound on the query result types
+     *
+     * @since 3.2
      */</span>
     &lt;R&gt; <span class="predefined-type">Map</span>&lt;<span class="predefined-type">String</span>, TypedQueryReference&lt;R&gt;&gt; getNamedQueries(<span class="predefined-type">Class</span>&lt;R&gt; resultType);
 
@@ -35012,6 +35018,8 @@ reference to Java SE service provider requirements.</p>
      *                   meaning all entity graphs
      * @return a map keyed by graph name
      * @param &lt;E&gt; the specified upper bound on the entity graph types
+     *
+     * @since 3.2
      */</span>
     &lt;E&gt; <span class="predefined-type">Map</span>&lt;<span class="predefined-type">String</span>, EntityGraph&lt;? <span class="directive">extends</span> E&gt;&gt; getNamedEntityGraphs(<span class="predefined-type">Class</span>&lt;E&gt; entityType);
 
@@ -35037,6 +35045,8 @@ reference to Java SE service provider requirements.</p>
      * control to the client.
      *
      * @param work a function to be executed in the scope of the transaction
+     *
+     * @since 3.2
      */</span>
     <span class="type">void</span> runInTransaction(Consumer&lt;EntityManager&gt; work);
     <span class="comment">/**
@@ -35063,6 +35073,8 @@ reference to Java SE service provider requirements.</p>
      *
      * @param work a function to be called in the scope of the transaction
      * @return the value returned by the given function
+     *
+     * @since 3.2
      */</span>
     &lt;R&gt; R callInTransaction(Function&lt;EntityManager, R&gt; work);
 }</code></pre>
@@ -35439,6 +35451,8 @@ reference to Java SE service provider requirements.</p>
      * @throws PersistenceException if the query execution exceeds
      *         the query timeout value set and the transaction
      *         is rolled back
+     *
+     * @since 3.2
      */</span>
     <span class="predefined-type">Object</span> getSingleResultOrNull();
 
@@ -36018,6 +36032,8 @@ reference to Java SE service provider requirements.</p>
      * @throws PersistenceException if the query execution exceeds
      *         the query timeout value set and the transaction
      *         is rolled back
+     *
+     * @since 3.2
      */</span>
     X getSingleResultOrNull();
 
@@ -44769,13 +44785,13 @@ reference to Java SE service provider requirements.</p>
 <a href="#_footnoteref_63">63</a>. This chapter uses the convention that reserved identifiers appear in upper case in the examples and BNF for the language.
 </div>
 <div class="footnote" id="_footnotedef_64">
-<a href="#_footnoteref_64">64</a>. BIT_LENGTH, CHAR_LENGTH, CHARACTER_LENGTH, POSITION, and UNKNOWN are not currently used: they are reserved for future use.
+<a href="#_footnoteref_64">64</a>. <code>BIT_LENGTH</code>, <code>CHAR_LENGTH</code>, <code>CHARACTER_LENGTH</code>, <code>POSITION</code>, and <code>UNKNOWN</code> are not currently used: they are reserved for future use.
 </div>
 <div class="footnote" id="_footnotedef_65">
 <a href="#_footnoteref_65">65</a>. A range variable never designates an embeddable class abstract schema type.
 </div>
 <div class="footnote" id="_footnotedef_66">
-<a href="#_footnoteref_66">66</a>. Note that use of VALUE is optional, as an identification variable referring to an association of type <code>java.util.Map</code> is of the abstract schema type of the map value. (See <a href="#a4765">Section 4.4.2</a>.)
+<a href="#_footnoteref_66">66</a>. Note that use of <code>VALUE</code> is optional, as an identification variable referring to an association of type <code>java.util.Map</code> is of the abstract schema type of the map value. (See <a href="#a4765">Section 4.4.2</a>.)
 </div>
 <div class="footnote" id="_footnotedef_67">
 <a href="#_footnoteref_67">67</a>. Support for right outer joins and full outer joins is under consideration for inclusion in a future version of this specification.
@@ -44793,19 +44809,19 @@ reference to Java SE service provider requirements.</p>
 <a href="#_footnoteref_71">71</a>. Refer to <a href="#a19494">[2]</a> for a more precise characterization of these rules.
 </div>
 <div class="footnote" id="_footnotedef_72">
-<a href="#_footnoteref_72">72</a>. The use of the reserved word OF is optional in this expression.
+<a href="#_footnoteref_72">72</a>. The use of the reserved word <code>OF</code> is optional in this expression.
 </div>
 <div class="footnote" id="_footnotedef_73">
-<a href="#_footnoteref_73">73</a>. Subqueries are restricted to the WHERE and HAVING clauses in this release. Support for subqueries in the FROM clause will be considered in a later release of this specification.
+<a href="#_footnoteref_73">73</a>. Subqueries are restricted to the <code>WHERE</code> and <code>HAVING</code> clauses in this release. Support for subqueries in the <code>FROM</code> clause will be considered in a later release of this specification.
 </div>
 <div class="footnote" id="_footnotedef_74">
-<a href="#_footnoteref_74">74</a>. Note that expressions involving aggregate operators must not be used in the WHERE clause.
+<a href="#_footnoteref_74">74</a>. Note that expressions involving aggregate operators must not be used in the <code>WHERE</code> clause.
 </div>
 <div class="footnote" id="_footnotedef_75">
 <a href="#_footnoteref_75">75</a>. Note that not all databases support the use of a trim character other than the space character; use of this argument may result in queries that are not portable.
 </div>
 <div class="footnote" id="_footnotedef_76">
-<a href="#_footnoteref_76">76</a>. Note that not all databases support the use of the third argument to LOCATE; use of this argument may result in queries that are not portable.
+<a href="#_footnoteref_76">76</a>. Note that not all databases support the use of the third argument to <code>LOCATE</code>; use of this argument may result in queries that are not portable.
 </div>
 <div class="footnote" id="_footnotedef_77">
 <a href="#_footnoteref_77">77</a>. Note that not all databases support the use of SQL case expressions. The use of case expressions may result in queries that are not portable to such databases.
@@ -44814,10 +44830,10 @@ reference to Java SE service provider requirements.</p>
 <a href="#_footnoteref_78">78</a>. For a general or simple <code>CASE</code> expression, the operands are the scalar expressions in the <code>THEN</code> and <code>ELSE</code> clauses.
 </div>
 <div class="footnote" id="_footnotedef_79">
-<a href="#_footnoteref_79">79</a>. Note that the keyword OBJECT is not required. It is preferred that it be omitted for new queries.
+<a href="#_footnoteref_79">79</a>. Note that the keyword <code>OBJECT</code> is not required. It is preferred that it be omitted for new queries.
 </div>
 <div class="footnote" id="_footnotedef_80">
-<a href="#_footnoteref_80">80</a>. It is legal to specify DISTINCT with MAX or MIN, but it does not affect the result.
+<a href="#_footnoteref_80">80</a>. It is legal to specify <code>DISTINCT</code> with <code>MAX</code> or <code>MIN</code>, but it does not affect the result.
 </div>
 <div class="footnote" id="_footnotedef_81">
 <a href="#_footnoteref_81">81</a>. We expect that the option of different packages will be provided in a future release of this specification.
@@ -44976,7 +44992,7 @@ reference to Java SE service provider requirements.</p>
 <div id="footer">
 <div id="footer-text">
  3.2<br>
-Last updated 2024-03-28 10:18:14 UTC
+Last updated 2024-04-10 08:48:35 UTC
 </div>
 </div>
 </body>
