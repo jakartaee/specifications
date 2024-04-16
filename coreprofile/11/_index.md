@@ -25,16 +25,21 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
 * [Jakarta Core Profile 11 Specification Document](jakarta-coreprofile-spec-11.0.pdf) (PDF)
 * [Jakarta Core Profile 11 Specification Document](jakarta-coreprofile-spec-11.0.html) (HTML)
 -->
-* [Jakarta Core Profile 11 M2 Javadoc](./apidocs)
+* Milestones
+   * Milestone 2
+      * Specification documents
+         * [Jakarta EE 11 M2 core profile Specification Document](./jakarta-coreprofile-spec-11.0-M2.pdf) (PDF)
+         * [Jakarta EE 11 M2 core profile Specification Document](./jakarta-coreprofile-spec-11.0-M2.html) (HTML)
+      * [Jakarta Core Profile 11 M2 Javadoc](./apidocs)
+      * Maven coordinates
+          * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0-M2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-core-api/11.0.0-M2/jar)
+
 <!--
 * [Jakarta Core Profile 10.0 TCK](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip)
   ([sig](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-10.0.0.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
   -->
-* Maven coordinates
-    * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0-M2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-core-api/11.0.0-M2/jar)
-
 # Compatible Implementations
 
 Compatible Implementations of the Jakarta EE Core Profile specification are eligible to use the _Jakarta EE Compatible_ logo. For more information, see [Get Listed](/compatibility/get-listed/).
