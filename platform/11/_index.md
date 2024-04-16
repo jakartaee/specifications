@@ -29,7 +29,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE Platform 11 M1 Specification Document](./jakarta-platform-spec-11.0.pdf) (PDF)
 * [Jakarta EE Platform 11 M1 Specification Document](./jakarta-platform-spec-11.0.html) (HTML)
 -->
-* [Jakarta EE Platform 11 M1 Javadoc](./apidocs)
+* [Jakarta EE Platform 11 M2 Javadoc](./apidocs)
 <!--
 * [Jakarta EE Platform 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip) ([sig]
 (https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))

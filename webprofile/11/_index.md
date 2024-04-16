@@ -27,7 +27,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta Web Profile 11 Specification Document](./jakarta-webprofile-spec-11.0.pdf) (PDF)
 * [Jakarta Web Profile 11 Specification Document](./jakarta-webprofile-spec-11.0.html) (HTML)
 -->
-* [Jakarta Web Profile 11 M1 Javadoc](./apidocs)
+* [Jakarta Web Profile 11 M2 Javadoc](./apidocs)
 <!--
 * [Jakarta Web Profile 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 -->
