@@ -65,7 +65,7 @@ and refactors features that are not client facing into the subinterface.
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2022-04-19 with the following results.
+The Specification Committee Ballot concluded successfully on 2024-04-02 with the following results.
 
 | Representative                     | Representative for: | Vote   |
 |------------------------------------|---------------------|--------|
@@ -81,7 +81,7 @@ The Specification Committee Ballot concluded successfully on 2022-04-19 with the
 | Zhai Luchao                        | Enterprise Members  | +1     |  
 |                                    | **Total**           | **10** |
 
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03218.html)
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03278.html)
 
 ## Restructuring Review
 
