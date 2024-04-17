@@ -46,9 +46,23 @@ The binary target level is 11.
 # Ballots
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on TBD with the following results.
+The Specification Committee Ballot completed on 10th April 2024.
 
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/x.html)
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Scott Stark                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           | **10**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03230.html)
 
 ## Plan Review
 
