@@ -81,7 +81,7 @@ The Specification Committee Ballot concluded successfully on 2024-04-02 with the
 | Zhai Luchao                        | Enterprise Members  | +1     |  
 |                                    | **Total**           | **10** |
 
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03278.html)
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03218.html)
 
 ## Restructuring Review
 
