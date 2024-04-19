@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Concurrency 3.1 (under development)"
-date: 2023-07-22
+title: "Jakarta Concurrency 3.1"
+date: 2023-04-29
 summary: "Release for Jakarta EE 11"
 ---
 
@@ -19,17 +19,17 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 ###  Removals, deprecations or backwards incompatible changes
 
 ### Minimum Java SE Version
-* **Java SE 21 or higher**
+* **Java SE 17 or higher**
 
 # Details
 
 * [Jakarta Concurrency 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.cu/releases/3.1)
   * [Jakarta Concurrency 3.1 Release Plan](https://projects.eclipse.org/projects/ee4j.cu/releases/3.1/plan)
   * [Jakarta EE Platform 11 Release Plan](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/11/plan)
-<!-- add once available:
 * [Jakarta Concurrency 3.1 Specification Document](./jakarta-concurrency-spec-3.1.pdf) (PDF)
 * [Jakarta Concurrency 3.1 Specification Document](./jakarta-concurrency-spec-3.1.html) (HTML)
 * [Jakarta Concurrency 3.1 Javadoc](./apidocs)
+<!-- TODO once TCK is published
 * [Jakarta Concurrency 3.1 TCK](https://download.eclipse.org/jakartaee/concurrency/3.1/concurrency-tck-3.1.0.zip), ([sig](https://download.eclipse.org/jakartaee/concurrency/3.1/concurrency-tck-3.1.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/concurrency/3.1/concurrency-tck-3.1.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * Signature tests are included with the TCK and run automatically as part of it
 * Maven coordinates
