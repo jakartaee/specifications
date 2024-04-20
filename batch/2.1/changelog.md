@@ -1,8 +1,16 @@
 ---
 title: "Change Log"
-date: 2022-06-23
-summary: "Release for Jakarta EE 10"
+date: 2024-04-12
+summary: "Batch 2.1 Change Log"
 ---
+
+# CHANGES IN THE 2.1.5 TCK
+
+## Enabled TCK execution using Java 21
+
+## Addressed TCK challenges:
+* https://github.com/jakartaee/batch-tck/issues/71
+   * Fixed by excluding test.  Opened follow-up issues to update specification doc to match excluded test, and to better define the functions in both specifications and TCKs.
 
 # CHANGES IN THE 2.1.1 API 
 
