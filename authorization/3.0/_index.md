@@ -39,7 +39,8 @@ The following can be uncommented and version information updated as they become 
 # Compatible Implementations
 
 
-* Exousia 3.0.0-M3 / GlassFish 8.0.0-M4
+* JDK 21: [Exousia 3.0.0-M3](https://github.com/eclipse-ee4j/exousia/releases/download/3.0.0-M3-RELEASE/exousia-3.0.0-M3.jar) / [Eclipse GlassFish 8.0.0-M5](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-M5/)
+* JDK 17: [Exousia 3.0.0-M3](https://github.com/eclipse-ee4j/exousia/releases/download/3.0.0-M3-RELEASE/exousia-3.0.0-M3.jar) / [Eclipse GlassFish 8.0.0-JDK-17-M5](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-JDK17-M5/)
 
 
 # Ballots
