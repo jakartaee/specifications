@@ -1,5 +1,5 @@
 ---
-title: "Jakarta RESTful Web Services 4.0 (under development)"
+title: "Jakarta RESTful Web Services 4.0"
 date: 2024-03-05
 summary: "Release for Jakarta EE 11"
 ---
@@ -17,6 +17,9 @@ earlier releases.
 * Convenience method for checking header value lists - [PR #1066](https://github.com/jakartaee/rest/pull/1066 )
 * Add Required TCK for convenience method merged in PR 1066 - [Issue #1227](https://github.com/jakartaee/rest/issues/1227)
 * Clarify JavaSE support in Section 2.3 of specification - [Issue #1127](https://github.com/jakartaee/rest/issues/1127)
+* Add getMatchedResourceTemplate method to UriInfo - [Issue #1191](https://github.com/jakartaee/rest/issues/1191)
+* Add JSON Merge Patch: [Issue #1141](https://github.com/jakartaee/rest/issues/1141)
+
 
 ### Removals, deprecations or backwards incompatible changes
 * Remove JAXB dependency from Jakarta Rest - [Issue #1226](https://github.com/jakartaee/rest/issues/1226)
@@ -26,13 +29,19 @@ earlier releases.
 * **Java SE 17 or higher**
 
 # Details
-The latest details and progress for this work
-may be found on the [Project Site](https://projects.eclipse.org/projects/ee4j.rest) as well as the
-[Github Wiki](https://github.com/jakartaee/rest/wiki). Also see 
-[Jakarta RESTful Web Services 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.rest/releases/4.0.0).
+
+* [Jakarta RESTful Web Services 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/4.0.0)
+    * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/#jakarta-ee-11-release-plan)
+* [Jakarta RESTful Web Services 4.0 Specification Document](./jakarta-restful-ws-spec-4.0.pdf) (PDF)
+* [Jakarta RESTful Web Services 4.0 Specification Document](./jakarta-restful-ws-spec-4.0.html) (HTML)
+* [Jakarta RESTful Web Services 4.0 Javadoc](./apidocs)
+* [Jakarta RESTful Web Services 4.0.0 TCK](https://download.eclipse.org/jakartaee/restful-ws/4.0/jakarta-restful-ws-tck-4.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/4.0/jakarta-restful-ws-tck-4.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/4.0/jakarta-restful-ws-tck-4.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.jaxrs:jakarta.jaxrs-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.ws.rs/jakarta.ws.rs-api/4.0.0/jar)
 
 # Compatible Implementations
-* [Eclipse Jersey 4.0](https://projects.eclipse.org/projects/ee4j.jersey)
+* [RESTEasy 7.0.0.Alpha1](https://github.com/resteasy/resteasy/releases/tag/7.0.0.Alpha1)
+* [Eclipse Jersey 4.0.0-M1](https://github.com/eclipse-ee4j/jersey/releases/tag/4.0.0-M1)
 
 # Ballots
 
