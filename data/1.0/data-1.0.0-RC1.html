@@ -528,8 +528,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div id="header">
 <h1>Jakarta Data</h1>
 <div class="details">
-<span id="revnumber"> 1.0.0-M4,</span>
-<span id="revdate">March 23, 2024</span>
+<span id="revnumber"> 1.0.0-RC1,</span>
+<span id="revdate">April 19, 2024</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -541,8 +541,6 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_disclaimers">Disclaimers</a></li>
 </ul>
 </li>
-<li><a href="#_jakarta_data">Jakarta Data</a>
-<ul class="sectlevel1">
 <li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#_goals">1.1. Goals</a></li>
@@ -558,7 +556,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 </ul>
 </li>
-<li><a href="#_repository">2. Repository</a>
+<li><a href="#architecture">2. Architecture</a>
 <ul class="sectlevel2">
 <li><a href="#_repositories_in_jakarta_data">2.1. Repositories in Jakarta Data</a>
 <ul class="sectlevel3">
@@ -566,6 +564,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_repositories_without_built_in_supertypes">2.1.2. Repositories without Built-in Supertypes</a></li>
 </ul>
 </li>
+<li><a href="#_querying_in_jakarta_data">2.2. Querying in Jakarta Data</a></li>
 </ul>
 </li>
 <li><a href="#_entity_classes">3. Entity Classes</a>
@@ -577,10 +576,20 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_basic_types">3.1.3. Basic Types</a></li>
 <li><a href="#_embedded_fields_and_embeddable_classes">3.1.4. Embedded Fields and Embeddable Classes</a></li>
 <li><a href="#_entity_associations">3.1.5. Entity Associations</a></li>
-<li><a href="#_entity_names">3.1.6. Entity Names</a></li>
-<li><a href="#_persistent_field_names">3.1.7. Persistent Field Names</a></li>
-<li><a href="#_persistent_field_names_in_query_by_method_name">3.1.8. Persistent Field Names in Query by Method Name</a></li>
-<li><a href="#_type_safe_access_to_entity_attributes">3.1.9. Type-safe Access to Entity Attributes</a></li>
+</ul>
+</li>
+<li><a href="#_entity_names_and_persistent_field_names">3.2. Entity Names and Persistent Field Names</a>
+<ul class="sectlevel3">
+<li><a href="#_entity_names">3.2.1. Entity Names</a></li>
+<li><a href="#_persistent_field_names">3.2.2. Persistent Field Names</a></li>
+</ul>
+</li>
+<li><a href="#_type_safe_access_to_entity_attributes">3.3. Type-safe Access to Entity Attributes</a>
+<ul class="sectlevel3">
+<li><a href="#_application_requirements_for_a_metamodel_class">3.3.1. Application Requirements for a Metamodel Class</a></li>
+<li><a href="#_compile_time_annotation_processor_requirements_for_a_metamodel_class">3.3.2. Compile-time Annotation Processor Requirements for a Metamodel Class</a></li>
+<li><a href="#_conventions_for_metamodel_fields">3.3.3. Conventions for Metamodel Fields</a></li>
+<li><a href="#_example_metamodel_class_and_usage">3.3.4. Example Metamodel Class and Usage</a></li>
 </ul>
 </li>
 </ul>
@@ -592,29 +601,22 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_parameter_based_automatic_query_methods">4.3. Parameter-based automatic query methods</a></li>
 <li><a href="#_resource_accessor_methods">4.4. Resource accessor methods</a></li>
 <li><a href="#_conflicting_repository_method_annotations">4.5. Conflicting Repository Method Annotations</a></li>
-<li><a href="#_query_by_method_name">4.6. Query by Method Name</a>
+<li><a href="#_special_parameters_for_limits_sorting_and_pagination">4.6. Special Parameters for Limits, Sorting, and Pagination</a></li>
+<li><a href="#_precedence_of_sort_criteria">4.7. Precedence of Sort Criteria</a>
 <ul class="sectlevel3">
-<li><a href="#_bnf_grammar_for_query_methods">4.6.1. BNF Grammar for Query Methods</a></li>
-<li><a href="#_query_by_method_name_keywords">4.6.2. Query by Method Name Keywords</a></li>
-<li><a href="#_return_types">4.6.3. Return Types</a></li>
+<li><a href="#_sort_criteria_within_query_language">4.7.1. Sort Criteria within Query Language</a></li>
+<li><a href="#_static_mechanisms_for_sort_criteria">4.7.2. Static Mechanisms for Sort Criteria</a></li>
+<li><a href="#_dynamic_mechanisms_for_sort_criteria">4.7.3. Dynamic Mechanisms for Sort Criteria</a></li>
+<li><a href="#_examples_of_sort_criteria_precedence">4.7.4. Examples of Sort Criteria Precedence</a></li>
 </ul>
 </li>
-<li><a href="#_special_parameters_for_limits_sorting_and_pagination">4.7. Special Parameters for Limits, Sorting, and Pagination</a></li>
-<li><a href="#_precedence_of_sort_criteria">4.8. Precedence of Sort Criteria</a>
+<li><a href="#_pagination_in_jakarta_data">4.8. Pagination in Jakarta Data</a>
 <ul class="sectlevel3">
-<li><a href="#_sort_criteria_within_query_language">4.8.1. Sort Criteria within Query Language</a></li>
-<li><a href="#_static_mechanisms_for_sort_criteria">4.8.2. Static Mechanisms for Sort Criteria</a></li>
-<li><a href="#_dynamic_mechanisms_for_sort_criteria">4.8.3. Dynamic Mechanisms for Sort Criteria</a></li>
-<li><a href="#_examples_of_sort_criteria_precedence">4.8.4. Examples of Sort Criteria Precedence</a></li>
+<li><a href="#_offset_based_pagination">4.8.1. Offset-based Pagination</a></li>
+<li><a href="#_cursor_based_pagination">4.8.2. Cursor-based Pagination</a></li>
 </ul>
 </li>
-<li><a href="#_pagination_in_jakarta_data">4.9. Pagination in Jakarta Data</a>
-<ul class="sectlevel3">
-<li><a href="#_offset_based_pagination">4.9.1. Offset-based Pagination</a></li>
-<li><a href="#_cursor_based_pagination">4.9.2. Cursor-based Pagination</a></li>
-</ul>
-</li>
-<li><a href="#_precedence_of_repository_methods">4.10. Precedence of Repository Methods</a></li>
+<li><a href="#_precedence_of_repository_methods">4.9. Precedence of Repository Methods</a></li>
 </ul>
 </li>
 <li><a href="#_jakarta_data_query_language">5. Jakarta Data Query Language</a>
@@ -707,8 +709,6 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 </div>
 </div>
 <div id="content">
@@ -718,11 +718,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta Data
 
-Version: 1.0.0-M4
+Version: 1.0.0-RC1
 
 Status: Draft
 
-Release: March 23, 2024</pre>
+Release: April 19, 2024</pre>
 </div>
 </div>
 </div>
@@ -815,7 +815,6 @@ remain with copyright holders.</p>
 </div>
 </div>
 </div>
-<h1 id="_jakarta_data" class="sect0">Jakarta Data</h1>
 <div class="sect1">
 <h2 id="_introduction">1. Introduction</h2>
 <div class="sectionbody">
@@ -980,7 +979,7 @@ of the project committers and various contributors.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_repository">2. Repository</h2>
+<h2 id="architecture">2. Architecture</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In the realm of software design, the repository pattern encapsulates the logic required to access data sources. This pattern consolidates data access functionality, offering improved maintainability and decoupling the infrastructure or technology used to access databases from the domain model layer.</p>
@@ -1187,6 +1186,34 @@ The primary entity type is determined by the argument to the first generic type 
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_querying_in_jakarta_data">2.2. Querying in Jakarta Data</h3>
+<div class="paragraph">
+<p>Jakarta Data provides two core ways to express queries:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_parameter_based_automatic_query_methods">parameter-based automatic query methods</a>, that is, <code>@Find</code> and <code>@Delete</code>, and</p>
+</li>
+<li>
+<p><a href="#_annotated_query_methods">annotated query methods</a>, that is <code>@Query</code> and <a href="#_jakarta_data_query_language">Jakarta Data Query Language</a> or Jakarta Persistence Query Language.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Newly written code should use these approaches.
+A typical application based on Jakarta Data uses a mix of both approaches, with the choice of approach depending on the complexity of the query.</p>
+</div>
+<div class="paragraph">
+<p>As an extension to the core specification, Jakarta Data 1.0 offers a Query by Method Name facility to provide a migration path for existing applications written for repository frameworks which offer similar functionality.
+Query by Method name is described in a companion document to this specification.</p>
+</div>
+<div class="paragraph">
+<p>A Jakarta Data provider is required to support the Query by Method Name extension in Jakarta Data 1.0.
+This requirement will be removed in a future version of Jakarta Data.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1283,7 +1310,7 @@ A Jakarta Data provider might allow the state of a single Jakarta Data entity to
 <div class="ulist">
 <ul>
 <li>
-<p>is compatible with the programming models defined by the Jakarta Persistence and Jakarta NoSQL specifications, and</p>
+<p>is compatible with the programming models defined by the Jakarta Persistence <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> and Jakarta NoSQL <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> specifications, and</p>
 </li>
 <li>
 <p>allows for vendor-specific entity programming models to be defined by Jakarta Data providers.</p>
@@ -1704,8 +1731,14 @@ Support for entity associations is not required by this specification.
 </table>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_entity_names_and_persistent_field_names">3.2. Entity Names and Persistent Field Names</h3>
+<div class="paragraph">
+<p>Entities and their persistent fields may be referenced by name in the query language defined in <a href="#_jakarta_data_query_language">Jakarta Data Query Language</a>.</p>
+</div>
 <div class="sect3">
-<h4 id="_entity_names">3.1.6. Entity Names</h4>
+<h4 id="_entity_names">3.2.1. Entity Names</h4>
 <div class="paragraph">
 <p>Each entity must be assigned an <em>entity name</em> by the provider.
 By default, this must be the unqualified Java class name of the entity class.
@@ -1714,9 +1747,9 @@ For example, Jakarta Persistence allows the entity name to be specified via the 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_persistent_field_names">3.1.7. Persistent Field Names</h4>
+<h4 id="_persistent_field_names">3.2.2. Persistent Field Names</h4>
 <div class="paragraph">
-<p>Each persistent field of an entity, as defined above in <a href="#_persistent_fields">Persistent Fields</a>, or of an embeddable class, as defined in <a href="#_embedded_fields_and_embeddable_classes">Embedded Fields and Embeddable Classes</a>, must be assigned a name, allowing the persistent field to be referenced by an <a href="#_parameter_based_automatic_query_methods">automatic query method</a>, a <a href="#_query_by_method_name">Query by Method Name</a>, or from a query specified within the <a href="#_annotated_query_methods"><code>@Query</code> annotation</a>.</p>
+<p>Each persistent field of an entity, as defined above in <a href="#_persistent_fields">Persistent Fields</a>, or of an embeddable class, as defined in <a href="#_embedded_fields_and_embeddable_classes">Embedded Fields and Embeddable Classes</a>, must be assigned a name, allowing the persistent field to be referenced by an <a href="#_parameter_based_automatic_query_methods">automatic query method</a>, a Query by Method Name, or from a query specified within the <a href="#_annotated_query_methods"><code>@Query</code> annotation</a>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1761,19 +1794,19 @@ For example, Jakarta Persistence allows the entity name to be specified via the 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Find</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameter name</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>_</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Find List&lt;Order&gt; find(int address_zipCode);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Find List&lt;Person&gt; find(int address_zipCode);</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Query</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Path expression within query</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>.</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Query("FROM Order WHERE address.zipCode = ?1")</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Query("FROM Person WHERE address.zipCode = ?1")</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Query by Method Name</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Method name</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>_</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>List&lt;Order&gt; findByAddress_zipCode(int zip);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>List&lt;Person&gt; findByAddress_zipCode(int zip);</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Sort</code></p></td>
@@ -1785,7 +1818,7 @@ For example, Jakarta Persistence allows the entity name to be specified via the 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>@By</code> or <code>@OrderBy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Annotation value</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>.</code> or <code>_</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Find List&lt;Order&gt; find(@By("address.zipCode") int zip);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Find List&lt;Person&gt; find(@By("address.zipCode") int zip);</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1802,90 +1835,9 @@ Application programmers are strongly encouraged to follow Java&#8217;s camel cas
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_persistent_field_names_in_query_by_method_name">3.1.8. Persistent Field Names in Query by Method Name</h4>
-<div class="paragraph">
-<p>For <em>Query by Method Name</em>, the use of delimiters within a compound name is optional. Delimiters may be omitted entirely from a compound name when they are not needed to disambiguate the persistent field to which the name refers. But for a given entity property name, delimiter usage must be consistent: either the delimiter must be used between every pair of persistent field names within the compound name, or it must not occur within the compound name.</p>
 </div>
-<div class="paragraph">
-<p>Resolution of a persistent field involves the following steps:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A persistent field name is extracted from the method name according to the <a href="#_bnf_grammar_for_query_methods">BNF Grammar for Query Methods</a>. For example, if the query method name is <code>findByAddressZipCode</code>, the extracted field name is <code>AddressZipCode</code>.</p>
-</li>
-<li>
-<p>The extracted name is matched against the fields of the entity class. If the name assigned to a persistent field of the entity class matches the extracted name, ignoring case, then the extracted name resolves to that field.</p>
-</li>
-<li>
-<p>Otherwise, if no match is found among the fields of the entity, the extracted name is matched against the fields of entity classes and embedded classes reachable from the entity class, interpreting the extracted name as a compound name, as outlined in the previous section, both with and without the optional delimiter. If the compound name assigned to a persistent field matches the extracted name, also interpreted as a compound name, and ignoring case, then the extracted name resolves to that field.</p>
-</li>
-<li>
-<p>If no matching persistent field is found in either of the previous steps, the provider is permitted to reject the query method or to throw <code>UnsupportedOperationException</code> when the method is called.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>A persistent field name used in a <em>Query by Method Name</em> must not contain a <a href="#_query_by_method_name_keywords">keyword</a> reserved by <em>Query by Method Name</em>.</p>
-</div>
-<div class="sect4">
-<h5 id="_scenario_1_person_repository_with_unambiguous_resolution">3.1.8.1. Scenario 1: Person Repository with Unambiguous Resolution</h5>
-<div class="paragraph">
-<p>In this scenario, we have the following data model:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="type">class</span> <span class="class">Person</span> {
-  <span class="directive">private</span> <span class="predefined-type">Long</span> id;
-  <span class="directive">private</span> MailingAddress address;
-}
-
-<span class="type">class</span> <span class="class">MailingAddress</span> {
-  <span class="directive">private</span> <span class="type">int</span> zipcode;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>Person</code> entity does not have an <code>addressZipCode</code> field, so use of the delimiter is optional. It is valid to write both of the following repository methods, which have the same meaning,</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">List</span>&lt;Person&gt; findByAddressZipCode(<span class="type">int</span> zipCode);
-<span class="predefined-type">List</span>&lt;Person&gt; findByAddress_zipcode(<span class="type">int</span> zipCode);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_scenario_2_order_repository_with_resolution_that_requires_a_delimiter">3.1.8.2. Scenario 2: Order Repository with Resolution that requires a Delimiter</h5>
-<div class="paragraph">
-<p>In this scenario, we have the following data model:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="type">class</span> <span class="class">Order</span> {
-  <span class="directive">private</span> <span class="predefined-type">Long</span> id;
-  <span class="directive">private</span> <span class="predefined-type">String</span> addressZipCode;
-  <span class="directive">private</span> MailingAddress address;
-}
-
-<span class="type">class</span> <span class="class">MailingAddress</span> {
-  <span class="directive">private</span> <span class="type">int</span> zipcode;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>Order</code> entity has an <code>addressZipCode</code> field, as well as an <code>address</code> field for an embeddable class with a <code>zipcode</code> field. The method name <code>findByAddressZipCode</code> points to the <code>addressZipCode</code> field and cannot be used to navigate to the embedded class. To navigate to the <code>zipcode</code> field of the embedded class, the delimiter must be used:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">List</span>&lt;Order&gt; findByAddress_zipcode(<span class="type">int</span> zipCode);</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_type_safe_access_to_entity_attributes">3.1.9. Type-safe Access to Entity Attributes</h4>
+<div class="sect2">
+<h3 id="_type_safe_access_to_entity_attributes">3.3. Type-safe Access to Entity Attributes</h3>
 <div class="paragraph">
 <p>Jakarta Data provides a static metamodel that allows entity attributes to be accessed by applications in a type-safe manner.</p>
 </div>
@@ -1894,6 +1846,9 @@ Application programmers are strongly encouraged to follow Java&#8217;s camel cas
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>The metamodel class can be an interface or concrete class.</p>
+</li>
 <li>
 <p>The metamodel class must be annotated with <code>@StaticMetamodel</code>, specifying the entity class as its <code>value</code>.</p>
 </li>
@@ -1908,15 +1863,15 @@ Application programmers are strongly encouraged to follow Java&#8217;s camel cas
 <div class="paragraph">
 <p>The application can use the field values of the metamodel class to obtain artifacts relating to the entity attribute in a type-safe manner, for example, <code>_Book.title.asc()</code> or <code>Sort.asc(_Book.title.name())</code> or <code>Sort.asc(_Book.TITLE)</code> rather than <code>Sort.asc("title")</code>.</p>
 </div>
-<div class="sect4">
-<h5 id="_application_requirements_for_a_metamodel_class">3.1.9.1. Application Requirements for a Metamodel Class</h5>
+<div class="sect3">
+<h4 id="_application_requirements_for_a_metamodel_class">3.3.1. Application Requirements for a Metamodel Class</h4>
 <div class="paragraph">
 <p>When an application programmer writes a static metamodel class for an entity by hand:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>each field corresponding to a persistent field of an entity must have modifiers <code>public</code>, <code>static</code>, and <code>final</code>, and</p>
+<p>each field corresponding to a persistent field of an entity must have modifiers <code>public</code>, <code>static</code>, and <code>final</code> (these are implicit when the metamodel class is an interface), and</p>
 </li>
 <li>
 <p>the fields must be statically initialized.</p>
@@ -1930,8 +1885,8 @@ Application programmers are strongly encouraged to follow Java&#8217;s camel cas
 <p>A convenience implementation of each subinterface of <code>Attribute</code> is provided in the package <code>jakarta.data.metamodel.impl</code>.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_compile_time_annotation_processor_requirements_for_a_metamodel_class">3.1.9.2. Compile-time Annotation Processor Requirements for a Metamodel Class</h5>
+<div class="sect3">
+<h4 id="_compile_time_annotation_processor_requirements_for_a_metamodel_class">3.3.2. Compile-time Annotation Processor Requirements for a Metamodel Class</h4>
 <div class="paragraph">
 <p>When an annotation processor generates a static metamodel class for an entity:</p>
 </div>
@@ -1952,8 +1907,8 @@ Application programmers are strongly encouraged to follow Java&#8217;s camel cas
 <p>The fields may be statically initialized, or they may be initialized by the provider during system initialization.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_conventions_for_metamodel_fields">3.1.9.3. Conventions for Metamodel Fields</h5>
+<div class="sect3">
+<h4 id="_conventions_for_metamodel_fields">3.3.3. Conventions for Metamodel Fields</h4>
 <div class="paragraph">
 <p>The following are conventions for static metamodel classes:</p>
 </div>
@@ -1980,8 +1935,8 @@ Application programmers are strongly encouraged to follow Java&#8217;s camel cas
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_example_metamodel_class_and_usage">3.1.9.4. Example Metamodel Class and Usage</h5>
+<div class="sect3">
+<h4 id="_example_metamodel_class_and_usage">3.3.4. Example Metamodel Class and Usage</h4>
 <div class="paragraph">
 <p>Example entity class:</p>
 </div>
@@ -2027,7 +1982,6 @@ Application programmers are strongly encouraged to follow Java&#8217;s camel cas
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_repository_interfaces">4. Repository Interfaces</h2>
 <div class="sectionbody">
@@ -2060,7 +2014,7 @@ A repository interface may declare:</p>
 <p>an <a href="#_annotated_query_methods"><em>annotated query method</em></a>,</p>
 </li>
 <li>
-<p>an <em>automatic query method</em> with <a href="#_parameter_based_automatic_query_methods">parameter-based conditions</a> or <a href="#_query_by_method_name">Query by Method Name</a>, or</p>
+<p>an <em>automatic query method</em> with <a href="#_parameter_based_automatic_query_methods">parameter-based conditions</a> or defined using the Query by Method Name extension, or</p>
 </li>
 <li>
 <p>a <a href="#_resource_accessor_methods"><em>resource accessor method</em></a>.</p>
@@ -2081,7 +2035,7 @@ A superinterface of a repository interface must either:</p>
 <p>be one of the built-in generic repository supertypes defined by this specification, <code>DataRepository</code>, <code>BasicRepository</code>, or <code>CrudRepository</code>, or</p>
 </li>
 <li>
-<p>be a non-generic toplevel interface with no type parameters, whose abstract methods likewise declare no type parameters.</p>
+<p>be a non-generic toplevel interface with no type parameters, whose abstract methods likewise declare no type parameters, and which does not itself directly or indirectly inherit any generic interface or any interface whose abstract methods declare type parameters.</p>
 </li>
 </ul>
 </div>
@@ -2160,7 +2114,8 @@ Lifecycle methods allow the program to make changes to persistent data in the da
 </div>
 </div>
 <div class="paragraph">
-<p>where <code>Lifecycle</code> is a lifecycle annotation, <code>lifecycle</code> is the arbitrary name of the method, and <code>Entity</code> is either <code>E</code>, <code>List&lt;E&gt;</code>, or <code>E[]</code>, where <code>E</code> is a concrete entity class.</p>
+<p>where <code>Lifecycle</code> is a lifecycle annotation, <code>lifecycle</code> is the arbitrary name of the method, and <code>Entity</code> is either <code>E</code>, <code>List&lt;E&gt;</code>, or <code>E[]</code>, where <code>E</code> is a concrete entity class.
+In this context, any variadic parameter declared <code>E&#8230;&#8203;</code> is treated as if it were declared with type <code>E[]</code>.</p>
 </div>
 <div class="paragraph">
 <p>This specification defines four built-in lifecycle annotations: <code>@Insert</code>, <code>@Update</code>, <code>@Delete</code>, and <code>@Save</code>. The semantics of these annotations is defined in their Javadoc.</p>
@@ -2275,8 +2230,8 @@ However, Jakarta Data implementations are strongly encouraged to support the fol
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">where title like :title order by title</span><span class="delimiter">&quot;</span></span>)
-Page&lt;<span class="predefined-type">Book</span>&gt; booksByTitle(<span class="predefined-type">String</span> title, PageRequest&lt;<span class="predefined-type">Book</span>&gt; pageRequest);</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">where title like :title order by title asc, id asc</span><span class="delimiter">&quot;</span></span>)
+Page&lt;<span class="predefined-type">Book</span>&gt; booksByTitle(<span class="predefined-type">String</span> title, PageRequest pageRequest);</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -2295,7 +2250,8 @@ Optional&lt;Product&gt; findByName(<span class="annotation">@Param</span>(<span 
 </div>
 </div>
 <div class="paragraph">
-<p>Programs which make use of annotated query methods are not portable between providers.</p>
+<p>Programs which make use of annotated query methods are not in general portable between providers.
+However, when the <code>@Query</code> annotation specifies a query written in JDQL, the annotated query method is portable between providers to the extent to which its semantics can be implemented on the underlying data store.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2376,12 +2332,13 @@ The Jakarta Data implementation automatically recognizes the query annotations i
 <span class="predefined-type">Book</span> bookByIsbn(<span class="predefined-type">String</span> isbn);
 
 <span class="annotation">@Find</span>
-<span class="predefined-type">List</span>&lt;<span class="predefined-type">Book</span>&gt; booksByYear(Year year, Sort order, Limit limit);
+<span class="predefined-type">List</span>&lt;<span class="predefined-type">Book</span>&gt; booksByYear(Year year, Sort&lt;<span class="predefined-type">Book</span>&gt; order, Limit limit);
 
 <span class="annotation">@Find</span>
 Page&lt;<span class="predefined-type">Book</span>&gt; find(<span class="annotation">@By</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">year</span><span class="delimiter">&quot;</span></span>) Year publishedIn,
                 <span class="annotation">@By</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">genre</span><span class="delimiter">&quot;</span></span>) Category type,
-                PageRequest&lt;<span class="predefined-type">Book</span>&gt; pageRequest);</code></pre>
+                Order&lt;<span class="predefined-type">Book</span>&gt; sortBy,
+                PageRequest pageRequest);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2471,393 +2428,9 @@ reject such a method declaration at compile time.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_query_by_method_name">4.6. Query by Method Name</h3>
+<h3 id="_special_parameters_for_limits_sorting_and_pagination">4.6. Special Parameters for Limits, Sorting, and Pagination</h3>
 <div class="paragraph">
-<p>The Query by method mechanism allows for creating query commands by naming convention.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
-<span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> BasicRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
-
-  <span class="predefined-type">List</span>&lt;Product&gt; findByName(<span class="predefined-type">String</span> name);
-
-  <span class="annotation">@OrderBy</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">price</span><span class="delimiter">&quot;</span></span>)
-  <span class="predefined-type">List</span>&lt;Product&gt; findByNameLike(<span class="predefined-type">String</span> namePattern);
-
-  <span class="annotation">@OrderBy</span>(value = <span class="string"><span class="delimiter">&quot;</span><span class="content">price</span><span class="delimiter">&quot;</span></span>, descending = <span class="predefined-constant">true</span>)
-  <span class="predefined-type">List</span>&lt;Product&gt; findByNameLikeAndPriceLessThan(<span class="predefined-type">String</span> namePattern, <span class="type">float</span> priceBelow);
-
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The parsing of query method names follows a specific format:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The method name consists of the subject, the predicate, and optionally the order clause.</p>
-</li>
-<li>
-<p>The subject begins with the action (such as <code>find</code> or <code>delete</code>) and is optionally followed by an expression (for example, <code>First10</code>), followed by any number of other characters, followed by <code>By</code>.</p>
-</li>
-<li>
-<p>The predicate defines the query&#8217;s condition or filtering criteria, where multiple conditions are delimited by <code>And</code> or <code>Or</code>. For example, <code>PriceLessThanAndNameLike</code>.</p>
-</li>
-<li>
-<p>The order clause, which is optional, begins with <code>OrderBy</code> and is followed by one or more ordered pairings consisting of entity attribute name and direction of sorting (<code>Asc</code> or <code>Desc</code>). The direction can be omitted on the final property, in which case <code>Asc</code> is implied. Ordering of results is performed by sorting the first entity attribute according to its respective direction, where results that sort to the same position are subsequently sorted by the second entity attribute according to its respective direction, and so forth.</p>
-</li>
-<li>
-<p>The method name is formed by combining the subject, predicate, and order clause, in that order.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This specification uses the terms subject and predicate in a way that aligns with industry terminology rather than how they are defined in English grammar.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Queries can also handle entities with relation attributes by specifying the relationship using dot notation, with the dot converted to underscore so that it is a valid character within the method name. See Scenario 3 below for an example.</p>
-</div>
-<div class="paragraph">
-<p>Example query methods:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>findByName(String name)</code>: Find entities by the 'name' property.</p>
-</li>
-<li>
-<p><code>findByAgeGreaterThan(int age)</code>: Find entities where 'age' is greater than the specified value.</p>
-</li>
-<li>
-<p><code>findByAuthorName(String authorName)</code>: Find entities by the 'authorName' property of a related entity.</p>
-</li>
-<li>
-<p><code>findByCategoryNameAndPriceLessThan(String categoryName, double price)</code>: Find entities by 'categoryName' and 'price' properties, applying an 'And' condition.</p>
-</li>
-<li>
-<p><code>findByNameLikeOrderByPriceDescIdAsc</code>: Find entities by matching the 'name' property against a pattern, sorting the results by 'price' in descending order, and sorting results with the same 'price' by the 'id' in ascending order.</p>
-</li>
-</ul>
-</div>
-<div class="sect3">
-<h4 id="_bnf_grammar_for_query_methods">4.6.1. BNF Grammar for Query Methods</h4>
-<div class="paragraph">
-<p>Query methods allow developers to create database queries using method naming conventions. These methods consist of a subject, predicate, and optional order clause. This BNF notation provides a structured representation for understanding and implementing these powerful querying techniques in your applications.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bnf">&lt;query-method&gt; ::= &lt;subject&gt; &lt;predicate&gt; [&lt;order-clause&gt;]
-&lt;subject&gt; ::= (&lt;action&gt; | &quot;find&quot; &lt;find-expression&gt;) [&lt;ignored-text&gt;] &quot;By&quot;
-&lt;action&gt; ::= &quot;find&quot; | &quot;delete&quot; | &quot;update&quot; | &quot;count&quot; | &quot;exists&quot;
-&lt;find-expression&gt; ::= &quot;First&quot; [&lt;positive-integer&gt;]
-&lt;predicate&gt; ::= &lt;condition&gt; { (&quot;And&quot; | &quot;Or&quot;) &lt;condition&gt; }
-&lt;condition&gt; ::= &lt;property&gt; [&quot;IgnoreCase&quot;] [&quot;Not&quot;] [&lt;operator&gt;]
-&lt;operator&gt; ::= &quot;Contains&quot; | &quot;EndsWith&quot; | &quot;StartsWith&quot; | &quot;LessThan&quot;| &quot;LessThanEqual&quot; | &quot;GreaterThan&quot; | &quot;GreaterThanEqual&quot; | &quot;Between&quot; | &quot;Like&quot; | &quot;In&quot; | &quot;Null&quot; | &quot;True&quot; | &quot;False&quot;
-&lt;property&gt; ::= &lt;identifier&gt; | &lt;identifier&gt; &quot;_&quot; &lt;property&gt;
-&lt;identifier&gt; ::= &lt;word&gt;
-&lt;positive-integer&gt; ::= &lt;digit&gt; { &lt;digit&gt; }
-&lt;order-clause&gt; ::= &quot;OrderBy&quot; { &lt;order-item&gt; } ( &lt;order-item&gt; | &lt;property&gt; )
-&lt;order-item&gt; ::= &lt;property&gt; (&quot;Asc&quot; | &quot;Desc&quot;)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Explanation of the BNF elements:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>&lt;query-method&gt;</code>: Represents a query method, which consists of a subject, a predicate, and an optional order clause.</p>
-</li>
-<li>
-<p><code>&lt;subject&gt;</code>: Defines the action (e.g., "find" or "delete") followed by an optional expression and "By."</p>
-</li>
-<li>
-<p><code>&lt;action&gt;</code>: Specifies the action, such as "find" or "delete."</p>
-</li>
-<li>
-<p><code>&lt;find-expression&gt;</code>: Represents an optional expression for find operations, such as "First10."</p>
-</li>
-<li>
-<p><code>&lt;ignored-text&gt;</code>: Optional text that does not contain "By".</p>
-</li>
-<li>
-<p><code>&lt;predicate&gt;</code>: Represents the query&#8217;s condition or filtering criteria, which can include multiple conditions separated by "And" or "Or."</p>
-</li>
-<li>
-<p><code>&lt;condition&gt;</code>: Specifies a property and an operator for the condition.</p>
-</li>
-<li>
-<p><code>&lt;operator&gt;</code>: Defines the operator for the condition, like "Between" or "LessThan."</p>
-</li>
-<li>
-<p><code>&lt;property&gt;</code>: Represents a property name, which can include underscores for nested properties.</p>
-</li>
-<li>
-<p><code>&lt;identifier&gt;</code>: Represents a word (e.g., property names, action names, etc.).</p>
-</li>
-<li>
-<p><code>&lt;positive-integer&gt;</code>: Represents a whole number greater than zero.</p>
-</li>
-<li>
-<p><code>&lt;order-clause&gt;</code>: Specifies the optional order clause, starting with "OrderBy" and followed by one or more order items.</p>
-</li>
-<li>
-<p><code>&lt;order-item&gt;</code>: Represents an ordered collection of entity attributes by which to sort results, including an optional "Asc" or "Desc" to specify the sort direction.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_query_by_method_name_keywords">4.6.2. Query by Method Name Keywords</h4>
-<div class="paragraph">
-<p>The following table lists the <em>Query by Method Name</em> keywords that must be supported by Jakarta Data providers, except where explicitly indicated for a type of database.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Keyword</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Not Required For</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">General query method returning entities.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">deleteBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete query method returning either no result (void) or the delete count.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">countBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Count projection returning a numeric result.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">existsBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exists projection, returning as a <code>boolean</code> result.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The "Not Required For" column indicates the database types for which the respective keyword is not required or applicable.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Jakarta Data implementations must support the following list of Query by Method Name keywords, except where indicated for a database type. A repository method must raise <code>java.lang.UnsupportedOperationException</code> or a more specific subclass of the exception if the database does not provide the requested functionality.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Keyword</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Method signature Sample</th>
-<th class="tableblock halign-left valign-top">Not Required For</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">And</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>And</code> operator requires both conditions to match.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByNameAndYear</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Or</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>Or</code> operator requires at least one of the conditions to match.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByNameOrYear</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Negates the condition that immediately follows the <code>Not</code> keyword. When used without a subsequent keyword, means not equal to.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByNameNotLike</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Between</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is between (inclusive of) the given values</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByDateBetween</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Matches String values with the given substring, which can be a pattern.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByProductNameContains</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EndsWith</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Matches String values with the given ending, which can be a pattern.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByProductNameEndsWith</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">First</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For a query with ordered results, limits the quantity of results to the number following First, or if there is no subsequent number, to a single result.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findFirst10By</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LessThan</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is less than the given value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByAgeLessThan</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GreaterThan</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is greater than the given value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByAgeGreaterThan</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LessThanEqual</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is less than or equal to the given value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByAgeLessThanEqual</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GreaterThanEqual</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is greater than or equal to the given value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByAgeGreaterThanEqual</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Like</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Matches String values against the given pattern.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByTitleLike</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IgnoreCase</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Requests that string values be compared independent of case for query conditions and ordering.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByStreetNameIgnoreCaseLike</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">In</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find results where the property is one of the values that are contained within the given list</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByIdIn</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Null</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Finds results where the property has a null value.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByYearRetiredNull</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">StartsWith</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Matches String values with the given beginning, which can be a pattern.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByFirstNameStartsWith</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column, Document, Graph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">True</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Finds results where the property has a boolean value of true.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findBySalariedTrue</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">False</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Finds results where the property has a boolean value of false.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByCompletedFalse</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OrderBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specify a static sorting order followed by one or more ordered pairings of a property path and direction (<code>Asc</code> or <code>Desc</code>). The direction <code>Asc</code> can be omitted from the final property listed, in which case ascending order is implied for that property.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByAgeOrderByHeightDescIdAsc findByAgeOrderById</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Desc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specify a static sorting order of descending.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByNameOrderByAgeDesc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Asc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specify a static sorting order of ascending.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">findByNameOrderByAgeAsc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Key-value, Wide-Column</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The "Not Required For" column indicates the database types for which the respective keyword is not required or applicable.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect4">
-<h5 id="_patterns">4.6.2.1. Patterns</h5>
-<div class="paragraph">
-<p>Wildcard characters for patterns are determined by the data access provider. For relational databases, <code>_</code> matches any one character and <code>%</code> matches 0 or more characters.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_logical_operator_precedence">4.6.2.2. Logical Operator Precedence</h5>
-<div class="paragraph">
-<p>For relational databases, the logical operator <code>And</code> takes precedence over <code>Or</code>, meaning that <code>And</code> is evaluated on conditions before <code>Or</code> when both are specified on the same method. For other database types, the precedence is limited to the capabilities of the database. For example, some graph databases are limited to precedence in traversal order.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_return_types">4.6.3. Return Types</h4>
-<div class="paragraph">
-<p>Refer to the Jakarta Data module Javadoc section on "Return Types for Repository Methods" for a listing of valid return types for methods using Query by Method Name.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_special_parameters_for_limits_sorting_and_pagination">4.7. Special Parameters for Limits, Sorting, and Pagination</h3>
-<div class="paragraph">
-<p>An <a href="#_annotated_query_methods">annotated</a>, <a href="#_parameter_based_automatic_query_methods">parameter-based</a>, or <a href="#_query_by_method_name">method name</a> query method may have <em>special parameters</em> of type <code>Limit</code>, <code>Order</code>, <code>Sort</code>, or <code>PageRequest</code> if the method return type indicates that the method may return multiple entities, that is, if the return type is:</p>
+<p>An <a href="#_annotated_query_methods">annotated</a>, <a href="#_parameter_based_automatic_query_methods">parameter-based</a>, or Query by Method Name query method may have <em>special parameters</em> of type <code>Limit</code>, <code>Order</code>, <code>Sort</code>, or <code>PageRequest</code> if the method return type indicates that the method may return multiple entities, that is, if the return type is:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2884,7 +2457,7 @@ This specification uses the terms subject and predicate in a way that aligns wit
 <p>a <code>Sort</code> or <code>Order</code> allows the query results to be sorted by a given entity field or list of fields, respectively, and</p>
 </li>
 <li>
-<p>a <code>PageRequest</code> combines a range with optional sorting criteria, and a parameter of this type must be declared when the repository method returns a <code>Page</code> of results, as specified below in <a href="#_offset_based_pagination">Offset-based Pagination</a>, or a <code>CursoredPage</code>, as specified in <a href="#_cursor_based_pagination">Cursor-based Pagination</a>.</p>
+<p>a <code>PageRequest</code> splits results into pages. A parameter of this type must be declared when the repository method returns a <code>Page</code> of results, as specified below in <a href="#_offset_based_pagination">Offset-based Pagination</a>, or a <code>CursoredPage</code>, as specified in <a href="#_cursor_based_pagination">Cursor-based Pagination</a>.</p>
 </li>
 </ul>
 </div>
@@ -2911,9 +2484,6 @@ This specification uses the terms subject and predicate in a way that aligns wit
 <p>Alternatively, a Jakarta Data provider is permitted to reject such a repository method declaration at compile time.</p>
 </div>
 <div class="paragraph">
-<p>A repository method must throw <code>IllegalArgumentException</code> if it is called with an argument or arguments of type <code>Sort</code> or <code>Order</code> and a separate argument of type <code>PageRequest</code> with nonempty sort criteria.</p>
-</div>
-<div class="paragraph">
 <p>A repository method must throw <code>DataException</code> if the database is incapable of ordering the query results using the given sort criteria.</p>
 </div>
 <div class="paragraph">
@@ -2924,8 +2494,10 @@ This specification uses the terms subject and predicate in a way that aligns wit
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">ProductRepository</span> <span class="directive">extends</span> BasicRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
 
-    <span class="predefined-type">List</span>&lt;Product&gt; findByName(<span class="predefined-type">String</span> name, PageRequest&lt;Product&gt; pageRequest);
+    <span class="annotation">@Find</span>
+    Page&lt;Product&gt; findByName(<span class="predefined-type">String</span> name, PageRequest pageRequest, Order&lt;Product&gt; order);
 
+    <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">where name like :pattern</span><span class="delimiter">&quot;</span></span>)
     <span class="predefined-type">List</span>&lt;Product&gt; findByNameLike(<span class="predefined-type">String</span> pattern, Limit max, Sort&lt;?&gt;... sorts);
 
 }</code></pre>
@@ -2948,25 +2520,24 @@ This specification uses the terms subject and predicate in a way that aligns wit
 </div>
 </div>
 <div class="paragraph">
-<p>This <code>PageRequest</code> combines sorting with a starting page and maximum page size:</p>
+<p>This <code>PageRequest</code> specifies a starting page and maximum page size:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">PageRequest&lt;Product&gt; pageRequest =
-        PageRequest.of(Product.class)
-                   .size(<span class="integer">20</span>).page(<span class="integer">1</span>)
-                   .sortBy(_Product.price.desc());
-<span class="predefined-type">List</span>&lt;Product&gt; first20 = products.findByName(name, pageRequest);</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java">PageRequest pageRequest = PageRequest.ofPage(<span class="integer">1</span>).size(<span class="integer">20</span>);
+<span class="predefined-type">List</span>&lt;Product&gt; first20 = products.findByName(name, pageRequest,
+                            Order.by(_Product.price.desc(),
+                                     _Product.id.asc()));</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_precedence_of_sort_criteria">4.8. Precedence of Sort Criteria</h3>
+<h3 id="_precedence_of_sort_criteria">4.7. Precedence of Sort Criteria</h3>
 <div class="paragraph">
 <p>The specification defines different ways of providing sort criteria on queries. This section discusses how these different mechanisms relate to each other.</p>
 </div>
 <div class="sect3">
-<h4 id="_sort_criteria_within_query_language">4.8.1. Sort Criteria within Query Language</h4>
+<h4 id="_sort_criteria_within_query_language">4.7.1. Sort Criteria within Query Language</h4>
 <div class="paragraph">
 <p>Sort criteria can be hard-coded directly within query language by making use of the <code>@Query</code> annotation. A repository method that is annotated with <code>@Query</code> with a value that contains an <code>ORDER BY</code> clause (or query language equivalent) must not provide sort criteria via the other mechanisms.</p>
 </div>
@@ -2975,48 +2546,42 @@ This specification uses the terms subject and predicate in a way that aligns wit
 </div>
 </div>
 <div class="sect3">
-<h4 id="_static_mechanisms_for_sort_criteria">4.8.2. Static Mechanisms for Sort Criteria</h4>
+<h4 id="_static_mechanisms_for_sort_criteria">4.7.2. Static Mechanisms for Sort Criteria</h4>
 <div class="paragraph">
 <p>Sort criteria are provided statically for a repository method by using the <code>OrderBy</code> keyword or by annotating the method with one or more <code>@OrderBy</code> annotations. The <code>OrderBy</code> keyword cannot be intermixed with the <code>@OrderBy</code> annotation or the <code>@Query</code> annotation. Static sort criteria takes precedence over dynamic sort criteria in that static sort criteria are evaluated first. When static sort criteria sorts entities to the same position, dynamic sort criteria are applied to further order those entities.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_dynamic_mechanisms_for_sort_criteria">4.8.3. Dynamic Mechanisms for Sort Criteria</h4>
+<h4 id="_dynamic_mechanisms_for_sort_criteria">4.7.3. Dynamic Mechanisms for Sort Criteria</h4>
 <div class="paragraph">
-<p>Sort criteria are provided dynamically to repository methods either via <code>Sort</code> parameters or via a <code>PageRequest</code> or <code>Order</code> parameter that has one or more <code>Sort</code> values. <code>Sort</code> and <code>PageRequest</code> containing <code>Sort</code> must not both be provided to the same method. Similarly, <code>Order</code> and <code>PageRequest</code> containing <code>Sort</code> must not both be provided to the same method.</p>
+<p>Sort criteria are provided dynamically to repository methods either via <code>Sort</code> parameters or via a <code>Order</code> parameter that has one or more <code>Sort</code> values.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_examples_of_sort_criteria_precedence">4.8.4. Examples of Sort Criteria Precedence</h4>
+<h4 id="_examples_of_sort_criteria_precedence">4.7.4. Examples of Sort Criteria Precedence</h4>
 <div class="paragraph">
-<p>The following examples work through scenarios where static and dynamic sort criteria are provided to the same method.</p>
+<p>In the following examples, the query results are sorted by <code>age</code>, using the dynamic sorting criteria passed to the <code>sorts</code> parameter to break ties between records with the same <code>age</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// Sorts first by type. When type is the same, applies the PageRequest's sort criteria</span>
-Page&lt;User&gt; findByNameStartsWithOrderByType(<span class="predefined-type">String</span> namePrefix, PageRequest&lt;User&gt; pagination);
-
-<span class="comment">// Sorts first by type. When type is the same, applies the criteria in the Sorts</span>
-<span class="predefined-type">List</span>&lt;User&gt; findByNameStartsWithOrderByType(<span class="predefined-type">String</span> namePrefix, Sort&lt;?&gt;... sorts);
-
-<span class="comment">// Sorts first by age. When age is the same, applies the PageRequest's sort criteria</span>
-<span class="annotation">@OrderBy</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">age</span><span class="delimiter">&quot;</span></span>)
-Page&lt;User&gt; findByNameStartsWith(<span class="predefined-type">String</span> namePrefix, PageRequest&lt;User&gt; pagination);
-
-<span class="comment">// Sorts first by age. When age is the same, applies the criteria in the Sorts</span>
-<span class="annotation">@OrderBy</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">age</span><span class="delimiter">&quot;</span></span>)
-<span class="predefined-type">List</span>&lt;User&gt; findByNameStartsWith(<span class="predefined-type">String</span> namePrefix, Sort&lt;?&gt;... sorts);
-
-<span class="comment">// Sorts first by name. When name is the same, applies the PageRequest's sort criteria</span>
-<span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">WHERE (u.age &gt; ?1)</span><span class="delimiter">&quot;</span></span>)
-<span class="annotation">@OrderBy</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>)
-CursoredPage&lt;User&gt; olderThan(<span class="type">int</span> age, PageRequest&lt;User&gt; pagination);</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">WHERE u.age &gt; ?1</span><span class="delimiter">&quot;</span></span>)
+<span class="annotation">@OrderBy</span>(_User.AGE)
+Page&lt;User&gt; findByNamePrefix(<span class="predefined-type">String</span> namePrefix,
+                            PageRequest pagination,
+                            Order&lt;User&gt; sorts);</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">WHERE u.age &gt; ?1</span><span class="delimiter">&quot;</span></span>)
+<span class="annotation">@OrderBy</span>(_User.AGE)
+<span class="predefined-type">List</span>&lt;User&gt; findByNamePrefix(<span class="predefined-type">String</span> namePrefix, Sort&lt;?&gt;... sorts);</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pagination_in_jakarta_data">4.9. Pagination in Jakarta Data</h3>
+<h3 id="_pagination_in_jakarta_data">4.8. Pagination in Jakarta Data</h3>
 <div class="paragraph">
 <p>Dividing up large sets of data into pages is a beneficial strategy for data access and retrieval in many applications, including those developed in Java. Pagination helps improve the efficiency of handling large datasets in a way that is also user-friendly. In Jakarta Data, APIs are provided to help Java developers efficiently manage and navigate through data.</p>
 </div>
@@ -3043,7 +2608,7 @@ CursoredPage&lt;User&gt; olderThan(<span class="type">int</span> age, PageReques
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_offset_based_pagination">4.9.1. Offset-based Pagination</h4>
+<h4 id="_offset_based_pagination">4.8.1. Offset-based Pagination</h4>
 <div class="paragraph">
 <p>Offset pagination is a popular method for managing and retrieving large datasets efficiently. It is based on dividing the dataset into pages containing a specified number of elements. This method allows developers to retrieve a subset of the dataset by identifying the page number and the maximum number of elements per page.</p>
 </div>
@@ -3070,7 +2635,7 @@ CursoredPage&lt;User&gt; olderThan(<span class="type">int</span> age, PageReques
 </ul>
 </div>
 <div class="sect4">
-<h5 id="_requirements_when_using_offset_pagination">4.9.1.1. Requirements when using Offset Pagination</h5>
+<h5 id="_requirements_when_using_offset_pagination">4.8.1.1. Requirements when using Offset Pagination</h5>
 <div class="paragraph">
 <p>The following requirements must be met when using offset-based pagination:</p>
 </div>
@@ -3104,7 +2669,7 @@ CursoredPage&lt;User&gt; olderThan(<span class="type">int</span> age, PageReques
 </div>
 </div>
 <div class="sect4">
-<h5 id="_scenario_person_entity_and_people_repository">4.9.1.2. Scenario: Person Entity and People Repository</h5>
+<h5 id="_scenario_person_entity_and_people_repository">4.8.1.2. Scenario: Person Entity and People Repository</h5>
 <div class="paragraph">
 <p>Consider a scenario with a <code>Person</code> entity and a corresponding <code>People</code> repository:</p>
 </div>
@@ -3147,10 +2712,9 @@ CursoredPage&lt;User&gt; olderThan(<span class="type">int</span> age, PageReques
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Inject</span>
 People people;
 
-Page&lt;Person&gt; page = people.findAll(PageRequest.of(Person.class)
-                                              .page(<span class="integer">1</span>)
-                                              .size(<span class="integer">2</span>)
-                                              .sortBy(Sort.asc(<span class="string"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>)));</code></pre>
+Page&lt;Person&gt; page =
+        people.findAll(PageRequest.ofPage(<span class="integer">1</span>).size(<span class="integer">2</span>),
+                       Order.by(Sort.asc(<span class="string"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>)));</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3170,8 +2734,9 @@ Page&lt;Person&gt; page = people.findAll(PageRequest.of(Person.class)
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">if</span> (page.hasNext()) {
-   PageRequest&lt;Person&gt; nextPageRequest = page.nextPageRequest();
-   Page&lt;Person&gt; page2 = people.findAll(nextPageRequest);
+   PageRequest nextPageRequest = page.nextPageRequest();
+   Page&lt;Person&gt; page2 = people.findAll(nextPageRequest,
+                                       Order.by(Sort.asc(<span class="string"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>)));
 }</code></pre>
 </div>
 </div>
@@ -3195,7 +2760,7 @@ Page&lt;Person&gt; page = people.findAll(PageRequest.of(Person.class)
 </div>
 </div>
 <div class="sect3">
-<h4 id="_cursor_based_pagination">4.9.2. Cursor-based Pagination</h4>
+<h4 id="_cursor_based_pagination">4.8.2. Cursor-based Pagination</h4>
 <div class="paragraph">
 <p>Cursor-based pagination aims to reduce missed and duplicate results across pages by querying relative to the observed values of entity properties that constitute the sorting criteria. Cursor-based pagination can also offer an improvement in performance because it avoids fetching and ordering results from prior pages by causing those results to be non-matching. A Jakarta Data provider appends additional conditions to the query and tracks cursor-based values automatically when <code>CursoredPage</code> is used as the repository method return type. The application invokes <code>nextPageRequest</code> or <code>previousPageRequest</code> on the <code>CursoredPage</code> to obtain a <code>PageRequest</code> which keeps track of the cursor-based values.</p>
 </div>
@@ -3206,8 +2771,11 @@ Page&lt;Person&gt; page = people.findAll(PageRequest.of(Person.class)
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">CustomerRepository</span> <span class="directive">extends</span> BasicRepository&lt;Customer, <span class="predefined-type">Long</span>&gt; {
-  CursoredPage&lt;Customer&gt; findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(
-                                 <span class="type">int</span> zipcode, PageRequest&lt;Customer&gt; pageRequest);
+    <span class="annotation">@Find</span>
+    <span class="annotation">@OrderBy</span>(_Customer.LAST_NAME)
+    <span class="annotation">@OrderBy</span>(_Customer.FIRST_NAME)
+    <span class="annotation">@OrderBy</span>(_Customer.ID)
+    CursoredPage&lt;Customer&gt; findByZipcode(<span class="type">int</span> zipcode, PageRequest pageRequest);
 }</code></pre>
 </div>
 </div>
@@ -3216,12 +2784,12 @@ Page&lt;Person&gt; page = people.findAll(PageRequest.of(Person.class)
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">PageRequest&lt;Customer&gt; pageRequest = PageRequest.of(Customer.class).size(<span class="integer">50</span>);
-Page&lt;Customer&gt; page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(
-                                <span class="integer">55901</span>, pageRequest);
+<pre class="CodeRay highlight"><code data-lang="java">PageRequest pageRequest = PageRequest.ofSize(<span class="integer">50</span>);
+Page&lt;Customer&gt; page =
+        customers.findByZipcode(<span class="integer">55901</span>, pageRequest);
 <span class="keyword">if</span> (page.hasNext()) {
   pageRequest = page.nextPageRequest();
-  page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="integer">55901</span>, pageRequest);
+  page = customers.findByZipcode(<span class="integer">55901</span>, pageRequest);
   ...
 }</code></pre>
 </div>
@@ -3232,8 +2800,10 @@ Page&lt;Customer&gt; page = customers.findByZipcodeOrderByLastNameAscFirstNameAs
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java">Customer c = ...
-PageRequest&lt;Customer&gt; p = PageRequest.of(Customer.class).size(<span class="integer">50</span>).afterKey(c.lastName, c.firstName, c.id);
-page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="integer">55902</span>, p);</code></pre>
+PageRequest p = PageRequest.ofPage(<span class="integer">10</span>)
+                           .size(<span class="integer">50</span>)
+                           .afterCursor(<span class="predefined-type">Cursor</span>.forKey(c.lastName, c.firstName, c.id));
+page = customers.findByZipcode(<span class="integer">55902</span>, p);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3242,10 +2812,13 @@ page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="i
 <div class="ulist">
 <ul>
 <li>
-<p><code>OrderBy</code> name pattern of the repository method (as in the examples above) or <code>@OrderBy</code> annotation(s) on the repository method.</p>
+<p>the <code>@OrderBy</code> annotation or annotations of the repository method,</p>
 </li>
 <li>
-<p><code>Sort</code> parameters of the <code>PageRequest</code> that is supplied to the repository method.</p>
+<p><code>Order</code> or <code>Sort</code> parameters of the repository method, or</p>
+</li>
+<li>
+<p>an <code>OrderBy</code> in Query by Method Name.</p>
 </li>
 </ul>
 </div>
@@ -3253,14 +2826,14 @@ page = customers.findByZipcodeOrderByLastNameAscFirstNameAscIdAsc(<span class="i
 <p>The values of the entity attributes of the combined sort criteria define the cursor for cursor-based cursor based pagination. Within the cursor, each entity attribute has the same sorting and order of precedence that it has within the combined sort criteria.</p>
 </div>
 <div class="sect4">
-<h5 id="_example_of_appending_to_queries_for_cursor_based_pagination">4.9.2.1. Example of Appending to Queries for Cursor-based Pagination</h5>
+<h5 id="_example_of_appending_to_queries_for_cursor_based_pagination">4.8.2.1. Example of Appending to Queries for Cursor-based Pagination</h5>
 <div class="paragraph">
-<p>Without cursor-based pagination, a Jakarta Data provider that is based on Jakarta Persistence might compose the following JPQL for the <code>findByZipcodeOrderByLastNameAscFirstNameAscIdAsc</code> repository method from the prior example:</p>
+<p>Without cursor-based pagination, a Jakarta Data provider that is based on Jakarta Persistence might compose the following JPQL for the <code>findByZipcode()</code> repository method from the prior example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="jpaql">FROM Customer
-WHERE (zipCode = ?1)
+WHERE zipCode = ?1
 ORDER BY lastName ASC, firstName ASC, id ASC</code></pre>
 </div>
 </div>
@@ -3281,7 +2854,7 @@ ORDER BY lastName ASC, firstName ASC, id ASC</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_avoiding_missed_and_duplicate_results">4.9.2.2. Avoiding Missed and Duplicate Results</h5>
+<h5 id="_avoiding_missed_and_duplicate_results">4.8.2.2. Avoiding Missed and Duplicate Results</h5>
 <div class="paragraph">
 <p>Because searching for the next page of results is relative to a last known position, it is possible with cursor-based pagination to allow some types of updates to data while pages are being traversed without causing missed results or duplicates to appear. If you add entities to a prior position in the traversal of pages, the shift forward of numerical position of existing entities will not cause duplicates entities to appear in your continued traversal of subsequent pages because cursor-based pagination does not query based on a numerical position. If you remove entities from a prior position in the traversal of pages, the shift backward of numerical position of existing entities will not cause missed entities in your continued traversal of subsequent pages because keyset pagination does not query based on a numerical position.</p>
 </div>
@@ -3290,7 +2863,7 @@ ORDER BY lastName ASC, firstName ASC, id ASC</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_restrictions_on_use_of_cursor_based_pagination">4.9.2.3. Restrictions on use of Cursor-based Pagination</h5>
+<h5 id="_restrictions_on_use_of_cursor_based_pagination">4.8.2.3. Restrictions on use of Cursor-based Pagination</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3324,7 +2897,7 @@ ORDER BY lastName ASC, firstName ASC, id ASC</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_cursor_based_pagination_example_with_sorts">4.9.2.4. Cursor-based Pagination Example with Sorts</h5>
+<h5 id="_cursor_based_pagination_example_with_sorts">4.8.2.4. Cursor-based Pagination Example with Sorts</h5>
 <div class="paragraph">
 <p>Here is an example where an application uses <code>@Query</code> to provide a partial query to which the Jakarta Data provider can generate and append additional query conditions and an <code>ORDER BY</code> clause.</p>
 </div>
@@ -3332,8 +2905,10 @@ ORDER BY lastName ASC, firstName ASC, id ASC</code></pre>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">CustomerRepository</span> <span class="directive">extends</span> BasicRepository&lt;Customer, <span class="predefined-type">Long</span>&gt; {
-  <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">WHERE totalSpent / totalPurchases &gt; ?1</span><span class="delimiter">&quot;</span></span>)
-  CursoredPage&lt;Customer&gt; withAveragePurchaseAbove(<span class="type">float</span> minimum, PageRequest&lt;Customer&gt; pageRequest);
+    <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">WHERE totalSpent / totalPurchases &gt; ?1</span><span class="delimiter">&quot;</span></span>)
+    CursoredPage&lt;Customer&gt; withAveragePurchaseAbove(<span class="type">float</span> minimum,
+                                                    PageRequest pageRequest,
+                                                    Order&lt;Customer&gt; sorts);
 }</code></pre>
 </div>
 </div>
@@ -3342,21 +2917,24 @@ ORDER BY lastName ASC, firstName ASC, id ASC</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">PageRequest&lt;Customer&gt; pageRequest = Order.by(_Customer.yearBorn.desc(),
-                                             _Customer.name.asc(),
-                                             _Customer.id.asc())
-                                         .pageSize(<span class="integer">25</span>);
+<pre class="CodeRay highlight"><code data-lang="java">Order&lt;Customer&gt; order =
+        Order.by(_Customer.yearBorn.desc(),
+                 _Customer.name.asc(),
+                 _Customer.id.asc());
+PageRequest pageRequest = PageRequest.ofSize(<span class="integer">25</span>);
 <span class="keyword">do</span> {
-  page = customers.withAveragePurchaseAbove(<span class="float">50.0f</span>, pageRequest);
-  ...
-  if (page.hasNext())
-    pageRequest = page.nextPageRequest();
-} <span class="keyword">while</span> (page.hasNext());</code></pre>
+    page = customers.withAveragePurchaseAbove(<span class="float">50.0f</span>, pageRequest, order);
+    ...
+    if (page.hasNext()) {
+        pageRequest = page.nextPageRequest();
+    }
+}
+<span class="keyword">while</span> (page.hasNext());</code></pre>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_example_with_beforeafter_cursor">4.9.2.5. Example with Before/After Cursor</h5>
+<h5 id="_example_with_beforeafter_cursor">4.8.2.5. Example with Before/After Cursor</h5>
 <div class="paragraph">
 <p>In this example, the application uses a cursor to request pages in forward and previous direction from a specific value, which is the price for a matching product.</p>
 </div>
@@ -3364,7 +2942,10 @@ ORDER BY lastName ASC, firstName ASC, id ASC</code></pre>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">Products</span> <span class="directive">extends</span> CrudRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
-  CursoredPage&lt;Product&gt; findByNameLike(<span class="predefined-type">String</span> namePattern, PageRequest&lt;Product&gt; pageRequest);
+    <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">where name like ?1</span><span class="delimiter">&quot;</span></span>)
+    CursoredPage&lt;Product&gt; findByNameLike(<span class="predefined-type">String</span> namePattern,
+                                         PageRequest pageRequest,
+                                         Order&lt;Product&gt; sorts);
 }</code></pre>
 </div>
 </div>
@@ -3374,10 +2955,15 @@ ORDER BY lastName ASC, firstName ASC, id ASC</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="type">float</span> priceMidpoint = <span class="float">50.0f</span>;
-PageRequest&lt;Product&gt; pageRequest = Order.by(_Product.price.asc(), _Product.id.asc())
-                                        .pageSize(<span class="integer">10</span>)
-                                        .afterKey(priceMidpoint, <span class="integer">0L</span>);
-CursoredPage&lt;Product&gt; moreExpensive = products.findByNameLike(pattern, pageRequest);</code></pre>
+Order&lt;Product&gt; order =
+        Order.by(_Product.price.asc(),
+                 _Product.id.asc());
+PageRequest pageRequest =
+        PageRequest.ofPage(<span class="integer">5</span>)
+                   .size(<span class="integer">10</span>)
+                   .afterCursor(<span class="predefined-type">Cursor</span>.forKey(priceMidpoint, <span class="integer">0L</span>));
+CursoredPage&lt;Product&gt; moreExpensive =
+        products.findByNameLike(pattern, pageRequest, order);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3385,16 +2971,17 @@ CursoredPage&lt;Product&gt; moreExpensive = products.findByNameLike(pattern, pag
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">if</span> (moreExpensive.hasContent())
-    pageRequest = pageRequest.beforeCursor(moreExpensive.getCursor(<span class="integer">0</span>));
-<span class="keyword">else</span>
-    pageRequest = pageRequest.beforeKey(priceMidpoint, <span class="integer">1L</span>);
-CursoredPage&lt;Product&gt; lessExpensive = products.findByNameLike(pattern, pageRequest);</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java">pageRequest =
+        moreExpensive.hasContent() &amp;&amp; moreExpensive.hasPrevious()
+                ? moreExpensive.previousPageRequest()
+                : pageRequest.beforeCursor(<span class="predefined-type">Cursor</span>.forKey(priceMidpoint, <span class="integer">1L</span>));
+CursoredPage&lt;Product&gt; lessExpensive =
+        products.findByNameLike(pattern, pageRequest, order);</code></pre>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_example_with_combined_sort_criteria">4.9.2.6. Example with Combined Sort Criteria</h5>
+<h5 id="_example_with_combined_sort_criteria">4.8.2.6. Example with Combined Sort Criteria</h5>
 <div class="paragraph">
 <p>In this example, the application uses <code>OrderBy</code> to define a subset of the sort criteria during development time, but also uses <code>Sort</code> to dynamically determine more fine-grained sorting when all of the static sort criteria matches. In this case the repository query is written to always order <code>Car</code> entities with a vehicle condition of <code>VehicleCondition.NEW</code> ahead of those with <code>VehicleCondition.USED</code>.</p>
 </div>
@@ -3402,21 +2989,25 @@ CursoredPage&lt;Product&gt; lessExpensive = products.findByNameLike(pattern, pag
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">Products</span> <span class="directive">extends</span> CrudRepository&lt;Product, <span class="predefined-type">Long</span>&gt; {
-  <span class="annotation">@OrderBy</span>(_Car.vehicleCondition)
-  CursoredPage&lt;Car&gt; find(<span class="annotation">@By</span>(_Car.make) <span class="predefined-type">String</span> manufacturer,
-                            <span class="annotation">@By</span>(_Car.model) <span class="predefined-type">String</span> model,
-                            PageRequest&lt;Car&gt; pageRequest);
+    <span class="annotation">@Find</span>
+    <span class="annotation">@OrderBy</span>(_Car.VEHICLE_CONDITION)
+    CursoredPage&lt;Car&gt; find(<span class="annotation">@By</span>(_Car.MAKE) <span class="predefined-type">String</span> manufacturer,
+                           <span class="annotation">@By</span>(_Car.MODEL) <span class="predefined-type">String</span> model,
+                           PageRequest pageRequest,
+                           Order&lt;Car&gt; sorts);
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The above criteria does not uniquely identify <code>Car</code> entities. After sorting on the vehicle condition, finer grained sorting is provided dynamically by the <code>PageRequest</code>, in this case the vehicle price followed by the unique Vehicle Identification Number (VIN). It is a good practice for the final sort criterion to be a unique identifier of the entity to ensure a deterministic ordering.</p>
+<p>The above criteria does not uniquely identify <code>Car</code> entities. After sorting on the vehicle condition, finer grained sorting is provided dynamically by the <code>Order</code>, in this case the vehicle price followed by the unique Vehicle Identification Number (VIN). It is a good practice for the final sort criterion to be a unique identifier of the entity to ensure a deterministic ordering.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">PageRequest&lt;Car&gt; page1Request = Order.by(_Car.price.desc(), _Car.vin.asc())
-                                     .pageSize(<span class="integer">25</span>);
-CursoredPage&lt;Car&gt; page1 = cars.find(make, model, page1Request);</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java">Order&lt;Car&gt; order = Order.by(_Car.price.desc(),
+                            _Car.vin.asc())
+PageRequest page1Request = PageRequest.ofSize(<span class="integer">25</span>);
+CursoredPage&lt;Car&gt; page1 =
+        cars.find(make, model, page1Request, order);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3424,18 +3015,19 @@ CursoredPage&lt;Car&gt; page1 = cars.find(make, model, page1Request);</code></pr
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">PageRequest&lt;Car&gt; page2Request = Order.by(_Car.price.desc(), _Car.vin.asc())
-                                     .page(<span class="integer">2</span>) <span class="comment">// cosmetic when using a cursor</span>
-                                     .size(<span class="integer">25</span>)
-                                     .afterKey(lastCar.vehicleCondition,
-                                               lastCar.price,
-                                               lastCar.vin);
-CursoredPage&lt;Car&gt; page2 = cars.find(make, model, page2Request);</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java">PageRequest page2Request = PageRequest
+             .ofPage(<span class="integer">2</span>) <span class="comment">// cosmetic when using a cursor</span>
+             .size(<span class="integer">25</span>)
+             .afterCursor(<span class="predefined-type">Cursor</span>.forKey(lastCar.vehicleCondition,
+                                        lastCar.price,
+                                        lastCar.vin));
+CursoredPage&lt;Car&gt; page2 =
+        cars.find(make, model, page2Request, order);</code></pre>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_scenario_person_entity_and_people_repository_2">4.9.2.7. Scenario: Person Entity and People Repository</h5>
+<h5 id="_scenario_person_entity_and_people_repository_2">4.8.2.7. Scenario: Person Entity and People Repository</h5>
 <div class="paragraph">
 <p>This cursor-based pagination scenario uses the same <code>Person</code> entity and example dataset from the offset-based pagination scenario, but orders it by <code>name</code> and then by <code>id</code>,</p>
 </div>
@@ -3460,7 +3052,8 @@ CursoredPage&lt;Car&gt; page2 = cars.find(make, model, page2Request);</code></pr
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Repository</span>
 <span class="directive">public</span> <span class="type">interface</span> <span class="class">People</span> <span class="directive">extends</span> BasicRepository&lt;Person, <span class="predefined-type">Long</span>&gt; {
     <span class="annotation">@Find</span>
-    CursoredPage&lt;Person&gt; findAll(PageRequest&lt;Person&gt; pagination);
+    CursoredPage&lt;Person&gt; findAll(PageRequest pagination,
+                                 Order&lt;Person&gt; sorts);
 }</code></pre>
 </div>
 </div>
@@ -3472,11 +3065,11 @@ CursoredPage&lt;Car&gt; page2 = cars.find(make, model, page2Request);</code></pr
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Inject</span>
 People people;
 
-PageRequest&lt;Person&gt; firstPageRequest = PageRequest.of(Person.class)
-                                                  .size(<span class="integer">4</span>)
-                                                  .sortBy(Sort.asc(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>),
-                                                          Sort.asc(<span class="string"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>));
-CursoredPage&lt;Person&gt; page = people.findAll(firstPageRequest);</code></pre>
+Order&lt;Person&gt; order = Order.by(Sort.asc(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>),
+                               Sort.asc(<span class="string"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>);
+PageRequest firstPageRequest = PageRequest.ofSize(<span class="integer">4</span>);
+CursoredPage&lt;Person&gt; page =
+        people.findAll(firstPageRequest, order);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3507,8 +3100,8 @@ people.deleteById(10);</pre>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">if</span> (page.hasNext()) {
-   PageRequest&lt;Person&gt; nextPageRequest = page.nextPageRequest();
-   CursoredPage&lt;Person&gt; page2 = people.findAll(nextPageRequest);
+   PageRequest nextPageRequest = page.nextPageRequest();
+   CursoredPage&lt;Person&gt; page2 = people.findAll(nextPageRequest, order);
 }</code></pre>
 </div>
 </div>
@@ -3532,7 +3125,7 @@ people.deleteById(10);</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_precedence_of_repository_methods">4.10. Precedence of Repository Methods</h3>
+<h3 id="_precedence_of_repository_methods">4.9. Precedence of Repository Methods</h3>
 <div class="paragraph">
 <p>The following order, with the lower number having higher precedence, is used when interpreting the meaning of repository methods.</p>
 </div>
@@ -3551,7 +3144,7 @@ people.deleteById(10);</pre>
 <p>If the method is annotated with an <a href="#_parameter_based_automatic_query_methods">automatic query annotation</a>, such as <code>@Find</code>, or with a <a href="#_lifecycle_methods">lifecycle annotation</a> declaring the type of operation, for example, with <code>@Insert</code>, <code>@Update</code>, <code>@Save</code>, or <code>@Delete</code>, and the provider recognizes the annotation, then the annotation determines how the method is implemented, possibly with the help of other annotations present on the method parameters, for example, any <code>@By</code> annotations of the parameters.</p>
 </li>
 <li>
-<p>If the method is named according to the conventions of <em>Query by Method Name</em>, then the implementation follows the <a href="#_query_by_method_name"><em>Query by Method Name</em></a> pattern.</p>
+<p>If the method is named according to the conventions of <em>Query by Method Name</em>, then the method is implemented according to the Query by Method Name extension to this specification.</p>
 </li>
 </ol>
 </div>
@@ -3822,7 +3415,7 @@ JDQL does not require support for literals written octal or hexadecimal.
 <div class="sect3">
 <h4 id="_enum_literals">5.3.4. Enum literals</h4>
 <div class="paragraph">
-<p>An <em>enum literal expression</em> is a Java identifier, with syntax specified by <code>enum_literal</code>, and may only occur as the right operand of a <code>set</code> assignment or <code>=</code>/<code>&lt;&gt;</code> equality comparison. It is assigned the type of the left operand of the assignment or comparison. The type must be a Java <code>enum</code> type, and the identifier must be the name of an enumerated value of the <code>enum</code> type. For example, <code>day &lt;&gt; MONDAY</code> is a legal comparison expression.</p>
+<p>An <em>enum literal expression</em> is a Java identifier, with syntax specified by <code>enum_literal</code>, and may only occur as the right operand of a <code>set</code> assignment or <code>=</code>/<code>&lt;&gt;</code> equality comparison. It is assigned the type of the left operand of the assignment or comparison. The type must be a Java <code>enum</code> type, and the identifier must be the name of an enumerated value of the <code>enum</code> type including the fully qualified Java enum class name. For example, <code>day &lt;&gt; java.time.DayOfWeek.MONDAY</code> is a legal comparison expression.</p>
 </div>
 <div class="paragraph">
 <p>When executed, an enum expression evaluates to the named member of the Java <code>enum</code> type.</p>
@@ -4336,7 +3929,7 @@ The syntax of the <code>update</code> statement is irregular, with the <code>fro
 <p>The <code>select</code> clause, with syntax given by <code>select_clause</code>, specifies a path expression which determines the values returned by the query. The path expression is evaluated for each record which satisfies the restriction imposed by the <code>where</code> clause, as specified in <a href="#_path_expressions">Path expressions</a>, and the value of the last element of the path expression is added to the query results.</p>
 </div>
 <div class="paragraph">
-<p>Alternatively, the <code>select</code> clause may contain a single <code>count(this)</code> aggregate expression, which evaluates to the number of records which satisfy the restriction.</p>
+<p>Alternatively, the <code>select</code> clause may contain a single <code>count(this)</code> aggregate expression, which evaluates to the number of records which satisfy the restriction. A query beginning with <code>select count(this)</code> always returns a single result of type <code>Long</code>, no matter how many records satisfy the conditional expression in the <code>where</code> clause.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4367,6 +3960,18 @@ If a datastore does not natively provide the ability to count query results, the
 <h4 id="_order_clause">5.5.5. Order clause</h4>
 <div class="paragraph">
 <p>The <code>order</code> clause (or <code>order by</code> clause), with syntax given by <code>orderby_clause</code>, specifies a lexicographic order for the query results, that is, a list of entity fields used to sort the records which satisfy the restriction imposed by the <code>where</code> clause. The keywords <code>asc</code> and <code>desc</code> specify that a given field should be sorted in ascending or descending order respectively; when neither is specified, ascending order is the default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+An implementation of JDQL is not required to support sorting by entity fields which are not returned by the query. If a query returns the queried entity, then any sortable field of the queried entity may occur in the <code>order</code> clause. Otherwise, if the query has an explicit <code>select</code> clause, a provider might require that a field which occurs in the <code>order</code> also occurs in the <code>select</code>.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Entity fields occurring earlier in the <code>order by</code> clause take precedence. That is, a field occurring later in the <code>order by</code> clause is only used to resolve "ties" between records which cannot be unambiguously ordered using only earlier fields.</p>
@@ -4528,7 +4133,7 @@ state_field_path_expression : IDENTIFIER ('.' IDENTIFIER)*;
 
 entity_name : IDENTIFIER; // no ambiguity
 
-enum_literal : IDENTIFIER; // ambiguity with state_field_path_expression resolvable semantically
+enum_literal : IDENTIFIER ('.' IDENTIFIER)*; // ambiguity with state_field_path_expression resolvable semantically
 
 input_parameter : ':' IDENTIFIER | '?' INTEGER;
 
@@ -4608,7 +4213,8 @@ A provider may even have no entity-defining annotation and feature a programming
 </div>
 <div class="paragraph">
 <p>A Jakarta Data provider might define a custom entity-defining annotation.
-The name of such a custom entity-defining annotation type must end with <code>Entity</code>. This convention allows any Jakarta Data provider to identify when a repository is associated with entity classes declared using an unrecognized entity-defining annotation.</p>
+Custom entity-defining annotations must be marked with <code>@EntityDefining</code>.
+This allows other Jakarta Data providers and tools to recognize and process entities declared with custom entity-defining annotations.</p>
 </div>
 <div class="paragraph">
 <p>The lifecycle methods and query methods of a repository operate on a set of entities associated with that repository.
@@ -4652,12 +4258,12 @@ But when multiple Jakarta Data providers support the same entity-defining annota
 <h2 id="_interoperability_with_other_jakarta_ee_specifications">7. Interoperability with other Jakarta EE Specifications</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section discusses interoperability with related Jakarta EE specifications. When operating within a Jakarta EE product, the availability of other Jakarta EE technologies depends on whether the Jakarta EE Core profile, Jakarta EE Web profile, or Jakarta EE Platform is used.</p>
+<p>This section discusses interoperability with related Jakarta EE <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> specifications. When operating within a Jakarta EE product, the availability of other Jakarta EE technologies depends on whether the Jakarta EE Core profile, Jakarta EE Web profile, or Jakarta EE Platform is used.</p>
 </div>
 <div class="sect2">
 <h3 id="_jakarta_contexts_and_dependency_injection">7.1. Jakarta Contexts and Dependency Injection</h3>
 <div class="paragraph">
-<p>Contexts and Dependency Injection (CDI) is a specification in the Jakarta EE Core profile that provides a powerful and flexible dependency injection framework for Java applications. CDI provides a programming model based around decoupled components with container-managed lifecycles and container-injected dependencies, enabling loose coupling and promoting modular and reusable code.</p>
+<p>Contexts and Dependency Injection <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> (CDI) is a specification in the Jakarta EE Core profile that provides a powerful and flexible dependency injection framework for Java applications. CDI provides a programming model based around decoupled components with container-managed lifecycles and container-injected dependencies, enabling loose coupling and promoting modular and reusable code.</p>
 </div>
 <div class="paragraph">
 <p>In the Jakarta EE environment, CDI allows implementations of Jakarta Data repositories to be made available for injection via the <code>@Inject</code> annotation.</p>
@@ -4787,29 +4393,13 @@ Jakarta Data providers that wish to provide both extensions can use CDI&#8217;s 
 <h3 id="_jakarta_interceptors">7.2. Jakarta Interceptors</h3>
 <div class="paragraph">
 <p>A repository interface or method of a repository interface may be annotated with an interceptor binding annotation.
-In the Jakarta EE environment, or in any other environment where:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Jakarta Interceptors is available and integrated with Jakarta CDI,</p>
-</li>
-<li>
-<p>the repository implementation is instantiated by the CDI bean container,</p>
-</li>
-<li>
-<p>the interceptor binding type is declared <code>@Inherited</code>,</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>then the interceptor binding annotation is inherited by the repository implementation, and the interceptors bound to the annotation are applied automatically by the implementation of Jakarta Interceptors.</p>
+In the Jakarta EE environment&#8212;&#8203;or in any other environment where Jakarta Interceptors <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> is available and integrated with Jakarta CDI&#8212;&#8203;if the repository implementation is instantiated by the CDI bean container then the interceptor binding annotation is inherited by the repository implementation. That is, the interceptor binding annotation must be treated as if it were placed directly on the repository implementation bean. The interceptors bound to the annotation are applied automatically by the implementation of Jakarta Interceptors.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_jakarta_transactions">7.3. Jakarta Transactions</h3>
 <div class="paragraph">
-<p>Work performed by a repository might occur within the scope of a transaction managed by Jakarta Transactions. This is usually transparent to the code acting as client of the repository. When:</p>
+<p>Work performed by a repository might occur within the scope of a transaction managed by Jakarta Transactions.<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup> This is usually transparent to the code acting as client of the repository. When:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -4884,7 +4474,7 @@ When a repository operation marked <code>@Transactional</code> is called in an e
 <div class="sect2">
 <h3 id="_jakarta_bean_validation">7.6. Jakarta Bean Validation</h3>
 <div class="paragraph">
-<p>Integrating with Jakarta Validation ensures data consistency within the Java layer. By applying validation rules to the data, developers can enforce constraints and business rules, preventing invalid or inconsistent information from being processed or persisted.</p>
+<p>Integrating with Jakarta Bean Validation <sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> ensures data consistency within the Java layer. By applying validation rules to the data, developers can enforce constraints and business rules, preventing invalid or inconsistent information from being processed or persisted.</p>
 </div>
 <div class="paragraph">
 <p>Using Jakarta Validation brings several advantages. It helps maintain data integrity, improves data quality, and enhances the reliability of the application. Catching validation errors early in the Java layer can identify and resolve potential issues before further processing or persistence occurs. Additionally, Jakarta Validation allows for declarative validation rules, simplifying the validation logic and promoting cleaner and more maintainable code.</p>
@@ -4993,7 +4583,7 @@ For any NoSQL database type not covered here, such as time series databases, the
 <div class="sect3">
 <h4 id="_wide_column_databases">8.2.2. Wide-Column Databases</h4>
 <div class="paragraph">
-<p>Wide-column databases offer more query flexibility, even allowing the use of secondary indexes, albeit potentially impacting performance. When interacting with wide-column databases, Jakarta Data requires the implementation of the <code>BasicRepository</code> along with all of its methods, including Query by Method Name. However, developers should be mindful that certain query keywords, such as "And" or "Or," may not be universally supported in these databases. The full set of required keywords is documented in the section of the Jakarta Data module Javadoc that is titled "Reserved Keywords for Query by Method Name".</p>
+<p>Wide-column databases offer more query flexibility, even allowing the use of secondary indexes, albeit potentially impacting performance. When interacting with wide-column databases, Jakarta Data requires the implementation of the <code>BasicRepository</code> along with all of its methods. However, developers should be mindful that certain query keywords, such as "And" or "Or," may not be universally supported in these databases. The full set of required keywords is documented in the section of the Jakarta Data module Javadoc that is titled "Reserved Keywords for Query by Method Name".</p>
 </div>
 </div>
 <div class="sect3">
@@ -5026,11 +4616,32 @@ For any NoSQL database type not covered here, such as time series databases, the
 <div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. We will not consider generic programs which work with entity data via detyped representations.
 </div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. Jakarta Persistence 3.2, <a href="https://jakarta.ee/specifications/persistence/3.2/" class="bare">https://jakarta.ee/specifications/persistence/3.2/</a>
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. Jakarta NoSQL 1.0, <a href="https://jakarta.ee/specifications/nosql/1.0/" class="bare">https://jakarta.ee/specifications/nosql/1.0/</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. Jakarta EE Platform 11, <a href="https://jakarta.ee/specifications/platform/11/" class="bare">https://jakarta.ee/specifications/platform/11/</a>
+</div>
+<div class="footnote" id="_footnotedef_5">
+<a href="#_footnoteref_5">5</a>. Jakarta Contexts and Dependency Injection 4.1, <a href="https://jakarta.ee/specifications/cdi/4.1/" class="bare">https://jakarta.ee/specifications/cdi/4.1/</a>
+</div>
+<div class="footnote" id="_footnotedef_6">
+<a href="#_footnoteref_6">6</a>. Jakarta Interceptors 2.2, <a href="https://jakarta.ee/specifications/interceptors/2.2/" class="bare">https://jakarta.ee/specifications/interceptors/2.2/</a>
+</div>
+<div class="footnote" id="_footnotedef_7">
+<a href="#_footnoteref_7">7</a>. Jakarta Transactions 2.0, <a href="https://jakarta.ee/specifications/transactions/2.0/" class="bare">https://jakarta.ee/specifications/transactions/2.0/</a>
+</div>
+<div class="footnote" id="_footnotedef_8">
+<a href="#_footnoteref_8">8</a>. Jakarta Bean Validation 3.1, <a href="https://jakarta.ee/specifications/bean-validation/3.1/" class="bare">https://jakarta.ee/specifications/bean-validation/3.1/</a>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
- 1.0.0-M4<br>
-Last updated 2024-03-17 07:31:18 UTC
+ 1.0.0-RC1<br>
+Last updated 2024-04-04 16:35:04 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">
