@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Concurrency 3.1"
-date: 2023-04-29
+date: 2024-05-01
 summary: "Release for Jakarta EE 11"
 ---
 
@@ -9,7 +9,7 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 ### New features, enhancements or additions
 * [Integration with Java 21 Virtual Threads](https://github.com/jakartaee/concurrency/issues/268)
 * [Java Flow/ReactiveStreams and context propagation](https://github.com/jakartaee/concurrency/issues/257)
-* [Replace more features from EJB](https://github.com/jakartaee/concurrency/issues/252), such as [Schedule](https://github.com/jakartaee/concurrency/issues/98) and [Lock](https://github.com/jakartaee/concurrency/issues/135) annotations
+* [Replace more features from EJB](https://github.com/jakartaee/concurrency/issues/252), such as [Schedule](https://github.com/jakartaee/concurrency/issues/98) and  annotations
 * [Become more CDI-centric](https://github.com/jakartaee/concurrency/issues/229)
 * Specification bug fixes and clarifications
 * TCK fixes and [enhancements](https://github.com/jakartaee/concurrency/issues/269)
@@ -29,18 +29,16 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 * [Jakarta Concurrency 3.1 Specification Document](./jakarta-concurrency-spec-3.1.pdf) (PDF)
 * [Jakarta Concurrency 3.1 Specification Document](./jakarta-concurrency-spec-3.1.html) (HTML)
 * [Jakarta Concurrency 3.1 Javadoc](./apidocs)
-<!-- TODO once TCK is published
 * [Jakarta Concurrency 3.1 TCK](https://download.eclipse.org/jakartaee/concurrency/3.1/concurrency-tck-3.1.0.zip), ([sig](https://download.eclipse.org/jakartaee/concurrency/3.1/concurrency-tck-3.1.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/concurrency/3.1/concurrency-tck-3.1.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * Signature tests are included with the TCK and run automatically as part of it
 * Maven coordinates
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.1.0](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.1.0/jar)
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
-  * TBD
--->
+  * [Open Liberty 24.0.0.6-beta](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2024-04-23_2000/openliberty-24.0.0.6-beta-cl240520240423-2000.zip)
 
 # Compatible Implementations
 
-* Open Liberty or Concurrō (TBD)
+* [Open Liberty 24.0.0.6-beta](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2024-04-23_2000/openliberty-24.0.0.6-beta-cl240520240423-2000.zip)
 
 # Ballots
 
