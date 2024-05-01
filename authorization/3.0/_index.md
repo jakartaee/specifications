@@ -27,7 +27,6 @@ The primary goal of this release is to make Jakarta Authorization future proof b
 
 * [Jakarta Authorization 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.authorization/releases/3.0)
 
-The following can be uncommented and version information updated as they become available.
 
 * [Jakarta Authorization 3.0 Specification Document](./jakarta-authorization-spec-3.0.pdf) (PDF)
 * [Jakarta Authorization 3.0 Specification Document](./jakarta-authorization-spec-3.0.html) (HTML)
