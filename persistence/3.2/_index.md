@@ -103,6 +103,7 @@ in this class for removal with no replacement. This class is not designed for ex
 # Compatible Implementations
 
 * [EclipseLink 5.0.0-B02](https://jakarta.oss.sonatype.org/content/repositories/staging/org/eclipse/persistence/eclipselink/5.0.0-B02/eclipselink-5.0.0-B02.zip)
+* [Hibernate 7.0.0.Alpha2](https://hibernate.org/orm/releases/7.0/)
 
 # Ballots
 
