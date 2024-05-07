@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Faces 4.1 (under development)"
-date: 2023-05-30
+title: "Jakarta Faces 4.1"
+date: 2024-05-07
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Server Faces defines an MVC framework for building user interfaces for web applications,
@@ -33,9 +33,6 @@ The removes references to the SecurityManager, further aligns with CDI where pos
 
 * [Jakarta Faces 4.1 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/4.1)
 
-<!--
-The following can be uncommented and version information updated as they become available.
-
 * [Jakarta Faces 4.1 Specification Document](./jakarta-faces-4.1.pdf) (PDF)
 * [Jakarta Faces 4.1 Specification Document](./jakarta-faces-4.1.html) (HTML)
 * [Jakarta Faces 4.1 Javadoc](./apidocs)
@@ -43,11 +40,10 @@ The following can be uncommented and version information updated as they become 
 * [Jakarta Faces 4.1 Renderkitdoc](./renderkitdoc)
 * [Jakarta Faces 4.1 VDLDoc](./vdldoc)
 * [Jakarta Faces 4.1 TCK](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.0.zip)([sig](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
--->
 
 # Compatible Implementations
 
-* Mojarra (TBC)
+* Mojarra 4.1.0
 
 # Ballots
 
