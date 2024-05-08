@@ -37,7 +37,15 @@ This release removes references to the SecurityManager and provides some minor u
 # Compatible Implementations
 
 * Apache Tomcat 11.0.0-M20 ([Maven](https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/11.0.0-M20/tomcat-11.0.0-M20.tar.gz), [ASF Archive](https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.0-M20/)
-* [Eclipse Tyrus 2.2.0-M1](https://eclipse-ee4j.github.io/tyrus/tck/eclipse-tyrus-2.2.0-M1-jdk21)
+* Eclipse Tyrus 2.2.0-M1
+    * [tyrus-client](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/tyrus/tyrus-client/2.2.0-M1/tyrus-client-2.2.0-M1.jar)
+    * [tyrus-container-glassfish-cdi](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/tyrus/tyrus-container-glassfish-cdi/2.2.0-M1/tyrus-container-glassfish-cdi-2.2.0-M1.jar)
+    * [tyrus-container-glassfish-ejb](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/tyrus/tyrus-container-glassfish-ejb/2.1.0-M3/tyrus-container-glassfish-ejb-2.2.0-M1.jar)
+    * [tyrus-container-grizzly-client](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/tyrus/tyrus-container-grizzly-client/2.2.0-M1/tyrus-container-grizzly-client-2.2.0-M1.jar)
+    * [tyrus-container-servlet](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/tyrus/tyrus-container-servlet/2.2.0-M1/tyrus-container-servlet-2.2.0-M1.jar)
+    * [tyrus-core](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/tyrus/tyrus-core/2.2.0-M1/tyrus-core-2.2.0-M1.jar)
+    * [tyrus-server](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/tyrus/tyrus-server/2.2.0-M1/tyrus-server-2.2.0-M1.jar)
+    * [tyrus-spi](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/tyrus/tyrus-spi/2.2.0-M1/tyrus-spi-2.2.0-M1.jar)
 
 # Ballots
 
