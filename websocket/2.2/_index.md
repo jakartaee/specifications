@@ -16,7 +16,7 @@ This release removes references to the SecurityManager and provides some minor u
 * Clarify the behaviour if `@OnMessage.maxMessageSize` it is set to a value larger than `Integer.MAX_VALUE`.
 
 ### Removals, deprecations or backwards incompatible changes
-* None
+* All references to the SecurityManager have been removed.
 
 ### Minimum Java SE Version
 **Java SE 8 or higher**
