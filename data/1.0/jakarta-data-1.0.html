@@ -529,7 +529,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <h1>Jakarta Data</h1>
 <div class="details">
 <span id="revnumber"> 1.0,</span>
-<span id="revdate">May 03, 2024</span>
+<span id="revdate">May 08, 2024</span>
 <br><span id="revremark">FINAL</span>
 </div>
 <div id="toc" class="toc2">
@@ -722,7 +722,7 @@ Version: 1.0
 
 Status: FINAL
 
-Release: May 03, 2024</pre>
+Release: May 08, 2024</pre>
 </div>
 </div>
 </div>
@@ -3267,6 +3267,9 @@ Use of a reserved identifier as a regular identifier in JDQL might be accepted b
 <div class="paragraph">
 <p>An <em>ordinal parameter</em> is a decimal integer prefixed with the <code>?</code> character, for example, <code>?1</code>.</p>
 </div>
+<div class="paragraph">
+<p>Ordinal parameters are numbered sequentially, starting with <code>?1</code>.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_operators_and_punctuation">5.2.3. Operators and punctuation</h4>
@@ -3410,6 +3413,18 @@ JDQL does not require support for literals written in octal or hexadecimal.
 </div>
 <div class="paragraph">
 <p>When executed, a parameter expression evaluates to the argument supplied to the parameter of the repository method.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Positional and named parameters must not be mixed in a single query.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -4641,7 +4656,7 @@ For any NoSQL database type not covered here, such as time series databases, the
 <div id="footer">
 <div id="footer-text">
  1.0<br>
-Last updated 2024-05-03 14:28:11 UTC
+Last updated 2024-05-08 20:33:20 UTC
 </div>
 </div>
 <script type="text/x-mathjax-config">
