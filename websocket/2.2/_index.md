@@ -26,7 +26,7 @@ This release removes references to the SecurityManager and provides some minor u
 * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
 * [Jakarta WebSocket 2.2 Specification Document](./jakarta-websocket-spec-2.2.pdf) (PDF)
 * [Jakarta WebSocket 2.2 Specification Document](./jakarta-websocket-spec-2.2.html) (HTML)
-* Jakarta WebSocket 2.1 Javadoc
+* Jakarta WebSocket 2.2 Javadoc
     * [Client](./apidocs/client)
     * [Server](./apidocs/server)
 * [Jakarta WebSocket 2.2 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-websocket-tck-2.2.0.zip) ([sig](tbd), [sha](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-websocket-tck-2.2.0.zip#btn-ajax-checksum-sha512), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
