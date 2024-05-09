@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Pages 4.0"
-date: 2024-04-09
+date: 2024-05-09
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Pages defines a template engine for web applications that supports mixing of textual content
@@ -27,13 +27,13 @@ This release removes deprecated code and provides any additional updates necessa
 * [Jakarta Pages 4.0 Specification Document](./jakarta-server-pages-spec-4.0.pdf) (PDF)
 * [Jakarta Pages 4.0 Specification Document](./jakarta-server-pages-spec-4.0.html) (HTML)
 * [Jakarta Pages 4.0 Javadoc](./apidocs)
-* [Jakarta Pages 4.0 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-pages-tck-4.0.0.zip), sig (not avaialble),[sha](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-pages-tck-4.0.0-tckinfo.txt),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+* [Jakarta Pages 4.0 TCK](https://download.eclipse.org/ee4j/pages/jakartaee11/staged/eftl/jakarta-pages-tck-4.0.0.zip), sig (not avaialble),[sha](https://download.eclipse.org/ee4j/pages/jakartaee11/staged/eftl/jakarta-pages-tck-4.0.0.zip.info),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.pages:jakarta.pages-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/4.0.0/jar)
 
 # Compatible Implementations
 
-* Apache Tomcat 11.0.0-M19-SNAPSHOT
+* Apache Tomcat 11.0.0-M20
 
 
 # Ballots
