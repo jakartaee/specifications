@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Authorization 3.0 (under development)"
-date: 2023-05-30
+title: "Jakarta Authorization 3.0"
+date: 2024-04-30
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Authorization defines a low-level SPI for authorization modules, which are repositories of permissions
@@ -13,6 +13,8 @@ The primary goal of this release is to make Jakarta Authorization future proof b
 
 ### New features, enhancements or additions
 * Register a policy provider programmatically per application [AUTHORIZATION #98](https://github.com/jakartaee/authorization/issues/98)
+* Standarize the context ID for Servlet containers
+* Several convenience methods to make the API easier to use
 
 ### Removals, deprecations or backwards incompatible changes
 * Design and implement replacement for Policy [AUTHORIZATION #99](https://github.com/jakartaee/authorization/issues/99)
@@ -25,20 +27,20 @@ The primary goal of this release is to make Jakarta Authorization future proof b
 
 * [Jakarta Authorization 3.0 Release Record](https://projects.eclipse.org/projects/ee4j.authorization/releases/3.0)
 
-<!--
-The following can be uncommented and version information updated as they become available.
 
-* [Jakarta Authorization 3.0 Specification Document](./authorization-spec-3.0.pdf) (PDF)
-* [Jakarta Authorization 3.0 Specification Document](./authorization-spec-3.0.html) (HTML)
+* [Jakarta Authorization 3.0 Specification Document](./jakarta-authorization-spec-3.0.pdf) (PDF)
+* [Jakarta Authorization 3.0 Specification Document](./jakarta-authorization-spec-3.0.html) (HTML)
 * [Jakarta Authorization 3.0 Javadoc](./apidocs)
-* [Jakarta Authorization 3.0 TCK](https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Authorization 3.0 TCK](https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.authorization:jakarta.authorization-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.authorization/jakarta.authorization-api/3.0.0/jar)
--->
 
 # Compatible Implementations
 
-* Exousia (TBC)
+
+* JDK 21: [Exousia 3.0.0-M3](https://github.com/eclipse-ee4j/exousia/releases/download/3.0.0-M3-RELEASE/exousia-3.0.0-M3.jar) / [Eclipse GlassFish 8.0.0-M5](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-M5/)
+* JDK 17: [Exousia 3.0.0-M3](https://github.com/eclipse-ee4j/exousia/releases/download/3.0.0-M3-RELEASE/exousia-3.0.0-M3.jar) / [Eclipse GlassFish 8.0.0-JDK-17-M5](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-JDK17-M5/)
+
 
 # Ballots
 
@@ -61,6 +63,7 @@ The Specification Committee Ballot completed on 11th July 2023.
 
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02924.html)
+
 
 ## Release Review
 
