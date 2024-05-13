@@ -28,10 +28,7 @@ The release removes references to the SecurityManager and provides various small
 * [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.pdf) (PDF)
 * [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.html) (HTML)
 * [Jakarta Servlet 6.0 Javadoc](./apidocs)
-* [Jakarta Servlet 6.1.0 TCK](https://jakarta.oss.sonatype.org/content/repositories/jakartaservlet-1027/jakarta/servlet/)
-  * [POM](https://jakarta.oss.sonatype.org/content/repositories/jakartaservlet-1027/jakarta/servlet/tck/6.1.0/)
-  * [util](https://jakarta.oss.sonatype.org/content/repositories/jakartaservlet-1027/jakarta/servlet/tck-util/6.1.0/)
-  * [runtime](https://jakarta.oss.sonatype.org/content/repositories/jakartaservlet-1027/jakarta/servlet/tck-runtime/6.1.0/)
+* [Jakarta Servlet 6.1.0 TCK](https://download.eclipse.org/ee4j/servlet/jakartaee11/staged/eftl/jakarta-servlet-tck-6.1.0.zip), sig (not avaialble),[sha](https://download.eclipse.org/ee4j/servlet/jakartaee11/staged/eftl/jakarta-servlet-tck-6.1.0.info),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * XML Schema
   * web-app_6_1.xsd
   * web-common_6_1.xsd
@@ -43,7 +40,7 @@ The release removes references to the SecurityManager and provides various small
 
 # Compatible Implementations
 
-* Tomcat 11.0.0-M19-SNAPSHOT
+* [Tomcat 11.0.0-M20](https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.0-M20/)
 
 # Ballots
 
