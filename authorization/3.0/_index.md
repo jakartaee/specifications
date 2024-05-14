@@ -81,7 +81,7 @@ The Specification Committee Ballot concluded successfully on 2022-05-13 with the
 | Werner Keil                        | Committer Members   | +1     |
 | Jun Qian                           | Enterprise Members  | +1     |
 | Zhai Luchao                        | Enterprise Members  | +1     |  
-|                                    | **Total**           | **9** |
+|                                    | **Total**           | **10** |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03326.html)
 
