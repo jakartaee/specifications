@@ -67,7 +67,7 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 
 ## Release Review
 
-The Specification Committee Ballot concluded successfully on 2022-05-13 with the following results.
+The Specification Committee Ballot concluded successfully on 2024-05-13 with the following results.
 
 | Representative                     | Representative for: | Vote   |
 |------------------------------------|---------------------|--------|
