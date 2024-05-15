@@ -107,5 +107,13 @@ Note: If any item does not apply, check it and mark N/A below it.
  - [ ] merges the specification (and apidocs) PRs, ensuring the "date:" field in the _index.md file has an appropriate value to allow publishing.
  - [ ] updates the specification page with the ballot results. This is normally done via a separate PR that should be reviewed, approved, and merged.
  - [ ] notifies the EMO of the ballot results by email to [emo@eclipse-foundation.org](emo@eclipse-foundation.org). Just forward the ballot summary note sent earlier to the public Spec Committee email list.
- - [ ] creates an issue in the specification project that includes a checklist for the specification project team:
+ - [ ] creates an issue in the specification project that includes the following checklist for the specification project team:
 (an example can be found [here](https://github.com/jakartaee/authorization/issues/166).)
+
+```
+-[ ] promote api staging release promotes the specification api jars to maven central. An example release job script can be found here https://wiki.eclipse.org/MavenReleaseScript
+-[ ] go through the merged jakarta.ee specification website page to verify all the links are valid
+- [ ] if XML Schemas are published on https://jakarta.ee/schemas, send a PR to update the status from `Draft` to `Final`
+- [ ] approve the compatibility request
+- [ ] merge any final release branch as appropriate for the branch management for the project
+```
