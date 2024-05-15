@@ -67,4 +67,21 @@ The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org
 
 ## Release Review
 
-TBD
+The Specification Committee Ballot concluded successfully on 2024-05-13 with the following results.
+
+| Representative                     | Representative for: | Vote   |
+|------------------------------------|---------------------|--------|
+| Kenji Kazumura                     | Fujitsu             | +1     |
+| Tom Watson, Emily Jiang            | IBM                 | +1     |
+| Ed Bratt, Dmitry Kornilov          | Oracle              | +1     |
+| Andrew Pielage                     | Payara              | +1     |
+| David Blevins, Jean-Louis Monteiro | Tomitribe           | +1     |
+| Ivar Grimstad                      | EE4J PMC            | +1     |
+| Marcelo Ancelmo, Martijn Verburg   | Participant Members | +1     |
+| Werner Keil                        | Committer Members   | +1     |
+| Jun Qian                           | Enterprise Members  | +1     |
+| Zhai Luchao                        | Enterprise Members  | +1     |  
+|                                    | **Total**           | **10** |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03326.html)
+
