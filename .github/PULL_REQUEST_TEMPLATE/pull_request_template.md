@@ -23,7 +23,8 @@ If desired, an optional second PR can be created to contain just the JavaDoc in 
 
 Note: If any item does not apply, check it and mark N/A below it.
 
-## Mentor Spec Review Checklist
+## Below are for Jakarta EE Specification Committee
+### Mentor Spec Review Checklist
 
 1. Spec PR
   - [ ] PR uses [template](https://github.com/jakartaee/specifications/blob/master/pull_request_template.md)
@@ -97,4 +98,14 @@ Note: If any item does not apply, check it and mark N/A below it.
 11. Update Jakarta EE API jar
   - [ ] Update the Jakarta EE API jar by submitting a PR to the jakartaee-api project that updates the version number of your API jar file.
 
+### Mentor Final Tasks after a Successful Release Review
 
+ - [ ] adds this final checklist to the main PR.
+ - [ ] adds the `approved` label to the PRs, and sends out the Ballot Summary per this [template](#ballot-summary-email-template) to the [public Jakarta EE Specification Committee email list](jakarta.ee-spec@eclipse.org)
+ - [ ] calculates the staged EFTL TCK signature and promotes it to the committee download area
+  using the https://ci.eclipse.org/jakartaee-spec-committee/job/promote-release/ job. Manually editing the jenkins Build Information will help identify the build (ie. Mail 2.0 or CDI 3.0).
+ - [ ] merges the specification (and apidocs) PRs, ensuring the "date:" field in the _index.md file has an appropriate value to allow publishing.
+ - [ ] updates the specification page with the ballot results. This is normally done via a separate PR that should be reviewed, approved, and merged.
+ - [ ] notifies the EMO of the ballot results by email to [emo@eclipse-foundation.org](emo@eclipse-foundation.org). Just forward the ballot summary note sent earlier to the public Spec Committee email list.
+ - [ ] creates an issue in the specification project that includes a checklist for the specification project team:
+(an example can be found [here](https://github.com/jakartaee/authorization/issues/166).)
