@@ -111,8 +111,8 @@ Note: If any item does not apply, check it and mark N/A below it.
 (an example can be found [here](https://github.com/jakartaee/authorization/issues/166).)
 
 ```
--[ ] promote api staging release promotes the specification api jars to maven central. An example release job script can be found here https://wiki.eclipse.org/MavenReleaseScript
--[ ] go through the merged jakarta.ee specification website page to verify all the links are valid
+- [ ] promote api staging release promotes the specification api jars to maven central. An example release job script can be found here https://wiki.eclipse.org/MavenReleaseScript
+- [ ] go through the merged jakarta.ee specification website page to verify all the links are valid
 - [ ] if XML Schemas are published on https://jakarta.ee/schemas, send a PR to update the status from `Draft` to `Final`
 - [ ] approve the compatibility request
 - [ ] merge any final release branch as appropriate for the branch management for the project
