@@ -43,7 +43,9 @@ The removes references to the SecurityManager, further aligns with CDI where pos
 
 # Compatible Implementations
 
-* Mojarra 4.1.0
+ * [Mojarra 4.1.0](https://github.com/eclipse-ee4j/mojarra/releases/tag/4.1.0-RELEASE)
+    * [Eclipse Glassfish 8.0.0-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-M6/glassfish-8.0.0-M6.zip) (JDK 21)
+    * [Eclipse Glassfish 8.0.0-JDK-17-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-JDK17-M6/) (JDK 17)
 
 # Ballots
 
