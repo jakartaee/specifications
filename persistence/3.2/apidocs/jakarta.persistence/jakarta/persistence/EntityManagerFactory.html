@@ -25,7 +25,7 @@ loadScripts(document, 'script');</script>
 <!-- ========= START OF TOP NAVBAR ======= -->
 <div class="top-nav" id="navbar-top"><button id="navbar-toggle-button" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation links"><span class="nav-bar-toggle-icon">&nbsp;</span><span class="nav-bar-toggle-icon">&nbsp;</span><span class="nav-bar-toggle-icon">&nbsp;</span></button>
 <div class="skip-nav"><a href="#skip-navbar-top" title="Skip navigation links">Skip navigation links</a></div>
-<div class="about-language"><br>Jakarta Persistence API v3.2.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v3.2.0</div>
 <ul id="navbar-top-firstrow" class="nav-list" title="Navigation">
 <li><a href="../../module-summary.html">Module</a></li>
 <li><a href="package-summary.html">Package</a></li>
@@ -711,6 +711,8 @@ Cleaner.create().register(entityManagerFactory, entityManagerFactory::close);
                    meaning all queries</dd>
 <dt>Returns:</dt>
 <dd>a map keyed by query name</dd>
+<dt>Since:</dt>
+<dd>3.2</dd>
 </dl>
 </section>
 </li>
@@ -729,6 +731,8 @@ Cleaner.create().register(entityManagerFactory, entityManagerFactory::close);
                    meaning all entity graphs</dd>
 <dt>Returns:</dt>
 <dd>a map keyed by graph name</dd>
+<dt>Since:</dt>
+<dd>3.2</dd>
 </dl>
 </section>
 </li>
@@ -758,6 +762,8 @@ Cleaner.create().register(entityManagerFactory, entityManagerFactory::close);
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>work</code> - a function to be executed in the scope of the transaction</dd>
+<dt>Since:</dt>
+<dd>3.2</dd>
 </dl>
 </section>
 </li>
@@ -790,6 +796,8 @@ Cleaner.create().register(entityManagerFactory, entityManagerFactory::close);
 <dd><code>work</code> - a function to be called in the scope of the transaction</dd>
 <dt>Returns:</dt>
 <dd>the value returned by the given function</dd>
+<dt>Since:</dt>
+<dd>3.2</dd>
 </dl>
 </section>
 </li>
