@@ -12,16 +12,15 @@ The removes references to the SecurityManager, further aligns with CDI where pos
 ### New features, enhancements or additions
 * Make FacesMessage#VALUES / VALUES_MAP generic
 * Require firing events for @Initialized, @BeforeDestroyed, @Destroyed for build-in scopes
-* Remove unused PreDestroyCustomScopeEvent and PostConstructCustomScopeEventAdd missing generics to API that were missed in Faces 4.0
+* Add missing generics to API that were missed in Faces 4.0
 * Setting/overriding components default value
 * <f:ajax> execute="@this" and render="@this" does not behave as expected when nested in composite component
-* Re-add #{request} in CDI mode
 * Enhance UIInput events with HTML5 like oninput
 * importConstants should be allowed everywhere, not only in f:metadata
 * Support @Inject of current flow like "@Inject Flow currentFlow"
-* Make SelectItem#value generic Component: Components/Renderers
 
 ### Removals, deprecations or backwards incompatible changes
+* Deprecate full state saving (FSS)
 * Remove unused PreDestroyCustomScopeEvent and PostConstructCustomScopeEvent
 * Remove unused composite:extension
 * Remove references to the SecurityManager
