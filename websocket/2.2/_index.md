@@ -1,6 +1,6 @@
 ---
 title: "Jakarta WebSocket 2.2"
-date: 2024-05-31
+date: 2024-05-22
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta WebSocket defines a API for Server and Client Endpoints for the WebSocket protocol (RFC6455).
@@ -29,7 +29,7 @@ This release removes references to the SecurityManager and provides some minor u
 * Jakarta WebSocket 2.2 Javadoc
     * [Client](./apidocs/client)
     * [Server](./apidocs/server)
-* [Jakarta WebSocket 2.2 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-websocket-tck-2.2.0.zip) ([sig](tbd), [sha](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-websocket-tck-2.2.0.zip#btn-ajax-checksum-sha512), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta WebSocket 2.2 TCK](https://download.eclipse.org/jakartaee/websocket/2.2/jakarta-websocket-tck-2.2.0.zip) ([sig](https://download.eclipse.org/jakartaee/websocket/2.2/jakarta-websocket-tck-2.2.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/websocket/2.2/jakarta-websocket-tck-2.2.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.websocket:jakarta.websocket-api:jar:2.2.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/2.2.0/jar)
     * [jakarta.websocket:jakarta.websocket-client-api:jar:2.2.0](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-client-api/2.2.0/jar)
@@ -48,6 +48,32 @@ This release removes references to the SecurityManager and provides some minor u
     * [tyrus-spi](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/tyrus/tyrus-spi/2.2.0-M1/tyrus-spi-2.2.0-M1.jar)
 
 # Ballots
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2024-05-22 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Dr. Jun Qian                                   | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **10** |
+
+Non-binding votes
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Angelo Rubini                                  | Community           |   +1    |
+|                                                | **Total**           |  **1**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03357.html)
 
 ## Plan Review
 
