@@ -41,8 +41,6 @@ This release removes deprecated code and provides any additional updates necessa
 
 ## Plan Review
 
-## Plan Review
-
 The Specification Committee Ballot concluded successfully on 2023-06-29 with the following results.
 
 | Representative                                 | Representative for: |  Vote   |
