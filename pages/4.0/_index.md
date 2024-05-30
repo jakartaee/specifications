@@ -17,6 +17,7 @@ This release removes deprecated code and provides any additional updates necessa
   * Remove methods that override ELResolver.getFeatureDescriptors() as that method will be removed as of EL 6.0
   * Remove the isThreadSafe page directive attribute as the related Servlet API interface SingleThreadModel has been removed as of the Servlet 6.0 specification
   * Remove the jsp:plugin action and related actions as the associated HTML elements are no longer supported by any major browser
+  * Remove JspException.getRootCause()
 
 ### Minimum Java SE Version
 **Java SE 17 or higher**
