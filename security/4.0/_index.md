@@ -27,10 +27,14 @@ The release splits focuses on evolving the API in various ways.
 * [Jakarta Security 4.0 Specification Document](./jakarta-security-spec-4.0.html) (HTML)
 * [Jakarta Security 4.0 Javadoc](./apidocs)
 * [Jakarta Security 4.0 TCK](https://download.eclipse.org/jakartaee/security/4.0/jakarta-security-tck-4.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/security/4.0/jakarta-security-tck-4.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/security/4.0/jakarta-security-tck-4.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* Maven coordinates
+  * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/4.0.0/jar)
 
 # Compatible Implementations
 
-* Soteria 4.0.0
+* [Soteria 4.0.0](https://github.com/eclipse-ee4j/soteria/releases/download/4.0.0-RELEASE/soteria-4.0.0.jar)
+* [Eclipse Glassfish 8.0.0-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-M6/glassfish-8.0.0-M6.zip) (JDK 21)
+* [Eclipse Glassfish 8.0.0-JDK-17-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-JDK17-M6/glassfish-8.0.0-JDK17-M6.zip) (JDK 17)
 
 # Ballots
 
