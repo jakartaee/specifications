@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Servlet 6.1 (under development)"
-date: 2023-05-23
+title: "Jakarta Servlet 6.1"
+date: 2024-04-05
 summary: "Release for Jakarta EE 11"
 ---
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
@@ -19,31 +19,29 @@ The release removes references to the SecurityManager and provides various small
 * All references to the SecurityManager and associated APIs have been removed
 
 ### Minimum Java SE Version
-**Java SE 11 or higher**
+**Java SE 17 or higher**
 
 # Details
 
 * [Jakarta Servlet 6.1 Release Record](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.1)
-
-<!--
-The following can be uncommented and version information updated as they become available.
-
-  * [Jakarta EE Platform 10 Release Plan](https://jakartaee.github.io/platform/jakartaee10/JakartaEE10ReleasePlan)
-* [Jakarta Servlet 6.0 Specification Document](./jakarta-servlet-spec-6.0.pdf) (PDF)
-* [Jakarta Servlet 6.0 Specification Document](./jakarta-servlet-spec-6.0.html) (HTML)
+* [Jakarta Servlet 6.1 Release Plan](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.1.0/plan)
+  * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
+* [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.pdf) (PDF)
+* [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.html) (HTML)
 * [Jakarta Servlet 6.0 Javadoc](./apidocs)
-* [Jakarta Servlet 6.0.0 TCK](https://download.eclipse.org/jakartaee/servlet/6.0/jakarta-servlet-tck-6.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/servlet/6.0/jakarta-servlet-tck-6.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/servlet/6.0/jakarta-servlet-tck-6.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Servlet 6.1.0 TCK](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.0.zip), ([sig](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * XML Schema
-  * web-app_6_0.xsd
-  * web-common_6_0.xsd
-  * web-fragment_6_0.xsd
+  * web-app_6_1.xsd
+  * web-common_6_1.xsd
+  * web-fragment_6_1.xsd
+  * jsp_4_0.xsd
+  * web-jsptaglibrary_4_0.xsd
 * Maven coordinates
-  * [jakarta.servlet:jakarta.servlet-api:jar:6.0.0](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/6.0.0/jar)
--->
+  * [jakarta.servlet:jakarta.servlet-api:jar:6.1.0](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/6.1.0/jar)
 
 # Compatible Implementations
 
-* Glassfish (TBC)
+* [Tomcat 11.0.0-M20](https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.0-M20/)
 
 # Ballots
 
@@ -66,5 +64,3 @@ The Specification Committee Ballot concluded successfully on 2023-07-26 with the
 |                                                | **Total**           | **9**   |
 
 The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03017.html)
-
-
