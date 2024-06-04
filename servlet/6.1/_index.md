@@ -45,6 +45,34 @@ The release removes references to the SecurityManager and provides various small
 
 # Ballots
 
+## Release Review
+
+The Specification Committee Ballot concluded successfully on 2024-06-04 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Dr. Jun Qian                                   | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **10** |
+
+Non-binding votes
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Angelo Rubini                                  | Community           |   +1    |
+| Greg Wilkins                                   | Jetty               |   +1    |
+|                                                | **Total**           |  **2**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03382.html)
+
 ## Plan Review
 
 The Specification Committee Ballot concluded successfully on 2023-07-26 with the following results.
