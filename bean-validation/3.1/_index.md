@@ -26,9 +26,9 @@ This release is targeting Jakarta EE 11 and has clarified support for Records in
 * [Jakarta Validation 3.1 Specification Document](jakarta-validation-spec-3.1.pdf) (PDF)
 * [Jakarta Validation 3.1 Specification Document](jakarta-validation-spec-3.1.html) (HTML)
 * [Jakarta Validation 3.1 Javadoc](./apidocs)
-* [Jakarta Validation 3.1 TCK](https://download.eclipse.org/jakartaee/bean-validation/3.1/validation-tck-dist-3.1.0.zip)
-([sig](https://download.eclipse.org/jakartaee/bean-validation/3.1/validation-tck-dist-3.1.0.zip.sig), 
-[sha](https://download.eclipse.org/jakartaee/bean-validation/3.1/validation-tck-dist-3.1.0.zip.sha256), 
+* [Jakarta Validation 3.1 TCK](https://download.eclipse.org/jakartaee/bean-validation/3.1/validation-tck-dist-3.1.1.zip)
+([sig](https://download.eclipse.org/jakartaee/bean-validation/3.1/validation-tck-dist-3.1.1.zip.sig), 
+[sha](https://download.eclipse.org/jakartaee/bean-validation/3.1/validation-tck-dist-3.1.1.zip.sha256), 
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.validation:jakarta.validation-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.validation/jakarta.validation-api/3.1.0/jar)
