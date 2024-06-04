@@ -13,11 +13,12 @@ The removes references to the SecurityManager, further aligns with CDI where pos
 * Make FacesMessage#VALUES / VALUES_MAP generic
 * Require firing events for @Initialized, @BeforeDestroyed, @Destroyed for build-in scopes
 * Add missing generics to API that were missed in Faces 4.0
-* Setting/overriding components default value
-* <f:ajax> execute="@this" and render="@this" does not behave as expected when nested in composite component
-* Enhance UIInput events with HTML5 like oninput
-* importConstants should be allowed everywhere, not only in f:metadata
 * Support @Inject of current flow like "@Inject Flow currentFlow"
+* Add UUIDConverter -> jakartaee/faces#1819
+* Add ExternalContext.setResponseContentLengthLong
+* Add rowStatePreserved property to UIRepeat, exactly the same as UIData
+* Spec: jakarta.faces.FACELETS_REFRESH_PERIOD default when ProjectStage is Development
+* FacesMessage: implement equals(), hashcode(), toString()
 
 ### Removals, deprecations or backwards incompatible changes
 * Deprecate full state saving (FSS)
