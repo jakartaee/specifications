@@ -42,6 +42,32 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 
 # Ballots
 
+## Release Review
+
+The Specification Committee Release Review ballot completed successfully on 2024-06-05 with unanimous results:
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+|                                                | **Total**           | **10**  |
+
+Nonbinding votes were also received:
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Angelo Rubini                                  | Community           |   +1    |
+|                                                | **Total**           |  **1**  |
+
+This ballot was conducted between May 23 and June 5, 2024 and concluded upon all eligible members voting. The ballot was held on the public e-mail list [jakarta.ee-spec@eclipse.org](mailto:jakarta.ee-spec@eclipse.org). The results are archived under [this thread](https://www.eclipse.org/lists/jakarta.ee-spec/msg03390.html).
+
 ## Plan Review
 
 The Specification Committee Ballot concluded successfully on 2023-07-31 with the following results.
@@ -61,6 +87,4 @@ The Specification Committee Ballot concluded successfully on 2023-07-31 with the
 |                                                | **Total**           | **10**  |
 This ballot was conducted between July 23 and July 31, 2023. Using [jakarta.ee-spec@eclipse.org](mailto:jakarta.ee-spec@eclipse.org). Results are archived under [this thread](https://www.eclipse.org/lists/jakarta.ee-spec/msg03033.html), and [this](https://www.eclipse.org/lists/jakarta.ee-spec/msg03036.html).
 
-## Release Review
 
-TBD
