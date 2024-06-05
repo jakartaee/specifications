@@ -14,7 +14,7 @@ The removes references to the SecurityManager, further aligns with CDI where pos
 * Require firing events for @Initialized, @BeforeDestroyed, @Destroyed for build-in scopes
 * Add missing generics to API that were missed in Faces 4.0
 * Support @Inject of current flow like "@Inject Flow currentFlow"
-* Add UUIDConverter -> jakartaee/faces#1819
+* Add UUIDConverter
 * Add ExternalContext.setResponseContentLengthLong
 * Add rowStatePreserved property to UIRepeat, exactly the same as UIData
 * Spec: jakarta.faces.FACELETS_REFRESH_PERIOD default when ProjectStage is Development
