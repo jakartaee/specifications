@@ -1,7 +1,7 @@
 ---
-title: "Jakarta Data 1.0 (under development)"
-date: 2023-05-30
-summary: "Release supporting Jakarta EE 11"
+title: "Jakarta Data 1.0"
+date: 2024-05-03
+summary: "Release for Jakarta EE 11"
 ---
 
 The Jakarta Data specification provides an API for easier data access. A Java developer can split the persistence from the model with several features, such as the ability to compose custom query methods on a Repository interface.
@@ -34,24 +34,43 @@ garage.save(ferrari);
 
 ### New features, enhancements or additions
 
-* The CrudRepository feature
-* Allows pagination on repository with PageableRepository
+* Define the Repository pattern
+* Allows pagination on Repository
+* Enhance type safety with a StaticMetamodel
+* Define platform integrations with CDI, Persistence, NoSQL, Transactions, and Validation
+* Produce a TCK with the ability to run against the following matrix:
+  * Profiles: none (standalone), core, web, platform
+  * Entities: persistence, nosql
 
+###  Removals, deprecations or backwards incompatible changes
+None - first release
 
 ### Minimum Java SE Version
-<!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 17 or higher**
-
-
+* **Java SE 17 or higher**
 
 # Details
 
 * [Jakarta Data 1.0 Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.0)
-* [Jakarta Data 1.0 Specification Document](./data-1.0.0-RC1.pdf) (PDF)
-* [Jakarta Data 1.0 Specification Document](./data-1.0.0-RC1.html) (HTML)
-* [Jakarta Data 1.0 Specification Javadoc](./apidocs)
+  * [Jakarta Data 1.0 Release Plan](https://projects.eclipse.org/projects/ee4j.data/releases/1.0/plan)
+  * [Jakarta EE Platform 11 Release Plan](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/11/plan)
+* [Jakarta Data 1.0 Specification Document](./jakarta-data-1.0.pdf) (PDF)
+  * [Jakarta Data 1.0 Specification Addendum](./jakarta-data-addendum-1.0.pdf) (PDF)
+* [Jakarta Data 1.0 Specification Document](./jakarta-data-1.0.html) (HTML)
+  * [Jakarta Data 1.0 Specification Addendum](./jakarta-data-addendum-1.0.html) (HTML)
+* [Jakarta Data 1.0 Javadoc](./apidocs)
+* [Jakarta Data 1.0 TCK](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.0.zip), ([sig](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+  * Signature tests are included with the TCK and run automatically as part of it
 * Maven coordinates
-  * [jakarta-data-api:jakarta.data:jar:1.0.0-RC1](https://repo1.maven.org/maven2/jakarta/data/jakarta.data-api/1.0.0-RC1/)
+  * [jakarta-data-api:jakarta.data:jar:1.0.0](https://repo1.maven.org/maven2/jakarta/data/jakarta.data-api/1.0.0/)
+* Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
+  * Persistence (Hibernate): https://github.com/jakartaee/data/issues/714
+  * Persistence (Open Liberty): https://github.com/jakartaee/data/issues/741
+<!-- TODO add NoSQL once they have submitted a CCR -->
+
+# Compatible Implementations
+
+* [Hibername](https://hibernate.org/orm/releases/6.6/)
+* [Open Liberty](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2024-05-06_1951/openliberty-24.0.0.6-beta.zip)
 
 # Ballots
 
@@ -70,8 +89,11 @@ The Specification Committee Ballot concluded successfully on 2023-04-03 with the
 | Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
 | Werner Keil                                    | Committer Members   |   +1    |
 | Zhai Luchao                                    | Enterprise Members  |   +1    |
-| Scott Stark, Scott Marlow                     | Enterprise Members  | no vote |
+| Scott Stark, Scott Marlow                      | Enterprise Members  | no vote |
 |                                                | **Total**           |  **8**  |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02857.html)
 
+## Release Review
+
+TBD
