@@ -20,7 +20,7 @@ The release aims to evolve the API in a smaller way to support the overall goals
 
 # Details
 
-* * [Jakarta Authentication 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.authentication/releases/3.1)
+* [Jakarta Authentication 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.authentication/releases/3.1)
 
 * [Jakarta Authentication 3.1 Specification Document](./jakarta-authentication-spec-3.1.pdf) (PDF)
 * [Jakarta Authentication 3.1 Specification Document](./jakarta-authentication-spec-3.1.html) (HTML)
