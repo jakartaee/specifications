@@ -23,7 +23,7 @@ The release removes references to the SecurityManager and provides various small
 
 # Details
 
-* [Jakarta Servlet 6.1 Release Record](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.1)
+* [Jakarta Servlet 6.1 Release Record](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.1.0)
 * [Jakarta Servlet 6.1 Release Plan](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.1.0/plan)
   * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
 * [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.pdf) (PDF)
