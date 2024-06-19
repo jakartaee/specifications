@@ -69,8 +69,8 @@ None - first release
 
 # Compatible Implementations
 
-* [Hibername](https://hibernate.org/orm/releases/6.6/)
-* [Open Liberty](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2024-05-06_1951/openliberty-24.0.0.6-beta.zip)
+* [Hibernate 6.6](https://hibernate.org/orm/releases/6.6/)
+* [Open Liberty 24.0.0.6](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2024-05-06_1951/openliberty-24.0.0.6-beta.zip)
 
 # Ballots
 ## Release Review
