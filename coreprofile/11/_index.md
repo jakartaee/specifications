@@ -30,6 +30,12 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
       * Specification documents
          * [Jakarta EE 11 M2 core profile Specification Document](./jakarta-coreprofile-spec-11.0-M2.pdf) (PDF)
          * [Jakarta EE 11 M2 core profile Specification Document](./jakarta-coreprofile-spec-11.0-M2.html) (HTML)
+      * Maven coordinates
+          * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0-M2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-core-api/11.0.0-M2/jar)
+   * Milestone 3
+      * Specification documents
+         * [Jakarta EE 11 M3 core profile Specification Document](./jakarta-coreprofile-spec-11.0-M3.pdf) (PDF)
+         * [Jakarta EE 11 M3 core profile Specification Document](./jakarta-coreprofile-spec-11.0-M3.html) (HTML)
       * [Jakarta Core Profile 11 M3 Javadoc](./apidocs)
       * Maven coordinates
           * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0-M3](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-core-api/11.0.0-M3/jar)
