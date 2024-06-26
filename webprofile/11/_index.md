@@ -32,6 +32,12 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
       * Specification documents
          * [Jakarta EE 11 M2 web profile Specification Document](./jakarta-webprofile-spec-11.0-M2.pdf) (PDF)
          * [Jakarta EE 11 M2 web profile Specification Document](./jakarta-webprofile-spec-11.0-M2.html) (HTML)
+      * Maven coordinates
+         * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0-M2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0-M2/jar)
+   * Milestone 3
+      * Specification documents
+         * [Jakarta EE 11 M3 web profile Specification Document](./jakarta-webprofile-spec-11.0-M3.pdf) (PDF)
+         * [Jakarta EE 11 M3 web profile Specification Document](./jakarta-webprofile-spec-11.0-M3.html) (HTML)
       * [Jakarta Web Profile 11 M3 Javadoc](./apidocs)
       * Maven coordinates
          * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0-M3](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0-M3/jar)

@@ -30,6 +30,12 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
       * Specification documents
          * [Jakarta EE Platform 11 M2 Specification Document](./jakarta-platform-spec-11.0-M2.pdf) (PDF)
          * [Jakarta EE Platform 11 M2 Specification Document](./jakarta-platform-spec-11.0-M2.html) (HTML)
+      * Maven coordinates
+         * [jakarta.platform:jakarta.jakartaee-api:jar:11.0.0-M2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/11.0.0-M2/jar)
+   * Milestone 3
+      * Specification documents
+         * [Jakarta EE Platform 11 M3 Specification Document](./jakarta-platform-spec-11.0-M3.pdf) (PDF)
+         * [Jakarta EE Platform 11 M3 Specification Document](./jakarta-platform-spec-11.0-M3.html) (HTML)
       * [Jakarta EE Platform 11 M3 Javadoc](./apidocs)
       * Maven coordinates
          * [jakarta.platform:jakarta.jakartaee-api:jar:11.0.0-M3](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/11.0.0-M3/jar)
