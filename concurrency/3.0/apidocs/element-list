@@ -1,2 +1,3 @@
+module:jakarta.concurrency
 jakarta.enterprise.concurrent
 jakarta.enterprise.concurrent.spi
