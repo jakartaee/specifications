@@ -23,28 +23,16 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 
 * [Jakarta Web Profile 11 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/web-profile-11)
   * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
-<!--
-* [Jakarta Web Profile 11 Specification Document](./jakarta-webprofile-spec-11.0.pdf) (PDF)
-* [Jakarta Web Profile 11 Specification Document](./jakarta-webprofile-spec-11.0.html) (HTML)
--->
-* Milestones
-   * Milestone 2
-      * Specification documents
-         * [Jakarta EE 11 M2 web profile Specification Document](./jakarta-webprofile-spec-11.0-M2.pdf) (PDF)
-         * [Jakarta EE 11 M2 web profile Specification Document](./jakarta-webprofile-spec-11.0-M2.html) (HTML)
-      * Maven coordinates
-         * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0-M2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0-M2/jar)
-   * Milestone 3
-      * Specification documents
-         * [Jakarta EE 11 M3 web profile Specification Document](./jakarta-webprofile-spec-11.0-M3.pdf) (PDF)
-         * [Jakarta EE 11 M3 web profile Specification Document](./jakarta-webprofile-spec-11.0-M3.html) (HTML)
-      * [Jakarta Web Profile 11 M3 Javadoc](./apidocs)
-      * Maven coordinates
-         * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0-M3](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0-M3/jar)
+* [Jakarta EE 11 M3 web profile Specification Document](./jakarta-webprofile-spec-11.0-M3.pdf) (PDF)
+* [Jakarta EE 11 M3 web profile Specification Document](./jakarta-webprofile-spec-11.0-M3.html) (HTML)
+* [Jakarta Web Profile 11 M4 Javadoc](./apidocs)
+* Maven coordinates
+   * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0-M4](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0-M4/jar)
 
 <!--
 * [Jakarta Web Profile 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 -->
+
 # Compatible Implementations
 
 Compatible Implementations of the Jakarta EE Web Profile specification are eligible to use the _Jakarta EE Compatible_ logo. For more information, see [Get Listed](/compatibility/get-listed/).
