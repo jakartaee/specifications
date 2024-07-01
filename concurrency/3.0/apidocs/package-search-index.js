@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"jakarta.enterprise.concurrent"},{"l":"jakarta.enterprise.concurrent.spi"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"jakarta.concurrency","l":"jakarta.enterprise.concurrent"},{"m":"jakarta.concurrency","l":"jakarta.enterprise.concurrent.spi"}]
