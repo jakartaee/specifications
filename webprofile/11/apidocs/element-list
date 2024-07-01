@@ -10,6 +10,7 @@ jakarta.data.metamodel.impl
 jakarta.data.page
 jakarta.data.page.impl
 jakarta.data.repository
+jakarta.data.spi
 jakarta.decorator
 jakarta.ejb
 jakarta.ejb.embeddable
@@ -66,8 +67,6 @@ jakarta.json.bind.serializer
 jakarta.json.bind.spi
 jakarta.json.spi
 jakarta.json.stream
-jakarta.jws
-jakarta.jws.soap
 jakarta.persistence
 jakarta.persistence.criteria
 jakarta.persistence.metamodel
@@ -111,18 +110,3 @@ jakarta.ws.rs.container
 jakarta.ws.rs.core
 jakarta.ws.rs.ext
 jakarta.ws.rs.sse
-jakarta.xml.bind
-jakarta.xml.bind.annotation
-jakarta.xml.bind.annotation.adapters
-jakarta.xml.bind.attachment
-jakarta.xml.bind.helpers
-jakarta.xml.bind.util
-jakarta.xml.soap
-jakarta.xml.ws
-jakarta.xml.ws.handler
-jakarta.xml.ws.handler.soap
-jakarta.xml.ws.http
-jakarta.xml.ws.soap
-jakarta.xml.ws.spi
-jakarta.xml.ws.spi.http
-jakarta.xml.ws.wsaddressing
