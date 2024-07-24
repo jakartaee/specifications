@@ -32,7 +32,7 @@ This release makes the dependency on the java.desktop module optional, removes r
 * [Jakarta Expression Language 6.0 Javadoc](./apidocs)
 * [Jakarta Expression Language 6.0 TCK](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.el:jakarta.el-api:jar:6.0.0](https://search.maven.org/artifact/jakarta.el/jakarta.el-api/6.0.0/jar)
+  * [jakarta.el:jakarta.el-api:jar:6.0.1](https://search.maven.org/artifact/jakarta.el/jakarta.el-api/6.0.1/jar)
 
 
 # Compatible Implementations
