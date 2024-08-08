@@ -24,6 +24,7 @@ none
 * [Jakarta Connectors 2.1 Javadoc](./apidocs)
 * [Jakarta Connectors 2.1 XML Schema](https://jakarta.ee/xml/ns/jakartaee/connector_2_1.xsd)
 * [Jakarta Connectors 2.1 TCK](https://download.eclipse.org/jakartaee/connectors/2.1/jakarta-connectors-tck-2.1.0.zip)([sig](https://download.eclipse.org/jakartaee/connectors/2.1/jakarta-connectors-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/connectors/2.1/jakarta-connectors-tck-2.1.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+   * Connector: Old DTDs/Schema in deployment descriptors of Tags/Pages/Servlet/Assembly Platform TCK tests - update from optional web-app_2_3.dtd to (required) web-app_5_0.xsd (Issue [#1313](https://github.com/jakartaee/platform-tck/issues/1313))  [Connectors 2.1.2 TCK](https://www.eclipse.org/downloads/download.php?file=/jakartaee/connectors/2.1/jakarta-connectors-tck-2.1.2.zip) ([sig](https://www.eclipse.org/downloads/download.php?file=/jakartaee/connectors/2.1/jakarta-connectors-tck-2.1.2.zip.sig),[sha](https://www.eclipse.org/downloads/download.php?file=/jakartaee/connectors/2.1/jakarta-connectors-tck-2.1.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.resource:jakarta.resource-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.resource/jakarta.resource-api/2.1.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
