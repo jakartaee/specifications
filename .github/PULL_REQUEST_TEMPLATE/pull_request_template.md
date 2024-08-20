@@ -59,6 +59,7 @@ Note: If any item does not apply, check it and mark N/A below it.
   - [ ] Correct spec title
   - [ ] Version number of the form x.y, not x.y.z
   - [ ] Correct Eclipse copyright line
+  - [ ] Use version 1.1 of the EFSL
   - [ ] No DRAFT or SNAPSHOT
   - [ ] Correct Logo
 
