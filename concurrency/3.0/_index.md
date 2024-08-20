@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Concurrency 3.0"
-date: 2024-06-28
+date: 2022-06-28
 summary: "Jakarta EE 10 Release"
 ---
 <!-- Please provide a short description of the specification. -->
