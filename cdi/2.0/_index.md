@@ -11,7 +11,7 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 * [Jakarta Contexts Dependency Injection 2.0 Javadoc](./apidocs)
 * [Jakarta Contexts Dependency Injection 2.0 TCK](https://download.eclipse.org/jakartaee/cdi/2.0/cdi-tck-2.0.6-dist.zip) ([sig](https://download.eclipse.org/jakartaee/cdi/2.0/cdi-tck-2.0.6-dist.zip.sig),[sha](https://download.eclipse.org/jakartaee/cdi/2.0/cdi-tck-2.0.6-dist.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.enterprise:jakarta.enterprise.cdi-api:jar:2.0.2](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/2.0.2/jar)
+  * [jakarta.enterprise:jakarta.enterprise.cdi-api:jar:2.0.2](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/2.0.2/jar)
 
 # Ballots
 

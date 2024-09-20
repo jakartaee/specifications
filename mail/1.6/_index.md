@@ -11,7 +11,7 @@ Jakarta Mail defines a platform-independent and protocol-independent framework t
 * [Jakarta Mail 1.6 Javadoc](./apidocs)
 * [Jakarta Mail 1.6 TCK](https://download.eclipse.org/jakartaee/mail/1.6/jakarta-mail-tck-1.6.0.zip) ([sig](https://download.eclipse.org/jakartaee/mail/1.6/jakarta-mail-tck-1.6.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/mail/1.6/jakarta-mail-tck-1.6.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.mail:jakarta.mail-api:jar:1.6.4](https://search.maven.org/artifact/jakarta.mail/jakarta.mail-api/1.6.4/jar)
+  * [jakarta.mail:jakarta.mail-api:jar:1.6.4](https://central.sonatype.com/artifact/jakarta.mail/jakarta.mail-api/1.6.4/jar)
 
 # Ballots
 

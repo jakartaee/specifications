@@ -28,7 +28,7 @@ The purpose of this release is to fully remove the deprecated @ManagedBean annot
 * [Jakarta Annotations 3.0 Javadoc](./apidocs)
 * [Jakarta Annotations 3.0 TCK](https://download.eclipse.org/jakartaee/annotations/3.0/jakarta-annotations-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/annotations/3.0/jakarta-annotations-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/annotations/3.0/jakarta-annotations-tck-3.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.annotation:jakarta.annotation-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/3.0.0/jar)
+    * [jakarta.annotation:jakarta.annotation-api:jar:3.0.0](https://central.sonatype.com/artifact/jakarta.annotation/jakarta.annotation-api/3.0.0/jar)
 
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [GlassFish 8.0.0-M3](https://github.com/eclipse-ee4j/glassfish/releases/tag/8.0.0-M3)

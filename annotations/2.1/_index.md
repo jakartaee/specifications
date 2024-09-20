@@ -27,7 +27,7 @@ Jakarta Annotations defines a collection of annotations representing common sema
 * [Jakarta Annotations 2.1 Javadoc](./apidocs)
 * [Jakarta Annotations 2.1 TCK](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.annotation:jakarta.annotation-api:jar:2.1.1](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.1.1/jar)
+    * [jakarta.annotation:jakarta.annotation-api:jar:2.1.1](https://central.sonatype.com/artifact/jakarta.annotation/jakarta.annotation-api/2.1.1/jar)
 * [Change Log](./changelog)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [Eclipse GlassFish 7.0.1-M1](https://github.com/eclipse-ee4j/glassfish/releases/download/7.0.0-M1/glassfish-7.0.0-M1.zip)

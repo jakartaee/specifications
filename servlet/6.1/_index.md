@@ -37,7 +37,7 @@ The release removes references to the SecurityManager and provides various small
   * jsp_4_0.xsd
   * web-jsptaglibrary_4_0.xsd
 * Maven coordinates
-  * [jakarta.servlet:jakarta.servlet-api:jar:6.1.0](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/6.1.0/jar)
+  * [jakarta.servlet:jakarta.servlet-api:jar:6.1.0](https://central.sonatype.com/artifact/jakarta.servlet/jakarta.servlet-api/6.1.0/jar)
 
 # Compatible Implementations
 

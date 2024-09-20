@@ -15,7 +15,7 @@ support for internationalization and accessibility.
 * [Jakarta Server Faces 2.3 VDLDoc](./vdldoc)
 * [Jakarta Server Faces 2.3 TCK](https://download.eclipse.org/jakartaee/faces/2.3/jakarta-faces-tck-2.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/faces/2.3/jakarta-faces-tck-2.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/2.3/jakarta-faces-tck-2.3.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.faces:jakarta.faces-api:jar:2.3.2](https://search.maven.org/artifact/jakarta.faces/jakarta.faces-api/2.3.2/jar)
+  * [jakarta.faces:jakarta.faces-api:jar:2.3.2](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/2.3.2/jar)
 
 # Ballots
 

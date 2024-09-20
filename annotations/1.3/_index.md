@@ -11,7 +11,7 @@ enable a declarative style of programming that applies across a variety of Java 
 * [Jakarta Annotations 1.3 Javadoc](./apidocs)
 * [Jakarta Annotations 1.3 TCK](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.annotation:jakarta.annotation-api:jar:1.3.5](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/1.3.5/jar)
+  * [jakarta.annotation:jakarta.annotation-api:jar:1.3.5](https://central.sonatype.com/artifact/jakarta.annotation/jakarta.annotation-api/1.3.5/jar)
 
 # Ballots
 

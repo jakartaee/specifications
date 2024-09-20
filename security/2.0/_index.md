@@ -13,7 +13,7 @@ Jakarta Security defines a standard for creating secure Jakarta EE applications 
 * [Jakarta Security 2.0 TCK](https://download.eclipse.org/jakartaee/security/2.0/jakarta-security-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/security/2.0/jakarta-security-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/security/2.0/jakarta-security-tck-2.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Adds JDK 11 support [Jakarta Security 2.0.1 TCK](https://download.eclipse.org/jakartaee/security/2.0/jakarta-security-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/security/2.0/jakarta-security-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/security/2.0/jakarta-security-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/2.0.0/jar)
+  * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:2.0.0](https://central.sonatype.com/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/2.0.0/jar)
 
 # Compatible Implementations
 

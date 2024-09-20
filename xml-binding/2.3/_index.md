@@ -11,7 +11,7 @@ between XML documents and Java objects.
 * [Jakarta XML Binding 2.3 Javadoc](./apidocs/index.html?overview-summary.html)
 * [Jakarta XML Binding 2.3 TCK](http://download.eclipse.org/ee4j/xml-binding/tck/eftl/jakarta-xml-binding-tck-2.3.0.zip)
 * Maven coordinates
-  * [jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3](https://search.maven.org/artifact/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/jar)
+  * [jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3](https://central.sonatype.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/jar)
 
 # Ballots
 

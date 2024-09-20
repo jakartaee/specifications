@@ -11,7 +11,7 @@ and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments 
 * [Jakarta SOAP with Attachments 1.4 Javadoc](./apidocs/index.html?javax/xml/soap/package-summary.html)
 * [Jakarta SOAP with Attachments 1.4 TCK](http://download.eclipse.org/ee4j/soap-attachments/tck/eftl/jakarta-soap-tck-1.4.0.zip)
 * Maven coordinates
-  * [jakarta.xml.soap:jakarta.xml.soap-api:jar:1.4.2](https://search.maven.org/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2/jar)
+  * [jakarta.xml.soap:jakarta.xml.soap-api:jar:1.4.2](https://central.sonatype.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2/jar)
 
 # Ballots
 

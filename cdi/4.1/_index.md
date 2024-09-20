@@ -49,9 +49,9 @@ and refactors features that are not client facing into the subinterface.
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.1.0/jar)
-  * [jakarta.enterprise:jakarta.enterprise.lang-model:4.1.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.lang-model/4.1.0/jar)
-  * [jakarta.enterprise:jakarta.enterprise.cdi-el-api:4.1.0](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-el-api/4.1.0/jar)
+  * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.1.0/jar)
+  * [jakarta.enterprise:jakarta.enterprise.lang-model:4.1.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.lang-model/4.1.0/jar)
+  * [jakarta.enterprise:jakarta.enterprise.cdi-el-api:4.1.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-el-api/4.1.0/jar)
 
 * Schemas
   * [XML Schema for the CDI 4.1 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_1.xsd)

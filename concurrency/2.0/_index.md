@@ -13,7 +13,7 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 * [Jakarta Concurrency 2.0 TCK](https://download.eclipse.org/jakartaee/concurrency/2.0/jakarta-concurrency-tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/concurrency/2.0/jakarta-concurrency-tck-2.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/concurrency/2.0/jakarta-concurrency-tck-2.0.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Adds JDK 11 support [Jakarta Concurrency 2.0.1 TCK](https://download.eclipse.org/jakartaee/concurrency/2.0/jakarta-concurrency-tck-2.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/concurrency/2.0/jakarta-concurrency-tck-2.0.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/concurrency/2.0/jakarta-concurrency-tck-2.0.1.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:2.0.0](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/2.0.0/jar)
+  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:2.0.0](https://central.sonatype.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/2.0.0/jar)
 
 
 # Compatible Implementations

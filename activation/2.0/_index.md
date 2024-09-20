@@ -19,7 +19,7 @@ appropriate bean to perform the operation(s).
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
     * Adds JDK 11 support [Jakarta Activation 2.0.1 TCK](https://download.eclipse.org/jakartaee/activation/2.0/jakarta-activation-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/activation/2.0/jakarta-activation-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/activation/2.0/jakarta-activation-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.activation:jakarta.activation-api:jar:2.0.1](https://search.maven.org/artifact/jakarta.activation/jakarta.activation-api/2.0.1/jar)
+  * [jakarta.activation:jakarta.activation-api:jar:2.0.1](https://central.sonatype.com/artifact/jakarta.activation/jakarta.activation-api/2.0.1/jar)
 * [Change Log](./changelog)
 
 

@@ -10,7 +10,7 @@ Jakarta Enterprise Beans defines an architecture for the development and deploym
 * [Jakarta Enterprise Beans 3.2 Specification Document](./enterprise-beans-spec-3.2.html) (HTML)
 * [Jakarta Enterprise Beans 3.2 Javadoc](./apidocs)
 * Maven coordinates
-  * [jakarta.ejb:jakarta.ejb-api:jar:3.2.6](https://search.maven.org/artifact/jakarta.ejb/jakarta.ejb-api/3.2.6/jar)
+  * [jakarta.ejb:jakarta.ejb-api:jar:3.2.6](https://central.sonatype.com/artifact/jakarta.ejb/jakarta.ejb-api/3.2.6/jar)
 
 # Ballots
 

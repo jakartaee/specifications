@@ -32,7 +32,7 @@ these permissions.
 * [Jakarta Authorization 2.1 TCK](https://download.eclipse.org/jakartaee/authorization/2.1/jakarta-authorization-tck-2.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/authorization/2.1/jakarta-authorization-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/authorization/2.1/jakarta-authorization-tck-2.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.authorization:jakarta.authorization-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.authorization/jakarta.authorization-api/2.1.0/jar)
+  * [jakarta.authorization:jakarta.authorization-api:jar:2.1.0](https://central.sonatype.com/artifact/jakarta.authorization/jakarta.authorization-api/2.1.0/jar)
 
 
 # Compatible Implementations

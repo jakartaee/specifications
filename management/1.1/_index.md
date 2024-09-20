@@ -11,7 +11,7 @@ operations, and parameters of the Jakarta EE Platform components.
 * [Jakarta Management 1.1 Javadoc](./apidocs)
 * Jakarta Management 1.1 TCK - N/A (covered by Jakarta EE Platform TCK)
 * Maven coordinates
-  * [jakarta.management.j2ee:jakarta.management.j2ee-api:jar:1.1.4](https://search.maven.org/artifact/jakarta.management/jakarta.management.j2ee-api/1.1.4/jar)
+  * [jakarta.management.j2ee:jakarta.management.j2ee-api:jar:1.1.4](https://central.sonatype.com/artifact/jakarta.management/jakarta.management.j2ee-api/1.1.4/jar)
 
 # Ballots
 

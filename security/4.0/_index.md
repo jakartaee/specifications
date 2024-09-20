@@ -28,7 +28,7 @@ The release splits focuses on evolving the API in various ways.
 * [Jakarta Security 4.0 Javadoc](./apidocs)
 * [Jakarta Security 4.0 TCK](https://download.eclipse.org/jakartaee/security/4.0/jakarta-security-tck-4.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/security/4.0/jakarta-security-tck-4.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/security/4.0/jakarta-security-tck-4.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/4.0.0/jar)
+  * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/4.0.0/jar)
 
 # Compatible Implementations
 

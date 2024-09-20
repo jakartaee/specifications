@@ -34,7 +34,7 @@ Compatible (Reflection-Free)
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 
 * Maven coordinates
-  * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.0.1](https://search.maven.org/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.1/jar)
+  * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.0.1](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.1/jar)
 
 * Schemas
   * [XML Schema for the CDI 4.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd)

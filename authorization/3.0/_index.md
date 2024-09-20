@@ -33,7 +33,7 @@ The primary goal of this release is to make Jakarta Authorization future proof b
 * [Jakarta Authorization 3.0 Javadoc](./apidocs)
 * [Jakarta Authorization 3.0 TCK](https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.authorization:jakarta.authorization-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.authorization/jakarta.authorization-api/3.0.0/jar)
+  * [jakarta.authorization:jakarta.authorization-api:jar:3.0.0](https://central.sonatype.com/artifact/jakarta.authorization/jakarta.authorization-api/3.0.0/jar)
 
 # Compatible Implementations
 

@@ -17,7 +17,7 @@ existing custom tags with Jakarta Standard Tag Library tags.
 * [Jakarta Standard Tag Library 2.0 TCK](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Adds JDK 11 support [Jakarta Standard Tag Library 2.0.1 TCK](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/tags/2.0/jakarta-tags-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/2.0.0/jar)
+  * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0](https://central.sonatype.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/2.0.0/jar)
 
 
 # Compatible Implementations

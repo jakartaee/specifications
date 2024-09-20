@@ -12,7 +12,7 @@ Jakarta EE Platform 定义了承载 Jakarta EE 应用的标准平台.
 * [Jakarta EE Platform 9 Javadoc](./apidocs)
 * [Jakarta EE Platform 9 TCK](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee9/milestones/jakartaeetck-9.0.0-M1.zip)([sig](),[sha](),[pub]())
 * Maven 协作
-  * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0-RC2](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/9.0.0-RC2/jar)
+  * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0-RC2](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-api/9.0.0-RC2/jar)
 
 # Jakarta EE 9 日程
 * [Jakarta EE 9 日程](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)

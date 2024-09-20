@@ -11,7 +11,7 @@ and object/relational mapping in Java(R) environments.
 * [Jakarta Persistence 2.2 Javadoc](./apidocs)
 * [Jakarta Persistence 2.2 TCK](https://download.eclipse.org/jakartaee/persistence/2.2/jakarta-persistence-tck-2.2.0.zip) ([sig](https://download.eclipse.org/jakartaee/persistence/2.2/jakarta-persistence-tck-2.2.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/persistence/2.2/jakarta-persistence-tck-2.2.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.persistence:jakarta.persistence-api:jar:2.2.3](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/2.2.3/jar)
+  * [jakarta.persistence:jakarta.persistence-api:jar:2.2.3](https://central.sonatype.com/artifact/jakarta.persistence/jakarta.persistence-api/2.2.3/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
   * [EclipseLink 2.7.4](https://www.eclipse.org/eclipselink)
 

@@ -30,7 +30,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
    * [Jakarta EE Platform 11 M4 Specification Document](./jakarta-platform-spec-11.0-M4.html) (HTML)
 * [Jakarta EE Platform 11 M4 Javadoc](./apidocs)
 * Maven coordinates
-   * [jakarta.platform:jakarta.jakartaee-api:jar:11.0.0-M4](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/11.0.0-M4/jar)
+   * [jakarta.platform:jakarta.jakartaee-api:jar:11.0.0-M4](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-api/11.0.0-M4/jar)
 
 <!--
 * [Jakarta EE Platform 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip) ([sig]
