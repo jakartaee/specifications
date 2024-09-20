@@ -11,8 +11,8 @@ for the WebSocket protocol (RFC6455).
 * [Jakarta WebSocket 1.1 Javadoc](./apidocs)
 * [Jakarta WebSocket 1.1 TCK](https://download.eclipse.org/jakartaee/websocket/1.1/jakarta-websocket-tck-1.1.1.zip) ([sig](https://download.eclipse.org/jakartaee/websocket/1.1/jakarta-websocket-tck-1.1.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/websocket/1.1/jakarta-websocket-tck-1.1.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.websocket:jakarta.websocket-api:1.1.2:jar](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-api/1.1.2/jar)
-  * [jakarta.websocket:jakarta.websocket-client-api:1.1.2:jar](https://search.maven.org/artifact/jakarta.websocket/jakarta.websocket-client-api/1.1.2/jar)
+  * [jakarta.websocket:jakarta.websocket-api:1.1.2:jar](https://central.sonatype.com/artifact/jakarta.websocket/jakarta.websocket-api/1.1.2/jar)
+  * [jakarta.websocket:jakarta.websocket-client-api:1.1.2:jar](https://central.sonatype.com/artifact/jakarta.websocket/jakarta.websocket-client-api/1.1.2/jar)
 
 # Ballots
 

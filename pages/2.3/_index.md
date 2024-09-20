@@ -12,7 +12,7 @@ into a Jakarta Servlet.
 * [Jakarta Server Pages 2.3 Javadoc](./apidocs)
 * [Jakarta Server Pages 2.3 TCK](https://download.eclipse.org/jakartaee/pages/2.3/jakarta-pages-tck-2.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/pages/2.3/jakarta-pages-tck-2.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/pages/2.3/jakarta-pages-tck-2.3.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.servlet.jsp:jakarta.servlet.jsp-api:jar:2.3.6](https://search.maven.org/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/2.3.6/jar)
+  * [jakarta.servlet.jsp:jakarta.servlet.jsp-api:jar:2.3.6](https://central.sonatype.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/2.3.6/jar)
 
 # Ballots
 

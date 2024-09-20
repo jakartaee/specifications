@@ -38,7 +38,7 @@ backward compatibility with earlier releases.
    * Fourth service release [Jakarta RESTful Web Services 3.1.4 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.4.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.4.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.4.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Fifth service release [Jakarta RESTful Web Services 3.1.5 TCK](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.5.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.5.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.5.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.jaxrs:jakarta.jaxrs-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.ws.rs/jakarta.ws.rs-api/3.1.0/jar)
+    * [jakarta.jaxrs:jakarta.jaxrs-api:jar:3.1.0](https://central.sonatype.com/artifact/jakarta.ws.rs/jakarta.ws.rs-api/3.1.0/jar)
 
 # Compatible Implementations
 

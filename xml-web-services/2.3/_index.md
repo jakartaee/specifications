@@ -11,7 +11,7 @@ based on Jakarta SOAP with Attachments and Jakarta Web Services Metadata.
 * [Jakarta XML Web Services 2.3 Javadoc](./apidocs/index.html?overview-summary.html)
 * [Jakarta XML Web Services 2.3 TCK](http://download.eclipse.org/ee4j/xml-web-services/tck/eftl/jakarta-xml-ws-tck-2.3.0.zip)
 * Maven coordinates
-  * [jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3](https://search.maven.org/artifact/jakarta.xml.ws/jakarta.xml.ws-api/2.3.3/jar)
+  * [jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3](https://central.sonatype.com/artifact/jakarta.xml.ws/jakarta.xml.ws-api/2.3.3/jar)
 
 # Ballots
 

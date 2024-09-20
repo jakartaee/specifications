@@ -11,7 +11,7 @@ following the Representational State Transfer (REST) architectural pattern.
 * [Jakarta RESTful Web Services 2.1 Javadoc](./apidocs)
 * [Jakarta RESTful Web Services 2.1 TCK](https://download.eclipse.org/jakartaee/restful-ws/2.1/jakarta-restful-ws-tck-2.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/restful-ws/2.1/jakarta-restful-ws-tck-2.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/restful-ws/2.1/jakarta-restful-ws-tck-2.1.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.ws.rs:jakarta.ws.rs-api:2.1.6](https://search.maven.org/artifact/jakarta.ws.rs/jakarta.ws.rs-api/2.1.6/jar)
+  * [jakarta.ws.rs:jakarta.ws.rs-api:2.1.6](https://central.sonatype.com/artifact/jakarta.ws.rs/jakarta.ws.rs-api/2.1.6/jar)
 
 # Ballots
 

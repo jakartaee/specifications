@@ -36,7 +36,7 @@ and consume messages conforming to the SOAP 1.1, SOAP 1.2, and SOAP Attachments 
 * [Jakarta SOAP Attachments 3.0 TCK](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
     * [Jakarta SOAP Attachments 3.0.1 TCK](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/soap-attachments/3.0/jakarta-soap-tck-3.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.2](https://search.maven.org/artifact/jakarta.xml.soap/jakarta.xml.soap-api/3.0.2/jar)
+    * [jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.2](https://central.sonatype.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/3.0.2/jar)
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
     * [Eclipse Implementation of Jakarta SOAP with Attachments 3.0.0-M2](https://github.com/eclipse-ee4j/metro-saaj/releases/tag/3.0.0-M2)
 * [Change Log](./changelog)

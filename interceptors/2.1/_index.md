@@ -31,7 +31,7 @@ and other managed classes.
    [sha](7671d6895eb57b74b52e46b63adfeb57adf965dd91efc673db21a781fedc452f),
    [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0](https://search.maven.org/artifact/jakarta.interceptor/jakarta.interceptor-api/2.1.0/jar)
+  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0](https://central.sonatype.com/artifact/jakarta.interceptor/jakarta.interceptor-api/2.1.0/jar)
 
 
 # Compatible Implementations

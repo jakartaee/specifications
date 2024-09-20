@@ -47,7 +47,7 @@ Jakarta Servlet defines a server-side API for handling HTTP requests and respons
   * web-common_6_0.xsd
   * web-fragment_6_0.xsd
 * Maven coordinates
-  * [jakarta.servlet:jakarta.servlet-api:jar:6.0.0](https://search.maven.org/artifact/jakarta.servlet/jakarta.servlet-api/6.0.0/jar)
+  * [jakarta.servlet:jakarta.servlet-api:jar:6.0.0](https://central.sonatype.com/artifact/jakarta.servlet/jakarta.servlet-api/6.0.0/jar)
 
 # Compatible Implementations
 

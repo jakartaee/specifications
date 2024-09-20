@@ -12,7 +12,7 @@ querying JSON documents.
 * [Jakarta JSON Processing 2.0 TCK](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Adds JDK 11 support [Jakarta JSON Processing 2.0.1 TCK](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.0/jakarta-jsonp-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.json:jakarta.json-api:jar:2.0.2](https://search.maven.org/artifact/jakarta.json/jakarta.json-api/2.0.2/jar)
+  * [jakarta.json:jakarta.json-api:jar:2.0.2](https://central.sonatype.com/artifact/jakarta.json/jakarta.json-api/2.0.2/jar)
 * [Change Log](./changelog)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [Eclipse JSON Processing 2.0.0](https://github.com/eclipse-ee4j/jsonp/releases/tag/2.0.0)

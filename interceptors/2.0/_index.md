@@ -14,7 +14,7 @@ and other managed classes.
 * [Jakarta Interceptors 2.0 Javadoc](./apidocs)
 * [Jakarta EE Platform 9 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.interceptor/jakarta.interceptor-api/2.0.0/jar)
+  * [jakarta.interceptor:jakarta.interceptor-api:jar:2.0.0](https://central.sonatype.com/artifact/jakarta.interceptor/jakarta.interceptor-api/2.0.0/jar)
 
 
 # Compatible Implementations

@@ -11,7 +11,7 @@ deployment APIs to deploy any assembled application onto a Jakarta EE compatible
 * [Jakarta Deployment 1.7 Javadoc](./apidocs)
 * Jakarta Deployment 1.7 TCK - N/A (covered by Jakarta EE Platform TCK)
 * Maven coordinates
-  * [jakarta.enterprise.deploy:jakarta.enterprise.deploy-api:jar:1.7.2](https://search.maven.org/artifact/jakarta.enterprise.deploy/jakarta.enterprise.deploy-api/1.7.2/jar)
+  * [jakarta.enterprise.deploy:jakarta.enterprise.deploy-api:jar:1.7.2](https://central.sonatype.com/artifact/jakarta.enterprise.deploy/jakarta.enterprise.deploy-api/1.7.2/jar)
 
 # Ballots
 

@@ -27,7 +27,7 @@ The release aims to evolve the API in a smaller way to support the overall goals
 * [Jakarta Authentication 3.1 Javadoc](./apidocs)
 * [Jakarta Authentication 3.1 TCK](https://download.eclipse.org/jakartaee/authentication/3.1/jakarta-authentication-tck-3.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/authentication/3.1/jakarta-authentication-tck-3.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/authentication/3.1/jakarta-authentication-tck-3.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.authentication:jakarta.authentication-api:jar:3.1.0](https://search.maven.org/artifact/jakarta.authentication/jakarta.authentication-api/3.1.0/jar)
+  * [jakarta.authentication:jakarta.authentication-api:jar:3.1.0](https://central.sonatype.com/artifact/jakarta.authentication/jakarta.authentication-api/3.1.0/jar)
 
 # Compatible Implementations
 

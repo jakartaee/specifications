@@ -40,7 +40,7 @@ This release adds the following
    * Fourth service release [Jakarta Concurrency 3.0.4 TCK](https://download.eclipse.org/jakartaee/concurrency/3.0/concurrency-tck-3.0.4.zip), ([sig](https://download.eclipse.org/jakartaee/concurrency/3.0/concurrency-tck-3.0.4.zip.sig), [sha](https://download.eclipse.org/jakartaee/concurrency/3.0/concurrency-tck-3.0.4.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * Signature tests are included with the TCK and run automatically as part of it
 * Maven coordinates
-  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.0.4](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.0.4/jar)
+  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.0.4](https://central.sonatype.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.0.4/jar)
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
     * [Open Liberty 22.0.0.5-beta](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/beta/22.0.0.5-beta/openliberty-22.0.0.5-beta.zip)
 

@@ -10,7 +10,7 @@ Jakarta Security defines a standard for creating secure Jakarta EE applications 
 * [Jakarta Security 1.0 Javadoc](./apidocs)
 * [Jakarta Security 1.0 TCK](https://download.eclipse.org/jakartaee/security/1.0/jakarta-security-tck-1.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/security/1.0/jakarta-security-tck-1.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/security/1.0/jakarta-security-tck-1.0.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:1.0.2](https://search.maven.org/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/1.0.2/jar)
+  * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:1.0.2](https://central.sonatype.com/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/1.0.2/jar)
 
 # Ballots
 

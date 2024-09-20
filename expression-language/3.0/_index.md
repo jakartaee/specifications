@@ -10,7 +10,7 @@ Jakarta Expression Language defines an expression language for Java applications
 * [Jakarta Expression Language 3.0 Javadoc](./apidocs)
 * [Jakarta Expression Language 3.0 TCK](https://download.eclipse.org/jakartaee/expression-language/3.0/jakarta-expression-language-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/expression-language/3.0/jakarta-expression-language-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/expression-language/3.0/jakarta-expression-language-tck-3.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.el:jakarta.el-api:jar:3.0.3](https://search.maven.org/artifact/jakarta.el/jakarta.el-api/3.0.3/jar)
+  * [jakarta.el:jakarta.el-api:jar:3.0.3](https://central.sonatype.com/artifact/jakarta.el/jakarta.el-api/3.0.3/jar)
 
 # Ballots
 

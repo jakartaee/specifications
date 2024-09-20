@@ -10,7 +10,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta EE Web Profile 8 Javadoc](./apidocs)
 * [Jakarta EE Web Profile 8 TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.platform:jakarta.jakartaee-web-api:jar:8.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-web-api/8.0.0/jar)
+  * [jakarta.platform:jakarta.jakartaee-web-api:jar:8.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-web-api/8.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [Eclipse Glassfish 5.1](https://projects.eclipse.org/projects/ee4j.glassfish/downloads)
 

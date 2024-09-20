@@ -27,7 +27,7 @@ with minimal requirements, otherwise known under the acronym POJOs (Plain Old Ja
 * Jakarta Managed Beans 2.0 Javadoc - N/A (covered by [Jakarta Annotations](https://jakarta.ee/specifications/annotations/2.0/))
 * Jakarta Managed Beans 2.0 TCK - N/A  (covered by [Jakarta EE 9 Platform TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub)))
 * Maven coordinates (provided by Jakarta Annotations)
-  * [jakarta.annotation:jakarta.annotation-api:jar:2.0.0](https://search.maven.org/artifact/jakarta.annotation/jakarta.annotation-api/2.0.0/jar)
+  * [jakarta.annotation:jakarta.annotation-api:jar:2.0.0](https://central.sonatype.com/artifact/jakarta.annotation/jakarta.annotation-api/2.0.0/jar)
 
 # Compatible Implementations
 

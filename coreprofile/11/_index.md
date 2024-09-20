@@ -25,7 +25,7 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
 * [Jakarta EE 11 M4 core profile Specification Document](./jakarta-coreprofile-spec-11.0-M4.html) (HTML)
 * [Jakarta Core Profile 11 M4 Javadoc](./apidocs)
 * Maven coordinates
-   * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0-M4](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-core-api/11.0.0-M4/jar)
+   * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0-M4](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-core-api/11.0.0-M4/jar)
 
 <!--
 * [Jakarta Core Profile 10.0 TCK](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip)

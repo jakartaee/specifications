@@ -10,7 +10,7 @@ Jakarta EE Platform 定义了承载 Jakarta EE 应用的标准平台.
 * [Jakarta EE Platform 8 Javadoc](./apidocs)
 * [Jakarta EE Platform 8 TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip.sha256),[pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven 协同
-  * [jakarta.platform:jakarta.jakartaee-api:jar:8.0.0](https://search.maven.org/artifact/jakarta.platform/jakarta.jakartaee-api/8.0.0/jar)
+  * [jakarta.platform:jakarta.jakartaee-api:jar:8.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-api/8.0.0/jar)
 
 # 投票结果
 

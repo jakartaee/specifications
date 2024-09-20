@@ -10,7 +10,7 @@ Jakarta Concurrency provides a specification for using concurrency from applicat
 * [Jakarta Concurrency 1.1 Javadoc](./apidocs)
 * [Jakarta Concurrency 1.1 TCK](https://download.eclipse.org/jakartaee/concurrency/1.1/jakarta-concurrency-tck-1.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/concurrency/1.1/jakarta-concurrency-tck-1.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/concurrency/1.1/jakarta-concurrency-tck-1.1.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:jar:1.1.2](https://search.maven.org/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/1.1.2/jar)
+  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:jar:1.1.2](https://central.sonatype.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/1.1.2/jar)
 
 # Ballots
 

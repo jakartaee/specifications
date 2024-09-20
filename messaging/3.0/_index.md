@@ -14,7 +14,7 @@ Jakarta Messaging describes a means for Java applications to create, send, and r
 * [Jakarta Messaging 3.0 TCK](https://download.eclipse.org/jakartaee/messaging/3.0/jakarta-messaging-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/messaging/3.0/jakarta-messaging-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/messaging/3.0/jakarta-messaging-tck-3.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Adds JDK 11 support [Jakarta Messaging 3.0.1 TCK](https://download.eclipse.org/jakartaee/messaging/3.0/jakarta-messaging-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/messaging/3.0/jakarta-messaging-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/messaging/3.0/jakarta-messaging-tck-3.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.jms:jakarta.jms-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.jms/jakarta.jms-api/3.0.0/jar)
+  * [jakarta.jms:jakarta.jms-api:jar:3.0.0](https://central.sonatype.com/artifact/jakarta.jms/jakarta.jms-api/3.0.0/jar)
 
 
 # Compatible Implementations

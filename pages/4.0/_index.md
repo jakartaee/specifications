@@ -31,7 +31,7 @@ This release removes deprecated code and provides any additional updates necessa
 * [Jakarta Pages 4.0 Javadoc](./apidocs)
 * [Jakarta Pages 4.0 TCK](https://download.eclipse.org/jakartaee/pages/4.0/jakarta-pages-tck-4.0.0.zip), ([sig](https://download.eclipse.org/jakartaee/pages/4.0/jakarta-pages-tck-4.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/pages/4.0/jakarta-pages-tck-4.0.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.pages:jakarta.pages-api:jar:4.0.0](https://search.maven.org/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/4.0.0/jar)
+  * [jakarta.pages:jakarta.pages-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/4.0.0/jar)
 
 # Compatible Implementations
 

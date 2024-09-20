@@ -17,7 +17,7 @@ and object/relational mapping in Java(R) environments.
 * [Jakarta Persistence 3.0 TCK](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Adds JDK 11 support [Jakarta Persistence 3.0.2 TCK](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.2.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.2.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.2.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.persistence:jakarta.persistence-api:jar:3.0.0](https://search.maven.org/artifact/jakarta.persistence/jakarta.persistence-api/3.0.0/jar)
+  * [jakarta.persistence:jakarta.persistence-api:jar:3.0.0](https://central.sonatype.com/artifact/jakarta.persistence/jakarta.persistence-api/3.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
   * [EclipseLink 3.0.0](https://www.eclipse.org/eclipselink)
 

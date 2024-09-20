@@ -13,7 +13,7 @@ these permissions.
 * [Jakarta Authorization 1.5 Javadoc](./apidocs)
 * [Jakarta Authorization 1.5 TCK](https://download.eclipse.org/jakartaee/authorization/1.5/jakarta-authorization-tck-1.5.1.zip) ([sig](https://download.eclipse.org/jakartaee/authorization/1.5/jakarta-authorization-tck-1.5.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/authorization/1.5/jakarta-authorization-tck-1.5.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.authorization:jakarta.authorization-api:jar:1.5.0](https://search.maven.org/artifact/jakarta.authorization/jakarta.authorization-api/1.5.0/jar)
+  * [jakarta.authorization:jakarta.authorization-api:jar:1.5.0](https://central.sonatype.com/artifact/jakarta.authorization/jakarta.authorization-api/1.5.0/jar)
 
 # Ballots
 

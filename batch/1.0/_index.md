@@ -10,7 +10,7 @@ Jakarta Batch specifies a Java API plus an XML-based job specification language 
 * [Jakarta Batch 1.0 Javadoc](./apidocs)
 * [Jakarta Batch 1.0 TCK](https://download.eclipse.org/jakartaee/batch/1.0/jakarta.batch.official.tck-1.0.2.zip) ([sig](https://download.eclipse.org/jakartaee/batch/1.0/jakarta.batch.official.tck-1.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/batch/1.0/jakarta.batch.official.tck-1.0.2.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.batch:jakarta.batch-api:jar:1.0.2](https://search.maven.org/artifact/jakarta.batch/jakarta.batch-api/1.0.2/jar)
+  * [jakarta.batch:jakarta.batch-api:jar:1.0.2](https://central.sonatype.com/artifact/jakarta.batch/jakarta.batch-api/1.0.2/jar)
 
 # Ballots
 

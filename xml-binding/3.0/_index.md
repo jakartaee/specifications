@@ -16,7 +16,7 @@ between XML documents and Java objects.
    * Adds JDK 11 Support [Jakarta XML Binding 3.0.1 TCK](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * Adds JDK 12, 17 Support [Jakarta XML Binding 3.0.2 TCK](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.2.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.2.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-binding/3.0/jakarta-xml-binding-tck-3.0.2.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1](https://search.maven.org/artifact/jakarta.xml.bind/jakarta.xml.bind-api/3.0.1/jar)
+  * [jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1](https://central.sonatype.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api/3.0.1/jar)
 * [Change Log](./changelog)
 
 
