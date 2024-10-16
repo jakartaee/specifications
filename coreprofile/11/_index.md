@@ -1,13 +1,17 @@
 ---
-title: "Jakarta EE Core Profile 11 (Under development)"
-date: 2023-07-17
+title: "Jakarta EE Core Profile 11"
+date: 2024-10-16
 summary: "Release of the Jakarta EE Core Profile 11"
 ---
 The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifically targeted at smaller runtimes.
 
 ### New features, enhancements or additions
 <!-- List here -->
-* Support for Java Records 
+* Updates of the dependencies for Jakarta EE 11
+  * Jakarta Annotations 2.1 to 3.0
+  * Jakarta Interceptors 2.1 to 2.2
+  * Jakarta Contexts and Dependency Injection 4.0 to 4.1
+  * Jakarta RESTful Web Services 3.1 to 4.0
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
@@ -28,8 +32,8 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
    * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0-M4](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-core-api/11.0.0-M4/jar)
 
 <!--
-* [Jakarta Core Profile 10.0 TCK](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip)
-  ([sig](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-10.0.0.zip.sig),
+* [Jakarta Core Profile 11.0 TCK](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip)
+  ([sig](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
   -->
