@@ -39,7 +39,7 @@ earlier releases.
 * First service release [Jakarta RESTful Web Services 4.0.1 TCK]
 (https://download.eclipse.org/jakartaee/restful-ws/4.0/jakarta-restful-ws-tck-4.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/restful-ws/4.0/jakarta-restful-ws-tck-4.0.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/restful-ws/4.0/jakarta-restful-ws-tck-4.0.1.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-    * [jakarta.jaxrs:jakarta.jaxrs-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.ws.rs/jakarta.ws.rs-api/4.0.0/jar)
+    * [jakarta.ws.rs:jakarta.ws.rs-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.ws.rs/jakarta.ws.rs-api/4.0.0/jar)
 
 # Compatible Implementations
 * [RESTEasy 7.0.0.Alpha1](https://github.com/resteasy/resteasy/releases/tag/7.0.0.Alpha1)
