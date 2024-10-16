@@ -62,7 +62,7 @@ None - first release
   * First service release [Jakarta Data 1.0.1 TCK](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.1.zip), ([sig](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.1.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * Signature tests are included with the TCK and run automatically as part of it
 * Maven coordinates
-  * [jakarta-data-api:jakarta.data:jar:1.0.1](https://repo1.maven.org/maven2/jakarta/data/jakarta.data-api/1.0.1/)
+  * [jakarta.data:jakarta.data-api:jar:1.0.1](https://central.sonatype.com/artifact/jakarta.data/jakarta.data-api/1.0.1/jar)
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
   * Persistence (Hibernate): https://github.com/jakartaee/data/issues/714
   * Persistence (Open Liberty): https://github.com/jakartaee/data/issues/741
