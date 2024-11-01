@@ -30,11 +30,16 @@ Jakarta Messaging describes a means for Java applications to create, send, and r
 * [Jakarta Messaging 3.1 TCK](https://download.eclipse.org/jakartaee/messaging/3.1/jakarta-messaging-tck-3.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/messaging/3.1/jakarta-messaging-tck-3.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/messaging/3.1/jakarta-messaging-tck-3.1.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.jms:jakarta.jms-api:jar:3.1.0](https://central.sonatype.com/artifact/jakarta.jms/jakarta.jms-api/3.1.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * [Eclipse OpenMQ 6.3.0](https://repo1.maven.org/maven2/org/glassfish/mq/mq-distribution/6.3.0/mq-distribution-6.3.0.zip)
+
+# Compatible Implementations
+* [Eclipse OpenMQ 6.3.0](https://repo1.maven.org/maven2/org/glassfish/mq/mq-distribution/6.3.0/mq-distribution-6.3.0.zip)
+* [Eclipse OpenMQ 6.4.0](https://repo1.maven.org/maven2/org/glassfish/mq/mq-distribution/6.4.0/mq-distribution-6.4.0.zip)
+
 
 # Compatible Implementations
 
-* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-  * [Eclipse OpenMQ 6.3.0](https://repo1.maven.org/maven2/org/glassfish/mq/mq-distribution/6.3.0/mq-distribution-6.3.0.zip)
 
 # Ballots
 
