@@ -34,7 +34,7 @@ Jakarta Messaging describes a means for Java applications to create, send, and r
 # Compatible Implementations
 
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-  * [Eclipse OpenMQ 6.3.0-RC1](https://jakarta.oss.sonatype.org/content/repositories/staging/org/glassfish/mq/mq-distribution/6.3.0-RC1/mq-distribution-6.3.0-RC1.zip)
+  * [Eclipse OpenMQ 6.3.0](https://repo1.maven.org/maven2/org/glassfish/mq/mq-distribution/6.3.0/mq-distribution-6.3.0.zip)
 
 # Ballots
 
