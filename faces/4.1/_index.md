@@ -40,13 +40,13 @@ The removes references to the SecurityManager, further aligns with CDI where pos
 * [Jakarta Faces 4.1 Jsdoc](./jsdoc)
 * [Jakarta Faces 4.1 Renderkitdoc](./renderkitdoc)
 * [Jakarta Faces 4.1 VDLDoc](./vdldoc)
-* [Jakarta Faces 4.1 TCK](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Faces 4.1 TCK](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.1.zip) ([sig](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.1.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.faces:jakarta.faces-api:jar:4.1.0](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/4.1.0/jar)
+  * [jakarta.faces:jakarta.faces-api:jar:4.1.1](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/4.1.1/jar)
 
 # Compatible Implementations
 
- * [Mojarra 4.1.0](https://github.com/eclipse-ee4j/mojarra/releases/tag/4.1.0-RELEASE)
+ * [Mojarra 4.1.1](https://github.com/eclipse-ee4j/mojarra/releases/tag/4.1.1-RELEASE)
     * [Eclipse Glassfish 8.0.0-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-M6/glassfish-8.0.0-M6.zip) (JDK 21)
     * [Eclipse Glassfish 8.0.0-JDK-17-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-JDK17-M6/) (JDK 17)
 
