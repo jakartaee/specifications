@@ -31,12 +31,10 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
 * Maven coordinates
    * [jakarta.platform:jakarta.jakartaee-core-api:jar:11.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-core-api/11.0.0/jar)
 
-<!--
 * [Jakarta Core Profile 11.0 TCK](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip)
   ([sig](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  -->
 # Compatible Implementations
 
 Compatible Implementations of the Jakarta EE Core Profile specification are eligible to use the _Jakarta EE Compatible_ logo. For more information, see [Get Listed](/compatibility/get-listed/).
