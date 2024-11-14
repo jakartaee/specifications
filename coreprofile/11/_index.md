@@ -35,6 +35,10 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
   ([sig](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/coreprofile/11/jakarta-core-profile-tck-11.0.0.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+  * WildFly
+  * Open Liberty
+
 # Compatible Implementations
 
 Compatible Implementations of the Jakarta EE Core Profile specification are eligible to use the _Jakarta EE Compatible_ logo. For more information, see [Get Listed](/compatibility/get-listed/).
