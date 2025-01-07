@@ -33,8 +33,8 @@ The release aims to evolve the API in a smaller way to support the overall goals
 # Compatible Implementations
 
  * [Epicyro 3.1.0](https://github.com/eclipse-ee4j/epicyro/releases/download/3.1.0-RELEASE/epicyro-3.1.0.jar)
- * [Eclipse Glassfish 8.0.0-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-M6/glassfish-8.0.0-M7.zip) (JDK 21)
- * [Eclipse Glassfish 8.0.0-JDK-17-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-JDK17-M7/) (JDK 17)
+ * [Eclipse Glassfish 8.0.0-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-M6/glassfish-8.0.0-M6.zip) (JDK 21)
+ * [Eclipse Glassfish 8.0.0-JDK-17-M6](https://repo1.maven.org/maven2/org/glassfish/main/distributions/glassfish/8.0.0-JDK17-M6/) (JDK 17)
 
 # Ballots
 
