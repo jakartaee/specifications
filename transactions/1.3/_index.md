@@ -3,7 +3,9 @@ title: "Jakarta Transactions 1.3"
 date: 2019-09-10
 summary: "First release for Jakarta EE 8"
 ---
-Jakarta Transactions
+Jakarta Transactions.
+
+This specification is a re-release of [JSR 907](http://jcp.org/en/jsr/detail?id=907) under the [EFSL](https://www.eclipse.org/legal/efsl/).
 
 * [Jakarta Transactions 1.3 Specification Document](./transactions-spec-1.3.pdf) (PDF)
 * [Jakarta Transactions 1.3 Specification Document](./transactions-spec-1.3.html) (HTML)

@@ -6,6 +6,8 @@ summary: "First release for Jakarta EE 8"
 
 Jakarta Enterprise Beans defines an architecture for the development and deployment of component-based business applications.
 
+This specification is a re-release of [JSR 345](http://jcp.org/en/jsr/detail?id=345) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Enterprise Beans 3.2 Specification Document](./enterprise-beans-spec-3.2.pdf) (PDF)
 * [Jakarta Enterprise Beans 3.2 Specification Document](./enterprise-beans-spec-3.2.html) (HTML)
 * [Jakarta Enterprise Beans 3.2 Javadoc](./apidocs)

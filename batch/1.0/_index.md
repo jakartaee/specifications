@@ -5,6 +5,8 @@ summary: "First release for Jakarta EE 8"
 ---
 Jakarta Batch specifies a Java API plus an XML-based job specification language (JSL), which lets you compose batch jobs in XML from reusable Java application artifacts and conveniently parameterize different executions of a single job.
 
+This specification is a re-release of [JSR 352](http://jcp.org/en/jsr/detail?id=352) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Batch 1.0 Specification Document](./batch-spec-1.0.pdf) (PDF)
 * [Jakarta Batch 1.0 Specification Document](./batch-spec-1.0.html) (HTML)
 * [Jakarta Batch 1.0 Javadoc](./apidocs)

@@ -6,6 +6,8 @@ summary: "First release for Jakarta EE 8"
 Jakarta JSON Processing defines a Java(R) based framework for parsing, generating, transforming, and
 querying JSON documents.
 
+This specification is a re-release of [JSR 374](http://jcp.org/en/jsr/detail?id=374) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta JSON Processing 1.1 Specification Document](./jsonp-spec-1.1.pdf) (PDF)
 * [Jakarta JSON Processing 1.1 Specification Document](./jsonp-spec-1.1.html) (HTML)
 * [Jakarta JSON Processing 1.1 Javadoc](./apidocs)

@@ -6,6 +6,8 @@ summary: "Initial version of the Jakarta Annotations spec for Jakarta EE 8."
 Jakarta Annotations defines a collection of annotations representing common semantic concepts that
 enable a declarative style of programming that applies across a variety of Java technologies.
 
+This specification is a re-release of [JSR 250](http://jcp.org/en/jsr/detail?id=250) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Annotations 1.3 Specification Document](./annotations-spec-1.3.pdf) (PDF)
 * [Jakarta Annotations 1.3 Specification Document](./annotations-spec-1.3.html) (HTML)
 * [Jakarta Annotations 1.3 Javadoc](./apidocs)
