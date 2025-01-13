@@ -5,7 +5,7 @@ summary: "Jakarta EE 8 Release."
 ---
 Jakarta Concurrency provides a specification for using concurrency from application components without compromising container integrity while still preserving the Jakarta EE platform's fundamental benefits.
 
-This specification is a re-release of [JSR 365](http://jcp.org/en/jsr/detail?id=365) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+This specification is a re-release of [JSR 236](http://jcp.org/en/jsr/detail?id=236) under the [EFSL](https://www.eclipse.org/legal/efsl/).
 
 * [Jakarta Concurrency 1.1 Specification Document](./concurrency-spec-1.1.pdf) (PDF)
 * [Jakarta Concurrency 1.1 Specification Document](./concurrency-spec-1.1.html) (HTML)
