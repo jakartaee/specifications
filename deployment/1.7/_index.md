@@ -6,6 +6,8 @@ summary: "First release for Jakarta EE 8"
 Jakarta Deployment defines standard APIs that will enable any deployment tool that uses the
 deployment APIs to deploy any assembled application onto a Jakarta EE compatible platform.
 
+This specification is a re-release of Java EE Application Deployment 1.2 [JSR 88](http://jcp.org/en/jsr/detail?id=88) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Deployment 1.7 Specification Document](./deployment-spec-1.7.pdf) (PDF)
 * [Jakarta Deployment 1.7 Specification Document](./deployment-spec-1.7.html) (HTML)
 * [Jakarta Deployment 1.7 Javadoc](./apidocs)

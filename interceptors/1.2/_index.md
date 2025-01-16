@@ -7,6 +7,8 @@ Jakarta Interceptors defines a means of interposing on business method invocatio
 events—such as lifecycle events and timeout events—that occur on instances of Jakarta EE components 
 and other managed classes.
 
+This specification is a re-release of [JSR 318](http://jcp.org/en/jsr/detail?id=318) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Interceptors 1.2 Specification Document](./interceptors-spec-1.2.pdf) (PDF)
 * [Jakarta Interceptors 1.2 Specification Document](./interceptors-spec-1.2.html) (HTML)
 * [Jakarta Interceptors 1.2 Javadoc](./apidocs)

@@ -6,6 +6,8 @@ summary: "First release for Jakarta EE 8"
 
 Jakarta Mail defines a platform-independent and protocol-independent framework to build mail and messaging applications.
 
+This specification is a re-release of [JSR 919](http://jcp.org/en/jsr/detail?id=919) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Mail 1.6 Specification Document](./mail-spec-1.6.pdf) (PDF)
 * [Jakarta Mail 1.6 Specification Document](./mail-spec-1.6.html) (HTML)
 * [Jakarta Mail 1.6 Javadoc](./apidocs)

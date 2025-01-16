@@ -8,6 +8,8 @@ services that enable sharing of information between interested parties.
 The shared information is maintained as objects in a compliant registry.
 All access to registry content is exposed via the interfaces defined for the Registry Services.
 
+This specification is a re-release of [JSR 93](http://jcp.org/en/jsr/detail?id=93) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta XML Registries 1.0 Specification Document](./xml-registries-spec-1.0.pdf) (PDF)
 * [Jakarta XML Registries 1.0 Specification Document](./xml-registries-spec-1.0.html) (HTML)
 * [Jakarta XML Registries 1.0 Javadoc](./apidocs)

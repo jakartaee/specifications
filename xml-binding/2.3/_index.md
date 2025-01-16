@@ -6,6 +6,8 @@ summary: "Initial release of Jakarta XML Binding"
 The Jakarta XML Binding provides an API and tools that automate the mapping
 between XML documents and Java objects.
 
+This specification is a re-release of [JSR 222](http://jcp.org/en/jsr/detail?id=222) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta XML Binding 2.3 Specification Document](./xml-binding-spec-2.3.pdf) (PDF)
 * [Jakarta XML Binding 2.3 Specification Document](./xml-binding-spec-2.3.html) (HTML)
 * [Jakarta XML Binding 2.3 Javadoc](./apidocs/index.html?overview-summary.html)

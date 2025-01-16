@@ -10,6 +10,8 @@ and pass an authenticated identity (such as name and groups) to the container.
 Jakarta Authentication consists of several profiles, with each profile telling how a specific container
 (such as Jakarta Servlet) can integrate with- and adapt to this SPI.
 
+This specification is a re-release of [JSR 196](http://jcp.org/en/jsr/detail?id=196) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Authentication 1.1 Specification Document](./authentication-spec-1.1.pdf) (PDF)
 * [Jakarta Authentication 1.1 Specification Document](./authentication-spec-1.1.html) (HTML)
 * [Jakarta Authentication 1.1 Javadoc](./apidocs)

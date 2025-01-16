@@ -8,6 +8,8 @@ use of metadata, a non-normative processing model for metadata annotated web ser
 source files, runtime requirements for a container, and annotations used for WSDL,
 binding, and configuration.
 
+This specification is a re-release of [JSR 181](http://jcp.org/en/jsr/detail?id=181) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Web Services Metadata 2.1 Specification Document](./ws-metadata-spec-2.1.pdf) (PDF)
 * [Jakarta Web Services Metadata 2.1 Specification Document](./ws-metadata-spec-2.1.html) (HTML)
 * [Jakarta Web Services Metadata 2.1 Javadoc](./apidocs/index.html?overview-summary.html)

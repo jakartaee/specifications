@@ -6,6 +6,8 @@ summary: "Initial release of Management API 1.1 for Jakarta EE 8"
 Jakarta Management defines a standard management model for exposing and accessing the management information,
 operations, and parameters of the Jakarta EE Platform components.
 
+This specification is a re-release of [JSR 77](http://jcp.org/en/jsr/detail?id=77) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Management 1.1 Specification Document](./management-spec-1.1.pdf) (PDF)
 * [Jakarta Management 1.1 Specification Document](./management-spec-1.1.html) (HTML)
 * [Jakarta Management 1.1 Javadoc](./apidocs)

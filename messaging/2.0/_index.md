@@ -6,6 +6,8 @@ summary: "Final release for Jakarta EE 8"
 
 Jakarta Messaging describes a means for Java applications to create, send, and receive messages via loosely coupled, reliable asynchronous communication services.
 
+This specification is a re-release of [JSR 343](http://jcp.org/en/jsr/detail?id=343) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Messaging 2.0 Specification Document](./messaging-spec-2.0.pdf) (PDF)
 * [Jakarta Messaging 2.0 Specification Document](./messaging-spec-2.0.html) (HTML)
 * [Jakarta Messaging 2.0 Javadoc](./apidocs)

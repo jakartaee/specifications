@@ -5,6 +5,8 @@ summary: "First release for Jakarta EE 8"
 ---
 Jakarta JSON Binding defines a binding framework for converting Java(R) objects to and from JSON documents.
 
+This specification is a re-release of [JSR 367](http://jcp.org/en/jsr/detail?id=367) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta JSON Binding 1.0 Specification Document](./jsonb-spec-1.0.pdf) (PDF)
 * [Jakarta JSON Binding 1.0 Specification Document](./jsonb-spec-1.0.html) (HTML)
 * [Jakarta JSON Binding 1.0 Javadoc](./apidocs)

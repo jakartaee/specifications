@@ -8,6 +8,8 @@ MIME type of an arbitrary piece of data; encapsulate access to it;
 discover the operations available on it; and instantiate the
 appropriate bean to perform the operation(s).
 
+This specification is a re-release of [JSR 925](http://jcp.org/en/jsr/detail?id=925) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Activation 1.2 Specification Document](./activation-spec-1.2.pdf) (PDF)
 * [Jakarta Activation 1.2 Specification Document](./activation-spec-1.2.html) (HTML)
 * [Jakarta Activation 1.2 Javadoc](./apidocs)

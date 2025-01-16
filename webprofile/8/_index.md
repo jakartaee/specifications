@@ -5,6 +5,8 @@ summary: "Initial release of the Jakarta EE 8 Web Profile"
 ---
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
 
+This specification is a re-release of [JSR 366](http://jcp.org/en/jsr/detail?id=366) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta EE Web Profile 8 Specification Document](./webprofile-spec-8.pdf) (PDF)
 * [Jakarta EE Web Profile 8 Specification Document](./webprofile-spec-8.html) (HTML)
 * [Jakarta EE Web Profile 8 Javadoc](./apidocs)
