@@ -9,12 +9,12 @@ Jakarta NoSQL is a Java framework that streamlines the integration of Java appli
 
 ## Goals
 
-* Increase productivity performing common NoSQL operations
-* Rich Object Mapping integrated
-* Java-based Query and Fluent-API
-* Template API to do NoSQL operations
-* Template specializations by NoSQL types (Key-value, Column and Document)
-* Annotation-oriented using JPA-like naming when it makes sense
+* Increase productivity performing common NoSQL operations.
+* Rich Object Mapping integrated.
+* Java-based Query and Fluent-API.
+* It is designed to work with various NoSQL databases and can quickly adapt to support new types and behaviors through extensions.
+* Annotation-oriented using Jakarta Persistence-like naming when it makes sense.
+
 
 ```java
 @Inject
@@ -46,8 +46,8 @@ template.delete(Car.class, 1L);
 
 
 * [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-M1.pdf) (PDF)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-M1.html) (HTML)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0.pdf) (PDF)
+* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
 * Maven coordinates
   * [jakarta-nosql-api:jakarta.nosql:jar:1.0.0-M1](https://repo1.maven.org/maven2/jakarta/nosql/jakarta.nosql-api/1.0.0-M1/)
