@@ -51,7 +51,7 @@ template.delete(Car.class, 1L);
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
 * Maven coordinates
   * [jakarta-nosql-api:jakarta.nosql:jar:1.0.0](https://repo1.maven.org/maven2/jakarta/nosql/jakarta.nosql-api/1.0.0)
-
+* [Jakarta NoSQL 1.0 TCK](nosql-tck-1.0.0.zip), ([sig](nosql-tck-1.0.0.zip.sig), [sha](nosql-tck-1.0.0.zip.sha256)
 
 # Compatible Implementations
 
