@@ -1,5 +1,5 @@
 ---
-title: "Jakarta NoSQL 1.0 (under development)"
+title: "Jakarta NoSQL 1.0"
 date: 2023-05-30
 summary: "Release supporting Jakarta EE 11"
 ---
