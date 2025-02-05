@@ -66,11 +66,11 @@ None - first release
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
   * Persistence (Hibernate): https://github.com/jakartaee/data/issues/714
   * Persistence (Open Liberty): https://github.com/jakartaee/data/issues/741
-<!-- TODO add NoSQL once they have submitted a CCR -->
 
 # Compatible Implementations
 
 * [Hibernate 6.6](https://hibernate.org/orm/releases/6.6/)
+* [Eclipse JNoSQL 1.1.4](https://github.com/eclipse-jnosql/jnosql/releases/tag/1.1.4)
 * [Open Liberty 24.0.0.6](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/tck/2024-05-06_1951/openliberty-24.0.0.6-beta.zip)
 
 # Ballots
