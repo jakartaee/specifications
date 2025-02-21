@@ -1,7 +1,7 @@
 ---
 title: "Jakarta NoSQL 1.0"
 date: 2023-05-30
-summary: "Release supporting Jakarta EE 11"
+summary: "Jakarta NoSQL 1.0 is not included in Jakarta EE 11"
 ---
 
 Jakarta NoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases.
