@@ -5,6 +5,8 @@ summary: "First release for Jakarta EE 8"
 ---
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
 
+This specification is a re-release of [JSR 369](http://jcp.org/en/jsr/detail?id=369) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Servlet 4.0 Specification Document](./servlet-spec-4.0.pdf) (PDF)
 * [Jakarta Servlet 4.0 Specification Document](./servlet-spec-4.0.html) (HTML)
 * [Jakarta Servlet 4.0 Javadoc](./apidocs)
