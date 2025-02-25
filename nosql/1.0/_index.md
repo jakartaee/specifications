@@ -30,11 +30,65 @@ Optional<Car> car = template.find(Car.class, 1L);
 template.delete(Car.class, 1L);
 ```
 
+```java
+@Entity
+public class Car {
+
+    @Id
+    private Long id;
+    @Column
+    private String name;
+    @Column
+    private CarType type;
+ //...
+}
+```
+
+The annotations from the Mapping API will look familiar to Jakarta Persistence developers:
+
+| Annotation             | Description                                                                                                                                     |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| `@Entity`              | Specifies that the class is an entity. This annotation is applied to the entity class.                                                         |
+| `@Id`                  | Specifies the primary key of an entity.                                                                                                        |
+| `@Column`              | Specifies the mapped column for a persistent property or field.                                                                                |
+| `@MappedSuperclass`    | Specifies a class whose mapping information is applied to entities that inherit from it.                                                       |
+| `@Embeddable`          | Declares a class whose instances are stored as an intrinsic part of an owning entity, sharing the identity of the entity.                      |
+| `@Inheritance`         | Specifies the inheritance mapping strategy for the entity class hierarchy.                                                                     |
+| `@DiscriminatorColumn` | Specifies the discriminator column for the mapping strategy.                                                                                   |
+| `@DiscriminatorValue`  | Specifies the value of the discriminator column for the annotated entity type.                                                                 |
+| `@Convert`             | Specifies how the values of a field or property are converted to a basic type or a type that can be persisted by a persistence provider.       |
+
+These annotations provide a powerful toolkit for defining and mapping entities in NoSQL databases, analogous to their counterparts in Jakarta Persistence.
+
+
+After mapping an entity, you can explore the advantage of using a `Template` interface, which can increase productivity on NoSQL operations.
+
+```java
+@Inject
+Template template;
+...
+
+Car ferrari = Car.id(1L)
+        .name("Ferrari")
+        .type(CarType.SPORT);
+
+template.insert(ferrari);
+Optional<Car> car = template.find(Car.class, 1L);
+template.delete(Car.class, 1L);
+
+var cars = template.select(Car.class).where("type").eq(CarType.SPORT).result();
+```
+
+
 ### New features, enhancements or additions
-<!-- List here -->
+
 * The mapping annotations (Entity, Id and Column)
 * The Template that increase productivity on NoSQL operations.
-* Three Template specializations (DocumentTemplate, ColumnTemplate, KeyValueTemplate)
+
+
+###  Removals, deprecations or backwards incompatible changes
+
+None - first release
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
