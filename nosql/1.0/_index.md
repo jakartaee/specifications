@@ -1,7 +1,7 @@
 ---
 title: "Jakarta NoSQL 1.0"
 date: 2023-05-30
-summary: "Jakarta NoSQL 1.0 is not included in Jakarta EE 11"
+summary: "Jakarta NoSQL 1.0 offers a standardized API for integrating NoSQL databases with Jakarta EE applications, which improves productivity and interoperability across different NoSQL technologies. Although it is not part of Jakarta EE 11, the aim is to lay the groundwork for its future inclusion in the platform."
 ---
 
 Jakarta NoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases.
