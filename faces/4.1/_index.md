@@ -22,8 +22,8 @@ The removes references to the SecurityManager, further aligns with CDI where pos
 
 ### Removals, deprecations or backwards incompatible changes
 * Deprecate full state saving (FSS)
-* Remove unused PreDestroyCustomScopeEvent and PostConstructCustomScopeEvent
-* Remove unused composite:extension
+* Deprecate unused PreDestroyCustomScopeEvent and PostConstructCustomScopeEvent
+* Deprecate unused composite:extension
 * Remove references to the SecurityManager
 
 ### Minimum Java SE Version
