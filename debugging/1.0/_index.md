@@ -8,6 +8,8 @@ programs executed under the Java virtual machine but written in languages
 other than the Java programming language, can be debugged with references to
 the original source (for example, source file and line number references).
 
+This specification is a re-release of [JSR 45](http://jcp.org/en/jsr/detail?id=45) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Debugging Support for Other Languages 1.0 Specification Document](./debugging_1.0.pdf) (PDF)
 * [Jakarta Debugging Support for Other Languages 1.0 Specification Document](./debugging_1.0.html) (HTML)
 * [Jakarta Debugging Support for Other Languages TCK](https://download.eclipse.org/jakartaee/debugging/1.0/jakarta-debugging-tck-1.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/debugging/1.0/jakarta-debugging-tck-1.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/debugging/1.0/jakarta-debugging-tck-1.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))

@@ -6,6 +6,8 @@ summary: "First release for Jakarta EE 8"
 Jakarta Persistence defines a standard for management of persistence
 and object/relational mapping in Java(R) environments.
 
+This specification is a re-release of [JSR 338](http://jcp.org/en/jsr/detail?id=338) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Persistence 2.2 Specification Document](./persistence_2.2.pdf) (PDF)
 * [Jakarta Persistence 2.2 Specification Document](./persistence_2.2.html) (HTML)
 * [Jakarta Persistence 2.2 Javadoc](./apidocs)

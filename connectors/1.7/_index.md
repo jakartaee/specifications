@@ -5,6 +5,8 @@ summary: "Jakarta EE 8 Connectors Specification."
 ---
 The Jakarta Connectors specification defines a standard architecture for Jakarta EE application components to connect to Enterprise Information Systems.
 
+This specification is a re-release of [JSR 322](http://jcp.org/en/jsr/detail?id=322) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Connectors 1.7 Specification Document](./connectors-spec-1.7.pdf) (PDF)
 * [Jakarta Connectors 1.7 Specification Document](./connectors-spec-1.7.html) (HTML)
 * [Jakarta Connectors 1.7 Javadoc](./apidocs)

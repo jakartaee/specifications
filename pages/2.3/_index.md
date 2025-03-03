@@ -7,6 +7,8 @@ Jakarta Server Pages defines a template engine for web applications that support
 (including HTML and XML) with custom tags, expression language, and embedded Java code, that gets compiled
 into a Jakarta Servlet.
 
+This specification is a re-release of [JSR 245](http://jcp.org/en/jsr/detail?id=245) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Server Pages 2.3 Specification Document](./pages-spec-2.3.pdf) (PDF)
 * [Jakarta Server Pages 2.3 Specification Document](./pages-spec-2.3.html) (HTML)
 * [Jakarta Server Pages 2.3 Javadoc](./apidocs)

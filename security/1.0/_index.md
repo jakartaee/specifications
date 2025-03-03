@@ -5,6 +5,8 @@ summary: "First release for Jakarta EE 8"
 ---
 Jakarta Security defines a standard for creating secure Jakarta EE applications in modern application paradigms.
 
+This specification is a re-release of [JSR 375](http://jcp.org/en/jsr/detail?id=375) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Security 1.0 Specification Document](./security-spec-1.0.pdf) (PDF)
 * [Jakarta Security 1.0 Specification Document](./security-spec-1.0.html) (HTML)
 * [Jakarta Security 1.0 Javadoc](./apidocs)

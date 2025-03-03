@@ -5,6 +5,8 @@ summary: "Initial Jakarta release of Jakarta Bean Validation"
 ---
 Jakarta Bean Validation defines a metadata model and API for JavaBean and method validation.
 
+This specification is a re-release of [JSR 380](http://jcp.org/en/jsr/detail?id=380) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Bean Validation 2.0 Specification Document](./bean-validation_2.0.pdf) (PDF)
 * [Jakarta Bean Validation 2.0 Specification Document](./bean-validation_2.0.html) (HTML)
 * [Jakarta Bean Validation 2.0 Javadoc](./apidocs)
