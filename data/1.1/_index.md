@@ -7,21 +7,23 @@ summary: "Enhancements to the Jakarta Data spec"
 ---
 
 ### New features, enhancements or additions
-* Ability to define query restrictions dynamically (https://github.com/jakartaee/data/issues/829)
-* Life cycle events (https://github.com/jakartaee/data/issues/373)
-* Bring parameter based automatic query methods up to the level of what Query by Method Name can do for static queries (https://github.com/jakartaee/data/issues/857)
-* Query Fragments (https://github.com/jakartaee/data/issues/546)
-* Multiple item select lists/DTOs/Entity Views (https://github.com/jakartaee/data/issues/539)
-* Consider additional annotations related to Jakarta Persistence (https://github.com/jakartaee/data/issues/470)
-* Reactive patterns (#17) and integration with Jakarta Concurrency Asynchronous (https://github.com/jakartaee/data/issues/19)
+
+* [Ability to define query restrictions dynamically](https://github.com/jakartaee/data/issues/829)
+* [Life cycle events](https://github.com/jakartaee/data/issues/373)
+* [Bring parameter based automatic query methods up to the level of what Query by Method Name can do for static queries](https://github.com/jakartaee/data/issues/857)
+* [Query Fragments](https://github.com/jakartaee/data/issues/546)
+* [Multiple item select lists/DTOs/Entity Views](https://github.com/jakartaee/data/issues/539)
+* [Consider additional annotations related to Jakarta Persistence](https://github.com/jakartaee/data/issues/470)
+* [Reactive patterns](https://github.com/jakartaee/data/issues/17) and [integration with Jakarta Concurrency Asynchronous](https://github.com/jakartaee/data/issues/19)
 * Move Jakarta Data Query Language to Jakarta Query specification (if accepted and included in Jakarta EE 12) where it will remain fully compatible.
 * Configuration via Jakarta Config (if Jakarta Config is released and makes it into Jakarta EE 12 in time)
-* Explicitly state where NoSQL databases can raise errors for function the database type is not capable of (https://github.com/jakartaee/data/issues/782)
+* [Explicitly state where NoSQL databases can raise errors for function the database type is not capable of](https://github.com/jakartaee/data/issues/782)
 * TCK refactoring and enhancements to more logically split out tests that are targeted at various levels of database support (key-value, column, document, graph, relational).
 
 
 ### Removals, deprecations or backwards incompatible changes
-* N/A
+
+* Consider deprecating an [impl package](https://github.com/jakartaee/data/tree/main/api/src/main/java/jakarta/data/metamodel/impl) that should not have been made available in the API.
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
