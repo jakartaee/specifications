@@ -33,7 +33,7 @@ summary: "Enhancements to the Jakarta Data spec"
 * [Jakarta Data 1.1 Specification Document](./jakarta-data-1.1.pdf) (PDF) (Does not exist yet)
 * [Jakarta Data 1.1 Specification Document](./jakarta-data-spec-1.1.html) (HTML) (Does not exist yet)
 * [Jakarta Data 1.1 Javadoc](./apidocs) (Does not exist yet)
-* [Jakarta Data 1.1 TCK](http://downloads.eclipse.org/jakarta/data/1.1/data-tck-1.1.0.zip)
+* [Jakarta Data 1.1 TCK](http://downloads.eclipse.org/jakarta/data/1.1/data-tck-1.1.0.zip) (Does not exist yet)
 * Maven coordinates
   * [jakarta.data:jakarta.data-api:jar:1.1.0](https://search.maven.org/artifact/jakarta.data/jakarta.data-api/1.1.0/jar) (Does not exist yet)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
@@ -49,31 +49,33 @@ summary: "Enhancements to the Jakarta Data spec"
 
 The Release Review Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
 
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
+|Representative - Representative for: Vote                  |  Yes    | No      | Abstain  |
+|-----------------------------------------------------------|---------|---------|----------|
+|Kenji Kazumura - Fujitsu                                   |         |         |          |
+|Emily Jiang, Tom Watson - IBM                              |         |         |          |
+|Ed Bratt, Dmitry Kornilov - Oracle                         |         |         |          |
+|Andrew Pielage, Petr Aubrecht - Payara                     |         |         |          |
+|David Blevins, Jean-Louis Monteiro - Tomitribe             |         |         |          |
+|Ivar Grimstad - EE4J PMC                                   |         |         |          |
+|Marcelo Ancelmo, Abraham Marin-Perez - Participant Members |         |         |          |
+|Werner Keil - Committer Members                            |         |         |          |
+|Jun Qian - Enterprise Members                              |         |         |          |
+|Zhai Luchao - Enterprise Members                           |         |         |          |
 
 ## Plan Review
 
 The Plan Review Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
 
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                |         |     |          |
-|IBM                    |         |     |          |
-|Oracle                 |         |     |          |
-|Payara                 |         |     |          |
-|Red Hat                |         |     |          |
-|Tomitribe              |         |     |          |
-|EE4J PMC               |         |     |          |
-|Participant Members    |         |     |          |
-|Committer Members      |         |     |          |
+|Representative - Representative for: Vote                  |  Yes    | No      | Abstain  |
+|-----------------------------------------------------------|---------|---------|----------|
+|Kenji Kazumura - Fujitsu                                   |         |         |          |
+|Emily Jiang, Tom Watson - IBM                              |         |         |          |
+|Ed Bratt, Dmitry Kornilov - Oracle                         |         |         |          |
+|Andrew Pielage, Petr Aubrecht - Payara                     |         |         |          |
+|David Blevins, Jean-Louis Monteiro - Tomitribe             |         |         |          |
+|Ivar Grimstad - EE4J PMC                                   |         |         |          |
+|Marcelo Ancelmo, Abraham Marin-Perez - Participant Members |         |         |          |
+|Werner Keil - Committer Members                            |         |         |          |
+|Jun Qian - Enterprise Members                              |         |         |          |
+|Zhai Luchao - Enterprise Members                           |         |         |          |
 
