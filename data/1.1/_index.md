@@ -1,10 +1,10 @@
-<!-- Template for the root page of a specification release -->
-<!-- The "date:" field is used as a "publish" date for the automated Hugo processing -->
 ---
 title: "Jakarta Data 1.1 (under development)"
 date: 2025-01-28
-summary: "Enhancements to the Jakarta Data spec"
+summary: "Enhancements for Jakarta EE 12"
 ---
+
+Jakarta Data simplifies data access by allowing you to represent data with simple Java objects (entities), and define interfaces (repositories) with methods that perform operations on it.
 
 ### New features, enhancements or additions
 
@@ -27,7 +27,7 @@ summary: "Enhancements to the Jakarta Data spec"
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**21**
+* **Java SE 21 or higher**
 
 # Details
 
