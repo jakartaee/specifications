@@ -99,7 +99,7 @@ None - first release
 * [Jakarta NoSQL 1.0 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.0)
 
 
-* [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
+* [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.0)
 * [Jakarta NoSQL 1.0 Specification Document](./jakarta-nosql-1.0.0.pdf) (PDF)
 * [Jakarta NoSQL 1.0 Specification Document](./jakarta-nosql-1.0.0.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
