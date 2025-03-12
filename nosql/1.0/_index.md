@@ -1,7 +1,7 @@
 ---
-title: "Jakarta NoSQL 1.0 (under development)"
+title: "Jakarta NoSQL 1.0"
 date: 2023-05-30
-summary: "Release supporting Jakarta EE 11"
+summary: "Jakarta NoSQL 1.0 offers a standardized API for integrating NoSQL databases with Jakarta EE applications, which improves productivity and interoperability across different NoSQL technologies. Although it is not part of Jakarta EE 11, the aim is to lay the groundwork for its future inclusion in the platform."
 ---
 
 Jakarta NoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases.
@@ -9,12 +9,12 @@ Jakarta NoSQL is a Java framework that streamlines the integration of Java appli
 
 ## Goals
 
-* Increase productivity performing common NoSQL operations
-* Rich Object Mapping integrated
-* Java-based Query and Fluent-API
-* Template API to do NoSQL operations
-* Template specializations by NoSQL types (Key-value, Column and Document)
-* Annotation-oriented using JPA-like naming when it makes sense
+* Increase productivity performing common NoSQL operations.
+* Rich Object Mapping integrated.
+* Java-based Query and Fluent-API.
+* It is designed to work with various NoSQL databases and can quickly adapt to support new types and behaviors through extensions.
+* Annotation-oriented using Jakarta Persistence-like naming when it makes sense.
+
 
 ```java
 @Inject
@@ -30,11 +30,65 @@ Optional<Car> car = template.find(Car.class, 1L);
 template.delete(Car.class, 1L);
 ```
 
+```java
+@Entity
+public class Car {
+
+    @Id
+    private Long id;
+    @Column
+    private String name;
+    @Column
+    private CarType type;
+ //...
+}
+```
+
+The annotations from the Mapping API will look familiar to Jakarta Persistence developers:
+
+| Annotation             | Description                                                                                                                                     |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| `@Entity`              | Specifies that the class is an entity. This annotation is applied to the entity class.                                                         |
+| `@Id`                  | Specifies the primary key of an entity.                                                                                                        |
+| `@Column`              | Specifies the mapped column for a persistent property or field.                                                                                |
+| `@MappedSuperclass`    | Specifies a class whose mapping information is applied to entities that inherit from it.                                                       |
+| `@Embeddable`          | Declares a class whose instances are stored as an intrinsic part of an owning entity, sharing the identity of the entity.                      |
+| `@Inheritance`         | Specifies the inheritance mapping strategy for the entity class hierarchy.                                                                     |
+| `@DiscriminatorColumn` | Specifies the discriminator column for the mapping strategy.                                                                                   |
+| `@DiscriminatorValue`  | Specifies the value of the discriminator column for the annotated entity type.                                                                 |
+| `@Convert`             | Specifies how the values of a field or property are converted to a basic type or a type that can be persisted by a persistence provider.       |
+
+These annotations provide a powerful toolkit for defining and mapping entities in NoSQL databases, analogous to their counterparts in Jakarta Persistence.
+
+
+After mapping an entity, you can explore the advantage of using a `Template` interface, which can increase productivity on NoSQL operations.
+
+```java
+@Inject
+Template template;
+...
+
+Car ferrari = Car.id(1L)
+        .name("Ferrari")
+        .type(CarType.SPORT);
+
+template.insert(ferrari);
+Optional<Car> car = template.find(Car.class, 1L);
+template.delete(Car.class, 1L);
+
+var cars = template.select(Car.class).where("type").eq(CarType.SPORT).result();
+```
+
+
 ### New features, enhancements or additions
-<!-- List here -->
+
 * The mapping annotations (Entity, Id and Column)
 * The Template that increase productivity on NoSQL operations.
-* Three Template specializations (DocumentTemplate, ColumnTemplate, KeyValueTemplate)
+
+
+###  Removals, deprecations or backwards incompatible changes
+
+None - first release
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
@@ -45,13 +99,14 @@ template.delete(Car.class, 1L);
 * [Jakarta NoSQL 1.0 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.0)
 
 
-* [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/governance)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-M1.pdf) (PDF)
-* [Jakarta NoSQL 1.0 Specification Document](./nosql-1.0.0-M1.html) (HTML)
+* [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.0)
+* [Jakarta NoSQL 1.0 Specification Document](./jakarta-nosql-1.0.pdf) (PDF)
+* [Jakarta NoSQL 1.0 Specification Document](./jakarta-nosql-1.0.html) (HTML)
 * [Jakarta NoSQL 1.0 Specification Javadoc](./apidocs)
 * Maven coordinates
-  * [jakarta-nosql-api:jakarta.nosql:jar:1.0.0-M1](https://repo1.maven.org/maven2/jakarta/nosql/jakarta.nosql-api/1.0.0-M1/)
-
+  * [jakarta-nosql:jakarta.nosql-api:jar:1.0.0](https://repo1.maven.org/maven2/jakarta/nosql/jakarta.nosql-api/1.0.0)
+* [Jakarta NoSQL 1.0 TCK](https://download.eclipse.org/jakartaee/nosql/1.0/nosql-1-0-0-tck.zip), [sha](https://download.eclipse.org/jakartaee/nosql/1.0/nosql-1-0-0-tck.zip.sha256),
+[sig](https://download.eclipse.org/jakartaee/nosql/1.0/nosql-1-0-0-tck.zip.sig)
 
 # Compatible Implementations
 
