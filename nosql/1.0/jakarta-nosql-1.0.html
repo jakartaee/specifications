@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.20">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="author" content="">
 <title>Jakarta NoSQL</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -141,7 +141,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
 #header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
@@ -163,6 +163,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
 #toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
@@ -328,7 +329,7 @@ a.image{text-decoration:none;display:inline-block}
 a.image object{pointer-events:none}
 sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
 sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
 #footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
@@ -528,13 +529,19 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div id="header">
 <h1>Jakarta NoSQL</h1>
 <div class="details">
-<span id="revnumber"> 1.0.0-M1,</span>
-<span id="revdate">March 23, 2024</span>
-<br><span id="revremark">Draft</span>
+<span id="revnumber"> 1.0,</span>
+<span id="revdate">March 10, 2025</span>
+<br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
+<li><a href="#_copyright">Copyright</a>
+<ul class="sectlevel2">
+<li><a href="#_eclipse_foundation_specification_license_v1_1">Eclipse Foundation Specification License - v1.1</a></li>
+<li><a href="#_disclaimers">Disclaimers</a></li>
+</ul>
+</li>
 <li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#_goal">1.1. Goal</a></li>
@@ -559,10 +566,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_persistent_fields">2.1.1. Persistent Fields</a></li>
 <li><a href="#basic_types">2.1.2. Basic Types</a></li>
 <li><a href="#embeddable_definition">2.1.3. Embedded Fields and Embeddable Classes </a></li>
-<li><a href="#_entity_associations">2.1.4. Entity Associations</a></li>
-<li><a href="#_collections_of_embeddable_classes_and_basic_types">2.1.5. Collections of Embeddable Classes and Basic Types</a></li>
-<li><a href="#_map_collections">2.1.6. Map Collections</a></li>
-<li><a href="#_entity_property_names">2.1.7. Entity Property Names</a></li>
+<li><a href="#_array_support">2.1.4. Array Support</a></li>
+<li><a href="#_entity_associations">2.1.5. Entity Associations</a></li>
+<li><a href="#_collections_of_embeddable_classes_and_basic_types">2.1.6. Collections of Embeddable Classes and Basic Types</a></li>
+<li><a href="#_map_collections">2.1.7. Map Collections</a></li>
+<li><a href="#_entity_property_names">2.1.8. Entity Property Names</a></li>
 </ul>
 </li>
 </ul>
@@ -633,18 +641,99 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta NoSQL
 
-Version: 1.0.0-M1
+Version: 1.0
 
-Status: Draft
+Status: Final
 
-Release: March 23, 2024
-
-Copyright (c) 2020, 2024 Jakarta NoSQL Contributors:
-
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License v. 2.0 which is available at
-<a href="https://www.eclipse.org/legal/epl-2.0" class="bare">https://www.eclipse.org/legal/epl-2.0</a>.</pre>
+Release: March 10, 2025</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_copyright"><a class="anchor" href="#_copyright"></a>Copyright</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copyright (c) 2025 Eclipse Foundation.</p>
+</div>
+<div class="sect2">
+<h3 id="_eclipse_foundation_specification_license_v1_1"><a class="anchor" href="#_eclipse_foundation_specification_license_v1_1"></a>Eclipse Foundation Specification License - v1.1</h3>
+<div class="paragraph">
+<p>By using and/or copying this document, or the Eclipse Foundation
+document from which this statement is linked or incorporated by reference, you (the licensee) agree
+that you have read, understood, and will comply with the following
+terms and conditions:</p>
+</div>
+<div class="paragraph">
+<p>Permission to copy, and distribute the contents of this document, or
+the Eclipse Foundation document from which this statement is linked, in
+any medium for any purpose and without fee or royalty is hereby
+granted, provided that you include the following on ALL copies of the
+document, or portions thereof, that you use:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>link or URL to the original Eclipse Foundation document.</p>
+</li>
+<li>
+<p>All existing copyright notices, or if one does not exist, a notice
+(hypertext is preferred, but a textual representation is permitted)
+of the form: "Copyright (c) [$date-of-document]
+Eclipse Foundation AISBL <a href="https://www.eclipse.org/legal/efsl.php" class="bare">https://www.eclipse.org/legal/efsl.php</a> "</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Inclusion of the full text of this NOTICE must be provided. We
+request that authorship attribution be provided in any software,
+documents, or other items or products that you create pursuant to the
+implementation of the contents of this document, or any portion
+thereof.</p>
+</div>
+<div class="paragraph">
+<p>No right to create modifications or derivatives of Eclipse Foundation
+documents is granted pursuant to this license, except anyone may
+prepare and distribute derivative works and portions of this document
+in software that implements the specification, in supporting materials
+accompanying such software, and in documentation of such software,
+PROVIDED that all such works include the notice below. HOWEVER, the
+publication of derivative works of this document for use as a technical
+specification is expressly prohibited.</p>
+</div>
+<div class="paragraph">
+<p>The notice is:</p>
+</div>
+<div class="paragraph">
+<p>"Copyright (c) 2025 Eclipse Foundation AISBL.This software or
+document includes material copied from or derived from Jakarta NoSQL and
+<a href="https://jakarta.ee/specifications/nosql/."" class="bare">https://jakarta.ee/specifications/nosql/."</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_disclaimers"><a class="anchor" href="#_disclaimers"></a>Disclaimers</h3>
+<div class="paragraph">
+<p>THIS DOCUMENT IS PROVIDED "AS IS," AND TO THE EXTENT PERMITTED BY APPLICABLE LAW THE COPYRIGHT
+HOLDERS AND THE ECLIPSE FOUNDATION AISBL MAKE NO REPRESENTATIONS OR
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE
+SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS
+WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR
+OTHER RIGHTS.</p>
+</div>
+<div class="paragraph">
+<p>TO THE EXTENT PERMITTED BY APPLICABLE LAW THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION AISBL WILL NOT BE LIABLE
+FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT
+OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE
+CONTENTS THEREOF.</p>
+</div>
+<div class="paragraph">
+<p>The name and trademarks of the copyright holders or the Eclipse
+Foundation AISBL may NOT be used in advertising or publicity pertaining to
+this document or its contents without specific, written prior
+permission. Title to copyright in this document will at all times
+remain with copyright holders.</p>
 </div>
 </div>
 </div>
@@ -801,7 +890,7 @@ of the project committers and various contributors.</p>
 <div class="sect3">
 <h4 id="_full_list_of_contributors"><a class="anchor" href="#_full_list_of_contributors"></a>1.4.6. Full List of Contributors</h4>
 <div class="paragraph">
-<p>The complete list of Jakarta NoSQL contributors may be found <a href="https://github.com/eclipse-ee4j/nosql/graphs/contributors">here</a>.</p>
+<p>The complete list of Jakarta NoSQL contributors may be found <a href="https://github.com/jakartaee/nosql/graphs/contributors">here</a>.</p>
 </div>
 </div>
 </div>
@@ -918,12 +1007,26 @@ When there&#8217;s no risk of confusion, we often use the word “entity” to m
 <p>An entity programming model might support inheritance between entities and provide support for retrieving entities in a polymorphic fashion. This specification does not require support for inheritance.</p>
 </div>
 <div class="paragraph">
-<p>To ensure compatibility with Jakarta NoSQL, an entity programming model must adhere to the following constructor rules:
-- Constructors must be <code>public</code> or <code>protected</code> with no parameters or with parameters annotated with <code>Jakarta.nosql.Column</code> or <code>Jakarta.nosql.Id</code>.
-- Annotations at the constructor will build the entity and read information from the database, while field annotations are required to write information to the database.
-- If both a non-args constructor and a constructor with annotated parameters exist, the constructor with annotations will be used to create the entity.
-- Constructor parameters without annotations will be ignored, utilizing a non-arg constructor instead.
-- Entities should not have multiple constructors using <code>jakarta.nosql.Id</code> or <code>jakarta.nosql.Column</code> annotations.</p>
+<p>To ensure compatibility with Jakarta NoSQL, an entity programming model must adhere to the following constructor rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Constructors must be <code>public</code> or <code>protected</code> with no parameters or with parameters annotated with <code>Jakarta.nosql.Column</code> or <code>Jakarta.nosql.Id</code>.</p>
+</li>
+<li>
+<p>Annotations at the constructor will build the entity and read information from the database, while field annotations are required to write information to the database.</p>
+</li>
+<li>
+<p>If both a non-args constructor and a constructor with annotated parameters exist, the constructor with annotations will be used to create the entity.</p>
+</li>
+<li>
+<p>Constructor parameters without annotations will be ignored, utilizing a non-arg constructor instead.</p>
+</li>
+<li>
+<p>Entities should not have multiple constructors using <code>jakarta.nosql.Id</code> or <code>jakarta.nosql.Column</code> annotations.</p>
+</li>
+</ul>
 </div>
 <div class="sect3">
 <h4 id="_persistent_fields"><a class="anchor" href="#_persistent_fields"></a>2.1.1. Persistent Fields</h4>
@@ -1309,7 +1412,61 @@ Some databases might require the use of the <code>udt</code> attribute in the <c
 </div>
 </div>
 <div class="sect3">
-<h4 id="_entity_associations"><a class="anchor" href="#_entity_associations"></a>2.1.4. Entity Associations</h4>
+<h4 id="_array_support"><a class="anchor" href="#_array_support"></a>2.1.4. Array Support</h4>
+<div class="paragraph">
+<p>Jakarta NoSQL implementations MUST support binding Java arrays of the basic types, as referenced in <a href="#basic_types">Basic Types</a>, and arrays of entities and embedded classes.</p>
+</div>
+<div class="paragraph">
+<p>Arrays of entities and embedded classes are supported and will function as embedded classes with <strong>grouping</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Consider an entity class <code>Library</code> with an array of <code>Book</code> entities and an array of <code>String</code> tags.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Library</span> {
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+
+    <span class="annotation">@Column</span>
+    <span class="directive">private</span> <span class="predefined-type">Book</span><span class="type">[]</span> books;
+
+    <span class="annotation">@Column</span>
+    <span class="directive">private</span> <span class="predefined-type">String</span><span class="type">[]</span> tags;
+}
+
+<span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Book</span> {
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+
+    <span class="annotation">@Column</span>
+    <span class="directive">private</span> <span class="predefined-type">String</span> title;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, the array of <code>Book</code> entities will be treated as an embedded collection within the <code>Library</code> entity, using <strong>grouping</strong> to represent the structure.</p>
+</div>
+<div class="paragraph">
+<p>The JSON representation of an instance of the <code>Library</code> entity might be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="json">{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="integer">1</span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">books</span><span class="delimiter">&quot;</span></span>: [
+    {<span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="integer">101</span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Java Programming</span><span class="delimiter">&quot;</span></span>},
+    {<span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="integer">102</span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Introduction to NoSQL</span><span class="delimiter">&quot;</span></span>}
+  ],
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">tags</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">Programming</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">NoSQL</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">Java</span><span class="delimiter">&quot;</span></span>]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_entity_associations"><a class="anchor" href="#_entity_associations"></a>2.1.5. Entity Associations</h4>
 <div class="paragraph">
 <p>An association field is a field of an entity class whose declared type is also an entity class.
 Given an instance of the first entity class, its association field references an instance of a second entity class.</p>
@@ -1381,7 +1538,7 @@ Some databases might require the use of the udt attribute in the @Column annotat
 </div>
 </div>
 <div class="sect3">
-<h4 id="_collections_of_embeddable_classes_and_basic_types"><a class="anchor" href="#_collections_of_embeddable_classes_and_basic_types"></a>2.1.5. Collections of Embeddable Classes and Basic Types</h4>
+<h4 id="_collections_of_embeddable_classes_and_basic_types"><a class="anchor" href="#_collections_of_embeddable_classes_and_basic_types"></a>2.1.6. Collections of Embeddable Classes and Basic Types</h4>
 <div class="paragraph">
 <p>A persistent field or property of an entity or embeddable class may correspond to a collection of a basic type, embeddable, or entity class.</p>
 </div>
@@ -1456,7 +1613,7 @@ Jakarta NoSQL provides flexibility in handling such collections, ensuring seamle
 </div>
 </div>
 <div class="sect3">
-<h4 id="_map_collections"><a class="anchor" href="#_map_collections"></a>2.1.6. Map Collections</h4>
+<h4 id="_map_collections"><a class="anchor" href="#_map_collections"></a>2.1.7. Map Collections</h4>
 <div class="paragraph">
 <p>Java <code>Map</code> collections offer a convenient way to represent associations and key-value pairs within entities in Jakarta NoSQL. Jakarta NoSQL handles map collections, allowing developers to manage complex data structures efficiently.</p>
 </div>
@@ -1548,7 +1705,7 @@ Jakarta NoSQL provides flexibility in handling such collections, ensuring seamle
 </div>
 </div>
 <div class="sect3">
-<h4 id="_entity_property_names"><a class="anchor" href="#_entity_property_names"></a>2.1.7. Entity Property Names</h4>
+<h4 id="_entity_property_names"><a class="anchor" href="#_entity_property_names"></a>2.1.8. Entity Property Names</h4>
 <div class="paragraph">
 <p>Within an entity, property names must be unique ignoring case. For simple entity properties, the field or accessor method name serves as the entity property name. In the case of embedded classes, entity property names are computed by concatenating the field or accessor method names at each level, optionally joined by a delimiter.</p>
 </div>
@@ -2880,8 +3037,8 @@ template.insert(student);</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
- 1.0.0-M1<br>
-Last updated 2024-03-07 05:34:38 UTC
+ 1.0<br>
+Last updated 2025-01-27 15:12:52 UTC
 </div>
 </div>
 <script type="text/x-mathjax-config">
