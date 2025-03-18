@@ -29,9 +29,11 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * Maven coordinates
    * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0/jar)
 
-<!--
-* [Jakarta Web Profile 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
--->
+* [Jakarta Web Profile 11 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakartaeetck-11.0.0-dist.zip) 
+
+<!-- PENDING- edburns: jea-511 https://dev.azure.com/jakarta-ee-azdo/jakarta-ee-azdo/_workitems/edit/511
+
+([sig](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub)) -->
 
 # Compatible Implementations
 
@@ -40,6 +42,8 @@ Compatible Implementations of the Jakarta EE Web Profile specification are eligi
 {{< figure src="/images/jakarta/jakarta-ee-compatible-logo-color.svg" alt="Jakarta EE Compatible logo" width="250" >}}
 
 <!--* [Jakarta EE 11 Compatible Implementations](https://jakarta.ee/compatibility/certification/11/)-->
+
+- [Eclipse GlassFish Web Profile](https://repo1.maven.org/maven2/org/glassfish/main/distributions/web/8.0.0-M10/web-8.0.0-M10.zip)
 
 # Ballots
 
