@@ -14,6 +14,7 @@ A complete list of issues and pull requests for this version can be viewed using
 <!-- List here -->
 Currently suggested topics includes:
 * API will be split off from the implementation code
+* Some kind of improved state management; allowing the application code to manually restore/recompute state
 * Introduce FacesServletFactory
 * Add context param attributes to @FacesConfig
 * Add missing Generics
@@ -52,13 +53,16 @@ Currently suggested topics includes:
 * Deprecating h:form prependId 
 * Fix StateManager#STATE_SAVING_METHOD_PARAM_NAME specifies wrong default
 
+### TCK What will be changed or not changed in 5.0.
+ * We hope to get rid of the so-called "old" tests, which are tests using the javatest framework and Ant.
+    * For this we will try the same approach as the platform TCK took to convert tests using an open rewrite script 
+ * We will otherwise keep the testing structure intact, but *may* look at revising the distribution format into a binary
+   only format (currently we ship as source, since it concerns maven modules)
 
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
 **Java SE 21 or higher**
-
-# Details
 
 # Details
 
@@ -71,6 +75,7 @@ Currently suggested topics includes:
 * [Jakarta Faces 5.0 TCK](https://download.eclipse.org/jakartaee/faces/5.0/jakarta-faces-tck-5.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/faces/5.0/jakarta-faces-tck-5.0.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/faces/5.0/jakarta-faces-tck-5.0.1.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:5.0.1](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/5.0.0/jar)
+* [Jakarta Faces 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/5.0)
 
 
 * Schemas
@@ -86,12 +91,8 @@ Currently suggested topics includes:
 
 The Specification Committee Ballot is TBD.
 
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02354.html)
 
 ## Plan Review
 
-This Specification Project's Plan Review will be covered by the [Faces 5.0 Plan Review](https://projects.eclipse.org/projects/ee4j.faces/releases/5.0/plan).
-
 The Specification Committee Ballot is TBD.
 
-The ballot will run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/)
