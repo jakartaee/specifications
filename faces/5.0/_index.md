@@ -47,7 +47,8 @@ Currently suggested topics includes:
 * Remove UIComponent.bindings field and rename PropertyKeys.bindings to PropertyKeys.valueExpressions
 * Remove unused jakarta.faces.event.ScopeContext
 * Remove deprecated code (composite:extension, PreDestroyCustomScopeEvent, PostConstructCustomScopeEvent)
-* Remove things marked @Deprecated(forRemoval = true, since = "4.0")
+* Remove things marked @Deprecated(forRemoval = true, since = "4.0") and higher (since 4.1)
+* Evaluate everything marked @Deprecated (without the "forRemoval" attribute) and remove as much as we can. Potentially mark already deprecated things "forRemoval" in this release.
 * Remove class scanning and rely on CDI only?
 * Deprecate phase id (see migrate phase id to enum)
 * Deprecating h:form prependId 
@@ -58,6 +59,7 @@ Currently suggested topics includes:
     * For this we will try the same approach as the platform TCK took to convert tests using an open rewrite script 
  * We will otherwise keep the testing structure intact, but *may* look at revising the distribution format into a binary
    only format (currently we ship as source, since it concerns maven modules)
+ * We will need to evaluate the current dependency of Selenium on the "system installed version of Chrome". This is very troublesome, and we need to find some workaround for this.
 
 
 ### Minimum Java SE Version
