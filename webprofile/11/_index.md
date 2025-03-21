@@ -26,10 +26,15 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta EE 11 web profile Specification Document](./jakarta-webprofile-spec-11.0.pdf) (PDF)
 * [Jakarta EE 11 web profile Specification Document](./jakarta-webprofile-spec-11.0.html) (HTML)
 * [Jakarta Web Profile 11 Javadoc](./apidocs)
+* [Jakarta Web Profile 11 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakartaeetck-11.0.0-dist.zip) ([sig TBD added by mentor](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sig),[sha](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakartaeetck-11.0.0-dist-tckinfo.txt),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-   * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0/jar) ([sig TBD added by mentor](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sig),[sha](https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakartaeetck-11.0.0-dist-tckinfo.txt),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+   * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+   * [Eclipse GlassFish Web Profile](https://repo1.maven.org/maven2/org/glassfish/main/distributions/web/8.0.0-M10/web-8.0.0-M10.zip)
 
-* [Jakarta Web Profile 11 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakartaeetck-11.0.0-dist.zip) 
+
+
+   
 
 # Compatible Implementations
 
@@ -39,7 +44,7 @@ Compatible Implementations of the Jakarta EE Web Profile specification are eligi
 
 <!--* [Jakarta EE 11 Compatible Implementations](https://jakarta.ee/compatibility/certification/11/)-->
 
-- [Eclipse GlassFish Web Profile](https://repo1.maven.org/maven2/org/glassfish/main/distributions/web/8.0.0-M10/web-8.0.0-M10.zip)
+
 
 # Ballots
 
