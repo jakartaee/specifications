@@ -7,6 +7,8 @@ Jakarta Server Faces defines an MVC framework for building user interfaces for w
 including UI components, state management, event handing, input validation, page navigation, and 
 support for internationalization and accessibility.
 
+This specification is a re-release of [JSR 372](http://jcp.org/en/jsr/detail?id=372) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Server Faces 2.3 Specification Document](./faces-spec-2.3.pdf) (PDF)
 * [Jakarta Server Faces 2.3 Specification Document](./faces-spec-2.3.html) (HTML)
 * [Jakarta Server Faces 2.3 Javadoc](./apidocs)

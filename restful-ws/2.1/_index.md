@@ -6,6 +6,8 @@ summary: "First release for Jakarta EE 8"
 Jakarta RESTful Web Services provides a foundational API to develop web services 
 following the Representational State Transfer (REST) architectural pattern.
 
+This specification is a re-release of [JSR 370](http://jcp.org/en/jsr/detail?id=370) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta RESTful Web Services 2.1 Specification Document](restful-ws-spec-2.1.pdf) (PDF)
 * [Jakarta RESTful Web Services 2.1 Specification Document](restful-ws-spec-2.1.html) (HTML)
 * [Jakarta RESTful Web Services 2.1 Javadoc](./apidocs)

@@ -6,6 +6,8 @@ summary: "First release for Jakarta EE 8"
 Jakarta WebSocket defines a API for Server and Client Endpoints
 for the WebSocket protocol (RFC6455).
 
+This specification is a re-release of [JSR 356](http://jcp.org/en/jsr/detail?id=356) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta WebSocket 1.1 Specification Document](./websocket-spec-1.1.pdf) (PDF)
 * [Jakarta WebSocket 1.1 Specification Document](./websocket-spec-1.1.html) (HTML)
 * [Jakarta WebSocket 1.1 Javadoc](./apidocs)

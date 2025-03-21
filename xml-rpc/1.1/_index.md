@@ -5,6 +5,8 @@ summary: "First release for Jakarta EE 8"
 ---
 Jakarta XML-based RPC defines consistent Java APIs for using XML based RPC standards.
 
+This specification is a re-release of [JSR 101](http://jcp.org/en/jsr/detail?id=101) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta XML RPC 1.1 Specification Document](./xml-rpc-spec-1.1.pdf) (PDF)
 * [Jakarta XML RPC 1.1 Specification Document](./xml-rpc-spec-1.1.html) (HTML)
 * [Jakarta XML RPC 1.1 Javadoc](./apidocs)
