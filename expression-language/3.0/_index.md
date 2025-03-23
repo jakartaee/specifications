@@ -5,6 +5,8 @@ summary: "First release for Jakarta EE 8"
 ---
 Jakarta Expression Language defines an expression language for Java applications.
 
+This specification is a re-release of [JSR 341](http://jcp.org/en/jsr/detail?id=341) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Expression Language 3.0 Specification Document](./expression-language-spec-3.0.pdf) (PDF)
 * [Jakarta Expression Language 3.0 Specification Document](./expression-language-spec-3.0.html) (HTML)
 * [Jakarta Expression Language 3.0 Javadoc](./apidocs)

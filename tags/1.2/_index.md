@@ -8,6 +8,8 @@ Jakarta Standard Tag Library has support for common, structural tasks such as it
 for manipulating XML documents, internationalization tags, and SQL tags. It also provides a framework for integrating
 existing custom tags with Jakarta Standard Tag Library tags.
 
+This specification is a re-release of [JSR 52](http://jcp.org/en/jsr/detail?id=52) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Standard Tag Library 1.2 Specification Document](./tags-1.2-spec.pdf) (PDF)
 * [Jakarta Standard Tag Library 1.2 Specification Document](./tags-1.2-spec.html) (HTML)
 * [Jakarta Standard Tag Library 1.2 Javadoc](./apidocs)

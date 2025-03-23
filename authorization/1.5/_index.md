@@ -8,6 +8,8 @@ facilitating subject based security by determining whether a given subject has a
 to transform security constraints for specific containers (such as Jakarta Servlet or Jakarta Enterprise Beans) into 
 these permissions.
 
+This specification is a re-release of [JSR 115](http://jcp.org/en/jsr/detail?id=115) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Authorization 1.5 Specification Document](./authorization-spec-1.5.pdf) (PDF)
 * [Jakarta Authorization 1.5 Specification Document](./authorization-spec-1.5.html) (HTML)
 * [Jakarta Authorization 1.5 Javadoc](./apidocs)

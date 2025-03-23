@@ -6,6 +6,8 @@ summary: "First release for Jakarta EE 8"
 
 This specification defines the Web Services for Jakarta EE architecture.
 
+This specification is a re-release of [JSR 109](http://jcp.org/en/jsr/detail?id=109) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Enterprise Web Services 1.4 Specification Document](./enterprise-ws-spec-1.4.pdf) (PDF)
 * [Jakarta Enterprise Web Services 1.4 Specification Document](./enterprise-ws-spec-1.4.html) (HTML)
 

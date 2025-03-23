@@ -6,6 +6,8 @@ summary: "Final for Jakarta EE 8"
 
 Jakarta Contexts Dependency Injection specifies a means for obtaining objects in such a way as to maximize reusability, testability and maintainability compared to traditional approaches such as constructors, factories, and service locators (e.g., JNDI).
 
+This specification is a re-release of [JSR 365](http://jcp.org/en/jsr/detail?id=365) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta Contexts Dependency Injection 2.0 Specification Document](./cdi-spec-2.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 2.0 Specification Document](./cdi-spec-2.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 2.0 Javadoc](./apidocs)

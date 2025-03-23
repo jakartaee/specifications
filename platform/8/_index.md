@@ -6,6 +6,8 @@ seo_title: "Jakarta EE Platform 8 | Standards for Jakarta EE applications"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
 
+This specification is a re-release of [JSR 366](http://jcp.org/en/jsr/detail?id=366) under the [EFSL](https://www.eclipse.org/legal/efsl/).
+
 * [Jakarta EE Platform 8 Specification Document](./platform-spec-8.pdf) (PDF)
 * [Jakarta EE Platform 8 Specification Document](./platform-spec-8.html) (HTML)
 * [Jakarta EE Platform 8 Javadoc](./apidocs)
