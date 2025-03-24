@@ -51,33 +51,30 @@ Jakarta Data simplifies data access by allowing you to represent data with simpl
 
 The Release Review Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
 
-|Representative - Representative for: Vote                  |  Yes    | No      | Abstain  |
-|-----------------------------------------------------------|---------|---------|----------|
-|Kenji Kazumura - Fujitsu                                   |         |         |          |
-|Emily Jiang, Tom Watson - IBM                              |         |         |          |
-|Ed Bratt, Dmitry Kornilov - Oracle                         |         |         |          |
-|Andrew Pielage, Petr Aubrecht - Payara                     |         |         |          |
-|David Blevins, Jean-Louis Monteiro - Tomitribe             |         |         |          |
-|Ivar Grimstad - EE4J PMC                                   |         |         |          |
-|Marcelo Ancelmo, Abraham Marin-Perez - Participant Members |         |         |          |
-|Werner Keil - Committer Members                            |         |         |          |
-|Jun Qian - Enterprise Members                              |         |         |          |
-|Zhai Luchao - Enterprise Members                           |         |         |          |
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msgxxxx.html)
 
 ## Plan Review
 
-The Plan Review Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
+The Specification Committee Ballot concluded successfully on 2025-03-24 with the following results.
 
-|Representative - Representative for: Vote                  |  Yes    | No      | Abstain  |
-|-----------------------------------------------------------|---------|---------|----------|
-|Kenji Kazumura - Fujitsu                                   |         |         |          |
-|Emily Jiang, Tom Watson - IBM                              |         |         |          |
-|Ed Bratt, Dmitry Kornilov - Oracle                         |         |         |          |
-|Andrew Pielage, Petr Aubrecht - Payara                     |         |         |          |
-|David Blevins, Jean-Louis Monteiro - Tomitribe             |         |         |          |
-|Ivar Grimstad - EE4J PMC                                   |         |         |          |
-|Marcelo Ancelmo, Abraham Marin-Perez - Participant Members |         |         |          |
-|Werner Keil - Committer Members                            |         |         |          |
-|Jun Qian - Enterprise Members                              |         |         |          |
-|Zhai Luchao - Enterprise Members                           |         |         |          |
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           | no vote |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **9**  |
 
+Non-binding Votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Angelo Rubini                                  | Community           |   +1    |
+|                                                | **Total**           |  **1**  |
+
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03736.html)
