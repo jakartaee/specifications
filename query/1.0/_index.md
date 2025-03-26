@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Query 1.0"
+title: "Jakarta Query 1.0 (under development)"
 date: 2025-03-24
 summary: "First release of Jakarta Query"
 ---
