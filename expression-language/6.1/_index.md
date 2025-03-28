@@ -9,7 +9,7 @@ Jakarta Expression Language defines an expression language for Java applications
 This release adds a small number of language enhancements and addresses a performance issue.
 
 ### New features, enhancements or additions
-* Add, in cooperation with the Jakarta Pages 4.1 specificatiom, a performance optimisation for scoped attributes.
+* Add, in cooperation with the Jakarta Pages 4.1 specification, a performance optimisation for scoped attributes.
 * Make caching mechanisms pluggable
 * Language enhancements requested by users including:
     * Elvis operator
