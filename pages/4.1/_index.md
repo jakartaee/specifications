@@ -11,7 +11,7 @@ This release does not plan to add new features.
 It aims to address known issues in the Jakarta Pages specification and to maintain alignment with the Jakarta Servlet and Expression Language specifications.
 
 ### New features, enhancements or additions
-* Add, in cooperation with the Jakarta Expression Language 6.1 specificatiom, a performance optimisation for scoped attributes.
+* Add, in cooperation with the Jakarta Expression Language 6.1 specification, a performance optimisation for scoped attributes.
 * Changes (currently none known) required to align with changes in the Jakarta Servlet 6.2 and/or Expression Language 6.1 specifications.
 
 ### Removals, deprecations or backwards incompatible changes
