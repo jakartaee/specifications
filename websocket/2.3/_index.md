@@ -5,7 +5,7 @@ summary: "Release for Jakarta EE 12"
 ---
 Jakarta WebSocket defines a API for Server and Client Endpoints for the WebSocket protocol (RFC6455).
 
-This release is a maintenance release that will review the open enhancement requests and implement as many as possible in the time available.
+This release will review the open enhancement requests and implement as many as possible in the time available.
 
 
 ### New features, enhancements or additions
@@ -42,7 +42,7 @@ The following can be uncommented and version information updated as they become 
 
 # Compatible Implementations
 
-* Apache Tomcat 12
+* Apache Tomcat 12 (TBC)
 
 # Ballots
 
