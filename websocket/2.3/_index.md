@@ -48,7 +48,29 @@ The following can be uncommented and version information updated as they become 
 
 ## Plan Review
 
-TBD
+The Specification Committee Ballot concluded successfully on 2025-04-02 with the following results.
+
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Emilly Jiang, Tom Watson                       | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |  +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |  +1  |
+| Werner Keil                                    | Committer Members   |  +1  |
+| Jun Qian                                       | Enterprise Members  |  +1  |
+| Zhai Luchao                                    | Enterprise Members  |  +1  |
+|                                                | **Total**           |**10**|
+
+| Non-binding votes                              |                     | Vote |
+|------------------------------------------------|---------------------|------|
+| Angelo Rubini                                  | Community           |  +1  |
+|                                                | **Total**           | **1**|
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03719.html)
+
 
 ## Release Review
 
