@@ -28,6 +28,7 @@ This release ensures alignment with Jakarta RESTful Web Services 3.1 as well as 
 * [Jakarta MVC 2.1 Specification Document](./jakarta-mvc-spec-2.1.html) (HTML)
 * [Jakarta MVC 2.1 Javadoc](./apidocs)
 * [Jakarta MVC 2.1 TCK](http://download.eclipse.org/jakartaee/mvc/2.1/jakarta-mvc-tck-2.1.0.zip) ([sig](http://download.eclipse.org/jakartaee/mvc/2.1/jakarta-mvc-tck-2.1.0.zip.sig), [sha](http://download.eclipse.org/jakartaee/mvc/2.1/jakarta-mvc-tck-2.1.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see download directory here: http://download.eclipse.org/jakartaee/mvc/2.1/
 * Maven coordinates
   * [jakarta.mvc:jakarta.mvc-api:jar:2.1.0](https://central.sonatype.com/artifact/jakarta.mvc/jakarta.mvc-api/2.1.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
