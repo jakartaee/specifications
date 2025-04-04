@@ -1,6 +1,6 @@
 ---
-title: "Jakarta EE Web Profile 11 (Under development)"
-date: 2023-07-17
+title: "Jakarta EE Web Profile 11"
+date: 2025-03-10
 summary: "Release of the Jakarta EE 11 Web Profile"
 ---
 The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specifically targeted at web applications.
@@ -23,15 +23,20 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 
 * [Jakarta Web Profile 11 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/web-profile-11)
   * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
-* [Jakarta EE 11 M5 web profile Specification Document](./jakarta-webprofile-spec-11.0-M5.pdf) (PDF)
-* [Jakarta EE 11 M5 web profile Specification Document](./jakarta-webprofile-spec-11.0-M5.html) (HTML)
-* [Jakarta Web Profile 11 M5 Javadoc](./apidocs)
-* Maven coordinates
-   * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0-M5](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0-M5/jar)
-
-<!--
+* [Jakarta EE 11 web profile Specification Document](./jakarta-webprofile-spec-11.0.pdf) (PDF)
+* [Jakarta EE 11 web profile Specification Document](./jakarta-webprofile-spec-11.0.html) (HTML)
+* [Jakarta Web Profile 11 Javadoc](./apidocs)
 * [Jakarta Web Profile 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
--->
+* Maven coordinates
+   * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+   * Java 17: [Eclipse GlassFish Web Profile](https://repo1.maven.org/maven2/org/glassfish/main/distributions/web/8.0.0-JDK17-M10/web-8.0.0-JDK17-M10.zip)
+   * Java 21: [Eclipse GlassFish Web Profile](https://repo1.maven.org/maven2/org/glassfish/main/distributions/web/8.0.0-M10/web-8.0.0-M10.zip)
+
+
+
+
+   
 
 # Compatible Implementations
 
@@ -40,6 +45,8 @@ Compatible Implementations of the Jakarta EE Web Profile specification are eligi
 {{< figure src="/images/jakarta/jakarta-ee-compatible-logo-color.svg" alt="Jakarta EE Compatible logo" width="250" >}}
 
 <!--* [Jakarta EE 11 Compatible Implementations](https://jakarta.ee/compatibility/certification/11/)-->
+
+
 
 # Ballots
 
