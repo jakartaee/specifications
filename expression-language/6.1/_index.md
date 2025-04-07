@@ -65,6 +65,8 @@ The Specification Committee Ballot concluded successfully on 2025-04-04 with the
 | Jun Qian                             | Enterprise Members | +1     |
 |                                      | **Total**          | **10** |
 
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03778.html)
+
 ## Release Review
 
 TBD
