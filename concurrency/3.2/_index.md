@@ -32,21 +32,30 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 # Details
 
 * [Jakarta Concurrency 3.2 Release Record](https://projects.eclipse.org/projects/ee4j.cu/releases/3.2)
+<!--
 * [Jakarta Concurrency 3.2 Specification Document](./jakarta-concurrency-spec-3.2.pdf) (PDF) (Does not exist yet)
 * [Jakarta Concurrency 3.2 Specification Document](./jakarta-concurrency-spec-3.2.html) (HTML) (Does not exist yet)
 * [Jakarta Concurrency 3.2 Javadoc](./apidocs) (Does not exist yet)
 * [Jakarta Concurrency 3.2 TCK](https://download.eclipse.org/jakartaee/concurrency/3.2/concurrency-tck-3.2.0.zip) (Does not exist yet)
+-->
 * Maven coordinates
+<!--
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.2.0](https://central.sonatype.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.2.0/jar) (Does not exist yet)
+-->
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+<!--
   * [To Be Determined](https://github.com/)
+-->
 
 # Compatible Implementations
 
+<!--
 * [To Be Determined](https://github.com/)
+-->
 
 # Ballots
 
+<!--
 ## Release Review
 
 The Release Review Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
@@ -78,3 +87,4 @@ Non-binding Votes
 |                                                | **Total**           |         |
 
 The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msgxxxx.html)
+-->
