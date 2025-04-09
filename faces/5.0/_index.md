@@ -10,49 +10,21 @@ support for internationalization and accessibility.
 
 A complete list of issues and pull requests for this version can be viewed using [Faces 5.0 Milestone](https://github.com/jakartaee/faces/milestone/22) 
 
+Interested parties can join in the evolution/discussion in at least the following ways:
+
+* Star the repository at https://github.com/jakartaee/faces
+* Join the -dev list at https://accounts.eclipse.org/mailing-list/faces-dev
+* Comment on the Faces issue tracker at https://github.com/jakartaee/faces/issues
+
 ### New features, enhancements or additions
 <!-- List here -->
 Currently suggested topics includes:
-* API will be split off from the implementation code
-* Some kind of improved state management; allowing the application code to manually restore/recompute state
-* Introduce FacesServletFactory
-* Add context param attributes to @FacesConfig
-* Add missing Generics
-* Unify NavigationHandler and ConfigurableNavigationHandler
-* Enhance UIViewRoot#resetValues() to pass VisitHints
-* Migrate phase id to enum 
-* Enhance UIViewRoot#resetValues() to pass VisitHints
-* UIViewRoot#resetValues Must walk all child components 
-* Add new @BeforePhase and @AfterPhase PhaseEvent qualifiers 
-* Add PartialResponseWriterWrapper 
-* Add type literal constants for annotation literals of generic types 
-* Allow listing to PhaseEvents via @Observes
-* Automatically pass through all on* event attributes 
-* Add new FacesMessage Severity "SUCCESS"
-* Specify that expression language 6.0 Optional and Record resolvers should be in chain
-* Allow non-component Faces events observeable by CDI
-* Fire faces system events via CDI as well 
-* TextHandler should extends FaceletHandler
-* FaceletContext: add static utility methods
-* Formalize "abandoned flows" in spec
-* Add clearModel to f:resetValues
-* Specify what Faces should do when f:metadata is not a direct child of f:view
-* ui:repeat clarification on attributes, such as offset and size
-* Fix behavior attachment for composites / provide an API
-* Allow refreshable ValueExpression for validator/converter/behavior tags
+* All issues marked with EE12 without "remove legacy" in the Faces issue tracker
 
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
-* Remove UIComponent.bindings field and rename PropertyKeys.bindings to PropertyKeys.valueExpressions
-* Remove unused jakarta.faces.event.ScopeContext
-* Remove deprecated code (composite:extension, PreDestroyCustomScopeEvent, PostConstructCustomScopeEvent)
-* Remove things marked @Deprecated(forRemoval = true, since = "4.0") and higher (since 4.1)
-* Evaluate everything marked @Deprecated (without the "forRemoval" attribute) and remove as much as we can. Potentially mark already deprecated things "forRemoval" in this release.
-* Remove class scanning and rely on CDI only?
-* Deprecate phase id (see migrate phase id to enum)
-* Deprecating h:form prependId 
-* Fix StateManager#STATE_SAVING_METHOD_PARAM_NAME specifies wrong default
+* All issues marked with EE12 and "remove legacy" or "backwards incompatible" in the Faces issue tracker  
 
 ### TCK What will be changed or not changed in 5.0.
  * We hope to get rid of the so-called "old" tests, which are tests using the javatest framework and Ant.
@@ -68,6 +40,11 @@ Currently suggested topics includes:
 
 # Details
 
+* [Jakarta Faces 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/5.0)
+
+<!--
+The following can be uncommented and version information updated as they become available.
+
 * [Jakarta Faces 5.0 Specification Document](./jakarta-faces-5.0.pdf) (PDF)
 * [Jakarta Faces 5.0 Specification Document](./jakarta-faces-5.0.html) (HTML)
 * [Jakarta Faces 5.0 Javadoc](./apidocs)
@@ -82,6 +59,8 @@ Currently suggested topics includes:
 
 * Schemas
   * no plans yet TBD
+  
+-->
 
 # Compatible Implementations
 
