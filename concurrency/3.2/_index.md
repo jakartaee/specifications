@@ -38,11 +38,15 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 * [Jakarta Concurrency 3.2 Javadoc](./apidocs) (Does not exist yet)
 * [Jakarta Concurrency 3.2 TCK](https://download.eclipse.org/jakartaee/concurrency/3.2/concurrency-tck-3.2.0.zip) (Does not exist yet)
 -->
+<!--
 * Maven coordinates
+-->
 <!--
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.2.0](https://central.sonatype.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.2.0/jar) (Does not exist yet)
 -->
+<!--
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+-->
 <!--
   * [To Be Determined](https://github.com/)
 -->
