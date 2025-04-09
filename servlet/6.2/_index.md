@@ -46,7 +46,7 @@ The following can be uncommented and version information updated as they become 
 
 # Compatible Implementations
 
-* Apache Tomact 12
+* Apache Tomcat 12 (TBD)
 
 # Ballots
 
