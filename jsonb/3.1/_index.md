@@ -1,5 +1,5 @@
 ---
-title: "Jakarta JSON Binding 3.1"
+title: "Jakarta JSON Binding 3.1 (under development)"
 date: 2025-04-10
 summary: "Release for Jakarta EE 12"
 ---
