@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Persistence 4.0"
+title: "Jakarta Persistence 4.0 (Under development"
 date: 2025-04-14
 summary: "Release for Jakarta EE 12"
 ---
