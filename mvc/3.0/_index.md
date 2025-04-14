@@ -40,7 +40,7 @@ This release ensures alignment with Jakarta RESTful Web Services 4.0, removes th
 
 ## Ballots
 
-<!-->
+<!--
 ### Release Review
 -->
 
