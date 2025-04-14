@@ -49,7 +49,7 @@ This release is targeting Jakarta EE 12 and will look to introduce the new featu
   * [jakarta.validation:jakarta.validation-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.validation/jakarta.validation-api/4.0.0/jar)
 
 # Compatible Implementations
-* [Hibernate Validator TBD](https://hibernate.org/validator/releases/8.x/)
+* [Hibernate Validator TBD(10.x)](https://hibernate.org/validator/releases/10.x/)
 
 # Ballots
 
