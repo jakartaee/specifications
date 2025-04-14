@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Servlet 6.2 (under development)"
-date: 2026-06-30
+date: 2025-04-11
 summary: "Release for Jakarta EE 12"
 ---
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
@@ -50,10 +50,32 @@ The following can be uncommented and version information updated as they become 
 
 # Ballots
 
+<!--
+## Release Review
+-->
+
 ## Plan Review
 
-TBD
+The Specification Committee Ballot concluded successfully on 2025-04-11 with the following results.
 
-## Release Review
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              | no vote |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **9**  |
 
-TBD
+Non-binding Votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Angelo Rubini                                  | Community           |   +1    |
+|                                                | **Total**           |  **1**  |
+
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03812.html)
