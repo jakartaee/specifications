@@ -45,6 +45,7 @@ and object/relational mapping in Java(R) environments.
 
 * [Jakarta Persistence 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.jpa/releases/4.0)
     * [Jakarta EE Platform 12 Release Plan](https://jakartaee.github.io/platform/jakartaee12/JakartaEE11ReleasePlan)
+<!--
 * [Jakarta Persistence 4.0 Specification Document](./jakarta-persistence-spec-4.0.pdf) (PDF)
 * [Jakarta Persistence 4.0 Specification Document](./jakarta-persistence-spec-4.0.html) (HTML)
 * [Jakarta Persistence 4.0 Javadoc](./apidocs)
@@ -54,3 +55,4 @@ and object/relational mapping in Java(R) environments.
 * [Jakarta Persistence 4.0 TCK](https://download.eclipse.org/jakartaee/persistence/4.0/jakarta-persistence-tck-4.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/persistence/4.0/jakarta-persistence-tck-4.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/persistence/4.0/jakarta-persistence-tck-4.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
     * [jakarta.persistence:jakarta.persistence-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.persistence/jakarta.persistence-api/4.0.0/jar)
+-->
