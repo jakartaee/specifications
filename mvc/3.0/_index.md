@@ -1,5 +1,5 @@
 ---
-title: "Jakarta MVC 3.0 "
+title: "Jakarta MVC 3.0"
 date: 2023-05-17
 summary: "Release supporing Jakarta EE 11"
 ---
