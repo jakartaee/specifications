@@ -20,11 +20,11 @@ This release aims to remove references to SecurityManager.
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 11 or higher**
+**Java SE 21 or higher**
 
 # Details
 
-<!-- * [Jakarta Batch 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.2) -->
+* [Jakarta Batch 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.2)
 <!-- 
 The commented lines can be uncommented and updated once the records are available.
 * [Jakarta Wombat 1.0 Specification Document](./jakarta-wombat-spec-1.0.pdf) (PDF)
@@ -33,9 +33,9 @@ The commented lines can be uncommented and updated once the records are availabl
 * [Jakarta Wombat 1.0 XML Schema](https://jakarta.ee/xml/ns/jakartaee/wombat-1.0.xsd)
 * [Jakarta Wombat 1.0 TCK](http://downloads.eclipse.org/jakarta/wombat/1.0.0/wombat-tck-1.0.0.zip)
 * Maven coordinates
-  * [jakarta.wombat:jakarta.wombat-api:jar:1.0.0](https://search.maven.org/artifact/jakarta.wombat/jakarta.wombat-api/1.0.0/jar)
+  * [jakarta.wombat:jakarta.wombat-api:jar:1.0.0](https://search.maven.org/artifact/jakarta.wombat/jakarta.wombat-api/1.0.0/jar) -->
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
-  * [Eclipse Vombatidae 9.1.1](https://github.com/eclipse-ee4j/vombatidae) -->
+ <!-- * [Eclipse Vombatidae 9.1.1](https://github.com/eclipse-ee4j/vombatidae) -->
 
 # Compatible Implementations
 * jbatch
