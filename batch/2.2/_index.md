@@ -1,5 +1,3 @@
-<!-- Template for the root page of a specification release -->
-<!-- The "date:" field is used as a "publish" date for the automated Hugo processing -->
 ---
 title: "Jakarta Batch 2.2 (Under Development)"
 date: 2025-04-15
@@ -24,8 +22,10 @@ summary: "Enhancements for Jakarta EE 12"
 
 # Details
 
-* [Jakarta Batch 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.wombat/releases/1.0)
-<!-- * [Jakarta Wombat 1.0 Specification Document](./jakarta-wombat-spec-1.0.pdf) (PDF)
+<!-- * [Jakarta Batch 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.2) -->
+<!-- 
+The commented lines can be uncommented and updated once the records are available.
+* [Jakarta Wombat 1.0 Specification Document](./jakarta-wombat-spec-1.0.pdf) (PDF)
 * [Jakarta Wombat 1.0 Specification Document](./jakarta-wombat-spec-1.0.html) (HTML)
 * [Jakarta Wombat 1.0 Javadoc](./apidocs)
 * [Jakarta Wombat 1.0 XML Schema](https://jakarta.ee/xml/ns/jakartaee/wombat-1.0.xsd)
@@ -37,8 +37,6 @@ summary: "Enhancements for Jakarta EE 12"
 
 # Compatible Implementations
 
-* [Apache Marsupials 5.7](https://apache.org/marsupials)
-* [Eclipse Vombatidae 9.1.1](https://github.com/eclipse-ee4j/vombatidae)
 
 # Ballots
 
@@ -48,15 +46,15 @@ The Release Review Specification Committee Ballot concluded successfully on 2019
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
-|Fujitsu                | &check; |         |          |
-|IBM                    | &check; |         |          |
-|Oracle                 | &check; |         |          |
-|Payara                 | &check; |         |          |
-|Red Hat                | &check; |         |          |
-|Tomitribe              | &check; |         |          |
-|EE4J PMC               | &check; |         |          |
-|Participant Members    |         | &check; |          |
-|Committer Members      | &check; |         |          |
+|Fujitsu                |         |         |          |
+|IBM                    |         |         |          |
+|Oracle                 |         |         |          |
+|Payara                 |         |         |          |
+|Red Hat                |         |         |          |
+|Tomitribe              |         |         |          |
+|EE4J PMC               |         |         |          |
+|Participant Members    |         |         |          |
+|Committer Members      |         |         |          |
 
 ## Plan Review
 
@@ -64,12 +62,12 @@ The Plan Review Specification Committee Ballot concluded successfully on 2019-09
 
 |                       |  Yes    | No  | Abstain  |
 |-----------------------|---------|-----|----------|
-|Fujitsu                | &check; |     |          |
-|IBM                    | &check; |     |          |
-|Oracle                 | &check; |     |          |
-|Payara                 | &check; |     |          |
-|Red Hat                | &check; |     |          |
-|Tomitribe              | &check; |     |          |
-|EE4J PMC               | &check; |     |          |
-|Participant Members    | &check; |     |          |
-|Committer Members      | &check; |     |          |
+|Fujitsu                |         |     |          |
+|IBM                    |         |     |          |
+|Oracle                 |         |     |          |
+|Payara                 |         |     |          |
+|Red Hat                |         |     |          |
+|Tomitribe              |         |     |          |
+|EE4J PMC               |         |     |          |
+|Participant Members    |         |     |          |
+|Committer Members      |         |     |          |
