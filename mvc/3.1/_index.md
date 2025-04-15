@@ -11,7 +11,9 @@ This release ensures alignment with Jakarta RESTful Web Services **TODO version*
 ### New features, enhancements or additions
 <!-- List here -->
 * Update dependencies
+* Update Java version
 * Issues, and clarifications from the issue tracker
+* Consider using Jakarta Config if available
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
