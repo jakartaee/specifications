@@ -8,7 +8,14 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 
 ### New features, enhancements or additions
 
-* todo add items
+* Support aborting a connection passing an executor for resource apdater function to destroy a connection.
+* Create Release Plan for Connectors for Jakarta EE 12
+* Connector Permissions feature
+* Wrong OSGi relation between JCA 1.7 and JTA 1.3 (JavaEE8, JakartaEE8)help wantedExtra attention is needed
+* Some observed issues in 2.0 Specification Text
+* Consider renaming resource.cci.Record to avoid collisions with java.lang.Record
+* Consider refactoring updates to TCK
+
 
 Community input is encouraged. Add your comments to issues in our [issue tracker](https://github.com/jakartaee/connectors/issues) or join the Connectors Developer mailing list by following the instructions to subscribe on [this page](https://accounts.eclipse.org/mailing-list/jca-dev).
 
@@ -32,7 +39,7 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 * Maven coordinates
 -->
 <!--
-  * [jakarta.enterprise.concurrent:jakarta.connectors-api:2.2.0](https://central.sonatype.com/artifact/jakarta.connectors/jakarta.connectors-api/2.2.0/jar) (Does not exist yet)
+  * [jakarta.connectors:jakarta.connectors-api:2.2.0](https://central.sonatype.com/artifact/jakarta.connectors/jakarta.connectors-api/2.2.0/jar) (Does not exist yet)
 -->
 <!--
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
