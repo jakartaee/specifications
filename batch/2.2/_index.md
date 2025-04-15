@@ -8,6 +8,8 @@ summary: "Enhancements for Jakarta EE 12"
 <!-- The intent is for the first two sections to be an executive summary in the range of 300 to 800 characters. -->
 <!-- Links can accompany the executive summary, but cannot substitute for an executive summary. -->
 
+This release aims to remove references to SecurityManager.
+
 ### New features, enhancements or additions
 <!-- List here -->
 * Remove SecurityManager references from API
@@ -36,13 +38,13 @@ The commented lines can be uncommented and updated once the records are availabl
   * [Eclipse Vombatidae 9.1.1](https://github.com/eclipse-ee4j/vombatidae) -->
 
 # Compatible Implementations
-
+* jbatch
 
 # Ballots
 
 ## Release Review
 
-The Release Review Specification Committee Ballot concluded successfully on 2019-12-01 with the following results.
+The Release Review Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
 
 |                       |  Yes    | No      | Abstain  |
 |-----------------------|---------|---------|----------|
@@ -58,7 +60,7 @@ The Release Review Specification Committee Ballot concluded successfully on 2019
 
 ## Plan Review
 
-The Plan Review Specification Committee Ballot concluded successfully on 2019-09-31 with the following results.
+The Plan Review Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
 
 |                       |  Yes    | No  | Abstain  |
 |-----------------------|---------|-----|----------|
