@@ -9,11 +9,10 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 ### New features, enhancements or additions
 
 * Support aborting a connection passing an executor for resource apdater function to destroy a connection.
-* Create Release Plan for Connectors for Jakarta EE 12
 * Connector Permissions feature
-* Wrong OSGi relation between JCA 1.7 and JTA 1.3 (JavaEE8, JakartaEE8)help wantedExtra attention is needed
+* Wrong OSGi relation between JCA 1.7 and JTA 1.3 (JavaEE8, JakartaEE8)
 * Some observed issues in 2.0 Specification Text
-* Consider renaming resource.cci.Record to avoid collisions with java.lang.Record
+* Use fully qualified name jakarta.resource.cci.Record in specification to avoid collisions with java.lang.Record
 * Consider refactoring updates to TCK
 
 
