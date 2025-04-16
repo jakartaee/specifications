@@ -8,34 +8,32 @@ and object/relational mapping in Java(R) environments.
 
 ### New features, enhancements or additions
 
-- Introduce a new API exposing persistence operations for use with detached entities not associated with a persistence context, along with associated lifecycle callbacks
-- Introduce a programmatic API for expressing native query result set mappings
-- More elegant annotations for expressing named entity graphs
+- Add new API for working with detached entities, along with associated lifecycle callbacks
+- Add programmatic API for expressing native query result set mappings
+- New annotations for expressing named entity graphs
 - Allow entities to be loaded in read-only mode
-- Add `findMultiple()` to `EntityManager`
-- Add `getResultCount()` to `Query`
+- Allow batch loading of entities by id
+- Add operation to obtain the number of query results
 - Add an annotation to exclude a field from optimistic locking
 - Allow `@NamedQuery` and `@NamedNativeQuery` more control over query execution
-- Allow passing an `EntityGraph` to `refresh()`
-- Make it easier to obtain and apply entity graphs
+- Allow passing an `EntityGraph` to `refresh()`, and improve usability of entity graphs
 - Make `select new` implicit when a query result type is given
 - Add a `@PreMerge` lifecycle callback
 - Add support for `SequencedCollection` and friends
 - Decouple entity discovery/enhancement from `EntityManagerFactory` initialization in container environments
 - Specify that the `jakarta.persistence.database-xxxx` configuration properties are available for use by the application program, and not only by containers
-- Consider adding a way to opt into lazy fetching by default for to-one associations
-- Consider allowing `@GeneratedValue` on non-`@Id` fields
-- Consider adding first-class support for natural ids
-- Consider allowing certain annotations (`@EntityListeners`, `@Convert`, ...) to be used as meta-annotations
-- Consider more portable ways to customize the SQL column type in generated DDL
 
 ### Removals, deprecations or backwards incompatible changes
 
-- Clean up APIs already marked `forRemoval` in 3.2
+- Drop APIs already marked `forRemoval` in 3.2
 - Change return type of `createNativeQuery()` to `TypedQuery`
 - Drop use of `SecurityManager`
-- Clarify that entity names should be legal Java identifiers
-- Consider making `jakarta.annotation.Nonnull` imply `optional=false`
+- Clarify the format of entity names
+
+### Architectural changes
+
+- Donate definition of Jakarta Persistence Query Language to Jakarta Query
+- Take ownership of standalone TCK
 
 ### Minimum Java SE Version
 
