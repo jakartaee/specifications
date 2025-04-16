@@ -24,7 +24,7 @@ This release aims to remove references to SecurityManager.
 
 # Details
 
-* [Jakarta Batch 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.2)
+* [Jakarta Batch 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.batch/releases/2.2.0)
 <!-- 
 The commented lines can be uncommented and updated once the records are available.
 * [Jakarta Wombat 1.0 Specification Document](./jakarta-wombat-spec-1.0.pdf) (PDF)
@@ -38,7 +38,6 @@ The commented lines can be uncommented and updated once the records are availabl
  <!-- * [Eclipse Vombatidae 9.1.1](https://github.com/eclipse-ee4j/vombatidae) -->
 
 # Compatible Implementations
-* jbatch
 
 # Ballots
 
