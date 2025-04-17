@@ -31,7 +31,7 @@ See the [Jakarta RESTful Web Services 5.0 Release Plan](https://projects.eclipse
 
 # Details
 
-* [Jakarta RESTful Web Services 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/5.0.0)
+* [Jakarta RESTful Web Services 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.rest/releases/5.0.0)
     * [Jakarta EE Platform 12 Release Plan](https://jakartaee.github.io/platform/jakartaee11/#jakarta-ee-12-release-plan)
 <!--
 * [Jakarta RESTful Web Services 5.0 Specification Document](./jakarta-restful-ws-spec-5.0.pdf) (PDF)
