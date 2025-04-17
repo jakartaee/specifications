@@ -24,13 +24,13 @@ deprecated and marked for removal in preparation for future work.
 * Review Servlet integration in preparation for CDI adoption [#1214](https://github.com/jakartaee/rest/issues/1214)
 * Support for Java records [#913](https://github.com/jakartaee/rest/issues/913)
 
-See the [Jakarta RESTful Web Services 5.0 Release Plan](https://projects.eclipse.org/projects/ee4j.rest/releases/5.0.0/plan).
-
 ### Removals, deprecations, or backwards incompatible changes
 
 * Deprecate @Context and context resolvers in preparation for CDI adoption [#569](https://github.com/jakartaee/rest/issues/569)
 * Remove Security Manager uses in API [#1295](https://github.com/jakartaee/rest/issues/1295)
 * Deprecate @Suspended [#1209](https://github.com/jakartaee/rest/issues/1209)
+
+See the [Jakarta RESTful Web Services 5.0 Release Plan](https://projects.eclipse.org/projects/ee4j.rest/releases/5.0.0/plan).
 
 ### Minimum Java SE Version
 * **Java SE 21 or higher**
