@@ -7,11 +7,11 @@ summary: "Release for Jakarta EE 12"
 Jakarta RESTful Web Services provides a foundational API to develop web services following the 
 Representational State Transfer (REST) architectural pattern.
 
-The goal of this release it to continue the path towards full integration with CDI whilst 
+The goal of this release is to continue the path towards full integration with CDI whilst 
 maintaining compatibility with previous releases. A few annotations and types may be 
 deprecated and marked for removal in preparation for future work.
 
-### New features, enhancements or deprecations
+### New features, enhancements, or deprecations
 
 * Deprecate @Context and context resolvers in preparation for CDI adoption [#569](https://github.com/jakartaee/rest/issues/569)
   * Evaluate alternatives using CDI as part of this release
@@ -25,6 +25,12 @@ deprecated and marked for removal in preparation for future work.
 * Support for Java records [#913](https://github.com/jakartaee/rest/issues/913)
 
 See the [Jakarta RESTful Web Services 5.0 Release Plan](https://projects.eclipse.org/projects/ee4j.rest/releases/5.0.0/plan).
+
+### Removals, deprecations, or backwards incompatible changes
+
+* Deprecate @Context and context resolvers in preparation for CDI adoption [#569](https://github.com/jakartaee/rest/issues/569)
+* Remove Security Manager uses in API [#1295](https://github.com/jakartaee/rest/issues/1295)
+* Deprecate @Suspended [#1209](https://github.com/jakartaee/rest/issues/1209)
 
 ### Minimum Java SE Version
 * **Java SE 21 or higher**
