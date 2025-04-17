@@ -11,7 +11,7 @@ The goal of this release is to continue the path towards full integration with C
 maintaining compatibility with previous releases. A few annotations and types may be 
 deprecated and marked for removal in preparation for future work.
 
-### New features, enhancements, or deprecations
+### New features, enhancements, or additions
 
 * Deprecate @Context and context resolvers in preparation for CDI adoption [#569](https://github.com/jakartaee/rest/issues/569)
   * Evaluate alternatives using CDI as part of this release
