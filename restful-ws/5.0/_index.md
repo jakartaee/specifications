@@ -1,6 +1,6 @@
 ---
 title: "Jakarta RESTful Web Services 5.0 (under development)"
-date: YYYY-MM-DD
+date: 2025-04-15
 summary: "Release for Jakarta EE 12"
 ---
 
@@ -33,19 +33,21 @@ See the [Jakarta RESTful Web Services 5.0 Release Plan](https://projects.eclipse
 
 * [Jakarta RESTful Web Services 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.jaxrs/releases/5.0.0)
     * [Jakarta EE Platform 12 Release Plan](https://jakartaee.github.io/platform/jakartaee11/#jakarta-ee-12-release-plan)
+<!--
 * [Jakarta RESTful Web Services 5.0 Specification Document](./jakarta-restful-ws-spec-5.0.pdf) (PDF)
 * [Jakarta RESTful Web Services 5.0 Specification Document](./jakarta-restful-ws-spec-5.0.html) (HTML)
 * [Jakarta RESTful Web Services 5.0 Javadoc](./apidocs)
 * [Jakarta RESTful Web Services 5.0.0 TCK](https://download.eclipse.org/jakartaee/restful-ws/5.0/jakarta-restful-ws-tck-5.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/5.0/jakarta-restful-ws-tck-5.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/5.0/jakarta-restful-ws-tck-5.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-* Maven coordinates
+    * For all TCK releases, see the download directory [here](http://download.eclipse.org/jakartaee/restful-ws/5.0/).
+ * Maven coordinates
     * [jakarta.ws.rs:jakarta.ws.rs-api:jar:5.0.0](https://central.sonatype.com/artifact/jakarta.ws.rs/jakarta.ws.rs-api/5.0.0/jar)
 
 # Compatible Implementations
 * [RESTEasy XXXXX](https://github.com/resteasy/resteasy/releases/tag/XXXXX)
 * [Eclipse Jersey XXXXX](https://github.com/eclipse-ee4j/jersey/releases/tag/XXXXX)
-
+-->
 # Ballots
-
+<!--
 ## Release Review
 
 The Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
@@ -141,3 +143,4 @@ The Specification Committee Ballot concluded successfully on YYYY-MM-DD with the
 |                                                | **Total**           |      |
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msgxxxxx.html)
+-->
