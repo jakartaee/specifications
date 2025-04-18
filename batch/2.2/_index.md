@@ -12,11 +12,11 @@ This release aims to remove references to SecurityManager.
 
 ### New features, enhancements or additions
 <!-- List here -->
-* Remove SecurityManager references from API
+* None
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
-* None
+* Remove SecurityManager references from API jar
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
