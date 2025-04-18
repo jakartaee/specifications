@@ -11,7 +11,7 @@ This specification is a re-release of [JSR 341](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Expression Language 3.0 Specification Document](./expression-language-spec-3.0.html) (HTML)
 * [Jakarta Expression Language 3.0 Javadoc](./apidocs)
 * [Jakarta Expression Language 3.0 TCK](https://download.eclipse.org/jakartaee/expression-language/3.0/jakarta-expression-language-tck-3.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/expression-language/3.0/jakarta-expression-language-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/expression-language/3.0/jakarta-expression-language-tck-3.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * For all TCK releases, see download directory here: https://download.eclipse.org/jakartaee/expression-language/3.0
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/expression-language/3.0)
 * Maven coordinates
   * [jakarta.el:jakarta.el-api:jar:3.0.3](https://central.sonatype.com/artifact/jakarta.el/jakarta.el-api/3.0.3/jar)
 

@@ -12,7 +12,7 @@ This specification is a re-release of [JSR 919](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Mail 1.6 Specification Document](./mail-spec-1.6.html) (HTML)
 * [Jakarta Mail 1.6 Javadoc](./apidocs)
 * [Jakarta Mail 1.6 TCK](https://download.eclipse.org/jakartaee/mail/1.6/jakarta-mail-tck-1.6.0.zip) ([sig](https://download.eclipse.org/jakartaee/mail/1.6/jakarta-mail-tck-1.6.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/mail/1.6/jakarta-mail-tck-1.6.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-    * For all TCK releases, see download directory here: https://download.eclipse.org/jakartaee/mail/1.6
+    * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/mail/1.6)
 * Maven coordinates
   * [jakarta.mail:jakarta.mail-api:jar:1.6.4](https://central.sonatype.com/artifact/jakarta.mail/jakarta.mail-api/1.6.4/jar)
 
