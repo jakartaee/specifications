@@ -13,7 +13,6 @@ Jakarta Mail defines a platform-independent and protocol-independent framework t
 * [Jakarta Mail 2.0 Javadoc](./apidocs)
 * [Jakarta Mail 2.0 TCK](https://download.eclipse.org/jakartaee/mail/2.0/jakarta-mail-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/mail/2.0/jakarta-mail-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/mail/2.0/jakarta-mail-tck-2.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
    * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/mail/2.0)
-       * Adds JDK 11 Support [Jakarta Mail 2.0.1 TCK](https://download.eclipse.org/jakartaee/mail/2.0/jakarta-mail-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/mail/2.0/jakarta-mail-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/mail/2.0/jakarta-mail-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
   * [jakarta.mail:jakarta.mail-api:jar:2.0.1](https://central.sonatype.com/artifact/jakarta.mail/jakarta.mail-api/2.0.1/jar)
 * [Change Log](./changelog)
