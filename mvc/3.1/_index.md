@@ -26,3 +26,7 @@ This release ensures alignment with Jakarta RESTful Web Services 5.0.
 # Details
 
 * [Jakarta MVC 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.mvc/releases/3.1)
+
+
+# Compatible Implementations
+* [Eclipse Krazo](https://github.com/eclipse-ee4j/krazo)
