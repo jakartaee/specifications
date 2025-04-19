@@ -6,16 +6,20 @@ summary: "Release supporing Jakarta EE 12"
 
 Jakarta MVC defines a standard for creating web applications following the action-based model-view-controller pattern.
 
-This release ensures alignment with Jakarta RESTful Web Services 5.0.
+This release ensures alignment with Jakarta RESTful Web Services 5.0. 
+The [3.1 Milestone](https://github.com/jakartaee/mvc/milestone/5) in the issue tracker identifies issues targeting this release.
+Follow the [mvc-dev mailing list](https://accounts.eclipse.org/mailing-list/mvc-dev) to participate in the release.
+The TCK is developed in parallel and kept in sync at all times in the [mvc-tck repository](https://github.com/jakartaee/mvc-tck).
 
-### New features, enhancements or additions
+### New features, enhancements, or additions
 <!-- List here -->
 * Update dependencies
 * Update Java version
-* Issues, and clarifications from the issue tracker
+* Specify support for Jakarta REST [#89](https://github.com/jakartaee/mvc/issues/89)
+* Static Assed Support [#63](https://github.com/jakartaee/mvc/issues/63)
 * Consider using Jakarta Config if available
 
-### Removals, deprecations or backwards incompatible changes
+### Removals, deprecations, or backwards incompatible changes
 <!-- List here -->
 * none
 
