@@ -6,7 +6,7 @@ summary: "Release supporing Jakarta EE 12"
 
 Jakarta MVC defines a standard for creating web applications following the action-based model-view-controller pattern.
 
-This release ensures alignment with Jakarta RESTful Web Services **TODO version**.
+This release ensures alignment with Jakarta RESTful Web Services 5.0.
 
 ### New features, enhancements or additions
 <!-- List here -->
