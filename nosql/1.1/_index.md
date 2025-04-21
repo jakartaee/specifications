@@ -72,4 +72,4 @@ var developers = prepared.result();
 
 # Details
 
-* [Jakarta NoSQL 1.0.0 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.1)
+* [Jakarta NoSQL 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.1)
