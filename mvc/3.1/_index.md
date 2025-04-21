@@ -16,7 +16,7 @@ The TCK is developed in parallel and kept in sync at all times in the [mvc-tck r
 * Update dependencies
 * Update Java version
 * Specify support for Jakarta REST [#89](https://github.com/jakartaee/mvc/issues/89)
-* Static Assed Support [#63](https://github.com/jakartaee/mvc/issues/63)
+* Static Asset Support [#63](https://github.com/jakartaee/mvc/issues/63)
 * Consider using Jakarta Config if available
 
 ### Removals, deprecations, or backwards incompatible changes
