@@ -8,8 +8,7 @@ summary: "Enhancements for Jakarta EE 12"
 <!-- The intent is for the first two sections to be an executive summary in the range of 300 to 800 characters. -->
 <!-- Links can accompany the executive summary, but cannot substitute for an executive summary. -->
 
-This release targets inclusion in the Jakarta EE 12 Platform release.   
-It upgrades the Java SE requirement to Java SE 21 or newer, in alignment with Jakarta EE 12.   
+This release targets inclusion in the Jakarta EE 12 Platform release. It upgrades the Java SE requirement to Java SE 21 or newer, in alignment with Jakarta EE 12.   
 Along with this upgrade the intention is to remove references to SecurityManager in the API JAR released by the project.
 
 ### New features, enhancements or additions
