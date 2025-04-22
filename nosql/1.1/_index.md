@@ -1,7 +1,7 @@
 ---
 title: "Jakarta NoSQL 1.1 (Under Development)"
 date: 2025-04-21
-summary: "Standardized NoSQL driver API, Jakarta Query integration, and advanced mapping support"
+summary: "Enhancements for Jakarta EE 12"
 ---
 
 Jakarta NoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases.
@@ -9,6 +9,12 @@ Jakarta NoSQL is a Java framework that streamlines the integration of Java appli
 The 1.1 release builds upon the stable 1.0 foundation and introduces several key features to expand interoperability, improve developer productivity, and align with the broader Jakarta EE ecosystem.
 
 This release focuses on the definition of a standard Driver Communication API, which will allow consistent and portable integration with NoSQL databases. It also includes support for Jakarta Query, prepared statement execution, and enhanced attribute mapping.
+
+### Target Platform
+
+This release is targeted for **Jakarta EE 12**, ensuring full compatibility with the latest specifications in the Jakarta ecosystem.
+
+
 
 ### New features, enhancements or additions
 
@@ -65,6 +71,23 @@ var developers = prepared.result();
 ### Removals, deprecations or backwards incompatible changes
 
 * none 
+
+### Community Involvement
+
+You are welcome to contribute to the development of Jakarta NoSQL 1.1 through any of the following channels:
+
+-  **Mailing List**: Join the [nosql-dev mailing list](https://accounts.eclipse.org/mailing-list/nosql-dev) to participate in discussions and stay updated on progress.
+-  **Issue Tracker**: Follow or file issues under the [1.1 Milestone](https://github.com/jakartaee/nosql/issues) on GitHub.
+-  **Specification Team**: See the [Jakarta NoSQL project page](https://projects.eclipse.org/projects/ee4j.nosql/who) for a list of current committers and contributors.
+
+### Target Implementations
+
+Jakarta NoSQL 1.1 is designed with a **Driver Communication API** that acts as an adapter layer between the specification and NoSQL databases. As a result, vendors do not need to create a full implementation of the specification but can instead provide a **lightweight wrapper or adapter** around their existing client libraries.
+
+- [**Eclipse JNoSQL**](https://github.com/eclipse/jnosql) – the reference implementation, developed in close collaboration with the Jakarta NoSQL specification team.
+- MongoDB – expected support through an adapter wrapping the official MongoDB Java driver
+- Oracle NoSQL – expected support via a wrapper around Oracle’s NoSQL client
+- Other NoSQL vendors (e.g., Redis, Cassandra, Couchbase, Neo4j) are encouraged to contribute drivers by implementing the adapter interface
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
