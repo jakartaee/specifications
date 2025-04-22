@@ -1,7 +1,7 @@
 ---
 title: "Jakarta MVC 3.0"
 date: 2023-05-17
-summary: "Release supporing Jakarta EE 11"
+summary: "Release aligned with Jakarta EE 11"
 ---
 
 Jakarta MVC defines a standard for creating web applications following the action-based model-view-controller pattern.
