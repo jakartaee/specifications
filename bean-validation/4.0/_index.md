@@ -1,5 +1,5 @@
 ---
-title: "Jakarta Validation 4.0"
+title: "Jakarta Validation 4.0 (Under development)"
 date: 2024-03-27
 summary: "Release for Jakarta EE 11"
 ---
