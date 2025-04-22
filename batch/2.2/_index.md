@@ -8,7 +8,9 @@ summary: "Enhancements for Jakarta EE 12"
 <!-- The intent is for the first two sections to be an executive summary in the range of 300 to 800 characters. -->
 <!-- Links can accompany the executive summary, but cannot substitute for an executive summary. -->
 
-This release aims to remove references to SecurityManager.
+This release targets inclusion in the Jakarta EE 12 Platform release.   
+It upgrades the Java SE requirement to Java SE 21 or newer, in alignment with Jakarta EE 12.   
+Along with this upgrade the intention is to remove references to SecurityManager in the API JAR released by the project.
 
 ### New features, enhancements or additions
 <!-- List here -->
@@ -33,42 +35,18 @@ The commented lines can be uncommented and updated once the records are availabl
 * [Jakarta Wombat 1.0 XML Schema](https://jakarta.ee/xml/ns/jakartaee/wombat-1.0.xsd)
 * [Jakarta Wombat 1.0 TCK](http://downloads.eclipse.org/jakarta/wombat/1.0.0/wombat-tck-1.0.0.zip)
 * Maven coordinates
-  * [jakarta.wombat:jakarta.wombat-api:jar:1.0.0](https://search.maven.org/artifact/jakarta.wombat/jakarta.wombat-api/1.0.0/jar) -->
+  * [jakarta.wombat:jakarta.wombat-api:jar:1.0.0](https://search.maven.org/artifact/jakarta.wombat/jakarta.wombat-api/1.0.0/jar) 
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
- <!-- * [Eclipse Vombatidae 9.1.1](https://github.com/eclipse-ee4j/vombatidae) -->
+  * [Eclipse Vombatidae 9.1.1](https://github.com/eclipse-ee4j/vombatidae) -->
 
 # Compatible Implementations
-
+TBD
+<!--
 # Ballots
-
-## Release Review
-
-The Release Review Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
-
-|                       |  Yes    | No      | Abstain  |
-|-----------------------|---------|---------|----------|
-|Fujitsu                |         |         |          |
-|IBM                    |         |         |          |
-|Oracle                 |         |         |          |
-|Payara                 |         |         |          |
-|Red Hat                |         |         |          |
-|Tomitribe              |         |         |          |
-|EE4J PMC               |         |         |          |
-|Participant Members    |         |         |          |
-|Committer Members      |         |         |          |
 
 ## Plan Review
 
-The Plan Review Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
+## Release Review
 
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                |         |     |          |
-|IBM                    |         |     |          |
-|Oracle                 |         |     |          |
-|Payara                 |         |     |          |
-|Red Hat                |         |     |          |
-|Tomitribe              |         |     |          |
-|EE4J PMC               |         |     |          |
-|Participant Members    |         |     |          |
-|Committer Members      |         |     |          |
+-->
+
