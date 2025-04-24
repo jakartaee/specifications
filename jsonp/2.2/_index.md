@@ -1,5 +1,5 @@
 ---
-title: "Jakarta JSON Processing 2.2"
+title: "Jakarta JSON Processing 2.2 (under development)"
 date: 2025-04-21
 summary: "Release for Jakarta EE 12"
 ---
