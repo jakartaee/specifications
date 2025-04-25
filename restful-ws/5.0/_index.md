@@ -74,79 +74,32 @@ The Specification Committee Ballot concluded successfully on YYYY-MM-DD with the
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msgxxxxx.html)
 
-## Progress Review
-
-The Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
-
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura                                 | Fujitsu             |      |
-| Emily Jiang, Tom Watson                        | IBM                 |      |
-| Ed Bratt, Dmitry Kornilov                      | Oracle              |      |
-| Andrew Pielage, Petr Aubrecht                  | Payara              |      |
-| David Blevins, Jean-Louis Monteiro             | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-| Dr. Jun Qian                                   | Enterprise Members  |      |
-| Zhai Luchao                                    | Enterprise Members  |      |
-|                                                | **Total**           |      |
-
-Non-binding votes
-
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Dr. Jun Qian                                   | Primeton            |      |
-|                                                | **Total**           |      |
-
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msgxxxxx.html)
-
-## Plan Review
-
-The Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
-Note that this is a revised plan from the approved plan review of MONTH YEAR.
-
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura                                 | Fujitsu             |      |
-| Tom Watson, Emily Jiang                        | IBM                 |      |
-| Ed Bratt, Dmitry Kornilov                      | Oracle              |      |
-| Andrew Pielage, Petr Aubrecht                  | Payara              |      |
-| David Blevins, Jean-Louis Monteiro             | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-| Zhai Luchao                                    | Enterprise Members  |      |
-| Scott Stark, Scott Marlo0w                     | Enterprise Members  |      |
-|                                                | **Total**           |      |
-
-Non-binding votes
-
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Arjan Tijms                                    | Omnifish            |      |
-| Dr. Jun Qian                                   | Primeton            |      |
-|                                                | **Total**           |      |
-
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msgxxxxx.html)
-
-## Plan Review
-
-The Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
-
-| Representative                                 | Representative for: | Vote |
-|------------------------------------------------|---------------------|------|
-| Kenji Kazumura                                 | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter                      | IBM                 |      |
-| Ed Bratt, Dmitry Kornilov                      | Oracle              |      |
-| Andrew Pielage, Matt Gill                      | Payara              |      |
-| Scott Stark, Mark Little                       | Red Hat             |      |
-| David Blevins, Jean-Louis Monteiro             | Tomitribe           |      |
-| Ivar Grimstad                                  | EE4J PMC            |      |
-| Marcelo Ancelmo, Martijn Verburg               | Participant Members |      |
-| Werner Keil                                    | Committer Members   |      |
-| Dr. Jun Qian                                   | Enterprise Members  |      |
-|                                                | **Total**           |      |
-
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msgxxxxx.html)
 -->
+
+## Plan Review
+
+The Specification Committee Ballot concluded successfully on 2025-04-24 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members | no vote |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **9**  |
+
+Non-binding Votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Angelo Rubini                                  | Community           |   +1    |
+| Michael Redlich                                | Community           |   +1    |
+| Jim Krueger                                    | Community           |   +1    |
+|                                                | **Total**           |  **3**  |
+
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03869.html)
