@@ -19,3 +19,10 @@ As a major release, from the perspective of semantic versioning, Jakarta Faces B
 ### Minimum Java SE Version
 
 **Java SE 11 or higher**
+
+# Details
+
+* [Jakarta Portlet 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces-bridge/releases/7.0) (to be created when the project is provisioned)
+
+# Compatible Implementations
+* TBD
