@@ -22,7 +22,7 @@ As a major release, from the perspective of semantic versioning, Jakarta Faces B
 
 # Details
 
-* [Jakarta Portlet 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces-bridge/releases/7.0) (to be created when the project is provisioned)
+* [Jakarta Faces Bridge 7.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces-bridge/releases/7.0) (to be created when the project is provisioned)
 
 # Compatible Implementations
 * TBD
