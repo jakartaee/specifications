@@ -34,3 +34,28 @@ The TCK is developed in parallel and kept in sync at all times in the [mvc-tck r
 
 # Compatible Implementations
 * [Eclipse Krazo](https://github.com/eclipse-ee4j/krazo)
+
+# Ballots
+## Plan Review
+
+The Specification Committee Ballot concluded successfully on 2021-05-04 with the following results.
+
+| Representative                       | Representative for:   | Vote    |
+|--------------------------------------|-----------------------|---------|
+| Kenji Kazumura                       | Fujitsu               | +1      |
+| Tom Watson, Emily Jiang              | IBM                   | +1      |
+| Ed Bratt, Dmitry Kornilov            | Oracle                | +1      |
+| Andrew Pielage, Petr Aubrecht        | Payara                | +1      |
+| David Blevins, Jean-Louis Monteiro   | Tomitribe             | +1      |
+| Ivar Grimstad                        | EE4J PMC              | +1      |
+| Marcelo Ancelmo, Abraham Marin-Perez | Participant Members   | no vote |
+| Werner Keil                          | Committer Members     | +1      |
+| Jun Qian                             | Enterprise Members    | no vote |
+| Zhai Luchao                          | Enterprise Members    | +1      |
+|                                      | **Total**             | **8**   |
+| Non-binding votes                    |                       |         |
+| ------------------------------------ | --------------------- | ------- |
+| Michael Redlich                      | Garden State JUG      | +1      |
+|                                      | **Total**             | **1**   |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03901.html)
