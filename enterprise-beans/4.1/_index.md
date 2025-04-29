@@ -40,10 +40,7 @@ The following can be uncommented and version information updated as they become 
 
 * [Wildfly 37](TBD)
 
-# Ratifying Implementations
-
-* TBD
-
+<!--
 # Ballots
 
 ## Plan Review
@@ -53,3 +50,5 @@ TBD
 ## Release Review
 
 TBD
+
+-->
