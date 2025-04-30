@@ -96,3 +96,27 @@ Jakarta NoSQL 1.1 is designed with a **Driver Communication API** that acts as a
 # Details
 
 * [Jakarta NoSQL 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.1)
+
+# Plan Review
+The Specification Committee Ballot concluded successfully on 2025-04-30 with the following results.
+
+| Representative                                 | Representative for: | Vote |
+|------------------------------------------------|---------------------|------|
+| Kenji Kazumura                                 | Fujitsu             |  +1  |
+| Emilly Jiang, Tom Watson                       | IBM                 |  +1  |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |  +1  |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |  +1  |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |  +1  |
+| Ivar Grimstad                                  | EE4J PMC            |  +1  |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members | no vote  |
+| Werner Keil                                    | Committer Members   | no vote  |
+| Jun Qian                                       | Enterprise Members  | no vote  |
+| Zhai Luchao                                    | Enterprise Members  |  +1  |
+|                                                | **Total**           |**7**|
+
+| Non-binding votes                              |                     | Vote |
+|------------------------------------------------|---------------------|------|
+| Michael Redich                                 | Community           |  +1  |
+|                                                | **Total**           | **1**|
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03916.html)
