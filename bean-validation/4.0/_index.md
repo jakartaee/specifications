@@ -1,7 +1,7 @@
 ---
 title: "Jakarta Validation 4.0 (Under development)"
-date: 2024-03-27
-summary: "Release for Jakarta EE 11"
+date: 2025-03-27
+summary: "Release for Jakarta EE 12"
 ---
 Jakarta Validation defines a metadata model and API for JavaBean and method validation.
 
@@ -9,26 +9,28 @@ This release is targeting Jakarta EE 12 and will look to introduce the new featu
 
 ### New features, enhancements or additions
 <!-- List here -->
-* - Actually deprecate the methods in `ConstraintViolationBuilder`,
+* Actually deprecate the methods in `ConstraintViolationBuilder`,
     i.e. add `@Deprecated(since = "1.1", forRemoval = true)`, where there's currently just a Javadoc comment (`@deprecated`).
 * Introduce the `ConstraintValidator#initialize(ConstraintDescriptor<A>, ConstraintValidatorInitializationContext)` to provide access to more information at constraint initialization step (e.g. `ClockProvider`, implementation specific context, etc.).
 * Introduce `ConstraintDescriptor#getAttribute(String attributeName, Class<V> type)` to simplify working with constraint attributes.
-* Clarify what happens when mixing inheritance and default group redefinition (https://hibernate.atlassian.net/browse/BVAL-711)
-* Fix incorrect example in table 5.1 (https://hibernate.atlassian.net/browse/BVAL-698)
-* In the XSD, relax the order of elements where the order does not matter (https://hibernate.atlassian.net/browse/BVAL-694)
-* Clarify that behavior is undefined if legacy @Valid and type argument @Valid are given for same element, while at the same time encourage implementations to issue a warning to the users, as in the future spec version we are planning to enforce more strict rules and not support the "legacy" format anymore. (https://hibernate.atlassian.net/browse/BVAL-709)
-* Support ConstraintValidator declaration via service loader (https://hibernate.atlassian.net/browse/BVAL-645)
-
+* Clarify what happens when mixing inheritance and default group redefinition (https://github.com/jakartaee/validation/issues/261)
+* Fix incorrect example in table 5.1 (https://github.com/jakartaee/validation/issues/259)
+* In the XSD, relax the order of elements where the order does not matter (https://github.com/jakartaee/validation/issues/258)
+* Clarify that behavior is undefined if legacy @Valid and type argument @Valid are given for same element, while at the same time encourage implementations to issue a warning to the users, as in the future spec version we are planning to enforce more strict rules and not support the "legacy" format anymore. (https://github.com/jakartaee/validation/issues/260)
+* Support ConstraintValidator declaration via service loader (https://github.com/jakartaee/validation/issues/257)
+  
 * Drop use of `SecurityManager` (already done, but not a part of 3.1)
 * Set the minimum JDK version (21 for Jakarta EE 12)
 * Update dependencies for Jakarta EE 12
+
+* Review the list of issues from the previous issue tracker and migrate the valid ones (https://github.com/jakartaee/validation/issues/227)
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
 * "4.3. Built-in value extractors", remove requirement:
   java.util.Optional; value() must be invoked, passing null as node name and passing the contained object as value or null if none is present
 * Array element annotations. This will most likely require some breaking changes, similar to removing legacy `@Valid` support.
-* warn users about the misuse of the constraint annotation, so that we can then break the "legacy approach" in the following major
+* Warn users about the misuse of the constraint annotation, so that we can then break the "legacy approach" in the following major
 * SecurityManager usage
 
 ### Minimum Java SE Version
@@ -52,21 +54,34 @@ This release is targeting Jakarta EE 12 and will look to introduce the new featu
 * [Hibernate Validator TBD(10.x)](https://hibernate.org/validator/releases/10.x/)
 
 # Ballots
-
+<!--
 ## Release Review
-
-TBD
-
-The ballot will run in the [jakarta.ee-spec mailing list]()
+-->
 
 ## Plan Review
 
-The Specification Committee Ballot is TBD.
+## Plan Review
 
-The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03048.html)
+The Specification Committee Ballot concluded successfully on 2025-05-06 with the following results.
 
-<!--
-## Release Review
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              | no vote |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |    0    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members | no vote |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **7**  |
 
-The Specification Committee Ballot concluded successfully on TBD with the following results.
--->
+Non-binding Votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Michael Redlish                                | Community           |   +1    |
+|                                                | **Total**           |  **2**  |
+
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03940.html)
