@@ -25,4 +25,4 @@ As a major release, from the perspective of semantic versioning, Jakarta Portlet
 * [Jakarta Portlet 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.portlet/releases/4.0) (to be created when the project is provisioned)
 
 # Compatible Implementations
-* TBD
+* Apache Pluto
