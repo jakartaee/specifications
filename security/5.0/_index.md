@@ -14,13 +14,13 @@ Permission stores is a big ticket feature. This can build on the lower level Pol
 The release furthermore focuses on evolving the API in various ways, and specifically providing APIs for the authorization theme (including interceptors and the above mentioned abstraction for the permission store). 
 
 ### New features, enhancements or additions
-* Add support for permission stores #296
-* @RolesAllowed alternative  #295
-* Add SameSite attribute to cookie value for RememberMe annotation #221
-* Easily adding an interceptor to a build-in CDI bean #200
-* Add authentication mechanism for DIGEST #190
-* Add authentication mechanism for CLIENT-CERT #120 
-* Authentication mechanism per URL SECURIY #86 
+* Add support for permission stores [#296](https://github.com/jakartaee/security/issues/296)
+* @RolesAllowed alternative  [#295](https://github.com/jakartaee/security/issues/295)
+* Add SameSite attribute to cookie value for RememberMe annotation [#202](https://github.com/jakartaee/security/issues/202)
+* Easily adding an interceptor to a build-in CDI bean [#200](https://github.com/jakartaee/security/issues/200)
+* Add authentication mechanism for DIGEST [#190](https://github.com/jakartaee/security/issues/190)
+* Add authentication mechanism for CLIENT-CERT [#120](https://github.com/jakartaee/security/issues/120)
+* Authentication mechanism per URL pattern [#86](https://github.com/jakartaee/security/issues/86)
    * User choice of authentication mechanism (login with provider X, login with provider Y, etc) 
    * Multiple authentication mechanisms (try JWT, fallback to BASIC, etc) 
 
