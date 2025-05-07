@@ -40,9 +40,31 @@ This release ensures alignment with Jakarta RESTful Web Services 4.0, removes th
 
 ## Ballots
 
-<!--
 ### Release Review
--->
+
+The Specification Committee Ballot concluded successfully on 2025-05-07 with the following results.
+
+| Representative                         | Representative for: | Vote    |
+|----------------------------------------|---------------------|---------|
+| Kenji Kazumura                         | Fujitsu             | +1      |
+| Tom Watson, Emily Jiang                | IBM                 | +1      |
+| Ed Bratt, Dmitry Kornilov              | Oracle              | +1      |
+| Andrew Pielage, Petr Aubrecht          | Payara              | +1      |
+| David Blevins, Jean-Louis Monteiro     | Tomitribe           | +1      |
+| Ivar Grimstad                          | EE4J PMC            | +1      |
+| Marcelo Ancelmo, Abraham Marin-Perez   | Participant Members | no vote |
+| Werner Keil                            | Committer Members   | +1      |
+| Jun Qian                               | Enterprise Members  | +1      |
+| Zhai Luchao                            | Enterprise Members  | +1      |
+|                                        | **Total**           | **9**   |
+|                                        |                     |         |
+| Non-binding votes                      |                     | Vote    |
+| -------------------------------------- | ------------------- | ------- |
+| Michael Redlich                        |                     | +1      |
+| Angelo Rubini                          |                     | +1      |
+|                                        | **Total**           | **2**   |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02937.html).
 
 ### Plan Review
 
