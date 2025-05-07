@@ -64,7 +64,7 @@ The Specification Committee Ballot concluded successfully on 2025-05-07 with the
 | Angelo Rubini                          |                     | +1      |
 |                                        | **Total**           | **2**   |
 
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02937.html).
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03883.html).
 
 ### Plan Review
 
