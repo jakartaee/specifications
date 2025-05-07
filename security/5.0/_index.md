@@ -1,7 +1,7 @@
 ---
 title: "Jakarta Security 5.0 (under development)"
 date: 2025-04-15
-summary: "Release for Jakarta EE 11"
+summary: "Release for Jakarta EE 12"
 ---
 Jakarta Security defines a standard for creating secure Jakarta EE applications in modern application paradigms.
 
