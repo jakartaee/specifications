@@ -8,16 +8,16 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE Platform specifi
 ### New features, enhancements or additions
 <!-- List here -->
 * Updates of the dependencies for Jakarta EE 12
+  * Jakarta Annotations 3.0 to 3.1
   * Jakarta Contexts and Dependency Injection 4.1 to 5.0
   * Jakarta JSON Binding 3.0 to 3.1
-  * Jakarta JSON Parsing 2.1 to 2.2
+  * Jakarta JSON Processing 2.1 to 2.2
   * Jakarta RESTful Web Services 4.0 to 5.0
-  * Jakarta Annotations 3.0 to 3.1
 * Possible new dependencies for Jakarta EE 12 (if approved by platform committee)
   * Jakarta Config based off of MicroProfile Config
   * Jakarta HTTP 1.0
 * Add requirements for HTTP/3 support
-* Add expanded programming model for use of virtual threads
+* Add expanded programming model for use of virtual threads if applicable
 * TCK updated to work with Java 25 in addition to Java 21
 * Continued work to move component spec TCKs to their component repositories instead of in platform-tck repository
 
