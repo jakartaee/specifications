@@ -23,6 +23,10 @@ the Jakarta EE 12 platform.
 
 * [Jakarta Mail 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.mail/releases/2.2)
 
+# Compatible Implementations
+
+* [Angus Mail](https://eclipse-ee4j.github.io/angus-mail) (TBC)
+
 # Ballots
 
 ## Plan Review
