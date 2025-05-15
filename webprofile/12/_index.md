@@ -76,42 +76,34 @@ Compatible Implementations of the Jakarta EE Web Profile specification are eligi
 
 
 # Ballots
-
+<!--
 ## Release Review
-
-The Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
-
-| Representative                                 | Representative for: |  Vote   |
-|------------------------------------------------|---------------------|---------|
-| Kenji Kazumura                                 | Fujitsu             |         |
-| Emily Jiang, Tom Watson                        | IBM                 |         |
-| Ed Bratt, Dmitry Kornilov                      | Oracle              |         |
-| Andrew Pielage, Petr Aubrecht                  | Payara              |         |
-| David Blevins, Jean-Louis Monteiro             | Tomitribe           |         |
-| Ivar Grimstad                                  | EE4J PMC            |         |
-| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |         |
-| Werner Keil                                    | Committer Members   |         |
-| Jun Qian                                       | Enterprise Members  |         |
-| Zhai Luchao                                    | Enterprise Members  |         |
-|                                                | **Total**           |         |
-
-The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msgxxxxx.html)
+-->
 
 ## Plan Review
-The Specification Committee Ballot concluded successfully on YYYY-MM-DD with the following results.
+
+The Specification Committee Ballot concluded successfully on 2025-05-14 with the following results.
 
 | Representative                                 | Representative for: |  Vote   |
 |------------------------------------------------|---------------------|---------|
-| Kenji Kazumura                                 | Fujitsu             |         |
-| Emily Jiang, Tom Watson                        | IBM                 |         |
-| Ed Bratt, Dmitry Kornilov                      | Oracle              |         |
-| Andrew Pielage, Petr Aubrecht                  | Payara              |         |
-| David Blevins, Jean-Louis Monteiro             | Tomitribe           |         |
-| Ivar Grimstad                                  | EE4J PMC            |         |
-| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |         |
-| Werner Keil                                    | Committer Members   |         |
-| Jun Qian                                       | Enterprise Members  |         |
-| Zhai Luchao                                    | Enterprise Members  |         |
-|                                                | **Total**           |         |
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |   +1    |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Marcelo Ancelmo, Abraham Marin-Perez           | Participant Members |   +1    |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           | **10**  |
 
-The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msgxxxxx.html)
+Non-binding Votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Angelo Rubini                                  | Community           |   +1    |
+| Michael Redlish                                | Community           |   +1    |
+| Arjan Tijms                                    | Community           |   +1    |
+|                                                | **Total**           |  **3**  |
+
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg04056.html)
