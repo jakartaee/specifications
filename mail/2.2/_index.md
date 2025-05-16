@@ -30,20 +30,26 @@ the Jakarta EE 12 platform.
 # Ballots
 
 ## Plan Review
-<!--
-The Specification Committee Ballot concluded successfully on 2025-xx-xx with the following results.
-| Representative                     | Representative for: |  Vote  |
-|------------------------------------|---------------------|--------|
-| Kenji Kazumura                     | Fujitsu             |      |
-| Dan Bandera, Kevin Sutter          | IBM                 |      |
-| Ed Bratt, Dmitry Kornilov          | Oracle              |      |
-| Andrew Pielage, Matt Gill          | Payara              |      |
-| Scott Stark, Mark Little           | Red Hat             |      |
-| David Blevins, Jean-Louis Monteiro | Tomitribe           |      |
-| Ivar Grimstad                      | EE4J PMC            |      |
-| Marcelo Ancelmo, Martijn Verburg   | Participant Members |      |
-| Werner Keil                        | Committer Members   |      |
-| Scott (Congquan) Wang              | Enterprise Members  |      |
-|                                    | **Total**           | **** |
-The ballot was run in the [jakarta.ee-spec mailing list]()
--->
+
+The Specification Committee Ballot concluded successfully on 2025-05-16 with the following results.
+
+| Representative                       | Representative for:   | Vote    |
+|--------------------------------------|-----------------------|---------|
+| Kenji Kazumura                       | Fujitsu               | +1      |
+| Tom Watson, Emily Jiang              | IBM                   | +1      |
+| Ed Bratt, Dmitry Kornilov            | Oracle                | +1      |
+| Andrew Pielage, Petr Aubrecht        | Payara                | +1      |
+| David Blevins, Jean-Louis Monteiro   | Tomitribe             | +1      |
+| Ivar Grimstad                        | EE4J PMC              | +1      |
+| Marcelo Ancelmo, Abraham Marin-Perez | Participant Members   | +1      |
+| Werner Keil                          | Committer Members     | +1      |
+| Jun Qian                             | Enterprise Members    | +1      |
+| Zhai Luchao                          | Enterprise Members    | +1      |
+|                                      | **Total**             | **10**  |
+| Non-binding votes                    |                       |         |
+| ------------------------------------ | --------------------- | ------- |
+| Michael Redlich                      | Garden State JUG      | +1      |
+| Angelo Rubini                        | Community             | +1      |
+|                                      | **Total**             | **2**   |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg04087.html)
