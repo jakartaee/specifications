@@ -12,6 +12,12 @@ appropriate bean to perform the operation(s).
 This release aims to remove Security Manager-related code from the API, along with implementing other changes required by
 the Jakarta EE 12 platform.
 
+### New features, enhancements or additions
+none
+
+###  Removals, deprecations or backwards incompatible changes
+* Remove references to Security Manager
+
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
 **Java SE 17 or higher**
