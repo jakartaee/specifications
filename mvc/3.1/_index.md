@@ -1,7 +1,7 @@
 ---
 title: "Jakarta MVC 3.1 (Under Development)"
-date: 2025-04-15
-summary: "Release supporing Jakarta EE 12"
+date: 2025-05-15
+summary: "Release aligned with Jakarta EE 12"
 ---
 
 Jakarta MVC defines a standard for creating web applications following the action-based model-view-controller pattern.
