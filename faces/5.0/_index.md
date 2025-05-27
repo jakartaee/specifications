@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Faces 5.0 (Under development)"
-date: 2025-10-22
+date: 2025-05-22
 summary: "Release for Jakarta EE 12"
 ---
 
