@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Pages 4.1 (under development)"
-date: 2026-06-30
+date: 2026-05-26
 summary: "Release for Jakarta EE 12"
 ---
 Jakarta Pages defines a template engine for web applications that supports mixing of textual content
