@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Standard Tag Library 3.1 (under development)"
-date: 2026-06-30
+date: 2026-05-26
 summary: "Release for Jakarta EE 12"
 ---
 
