@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Expression Language 6.1 (under development)"
-date: 2026-06-30
+date: 2025-05-26
 summary: "Release for Jakarta EE 12"
 ---
 
