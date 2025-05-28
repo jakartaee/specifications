@@ -1,6 +1,6 @@
 ---
 title: "Jakarta EE Platform 12 (Under development)"
-date: 2025-04-14
+date: 2025-05-14
 summary: "Release of the Jakarta EE Platform 12"
 ---
 The Jakarta EE Platform defines a standard platform for hosting Jakarta EE applications.
