@@ -5,4 +5,5 @@ in Java(R) environments."
 #<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
 summary_sixty_char: "Management of persistence and object/relational mapping"
 project_id: "ee4j.jpa"
+video_guide: "https://www.youtube.com/watch?v=fzMdP7SxfSw"
 ---

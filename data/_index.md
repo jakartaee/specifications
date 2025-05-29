@@ -4,6 +4,7 @@ summary: "Jakarta Data defines core APIs for the Jakarta EE platform allowing ap
 #<!--.................0123456789.123456789.123456789.123456789.123456789.123456789-->
 summary_sixty_char: "Standardized Data Access with the Repository pattern."
 project_id: "ee4j.data"
+video_guide: "https://www.youtube.com/watch?v=jFo2ifxwslo"
 ---
 
 Jakarta Data provides an API to allow easy data access technologies. 
