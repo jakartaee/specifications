@@ -43,7 +43,7 @@ and refactors features that are not client facing into the subinterface.
 * [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.1 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 4.1.0 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip)
+* [Jakarta Contexts Dependency Injection 4.1.0 TCK](https://download.eclipse.org/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip)
 ([sig](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
