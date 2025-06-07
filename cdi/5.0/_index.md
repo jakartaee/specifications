@@ -36,7 +36,7 @@ Currently suggested topics includes:
 * [Jakarta Contexts Dependency Injection 5.0 Specification Document](./jakarta-cdi-spec-5.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 5.0 Specification Document](./jakarta-cdi-spec-5.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 5.0 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 5.0.0 TCK](https://www.eclipse.org/downloads/download.php?file=/ee4j/cdi/5.0/cdi-tck-5.0.0-dist.zip)
+* [Jakarta Contexts Dependency Injection 5.0.0 TCK](https://download.eclipse.org/ee4j/cdi/5.0/cdi-tck-5.0.0-dist.zip)
 ([sig](https://download.eclipse.org/jakartaee/cdi/5.0/TBD.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/cdi/5.0/TBD.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))

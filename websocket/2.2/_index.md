@@ -95,5 +95,3 @@ The Specification Committee Ballot completed on 11th July 2023.
 
 The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02948.html)
 
-## Release Review
-TBD
