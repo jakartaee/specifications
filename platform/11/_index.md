@@ -1,5 +1,5 @@
 ---
-title: "Jakarta EE Platform 11 (Under development)"
+title: "Jakarta EE Platform 11"
 date: 2023-10-06
 summary: "Release of the Jakarta EE 11 Platform"
 ---
@@ -14,7 +14,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
 * Prune ManagedBeans
-* Remove all use of SecurityManager
+* Remove requirement to use `SecurityManager`
 * Remove all optional specifications
 
 ### Minimum Java SE Version
@@ -26,16 +26,16 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE Platform 11 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaee-platform/releases/11)
    * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
 * Specification documents
-   * [Jakarta EE Platform 11 M5 Specification Document](./jakarta-platform-spec-11.0-M5.pdf) (PDF)
-   * [Jakarta EE Platform 11 M5 Specification Document](./jakarta-platform-spec-11.0-M5.html) (HTML)
-* [Jakarta EE Platform 11 M5 Javadoc](./apidocs)
+   * [Jakarta EE Platform 11 Specification Document](./jakarta-platform-spec-11.0.pdf) (PDF)
+   * [Jakarta EE Platform 11 Specification Document](./jakarta-platform-spec-11.0.html) (HTML)
+* [Jakarta EE Platform 11 Javadoc](./apidocs)
+* [Jakarta EE Platform 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-   * [jakarta.platform:jakarta.jakartaee-api:jar:11.0.0-M5](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-api/11.0.0-M5/jar)
+   * [jakarta.platform:jakarta.jakartaee-api:jar:11.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-api/11.0.0/jar)
+* Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
+   * Java 17: [Eclipse GlassFish](https://download.eclipse.org/ee4j/glassfish/glassfish-8.0.0-JDK17-M12.zip)
+   * Java 21: [Eclipse GlassFish](https://download.eclipse.org/ee4j/glassfish/glassfish-8.0.0-M12.zip)
 
-<!--
-* [Jakarta EE Platform 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip) ([sig]
-(https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
--->
 # Compatible Implementations
 
 Compatible Implementations of the Jakarta EE Platform specification are eligible to use the _Jakarta EE Compatible_ logo. For more information, see [Get Listed](/compatibility/get-listed/).
