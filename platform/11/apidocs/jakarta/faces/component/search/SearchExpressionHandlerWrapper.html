@@ -306,7 +306,7 @@ implements <a href="../../FacesWrapper.html" title="interface in jakarta.faces">
 <div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="SearchExpressionHandler.html#resolveClientIds(jakarta.faces.component.search.SearchExpressionContext,java.lang.String)">SearchExpressionHandler</a></code></span></div>
 <div class="block"><p class="changed_added_2_3">
  Resolves to a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List</code></a> with clientIds or passthrough expressions for the given expressions. The expressions will
- be splitted by <a href="SearchExpressionHandler.html#splitExpressions(jakarta.faces.context.FacesContext,java.lang.String)"><code>SearchExpressionHandler.splitExpressions(jakarta.faces.context.FacesContext, java.lang.String)</code></a> and resolved one by
+ be split by <a href="SearchExpressionHandler.html#splitExpressions(jakarta.faces.context.FacesContext,java.lang.String)"><code>SearchExpressionHandler.splitExpressions(jakarta.faces.context.FacesContext, java.lang.String)</code></a> and resolved one by
  one.
  </p></div>
 <dl class="notes">
@@ -349,7 +349,7 @@ implements <a href="../../FacesWrapper.html" title="interface in jakarta.faces">
  <a href="../ContextCallback.html" title="interface in jakarta.faces.component">ContextCallback</a>&nbsp;callback)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="SearchExpressionHandler.html#resolveComponents(jakarta.faces.component.search.SearchExpressionContext,java.lang.String,jakarta.faces.component.ContextCallback)">SearchExpressionHandler</a></code></span></div>
 <div class="block"><p class="changed_added_2_3">
- Resolves multiple <a href="../UIComponent.html" title="class in jakarta.faces.component"><code>UIComponent</code></a>s for the given expression(s). The expressions will be splitted by
+ Resolves multiple <a href="../UIComponent.html" title="class in jakarta.faces.component"><code>UIComponent</code></a>s for the given expression(s). The expressions will be split by
  <a href="SearchExpressionHandler.html#splitExpressions(jakarta.faces.context.FacesContext,java.lang.String)"><code>SearchExpressionHandler.splitExpressions(jakarta.faces.context.FacesContext, java.lang.String)</code></a> and resolved one by one. For each
  resolved component, the <a href="../ContextCallback.html" title="interface in jakarta.faces.component"><code>ContextCallback</code></a> will be invoked.
  </p></div>

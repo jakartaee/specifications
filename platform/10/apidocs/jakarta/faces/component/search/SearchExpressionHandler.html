@@ -163,7 +163,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
  <li>The search expression (possibly modified in the previous step) is now a "relative" search expression that will be
  used to locate the component (if any) based on the identifier and/or keywords:
  <ul>
- <li>The expression will be splitted by <a href="../UINamingContainer.html#getSeparatorChar(jakarta.faces.context.FacesContext)"><code>UINamingContainer.getSeparatorChar(jakarta.faces.context.FacesContext)</code></a> into
+ <li>The expression will be split by <a href="../UINamingContainer.html#getSeparatorChar(jakarta.faces.context.FacesContext)"><code>UINamingContainer.getSeparatorChar(jakarta.faces.context.FacesContext)</code></a> into
  "commands". The commands will be resolved one by one. For the first command, the source component, like mentioned
  above, will be used to start the lookup. For all further commands, the previous resolved component, from the previous
  command, will be used the start the lookup.</li>
@@ -474,7 +474,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                                               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;expressions)</pre>
 <div class="block"><p class="changed_added_2_3">
  Resolves to a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink"><code>List</code></a> with clientIds or passthrough expressions for the given expressions. The expressions will
- be splitted by <a href="#splitExpressions(jakarta.faces.context.FacesContext,java.lang.String)"><code>splitExpressions(jakarta.faces.context.FacesContext, java.lang.String)</code></a> and resolved one by
+ be split by <a href="#splitExpressions(jakarta.faces.context.FacesContext,java.lang.String)"><code>splitExpressions(jakarta.faces.context.FacesContext, java.lang.String)</code></a> and resolved one by
  one.
  </p></div>
 <dl>
@@ -529,7 +529,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;expressions,
                                        <a href="../ContextCallback.html" title="interface in jakarta.faces.component">ContextCallback</a>&nbsp;callback)</pre>
 <div class="block"><p class="changed_added_2_3">
- Resolves multiple <a href="../UIComponent.html" title="class in jakarta.faces.component"><code>UIComponent</code></a>s for the given expression(s). The expressions will be splitted by
+ Resolves multiple <a href="../UIComponent.html" title="class in jakarta.faces.component"><code>UIComponent</code></a>s for the given expression(s). The expressions will be split by
  <a href="#splitExpressions(jakarta.faces.context.FacesContext,java.lang.String)"><code>splitExpressions(jakarta.faces.context.FacesContext, java.lang.String)</code></a> and resolved one by one. For each
  resolved component, the <a href="../ContextCallback.html" title="interface in jakarta.faces.component"><code>ContextCallback</code></a> will be invoked.
  </p></div>
