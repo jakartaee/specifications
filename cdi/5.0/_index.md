@@ -40,7 +40,7 @@ Currently suggested topics includes:
 ([sig](https://download.eclipse.org/jakartaee/cdi/5.0/TBD.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/cdi/5.0/TBD.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
-
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/cdi/5.0)
 * Maven coordinates
   * [jakarta.enterprise:jakarta.enterprise.cdi-api:5.0.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/5.0.0/jar)
   * [jakarta.enterprise:jakarta.enterprise.lang-model:5.0.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.lang-model/5.0.0/jar)
