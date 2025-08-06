@@ -27,6 +27,7 @@ the original source (for example, source file and line number references).
 * [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0.pdf) (PDF)
 * [Jakarta Debugging Support for Other Languages 2.0 Specification Document](./jdsol-spec-2.0.html) (HTML)
 * [Jakarta Debugging Support for Other Languages TCK](https://download.eclipse.org/jakartaee/debugging/2.0/jakarta-debugging-tck-2.0.0.zip)([sig](https://download.eclipse.org/jakartaee/debugging/2.0/jakarta-debugging-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/debugging/2.0/jakarta-debugging-tck-2.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/debugging/2.0)
 
 
 # Compatible Implementations
