@@ -18,7 +18,7 @@ The Jakarta Connectors specification defines a standard architecture for Jakarta
 
 # Compatible Implementations
 
-* [Eclipse GlassFish 6.0.0-M1](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-6.0.0-M1.zip)
+* [Eclipse GlassFish 6.0.0-M1](https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-M1.zip)
 
 # Ballots
 

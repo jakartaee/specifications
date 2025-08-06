@@ -1,6 +1,6 @@
 ---
 title: "Jakarta WebSocket 2.3 (under development)"
-date: 2026-06-30
+date: 2025-05-26
 summary: "Release for Jakarta EE 12"
 ---
 Jakarta WebSocket defines a API for Server and Client Endpoints for the WebSocket protocol (RFC6455).

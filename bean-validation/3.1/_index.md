@@ -78,8 +78,3 @@ The Specification Committee Ballot concluded successfully on 2023-08-01 with the
 
 The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03048.html)
 
-<!--
-## Release Review
-
-The Specification Committee Ballot concluded successfully on TBD with the following results.
--->

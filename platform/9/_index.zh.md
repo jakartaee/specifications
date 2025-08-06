@@ -18,7 +18,7 @@ Jakarta EE Platform 定义了承载 Jakarta EE 应用的标准平台.
 * [Jakarta EE 9 日程](https://jakartaee.github.io/platform/jakartaee9/JakartaEE9#jakarta-ee-9-schedule)
 
 # 兼容实现
-* [Eclipse Glassfish 6.0.0-M1](https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-6.0.0-M1.zip)
+* [Eclipse Glassfish 6.0.0-M1](https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-M1.zip)
 
 # 投票结果
 
