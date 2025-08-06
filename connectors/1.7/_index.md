@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 322](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Connectors 1.7 Specification Document](./connectors-spec-1.7.html) (HTML)
 * [Jakarta Connectors 1.7 Javadoc](./apidocs)
 * [Jakarta Connectors 1.7 TCK](https://download.eclipse.org/jakartaee/connectors/1.7/jakarta-connectors-tck-1.7.1.zip) ([sig](https://download.eclipse.org/jakartaee/connectors/1.7/jakarta-connectors-tck-1.7.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/connectors/1.7/jakarta-connectors-tck-1.7.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/connectors/1.7)
 * Maven coordinates
   * [jakarta.resource:jakarta.resource-api:jar:1.7.4](https://central.sonatype.com/artifact/jakarta.resource/jakarta.resource-api/1.7.4/jar)
 
