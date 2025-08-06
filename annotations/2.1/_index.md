@@ -26,6 +26,7 @@ Jakarta Annotations defines a collection of annotations representing common sema
 * [Jakarta Annotations 2.1 Specification Document](./annotations-spec-2.1.html) (HTML)
 * [Jakarta Annotations 2.1 Javadoc](./apidocs)
 * [Jakarta Annotations 2.1 TCK](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/annotations/2.1/jakarta-annotations-tck-2.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/annotations/2.1)
 * Maven coordinates
     * [jakarta.annotation:jakarta.annotation-api:jar:2.1.1](https://central.sonatype.com/artifact/jakarta.annotation/jakarta.annotation-api/2.1.1/jar)
 * [Change Log](./changelog)
