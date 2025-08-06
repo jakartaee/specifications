@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 352](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Batch 1.0 Specification Document](./batch-spec-1.0.html) (HTML)
 * [Jakarta Batch 1.0 Javadoc](./apidocs)
 * [Jakarta Batch 1.0 TCK](https://download.eclipse.org/jakartaee/batch/1.0/jakarta.batch.official.tck-1.0.2.zip) ([sig](https://download.eclipse.org/jakartaee/batch/1.0/jakarta.batch.official.tck-1.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/batch/1.0/jakarta.batch.official.tck-1.0.2.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/batch/1.0)
 * Maven coordinates
   * [jakarta.batch:jakarta.batch-api:jar:1.0.2](https://central.sonatype.com/artifact/jakarta.batch/jakarta.batch-api/1.0.2/jar)
 
