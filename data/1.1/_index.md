@@ -36,6 +36,7 @@ Jakarta Data simplifies data access by allowing you to represent data with simpl
 * [Jakarta Data 1.1 Specification Document](./jakarta-data-spec-1.1.html) (HTML) (Does not exist yet)
 * [Jakarta Data 1.1 Javadoc](./apidocs) (Does not exist yet)
 * [Jakarta Data 1.1 TCK](http://downloads.eclipse.org/jakarta/data/1.1/data-tck-1.1.0.zip) (Does not exist yet)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/data/1.1) (Does not exist yet)
 * Maven coordinates
   * [jakarta.data:jakarta.data-api:jar:1.1.0](https://search.maven.org/artifact/jakarta.data/jakarta.data-api/1.1.0/jar) (Does not exist yet)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
