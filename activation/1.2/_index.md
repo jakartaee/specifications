@@ -14,6 +14,7 @@ This specification is a re-release of [JSR 925](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Activation 1.2 Specification Document](./activation-spec-1.2.html) (HTML)
 * [Jakarta Activation 1.2 Javadoc](./apidocs)
 * [Jakarta Activation 1.2 TCK](https://download.eclipse.org/jakartaee/activation/1.2/jakarta-activation-tck-1.2.0.zip) ([sig](https://download.eclipse.org/jakartaee/activation/1.2/jakarta-activation-tck-1.2.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/activation/1.2/jakarta-activation-tck-1.2.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/activation/1.2)
 * Maven coordinates
   * [jakarta.activation:jakarta.activation-api:jar:1.2.2](https://central.sonatype.com/artifact/jakarta.activation/jakarta.activation-api/1.2.2/jar)
 

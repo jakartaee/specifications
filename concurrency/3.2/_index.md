@@ -37,6 +37,7 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 * [Jakarta Concurrency 3.2 Specification Document](./jakarta-concurrency-spec-3.2.html) (HTML) (Does not exist yet)
 * [Jakarta Concurrency 3.2 Javadoc](./apidocs) (Does not exist yet)
 * [Jakarta Concurrency 3.2 TCK](https://download.eclipse.org/jakartaee/concurrency/3.2/concurrency-tck-3.2.0.zip) (Does not exist yet)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/concurrency/3.2) (Does not exist yet)
 -->
 <!--
 * Maven coordinates

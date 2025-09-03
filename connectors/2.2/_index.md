@@ -33,6 +33,7 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 * [Jakarta Connectors 2.2 Specification Document](./jakarta-connectors-spec-2.2.html) (HTML) (Does not exist yet)
 * [Jakarta Connectors 2.2 Javadoc](./apidocs) (Does not exist yet)
 * [Jakarta Connectors 2.2 TCK](https://download.eclipse.org/jakartaee/connectors/2.2/connectors-tck-2.2.0.zip) (Does not exist yet)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/connectors/2.2) (Does not exist yet)
 -->
 <!--
 * Maven coordinates

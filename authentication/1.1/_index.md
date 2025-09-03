@@ -16,6 +16,7 @@ This specification is a re-release of [JSR 196](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Authentication 1.1 Specification Document](./authentication-spec-1.1.html) (HTML)
 * [Jakarta Authentication 1.1 Javadoc](./apidocs)
 * [Jakarta Authentication 1.1 TCK](https://download.eclipse.org/jakartaee/authentication/1.1/jakarta-authentication-tck-1.1.1.zip) ([sig](https://download.eclipse.org/jakartaee/authentication/1.1/jakarta-authentication-tck-1.1.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/authentication/1.1/jakarta-authentication-tck-1.1.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/authentication/1.1)
 * Maven coordinates
   * [jakarta.security.auth.message:jakarta.security.auth.message-api:jar:1.1.3](https://central.sonatype.com/artifact/jakarta.security.auth.message/jakarta.security.auth.message-api/1.1.3/jar)
 

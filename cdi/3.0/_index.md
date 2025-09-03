@@ -15,7 +15,7 @@ Jakarta Contexts Dependency Injection specifies a means for obtaining objects in
 ([sig](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.1-dist.zip.sig),
 [sha](http://download.eclipse.org/jakartaee/cdi/3.0/cdi-tck-3.0.1-dist.zip.sha256),
 [pub](https://github.com/jakartaee/specification-committee/blob/master/jakartaee-spec-committee.pub))
-
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/cdi/3.0)
 * Maven coordinates
   * [jakarta.enterprise:jakarta.cdi-api:jar:3.0.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/3.0.0/jar)
 

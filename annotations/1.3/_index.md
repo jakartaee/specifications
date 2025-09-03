@@ -12,6 +12,7 @@ This specification is a re-release of [JSR 250](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Annotations 1.3 Specification Document](./annotations-spec-1.3.html) (HTML)
 * [Jakarta Annotations 1.3 Javadoc](./apidocs)
 * [Jakarta Annotations 1.3 TCK](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/annotations/1.3/jakarta-annotations-tck-1.3.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/annotations/1.3)
 * Maven coordinates
   * [jakarta.annotation:jakarta.annotation-api:jar:1.3.5](https://central.sonatype.com/artifact/jakarta.annotation/jakarta.annotation-api/1.3.5/jar)
 
