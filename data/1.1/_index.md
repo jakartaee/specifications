@@ -20,6 +20,34 @@ Jakarta Data simplifies data access by allowing you to represent data with simpl
 * [Explicitly state where NoSQL databases can raise errors for function the database type is not capable of](https://github.com/jakartaee/data/issues/782)
 * TCK refactoring and enhancements to more logically split out tests that are targeted at various levels of database support (key-value, column, document, graph, relational).
 
+*Fluent Query Construction*: The metamodel provides a fluent API for building restrictions dynamically. Developers can define reusable query fragments, conditionally apply filters, and construct criteria programmatically — all without sacrificing type safety.
+
+```java
+List<Product> found = products.findAll(
+    Restrict.all(
+        _Product.type.equalTo(ProductType.PHYSICAL),
+        _Product.price.greaterThan(10.00f),
+        _Product.name.contains("Jakarta")
+    ),
+    Order.by(
+        _Product.price.desc(),
+        _Product.name.asc()
+    )
+);
+```
+
+*Inclusion of projection with Record*: A repository method can return a projection by having the result type be a Java record. 
+
+```java
+record ModelInfo(String model, String manufacturer,                     int designYear) {}
+
+@Repository
+public interface Cars extends BasicRepository<Car, String> {
+
+@Find
+Optional<ModelInfo> getModelInfo(@By(_Car.VIN) String vehicleIdNum);
+}
+```
 
 ### Removals, deprecations or backwards incompatible changes
 
@@ -32,12 +60,12 @@ Jakarta Data simplifies data access by allowing you to represent data with simpl
 # Details
 
 * [Jakarta Data 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.1)
-* [Jakarta Data 1.1 Specification Document](./jakarta-data-1.1.pdf) (PDF) (Does not exist yet)
-* [Jakarta Data 1.1 Specification Document](./jakarta-data-spec-1.1.html) (HTML) (Does not exist yet)
-* [Jakarta Data 1.1 Javadoc](./apidocs) (Does not exist yet)
+* [Jakarta Data 1.1 M1 Specification Document](./jakarta-data-1.1-M1.pdf) (PDF)
+* [Jakarta Data 1.1 M1 Specification Document](./jakarta-data-spec-1.1-M1.html) (HTML)
+* [Jakarta Data 1.1 M1 Javadoc](./apidocs)
 * [Jakarta Data 1.1 TCK](http://downloads.eclipse.org/jakarta/data/1.1/data-tck-1.1.0.zip) (Does not exist yet)
 * Maven coordinates
-  * [jakarta.data:jakarta.data-api:jar:1.1.0](https://search.maven.org/artifact/jakarta.data/jakarta.data-api/1.1.0/jar) (Does not exist yet)
+  * [jakarta.data:jakarta.data-api:jar:1.1.0-M1](https://search.maven.org/artifact/jakarta.data/jakarta.data-api/1.1.0-M1/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [To Be Determined](https://github.com/)
 

@@ -1,0 +1,16 @@
+module:jakarta.data
+jakarta.data
+jakarta.data.constraint
+jakarta.data.event
+jakarta.data.exceptions
+jakarta.data.expression
+jakarta.data.metamodel
+jakarta.data.metamodel.impl
+jakarta.data.page
+jakarta.data.page.impl
+jakarta.data.repository
+jakarta.data.restrict
+jakarta.data.spi
+jakarta.data.spi.expression.function
+jakarta.data.spi.expression.literal
+jakarta.data.spi.expression.path
