@@ -8,18 +8,6 @@ Jakarta Data simplifies data access by allowing you to represent data with simpl
 
 ### New features, enhancements or additions
 
-* [Ability to define query restrictions dynamically](https://github.com/jakartaee/data/issues/829)
-* [Life cycle events](https://github.com/jakartaee/data/issues/373)
-* [Bring parameter based automatic query methods up to the level of what Query by Method Name can do for static queries](https://github.com/jakartaee/data/issues/857)
-* [Query Fragments](https://github.com/jakartaee/data/issues/546)
-* [Multiple item select lists/DTOs/Entity Views](https://github.com/jakartaee/data/issues/539)
-* [Consider additional annotations related to Jakarta Persistence](https://github.com/jakartaee/data/issues/470)
-* [Reactive patterns](https://github.com/jakartaee/data/issues/17) and [integration with Jakarta Concurrency Asynchronous](https://github.com/jakartaee/data/issues/19)
-* Move Jakarta Data Query Language to Jakarta Query specification (if accepted and included in Jakarta EE 12) where it will remain fully compatible.
-* Configuration via Jakarta Config (if Jakarta Config is released and makes it into Jakarta EE 12 in time)
-* [Explicitly state where NoSQL databases can raise errors for function the database type is not capable of](https://github.com/jakartaee/data/issues/782)
-* TCK refactoring and enhancements to more logically split out tests that are targeted at various levels of database support (key-value, column, document, graph, relational).
-
 **Fluent Query Construction**: The metamodel provides a fluent API for building restrictions dynamically. Developers can define reusable query fragments, conditionally apply filters, and construct criteria programmatically — all without sacrificing type safety.
 
 ```java
@@ -48,6 +36,22 @@ public interface Cars extends BasicRepository<Car, String> {
 Optional<ModelInfo> getModelInfo(@By(_Car.VIN) String vehicleIdNum);
 }
 ```
+
+
+#### Reference Related Issues:
+
+* [Ability to define query restrictions dynamically](https://github.com/jakartaee/data/issues/829)
+* [Life cycle events](https://github.com/jakartaee/data/issues/373)
+* [Bring parameter based automatic query methods up to the level of what Query by Method Name can do for static queries](https://github.com/jakartaee/data/issues/857)
+* [Query Fragments](https://github.com/jakartaee/data/issues/546)
+* [Multiple item select lists/DTOs/Entity Views](https://github.com/jakartaee/data/issues/539)
+* [Consider additional annotations related to Jakarta Persistence](https://github.com/jakartaee/data/issues/470)
+* [Reactive patterns](https://github.com/jakartaee/data/issues/17) and [integration with Jakarta Concurrency Asynchronous](https://github.com/jakartaee/data/issues/19)
+* Move Jakarta Data Query Language to Jakarta Query specification (if accepted and included in Jakarta EE 12) where it will remain fully compatible.
+* Configuration via Jakarta Config (if Jakarta Config is released and makes it into Jakarta EE 12 in time)
+* [Explicitly state where NoSQL databases can raise errors for function the database type is not capable of](https://github.com/jakartaee/data/issues/782)
+* TCK refactoring and enhancements to more logically split out tests that are targeted at various levels of database support (key-value, column, document, graph, relational).
+
 
 ### Removals, deprecations or backwards incompatible changes
 
