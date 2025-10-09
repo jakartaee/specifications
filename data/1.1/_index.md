@@ -20,7 +20,7 @@ Jakarta Data simplifies data access by allowing you to represent data with simpl
 * [Explicitly state where NoSQL databases can raise errors for function the database type is not capable of](https://github.com/jakartaee/data/issues/782)
 * TCK refactoring and enhancements to more logically split out tests that are targeted at various levels of database support (key-value, column, document, graph, relational).
 
-*Fluent Query Construction*: The metamodel provides a fluent API for building restrictions dynamically. Developers can define reusable query fragments, conditionally apply filters, and construct criteria programmatically — all without sacrificing type safety.
+**Fluent Query Construction**: The metamodel provides a fluent API for building restrictions dynamically. Developers can define reusable query fragments, conditionally apply filters, and construct criteria programmatically — all without sacrificing type safety.
 
 ```java
 List<Product> found = products.findAll(
@@ -36,7 +36,7 @@ List<Product> found = products.findAll(
 );
 ```
 
-*Inclusion of projection with Record*: A repository method can return a projection by having the result type be a Java record. 
+**Inclusion of projection with Record**: A repository method can return a projection by having the result type be a Java record. 
 
 ```java
 record ModelInfo(String model, String manufacturer,                     int designYear) {}
