@@ -74,7 +74,6 @@ public interface Products extends BasicRepository<Product, String> {
 * [Explicitly state where NoSQL databases can raise errors for function the database type is not capable of](https://github.com/jakartaee/data/issues/782)
 * TCK refactoring and enhancements to more logically split out tests that are targeted at various levels of database support (key-value, column, document, graph, relational).
 
-
 ### Removals, deprecations or backwards incompatible changes
 
 * Consider deprecating an [impl package](https://github.com/jakartaee/data/tree/main/api/src/main/java/jakarta/data/metamodel/impl) that should not have been made available in the API.
