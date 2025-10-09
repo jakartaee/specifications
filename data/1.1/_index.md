@@ -86,8 +86,8 @@ public interface Products extends BasicRepository<Product, String> {
 # Details
 
 * [Jakarta Data 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.1)
-* [Jakarta Data 1.1 M1 Specification Document](./jakarta-data-1.1-M1.pdf) (PDF)
-* [Jakarta Data 1.1 M1 Specification Document](./jakarta-data-1.1-M1.html) (HTML)
+* [Jakarta Data 1.1 M1 Specification Document](./jakarta-data-1.1.0-M1.pdf) (PDF)
+* [Jakarta Data 1.1 M1 Specification Document](./jakarta-data-1.1.0-M1.html) (HTML)
 * [Jakarta Data 1.1 M1 Javadoc](./apidocs)
 * [Jakarta Data 1.1 TCK](http://downloads.eclipse.org/jakarta/data/1.1/data-tck-1.1.0.zip) (Does not exist yet)
 * Maven coordinates
