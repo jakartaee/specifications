@@ -37,6 +37,28 @@ Optional<ModelInfo> getModelInfo(@By(_Car.VIN) String vehicleIdNum);
 }
 ```
 
+**Stateful Repository Operations** it introduces annotations to explicitly control entity lifecycle operations in repositories. These annotations provide fine-grained control over entity state transitions such as persisting, merging, refreshing, detaching, and removing entities.
+
+```java
+@Repository
+public interface Products extends BasicRepository<Product, String> {
+
+    @Persist
+    void add(Product product);
+
+    @Merge
+    Product update(Product product);
+
+    @Remove
+    void delete(Product product);
+
+    @Refresh
+    void reload(Product product);
+
+    @Detach
+    void detach(Product product);
+}
+```
 
 #### Reference Related Issues:
 
