@@ -37,11 +37,13 @@ Optional<ModelInfo> getModelInfo(@By(_Car.VIN) String vehicleIdNum);
 }
 ```
 
-**Stateful Repository Operations** it introduces annotations to explicitly control entity lifecycle operations in repositories. These annotations provide fine-grained control over entity state transitions such as persisting, merging, refreshing, detaching, and removing entities.
+**Stateful Repository Operations** Jakarta Data includes the concept of stateful repositories that manage entities according to a persistence context. A complete definition of a persistence context can be found in the Jakarta Persistence specification. Stateful repositories have their own lifecycle annotations that provide fine-grained control over entity state transitions such as persisting, merging, refreshing, detaching, and removing entities. Lifecycle annotations for stateful operations must not be intermixed with lifecycle annotations for stateless operations. Consequently, each repository is either stateful or or stateless.
+An example of a stateless repository follows:
+
 
 ```java
 @Repository
-public interface Products extends BasicRepository<Product, String> {
+public interface Products extends DataRepository<Product, String> {
 
     @Persist
     void add(Product product);
@@ -54,7 +56,7 @@ public interface Products extends BasicRepository<Product, String> {
 
     @Refresh
     void reload(Product product);
-
+    
     @Detach
     void detach(Product product);
 }
