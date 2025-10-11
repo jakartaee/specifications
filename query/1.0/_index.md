@@ -4,9 +4,23 @@ date: 2025-03-24
 summary: "First release of Jakarta Query"
 ---
 
-Jakarta Query defines an object-oriented query language designed for use with Jakarta Persistence, Jakarta Data, and with other persistence solutions written in Java(R) or in similar object-oriented languages.
+Jakarta Query serves as a unifying specification that provides a common object-oriented query language for the Jakarta ecosystem. It establishes a shared foundation that can be used consistently across [Jakarta Persistence][https://jakarta.ee/specifications/persistence/], [Jakarta Data][https://jakarta.ee/specifications/data/], and [Jakarta NoSQL][https://jakarta.ee/specifications/nosql/], ensuring that developers rely on a single query model rather than separate, independently evolving languages.
 
-This is the initial release of Jakarta Query.
+To accommodate the diversity of datastores in the Jakarta ecosystem, Jakarta Query distinguishes between two levels of the language: a core subset, designed for use by [Jakarta Data][https://jakarta.ee/specifications/data/] and [Jakarta NoSQL][https://jakarta.ee/specifications/nosql/] providers targeting non-relational databases, and an extended form, tailored for [Jakarta Persistence][https://jakarta.ee/specifications/persistence/] and other providers working with relational technologies.
+
+- a core language that can be implemented by Jakarta Data and Jakarta NoSQL 
+  providers using non-relational datastores, and 
+- an extended language tailored for Jakarta Persistence providers or other 
+  persistence technologies backed by relational databases.
+
+
+> ⚠️ **Note**  
+> While [Jakarta Data][] primarily targets the Core language, it may also support  
+> the Extended language if its implementation is based on [Jakarta Persistence][].
+
+The language is closely based on the existing query languages defined by
+Jakarta Persistence and Jakarta Data, and is backward compatible with both.
+
 
 ### New features, enhancements or additions
 
@@ -27,7 +41,12 @@ N/A
 
 ### Minimum Java SE Version
 
-**Java SE 17 or higher**
+**Java SE 21 or higher**
+
+# Details
+
+* [Jakarta Query 1.0-M1 Specification Document](./jakarta-query-1.0-M1.pdf) (PDF)
+* [Jakarta Query 1.0-M1 Specification Document](./jakarta-query-1.0-M1.html) (HTML)
 
 # Ballots
 
