@@ -62,8 +62,7 @@ public class Skill {
 Jakarta NoSQL 1.1 introduces support for Jakarta Query, a fluent and portable query language that allows developers to express queries consistently across both NoSQL and relational systems. In addition, this version enables the use of prepared statements, which safely bind parameters and facilitate the execution of reusable queries. This feature enhances both query performance and security, particularly in dynamic query scenarios.
 
 ```java
-String query = "FROM Developer WHERE language = :language";
-var prepared = database.prepare(query);
+Query query = database.prepare( "FROM Developer WHERE language = :language");
 prepared.bind("language", "Java");
 var developers = prepared.result();
 ```
@@ -96,6 +95,14 @@ Jakarta NoSQL 1.1 is designed with a **Driver Communication API** that acts as a
 # Details
 
 * [Jakarta NoSQL 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.1)
+
+* [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.0)
+* [Jakarta NoSQL 1.1 M1 Specification Document](./jakarta-nosql-1.1-M1.pdf) (PDF)
+* [Jakarta NoSQL 1.1 M1 Specification Document](./jakarta-nosql-1.1-M1.html) (HTML)
+* [Jakarta NoSQL 1.1 M1 Specification Javadoc](./apidocs)
+* Maven coordinates
+  * [jakarta-nosql:jakarta.nosql-api:jar:1.1.0-M1](https://central.sonatype.com/artifact/jakarta.nosql/jakarta.nosql-api)
+
 
 # Plan Review
 The Specification Committee Ballot concluded successfully on 2025-04-30 with the following results.
