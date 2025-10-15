@@ -15,6 +15,7 @@ This specification is a re-release of [JSR 52](http://jcp.org/en/jsr/detail?id=5
 * [Jakarta Standard Tag Library 1.2 Javadoc](./apidocs)
 * [Jakarta Standard Tag Library 1.2 Tagdoc](./tagdocs)
 * [Jakarta Standard Tag Library 1.2 TCK](https://download.eclipse.org/jakartaee/tags/1.2/jakarta-tags-tck-1.2.0.zip) ([sig](https://download.eclipse.org/jakartaee/tags/1.2/jakarta-tags-tck-1.2.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/tags/1.2/jakarta-tags-tck-1.2.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/tags/1.2/)
 * Maven coordinates
   * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:1.2.7](https://central.sonatype.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/1.2.7/jar)
 
