@@ -32,7 +32,7 @@ The following can be uncommented and version information updated as they become 
 * [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.html) (HTML)
 * [Jakarta Servlet 6.1 Javadoc](./apidocs)
 * [Jakarta Servlet 6.1.0 TCK](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.0.zip), ([sig](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * Excludes response flushBufferTest (Issue [#525](https://github.com/jakartaee/servlet/issues/525)) [Jakarta Servlet 6.1.1 TCK](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.1.zip), ([sig](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.1.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/servlet/6.2/)
 * XML Schema
   * web-app_6_1.xsd
   * web-common_6_1.xsd
