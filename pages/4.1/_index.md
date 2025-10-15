@@ -32,6 +32,7 @@ The following can be uncommented and version information updated as they become 
 * [Jakarta Pages 4.0 Specification Document](./jakarta-server-pages-spec-4.0.html) (HTML)
 * [Jakarta Pages 4.0 Javadoc](./apidocs)
 * [Jakarta Pages 4.0 TCK](https://download.eclipse.org/jakartaee/pages/4.0/jakarta-pages-tck-4.0.0.zip), ([sig](https://download.eclipse.org/jakartaee/pages/4.0/jakarta-pages-tck-4.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/pages/4.0/jakarta-pages-tck-4.0.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/pages/4.1/)
 * Maven coordinates
   * [jakarta.pages:jakarta.pages-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/4.0.0/jar)
 -->
