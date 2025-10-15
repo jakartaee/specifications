@@ -16,6 +16,7 @@ This specification is a re-release of [JSR 372](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Server Faces 2.3 Renderkitdoc](./renderkitdoc)
 * [Jakarta Server Faces 2.3 VDLDoc](./vdldoc)
 * [Jakarta Server Faces 2.3 TCK](https://download.eclipse.org/jakartaee/faces/2.3/jakarta-faces-tck-2.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/faces/2.3/jakarta-faces-tck-2.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/faces/2.3/jakarta-faces-tck-2.3.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+    * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/faces/2.3/)
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:2.3.2](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/2.3.2/jar)
 
