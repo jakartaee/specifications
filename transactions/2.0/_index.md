@@ -25,7 +25,7 @@ Jakarta Transactions - Need scope statement
 * [Jakarta Transactions 2.0 Specification Document](./jakarta-transactions-spec-2.0.html) (HTML)
 * [Jakarta Transactions 2.0 Javadoc](./apidocs)
 * [Jakarta Transactions 2.0 TCK](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-   * Adds JDK 11 support [Jakarta Transactions 2.0.1 TCK](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/transactions/2.0/jakarta-transactions-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/transactions/2.0/)
 * Maven coordinates
   * [jakarta.transaction:jakarta.transaction-api:jar:2.0.0](https://repo1.maven.org/maven2/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar)
 
