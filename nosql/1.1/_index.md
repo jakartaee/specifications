@@ -92,7 +92,11 @@ Jakarta NoSQL 1.1 is designed with a **Driver Communication API** that acts as a
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
 * **Java SE 21 or higher**
-
+<!-- Doesn't exist yet
+* [Jakarta NoSQL 1.0 TCK](https://download.eclipse.org/jakartaee/nosql/1.1/nosql-1-1-0-tck.zip), [sha](https://download.eclipse.org/jakartaee/nosql/1.1/nosql-1-1-0-tck.zip.sha256),
+[sig](https://download.eclipse.org/jakartaee/nosql/1.1/nosql-1-1-0-tck.zip.sig)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/nosql/1.1/)
+-->
 # Details
 
 * [Jakarta NoSQL 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.1)
