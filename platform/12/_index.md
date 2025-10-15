@@ -70,6 +70,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 
 * [Jakarta EE Platform 12 TCK](https://download.eclipse.org/jakartaee/platform/12/jakarta-jakartaeetck-12.0.0.zip) ([sig]
 (https://download.eclipse.org/jakartaee/platform/12/jakarta-jakartaeetck-12.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/12/jakarta-jakartaeetck-12.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/platform/12/)
 -->
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
 
