@@ -28,6 +28,7 @@ the Jakarta EE 12 platform.
 * [Jakarta JSON Processing 2.2 Specification Document](./apidocs) (Javadoc is the specification document of this project)
 * [Jakarta JSON Processing 2.2 Javadoc](./apidocs)
 * [Jakarta JSON Processing 2.2 TCK](https://download.eclipse.org/jakartaee/jsonp/2.2/jakarta-jsonp-tck-2.2.0.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.2/jakarta-jsonp-tck-2.2.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.2/jakarta-jsonp-tck-2.2.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/jsonp/2.2/)
 * Maven coordinates
   * [jakarta.json:jakarta.json-api:jar:2.2.0](https://central.sonatype.com/artifact/jakarta.json/jakarta.json-api/2.2.0/jar)
 * [Change Log](./changelog)

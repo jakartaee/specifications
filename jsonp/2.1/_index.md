@@ -34,6 +34,7 @@ querying JSON documents.
 * [Jakarta JSON Processing 2.1 Specification Document](./apidocs) (Javadoc is the specification document of this project)
 * [Jakarta JSON Processing 2.1 Javadoc](./apidocs)
 * [Jakarta JSON Processing 2.1 TCK](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/jsonp/2.1/)
 * Maven coordinates
   * [jakarta.json:jakarta.json-api:jar:2.1.3](https://central.sonatype.com/artifact/jakarta.json/jakarta.json-api/2.1.3/jar)
 * [Change Log](./changelog)
