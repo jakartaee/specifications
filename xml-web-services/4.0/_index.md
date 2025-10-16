@@ -31,7 +31,7 @@ based on Jakarta SOAP with Attachments and Jakarta Web Services Metadata.
 * [Jakarta XML Web Services 4.0 Javadoc](./apidocs)
 * [Jakarta XML Web Services 4.0 XML Schema](https://jakarta.ee/xml/ns/jaxws/wsdl_customizationschema_3_0.xsd)
 * [Jakarta XML Web Services 4.0 TCK](https://download.eclipse.org/jakartaee/xml-web-services/4.0/jakarta-xml-ws-tck-4.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-web-services/4.0/jakarta-xml-ws-tck-4.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-web-services/4.0/jakarta-xml-ws-tck-4.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-    * Set javatest.security.noSecurityManager=true if Java 18+ (Issue [#743](https://github.com/jakartaee/platform-tck/issues/743))  [Jakarta XML Web Services 4.0.1 TCK](https://download.eclipse.org/jakartaee/xml-web-services/4.0/jakarta-xml-ws-tck-4.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-web-services/4.0/jakarta-xml-ws-tck-4.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-web-services/4.0/jakarta-xml-ws-tck-4.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/xml-web-services/4.0/)
 * Maven coordinates
     * [jakarta.xml.ws:jakarta.xml.ws-api:jar:4.0.2](https://central.sonatype.com/artifact/jakarta.xml.ws/jakarta.xml.ws-api/4.0.2/jar)
 * [Change Log](./changelog)

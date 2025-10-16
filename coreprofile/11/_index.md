@@ -35,6 +35,7 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE platform specifi
   ([sig](https://download.eclipse.org/jakartaee/coreprofile/11.0/jakarta-core-profile-tck-11.0.0.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/coreprofile/11.0/jakarta-core-profile-tck-11.0.0.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/coreprofile/11.0)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [WildFly Preview 34.0.0](https://github.com/wildfly/wildfly/releases/download/34.0.0.Final/wildfly-preview-34.0.0.Final.zip)
   * [Open Liberty 24.0.0.11-beta](https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/beta/24.0.0.11-beta/openliberty-24.0.0.11-beta.zip)

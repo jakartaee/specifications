@@ -12,8 +12,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
 * [Jakarta EE Platform 9 Specification Document](./jakarta-platform-spec-9.html) (HTML)
 * [Jakarta EE Platform 9 Javadoc](./apidocs)
 * [Jakarta EE Platform 9.0.0 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip)([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * [Jakarta EE Platform 9.0.1 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.1.zip)([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * [Jakarta EE Platform 9.0.2 TCK](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.2.zip)([sig](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/9/jakarta-jakartaeetck-9.0.2.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/platform/9/)
 * Maven coordinates
   * [jakarta.platform:jakarta.jakartaee-api:jar:9.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-api/9.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).

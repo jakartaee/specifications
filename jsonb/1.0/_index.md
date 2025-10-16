@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 367](http://jcp.org/en/jsr/detail?id=
 * [Jakarta JSON Binding 1.0 Specification Document](./jsonb-spec-1.0.html) (HTML)
 * [Jakarta JSON Binding 1.0 Javadoc](./apidocs)
 * [Jakarta JSON Binding 1.0 TCK](https://download.eclipse.org/jakartaee/jsonb/1.0/jakarta-jsonb-tck-1.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/jsonb/1.0/jakarta-jsonb-tck-1.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/jsonb/1.0/jakarta-jsonb-tck-1.0.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/jsonb/1.0/)
 * Maven coordinates
   * [jakarta.json.bind:jakarta.json.bind-api:jar:1.0.2](https://central.sonatype.com/artifact/jakarta.json.bind/jakarta.json.bind-api/1.0.2/jar)
 

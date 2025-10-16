@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 236](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Concurrency 1.1 Specification Document](./concurrency-spec-1.1.html) (HTML)
 * [Jakarta Concurrency 1.1 Javadoc](./apidocs)
 * [Jakarta Concurrency 1.1 TCK](https://download.eclipse.org/jakartaee/concurrency/1.1/jakarta-concurrency-tck-1.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/concurrency/1.1/jakarta-concurrency-tck-1.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/concurrency/1.1/jakarta-concurrency-tck-1.1.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/concurrency/1.1)
 * Maven coordinates
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:jar:1.1.2](https://central.sonatype.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/1.1.2/jar)
 

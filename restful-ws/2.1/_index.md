@@ -12,6 +12,7 @@ This specification is a re-release of [JSR 370](http://jcp.org/en/jsr/detail?id=
 * [Jakarta RESTful Web Services 2.1 Specification Document](restful-ws-spec-2.1.html) (HTML)
 * [Jakarta RESTful Web Services 2.1 Javadoc](./apidocs)
 * [Jakarta RESTful Web Services 2.1 TCK](https://download.eclipse.org/jakartaee/restful-ws/2.1/jakarta-restful-ws-tck-2.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/restful-ws/2.1/jakarta-restful-ws-tck-2.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/restful-ws/2.1/jakarta-restful-ws-tck-2.1.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/restful-ws/2.1/)
 * Maven coordinates
   * [jakarta.ws.rs:jakarta.ws.rs-api:2.1.6](https://central.sonatype.com/artifact/jakarta.ws.rs/jakarta.ws.rs-api/2.1.6/jar)
 

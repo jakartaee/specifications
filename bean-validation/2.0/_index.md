@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 380](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Bean Validation 2.0 Specification Document](./bean-validation_2.0.html) (HTML)
 * [Jakarta Bean Validation 2.0 Javadoc](./apidocs)
 * [Jakarta Bean Validation 2.0 TCK](https://download.eclipse.org/jakartaee/bean-validation/2.0/beanvalidation-tck-dist-2.0.5.zip) ([sig](https://download.eclipse.org/jakartaee/bean-validation/2.0/beanvalidation-tck-dist-2.0.5.zip.sig),[sha](https://download.eclipse.org/jakartaee/bean-validation/2.0/beanvalidation-tck-dist-2.0.5.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/bean-validation/2.0)
 * Maven coordinates
   * [jakarta.validation:jakarta.validation-api:jar:2.0.2](https://central.sonatype.com/artifact/jakarta.validation/jakarta.validation-api/2.0.2/jar)
 

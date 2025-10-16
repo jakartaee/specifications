@@ -31,7 +31,8 @@ This release adds a small number of language enhancements and addresses a perfor
 * [Jakarta Expression Language 6.1-M1 Specification Document](./jakarta-expression-language-spec-6.1-M1.pdf) (PDF)
 * [Jakarta Expression Language 6.1-M1 Specification Document](./jakarta-expression-language-spec-6.1-M1.html) (HTML)
 * [Jakarta Expression Language 6.1-M1 Javadoc](./apidocs)
-* [Jakarta Expression Language 6.1-M1 TCK](https://download.eclipse.org/ee4j/expression-language/jakartaee12/staged/eftl/jakarta-expression-language-tck-6.1.0-M1.zip) ([info](https://download.eclipse.org/ee4j/expression-language/jakartaee12/staged/eftl/jakarta-expression-language-tck-6.1.0-M1.info)) 
+* [Jakarta Expression Language 6.1-M1 TCK](https://download.eclipse.org/ee4j/expression-language/jakartaee12/staged/eftl/jakarta-expression-language-tck-6.1.0-M1.zip) ([info](https://download.eclipse.org/ee4j/expression-language/jakartaee12/staged/eftl/jakarta-expression-language-tck-6.1.0-M1.info))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/expression-language/6.1)
 * Maven coordinates
   * [jakarta.el:jakarta.el-api:jar:6.1.0-M1](https://central.sonatype.com/artifact/jakarta.el/jakarta.el-api/6.1.0-M1/jar)
 

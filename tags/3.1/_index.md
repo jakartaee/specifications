@@ -33,7 +33,7 @@ None
 * [Jakarta Standard Tag Library 3.0 Javadoc](./apidocs)
 * [Jakarta Standard Tag Library 3.0 Tagdoc](./tagdocs)
 * [Jakarta Standard Tag Library 3.0 TCK](https://download.eclipse.org/jakartaee/tags/3.0/jakarta-tags-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/tags/3.0/jakarta-tags-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/tags/3.0/jakarta-tags-tck-3.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-   * Tags 3.0 TCK Challenge against tests that include space character before AM/PM (Issue [#255](https://github.com/jakartaee/tags/issues/255)), Tags 3.0 TCK Challenge for test ExceptionCheckTag.java depending on removed Pages 4.0 JspException.getRootCause() method (Issue [#256](https://github.com/jakartaee/tags/issues/256)), Old DTDs/Schema in deployment descriptors of Tags/Pages/Servlet/Assembly Platform TCK tests ( Issue [#1313](https://github.com/jakartaee/platform-tck/issues/1313))   [Jakarta Tags 3.0.1 TCK](https://download.eclipse.org/jakartaee/tags/3.0/jakarta-tags-tck-3.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/tags/3.0/jakarta-tags-tck-3.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/tags/3.0/jakarta-tags-tck-3.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/tags/3.1/)
 * Maven coordinates
   * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:3.0.2](https://central.sonatype.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/3.0.2/jar)
   

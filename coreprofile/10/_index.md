@@ -32,9 +32,7 @@ The goals for this release were:
   ([sig](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.1.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.1.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-   * Publish TCK Artifacts to Maven Central (Issue [#1960](https://github.com/jakartaee/platform-tck/issues/1960)
-     * [Jakarta Core Profile 10.0.4 TCK](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.4.zip)  ([sig](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.4.zip.sig),  [sha](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.4.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-   * Address Core Profile TCK Challenge (Issue [#1196](https://github.com/jakartaee/platform-tck/issues/1196)) [Jakarta Core Profile 10.0.3 TCK](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.3.zip)  ([sig](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.3.zip.sig),  [sha](https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.3.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/coreprofile/10.0)
 * Maven coordinates
     * [jakarta.platform:jakarta.jakartaee-core-api:jar:10.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-core-api/10.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).

@@ -14,6 +14,7 @@ This specification is a re-release of [JSR 181](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Web Services Metadata 2.1 Specification Document](./ws-metadata-spec-2.1.html) (HTML)
 * [Jakarta Web Services Metadata 2.1 Javadoc](./apidocs/index.html?overview-summary.html)
 * [Jakarta Web Services Metadata 2.1 TCK](http://download.eclipse.org/ee4j/xml-web-services/tck/eftl/jakarta-xml-ws-tck-2.3.0.zip)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/xml-web-services/2.3/)
 * Maven coordinates
   * [jakarta.jws:jakarta.jws-api:jar:2.1.0](https://central.sonatype.com/artifact/jakarta.jws/jakarta.jws-api/2.1.0/jar)
 

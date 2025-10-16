@@ -52,6 +52,7 @@ The following can be uncommented and version information updated as they become 
 * [Jakarta Faces 5.0 Renderkitdoc](./renderkitdoc)
 * [Jakarta Faces 5.0 VDLDoc](./vdldoc)
 * [Jakarta Faces 5.0 TCK](https://download.eclipse.org/jakartaee/faces/5.0/jakarta-faces-tck-5.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/faces/5.0/jakarta-faces-tck-5.0.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/faces/5.0/jakarta-faces-tck-5.0.1.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/faces/5.0/)
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:5.0.1](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/5.0.0/jar)
 * [Jakarta Faces 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/5.0)

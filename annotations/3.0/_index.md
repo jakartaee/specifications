@@ -27,6 +27,7 @@ The purpose of this release is to fully remove the deprecated @ManagedBean annot
 * [Jakarta Annotations 3.0 Specification Document](./annotations-spec-3.0.html) (HTML)
 * [Jakarta Annotations 3.0 Javadoc](./apidocs)
 * [Jakarta Annotations 3.0 TCK](https://download.eclipse.org/jakartaee/annotations/3.0/jakarta-annotations-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/annotations/3.0/jakarta-annotations-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/annotations/3.0/jakarta-annotations-tck-3.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/annotations/3.0)
 * Maven coordinates
     * [jakarta.annotation:jakarta.annotation-api:jar:3.0.0](https://central.sonatype.com/artifact/jakarta.annotation/jakarta.annotation-api/3.0.0/jar)
 

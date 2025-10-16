@@ -11,7 +11,8 @@ This specification is a re-release of [JSR 77](http://jcp.org/en/jsr/detail?id=7
 * [Jakarta Management 1.1 Specification Document](./management-spec-1.1.pdf) (PDF)
 * [Jakarta Management 1.1 Specification Document](./management-spec-1.1.html) (HTML)
 * [Jakarta Management 1.1 Javadoc](./apidocs)
-* Jakarta Management 1.1 TCK - N/A (covered by Jakarta EE Platform TCK)
+* Jakarta Management 1.1 TCK - N/A (covered by [Jakarta EE Platform TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub)))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/platform/8/)
 * Maven coordinates
   * [jakarta.management.j2ee:jakarta.management.j2ee-api:jar:1.1.4](https://central.sonatype.com/artifact/jakarta.management/jakarta.management.j2ee-api/1.1.4/jar)
 

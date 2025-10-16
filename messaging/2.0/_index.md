@@ -12,6 +12,7 @@ This specification is a re-release of [JSR 343](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Messaging 2.0 Specification Document](./messaging-spec-2.0.html) (HTML)
 * [Jakarta Messaging 2.0 Javadoc](./apidocs)
 * [Jakarta Messaging 2.0 TCK](https://download.eclipse.org/jakartaee/messaging/2.0/jakarta-messaging-tck-2.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/messaging/2.0/jakarta-messaging-tck-2.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/messaging/2.0/jakarta-messaging-tck-2.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/messaging/2.0/)
 * Maven coordinates
   * [jakarta.jms:jakarta.jms-api:jar:2.0.3](https://central.sonatype.com/artifact/jakarta.jms/jakarta.jms-api/2.0.3/jar)
 
