@@ -11,7 +11,7 @@ The release removes references to the SecurityManager and provides various small
 * Allow control of status code and response body when sending a redirect
 * Add a query string attribute to error dispatches
 * Add constants for new HTTP status codes
-* Add overloaded methods that use `CharSet` rather than `String`
+* Add overloaded methods that use `Charset` rather than `String`
 * Add `ByteBuffer` support to `ServletInputStream` and `ServletOutputStream`
 * Various clarifications
 

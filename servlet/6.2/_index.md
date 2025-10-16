@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Servlet 6.2 (under development)"
-date: 2025-04-11
+date: 2025-10-16
 summary: "Release for Jakarta EE 12"
 ---
 Jakarta Servlet defines a server-side API for handling HTTP requests and responses.
@@ -22,31 +22,32 @@ None
 # Details
 
 * [Jakarta Servlet 6.2 Release Record](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.2.0)
+* [Jakarta Servlet 6.2 Release Plan](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.2.0/plan)
+  * [Jakarta EE Platform 12 Release Plan](https://jakartaee.github.io/platform/jakartaee12/JakartaEE12ReleasePlan)
+* [Jakarta Servlet 6.2-M1 Specification Document](./jakarta-servlet-spec-6.2-M1.pdf) (PDF)
+* [Jakarta Servlet 6.2-M1 Specification Document](./jakarta-servlet-spec-6.2-M1.html) (HTML)
+* [Jakarta Servlet 6.2-M1 Javadoc](./apidocs)
+* [Jakarta Servlet 6.2-M1 TCK](https://download.eclipse.org/ee4j/servlet/jakartaee12/staged/eftl/jakarta-servlet-tck-6.2.0-M1.zip), ([info](https://download.eclipse.org/ee4j/servlet/jakartaee12/staged/eftl/jakarta-servlet-tck-6.2.0-M1.info))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/servlet/6.2/)
+<!-- XMl Schema go here -->
+* Maven coordinates
+  * [jakarta.servlet:jakarta.servlet-api:jar:6.2.0-M1](https://central.sonatype.com/artifact/jakarta.servlet/jakarta.servlet-api/6.2.0-M1/jar)
 
 <!--
 The following can be uncommented and version information updated as they become available.
 
-* [Jakarta Servlet 6.1 Release Plan](https://projects.eclipse.org/projects/ee4j.servlet/releases/6.1.0/plan)
-  * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
-* [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.pdf) (PDF)
-* [Jakarta Servlet 6.1 Specification Document](./jakarta-servlet-spec-6.1.html) (HTML)
-* [Jakarta Servlet 6.1 Javadoc](./apidocs)
-* [Jakarta Servlet 6.1.0 TCK](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.0.zip), ([sig](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/servlet/6.1/jakarta-servlet-tck-6.1.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/servlet/6.2/)
 * XML Schema
   * web-app_6_1.xsd
   * web-common_6_1.xsd
   * web-fragment_6_1.xsd
   * jsp_4_0.xsd
   * web-jsptaglibrary_4_0.xsd
-* Maven coordinates
-  * [jakarta.servlet:jakarta.servlet-api:jar:6.1.0](https://central.sonatype.com/artifact/jakarta.servlet/jakarta.servlet-api/6.1.0/jar)
 
 -->
 
 # Compatible Implementations
 
-* Apache Tomcat 12 (TBD)
+* Apache Tomcat 12 (TBC)
 
 # Ballots
 

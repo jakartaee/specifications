@@ -109,7 +109,7 @@ Non-binding votes
 |                                                | **Total**           |  **1**  |
 
 
-The ballot was run in the [jakarta.ee-spec mailing list]([https://www.eclipse.org/lists/jakarta.ee-spec/msg03150.html)
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg03150.html)
 
 ## Plan Review
 
