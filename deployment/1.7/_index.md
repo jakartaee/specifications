@@ -12,6 +12,7 @@ This specification is a re-release of Java EE Application Deployment 1.2 [JSR 88
 * [Jakarta Deployment 1.7 Specification Document](./deployment-spec-1.7.html) (HTML)
 * [Jakarta Deployment 1.7 Javadoc](./apidocs)
 * Jakarta Deployment 1.7 TCK - N/A (covered by Jakarta EE Platform TCK)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/platform/8/)
 * Maven coordinates
   * [jakarta.enterprise.deploy:jakarta.enterprise.deploy-api:jar:1.7.2](https://central.sonatype.com/artifact/jakarta.enterprise.deploy/jakarta.enterprise.deploy-api/1.7.2/jar)
 
