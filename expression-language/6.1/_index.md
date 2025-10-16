@@ -25,21 +25,16 @@ This release adds a small number of language enhancements and addresses a perfor
 # Details
 
 * [Jakarta Expression Language 6.1 Release Record](https://projects.eclipse.org/projects/ee4j.el/releases/6.1.0)
+    * [Jakarta Expression Language 6.1 Release Plan](https://projects.eclipse.org/projects/ee4j.el/releases/6.1.0/plan)
+    * [Jakarta EE Platform 12 Release Plan](https://jakartaee.github.io/platform/jakartaee12/JakartaEE12ReleasePlan)
 
-<!--
-The following can be uncommented and version information updated as they become available.
-
-    * [Jakarta Expression Language 6.0 Release Plan](https://projects.eclipse.org/projects/ee4j.el/releases/6.0.0/plan)
-    * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
-* [Jakarta Expression Language 6.0 Specification Document](./jakarta-expression-language-spec-6.0.pdf) (PDF)
-* [Jakarta Expression Language 6.0 Specification Document](./jakarta-expression-language-spec-6.0.html) (HTML)
-* [Jakarta Expression Language 6.0 Javadoc](./apidocs)
-* [Jakarta Expression Language 6.0 TCK](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.0.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
-  * First service release [Jakarta Expression Language 6.0.1 TCK](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/expression-language/6.0/jakarta-expression-language-tck-6.0.1.zip.sha256),  [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Expression Language 6.1-M1 Specification Document](./jakarta-expression-language-spec-6.1-M1.pdf) (PDF)
+* [Jakarta Expression Language 6.1-M1 Specification Document](./jakarta-expression-language-spec-6.1-M1.html) (HTML)
+* [Jakarta Expression Language 6.1-M1 Javadoc](./apidocs)
+* [Jakarta Expression Language 6.1-M1 TCK](https://download.eclipse.org/ee4j/expression-language/jakartaee12/staged/eftl/jakarta-expression-language-tck-6.1.0-M1.zip) ([info](https://download.eclipse.org/ee4j/expression-language/jakartaee12/staged/eftl/jakarta-expression-language-tck-6.1.0-M1.info)) 
 * Maven coordinates
-  * [jakarta.el:jakarta.el-api:jar:6.0.1](https://central.sonatype.com/artifact/jakarta.el/jakarta.el-api/6.0.1/jar)
+  * [jakarta.el:jakarta.el-api:jar:6.1.0-M1](https://central.sonatype.com/artifact/jakarta.el/jakarta.el-api/6.1.0-M1/jar)
 
--->
 
 # Compatible Implementations
 
