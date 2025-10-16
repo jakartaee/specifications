@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Pages 4.1 (under development)"
-date: 2025-05-26
+date: 2025-10-16
 summary: "Release for Jakarta EE 12"
 ---
 Jakarta Pages defines a template engine for web applications that supports mixing of textual content
@@ -22,19 +22,14 @@ It aims to address known issues in the Jakarta Pages specification and to mainta
 
 # Details
 * [Jakarta Pages 4.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsp/releases/4.1.0)
-
-<!--
-The following can be uncommented and version information updated as they become available.
-
-* [Jakarta Server Pages 4.0 Release Plan](https://projects.eclipse.org/projects/ee4j.jsp/releases/4.0.0/plan)
-  * [Jakarta EE Platform 11 Release Plan](https://jakartaee.github.io/platform/jakartaee11/JakartaEE11ReleasePlan)
-* [Jakarta Pages 4.0 Specification Document](./jakarta-server-pages-spec-4.0.pdf) (PDF)
-* [Jakarta Pages 4.0 Specification Document](./jakarta-server-pages-spec-4.0.html) (HTML)
-* [Jakarta Pages 4.0 Javadoc](./apidocs)
-* [Jakarta Pages 4.0 TCK](https://download.eclipse.org/jakartaee/pages/4.0/jakarta-pages-tck-4.0.0.zip), ([sig](https://download.eclipse.org/jakartaee/pages/4.0/jakarta-pages-tck-4.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/pages/4.0/jakarta-pages-tck-4.0.0.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+* [Jakarta Pages 4.1 Release Plan](https://projects.eclipse.org/projects/ee4j.jsp/releases/4.1.0/plan)
+  * [Jakarta EE Platform 12 Release Plan](https://jakartaee.github.io/platform/jakartaee12/JakartaEE12ReleasePlan)
+* [Jakarta Pages 4.1-M1 Specification Document](./jakarta-server-pages-spec-4.1-M1.pdf) (PDF)
+* [Jakarta Pages 4.1-M1 Specification Document](./jakarta-server-pages-spec-4.1-M1.html) (HTML)
+* [Jakarta Pages 4.1-M1 Javadoc](./apidocs)
+* [Jakarta Pages 4.1-M1 TCK](https://download.eclipse.org/ee4j/pages/jakartaee12/staged/eftl/jakarta-pages-tck-4.1.0-M1.zip), ([info](https://download.eclipse.org/ee4j/pages/jakartaee12/staged/eftl/jakarta-pages-tck-4.1.0-M1.info)
 * Maven coordinates
-  * [jakarta.pages:jakarta.pages-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/4.0.0/jar)
--->
+  * [jakarta.pages:jakarta.pages-api:jar:4.1.0-M1](https://central.sonatype.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/4.1.0-M1/jar)
 
 # Compatible Implementations
 
