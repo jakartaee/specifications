@@ -13,7 +13,7 @@ based on Jakarta SOAP with Attachments and Jakarta Web Services Metadata.
 * [Jakarta XML Web Services 3.0 Javadoc](./apidocs)
 * [Jakarta XML Web Services 3.0 XML Schema](https://jakarta.ee/xml/ns/jaxws/wsdl_customizationschema_3_0.xsd)
 * [Jakarta XML Web Services 3.0 TCK](https://download.eclipse.org/jakartaee/xml-web-services/3.0/jakarta-xml-ws-tck-3.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-web-services/3.0/jakarta-xml-ws-tck-3.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-web-services/3.0/jakarta-xml-ws-tck-3.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-   * Adds JDK 11 Support [Jakarta XML Web Services 3.0.1 TCK](https://download.eclipse.org/jakartaee/xml-web-services/3.0/jakarta-xml-ws-tck-3.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/xml-web-services/3.0/jakarta-xml-ws-tck-3.0.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/xml-web-services/3.0/jakarta-xml-ws-tck-3.0.1.zip.sha256), [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/xml-web-services/3.0/)
 * Maven coordinates
   * [jakarta.xml.ws:jakarta.xml.ws-api:jar:3.0.1](https://central.sonatype.com/artifact/jakarta.xml.ws/jakarta.xml.ws-api/3.0.1/jar)
 * [Change Log](./changelog)
