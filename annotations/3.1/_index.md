@@ -29,6 +29,7 @@ along with other annotations required by the Jakarta EE 12 platform.
 * [Jakarta Annotations 3.1 Specification Document](./annotations-spec-3.1.html) (HTML)
 * [Jakarta Annotations 3.1 Javadoc](./apidocs)
 * [Jakarta Annotations 3.1 TCK](https://download.eclipse.org/jakartaee/annotations/3.1/jakarta-annotations-tck-3.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/annotations/3.1/jakarta-annotations-tck-3.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/annotations/3.1/jakarta-annotations-tck-3.1.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/annotations/3.1)
 * Maven coordinates
     * [jakarta.annotation:jakarta.annotation-api:jar:3.1.0](https://central.sonatype.com/artifact/jakarta.annotation/jakarta.annotation-api/3.1.0/jar)
 

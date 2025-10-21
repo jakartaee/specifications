@@ -107,6 +107,7 @@ None - first release
   * [jakarta-nosql:jakarta.nosql-api:jar:1.0.0](https://repo1.maven.org/maven2/jakarta/nosql/jakarta.nosql-api/1.0.0)
 * [Jakarta NoSQL 1.0 TCK](https://download.eclipse.org/jakartaee/nosql/1.0/nosql-1-0-0-tck.zip), [sha](https://download.eclipse.org/jakartaee/nosql/1.0/nosql-1-0-0-tck.zip.sha256),
 [sig](https://download.eclipse.org/jakartaee/nosql/1.0/nosql-1-0-0-tck.zip.sig)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/nosql/1.0/)
 
 # Compatible Implementations
 

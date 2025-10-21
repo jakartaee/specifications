@@ -62,6 +62,7 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
    * [jakarta.platform:jakarta.jakartaee-web-api:jar:12.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-web-api/12.0.0/jar)
 
 * [Jakarta EE Web Profile 12 TCK](https://download.eclipse.org/jakartaee/webprofile/12.0/jakarta-web-profile-tck-12.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/webprofile/12.0/jakarta-web-profile-tck-12.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/webprofile/12.0/jakarta-web-profile-tck-12.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/webprofile/12.0/)
 -->
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
 

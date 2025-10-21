@@ -31,8 +31,7 @@ appropriate bean to perform the operation(s).
   ([sig](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.0.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.0.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * Addresses Activation Challenge (Issue [#98](https://github.com/jakartaee/jaf-api/issues/98))  [Jakarta Activation 2.1.1 TCK](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * Allows certification on Java SE 21+  [Jakarta Activation 2.1.2 TCK](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.2.zip)  ([sig](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.2.zip.sig),  [sha](https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.2.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/activation/2.1)
 * Maven coordinates
     * [jakarta.activation:jakarta.activation-api:jar:2.1.3](https://central.sonatype.com/artifact/jakarta.activation/jakarta.activation-api/2.1.3/jar)
 * [Change Log](./changelog)

@@ -34,6 +34,7 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 * [Jakarta Connectors 3.0 Specification Document](./jakarta-connectors-spec-3.0.html) (HTML) (Does not exist yet)
 * [Jakarta Connectors 3.0 Javadoc](./apidocs) (Does not exist yet)
 * [Jakarta Connectors 3.0 TCK](https://download.eclipse.org/jakartaee/connectors/3.0/connectors-tck-3.0.0.zip) (Does not exist yet)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/connectors/3.0) (Does not exist yet)
 -->
 <!--
 * Maven coordinates

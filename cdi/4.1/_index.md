@@ -47,7 +47,7 @@ and refactors features that are not client facing into the subinterface.
 ([sig](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
-
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/cdi/4.1)
 * Maven coordinates
   * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.1.0/jar)
   * [jakarta.enterprise:jakarta.enterprise.lang-model:4.1.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.lang-model/4.1.0/jar)

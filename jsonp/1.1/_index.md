@@ -12,6 +12,7 @@ This specification is a re-release of [JSR 374](http://jcp.org/en/jsr/detail?id=
 * [Jakarta JSON Processing 1.1 Specification Document](./jsonp-spec-1.1.html) (HTML)
 * [Jakarta JSON Processing 1.1 Javadoc](./apidocs)
 * [Jakarta JSON Processing 1.1 TCK](https://download.eclipse.org/jakartaee/jsonp/1.1/jakarta-jsonp-tck-1.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/jsonp/1.1/jakarta-jsonp-tck-1.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/jsonp/1.1/jakarta-jsonp-tck-1.1.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/jsonp/1.1/)
 * Maven coordinates
   * [jakarta.json:jakarta.json-api:jar:1.1.6](https://central.sonatype.com/artifact/jakarta.json/jakarta.json-api/1.1.6/jar)
 

@@ -45,6 +45,7 @@ The Jakarta EE Core Profile defines a profile of the Jakarta EE Platform specifi
   ([sig](https://download.eclipse.org/jakartaee/coreprofile/12.0/jakarta-core-profile-tck-12.0.0.zip.sig),
   [sha](https://download.eclipse.org/jakartaee/coreprofile/12.0/jakarta-core-profile-tck-12.0.0.zip.sha256),
   [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/coreprofile/12.0)
 -->
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
 

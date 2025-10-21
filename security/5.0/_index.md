@@ -43,6 +43,7 @@ The following can be uncommented and version information updated as they become 
 * [Jakarta Security 5.0 Specification Document](./jakarta-security-spec-5.0.html) (HTML)
 * [Jakarta Security 5.0 Javadoc](./apidocs)
 * [Jakarta Security 5.0 TCK](https://download.eclipse.org/jakartaee/security/5.0/jakarta-security-tck-5.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/security/5.0/jakarta-security-tck-5.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/security/5.0/jakarta-security-tck-5.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/security/5.0/)
 -->
 
 # Compatible Implementations

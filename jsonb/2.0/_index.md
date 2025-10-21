@@ -11,7 +11,7 @@ Jakarta JSON Binding defines a binding framework for converting Java(R) objects 
 * [Jakarta JSON Binding 2.0 Specification Document](./jakarta-jsonb-spec-2.0.html) (HTML)
 * [Jakarta JSON Binding 2.0 Javadoc](./apidocs)
 * [Jakarta JSON Binding 2.0 TCK](https://download.eclipse.org/jakartaee/jsonb/2.0/jakarta-jsonb-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonb/2.0/jakarta-jsonb-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonb/2.0/jakarta-jsonb-tck-2.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-   * Adds JDK 11 support [Jakarta JSON Binding 2.0.1 TCK](https://download.eclipse.org/jakartaee/jsonb/2.0/jakarta-jsonb-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonb/2.0/jakarta-jsonb-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonb/2.0/jakarta-jsonb-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/jsonb/2.0/)
 * Maven coordinates
   * [jakarta.json.bind:jakarta.json.bind-api:jar:2.0.0](https://central.sonatype.com/artifact/jakarta.json.bind/jakarta.json.bind-api/2.0.0/jar)
 

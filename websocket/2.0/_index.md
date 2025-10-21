@@ -12,7 +12,7 @@ for the WebSocket protocol (RFC6455).
 * [Jakarta WebSocket 2.0 Specification Document](./websocket-spec-2.0.html) (HTML)
 * [Jakarta WebSocket 2.0 Javadoc](./apidocs)
 * [Jakarta WebSocket 2.0 TCK](https://download.eclipse.org/jakartaee/websocket/2.0/jakarta-websocket-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/websocket/2.0/jakarta-websocket-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/websocket/2.0/jakarta-websocket-tck-2.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-   * Adds JDK 11 support [Jakarta WebSocket 2.0.1 TCK](https://download.eclipse.org/jakartaee/websocket/2.0/jakarta-websocket-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/websocket/2.0/jakarta-websocket-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/websocket/2.0/jakarta-websocket-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/websocket/2.0/)
 * Maven coordinates
   * [jakarta.websocket:jakarta.websocket-api:2.0.0](https://central.sonatype.com/artifact/jakarta.websocket/jakarta.websocket-api/2.0.0/jar)
 

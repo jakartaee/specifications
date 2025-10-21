@@ -30,6 +30,7 @@ This release is targeting Jakarta EE 11 and has clarified support for Records in
 ([sig](https://download.eclipse.org/jakartaee/bean-validation/3.1/validation-tck-dist-3.1.1.zip.sig), 
 [sha](https://download.eclipse.org/jakartaee/bean-validation/3.1/validation-tck-dist-3.1.1.zip.sha256), 
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/bean-validation/3.1)
 * Maven coordinates
   * [jakarta.validation:jakarta.validation-api:jar:3.1.0](https://central.sonatype.com/artifact/jakarta.validation/jakarta.validation-api/3.1.0/jar)
 

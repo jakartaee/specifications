@@ -14,6 +14,7 @@ This specification is a re-release of [JSR 93](http://jcp.org/en/jsr/detail?id=9
 * [Jakarta XML Registries 1.0 Specification Document](./xml-registries-spec-1.0.html) (HTML)
 * [Jakarta XML Registries 1.0 Javadoc](./apidocs)
 * [Jakarta XML Registries 1.0 TCK](https://download.eclipse.org/jakartaee/xml-registries/1.0/jakarta-xml-registries-tck-1.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/xml-registries/1.0/jakarta-xml-registries-tck-1.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/xml-registries/1.0/jakarta-xml-registries-tck-1.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/xml-registries/1.0/)
 * Maven coordinates
   * [jakarta.xml.registry:jakarta.xml.registry-api:jar:1.0.10](https://central.sonatype.com/artifact/jakarta.xml.registry/jakarta.xml.registry-api/1.0.10/jar)
 
