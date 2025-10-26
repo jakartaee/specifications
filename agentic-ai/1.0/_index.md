@@ -60,6 +60,24 @@ public class FraudDetectionAgent {
         return new Result (fraud, details); 
     }
 
+    // Only one action here, but there could be multiple actions and/or decisions in sequence.
+    // In the initial version, it's just one linear flow.
+    // In subsequent releases, the workflow API can define complex flows, including pre-conditions for actions defined via annotation/EL.
+    @Action
+    // Notice that we are automatically injecting domain objects from the workflow context.
+    private void handleFraud (Fraud fraud, BankTransaction transaction) {
+        // This is an example of hard-coded logic, which would still be possible if desired.
+        // <i>The power of a programmatic/structured workflow is that this could change entirely at runtime, driven by further LLM queries.
+        // Even for simple, static workflows, the API helps developers think through how agents operate fundamentally - introducing a common vocabulary/patterns.</i>
+        // Dynamically altered workflows could possibly be serialized into persistent storage.
+        if (fraud.isSerious()) {
+            alertBankSecurity(fraud);
+        }
+
+        Customer customer = getCustomer(transaction);
+        alertCustomer(fraud, transaction, customer);
+    }
+
     // In this initial release, outcomes are essentially the same as actions but specifically mark the end of the workflow.
     // In subsequent releases, outcomes can do more powerful things such as pass a domain object to a subsequent workflow or agent.
     // This is probably also where it best makes sense to dynamically alter a workflow using a programmatic API.
