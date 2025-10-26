@@ -12,7 +12,7 @@ Jakarta Config is planning to release the first MVP (Minimum Viable Product) ver
 
 Configuration is provided by configuration objects only
 
-```
+```java
 @Agent
 public class FraudDetectionAgent {
 	Integer getConfigProperty1();
