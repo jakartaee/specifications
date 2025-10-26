@@ -26,20 +26,27 @@ public class FraudDetectionAgent {
 
     // Injects default LLM in the implementation, but can be configured to inject specific ones.
     @Inject private LargeLanguageModel model;
+    @Inject private EntityManager entityManager;
 
     // Initiates the agent workflow. For this initial release, the workflow can only be triggered by CDI events.
     // In the future, there could be many other types of triggers such as Jakarta Messaging or direct invocation from a programmatic
     // life cycle API.
     @Trigger
     // Return type can be void or a domain object stored in the workflow and accessible in the context.
+    // Parameters are automatically added to the workflow context.
     private void processTransaction(@Valid BankTransaction transaction) {
         // Simple check to see if this is a type of transaction that makes sense to check for fraud detection.
         // Could add a bit more data, likely looked up from a database, and return an enhanced version of
         // the transaction or return another domain object entirely. 
-    } 
+    }
 
-	String getConfigProperty2();
-	MyConfigObject getMyConfigObject();
+    // In this initial release, outcomes are essentially the same as actions but specifically mark the end of the workflow.
+    // In subsequent releases, outcomes can do more powerful things such as pass a domain object to a subsequent workflow or agent.
+    // This is probably also where it best makes sense to dynamically alter a workflow using a programmatic API.
+    @Outcome
+    private void processTransaction(BankTransaction transaction) {
+        // Mark a transaction suspect, probably in the database.
+    }
 }
 ```
 
