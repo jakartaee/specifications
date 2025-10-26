@@ -40,6 +40,14 @@ public class FraudDetectionAgent {
         // the transaction or return another domain object entirely. 
     }
 
+    // Can return boolean or a built-in result type. In this initial release, workflows will automatically end with a negative result.
+    // In subsequent releases, more rubust decision flows should be possible, either with annotations/EL and/or the programmatic workflow API.
+    @Decision
+    private Result checkFraud (BankTransaction transaction) {
+        String output = model.query("Is this a frauduent transaction? If so, how serious is it?", transaction);
+
+    }
+
     // In this initial release, outcomes are essentially the same as actions but specifically mark the end of the workflow.
     // In subsequent releases, outcomes can do more powerful things such as pass a domain object to a subsequent workflow or agent.
     // This is probably also where it best makes sense to dynamically alter a workflow using a programmatic API.
