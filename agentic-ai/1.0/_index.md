@@ -46,11 +46,14 @@ public class FraudDetectionAgent {
     // annotations/EL and/or the programmatic workflow API.
     @Decision
     private Result checkFraud (BankTransaction transaction) {
-        // One of the value propositions of the LLM facade is automatic type conversion in Java, both
-        // for parameters and return types.
-        // If nothing is specified, it's all strings.
-        // Probably only JSON and String is supported initially for conversion.
-        // Queries can be parameterized similar to Jakarta Persistence.
+        /*
+         * One of the value propositions of the LLM facade is automatic type conversion in Java, both
+         * for parameters and return types.
+         *
+         * If nothing is specified, it's all strings.
+         * Probably only JSON and string is supported initially for conversion.
+         * Queries can be parameterized similar to Jakarta Persistence.
+         */
         String output = model.query(
             "Is this a fraudulent transaction? If so, how serious is it?", transaction);
 
@@ -72,12 +75,17 @@ public class FraudDetectionAgent {
     @Action
     // Notice that we are automatically injecting domain objects from the workflow context.
     private void handleFraud (Fraud fraud, BankTransaction transaction) {
-        // This is an example of hard-coded logic, which would still be possible if desired.
-        // <i>The power of a programmatic/structured workflow is that this could change entirely
-        // at runtime, driven by further LLM queries.
-        // Even for simple, static workflows, the API helps developers think through how agents
-        // operate fundamentally - introducing a common vocabulary/patterns.</i>
-        // Dynamically altered workflows could possibly be serialized into persistent storage.
+        /*
+         * IMPORTANT FUNDAMENTAL CONCEPT:
+         * This is an example of hard-coded logic, which would still be possible if desired.
+         *
+         * The power of a programmatic/structured workflow instead is that this could change
+         * entirely at runtime, driven by further LLM queries.
+         * Even for simple, static workflows, the API helps developers think through how agents
+         * operate fundamentally - introducing a common vocabulary/patterns.
+         *
+         * Dynamically altered workflows could possibly be serialized into persistent storage.
+         */
         if (fraud.isSerious()) {
             alertBankSecurity(fraud);
         }
