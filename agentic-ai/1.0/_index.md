@@ -1,16 +1,18 @@
 ---
 title: "Jakarta Agentic Artificial Intelligence 1.0 (under development)"
 date: 2025-12-31
-summary: "The Jakarta Agentic AI project provides a set of vendor-neutral APIs that make it easy and reliable to build, deploy, and run AI agents on Jakarta EE runtimes."
+summary: "The Jakarta Agentic AI project provides a set of vendor-neutral APIs that make it easy, consistent, and reliable to build, deploy, and run AI agents on Jakarta EE runtimes."
 ---
 
-The Jakarta Agentic AI project provides a set of vendor-neutral APIs that make it easy and reliable to build, deploy, and run AI agents on Jakarta EE runtimes.
+The Jakarta Agentic AI project provides a set of vendor-neutral APIs that make it easy, consistent, and reliable to build, deploy, and run AI agents on Jakarta EE runtimes.
 
-Jakarta Config is planning to release the first MVP (Minimum Viable Product) version. The main goal is to demonstrate progress and collect feedback from the community.
+This minimal initial release seeks to build early momentum, including broadening awareness, participation, and adoption. Subsequently, we aim to iterate quickly based on evolving industry knowledge on Agentic AI as well as user feedback.
+
+The release focuses on key programming models, patterns, life cycles, as well as a lightweight LLM facade. Subsequent releases will likely focus more on a programmatic life cycle management as well as workflow API.
 
 ## API Concepts
 
-Configuration is provided by configuration objects only
+The following annotated example demonstrates the key concepts this initial minimal release will aim to build consensus and momentum around.
 
 ```java
 /*
