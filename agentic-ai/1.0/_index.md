@@ -26,6 +26,14 @@ public class FraudDetectionAgent {
 
     // Injects default LLM in the implementation, but can be configured to inject specific ones.
     @Inject private LargeLanguageModel model;
+
+    // Initiates the agent workflow. For this initial release, the workflow can only be triggered by CDI events.
+    // In the future, there could be many other types of triggers such as Jakarta Messaging or direct invocation from a programmatic
+    // life cycle API.
+    @Trigger
+    private void processTransaction(@Valid BankTransaction transaction) {
+    } 
+
 	String getConfigProperty2();
 	MyConfigObject getMyConfigObject();
 }
