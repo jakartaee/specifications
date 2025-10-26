@@ -13,14 +13,21 @@ Jakarta Config is planning to release the first MVP (Minimum Viable Product) ver
 Configuration is provided by configuration objects only
 
 ```java
+/*
+ * Simple agent for bank fraud detection. Doesn't actually block a transaction but marks it suspect and sends notifications.
+ */
+// Infers agent type and name by default.
+// Default scope is agent workflow, but agents can have application scope.
+// Just a CDI bean and ideally @Agent is a CDI stereotype.
 @Agent
 public class FraudDetectionAgent {
-	Integer getConfigProperty1();
+
+    // Injects default LLM in the implementation, but can be configured to inject specific ones.
+    @Inject private LargeLanguageModel model;
 	String getConfigProperty2();
 	MyConfigObject getMyConfigObject();
 }
 ```
-Samples don't represent the real APIs to create and provided only for idea demonstration.
 
 ## Compatibility
 - CDI 4
