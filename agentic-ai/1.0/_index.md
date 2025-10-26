@@ -16,7 +16,8 @@ The following annotated example demonstrates the key concepts this initial minim
 
 ```java
 /*
- * Simple agent for bank fraud detection. Doesn't actually block a transaction but marks it suspect and sends notifications.
+ * Simple agent for bank fraud detection.
+ * Doesn't actually block a transaction but marks it suspect and sends notifications.
  */
 // Infers agent type and name by default.
 // Default scope is agent workflow, but agents can have application scope.
