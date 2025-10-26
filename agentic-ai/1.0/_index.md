@@ -1,10 +1,10 @@
 ---
 title: "Jakarta Agentic Artificial Intelligence 1.0 (under development)"
 date: 2025-12-31
-summary: "Jakarta Config is a Jakarta EE specification project. It defines a core framework for the Jakarta EE platform allowing applications and other Jakarta EE components to read configuration data from different environment-aware sources in a portable way."
+summary: "The Jakarta Agentic AI project provides a set of vendor-neutral APIs that make it easy and reliable to build, deploy, and run AI agents on Jakarta EE runtimes."
 ---
 
-Jakarta Config defines a core framework for the Jakarta EE platform allowing applications and other Jakarta EE components to read configuration data from different environment-aware sources in a portable way.
+The Jakarta Agentic AI project provides a set of vendor-neutral APIs that make it easy and reliable to build, deploy, and run AI agents on Jakarta EE runtimes.
 
 Jakarta Config is planning to release the first MVP (Minimum Viable Product) version. The main goal is to demonstrate progress and collect feedback from the community.
 
