@@ -31,7 +31,11 @@ public class FraudDetectionAgent {
     // In the future, there could be many other types of triggers such as Jakarta Messaging or direct invocation from a programmatic
     // life cycle API.
     @Trigger
+    // Return type can be void or a domain object stored in the workflow and accessible in the context.
     private void processTransaction(@Valid BankTransaction transaction) {
+        // Simple check to see if this is a type of transaction that makes sense to check for fraud detection.
+        // Could add a bit more data, likely looked up from a database, and return an enhanced version of
+        // the transaction or return another domain object entirely. 
     } 
 
 	String getConfigProperty2();
@@ -40,5 +44,5 @@ public class FraudDetectionAgent {
 ```
 
 ## Compatibility
-- CDI 4
+- CDI 4/Jakarta EE 10
 - Java SE 17
