@@ -44,6 +44,10 @@ public class FraudDetectionAgent {
     // In subsequent releases, more rubust decision flows should be possible, either with annotations/EL and/or the programmatic workflow API.
     @Decision
     private Result checkFraud (BankTransaction transaction) {
+        // One of the value propositions of the LLM facade is automatic type conversion in Java, both for parameters and return types.
+        // If nothing is specified, it's all strings.
+        // Probably only JSON and String is supported initially for conversion.
+        // Queries can be parameterized similar to Jakarta Persistence.
         String output = model.query("Is this a fraudulent transaction? If so, how serious is it?", transaction);
 
         boolean fraud = isFraud(output); // Does some simple custom text parsing.
