@@ -29,8 +29,8 @@ public class FraudDetectionAgent {
     @Inject private EntityManager entityManager;
 
     // Initiates the agent workflow. For this initial release, the workflow can only be triggered by CDI events.
-    // In the future, there could be many other types of triggers such as Jakarta Messaging or direct invocation from a programmatic
-    // life cycle API.
+    // In the future, there could be many other types of triggers such as Jakarta Messaging or direct invocation
+    // from a programmatic life cycle API.
     @Trigger
     // Return type can be void or a domain object stored in the workflow and accessible in the context.
     // Parameters are automatically added to the workflow context.
