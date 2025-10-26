@@ -22,7 +22,6 @@ public class FraudDetectionAgent {
 ```
 Samples don't represent the real APIs to create and provided only for idea demonstration.
 
-## Additional Information
-
-- Minimum Java SE version is 17.
-- [Jakarta Config 0.1 Release Record](https://projects.eclipse.org/projects/ee4j.jakartaconfig/releases/0.1)
+## Compatibility
+- CDI 4
+- Java SE 17
