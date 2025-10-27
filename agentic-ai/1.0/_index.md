@@ -43,7 +43,7 @@ public class FraudDetectionAgent {
 
     // Can return boolean or a built-in result Record type. In this initial release, workflows will
     // automatically end with a negative result.
-    // In subsequent releases, more rubust decision flows should be possible, either with
+    // In subsequent releases, more robust decision flows should be possible, either with
     // annotations/EL and/or the programmatic workflow API.
     @Decision
     private Result checkFraud (BankTransaction transaction) {
@@ -52,7 +52,7 @@ public class FraudDetectionAgent {
          * for parameters and return types.
          *
          * If nothing is specified, it's all strings.
-         * Probably only JSON and string is supported initially for conversion.
+         * Probably only JSON and string are supported initially for conversion.
          * Queries can be parameterized similar to Jakarta Persistence.
          */
         String output = model.query(
@@ -80,7 +80,7 @@ public class FraudDetectionAgent {
          * IMPORTANT FUNDAMENTAL CONCEPT:
          * This is an example of hard-coded logic, which would still be possible if desired.
          *
-         * The power of a programmatic/structured workflow instead is that this could change
+         * The power of a programmatic/structured workflow, instead, is that this could change
          * entirely at runtime, driven by further LLM queries.
          * Even for simple, static workflows, the API helps developers think through how agents
          * operate fundamentally - introducing a common vocabulary/patterns.
@@ -95,7 +95,7 @@ public class FraudDetectionAgent {
         alertCustomer(fraud, transaction, customer);
     }
 
-    // In this initial release, outcomes are essentially the same as actions but specifically
+    // In this initial release, outcomes are essentially the same as actions, but specifically
     // mark the end of the workflow.
     // In subsequent releases, outcomes can do more powerful things such as pass a domain
     // object to a subsequent workflow or agent.
