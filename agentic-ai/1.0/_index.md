@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Agentic Artificial Intelligence 1.0 (under development)"
-date: 2025-12-31
+date: 2025-11-26
 summary: "The Jakarta Agentic AI project provides a set of vendor-neutral APIs that make it easy, consistent, and reliable to build, deploy, and run AI agents on Jakarta EE runtimes."
 ---
 
@@ -10,7 +10,7 @@ This minimal initial release seeks to build early momentum, including broadening
 
 The release focuses on key programming models, patterns, life cycles, as well as a lightweight LLM facade. Subsequent releases will likely focus more on a programmatic life cycle management as well as workflow API.
 
-## API Concepts
+#### API Concepts
 
 The following annotated example demonstrates the key concepts this initial minimal release will aim to build consensus and momentum around.
 
@@ -107,7 +107,49 @@ public class FraudDetectionAgent {
     }
 }
 ```
+### New features, enhancements, or additions
 
-## Compatibility
-- CDI 4/Jakarta EE 10
-- Java SE 17
+* Vendor-neutral API to build, deploy, and run AI agents on Jakarta EE runtimes
+
+### Removals, deprecations, or backwards incompatible changes
+
+N/A
+
+### Minimum Java SE Version
+
+**Java SE 17 or higher**
+
+# Details
+
+* [Jakarta Agentic Artificial Intelligence 1.0 Release Record]() (to be created when the project is provisioned)
+
+<!--
+# Ballots
+
+## Creation/Plan Review
+
+The Specification Committee Ballot concluded successfully on 2025-04-01 with the following results.
+
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |         |
+| Emily Jiang, Tom Watson                        | IBM                 |         |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |         |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |         |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |         |
+| Ivar Grimstad                                  | EE4J PMC            |         |
+| Arjan Tijms                                    | Participant Members |         |
+| Werner Keil                                    | Committer Members   |         |
+| Jun Qian                                       | Enterprise Members  |         |
+| Zhai Luchao                                    | Enterprise Members  |         |
+|                                                | **Total**           |  ****   |
+
+Non-binding Votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+|                                                | Community           |         |
+|                                                | **Total**           |         |
+
+The ballot was run on the [jakarta.ee-spec mailing list]()
+
+-->
