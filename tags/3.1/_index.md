@@ -27,10 +27,12 @@ None
 
 # Details
 * [Jakarta Standard Tag Library 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jstl/releases/3.1.0)
+* [Jakarta Standard Tag Library 3.1.0-M1 Specification Document](./jakarta-tags-spec-3.1.0-M1.pdf) (PDF)
+* [Jakarta Standard Tag Library 3.1.0-M1 Specification Document](./jakarta-tags-spec-3.1.0-M1.html) (HTML)
+* [Jakarta Standard Tag Library 3.1.0-M1 Javadoc](./apidocs)
+* Maven coordinates
+  * [jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:3.1.0-M1](https://central.sonatype.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/3.1.0-M1/jar)
 <!-- The following can be uncommented and version information updated as they become available.
-* [Jakarta Standard Tag Library 3.0 Specification Document](./jakarta-tags-spec-3.0.pdf) (PDF)
-* [Jakarta Standard Tag Library 3.0 Specification Document](./jakarta-tags-spec-3.0.html) (HTML)
-* [Jakarta Standard Tag Library 3.0 Javadoc](./apidocs)
 * [Jakarta Standard Tag Library 3.0 Tagdoc](./tagdocs)
 * [Jakarta Standard Tag Library 3.0 TCK](https://download.eclipse.org/jakartaee/tags/3.0/jakarta-tags-tck-3.0.0.zip)([sig](https://download.eclipse.org/jakartaee/tags/3.0/jakarta-tags-tck-3.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/tags/3.0/jakarta-tags-tck-3.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/tags/3.1/)
