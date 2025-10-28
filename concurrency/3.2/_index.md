@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Concurrency 3.2 (under development)"
-date: 2025-03-25
+date: 2025-10-28
 summary: "Release for Jakarta EE 12"
 ---
 
@@ -32,30 +32,18 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 # Details
 
 * [Jakarta Concurrency 3.2 Release Record](https://projects.eclipse.org/projects/ee4j.cu/releases/3.2)
-<!--
-* [Jakarta Concurrency 3.2 Specification Document](./jakarta-concurrency-spec-3.2.pdf) (PDF) (Does not exist yet)
-* [Jakarta Concurrency 3.2 Specification Document](./jakarta-concurrency-spec-3.2.html) (HTML) (Does not exist yet)
-* [Jakarta Concurrency 3.2 Javadoc](./apidocs) (Does not exist yet)
-* [Jakarta Concurrency 3.2 TCK](https://download.eclipse.org/jakartaee/concurrency/3.2/concurrency-tck-3.2.0.zip) (Does not exist yet)
--->
-<!--
+* [Jakarta Concurrency 3.2 M1 Specification Document](./jakarta-concurrency-spec-3.2.pdf) (PDF)
+* [Jakarta Concurrency 3.2 M1 Specification Document](./jakarta-concurrency-spec-3.2.html) (HTML)
+* [Jakarta Concurrency 3.2 M1 Javadoc](./apidocs)
+* [Jakarta Concurrency 3.2 TCK](https://download.eclipse.org/jakartaee/concurrency/) (Does not exist yet)
 * Maven coordinates
--->
-<!--
-  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.2.0](https://central.sonatype.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.2.0/jar) (Does not exist yet)
--->
-<!--
+  * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.2.0-M1](https://central.sonatype.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.2.0-M1/jar)
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
--->
-<!--
-  * [To Be Determined](https://github.com/)
--->
+  * [To Be Determined](https://github.com/jakartaee/concurrency/issues?q=sort%3Aupdated-desc%20is%3Aissue%20state%3Aclosed%20label%3Acertification%20milestone%3A3.2.0)
 
 # Compatible Implementations
 
-<!--
-* [To Be Determined](https://github.com/)
--->
+* [To Be Determined](https://github.com/jakartaee/concurrency/issues?q=sort%3Aupdated-desc%20is%3Aissue%20state%3Aclosed%20label%3Acertification%20milestone%3A3.2.0)
 
 # Ballots
 
