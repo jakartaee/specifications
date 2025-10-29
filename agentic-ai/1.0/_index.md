@@ -128,7 +128,7 @@ N/A
 
 ## Creation/Plan Review
 
-The Specification Committee Ballot concluded successfully on 2025-04-01 with the following results.
+The Specification Committee Ballot concluded successfully on 202x-xx-xx with the following results.
 
 | Representative                                 | Representative for: |  Vote   |
 |------------------------------------------------|---------------------|---------|
