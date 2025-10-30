@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Validation 4.0 (Under development)"
-date: 2025-03-27
+date: 2025-10-30
 summary: "Release for Jakarta EE 12"
 ---
 Jakarta Validation defines a metadata model and API for JavaBean and method validation.
@@ -35,20 +35,20 @@ This release is targeting Jakarta EE 12 and will look to introduce the new featu
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 21 or higher**
+**Java SE 17 or higher**
 
 # Details
 
 * [Jakarta Validation 4.0 Release Record](https://projects.eclipse.org/projects/ee4j.validation/releases/4.0)
-* [Jakarta Validation 4.0 Specification Document](jakarta-validation-spec-4.0.pdf) (PDF)
-* [Jakarta Validation 4.0 Specification Document](jakarta-validation-spec-4.0.html) (HTML)
+* [Jakarta Validation 4.0 Specification Document](jakarta-validation-spec-4.0.0-M1.pdf) (PDF)
+* [Jakarta Validation 4.0 Specification Document](jakarta-validation-spec-4.0.0-M1.html) (HTML)
 * [Jakarta Validation 4.0 Javadoc](./apidocs)
-* [Jakarta Validation 4.0 TCK](https://download.eclipse.org/jakartaee/bean-validation/4.0/validation-tck-dist-4.0.0.zip)
-([sig](https://download.eclipse.org/jakartaee/bean-validation/4.0/validation-tck-dist-4.0.0.zip.sig), 
-[sha](https://download.eclipse.org/jakartaee/bean-validation/4.0/validation-tck-dist-4.0.0.zip.sha256), 
+* [Jakarta Validation 4.0 TCK](https://download.eclipse.org/jakartaee/bean-validation/4.0/validation-tck-distribution-4.0.0-M1.zip)
+([sig](https://download.eclipse.org/jakartaee/bean-validation/4.0/validation-tck-distribution-4.0.0-M1.zip.asc), 
+[sha](https://download.eclipse.org/jakartaee/bean-validation/4.0/validation-tck-distribution-4.0.0-M1.zip.sha256), 
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
 * Maven coordinates
-  * [jakarta.validation:jakarta.validation-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.validation/jakarta.validation-api/4.0.0/jar)
+  * [jakarta.validation:jakarta.validation-api:jar:4.0.0-M1](https://central.sonatype.com/artifact/jakarta.validation/jakarta.validation-api/4.0.0-M1/jar)
 
 # Compatible Implementations
 * [Hibernate Validator TBD(10.x)](https://hibernate.org/validator/releases/10.x/)
@@ -57,8 +57,6 @@ This release is targeting Jakarta EE 12 and will look to introduce the new featu
 <!--
 ## Release Review
 -->
-
-## Plan Review
 
 ## Plan Review
 
