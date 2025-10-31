@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Contexts and Dependency Injection 5.0 (Under development)"
-date: 2025-05-22
+date: 2025-10-15
 summary: "Release for Jakarta EE 12"
 ---
 
@@ -42,9 +42,9 @@ Currently suggested topics includes:
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/cdi/5.0)
 * Maven coordinates
-  * [jakarta.enterprise:jakarta.enterprise.cdi-api:5.0.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/5.0.0/jar)
-  * [jakarta.enterprise:jakarta.enterprise.lang-model:5.0.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.lang-model/5.0.0/jar)
-  * [jakarta.enterprise:jakarta.enterprise.cdi-el-api:5.0.0](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-el-api/5.0.0/jar)
+  * [jakarta.enterprise:jakarta.enterprise.cdi-api:5.0.0-M1](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/5.0.0-M1/jar)
+  * [jakarta.enterprise:jakarta.enterprise.lang-model:5.0.0-M1](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.lang-model/5.0.0-M1/jar)
+  * [jakarta.enterprise:jakarta.enterprise.cdi-el-api:5.0.0-M1](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-el-api/5.0.0-M1/jar)
 
 * Schemas
   * [XML Schema for the CDI 5.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_5_0.xsd)
