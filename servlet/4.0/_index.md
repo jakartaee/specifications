@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 369](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Servlet 4.0 Specification Document](./servlet-spec-4.0.html) (HTML)
 * [Jakarta Servlet 4.0 Javadoc](./apidocs)
 * [Jakarta Servlet 4.0 TCK](https://download.eclipse.org/jakartaee/servlet/4.0/jakarta-servlet-tck-4.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/servlet/4.0/jakarta-servlet-tck-4.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/servlet/4.0/jakarta-servlet-tck-4.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/servlet/4.0/)
 * Maven coordinates
   * [jakarta.servlet:jakarta.servlet-api:jar:4.0.3](https://central.sonatype.com/artifact/jakarta.servlet/jakarta.servlet-api/4.0.3/jar)
 

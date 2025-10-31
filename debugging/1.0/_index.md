@@ -13,6 +13,7 @@ This specification is a re-release of [JSR 45](http://jcp.org/en/jsr/detail?id=4
 * [Jakarta Debugging Support for Other Languages 1.0 Specification Document](./debugging_1.0.pdf) (PDF)
 * [Jakarta Debugging Support for Other Languages 1.0 Specification Document](./debugging_1.0.html) (HTML)
 * [Jakarta Debugging Support for Other Languages TCK](https://download.eclipse.org/jakartaee/debugging/1.0/jakarta-debugging-tck-1.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/debugging/1.0/jakarta-debugging-tck-1.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/debugging/1.0/jakarta-debugging-tck-1.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/debugging/1.0)
 
 # Ballots
 

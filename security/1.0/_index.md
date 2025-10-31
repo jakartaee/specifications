@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 375](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Security 1.0 Specification Document](./security-spec-1.0.html) (HTML)
 * [Jakarta Security 1.0 Javadoc](./apidocs)
 * [Jakarta Security 1.0 TCK](https://download.eclipse.org/jakartaee/security/1.0/jakarta-security-tck-1.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/security/1.0/jakarta-security-tck-1.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/security/1.0/jakarta-security-tck-1.0.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/security/1.0/)
 * Maven coordinates
   * [jakarta.security.enterprise:jakarta.security.enterprise-api:jar:1.0.2](https://central.sonatype.com/artifact/jakarta.security.enterprise/jakarta.security.enterprise-api/1.0.2/jar)
 

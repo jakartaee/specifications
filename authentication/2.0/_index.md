@@ -16,7 +16,7 @@ Jakarta Authentication consists of several profiles, with each profile telling h
 * [Jakarta Authentication 2.0 Specification Document](./jakarta-authentication-spec-2.0.html) (HTML)
 * [Jakarta Authentication 2.0 Javadoc](./apidocs)
 * [Jakarta Authentication 2.0 TCK](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-   * Adds JDK 11 support [Jakarta Authentication 2.0.1 TCK](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.1.zip)  ([sig](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/authentication/2.0/jakarta-authentication-tck-2.0.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/authentication/2.0)
 * Maven coordinates
   * [jakarta.authentication:jakarta.authentication-api:jar:2.0.0](https://central.sonatype.com/artifact/jakarta.authentication/jakarta.authentication-api/2.0.0/jar)
 

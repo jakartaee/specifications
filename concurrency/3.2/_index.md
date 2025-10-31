@@ -36,6 +36,7 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 * [Jakarta Concurrency 3.2 M1 Specification Document](./jakarta-concurrency-spec-3.2.html) (HTML)
 * [Jakarta Concurrency 3.2 M1 Javadoc](./apidocs)
 * [Jakarta Concurrency 3.2 TCK](https://download.eclipse.org/jakartaee/concurrency/) (Does not exist yet)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/concurrency/3.2) (Does not exist yet)
 * Maven coordinates
   * [jakarta.enterprise.concurrent:jakarta.enterprise.concurrent-api:3.2.0-M1](https://central.sonatype.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/3.2.0-M1/jar)
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).

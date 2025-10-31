@@ -47,6 +47,7 @@ This release is targeting Jakarta EE 12 and will look to introduce the new featu
 ([sig](https://download.eclipse.org/jakartaee/bean-validation/4.0/validation-tck-dist-4.0.0.zip.sig), 
 [sha](https://download.eclipse.org/jakartaee/bean-validation/4.0/validation-tck-dist-4.0.0.zip.sha256), 
 [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/bean-validation/4.0)
 * Maven coordinates
   * [jakarta.validation:jakarta.validation-api:jar:4.0.0](https://central.sonatype.com/artifact/jakarta.validation/jakarta.validation-api/4.0.0/jar)
 

@@ -13,6 +13,7 @@ This specification is a re-release of [JSR 318](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Interceptors 1.2 Specification Document](./interceptors-spec-1.2.html) (HTML)
 * [Jakarta Interceptors 1.2 Javadoc](./apidocs)
 * [Jakarta EE Platform 8 TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/platform/8/)
 * Maven coordinates
   * [jakarta.interceptor:jakarta.interceptor-api:jar:1.2.5](https://central.sonatype.com/artifact/jakarta.interceptor/jakarta.interceptor-api/1.2.5/jar)
 

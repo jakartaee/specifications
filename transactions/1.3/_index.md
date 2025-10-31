@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 907](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Transactions 1.3 Specification Document](./transactions-spec-1.3.html) (HTML)
 * [Jakarta Transactions 1.3 Javadoc](./apidocs)
 * [Jakarta Transactions 1.3 TCK](https://download.eclipse.org/jakartaee/transactions/1.3/jakarta-transactions-tck-1.3.0.zip) ([sig](https://download.eclipse.org/jakartaee/transactions/1.3/jakarta-transactions-tck-1.3.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/transactions/1.3/jakarta-transactions-tck-1.3.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/transactions/1.3/)
 * Maven coordinates
   * [jakarta.transaction:jakarta.transaction-api:jar:1.3.3](https://central.sonatype.com/artifact/jakarta.transaction/jakarta.transaction-api/1.3.3/jar)
 

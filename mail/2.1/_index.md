@@ -24,8 +24,7 @@ None
 * [Jakarta Mail 2.1 Specification Document](./jakarta-mail-spec-2.1.html) (HTML)
 * [Jakarta Mail 2.1 Javadoc](./apidocs)
 * [Jakarta Mail 2.1 TCK](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-    * Addresses Mail Challenge (Issue [#625](https://github.com/jakartaee/mail-api/issues/625))  [Jakarta Mail 2.1.1 TCK](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.1.zip)  ([sig](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.1.zip.sig),  [sha](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.1.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-    * Allows certification on Java SE 21+  [Jakarta Mail 2.1.2 TCK](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.2.zip)  ([sig](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.2.zip.sig),  [sha](https://download.eclipse.org/jakartaee/mail/2.1/jakarta-mail-tck-2.1.2.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+    * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/mail/2.1/)
 * Maven coordinates
     * [jakarta.mail:jakarta.mail-api:jar:2.1.3](https://central.sonatype.com/artifact/jakarta.mail/jakarta.mail-api/2.1.3/jar)
 * [Change Log](./changelog)

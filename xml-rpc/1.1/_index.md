@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 101](http://jcp.org/en/jsr/detail?id=
 * [Jakarta XML RPC 1.1 Specification Document](./xml-rpc-spec-1.1.html) (HTML)
 * [Jakarta XML RPC 1.1 Javadoc](./apidocs)
 * [Jakarta XML RPC 1.1 TCK](https://download.eclipse.org/jakartaee/xml-rpc/1.1/jakarta-xml-rpc-tck-1.1.0.zip) ([sig](https://download.eclipse.org/jakartaee/xml-rpc/1.1/jakarta-xml-rpc-tck-1.1.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/xml-rpc/1.1/jakarta-xml-rpc-tck-1.1.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/xml-rpc/1.1/)
 * Maven coordinates
   * [jakarta.xml.rpc:jakarta.xml.rpc-api:jar:1.1.4](https://central.sonatype.com/artifact/jakarta.xml.rpc/jakarta.xml.rpc-api/1.1.4/jar)
 

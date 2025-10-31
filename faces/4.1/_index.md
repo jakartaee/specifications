@@ -41,6 +41,7 @@ The removes references to the SecurityManager, further aligns with CDI where pos
 * [Jakarta Faces 4.1 Renderkitdoc](./renderkitdoc)
 * [Jakarta Faces 4.1 VDLDoc](./vdldoc)
 * [Jakarta Faces 4.1 TCK](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.1.zip) ([sig](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.1.zip.sig), [sha](https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.1.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/faces/4.1/)
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:4.1.1](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/4.1.1/jar)
 

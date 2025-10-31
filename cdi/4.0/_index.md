@@ -32,7 +32,7 @@ Compatible (Reflection-Free)
 ([sig](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.13-dist.zip.sig),
 [sha](https://download.eclipse.org/jakartaee/cdi/4.0/cdi-tck-4.0.13-dist.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
-
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/cdi/4.0)
 * Maven coordinates
   * [jakarta.enterprise:jakarta.enterprise.cdi-api:4.0.1](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.1/jar)
 

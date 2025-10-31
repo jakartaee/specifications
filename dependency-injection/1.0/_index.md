@@ -12,6 +12,7 @@ This specification is a re-release of [JSR 330](http://jcp.org/en/jsr/detail?id=
 * [Jakarta Dependency Injection 1.0 Specification Document](./injection-spec-1.0.html) (HTML)
 * [Jakarta Dependency Injection 1.0 Javadoc](./apidocs)
 * [Jakarta Dependency Injection 1.0 TCK](https://download.eclipse.org/jakartaee/dependency-injection/1.0/jakarta.inject-tck-1.0-bin.zip) ([sig](https://download.eclipse.org/jakartaee/dependency-injection/1.0/jakarta.inject-tck-1.0-bin.zip.sig),[sha](https://download.eclipse.org/jakartaee/dependency-injection/1.0/jakarta.inject-tck-1.0-bin.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/dependency-injection/1.0)
 * Maven coordinates
   * [jakarta.inject:jakarta.inject-api:jar:1.0](https://central.sonatype.com/artifact/jakarta.inject/jakarta.inject-api/1.0/jar)
 

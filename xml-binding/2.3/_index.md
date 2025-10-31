@@ -12,6 +12,7 @@ This specification is a re-release of [JSR 222](http://jcp.org/en/jsr/detail?id=
 * [Jakarta XML Binding 2.3 Specification Document](./xml-binding-spec-2.3.html) (HTML)
 * [Jakarta XML Binding 2.3 Javadoc](./apidocs/index.html?overview-summary.html)
 * [Jakarta XML Binding 2.3 TCK](http://download.eclipse.org/ee4j/xml-binding/tck/eftl/jakarta-xml-binding-tck-2.3.0.zip)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/xml-binding/2.3/)
 * Maven coordinates
   * [jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3](https://central.sonatype.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/jar)
 

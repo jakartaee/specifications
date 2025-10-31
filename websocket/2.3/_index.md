@@ -31,6 +31,7 @@ None.
     * [Client](./apidocs/client)
     * [Server](./apidocs/server)
 * [Jakarta WebSocket 2.3-M1 TCK](https://download.eclipse.org/jakartaee/websocket/2.2/jakarta-websocket-tck-2.2.0.zip) ([info]())
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/websocket/2.3/)
 * Maven coordinates
     * [jakarta.websocket:jakarta.websocket-api:jar:2.3.0-M1](https://central.sonatype.com/artifact/jakarta.websocket/jakarta.websocket-api/2.3.0-M1/jar)
     * [jakarta.websocket:jakarta.websocket-client-api:jar:2.3.0-M1](https://central.sonatype.com/artifact/jakarta.websocket/jakarta.websocket-client-api/2.3.0-M1/jar)

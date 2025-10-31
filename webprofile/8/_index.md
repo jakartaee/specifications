@@ -11,6 +11,7 @@ This specification is a re-release of [JSR 366](http://jcp.org/en/jsr/detail?id=
 * [Jakarta EE Web Profile 8 Specification Document](./webprofile-spec-8.html) (HTML)
 * [Jakarta EE Web Profile 8 Javadoc](./apidocs)
 * [Jakarta EE Web Profile 8 TCK](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip) ([sig](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/8/jakarta-jakartaeetck-8.0.2.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/platform/8/)
 * Maven coordinates
   * [jakarta.platform:jakarta.jakartaee-web-api:jar:8.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-web-api/8.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).

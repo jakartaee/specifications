@@ -28,6 +28,7 @@ It aims to address known issues in the Jakarta Pages specification and to mainta
 * [Jakarta Pages 4.1-M1 Specification Document](./jakarta-server-pages-spec-4.1-M1.html) (HTML)
 * [Jakarta Pages 4.1-M1 Javadoc](./apidocs)
 * [Jakarta Pages 4.1-M1 TCK](https://download.eclipse.org/ee4j/pages/jakartaee12/staged/eftl/jakarta-pages-tck-4.1.0-M1.zip), ([info](https://download.eclipse.org/ee4j/pages/jakartaee12/staged/eftl/jakarta-pages-tck-4.1.0-M1.info)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/pages/4.1/)
 * Maven coordinates
   * [jakarta.pages:jakarta.pages-api:jar:4.1.0-M1](https://central.sonatype.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api/4.1.0-M1/jar)
 

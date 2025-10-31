@@ -27,7 +27,8 @@ None
 * [Jakarta Servlet 6.2-M1 Specification Document](./jakarta-servlet-spec-6.2-M1.pdf) (PDF)
 * [Jakarta Servlet 6.2-M1 Specification Document](./jakarta-servlet-spec-6.2-M1.html) (HTML)
 * [Jakarta Servlet 6.2-M1 Javadoc](./apidocs)
-* [Jakarta Servlet 6.1.0 TCK](https://download.eclipse.org/ee4j/servlet/jakartaee12/staged/eftl/jakarta-servlet-tck-6.2.0-M1.zip), ([info](https://download.eclipse.org/ee4j/servlet/jakartaee12/staged/eftl/jakarta-servlet-tck-6.2.0-M1.info))
+* [Jakarta Servlet 6.2-M1 TCK](https://download.eclipse.org/ee4j/servlet/jakartaee12/staged/eftl/jakarta-servlet-tck-6.2.0-M1.zip), ([info](https://download.eclipse.org/ee4j/servlet/jakartaee12/staged/eftl/jakarta-servlet-tck-6.2.0-M1.info))
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/servlet/6.2/)
 <!-- XMl Schema go here -->
 * Maven coordinates
   * [jakarta.servlet:jakarta.servlet-api:jar:6.2.0-M1](https://central.sonatype.com/artifact/jakarta.servlet/jakarta.servlet-api/6.2.0-M1/jar)
