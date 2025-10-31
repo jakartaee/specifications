@@ -102,6 +102,7 @@ The Specification Committee Ballot completed on 8th December 2023.
 | Zhai Luchao                                    | Enterprise Members  |   +1    |
 | Jun Qian                                       | Enterprise Members  |   +1    |
 |                                                | **Total**           | **8**   |
+
 Non-binding votes
 | Representative                                 | Representative for: |  Vote   |
 |------------------------------------------------|---------------------|---------|
@@ -129,6 +130,7 @@ The Specification Committee Ballot completed on 11th July 2023.
 | Zhai Luchao                                    | Enterprise Members  |   +1    |
 | Scott Stark                                    | Enterprise Members  |   +1    |
 |                                                | **Total**           | **9**   |
+
 Non-binding votes
 | Representative                                 | Representative for: |  Vote   |
 |------------------------------------------------|---------------------|---------|
