@@ -123,33 +123,36 @@ N/A
 
 * [Jakarta Agentic Artificial Intelligence 1.0 Release Record]() (to be created when the project is provisioned)
 
-<!--
 # Ballots
 
 ## Creation/Plan Review
 
-The Specification Committee Ballot concluded successfully on 202x-xx-xx with the following results.
+The Specification Committee Ballot concluded successfully on 2025-11-05 with the following results.
 
 | Representative                                 | Representative for: |  Vote   |
 |------------------------------------------------|---------------------|---------|
-| Kenji Kazumura                                 | Fujitsu             |         |
-| Emily Jiang, Tom Watson                        | IBM                 |         |
-| Ed Bratt, Dmitry Kornilov                      | Oracle              |         |
-| Andrew Pielage, Petr Aubrecht                  | Payara              |         |
-| David Blevins, Jean-Louis Monteiro             | Tomitribe           |         |
-| Ivar Grimstad                                  | EE4J PMC            |         |
-| Arjan Tijms                                    | Participant Members |         |
-| Werner Keil                                    | Committer Members   |         |
-| Jun Qian                                       | Enterprise Members  |         |
-| Zhai Luchao                                    | Enterprise Members  |         |
-|                                                | **Total**           |  ****   |
+| Kenji Kazumura                                 | Fujitsu             |    +1   |
+| Emily Jiang, Tom Watson                        | IBM                 |    -1   |
+| Ed Bratt, Dmitry Kornilov                      | Oracle              |    +1   |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |    +1   |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           | no vote |
+| Ivar Grimstad                                  | EE4J PMC            |    +1   |
+| Arjan Tijms                                    | Participant Members |    +1   |
+| Werner Keil                                    | Committer Members   |    +1   |
+| Jun Qian                                       | Enterprise Members  |    +1   |
+| Zhai Luchao                                    | Enterprise Members  |    +1   |
+|                                                | **Total**           |  **8**   |
 
 Non-binding Votes
 | Representative                                 | Representative for: |  Vote   |
 |------------------------------------------------|---------------------|---------|
-|                                                | Community           |         |
-|                                                | **Total**           |         |
+| Steve Butler		                             | Community           |    +1   |
+| Michael Redlich		                         | Community           |    +1   |
+| Kito D. Mann		                             | Community           |    +1   |
+| Jianfeng Zhang		                         | Community           |    +1   |
+| A N M Bazlur Rahman	                         | Community           |    +1   |
+| Angelo Rubini		                             | Community           |    +1   |
+| Bernd Müller		                             | Community           |    +1   |
+|                                                | **Total**           |  **7**  |
 
-The ballot was run on the [jakarta.ee-spec mailing list]()
-
--->
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg04196.html)
