@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Agentic Artificial Intelligence 1.0 (under development)"
-date: 2025-11-26
+date: 2025-11-05
 summary: "The Jakarta Agentic AI project provides a set of vendor-neutral APIs that make it easy, consistent, and reliable to build, deploy, and run AI agents on Jakarta EE runtimes."
 ---
 
