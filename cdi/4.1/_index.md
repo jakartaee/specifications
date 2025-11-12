@@ -43,9 +43,9 @@ and refactors features that are not client facing into the subinterface.
 * [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 4.1 Specification Document](./jakarta-cdi-spec-4.1.html) (HTML)
 * [Jakarta Contexts Dependency Injection 4.1 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 4.1.0 TCK](https://download.eclipse.org/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip)
-([sig](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.zip.sig),
-[sha](https://download.eclipse.org/jakartaee/cdi/4.1/TBD.zip.sha256),
+* [Jakarta Contexts Dependency Injection 4.1.0 TCK](https://download.eclipse.org/jakartaee/cdi/4.1/cdi-tck-4.1.0-dist.zip)
+([sig](https://download.eclipse.org/jakartaee/cdi/4.1/cdi-tck-4.1.0-dist.zip.sig),
+[sha](https://download.eclipse.org/jakartaee/cdi/4.1/cdi-tck-4.1.0-dist.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/cdi/4.1)
 * Maven coordinates
@@ -102,6 +102,7 @@ The Specification Committee Ballot completed on 8th December 2023.
 | Zhai Luchao                                    | Enterprise Members  |   +1    |
 | Jun Qian                                       | Enterprise Members  |   +1    |
 |                                                | **Total**           | **8**   |
+
 Non-binding votes
 | Representative                                 | Representative for: |  Vote   |
 |------------------------------------------------|---------------------|---------|
@@ -129,6 +130,7 @@ The Specification Committee Ballot completed on 11th July 2023.
 | Zhai Luchao                                    | Enterprise Members  |   +1    |
 | Scott Stark                                    | Enterprise Members  |   +1    |
 |                                                | **Total**           | **9**   |
+
 Non-binding votes
 | Representative                                 | Representative for: |  Vote   |
 |------------------------------------------------|---------------------|---------|
