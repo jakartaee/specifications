@@ -1,0 +1,7 @@
+module:jakarta.persistence
+jakarta.persistence
+jakarta.persistence.criteria
+jakarta.persistence.metamodel
+jakarta.persistence.query
+jakarta.persistence.spi
+jakarta.persistence.sql
