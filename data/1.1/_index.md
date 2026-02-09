@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Data 1.1 (under development)"
-date: 2025-02-09
+date: 2026-02-09
 summary: "Enhancements for Jakarta EE 12"
 ---
 
