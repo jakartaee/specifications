@@ -529,8 +529,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div id="header">
 <h1>Jakarta NoSQL</h1>
 <div class="details">
-<span id="revnumber"> 1.1-M1,</span>
-<span id="revdate">October 12, 2025</span>
+<span id="revnumber"> 1.1.0,</span>
+<span id="revdate">February 15, 2026</span>
 <br><span id="revremark">Final</span>
 </div>
 <div id="toc" class="toc2">
@@ -647,11 +647,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta NoSQL
 
-Version: 1.1-M1
+Version: 1.1.0
 
 Status: Final
 
-Release: October 12, 2025</pre>
+Release: February 15, 2026</pre>
 </div>
 </div>
 </div>
@@ -815,7 +815,7 @@ of the project committers and various contributors.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://projects.eclipse.org/content/otavio-santana-project-lead-jakarta-nosql">Otavio Santana</a></p>
+<p><a href="https://accounts.eclipse.org/users/osantanatrg">Otavio Santana</a></p>
 </li>
 </ul>
 </div>
@@ -841,31 +841,34 @@ of the project committers and various contributors.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://projects.eclipse.org/content/andres-galante-committer-jakarta-nosql">Andres Galante</a></p>
+<p><a href="https://accounts.eclipse.org/users/agalante">Andres Galante</a></p>
 </li>
 <li>
-<p><a href="https://projects.eclipse.org/content/fred-rowe-committer-jakarta-nosql">Fred Rowe</a></p>
+<p><a href="https://accounts.eclipse.org/users/">Fred Rowe</a></p>
 </li>
 <li>
-<p><a href="https://projects.eclipse.org/content/gaurav-gupta-committer-jakarta-nosql">Gaurav Gupta</a></p>
+<p><a href="https://accounts.eclipse.org/users/gguptael7">Gaurav Gupta</a></p>
 </li>
 <li>
-<p><a href="https://projects.eclipse.org/content/ivan-junckes-filho-committer-jakarta-nosql">Ivan Junckes Filho</a></p>
+<p><a href="https://accounts.eclipse.org/users/ijunckesfilho">Ivan Junckes Filho</a></p>
 </li>
 <li>
-<p><a href="https://projects.eclipse.org/content/jesse-gallagher-committer-jakarta-nosql">Jesse Gallagher</a></p>
+<p><a href="https://accounts.eclipse.org/users/jgallagher6v3">Jesse Gallagher</a></p>
 </li>
 <li>
-<p><a href="https://projects.eclipse.org/content/michael-redlich-committer-jakarta-nosql">Michael Redlich</a></p>
+<p><a href="https://accounts.eclipse.org/users/maxdearruda">Maximillian Arruda</a></p>
 </li>
 <li>
-<p><a href="https://projects.eclipse.org/content/nathan-rauh-committer-jakarta-nosql">Nathan Rauh</a></p>
+<p><a href="https://accounts.eclipse.org/users/mredlich">Michael Redlich</a></p>
 </li>
 <li>
-<p><a href="https://projects.eclipse.org/content/otavio-santana-committer-jakarta-nosql">Otavio Santana</a></p>
+<p><a href="https://accounts.eclipse.org/users/nrauhi2d">Nathan Rauh</a></p>
 </li>
 <li>
-<p><a href="https://projects.eclipse.org/content/werner-keil-committer-jakarta-nosql">Werner Keil</a></p>
+<p><a href="https://accounts.eclipse.org/users/osantanatrg">Otavio Santana</a></p>
+</li>
+<li>
+<p><a href="https://accounts.eclipse.org/users/wkeil">Werner Keil</a></p>
 </li>
 </ul>
 </div>
@@ -875,7 +878,7 @@ of the project committers and various contributors.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://projects.eclipse.org/content/leonardo-lima-committer-jakarta-nosql">Leonardo Lima</a></p>
+<p><a href="https://accounts.eclipse.org/users/llima4n3">Leonardo Lima</a></p>
 </li>
 </ul>
 </div>
@@ -885,7 +888,7 @@ of the project committers and various contributors.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://projects.eclipse.org/content/wayne-beaton-mentor-jakarta-nosql">Wayne Beaton</a></p>
+<p><a href="https://accounts.eclipse.org/users/wbeaton">Wayne Beaton</a></p>
 </li>
 </ul>
 </div>
@@ -2688,7 +2691,7 @@ template.delete(<span class="predefined-type">Book</span>.class, id);</code></pr
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>Template</code> class in Jakarta NoSQL simplifies CRUD (Create, Read, Update, Delete) operations by providing a fluent API for interacting with the underlying NoSQL database. This API allows developers to perform advanced queries and deletion operations beyond the basic ID attribute.</p>
+<p>The <code>Template</code> class in Jakarta NoSQL simplifies CRUD (Create, Read, Update, Delete) operations by providing a fluent API for interacting with the underlying NoSQL database. This API allows developers to perform advanced queries, update and deletion operations beyond the basic ID attribute.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2701,6 +2704,15 @@ Template template;
         .and(<span class="string"><span class="delimiter">&quot;</span><span class="content">edition</span><span class="delimiter">&quot;</span></span>)
         .gt(<span class="integer">3</span>)
         .result();
+
+template.update(<span class="predefined-type">Book</span>.class)
+        .set(<span class="string"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span>)
+        .to(<span class="string"><span class="delimiter">&quot;</span><span class="content">Efective Java - Third Edition</span><span class="delimiter">&quot;</span></span>)
+        .where(<span class="string"><span class="delimiter">&quot;</span><span class="content">author</span><span class="delimiter">&quot;</span></span>)
+        .eq(<span class="string"><span class="delimiter">&quot;</span><span class="content">Joshua Bloch</span><span class="delimiter">&quot;</span></span>)
+        .and(<span class="string"><span class="delimiter">&quot;</span><span class="content">edition</span><span class="delimiter">&quot;</span></span>)
+        .gt(<span class="integer">3</span>)
+        .execute();
 
 template.delete(<span class="predefined-type">Book</span>.class)
         .where(<span class="string"><span class="delimiter">&quot;</span><span class="content">author</span><span class="delimiter">&quot;</span></span>)
@@ -3128,7 +3140,7 @@ template.insert(student);</code></pre>
 <p><strong>Jakarta Query</strong> is a specification that defines an object-oriented, portable, and extensible query language for persistence technologies. It is designed to unify how queries are expressed across various persistence models — including both traditional relational databases and NoSQL systems.</p>
 </div>
 <div class="paragraph">
-<p>Jakarta NoSQL builds on top of <strong>Jakarta Query Core</strong> as a foundational requirement. This core language provides a minimal but expressive set of constructs — such as filtering, ordering, selection, and updates — that serve as the base for querying entities in a database-independent way.</p>
+<p>Jakarta NoSQL builds on top of <strong>Jakarta Common Query Language (JCQL)</strong> as a foundational requirement. This core language provides a minimal but expressive set of constructs — such as filtering, ordering, selection, and updates — that serve as the base for querying entities in a database-independent way.</p>
 </div>
 <div class="paragraph">
 <p>Although the syntax is consistent across databases, actual query behavior may vary depending on the underlying NoSQL provider. For instance:</p>
@@ -3155,7 +3167,7 @@ template.insert(student);</code></pre>
 <div class="sect3">
 <h4 id="_query_limitations_in_nosql_providers"><a class="anchor" href="#_query_limitations_in_nosql_providers"></a>6.4.1. Query Limitations in NoSQL Providers</h4>
 <div class="paragraph">
-<p>While Jakarta NoSQL offers a unified query interface based on Jakarta Query Core, the actual query behavior and supported operations may vary across NoSQL database types. These limitations reflect fundamental differences in how each data model handles access, indexing, and consistency.</p>
+<p>While Jakarta NoSQL offers a unified query interface based on Jakarta Common Query Language (JCQL), the actual query behavior and supported operations may vary across NoSQL database types. These limitations reflect fundamental differences in how each data model handles access, indexing, and consistency.</p>
 </div>
 <div class="paragraph">
 <p>The following guidelines describe expected behaviors by NoSQL category:</p>
@@ -3227,7 +3239,7 @@ template.insert(student);</code></pre>
 <p>Full UPDATE and DELETE support.</p>
 </li>
 <li>
-<p>Suitable for expressive queries using Jakarta Query Core.</p>
+<p>Suitable for expressive queries using Jakarta Common Query Language (JCQL).</p>
 </li>
 </ul>
 </div>
@@ -3264,7 +3276,7 @@ template.insert(student);</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>Additional features — such as filtering, sorting, or update operations — are allowed if they respect Jakarta Query Core semantics.</p>
+<p>Additional features — such as filtering, sorting, or update operations — are allowed if they respect Jakarta Common Query Language (JCQL) semantics.</p>
 </div>
 </div>
 <div class="sect4">
@@ -3290,7 +3302,7 @@ template.insert(student);</code></pre>
 <div class="sect3">
 <h4 id="_object_mapping_integration"><a class="anchor" href="#_object_mapping_integration"></a>6.4.2. Object Mapping Integration</h4>
 <div class="paragraph">
-<p>Jakarta NoSQL integrates query execution with Jakarta Mapping metadata. This integration allows Jakarta Query Core to resolve attribute names and types based on the annotated Java class structure.</p>
+<p>Jakarta NoSQL integrates query execution with Jakarta Mapping metadata. This integration allows Jakarta Common Query Language (JCQL) to resolve attribute names and types based on the annotated Java class structure.</p>
 </div>
 <div class="paragraph">
 <p>Only classes explicitly annotated with <code>@jakarta.nosql.Entity</code> are eligible for use in queries. Fields or constructor parameters must be annotated with either <code>@jakarta.nosql.Id</code> or <code>@jakarta.nosql.Column</code> to be considered queryable.</p>
@@ -3348,7 +3360,7 @@ template.insert(student);</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
- 1.1-M1<br>
+ 1.1.0<br>
 Last updated 2025-05-04 17:24:41 +0100
 </div>
 </div>

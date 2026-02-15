@@ -186,7 +186,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNameCondition</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Represents a delete condition based on a column name.</div>
+<div class="block">Represents a delete condition based on a column name in the fluent delete API.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperDeleteNotCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNotCondition</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
@@ -194,28 +194,31 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperDeleteQueryBuild.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteQueryBuild</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Represents the last step of the delete query fluent API execution.</div>
+<div class="block">Represents the final execution step of the delete query fluent API.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperDeleteWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteWhere</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Represents a step where it's possible to perform a logical conjunction or disjunction,
- add one more delete condition, or end up performing the built query.</div>
+<div class="block">Represents a step where it is possible to compose delete conditions using
+ logical conjunctions or disjunctions, or execute the built delete query.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperFrom.html" title="interface in jakarta.nosql">QueryMapper.MapperFrom</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Represents the first step in the query fluent API.</div>
+<div class="block">Represents the initial step of the fluent query API.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperLimit.html" title="interface in jakarta.nosql">QueryMapper.MapperLimit</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Represents the step in the query fluent API where it's possible to define the maximum number of results to retrieve or to perform the query execution.</div>
+<div class="block">Represents the step in the fluent query API where the maximum number of
+ results has been defined and it is still possible to further refine
+ pagination or execute the query.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperNameCondition</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Represents a condition based on a column name.</div>
+<div class="block">Represents a predicate definition step based on a column name in the fluent query API.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperNameOrder.html" title="interface in jakarta.nosql">QueryMapper.MapperNameOrder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Represents the step in the query fluent API where it's possible to define the order of the results or to perform the query execution.</div>
+<div class="block">Represents the step in the fluent query API where result ordering, pagination,
+ or query execution can be defined.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperNotCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperNotCondition</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
@@ -223,34 +226,58 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperOrder.html" title="interface in jakarta.nosql">QueryMapper.MapperOrder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Represents the step in the query fluent API where it's possible to define the order of the results or to perform the query execution.</div>
+<div class="block">Represents the step in the fluent query API where the sort direction
+ for a previously specified column is defined.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperQueryBuild.html" title="interface in jakarta.nosql">QueryMapper.MapperQueryBuild</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Represents the last step of the query fluent API execution.</div>
+<div class="block">Represents the final execution step of the fluent query API.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperSkip.html" title="interface in jakarta.nosql">QueryMapper.MapperSkip</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Represents the step in the query fluent API where it's possible to define the position of the first result to retrieve or to perform the query execution.</div>
+<div class="block">Represents the step in the fluent query API where the position of the first
+ result to retrieve has been defined and it is still possible to further
+ refine pagination or execute the query.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperWhere</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperUpdateFrom.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateFrom</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Represents a step where it's possible to:
- 
-     Create a new condition performing logical conjunction (AND) by specifying a column name
-     Create a new condition performing logical disjunction (OR) by specifying a column name
-     Define the position of the first result
-     Define the maximum number of results to retrieve
-     Define the order of the results
-     Perform the query execution
- </div>
+<div class="block">Represents the first step in the update query fluent API.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Template.html" title="interface in jakarta.nosql">Template</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Represents the predicate definition step of the fluent update API.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperUpdateNotCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNotCondition</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Represents a NOT update condition in the fluent update API.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperUpdateQueryBuild.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateQueryBuild</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Represents the final execution step of the update query fluent API.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperUpdateSetStep.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateSetStep</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Represents the update assignment step of the fluent update API.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperUpdateSetTo.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateSetTo</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Represents the value assignment step of the update fluent API.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperUpdateWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateWhere</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Represents the conditional composition step of the fluent update API.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueryMapper.MapperWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperWhere</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Represents the step in the fluent query API where conditional composition,
+ pagination, ordering, or query execution can be defined.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Template.html" title="interface in jakarta.nosql">Template</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block"><code>Template</code> is a helper class that increases productivity when performing common NoSQL operations.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="TypedQuery.html" title="interface in jakarta.nosql">TypedQuery</a>&lt;T&gt;</div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="TypedQuery.html" title="interface in jakarta.nosql">TypedQuery</a>&lt;T&gt;</div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">A type-safe variant of <a href="Query.html" title="interface in jakarta.nosql"><code>Query</code></a> that maps query results directly to the target type <code>T</code>.</div>
 </div>
 </div>
@@ -262,7 +289,7 @@ loadScripts(document, 'script');</script>
 </main>
 <footer role="contentinfo">
 <hr>
-<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2024, 2025 Eclipse Foundation. All rights reserved.<br>Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2025 Eclipse Foundation. All rights reserved.<br></small></p>
 </footer>
 </div>
 </div>

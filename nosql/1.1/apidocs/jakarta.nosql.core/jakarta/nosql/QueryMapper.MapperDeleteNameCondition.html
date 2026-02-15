@@ -98,7 +98,26 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">QueryMapper.MapperDeleteNameCondition</span></div>
-<div class="block">Represents a delete condition based on a column name.</div>
+<div class="block">Represents a delete condition based on a column name in the fluent delete API.
+ <p>
+ This interface defines the available comparison operations that can be applied
+ to a column when building a delete query. It is reached after specifying a
+ column name using <code>where(String)</code> and allows defining predicates such as
+ equality, pattern matching, range comparisons, and negation.
+ </p>
+
+ <pre><code>
+ @Inject
+ Template template;
+
+ template.delete(Book.class)
+     .where("author").eq("Ada")
+     .execute();
+ </code></pre>
+
+ The returned instances are mutable and not thread-safe.
+ Support for specific comparison operations depends on the capabilities of the
+ underlying NoSQL database.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -448,7 +467,7 @@ loadScripts(document, 'script');</script>
 </main>
 <footer role="contentinfo">
 <hr>
-<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2024, 2025 Eclipse Foundation. All rights reserved.<br>Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2025 Eclipse Foundation. All rights reserved.<br></small></p>
 </footer>
 </div>
 </div>

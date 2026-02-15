@@ -56,7 +56,12 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteWhere.html#and(java.lang.String)" class="member-name-link">and(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteWhere</a></dt>
 <dd>
-<div class="block">Create a new delete condition performing logical conjunction (AND) by specifying a column name.</div>
+<div class="block">Creates a new delete condition using logical conjunction (AND) by
+ specifying a column name.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateWhere.html#and(java.lang.String)" class="member-name-link">and(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateWhere</a></dt>
+<dd>
+<div class="block">Adds an AND condition using the specified column name.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperWhere.html#and(java.lang.String)" class="member-name-link">and(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperWhere</a></dt>
 <dd>
@@ -82,11 +87,23 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a condition where the specified column value is between the two provided bounds.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#between(T,T)" class="member-name-link">between(T, T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column is between the provided values.</div>
+</dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Query.html#bind(int,java.lang.Object)" class="member-name-link">bind(int, Object)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Query.html" title="interface in jakarta.nosql">Query</a></dt>
 <dd>
 <div class="block">Binds a positional parameter to the query.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/TypedQuery.html#bind(int,java.lang.Object)" class="member-name-link">bind(int, Object)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/TypedQuery.html" title="interface in jakarta.nosql">TypedQuery</a></dt>
+<dd>
+<div class="block">Binds a positional parameter to the query.</div>
+</dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Query.html#bind(java.lang.String,java.lang.Object)" class="member-name-link">bind(String, Object)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Query.html" title="interface in jakarta.nosql">Query</a></dt>
+<dd>
+<div class="block">Binds a named parameter to the query.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/TypedQuery.html#bind(java.lang.String,java.lang.Object)" class="member-name-link">bind(String, Object)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/TypedQuery.html" title="interface in jakarta.nosql">TypedQuery</a></dt>
 <dd>
 <div class="block">Binds a named parameter to the query.</div>
 </dd>
@@ -104,6 +121,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameCondition.html#contains(java.lang.String)" class="member-name-link">contains(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperNameCondition</a></dt>
 <dd>
 <div class="block">Creates a condition where the specified column contains the given substring.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#contains(java.lang.String)" class="member-name-link">contains(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column contains the given value.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Convert.html" class="type-name-link" title="annotation interface in jakarta.nosql">Convert</a> - Annotation Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
@@ -175,6 +196,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a condition where the specified column ends with the given suffix.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#endsWith(java.lang.String)" class="member-name-link">endsWith(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column ends with the given value.</div>
+</dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Entity.html" class="type-name-link" title="annotation interface in jakarta.nosql">Entity</a> - Annotation Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
 <div class="block">Annotates a class as an entity, representing a persistent domain object stored in a NoSQL database.</div>
@@ -187,9 +212,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a condition where the specified column value equals the given value.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#eq(T)" class="member-name-link">eq(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column name equals the provided value.</div>
+</dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteQueryBuild.html#execute()" class="member-name-link">execute()</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteQueryBuild.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteQueryBuild</a></dt>
 <dd>
 <div class="block">Executes the delete query based on the specified conditions.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateQueryBuild.html#execute()" class="member-name-link">execute()</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateQueryBuild.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateQueryBuild</a></dt>
+<dd>
+<div class="block">Executes the update query based on the specified assignments and conditions.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Query.html#executeUpdate()" class="member-name-link">executeUpdate()</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Query.html" title="interface in jakarta.nosql">Query</a></dt>
 <dd>
@@ -225,6 +258,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a condition where the specified column value is greater than the given value.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#gt(T)" class="member-name-link">gt(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column is greater than the provided value.</div>
+</dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteNameCondition.html#gte(T)" class="member-name-link">gte(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNameCondition</a></dt>
 <dd>
 <div class="block">Creates a delete condition where the specified column name is greater than or equal to the provided value.</div>
@@ -232,6 +269,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameCondition.html#gte(T)" class="member-name-link">gte(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperNameCondition</a></dt>
 <dd>
 <div class="block">Creates a condition where the specified column value is greater than or equal to the given value.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#gte(T)" class="member-name-link">gte(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column is greater than or equal to the provided value.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:I">I</h2>
@@ -247,6 +288,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameCondition.html#in(java.lang.Iterable)" class="member-name-link">in(Iterable&lt;T&gt;)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperNameCondition</a></dt>
 <dd>
 <div class="block">Creates a condition where the specified column value exists within the given collection.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#in(java.lang.Iterable)" class="member-name-link">in(Iterable&lt;T&gt;)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column value is contained in the provided values.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Inheritance.html" class="type-name-link" title="annotation interface in jakarta.nosql">Inheritance</a> - Annotation Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
@@ -290,6 +335,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a condition where the specified column value matches the provided pattern.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#like(java.lang.String)" class="member-name-link">like(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column matches the given pattern.</div>
+</dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperFrom.html#limit(long)" class="member-name-link">limit(long)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperFrom.html" title="interface in jakarta.nosql">QueryMapper.MapperFrom</a></dt>
 <dd>
 <div class="block">Defines the maximum number of results to retrieve (pagination limit).</div>
@@ -314,6 +363,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a condition where the specified column value is less than the given value.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#lt(T)" class="member-name-link">lt(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column is less than the provided value.</div>
+</dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteNameCondition.html#lte(T)" class="member-name-link">lte(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNameCondition</a></dt>
 <dd>
 <div class="block">Creates a delete condition where the specified column name is less than or equal to the provided value.</div>
@@ -321,6 +374,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameCondition.html#lte(T)" class="member-name-link">lte(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperNameCondition</a></dt>
 <dd>
 <div class="block">Creates a condition where the specified column value is less than or equal to the given value.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#lte(T)" class="member-name-link">lte(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column is less than or equal to the provided value.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:M">M</h2>
@@ -350,7 +407,7 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Entity.html#name()" class="member-name-link">name()</a> - Element in annotation interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Entity.html" title="annotation interface in jakarta.nosql">Entity</a></dt>
 <dd>
-<div class="block">Defines the logical name used to reference this entity in Jakarta Query language.</div>
+<div class="block">Defines the logical name used to reference this entity in  Jakarta Common Query Language (JCQL).</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/NoSQLException.html" class="type-name-link" title="class in jakarta.nosql">NoSQLException</a> - Exception Class in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
@@ -387,12 +444,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a negated condition for the current column, allowing inverse logic.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#not()" class="member-name-link">not()</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Negates the next update condition.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:O">O</h2>
 <dl class="index">
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteWhere.html#or(java.lang.String)" class="member-name-link">or(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteWhere</a></dt>
 <dd>
-<div class="block">Create a new delete condition performing logical disjunction (OR) by specifying a column name.</div>
+<div class="block">Creates a new delete condition using logical disjunction (OR) by
+ specifying a column name.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateWhere.html#or(java.lang.String)" class="member-name-link">or(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateWhere</a></dt>
+<dd>
+<div class="block">Adds an OR condition using the specified column name.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperWhere.html#or(java.lang.String)" class="member-name-link">or(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperWhere</a></dt>
 <dd>
@@ -408,7 +474,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperWhere.html#orderBy(java.lang.String)" class="member-name-link">orderBy(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperWhere.html" title="interface in jakarta.nosql">QueryMapper.MapperWhere</a></dt>
 <dd>
-<div class="block">Add the order how the result will return.</div>
+<div class="block">Adds an ordering rule based on the specified column name.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:P">P</h2>
@@ -422,7 +488,7 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Template.html#query(java.lang.String)" class="member-name-link">query(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Template.html" title="interface in jakarta.nosql">Template</a></dt>
 <dd>
-<div class="block">Creates a query from a raw string using Jakarta Query language (core grammar).</div>
+<div class="block">Creates a query from a raw string using Jakarta Common Query Language (JCQL).</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Query.html" class="type-name-link" title="interface in jakarta.nosql">Query</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
@@ -438,7 +504,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteNameCondition.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNameCondition</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents a delete condition based on a column name.</div>
+<div class="block">Represents a delete condition based on a column name in the fluent delete API.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteNotCondition.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNotCondition</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
@@ -446,28 +512,31 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteQueryBuild.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperDeleteQueryBuild</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents the last step of the delete query fluent API execution.</div>
+<div class="block">Represents the final execution step of the delete query fluent API.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperDeleteWhere.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperDeleteWhere</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents a step where it's possible to perform a logical conjunction or disjunction,
- add one more delete condition, or end up performing the built query.</div>
+<div class="block">Represents a step where it is possible to compose delete conditions using
+ logical conjunctions or disjunctions, or execute the built delete query.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperFrom.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperFrom</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents the first step in the query fluent API.</div>
+<div class="block">Represents the initial step of the fluent query API.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperLimit.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperLimit</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents the step in the query fluent API where it's possible to define the maximum number of results to retrieve or to perform the query execution.</div>
+<div class="block">Represents the step in the fluent query API where the maximum number of
+ results has been defined and it is still possible to further refine
+ pagination or execute the query.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameCondition.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperNameCondition</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents a condition based on a column name.</div>
+<div class="block">Represents a predicate definition step based on a column name in the fluent query API.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNameOrder.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperNameOrder</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents the step in the query fluent API where it's possible to define the order of the results or to perform the query execution.</div>
+<div class="block">Represents the step in the fluent query API where result ordering, pagination,
+ or query execution can be defined.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperNotCondition.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperNotCondition</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
@@ -475,27 +544,51 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperOrder.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperOrder</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents the step in the query fluent API where it's possible to define the order of the results or to perform the query execution.</div>
+<div class="block">Represents the step in the fluent query API where the sort direction
+ for a previously specified column is defined.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperQueryBuild.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperQueryBuild</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents the last step of the query fluent API execution.</div>
+<div class="block">Represents the final execution step of the fluent query API.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperSkip.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperSkip</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents the step in the query fluent API where it's possible to define the position of the first result to retrieve or to perform the query execution.</div>
+<div class="block">Represents the step in the fluent query API where the position of the first
+ result to retrieve has been defined and it is still possible to further
+ refine pagination or execute the query.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateFrom.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperUpdateFrom</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
+<dd>
+<div class="block">Represents the first step in the update query fluent API.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
+<dd>
+<div class="block">Represents the predicate definition step of the fluent update API.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNotCondition.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNotCondition</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
+<dd>
+<div class="block">Represents a NOT update condition in the fluent update API.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateQueryBuild.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperUpdateQueryBuild</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
+<dd>
+<div class="block">Represents the final execution step of the update query fluent API.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateSetStep.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperUpdateSetStep</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
+<dd>
+<div class="block">Represents the update assignment step of the fluent update API.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateSetTo.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperUpdateSetTo</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
+<dd>
+<div class="block">Represents the value assignment step of the update fluent API.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateWhere.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperUpdateWhere</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
+<dd>
+<div class="block">Represents the conditional composition step of the fluent update API.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperWhere.html" class="type-name-link" title="interface in jakarta.nosql">QueryMapper.MapperWhere</a> - Interface in <a href="jakarta.nosql.core/jakarta/nosql/package-summary.html">jakarta.nosql</a></dt>
 <dd>
-<div class="block">Represents a step where it's possible to:
- 
-     Create a new condition performing logical conjunction (AND) by specifying a column name
-     Create a new condition performing logical disjunction (OR) by specifying a column name
-     Define the position of the first result
-     Define the maximum number of results to retrieve
-     Define the order of the results
-     Perform the query execution
- </div>
+<div class="block">Represents the step in the fluent query API where conditional composition,
+ pagination, ordering, or query execution can be defined.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:R">R</h2>
@@ -518,6 +611,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Template.html#select(java.lang.Class)" class="member-name-link">select(Class&lt;T&gt;)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Template.html" title="interface in jakarta.nosql">Template</a></dt>
 <dd>
 <div class="block">Start a query using the fluent API.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateFrom.html#set(java.lang.String)" class="member-name-link">set(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateFrom.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateFrom</a></dt>
+<dd>
+<div class="block">Defines an update assignment for the specified field.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateSetStep.html#set(java.lang.String)" class="member-name-link">set(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateSetStep.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateSetStep</a></dt>
+<dd>
+<div class="block">Starts a new field assignment for the update operation.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Query.html#singleResult()" class="member-name-link">singleResult()</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Query.html" title="interface in jakarta.nosql">Query</a></dt>
 <dd>
@@ -555,6 +656,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a condition where the specified column starts with the given prefix.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html#startsWith(java.lang.String)" class="member-name-link">startsWith(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateNameCondition</a></dt>
+<dd>
+<div class="block">Creates an update condition where the specified column starts with the given value.</div>
+</dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Query.html#stream()" class="member-name-link">stream()</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Query.html" title="interface in jakarta.nosql">Query</a></dt>
 <dd>
 <div class="block">Executes a <code>SELECT</code> query and returns the result as a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link"><code>Stream</code></a>.</div>
@@ -574,6 +679,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><code>Template</code> is a helper class that increases productivity when performing common NoSQL operations.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateSetTo.html#to(T)" class="member-name-link">to(T)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateSetTo.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateSetTo</a></dt>
+<dd>
+<div class="block">Assigns the given value to the previously defined field.</div>
+</dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Template.html#typedQuery(java.lang.String,java.lang.Class)" class="member-name-link">typedQuery(String, Class&lt;T&gt;)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Template.html" title="interface in jakarta.nosql">Template</a></dt>
 <dd>
 <div class="block">Creates a <a href="jakarta.nosql.core/jakarta/nosql/TypedQuery.html" title="interface in jakarta.nosql"><code>TypedQuery</code></a> using the given query string and result type.</div>
@@ -588,6 +697,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Column.html#udt()" class="member-name-link">udt()</a> - Element in annotation interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Column.html" title="annotation interface in jakarta.nosql">Column</a></dt>
 <dd>
 <div class="block">(Optional) Defines the name of the user-defined type (UDT) used by the NoSQL database for this field.</div>
+</dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/Template.html#update(java.lang.Class)" class="member-name-link">update(Class&lt;T&gt;)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Template.html" title="interface in jakarta.nosql">Template</a></dt>
+<dd>
+<div class="block">Start an update builder using the fluent API.</div>
 </dd>
 <dt><a href="jakarta.nosql.core/jakarta/nosql/Template.html#update(java.lang.Iterable)" class="member-name-link">update(Iterable&lt;T&gt;)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/Template.html" title="interface in jakarta.nosql">Template</a></dt>
 <dd>
@@ -648,11 +761,15 @@ the order they are declared.</div>
 <dd>
 <div class="block">Starts a new condition by specifying a column name.</div>
 </dd>
+<dt><a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateSetStep.html#where(java.lang.String)" class="member-name-link">where(String)</a> - Method in interface jakarta.nosql.<a href="jakarta.nosql.core/jakarta/nosql/QueryMapper.MapperUpdateSetStep.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateSetStep</a></dt>
+<dd>
+<div class="block">Defines a condition to restrict which entities will be updated.</div>
+</dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:J">J</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a><span class="vertical-separator">|</span><a href="serialized-form.html">Serialized&nbsp;Form</a></main>
 <footer role="contentinfo">
 <hr>
-<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2024, 2025 Eclipse Foundation. All rights reserved.<br>Use is subject to <a href="./doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2025 Eclipse Foundation. All rights reserved.<br></small></p>
 </footer>
 </div>
 </div>

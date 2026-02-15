@@ -141,6 +141,10 @@ extends <a href="Query.html" title="interface in jakarta.nosql">Query</a></span>
      .typedQuery("WHERE price &lt; 100", PromotionalProduct.class)
      .result();
  </code></pre></div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>1.1.0</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -155,6 +159,18 @@ extends <a href="Query.html" title="interface in jakarta.nosql">Query</a></span>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TypedQuery.html" title="interface in jakarta.nosql">TypedQuery</a><wbr>&lt;<a href="TypedQuery.html" title="type parameter in TypedQuery">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#bind(int,java.lang.Object)" class="member-name-link">bind</a><wbr>(int&nbsp;position,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Binds a positional parameter to the query.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TypedQuery.html" title="interface in jakarta.nosql">TypedQuery</a><wbr>&lt;<a href="TypedQuery.html" title="type parameter in TypedQuery">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#bind(java.lang.String,java.lang.Object)" class="member-name-link">bind</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Binds a named parameter to the query.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="TypedQuery.html" title="type parameter in TypedQuery">T</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#result()" class="member-name-link">result</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -175,7 +191,7 @@ extends <a href="Query.html" title="interface in jakarta.nosql">Query</a></span>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.nosql.Query">Methods inherited from interface&nbsp;jakarta.nosql.<a href="Query.html" title="interface in jakarta.nosql">Query</a></h3>
-<code><a href="Query.html#bind(int,java.lang.Object)">bind</a>, <a href="Query.html#bind(java.lang.String,java.lang.Object)">bind</a>, <a href="Query.html#executeUpdate()">executeUpdate</a></code></div>
+<code><a href="Query.html#executeUpdate()">executeUpdate</a></code></div>
 </section>
 </li>
 </ul>
@@ -262,6 +278,54 @@ extends <a href="Query.html" title="interface in jakarta.nosql">Query</a></span>
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="bind(java.lang.String,java.lang.Object)">
+<h3>bind</h3>
+<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.nosql">TypedQuery</a>&lt;<a href="TypedQuery.html" title="type parameter in TypedQuery">T</a>&gt;</span>&nbsp;<span class="element-name">bind</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
+<div class="block">Binds a named parameter to the query.
+
+ <pre><code>
+ TypedQuery&lt;Product&gt; query = template.typedQuery("SELECT * FROM Book WHERE title = :title", Product.class)
+                       .bind("title", "Effective Java");
+ </code></pre></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Query.html#bind(java.lang.String,java.lang.Object)">bind</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.nosql">Query</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - the parameter name (without <code>:</code>)</dd>
+<dd><code>value</code> - the value to bind</dd>
+<dt>Returns:</dt>
+<dd>this query instance for fluent chaining</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the name is null</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="bind(int,java.lang.Object)">
+<h3>bind</h3>
+<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.nosql">TypedQuery</a>&lt;<a href="TypedQuery.html" title="type parameter in TypedQuery">T</a>&gt;</span>&nbsp;<span class="element-name">bind</span><wbr><span class="parameters">(int&nbsp;position,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
+<div class="block">Binds a positional parameter to the query. Positions are 1-based.
+
+ <pre><code>
+ TypedQuery&lt;Product&gt; query = template.query("SELECT * FROM Person WHERE age &gt; ?1", Product.class)
+                       .bind(1, 30);
+ </code></pre></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Query.html#bind(int,java.lang.Object)">bind</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.nosql">Query</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>position</code> - the parameter position (starting at 1)</dd>
+<dd><code>value</code> - the value to bind</dd>
+<dt>Returns:</dt>
+<dd>this query instance for fluent chaining</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if position is less than 1</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -271,7 +335,7 @@ extends <a href="Query.html" title="interface in jakarta.nosql">Query</a></span>
 </main>
 <footer role="contentinfo">
 <hr>
-<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2024, 2025 Eclipse Foundation. All rights reserved.<br>Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2025 Eclipse Foundation. All rights reserved.<br></small></p>
 </footer>
 </div>
 </div>

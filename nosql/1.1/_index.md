@@ -20,7 +20,7 @@ This release is targeted for **Jakarta EE 12**, ensuring full compatibility with
 
 * Update dependencies
 * Update Java version
-* **Standardized Driver Communication API** to unify and simplify the integration of NoSQL providers
+* **Standardized Driver Communication SPI API** to unify and simplify the integration of NoSQL providers
 * **Jakarta Query** support for fluent, portable query definitions ([Jakarta Query GitHub](https://github.com/jakartaee/query))
 * **Prepared Statement support** for parameterized and secure query execution.
 * Support for `Map<K, V>` attributes where `V` is an entity or embedded class.
@@ -101,11 +101,11 @@ Jakarta NoSQL 1.1 is designed with a **Driver Communication API** that acts as a
 * [Jakarta NoSQL 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.1)
 
 * [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.0)
-* [Jakarta NoSQL 1.1 M1 Specification Document](./jakarta-nosql-1.1-M1.pdf) (PDF)
-* [Jakarta NoSQL 1.1 M1 Specification Document](./jakarta-nosql-1.1-M1.html) (HTML)
-* [Jakarta NoSQL 1.1 M1 Specification Javadoc](./apidocs)
+* [Jakarta NoSQL 1.1 M2 Specification Document](./jakarta-nosql-1.1-M2.pdf) (PDF)
+* [Jakarta NoSQL 1.1 M2 Specification Document](./jakarta-nosql-1.1-M2.html) (HTML)
+* [Jakarta NoSQL 1.1 M2 Specification Javadoc](./apidocs)
 * Maven coordinates
-  * [jakarta-nosql:jakarta.nosql-api:jar:1.1.0-M1](https://central.sonatype.com/artifact/jakarta.nosql/jakarta.nosql-api)
+  * [jakarta-nosql:jakarta.nosql-api:jar:1.1.0-M2](https://central.sonatype.com/artifact/jakarta.nosql/jakarta.nosql-api)
 
 
 # Plan Review

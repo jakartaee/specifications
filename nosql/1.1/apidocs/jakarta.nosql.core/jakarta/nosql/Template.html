@@ -243,7 +243,7 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.nosql">Query</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#query(java.lang.String)" class="member-name-link">query</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;query)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Creates a query from a raw string using Jakarta Query language (core grammar).</div>
+<div class="block">Creates a query from a raw string using Jakarta Common Query Language (JCQL).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="QueryMapper.MapperFrom.html" title="interface in jakarta.nosql">QueryMapper.MapperFrom</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#select(java.lang.Class)" class="member-name-link">select</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</code></div>
@@ -256,14 +256,19 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Creates a <a href="TypedQuery.html" title="interface in jakarta.nosql"><code>TypedQuery</code></a> using the given query string and result type.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#update(java.lang.Iterable)" class="member-name-link">update</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;T&gt;&nbsp;entities)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="QueryMapper.MapperUpdateFrom.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateFrom</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#update(java.lang.Class)" class="member-name-link">update</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Start an update builder using the fluent API.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#update(java.lang.Iterable)" class="member-name-link">update</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;T&gt;&nbsp;entities)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Modifies entities that already exist in the database.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#update(T)" class="member-name-link">update</a><wbr>(T&nbsp;entity)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#update(T)" class="member-name-link">update</a><wbr>(T&nbsp;entity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Modifies an entity that already exists in the database.</div>
 </div>
 </div>
@@ -709,10 +714,42 @@ K&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="elemen
 </section>
 </li>
 <li>
+<section class="detail" id="update(java.lang.Class)">
+<h3>update</h3>
+<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="QueryMapper.MapperUpdateFrom.html" title="interface in jakarta.nosql">QueryMapper.MapperUpdateFrom</a></span>&nbsp;<span class="element-name">update</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</span></div>
+<div class="block">Start an update builder using the fluent API. The returned value is a mutable and non-thread-safe instance.
+ <pre><code>
+ @Inject
+ Template template;
+
+ template.update(Book.class)
+     .set("title").to("Domain-Driven Design with Java")
+     .set("publishedYear").to(2025)
+     .where("author").eq("Ada")
+     .execute();
+ </code></pre>
+
+ This operation updates matching entities based on the defined predicates.
+ The update semantics and supported operations depend on the underlying database.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>T</code> - the entity type</dd>
+<dt>Parameters:</dt>
+<dd><code>type</code> - the entity class</dd>
+<dt>Returns:</dt>
+<dd>a <a href="QueryMapper.MapperUpdateFrom.html" title="interface in jakarta.nosql"><code>QueryMapper.MapperUpdateFrom</code></a> instance</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - when type is null</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - when the database cannot operate,
+                                       such as key-value stores that only support key-based updates.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="query(java.lang.String)">
 <h3>query</h3>
 <div class="member-signature"><span class="return-type"><a href="Query.html" title="interface in jakarta.nosql">Query</a></span>&nbsp;<span class="element-name">query</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;query)</span></div>
-<div class="block">Creates a query from a raw string using Jakarta Query language (core grammar).
+<div class="block">Creates a query from a raw string using Jakarta Common Query Language (JCQL).
  <p>
  The entity type is inferred from the query string (e.g., <code>FROM Person</code>),
  so no result class needs to be explicitly passed.
@@ -726,12 +763,15 @@ K&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="elemen
  </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>query</code> - the Jakarta Query string to execute (e.g., <code>SELECT * FROM Person WHERE active = true</code>)</dd>
+<dd><code>query</code> - the Jakarta Common Query Language (JCQL) string to execute (e.g., <code>SELECT * FROM Person
+ WHERE active = true</code>)</dd>
 <dt>Returns:</dt>
 <dd>a new <a href="Query.html" title="interface in jakarta.nosql"><code>Query</code></a> instance bound to this query string</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the query string is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - if the database does not support dynamic queries</dd>
+<dt>Since:</dt>
+<dd>1.1.0</dd>
 </dl>
 </section>
 </li>
@@ -776,7 +816,7 @@ K&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="elemen
 <dt>Type Parameters:</dt>
 <dd><code>T</code> - the type of the result</dd>
 <dt>Parameters:</dt>
-<dd><code>query</code> - the query string using Jakarta Query Core language</dd>
+<dd><code>query</code> - the query string using Jakarta Common Query Language (JCQL)</dd>
 <dd><code>type</code> - the expected result type (entity or projection class)</dd>
 <dt>Returns:</dt>
 <dd>a <a href="TypedQuery.html" title="interface in jakarta.nosql"><code>TypedQuery</code></a> instance to bind parameters and fetch results</dd>
@@ -784,6 +824,8 @@ K&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="elemen
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the query or type is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the provided <code>type</code> is incompatible with the entity in the query</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - if the query is not supported by the underlying provider</dd>
+<dt>Since:</dt>
+<dd>1.1.0</dd>
 </dl>
 </section>
 </li>
@@ -796,7 +838,7 @@ K&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="elemen
 </main>
 <footer role="contentinfo">
 <hr>
-<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2024, 2025 Eclipse Foundation. All rights reserved.<br>Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2025 Eclipse Foundation. All rights reserved.<br></small></p>
 </footer>
 </div>
 </div>

@@ -99,8 +99,27 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">QueryMapper.MapperDeleteWhere</span><span class="extends-implements">
 extends <a href="QueryMapper.MapperDeleteQueryBuild.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteQueryBuild</a></span></div>
-<div class="block">Represents a step where it's possible to perform a logical conjunction or disjunction,
- add one more delete condition, or end up performing the built query.</div>
+<div class="block">Represents a step where it is possible to compose delete conditions using
+ logical conjunctions or disjunctions, or execute the built delete query.
+ <p>
+ This step is reached after a delete condition has been defined and allows
+ combining additional conditions using <code>and(...)</code> or <code>or(...)</code>,
+ or finalizing the operation by executing the query.
+ </p>
+
+ <pre><code>
+ @Inject
+ Template template;
+
+ template.delete(Book.class)
+     .where("author").eq("Ada")
+     .and("publishedYear").gte(2020)
+     .execute();
+ </code></pre>
+
+ The returned instance is mutable and not thread-safe.
+ Support for logical operators depends on the capabilities of the underlying
+ NoSQL database.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -118,12 +137,14 @@ extends <a href="QueryMapper.MapperDeleteQueryBuild.html" title="interface in ja
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNameCondition</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#and(java.lang.String)" class="member-name-link">and</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a new delete condition performing logical conjunction (AND) by specifying a column name.</div>
+<div class="block">Creates a new delete condition using logical conjunction (AND) by
+ specifying a column name.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNameCondition</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#or(java.lang.String)" class="member-name-link">or</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a new delete condition performing logical disjunction (OR) by specifying a column name.</div>
+<div class="block">Creates a new delete condition using logical disjunction (OR) by
+ specifying a column name.</div>
 </div>
 </div>
 </div>
@@ -146,12 +167,20 @@ extends <a href="QueryMapper.MapperDeleteQueryBuild.html" title="interface in ja
 <section class="detail" id="and(java.lang.String)">
 <h3>and</h3>
 <div class="member-signature"><span class="return-type"><a href="QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNameCondition</a></span>&nbsp;<span class="element-name">and</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block">Create a new delete condition performing logical conjunction (AND) by specifying a column name.</div>
+<div class="block">Creates a new delete condition using logical conjunction (AND) by
+ specifying a column name.
+
+ <pre><code>
+ template.delete(Book.class)
+     .where("author").eq("Ada")
+     .and("publishedYear").gte(2020)
+     .execute();
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - the column name</dd>
 <dt>Returns:</dt>
-<dd>the same <a href="QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql"><code>QueryMapper.MapperDeleteNameCondition</code></a> with the delete condition appended</dd>
+<dd>the <a href="QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql"><code>QueryMapper.MapperDeleteNameCondition</code></a> with the delete condition appended</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - when name is null</dd>
 </dl>
@@ -161,12 +190,20 @@ extends <a href="QueryMapper.MapperDeleteQueryBuild.html" title="interface in ja
 <section class="detail" id="or(java.lang.String)">
 <h3>or</h3>
 <div class="member-signature"><span class="return-type"><a href="QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql">QueryMapper.MapperDeleteNameCondition</a></span>&nbsp;<span class="element-name">or</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block">Create a new delete condition performing logical disjunction (OR) by specifying a column name.</div>
+<div class="block">Creates a new delete condition using logical disjunction (OR) by
+ specifying a column name.
+
+ <pre><code>
+ template.delete(Book.class)
+     .where("author").eq("Ada")
+     .or("author").eq("Hermann")
+     .execute();
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - the column name</dd>
 <dt>Returns:</dt>
-<dd>the same <a href="QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql"><code>QueryMapper.MapperDeleteNameCondition</code></a> with the delete condition appended</dd>
+<dd>the <a href="QueryMapper.MapperDeleteNameCondition.html" title="interface in jakarta.nosql"><code>QueryMapper.MapperDeleteNameCondition</code></a> with the delete condition appended</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - when name is null</dd>
 </dl>
@@ -181,7 +218,7 @@ extends <a href="QueryMapper.MapperDeleteQueryBuild.html" title="interface in ja
 </main>
 <footer role="contentinfo">
 <hr>
-<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2024, 2025 Eclipse Foundation. All rights reserved.<br>Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2025 Eclipse Foundation. All rights reserved.<br></small></p>
 </footer>
 </div>
 </div>
