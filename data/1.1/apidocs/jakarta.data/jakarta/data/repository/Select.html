@@ -115,7 +115,9 @@ loadScripts(document, 'script');</script>
  </ul></li>
  </ul>
 
- <p>This annotation must not be used in other locations.</p>
+ <p>This annotation must not be used in other locations; in particular,
+ it must not be used on repository methods annotated
+ <code>jakarta.persistence.query.StaticNativeQuery</code>.</p>
 
  <p>Sort criteria for a repository method that returns a projection
  can include any of the returned entity attributes that are of sortable type.
@@ -200,14 +202,14 @@ loadScripts(document, 'script');</script>
  <code>Car</code> entity that has the supplied <code>vin</code> attribute
  value,</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Cars extends BasicRepository&lt;Car, String&gt; {
-     &#64;Find
-     &#64;Select(_Car.PRICE)
+     @Find
+     @Select(_Car.PRICE)
      Optional&lt;Float&gt; getPrice(@By(_Car.VIN) String vehicleIdNum);
  }
- </pre>
+ </code></pre>
 
  <h4 id="method-that-returns-java-records-heading">Method that returns Java Records</h4>
 
@@ -226,20 +228,20 @@ loadScripts(document, 'script');</script>
  <code>year</code> attributes of a <code>Car</code> entity that has the supplied
  <code>vin</code> attribute value,</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Cars extends BasicRepository&lt;Car, String&gt; {
      record ModelInfo(String model,
                       String manufacturer,
                       int designYear) {}
 
-     &#64;Find
-     &#64;Select(_Car.MODEL)
-     &#64;Select(_Car.MAKE)
-     &#64;Select(_Car.YEAR)
+     @Find
+     @Select(_Car.MODEL)
+     @Select(_Car.MAKE)
+     @Select(_Car.YEAR)
      Optional&lt;ModelInfo&gt; getModelInfo(@By(_Car.VIN) String vehicleIdNum);
  }
- </pre>
+ </code></pre>
 
  <h5 id="annotating-a-record-component-heading">Annotating a Record Component</h5>
 
@@ -248,17 +250,17 @@ loadScripts(document, 'script');</script>
  Assign the annotation value to be the name of an entity attribute that
  has the same type as the record component.</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Cars extends BasicRepository&lt;Car, String&gt; {
-     record ModelInfo(&#64;Select(_Car.MODEL) String model,
-                      &#64;Select(_Car.MAKE) String manufacturer,
-                      &#64;Select(_Car.YEAR) int designYear) {}
+     record ModelInfo(@Select(_Car.MODEL) String model,
+                      @Select(_Car.MAKE) String manufacturer,
+                      @Select(_Car.YEAR) int designYear) {}
 
-     &#64;Find
+     @Find
      Optional&lt;ModelInfo&gt; getModelInfo(@By(_Car.VIN) String vehicleIdNum);
  }
- </pre>
+ </code></pre>
 
  <p>For more concise code, the <code>Select</code> annotation can be omitted
  from a record component that has the same name as the entity attribute,

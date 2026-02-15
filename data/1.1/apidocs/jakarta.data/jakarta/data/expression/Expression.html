@@ -110,12 +110,12 @@ loadScripts(document, 'script');</script>
  <p>Expressions are used to compose <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict">restrictions</a>
  that allow applications to supply query criteria at runtime. For example,
  </p>
- <pre>
+ <pre><code>
  List&lt;Car&gt; affordableVehicles =
          cars.search(make,
                      model,
                      _Car.price.plus(fees).lessThan(25000));
- </pre>
+ </code></pre>
 
  <p>The <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel">entity and static metamodel</a> for the code
  examples within this class are shown in the <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> Javadoc.
@@ -128,33 +128,33 @@ loadScripts(document, 'script');</script>
  <p>All subtypes of <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> obtained from the
  <a href="../metamodel/StaticMetamodel.html" title="annotation interface in jakarta.data.metamodel">static metamodel</a> are expressions.
  For example,</p>
- <pre>
+ <pre><code>
  _Car.vin
  _Car.price
- </pre>
+ </code></pre>
 
  <h2 id="function-expressions-heading">Function expressions</h2>
 
  <p>Function expressions can be obtained from attribute expressions. For
  example,</p>
- <pre>
+ <pre><code>
  _Car.price.minus(discount)
  _Car.model.upper()
  _Car.vin.length()
- </pre>
+ </code></pre>
 
  <p>Function expressions can also be obtained from other function
  expressions. For example, the following expression represents the second
  through third digits of a Vehicle Id Number,</p>
- <pre>
+ <pre><code>
  _Car.vin.left(3).right(2)
- </pre>
+ </code></pre>
 
  <p>Some function expressions are available via static methods. For example,
  </p>
- <pre>
+ <pre><code>
  CurrentDateTime.now()
- </pre>
+ </code></pre>
 
  <h2 id="literal-expressions-heading">Literal expressions</h2>
 
@@ -163,9 +163,9 @@ loadScripts(document, 'script');</script>
  <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict">restrictions</a>. For example, the value <code>1000</code>
  in</p>
 
- <pre>
+ <pre><code>
  _Car.price.minus(1000)
- </pre></div>
+ </code></pre></div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.1</dd>
@@ -289,9 +289,9 @@ loadScripts(document, 'script');</script>
  evaluate to a value that is equal to the specified value.</p>
 
  <p>Example:</p>
- <pre>
- newCars = cars.search(make, model, _Car.year.equalTo(Year.now().getValue()));
- </pre></div>
+ <pre><code>
+     newCars = cars.search(make, model, _Car.year.equalTo(Year.now().getValue()));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - value against which to compare. Must not be <code>null</code>.</dd>
@@ -310,9 +310,9 @@ loadScripts(document, 'script');</script>
  and the specified expression evaluate to values that are equal.</p>
 
  <p>Example:</p>
- <pre>
- listedToday = cars.search(make, model, _Car.listed.equalTo(CurrentDate.now()));
- </pre></div>
+ <pre><code>
+     listedToday = cars.search(make, model, _Car.listed.equalTo(CurrentDate.now()));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expression</code> - expression against which to compare. Must not be
@@ -333,11 +333,11 @@ loadScripts(document, 'script');</script>
  specified collection.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.year.in(Set.of(2022, 2024)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.year.in(Set.of(2022, 2024)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>values</code> - values against which to compare. Must not be <code>null</code>,
@@ -360,11 +360,11 @@ loadScripts(document, 'script');</script>
  evaluate to a value that is equal to one of the specified values.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.color.in(Color.BLACK, Color.BLUE, Color.GRAY));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.color.in(Color.BLACK, Color.BLUE, Color.GRAY));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>values</code> - values against which to compare. Must not be <code>null</code>,
@@ -387,13 +387,13 @@ loadScripts(document, 'script');</script>
  are equal.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.firstModelYear.in(_Car.year.minus(3),
-                                            _Car.year.minus(4),
-                                            _Car.year.minus(5)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.firstModelYear.in(_Car.year.minus(3),
+                                                _Car.year.minus(4),
+                                                _Car.year.minus(5)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expressions</code> - expressions against which to compare. Must not be
@@ -417,9 +417,9 @@ loadScripts(document, 'script');</script>
  evaluate to a <code>null</code> value.</p>
 
  <p>Example:</p>
- <pre>
- notListedYet = cars.search(make, model, _Car.listed.isNull());
- </pre></div>
+ <pre><code>
+     notListedYet = cars.search(make, model, _Car.listed.isNull());
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the restriction.</dd>
@@ -434,9 +434,9 @@ loadScripts(document, 'script');</script>
  evaluate to a value that is not equal to the specified value.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, model, _Car.color.notEqualTo(Color.RED));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, model, _Car.color.notEqualTo(Color.RED));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - value against which to compare. Must not be <code>null</code>.</dd>
@@ -456,9 +456,9 @@ loadScripts(document, 'script');</script>
  each other.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, model, _Car.listed.notEqualTo(CurrentDate.now()));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, model, _Car.listed.notEqualTo(CurrentDate.now()));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expression</code> - expression against which to compare. Must not be
@@ -479,11 +479,11 @@ loadScripts(document, 'script');</script>
  specified collection.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.color.notIn(Set.of(Color.GRAY, Color.WHITE)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.color.notIn(Set.of(Color.GRAY, Color.WHITE)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>values</code> - values against which to compare. Must not be <code>null</code>,
@@ -507,11 +507,11 @@ loadScripts(document, 'script');</script>
  </p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.year.notIn(2019, 2020, 2023));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.year.notIn(2019, 2020, 2023));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>values</code> - values against which to compare. Must not be <code>null</code>,
@@ -534,12 +534,12 @@ loadScripts(document, 'script');</script>
  specified expressions evaluate.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.year.notIn(_Car.firstModelYear,
-                                     _Car.firstModelYear.plus(1)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.year.notIn(_Car.firstModelYear,
+                                         _Car.firstModelYear.plus(1)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expressions</code> - expressions against which to compare. Must not be
@@ -563,9 +563,9 @@ loadScripts(document, 'script');</script>
  does not evaluate to a <code>null</code> value.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, model, _Car.listed.notNull());
- </pre></div>
+ <pre><code>
+     found = cars.search(make, model, _Car.listed.notNull());
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the restriction.</dd>
@@ -580,11 +580,11 @@ loadScripts(document, 'script');</script>
  evaluate to a value that satisfies the specified <a href="../constraint/Constraint.html" title="interface in jakarta.data.constraint"><code>Constraint</code></a>.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.year.satisfies(Constraint.between(2021, 2024)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.year.satisfies(Constraint.between(2021, 2024)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>constraint</code> - constraint to use for comparing the value to which

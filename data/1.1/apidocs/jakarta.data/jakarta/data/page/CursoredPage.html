@@ -133,28 +133,28 @@ extends <a href="Page.html" title="interface in jakarta.data.page">Page</a>&lt;T
  type <code>CursoredPage</code> and with a special parameter (after the normal
  query parameters) of type <a href="PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a>, for example:</p>
 
- <pre>
- &#64;Find
- &#64;OrderBy(_Employee.LASTNAME)
- &#64;OrderBy(_Employee.FIRSTNAME)
- &#64;OrderBy(_Employee.ID)
+ <pre><code>
+ @Find
+ @OrderBy(_Employee.LASTNAME)
+ @OrderBy(_Employee.FIRSTNAME)
+ @OrderBy(_Employee.ID)
  CursoredPage&lt;Employee&gt; withHoursOver(
-         &#64;By(_Employee.HOURSWORKED) &#64;Is(GreaterThan.class) int fullTimeHours,
+         @By(_Employee.HOURSWORKED) @Is(GreaterThan.class) int fullTimeHours,
          PageRequest pageRequest);
- </pre>
+ </code></pre>
 
  <p>In initial page may be requested using an offset-based page request:</p>
 
- <pre>
+ <pre><code>
  page = employees.withHoursOver(40, PageRequest.ofSize(50));
- </pre>
+ </code></pre>
 
  <p>The next page may be requested relative to the end of the current page,
  as follows:</p>
 
- <pre>
+ <pre><code>
  page = employees.withHoursOver(40, page.nextPageRequest());
- </pre>
+ </code></pre>
 
  <p>Here, the instance of <a href="PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a> returned by
  <a href="#nextPageRequest()"><code>nextPageRequest()</code></a> is based on a key value encapsulated
@@ -168,14 +168,14 @@ extends <a href="Page.html" title="interface in jakarta.data.page">Page</a>&lt;T
  name pattern of the repository method and the <a href="../Sort.html" title="class in jakarta.data"><code>Sort</code></a> and <a href="../Order.html" title="class in jakarta.data"><code>Order</code></a>
  parameters of the repository method. For example:</p>
 
- <pre>
+ <pre><code>
  Employee emp = ...
  PageRequest pageRequest =
          PageRequest.ofPage(5)
                     .size(50)
                     .afterCursor(Cursor.forKey(emp.lastName, emp.firstName, emp.id));
  page = employees.withHoursOver(40, pageRequest);
- </pre>
+ </code></pre>
 
  <p>By making the query for the next page relative to observed values,
  instead of to a numerical position, cursor-based pagination is less
@@ -188,24 +188,31 @@ extends <a href="Page.html" title="interface in jakarta.data.page">Page</a>&lt;T
 
  <h2 id="cursor-based-pagination-with-query-heading">Cursor-based Pagination with <code>@Query</code></h2>
 
+ <p>The <a href="../repository/Query.html" title="annotation interface in jakarta.data.repository"><code>Query</code></a> annotation from Jakarta Data and the similar
+ <code>jakarta.persistence.query.StaticQuery</code> annotation from Jakarta Persistence
+ allow the application to supply a Jakarta Common Query Language (JCQL) or
+ Jakarta Persistence Query Language (JPQL) query for the repository method
+ to perform.</p>
+
  <p>Cursor-based pagination involves generating and appending additional
  restrictions involving the key elements to the <code>WHERE</code> clause of the
- query. For this to be possible, a user-provided JDQL or JPQL query must end
+ query. For this to be possible, a user-provided JCQL or JPQL query must end
  with a <code>WHERE</code> clause to which additional conditions may be
- appended.</p>
+ appended. Cursor-pagination is not available for native SQL queries and
+ some JPQL queries.</p>
 
  <p>Sorting criteria must be specified independently of the user-provided
  query, either via the <a href="../repository/OrderBy.html" title="annotation interface in jakarta.data.repository"><code>OrderBy</code></a> annotation or, or by passing
  <a href="../Sort.html" title="class in jakarta.data"><code>Sort</code></a> or <a href="../Order.html" title="class in jakarta.data"><code>Order</code></a>. For example:</p>
 
- <pre>
- &#64;Query("WHERE ordersPlaced &gt;= ?1 OR totalSpent &gt;= ?2")
- &#64;OrderBy("zipcode")
- &#64;OrderBy("birthYear")
- &#64;OrderBy("id")
+ <pre><code>
+ @Query("WHERE ordersPlaced &gt;= ?1 OR totalSpent &gt;= ?2")
+ @OrderBy("zipcode")
+ @OrderBy("birthYear")
+ @OrderBy("id")
  CursoredPage&lt;Customer&gt; getTopBuyers(int minOrders, float minSpent,
                                      PageRequest pageRequest);
- </pre>
+ </code></pre>
 
  <p>Only queries which return entities may be used with cursor-based
  pagination

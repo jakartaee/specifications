@@ -115,38 +115,38 @@ loadScripts(document, 'script');</script>
 
  <p>Example entity:</p>
 
- <pre>
- &#64;Entity
+ <pre><code>
+ @Entity
  public class DriverLicense {
-     &#64;Id
+     @Id
      public String licenseNum;
      public LocalDate expiry;
      ...
  }
- </pre>
+ </code></pre>
 
  <p>Example repository:</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface DriverLicenses extends DataRepository&lt;DriverLicense, String&gt; {
 
      boolean existsByLicenseNumAndExpiryGreaterThan(String num, LocalDate minExpiry);
 
-     &#64;Insert
+     @Insert
      DriverLicense register(DriverLicense l);
 
-     &#64;Update
+     @Update
      boolean renew(DriverLicense l);
 
      ...
  }
- </pre>
+ </code></pre>
 
  <p>Example usage:</p>
 
- <pre>
- &#64;Inject
+ <pre><code>
+ @Inject
  DriverLicenses licenses;
 
  ...
@@ -156,7 +156,7 @@ loadScripts(document, 'script');</script>
 
  boolean isValid = licenses.existsByLicenseNumAndExpiryGreaterThan(license.licenseNum,
                                                                    LocalDate.now());
- </pre>
+ </code></pre>
 
  <p>The module Javadoc provides an <a href="../../../module-summary.html"><code>overview</code></a> of Jakarta
  Data.</p></div>

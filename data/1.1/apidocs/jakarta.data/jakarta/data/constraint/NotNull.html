@@ -107,24 +107,24 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  entity attribute by defining a method parameter that is of type
  <code>NotNull</code>. For example,</p>
 
- <pre>
- &#64;Find
- List&lt;Car&gt; listedRecently(&#64;By(_Car.LISTED) NotNull&lt;LocalDate&gt; nonNull,
-                          &#64;By(_Car.LISTED) &#64;Is(AtLeast.class) LocalDate oldestListDate,
+ <pre><code>
+ @Find
+ List&lt;Car&gt; listedRecently(@By(_Car.LISTED) NotNull&lt;LocalDate&gt; nonNull,
+                          @By(_Car.LISTED) @Is(AtLeast.class) LocalDate oldestListDate,
                           Order&lt;Car&gt; sorts);
  ...
 
  found = cars.listedRecently(NotNull.instance(),
                              LocalDate.now().minusDays(15),
                              Order.by(_Car.listed.desc()));
- </pre>
+ </code></pre>
 
  <p>Repository methods can also accept <code>NotNull</code> constraints at
  run time in the form of a <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a> on an <a href="../expression/Expression.html" title="interface in jakarta.data.expression"><code>Expression</code></a>.
  For example,</p>
 
- <pre>
- &#64;Find
+ <pre><code>
+ @Find
  List&lt;Car&gt; searchAll(Restriction&lt;Car&gt; restrict, Order&lt;Car&gt; sorts);
 
  ...
@@ -134,7 +134,7 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
                                      _Car.listed.greaterThan(LocalDate.now().minusDays(20))),
                         Order.by(_Car.listed.desc(),
                                  _Car.vin.asc()));
- </pre>
+ </code></pre>
 
  <p>The <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel">entity and static metamodel</a> for the code
  examples within this class are shown in the <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> Javadoc.
@@ -184,10 +184,10 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
 <div class="block"><p>Requires that the constraint target not have a <code>null</code> value.
  For example,</p>
 
- <pre>
- found = cars.listedRecently(NotNull.instance(),
-                             LocalDate.now().minusDays(10));
- </pre></div>
+ <pre><code>
+     found = cars.listedRecently(NotNull.instance(),
+                                 LocalDate.now().minusDays(10));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive

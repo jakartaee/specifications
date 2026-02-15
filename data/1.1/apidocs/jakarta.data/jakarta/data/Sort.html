@@ -118,32 +118,31 @@ loadScripts(document, 'script');</script>
  entities. Parameters of type <code>Sort</code> must occur after the method
  parameters representing regular parameters of the query itself.</p>
 
- <p>The parameter type <code>Sort&lt;?&gt;...</code> allows a variable number
- of generic <code>Sort</code> criteria. For example,</p>
+ <p>A repository method parameter of type <a href="Order.html" title="class in jakarta.data"><code>Order</code></a> allows a variable
+ number of <code>Sort</code> criteria. For example,</p>
 
- <pre>
- Employee[] findByYearHired(int yearHired, Limit maxResults, Sort&lt;?&gt;... sortBy);
+ <pre><code>
+ Employee[] findByYearHired(int yearHired, Limit maxResults, Order&lt;Employee&gt; sortBy);
+
  ...
  highestPaidNewHires = employees.findByYearHired(Year.now().getValue(),
                                                  Limit.of(10),
-                                                 Sort.desc("salary"),
-                                                 Sort.asc("lastName"),
-                                                 Sort.asc("firstName"));
- </pre>
+                                                 Order.by(Sort.desc("salary"),
+                                                          Sort.asc("lastName"),
+                                                          Sort.asc("firstName")));
+ </code></pre>
 
  <p>Alternatively, <a href="Order.html" title="class in jakarta.data"><code>Order</code></a> may be used in combination with
  the <a href="metamodel/StaticMetamodel.html" title="annotation interface in jakarta.data.metamodel">static metamodel</a> to allow a variable number
  of typed <code>Sort</code> criteria. For example,</p>
 
- <pre>
- Employee[] findByYearHired(int yearHired, Limit maxResults, Order&lt;Employee&gt; sortBy);
- ...
+ <pre><code>
  highestPaidNewHires = employees.findByYearHired(Year.now().getValue(),
                                                  Limit.of(10),
                                                  Order.by(_Employee.salary.desc(),
                                                           _Employee.lastName.asc(),
                                                           _Employee.firstName.asc()));
- </pre>
+ </code></pre>
 
  <p>When multiple sorting criteria are provided, sorting is
  lexicographic, with the precedence of a criterion depending on its position
