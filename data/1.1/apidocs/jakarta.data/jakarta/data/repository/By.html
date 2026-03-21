@@ -108,21 +108,21 @@ loadScripts(document, 'script');</script>
  <p>For example, for a <code>Person</code> entity with attributes <code>ssn</code>,
  <code>firstName</code>, <code>lastName</code>, and <code>address</code> we might have:</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface People {
 
-     &#64;Find
-     Person findById(&#64;By(ID) String id); // maps to Person.ssn
+     @Find
+     Person findById(@By(ID) String id); // maps to Person.ssn
 
-     &#64;Find
-     List&lt;Person&gt; findNamed(&#64;By("firstName") String first,
-                            &#64;By("lastName") String last);
+     @Find
+     List&lt;Person&gt; findNamed(@By("firstName") String first,
+                            @By("lastName") String last);
 
-     &#64;Find
-     List&lt;Person&gt; findByCity(&#64;By("address.city") String city);
+     @Find
+     List&lt;Person&gt; findByCity(@By("address.city") String city);
  }
- </pre>
+ </code></pre>
 
  <p>The <code>By</code> annotation is unnecessary when the method parameter name
  matches the entity attribute name and the application is compiled with the
@@ -132,21 +132,21 @@ loadScripts(document, 'script');</script>
  <p>Thus, when this compiler option is enabled, the previous example may be
  written without the use of <code>By</code>:</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface People {
 
-     &#64;Find
+     @Find
      Person findById(String ssn);
 
-     &#64;Find
+     @Find
      List&lt;Person&gt; findNamed(String firstName,
                             String lastname);
 
-     &#64;Find
+     @Find
      List&lt;Person&gt; findByCity(String address_city);
  }
- </pre></div>
+ </code></pre></div>
 </section>
 <section class="summary">
 <ul class="summary-list">

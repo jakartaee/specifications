@@ -615,20 +615,20 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Represents the direction of the ordering.</div>
 </dd>
-<dt><a href="jakarta.data/jakarta/data/expression/NumericExpression.html#divide(jakarta.data.expression.NumericExpression)" class="member-name-link">divide(NumericExpression&lt;? super T, N&gt;)</a> - Method in interface jakarta.data.expression.<a href="jakarta.data/jakarta/data/expression/NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a></dt>
+<dt><a href="jakarta.data/jakarta/data/spi/expression/function/NumericOperatorExpression.Operator.html#DIVIDE" class="member-name-link">DIVIDE</a> - Enum constant in enum class jakarta.data.spi.expression.function.<a href="jakarta.data/jakarta/data/spi/expression/function/NumericOperatorExpression.Operator.html" title="enum class in jakarta.data.spi.expression.function">NumericOperatorExpression.Operator</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="jakarta.data/jakarta/data/expression/NumericExpression.html#dividedBy(jakarta.data.expression.NumericExpression)" class="member-name-link">dividedBy(NumericExpression&lt;? super T, N&gt;)</a> - Method in interface jakarta.data.expression.<a href="jakarta.data/jakarta/data/expression/NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a></dt>
 <dd>
 <div class="block">Represents the division function that computes the quotient of the
  value to which the current expression evaluates divided by the value to
  which the divisor expression evaluates.</div>
 </dd>
-<dt><a href="jakarta.data/jakarta/data/expression/NumericExpression.html#divide(N)" class="member-name-link">divide(N)</a> - Method in interface jakarta.data.expression.<a href="jakarta.data/jakarta/data/expression/NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a></dt>
+<dt><a href="jakarta.data/jakarta/data/expression/NumericExpression.html#dividedBy(N)" class="member-name-link">dividedBy(N)</a> - Method in interface jakarta.data.expression.<a href="jakarta.data/jakarta/data/expression/NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a></dt>
 <dd>
 <div class="block">Represents the division function that computes the quotient of the
  value to which the current expression evaluates divided by the given
  divisor value.</div>
 </dd>
-<dt><a href="jakarta.data/jakarta/data/spi/expression/function/NumericOperatorExpression.Operator.html#DIVIDE" class="member-name-link">DIVIDE</a> - Enum constant in enum class jakarta.data.spi.expression.function.<a href="jakarta.data/jakarta/data/spi/expression/function/NumericOperatorExpression.Operator.html" title="enum class in jakarta.data.spi.expression.function">NumericOperatorExpression.Operator</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="jakarta.data/jakarta/data/expression/NumericExpression.html#dividedInto(N)" class="member-name-link">dividedInto(N)</a> - Method in interface jakarta.data.expression.<a href="jakarta.data/jakarta/data/expression/NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a></dt>
 <dd>
 <div class="block">Represents the division function that computes the quotient of
@@ -1178,11 +1178,11 @@ loadScripts(document, 'script');</script>
 <dd>Section</dd>
 <dt><a href="jakarta.data/module-summary.html#jakarta-interceptors-heading" class="search-tag-link">Jakarta Interceptors</a> - Search tag in module jakarta.data</dt>
 <dd>Section</dd>
+<dt><a href="jakarta.data/module-summary.html#jakarta-persistence-query-methods-heading" class="search-tag-link">Jakarta Persistence query methods</a> - Search tag in module jakarta.data</dt>
+<dd>Section</dd>
 <dt><a href="jakarta.data/module-summary.html#jakarta-transactions-heading" class="search-tag-link">Jakarta Transactions</a> - Search tag in module jakarta.data</dt>
 <dd>Section</dd>
 <dt><a href="jakarta.data/module-summary.html#jakarta-validation-heading" class="search-tag-link">Jakarta Validation</a> - Search tag in module jakarta.data</dt>
-<dd>Section</dd>
-<dt><a href="jakarta.data/module-summary.html#jdql-query-methods-heading" class="search-tag-link">JDQL query methods</a> - Search tag in module jakarta.data</dt>
 <dd>Section</dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
@@ -1397,6 +1397,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="jakarta.data/module-summary.html#method-parameters-heading" class="search-tag-link">Method parameters</a> - Search tag in module jakarta.data</dt>
 <dd>Section</dd>
 <dt><a href="jakarta.data/module-summary.html#method-parameters-for-embedded-attributes-heading" class="search-tag-link">Method parameters for embedded attributes</a> - Search tag in module jakarta.data</dt>
+<dd>Section</dd>
+<dt><a href="jakarta.data/module-summary.html#methods-annotated-query-heading" class="search-tag-link">Methods annotated @Query</a> - Search tag in module jakarta.data</dt>
 <dd>Section</dd>
 <dt><a href="jakarta.data/module-summary.html#methods-where-the-entity-type-is-explicitly-specified-heading" class="search-tag-link">Methods where the entity type is explicitly specified</a> - Search tag in module jakarta.data</dt>
 <dd>Section</dd>
@@ -2049,6 +2051,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.data/jakarta/data/event/PostUpdateEvent.html#%3Cinit%3E(E)" class="member-name-link">PostUpdateEvent(E)</a> - Constructor for class jakarta.data.event.<a href="jakarta.data/jakarta/data/event/PostUpdateEvent.html" title="class in jakarta.data.event">PostUpdateEvent</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="jakarta.data/jakarta/data/event/PostUpsertEvent.html" class="type-name-link" title="class in jakarta.data.event">PostUpsertEvent&lt;E&gt;</a> - Class in <a href="jakarta.data/jakarta/data/event/package-summary.html">jakarta.data.event</a></dt>
+<dd>
+<div class="block">An event that occurs when a <a href="jakarta.data/jakarta/data/repository/Save.html" title="annotation interface in jakarta.data.repository"><code>Save</code></a> lifecycle
+ method is called, after each entity is inserted or updated in the datastore.</div>
+</dd>
+<dt><a href="jakarta.data/jakarta/data/event/PostUpsertEvent.html#%3Cinit%3E(E)" class="member-name-link">PostUpsertEvent(E)</a> - Constructor for class jakarta.data.event.<a href="jakarta.data/jakarta/data/event/PostUpsertEvent.html" title="class in jakarta.data.event">PostUpsertEvent</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="jakarta.data/module-summary.html#precedence-of-repository-methods-heading" class="search-tag-link">Precedence of repository methods</a> - Search tag in module jakarta.data</dt>
 <dd>Section</dd>
 <dt><a href="jakarta.data/jakarta/data/event/PreDeleteEvent.html" class="type-name-link" title="class in jakarta.data.event">PreDeleteEvent&lt;E&gt;</a> - Class in <a href="jakarta.data/jakarta/data/event/package-summary.html">jakarta.data.event</a></dt>
@@ -2095,6 +2104,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.data/jakarta/data/event/PreUpdateEvent.html#%3Cinit%3E(E)" class="member-name-link">PreUpdateEvent(E)</a> - Constructor for class jakarta.data.event.<a href="jakarta.data/jakarta/data/event/PreUpdateEvent.html" title="class in jakarta.data.event">PreUpdateEvent</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="jakarta.data/jakarta/data/event/PreUpsertEvent.html" class="type-name-link" title="class in jakarta.data.event">PreUpsertEvent&lt;E&gt;</a> - Class in <a href="jakarta.data/jakarta/data/event/package-summary.html">jakarta.data.event</a></dt>
+<dd>
+<div class="block">An event that occurs when a <a href="jakarta.data/jakarta/data/repository/Save.html" title="annotation interface in jakarta.data.repository"><code>Save</code></a> lifecycle
+ method is called, but before each entity is inserted or updated in the datastore.</div>
+</dd>
+<dt><a href="jakarta.data/jakarta/data/event/PreUpsertEvent.html#%3Cinit%3E(E)" class="member-name-link">PreUpsertEvent(E)</a> - Constructor for class jakarta.data.event.<a href="jakarta.data/jakarta/data/event/PreUpsertEvent.html" title="class in jakarta.data.event">PreUpsertEvent</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="jakarta.data/jakarta/data/page/CursoredPage.html#previousPageRequest()" class="member-name-link">previousPageRequest()</a> - Method in interface jakarta.data.page.<a href="jakarta.data/jakarta/data/page/CursoredPage.html" title="interface in jakarta.data.page">CursoredPage</a></dt>
 <dd>
 <div class="block">Creates a request for the previous page in a reverse direction from
@@ -2111,6 +2127,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns a request for the previous page, if <a href="jakarta.data/jakarta/data/page/Page.html#hasPrevious()"><code>Page.hasPrevious()</code></a>
  indicates there might be a previous page.</div>
 </dd>
+<dt><a href="jakarta.data/module-summary.html#programmatic-sorting-heading" class="search-tag-link">Programmatic sorting</a> - Search tag in module jakarta.data</dt>
+<dd>Section</dd>
 <dt><a href="jakarta.data/jakarta/data/Sort.html#property()" class="member-name-link">property()</a> - Method in record class jakarta.data.<a href="jakarta.data/jakarta/data/Sort.html" title="class in jakarta.data">Sort</a></dt>
 <dd>
 <div class="block">Name of the entity attribute to order by.</div>
@@ -2126,7 +2144,7 @@ loadScripts(document, 'script');</script>
 <dt><a href="jakarta.data/jakarta/data/repository/Query.html" class="type-name-link" title="annotation interface in jakarta.data.repository">Query</a> - Annotation Interface in <a href="jakarta.data/jakarta/data/repository/package-summary.html">jakarta.data.repository</a></dt>
 <dd>
 <div class="block">Annotates a repository method as a query method, specifying a query
- written in Jakarta Data Query Language (JDQL) or in Jakarta Persistence
+ written in Jakarta Common Query Language (JCQL) or in Jakarta Persistence
  Query Language (JPQL).</div>
 </dd>
 <dt><a href="jakarta.data/module-summary.html#query-by-method-name-heading" class="search-tag-link">Query by Method Name</a> - Search tag in module jakarta.data</dt>
@@ -2266,8 +2284,6 @@ loadScripts(document, 'script');</script>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Creates an instance of a <code>SortableAttributeRecord</code> record class.</div>
 </dd>
-<dt><a href="jakarta.data/module-summary.html#sorting-heading" class="search-tag-link">Sorting</a> - Search tag in module jakarta.data</dt>
-<dd>Section</dd>
 <dt><a href="jakarta.data/jakarta/data/Order.html#sorts()" class="member-name-link">sorts()</a> - Method in class jakarta.data.<a href="jakarta.data/jakarta/data/Order.html" title="class in jakarta.data">Order</a></dt>
 <dd>
 <div class="block">The instances of <a href="jakarta.data/jakarta/data/Sort.html" title="class in jakarta.data"><code>Sort</code></a> belonging to this <code>Order</code>.</div>
@@ -2560,7 +2576,7 @@ loadScripts(document, 'script');</script>
 <dt><a href="jakarta.data/jakarta/data/repository/Query.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.data.repository.<a href="jakarta.data/jakarta/data/repository/Query.html" title="annotation interface in jakarta.data.repository">Query</a></dt>
 <dd>
 <div class="block">Specifies the query executed by the annotated repository method,
- in JDQL or JPQL.</div>
+ in JCQL or JPQL.</div>
 </dd>
 <dt><a href="jakarta.data/jakarta/data/repository/Select.List.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.data.repository.<a href="jakarta.data/jakarta/data/repository/Select.List.html" title="annotation interface in jakarta.data.repository">Select.List</a></dt>
 <dd>

@@ -94,23 +94,26 @@ loadScripts(document, 'script');</script>
 
  <p>For example,</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Products extends BasicRepository&lt;Product, String&gt; {
 
-     &#64;Query("WHERE length * width * height &lt;= :maxVolume ORDER BY price ASC, id ASC")
-     Page&lt;Product&gt; freeShippingEligible(&#64;Param("maxVolume") float volumeLimit,
+     @Query("WHERE length * width * height &lt;= :maxVolume ORDER BY price ASC, id ASC")
+     Page&lt;Product&gt; freeShippingEligible(@Param("maxVolume") float volumeLimit,
                                         PageRequest pageRequest);
 
      ...
  }
- </pre>
+ </code></pre>
 
  <p>The <code>Param</code> annotation is unnecessary when the method parameter name
  matches the query language
  named parameter name and the application is compiled with the
  <code>-parameters</code> compiler option making parameter names available at
- runtime.</p></div>
+ runtime.</p>
+
+ <p>Named parameters are not supported on repository methods annotated
+ <code>jakarta.persistence.query.StaticNativeQuery</code>.</p></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>

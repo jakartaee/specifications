@@ -113,14 +113,14 @@ extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/ja
  An instance of <code>Page</code> is obtained by supplying a <a href="PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a> as
  an argument of a repository method. For example,</p>
 
- <pre>
- &#64;Find
- Page&lt;Vehicle&gt; search(&#64;By("make") String make,
-                      &#64;By("model") String model,
-                      &#64;By("year") int designYear,
+ <pre><code>
+ @Find
+ Page&lt;Vehicle&gt; search(@By("make") String make,
+                      @By("model") String model,
+                      @By("year") int designYear,
                       PageRequest pageRequest,
                       Order&lt;Vehicle&gt; order);
- </pre>
+ </code></pre>
 
  <p>If <a href="PageRequest.html#requestTotal()"><code>PageRequest.requestTotal()</code></a> is enabled, the <a href="Page.html" title="interface in jakarta.data.page"><code>Page</code></a> also
  contains information about the <a href="#totalPages()">total number of pages</a>

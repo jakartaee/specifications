@@ -123,34 +123,34 @@ extends <a href="BasicRepository.html" title="interface in jakarta.data.reposito
 
  <p>Example entity:</p>
 
- <pre>
- &#64;Entity
+ <pre><code>
+ @Entity
  public class Car {
-     &#64;Id
+     @Id
      public long vin;
      public String make;
      public String model;
      public int year;
      ...
  }
- </pre>
+ </code></pre>
 
  <p>Example repository:</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Cars extends CrudRepository&lt;Car, Long&gt; {
 
-     List&lt;Car&gt; findByMakeAndModel(String make, String model, Sort&lt;?&gt;... sorts);
+     List&lt;Car&gt; findByMakeAndModel(String make, String model, Order&lt;Car&gt; sorts);
 
      ...
  }
- </pre>
+ </code></pre>
 
  <p>Example usage:</p>
 
- <pre>
- &#64;Inject
+ <pre><code>
+ @Inject
  Cars cars;
 
  ...
@@ -160,9 +160,9 @@ extends <a href="BasicRepository.html" title="interface in jakarta.data.reposito
 
  List&lt;Car&gt; found = findByMakeAndModel(car1.make,
                                       car1.model,
-                                      Sort.desc("year"),
-                                      Sort.asc("vin"));
- </pre>
+                                      Order.by(Sort.desc("year"),
+                                               Sort.asc("vin")));
+ </code></pre>
 
  <p>The module Javadoc provides an <a href="../../../module-summary.html"><code>overview</code></a> of Jakarta
  Data.</p></div>

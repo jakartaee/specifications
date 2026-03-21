@@ -113,22 +113,22 @@ loadScripts(document, 'script');</script>
 
  <p>A repository <a href="../repository/Find.html" title="annotation interface in jakarta.data.repository"><code>Find</code></a> method can optionally accept a parameter of
  type <code>Restriction</code>. For example,</p>
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Cars extends CrudRepository&lt;Car, String&gt; {
 
-     &#64;Find
-     List&lt;Car&gt; search(&#64;By(_Car.MAKE) String manufacturer,
-                      &#64;By(_Car.MODEL) String model,
+     @Find
+     List&lt;Car&gt; search(@By(_Car.MAKE) String manufacturer,
+                      @By(_Car.MODEL) String model,
                       Restriction&lt;Car&gt; restriction,
                       Order&lt;Car&gt;... sort);
  }
- </pre>
+ </code></pre>
 
  <p>Instances of restriction obtained from the static metamodel or the
  <a href="Restrict.html" title="class in jakarta.data.restrict"><code>Restrict</code></a> class can be supplied as the parameter when invoking the
  respository method. For example,</p>
- <pre>
+ <pre><code>
  List&lt;Car&gt; withinPriceRange =
          cars.search(make,
                      model,
@@ -147,7 +147,7 @@ loadScripts(document, 'script');</script>
                      Restrict.all(_Car.year.greaterThanEqual(2020),
                                   _Car.price.lessThan(30000)),
                      Order.by(_Car.price.desc()));
- </pre>
+ </code></pre>
 
  <p>The <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel">example entity and static metamodel</a> for the
  above are provided in the <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> Javadoc.</p>

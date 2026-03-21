@@ -116,13 +116,13 @@ loadScripts(document, 'script');</script>
  <p>All Jakarta Data providers are required to accept a <code>Delete</code> method which conforms to this signature.
  </p>
  <p>For example, consider an interface representing a garage:</p>
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  interface Garage {
-     &#64;Delete
+     @Delete
      void unpark(Car car);
  }
- </pre>
+ </code></pre>
  <p>Deletes are performed by matching the unique identifier of the entity. If the entity is versioned, for example,
  with <code>jakarta.persistence.Version</code>, the version is also checked for consistency. Attributes other than the
  identifier and version do not need to match. If no entity with a matching identifier is found in the database, or
@@ -145,17 +145,17 @@ loadScripts(document, 'script');</script>
  <a href="../page/PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a>, and <a href="../Sort.html" title="class in jakarta.data"><code>Sort</code></a> are prohibited.
  </p>
  <p>For example, consider an interface representing a garage:</p>
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  interface Garage
-         extends DataRepository&lt;Car,String&gt; {
-     &#64;Delete
+         extends DataRepository&lt;Car, String&gt; {
+     @Delete
      void unparkAll();
 
-     &#64;Delete
+     @Delete
      void unpark(String registration);
  }
- </pre>
+ </code></pre>
  <p>Here,<code>unparkAll()</code> deletes every <code>Car</code>, while <code>unpark(String)</code> deletes any <code>Car</code> with a
  matching value of its <code>registration</code> attribute.
  </p>
@@ -163,6 +163,11 @@ loadScripts(document, 'script');</script>
  conditions from the database. If the method return type is <code>int</code> or <code>long</code>, the method must return the
  number of deleted records.
  </p>
+
+ <p>If the Jakarta Data provider is backed by a Jakarta Persistence provider,
+ an automatic query method annotated <code>Find</code> can also be annotated
+ <code>jakarta.persistence.query.WriteQueryOptions</code> to supply additional
+ query options that are specific to Jakarta Persistence.</p>
 
  <p>Annotations such as <code>@Find</code>, <code>@Query</code>, <code>@Insert</code>, <code>@Update</code>, <code>@Delete</code>, and
  <code>@Save</code> are mutually-exclusive. A given method of a repository interface may have at most one <code>@Find</code>

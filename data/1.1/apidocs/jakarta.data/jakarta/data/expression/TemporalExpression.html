@@ -169,11 +169,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
 <div class="block"><p>Represents the function to obtain the current date.</p>
 
  <p>Example:</p>
- <pre>
- listedToday = cars.search(make,
-                           model,
-                           _Car.listed.equalTo(TemporalExpression.localDate()));
- </pre></div>
+ <pre><code>
+     listedToday = cars.search(make,
+                               model,
+                               _Car.listed.equalTo(TemporalExpression.localDate()));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a <code>TemporalExpression</code> representing the function to obtain

@@ -100,18 +100,18 @@ loadScripts(document, 'script');</script>
  <code>PageRequest</code> must occur after the method parameters representing
  regular parameters of the query itself. For example:</p>
 
- <pre>
- &#64;Find
- &#64;OrderBy("age")
- &#64;OrderBy("ssn")
- Page&lt;Person&gt; agedBetween(&#64;By("age") &#64;Is(AtLeast.class) int minAge,
-                          &#64;By("age") &#64;Is(AtMost.class) int maxAge,
+ <pre><code>
+ @Find
+ @OrderBy("age")
+ @OrderBy("ssn")
+ Page&lt;Person&gt; agedBetween(@By("age") @Is(AtLeast.class) int minAge,
+                          @By("age") @Is(AtMost.class) int maxAge,
                           PageRequest pageRequest);
- </pre>
+ </code></pre>
 
  <p>This method might be called as follows:</p>
 
- <pre>
+ <pre><code>
  Page&lt;Person&gt; page = people.agedBetween(
                 35, 59,
                 PageRequest.ofSize(100));
@@ -124,7 +124,7 @@ loadScripts(document, 'script');</script>
      results = page.content();
      ...
  }
- </pre>
+ </code></pre>
 
  <p>A repository method may not be declared with:</p>
  <ul>
@@ -527,8 +527,10 @@ loadScripts(document, 'script');</script>
 <div class="block"><p>Indicates that a query method which returns a <a href="Page.html" title="interface in jakarta.data.page"><code>Page</code></a>
  should retrieve the
  <a href="Page.html#totalElements()">total number of elements</a> available
- across all pages. This behavior is enabled by default. To obtain a page
- request with total retrieval disabled, call <a href="#withoutTotal()"><code>withoutTotal()</code></a>.</p>
+ across all pages. The ability to retrieve totals is enabled by default
+ for JCQL queries but is not available for native SQL queries and some
+ JPQL queries. To obtain a page request with total retrieval disabled,
+ call <a href="#withoutTotal()"><code>withoutTotal()</code></a>.</p>
 
  <p>A repository implementation might obtain a total from the
  database before returning the page of results, or might defer fetching

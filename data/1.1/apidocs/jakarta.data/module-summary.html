@@ -83,39 +83,39 @@ loadScripts(document, 'script');</script>
  data in the database. Fields or accessor methods designate each entity attribute.
  For example,</p>
 
- <pre>
- &#64;Entity
+ <pre><code>
+ @Entity
  public class Product {
-     &#64;Id
+     @Id
      public long id;
      public String name;
      public float price;
      public LocalDate producedOn;
      ...
  }
- </pre>
+ </code></pre>
 
  <p>A repository is an interface annotated with the <a href="jakarta/data/repository/Repository.html" title="annotation interface in jakarta.data.repository"><code>Repository</code></a> annotation.
  A repository declares methods which perform queries and other operations on entities.
  For example,</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Products extends BasicRepository&lt;Product, Long&gt; {
 
-     &#64;Insert
+     @Insert
      void create(Product prod);
 
-     &#64;OrderBy("price")
+     @OrderBy("price")
      List&lt;Product&gt; findByNameIgnoreCaseLikeAndPriceLessThan(String namePattern, float max);
 
-     &#64;Find
+     @Find
      List&lt;Product&gt; search(
-             &#64;By(_Product.NAME) &#64;Is(Like.class) String namePattern,
+             @By(_Product.NAME) @Is(Like.class) String namePattern,
              Restriction&lt;Product&gt; restriction,
              Order&lt;Product&gt; sortBy);
 
-     &#64;Query("""
+     @Query("""
              UPDATE Product SET price = price * (1.0 - ?1)
               WHERE producedOn &lt;= ?2
              """)
@@ -123,14 +123,14 @@ loadScripts(document, 'script');</script>
 
      ...
  }
- </pre>
+ </code></pre>
 
  <p>Repository interfaces are implemented by the container/runtime and are made
  available to applications via the <code>jakarta.inject.Inject</code> annotation. For
  example,</p>
 
- <pre>
- &#64;Inject
+ <pre><code>
+ @Inject
  Products products;
 
  ...
@@ -146,7 +146,7 @@ loadScripts(document, 'script');</script>
 
  numDiscounted = products.discountOldInventory(0.15f,
                                                LocalDate.now().minusYears(1));
- </pre>
+ </code></pre>
 
  <p>Jakarta Persistence and Jakarta NoSQL define programming models for entity
  classes that may be used with Jakarta Data:</p>
@@ -184,36 +184,36 @@ loadScripts(document, 'script');</script>
 
  <p>The following example shows an entity class, an embeddable class, and
  a repository interface:</p>
- <pre>
- &#64;Entity
+ <pre><code>
+ @Entity
  public class Purchase {
-     &#64;Id
+     @Id
      public String purchaseId;
-     &#64;Embedded
+     @Embedded
      public Address address;
      ...
  }
 
- &#64;Embeddable
+ @Embeddable
  public class Address {
      public int zipCode;
      ...
  }
 
- &#64;Repository
+ @Repository
  public interface Purchases {
-     &#64;Find
-     &#64;OrderBy("address.zipCode")
+     @Find
+     @OrderBy("address.zipCode")
      List&lt;Purchase&gt; forZipCodes(
-             &#64;By("address.zipCode") &#64;Is(In.class) List&lt;Integer&gt; zipCodes);
+             @By("address.zipCode") @Is(In.class) List&lt;Integer&gt; zipCodes);
 
-     &#64;Query("WHERE address.zipCode = ?1")
+     @Query("WHERE address.zipCode = ?1")
      List&lt;Purchase&gt; forZipCode(int zipCode);
 
-     &#64;Save
+     @Save
      Purchase checkout(Purchase purchase);
  }
- </pre>
+ </code></pre>
 
  <h2 id="entities-heading">Entities</h2>
 
@@ -397,19 +397,19 @@ loadScripts(document, 'script');</script>
      match the name of an entity attribute and the repository must be compiled
      with the <code>-parameters</code> compiler option so that parameter names are
      available at runtime. For example,
-     <pre>
-     &#64;Find
-     Optional&lt;Product&gt; get(&#64;By("id") long productId);
+     <pre><code>
+     @Find
+     Optional&lt;Product&gt; get(@By("id") long productId);
 
-     &#64;Find
-     &#64;OrderBy("price")
+     @Find
+     @OrderBy("price")
      List&lt;Product&gt; discounted(
-             &#64;By("discount") &#64;Is(AtLeast.class) float minAmount);
+             @By("discount") @Is(AtLeast.class) float minAmount);
 
-     &#64;Find
-     &#64;OrderBy("price")
+     @Find
+     @OrderBy("price")
      Product[] named(String name);
-     </pre>
+     </code></pre>
  </li>
  <li>The parameter is a <a href="jakarta/data/constraint/Constraint.html" title="interface in jakarta.data.constraint"><code>Constraint</code></a> or a
      <a href="jakarta/data/constraint/package-summary.html">subtype</a> of <code>Constraint</code> and
@@ -417,31 +417,31 @@ loadScripts(document, 'script');</script>
      of the entity class. The constraint must be parameterized with the same
      type (or if primitive, the corresponding wrapper type) as the attribute.
      For example,
-     <pre>
-     &#64;Delete
-     int discontinue(&#64;By("id") In&lt;Long&gt; productIds);
+ <pre><code>
+     @Delete
+     int discontinue(@By("id") In&lt;Long&gt; productIds);
 
-     &#64;Find
-     &#64;OrderBy("price")
-     &#64;OrderBy("name")
+     @Find
+     @OrderBy("price")
+     @OrderBy("name")
      Stream&lt;Product&gt; pricedUnder(LessThan&lt;Float&gt; price);
-     </pre>
+ </code></pre>
  </li>
  <li>The parameter is a <a href="jakarta/data/restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a> and its type parameter is the
      entity class. For example,
-     <pre>
-     &#64;Find
+ <pre><code>
+     @Find
      List&lt;Product&gt; search(Restriction&lt;Product&gt; restrict);
-     </pre>
+ </code></pre>
  </li>
  <li>The parameter is a <a href="jakarta/data/Limit.html" title="class in jakarta.data"><code>Limit</code></a>, <a href="jakarta/data/Sort.html" title="class in jakarta.data"><code>Sort</code></a>, <a href="jakarta/data/Order.html" title="class in jakarta.data"><code>Order</code></a>, or
      <a href="jakarta/data/page/PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a> (discussed under the section titled
      <em>Special parameters</em>) and the repository method is annotated with
      <a href="jakarta/data/repository/Find.html" title="annotation interface in jakarta.data.repository"><code>Find</code></a>. For example,
-     <pre>
-     &#64;Find
+     <pre><code>
+     @Find
      Page&lt;Product&gt; getPage(PageRequest pageRequest, Order&lt;Product&gt; sortBy);
-     </pre>
+     </code></pre>
  </li>
  </ol>
 
@@ -475,10 +475,11 @@ loadScripts(document, 'script');</script>
  Stream&lt;Person&gt; livingInCity(String address_city);
  </pre>
 
- <h2 id="jdql-query-methods-heading">JDQL query methods</h2>
+ <h2 id="methods-annotated-query-heading">Methods annotated <code>@Query</code></h2>
 
- <p>The <a href="jakarta/data/repository/Query.html" title="annotation interface in jakarta.data.repository"><code>Query</code></a> annotation specifies that a method executes a query written
- in Jakarta Data Query Language (JDQL) or Jakarta Persistence Query Language (JPQL).
+ <p>The <a href="jakarta/data/repository/Query.html" title="annotation interface in jakarta.data.repository"><code>Query</code></a> annotation specifies that a method executes a query
+ written in Jakarta Common Query Language (JCQL) or Jakarta Persistence
+ Query Language (JPQL), which are defined by the Jakarta Query specification.
  A Jakarta Data provider is not required to support the complete JPQL language,
  which targets relational data stores.</p>
 
@@ -510,6 +511,48 @@ loadScripts(document, 'script');</script>
 
  <p>Refer to the <a href="jakarta/data/repository/Query.html" title="annotation interface in jakarta.data.repository">API documentation</a> for <code>@Query</code> for further
  information.</p>
+
+ <h2 id="jakarta-persistence-query-methods-heading">Jakarta Persistence query methods</h2>
+
+ <p>The Jakarta Persistence specification offers two additional query
+ annotations that can annotate repository methods in place of <a href="jakarta/data/repository/Query.html" title="annotation interface in jakarta.data.repository"><code>Query</code></a>:
+
+ <ul>
+ <li><code>jakarta.persistence.query.StaticNativeQuery</code> - supplies a native
+ SQL query instead of a query that is written in Jakarta Persistence Query
+ Language (JPQL) or the Jakarta Common Query Language (JCQL).</li>
+ <li><code>jakarta.persistence.query.StaticQuery</code> - behaves identically to
+ Jakarta Data's <code>Query</code> annotation in allowing JPQL and JCQL to be
+ supplied.</li>
+ </ul>
+
+ <p>A Jakarta Data provider is not required to support JPQL or native SQL
+ for repository query methods that require generating or modifying the query,
+ including repository methods with any of the following:
+ </p>
+
+ <ul>
+ <li><a href="jakarta/data/repository/Select.html" title="annotation interface in jakarta.data.repository">Projections</a></li>
+ <li><a href="jakarta/data/restrict/Restriction.html" title="interface in jakarta.data.restrict">Restrictions</a> and
+     <a href="jakarta/data/constraint/Constraint.html" title="interface in jakarta.data.constraint">constraints</a></li>
+ <li><a href="jakarta/data/Sort.html" title="class in jakarta.data">Sort criteria</a> other than that which is part of the
+     <code>ORDER BY</code> clause of the given query value</li>
+ <li><a href="jakarta/data/page/CursoredPage.html" title="interface in jakarta.data.page">Cursor-based pagination</a></li>
+ <li><a href="jakarta/data/page/PageRequest.html#requestTotal()">Total pages or results</a></li>
+ </ul>
+
+ <p><a href="jakarta/data/repository/Param.html" title="annotation interface in jakarta.data.repository">Named parameters</a> can be used for JPQL queries, but not
+ for native SQL queries. Use positional parameters instead. For example,</p>
+
+ <pre><code>
+ @StaticNativeQuery("SELECT * FROM Person WHERE ssn = ? AND alive = ?")
+ @ReadQueryOptions(lockMode = LockModeType.PESSIMISTIC_WRITE)
+ Optional&lt;Person&gt; findIfLiving(String ssn, boolean isAlive);
+ </code></pre>
+
+ <p>Refer to the Jakarta Persistence query annotations in the
+ <code>jakarta.persistence.query</code> package and the API documentation for
+ <a href="jakarta/data/repository/Query.html" title="annotation interface in jakarta.data.repository"><code>Query</code></a> for further information.</p>
 
  <h2 id="query-by-method-name-heading">Query by Method Name</h2>
 
@@ -842,7 +885,7 @@ loadScripts(document, 'script');</script>
  Name and parameter-based automatic query methods. Both methods accept the
  same parameters and have the same behavior.</p>
 
- <pre>
+ <pre><code>
  // Query by Method Name
  Vehicle[] findFirst50ByMakeAndModelAndYearBetween(String makerName,
                                                    String model,
@@ -851,14 +894,15 @@ loadScripts(document, 'script');</script>
                                                    Order&lt;Vehicle&gt; sorts);
 
  // parameter-based conditions
- &#64;Find
- &#64;First(50)
+ @Find
+ @First(50)
  Vehicle[] search(String make,
                   String model,
-                  &#64;By(_Vehicle.YEAR) &#64;Is(AtLeast.class) int minYear,
-                  &#64;By(_Vehicle.YEAR) &#64;Is(AtMost.class) int maxYear,
+                  @By(_Vehicle.YEAR) @Is(AtLeast.class) int minYear,
+                  @By(_Vehicle.YEAR) @Is(AtMost.class) int maxYear,
                   Order&lt;Vehicle&gt; sorts);
- </pre>
+ </code></pre>
+
 
  <h2 id="special-parameters-heading">Special parameters</h2>
 
@@ -873,7 +917,7 @@ loadScripts(document, 'script');</script>
  a <em>special parameter</em> of type <a href="jakarta/data/restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a>.</p>
 
  <p>Special parameters occur after parameters related to query conditions
- and JDQL query parameters. Special parameters enable limits, pagination,
+ and JCQL query parameters. Special parameters enable limits, pagination,
  sorting, and restrictions to be determined at runtime.</p>
 
  <h3 id="limits-heading">Limits</h3>
@@ -882,44 +926,47 @@ loadScripts(document, 'script');</script>
  find method may be limited by adding a parameter of type <a href="jakarta/data/Limit.html" title="class in jakarta.data"><code>Limit</code></a>.
  The results may even be limited to a positioned range. For example,</p>
 
- <pre>
- &#64;Query("WHERE (fullPrice - salePrice) / fullPrice &gt;= ?1 ORDER BY salePrice DESC, id ASC")
+ <pre><code>
+ @Query("WHERE (fullPrice - salePrice) / fullPrice &gt;= ?1 ORDER BY salePrice DESC, id ASC")
  Product[] highlyDiscounted(float minPercentOff, Limit limit);
 
  ...
  first50 = products.highlyDiscounted(0.30, Limit.of(50));
  ...
  second50 = products.highlyDiscounted(0.30, Limit.range(51, 100));
- </pre>
+ </code></pre>
 
  <h3 id="pagination-heading">Pagination</h3>
 
  <p>A repository find method with a parameter of type <a href="jakarta/data/page/PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a>
  allows its results to be split and retrieved in pages. For example,</p>
 
- <pre>
- Page&lt;Product&gt; findByNameLikeOrderByAmountSoldDescIdAsc(
-                 String pattern, PageRequest pageRequest);
+ <pre><code>
+ @OrderBy("amountSold")
+ @OrderBy("id")
+ Page&lt;Product&gt; findByNameLike(String pattern,
+                              PageRequest pageRequest);
+
  ...
- page1 = products.findByNameLikeOrderByAmountSoldDescIdAsc(
-                 "%phone%", PageRequest.ofSize(20));
- </pre>
+ page1 = products.findByNameLike("%phone%",
+                                 PageRequest.ofSize(20));
+ </code></pre>
 
  <p>When using pagination, always ensure that the ordering is consistent
  across invocations. One way to achieve this is to include the unique
  identifier in the sort criteria.</p>
 
- <h3 id="sorting-heading">Sorting</h3>
+ <h3 id="programmatic-sorting-heading">Programmatic sorting</h3>
 
  <p>When a page is requested with a <code>PageRequest</code>, dynamic sorting
- criteria may be supplied by passing instances of <a href="jakarta/data/Sort.html" title="class in jakarta.data"><code>Sort</code></a> or <a href="jakarta/data/Order.html" title="class in jakarta.data"><code>Order</code></a>.
- For example,</p>
+ criteria may be supplied by passing instances of <a href="jakarta/data/Sort.html" title="class in jakarta.data"><code>Sort</code></a> to an
+ <a href="jakarta/data/Order.html" title="class in jakarta.data"><code>Order</code></a>. parameter. For example,</p>
 
- <pre>
- &#64;Find
- Page&lt;Product&gt; pricedWithin(&#64;By("name") &#64;Is(Like.class) String pattern,
-                            &#64;By("price") &#64;Is(AtLeast.class) float minPrice,
-                            &#64;By("price") &#64;Is(AtMost.class) float maxPrice,
+ <pre><code>
+ @Find
+ Page&lt;Product&gt; pricedWithin(@By("name") @Is(Like.class) String pattern,
+                            @By("price") @Is(AtLeast.class) float minPrice,
+                            @By("price") @Is(AtMost.class) float maxPrice,
                             PageRequest pageRequest,
                             Order&lt;Product&gt; order);
 
@@ -933,15 +980,16 @@ loadScripts(document, 'script');</script>
                  page1Request,
                  Order.by(Sort.desc("price"),
                           Sort.asc("id")));
- </pre>
+ </code></pre>
 
- <p>To supply sort criteria dynamically without using pagination, an
- instance of <a href="jakarta/data/Order.html" title="class in jakarta.data"><code>Order</code></a> may be populated with one or more instances
- of <a href="jakarta/data/Sort.html" title="class in jakarta.data"><code>Sort</code></a> and passed to the repository find method. For example,</p>
 
- <pre>
- &#64;Find
- Product[] named(&#64;By("name") &#64;Is(Like.class) String pattern,
+ <p>The same pattern of supplying instances of <a href="jakarta/data/Sort.html" title="class in jakarta.data"><code>Sort</code></a> to an
+ <a href="jakarta/data/Order.html" title="class in jakarta.data"><code>Order</code></a> parameter can be applied without using pagination.
+ For example,</p>
+
+ <pre><code>
+ @Find
+ Product[] named(@By("name") @Is(Like.class) String pattern,
                  Limit max,
                  Order&lt;Product&gt; sortBy);
 
@@ -951,25 +999,7 @@ loadScripts(document, 'script');</script>
                             Order.by(Sort.desc("price"),
                                      Sort.desc("amountSold"),
                                      Sort.asc("id")));
- </pre>
-
- <p>Generic, untyped <a href="jakarta/data/Sort.html" title="class in jakarta.data"><code>Sort</code></a> criteria can be supplied directly to a
- repository method with a variable arguments <code>Sort&lt;?&gt;...</code> parameter.
- For example,</p>
-
- <pre>
- &#64;Find
- Product[] namedLike(&#64;By("name") &#64;Is(Like.class) String pattern,
-                     Limit max,
-                     <code>Sort&lt;?&gt;...</code> sortBy);
-
- ...
- found = products.namedLike(namePattern,
-                            Limit.of(25),
-                            Sort.desc("price"),
-                            Sort.desc("amountSold"),
-                            Sort.asc("name"));
- </pre>
+ </code></pre>
 
  <h3 id="restrictions-heading">Restrictions</h3>
 
@@ -979,12 +1009,12 @@ loadScripts(document, 'script');</script>
  type parameter of the method parameter must be the entity class.
  For example,</p>
 
- <pre>
-     &#64;Find
-     List&lt;Product&gt; namedLike(&#64;By(_Product.NAME) Like pattern,
+ <pre><code>
+     @Find
+     List&lt;Product&gt; namedLike(@By(_Product.NAME) Like pattern,
                              Restriction&lt;Product&gt; restrict,
                              Order&lt;Product&gt; sorts);
- </pre>
+ </code></pre>
 
  <h4 id="static-metamodel-heading">Static metamodel</h4>
 
@@ -1004,33 +1034,33 @@ loadScripts(document, 'script');</script>
  <a href="jakarta/data/expression/Expression.html" title="interface in jakarta.data.expression"><code>Expression</code></a>, exposes a method for each available restriction.
  Some examples of singular restrictions are:</p>
 
- <pre>
+ <pre><code>
      _Product.name.startsWith(prefix)
      _Product.price.lessThanEqual(maxPrice)
      _Product.producedOn.notNull()
- </pre>
+ </code></pre>
 
  <p>The static metamodel expression/attribute also exposes methods that
  obtain other <code>Expression</code>s, from which additional restrictions can
  be formed. An example is following casse insensitive comparison that
  utilizes the <code>lower</code> expression,</p>
 
- <pre>
+ <pre><code>
      _Product.name.lower().startsWith(prefix.toLowerCase());
- </pre>
+ </code></pre>
 
  <p>The following example obtains a singular restriction on the price of a
  product being less than an amount and supplies this restriction to the
  <code>namedLike</code> repository method from the beginning of this section on
  <em>Restrictions</em>.</p>
 
- <pre>
+ <pre><code>
      found = products.namedLike(
                  Like.pattern("%keyboard%"),
                  _Product.price.lessThan(100.0f),
                  Order.by(_Product.price.desc(),
                           _Product.name.asc()));
- </pre>
+ </code></pre>
 
  <h4 id="composite-restrictions-heading">Composite restrictions</h4>
 
@@ -1046,14 +1076,14 @@ loadScripts(document, 'script');</script>
  repository method from the beginning of this section on
  <em>Restrictions</em>.</p>
 
- <pre>
+ <pre><code>
      found = products.namedLike(
                  Like.pattern("%computer%"),
                  Restrict.all(_Product.price.between(700.0f, 1500.0f),
                               _Product.producedOn.greaterThan(LocalDate.now().minusYears(2))),
                  Order.by(_Product.price.desc(),
                           _Product.id.asc()));
- </pre>
+ </code></pre>
 
  <h2 id="maximum-number-of-results-heading">Maximum number of results</h2>
 
@@ -1064,12 +1094,12 @@ loadScripts(document, 'script');</script>
  entities match a query that is performed by a repository method that has a
  singular result type. For example,</p>
 
- <pre>
- &#64;Find
- &#64;First
- &#64;OrderBy("hourlyWage")
+ <pre><code>
+ @Find
+ @First
+ @OrderBy("hourlyWage")
  Optional&lt;Employee&gt; withLowestWage(String jobRole);
- </pre>
+ </code></pre>
 
  <h2 id="returning-subsets-of-entity-attributes-heading">Returning subsets of entity attributes</h2>
 
@@ -1086,23 +1116,23 @@ loadScripts(document, 'script');</script>
  has attributes including <code>year</code>, <code>month</code>, <code>day</code>, and
  <code>precipitation</code>, of which the latter is of type <code>float</code>,</p>
 
- <pre>
- &#64;Find(Weather.class)
- &#64;Select("precipitation")
- &#64;OrderBy("precipitation")
- List&lt;Float&gt; precipitationIn(&#64;By("month") Month monthOfYear,
-                             &#64;By("year") int year);
- </pre>
+ <pre><code>
+ @Find(Weather.class)
+ @Select("precipitation")
+ @OrderBy("precipitation")
+ List&lt;Float&gt; precipitationIn(@By("month") Month monthOfYear,
+                             @By("year") int year);
+ </code></pre>
 
  <p>For <a href="jakarta/data/repository/Query.html" title="annotation interface in jakarta.data.repository"><code>Query</code></a> methods, the <code>SELECT</code> clause specifies a single
  entity attribute. For example,</p>
 
- <pre>
- &#64;Query("SELECT precipitation FROM Weather " +
+ <pre><code>
+ @Query("SELECT precipitation FROM Weather " +
         " WHERE month=?1 AND year=?2" +
         " ORDER BY precipitation ASC")
  List&lt;Float&gt; precipitationIn(Month monthOfYear, int year);
- </pre>
+ </code></pre>
 
  <h3 id="multiple-entity-attributes-result-type-heading">Multiple entity attributes result type</h3>
 
@@ -1112,14 +1142,14 @@ loadScripts(document, 'script');</script>
  entity attribute name. For example, if a <code>Person</code> entity has attributes
  <code>ssn</code>, <code>firstName</code>, <code>middleName</code>, and <code>lastName</code>,</p>
 
- <pre>
+ <pre><code>
  public record Name(String firstName,
                     String middleName,
-                    &#64;Select("lastName") String surname) {}
+                    @Select("lastName") String surname) {}
 
- &#64;Find(Person.class)
- Optional&lt;Name&gt; getName(&#64;By("ssn") long socialSecurityNum);
- </pre>
+ @Find(Person.class)
+ Optional&lt;Name&gt; getName(@By("ssn") long socialSecurityNum);
+ </code></pre>
 
  <p>The entity class value that is supplied to the <a href="jakarta/data/repository/Find.html" title="annotation interface in jakarta.data.repository"><code>Find</code></a> annotation can
  be omitted if it is the same as the primary entity type of the repository.</p>
@@ -1129,27 +1159,27 @@ loadScripts(document, 'script');</script>
  accepting the entity attributes in the order listed within the <code>SELECT</code>
  clause. For example,</p>
 
- <pre>
+ <pre><code>
  public record Name(String firstName,
                     String middleName,
                     String surname) {}
 
- &#64;Query("SELECT firstName, middleName, lastName FROM Person WHERE ssn=?1")
+ @Query("SELECT firstName, middleName, lastName FROM Person WHERE ssn=?1")
  Optional&lt;Name&gt; getName(long socialSecurityNum);
- </pre>
+ </code></pre>
 
  <p>If all record components have names that match the entity attributes or
  map to a valid entity attribute name via the <a href="jakarta/data/repository/Select.html" title="annotation interface in jakarta.data.repository"><code>Select</code></a> annotation,
  then the <code>SELECT</code> clause can be omitted. For example,</p>
 
- <pre>
+ <pre><code>
  public record Name(String firstName,
                     String middleName,
-                    &#64;Select("lastName") String surname) {}
+                    @Select("lastName") String surname) {}
 
- &#64;Query("FROM Person WHERE ssn=?1")
+ @Query("FROM Person WHERE ssn=?1")
  Optional&lt;Name&gt; getName(long socialSecurityNum);
- </pre>
+ </code></pre>
 
  <h2 id="repository-default-methods-heading">Repository default methods</h2>
 
@@ -1160,7 +1190,7 @@ loadScripts(document, 'script');</script>
 
  <p>In advanced scenarios, the application program might make direct use of
  some underlying resource acquired by the Jakarta Data provider, such as a
- <code>javax.sql.DataSource</code>, <code>java.sql.Connection</code>, or even an
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/javax/sql/DataSource.html" title="class or interface in javax.sql" class="external-link"><code>DataSource</code></a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link"><code>Connection</code></a>, or even an
  <code>jakarta.persistence.EntityManager</code>.</p>
 
  <p>To expose access to an instance of such a resource, the repository
@@ -1171,8 +1201,8 @@ loadScripts(document, 'script');</script>
 
  <p>For example,</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Cars extends BasicRepository&lt;Car, Long&gt; {
      ...
 
@@ -1180,11 +1210,11 @@ loadScripts(document, 'script');</script>
 
      default Car[] advancedSearch(SearchOptions filter) {
          EntityManager em = getEntityManager();
-         ... use entity manager
+         // use entity manager
          return results;
      }
  }
- </pre>
+ </code></pre>
 
  <p>If the resource type inherits from <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link"><code>AutoCloseable</code></a> and the
  accessor method is called from within an invocation of a default method
@@ -1266,13 +1296,13 @@ loadScripts(document, 'script');</script>
  like <a href="jakarta/data/repository/CrudRepository.html" title="interface in jakarta.data.repository"><code>CrudRepository</code></a>, where the primary entity type is the argument
  to the first type parameter of the superinterface. For example,
  <code>Product</code>, in,
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Products extends CrudRepository&lt;Product, Long&gt; {
      // applies to the primary entity type: Product
      long countByPriceLessThan(float max);
  }
- </pre>
+ </code></pre>
  </li>
  <li>Otherwise, if the repository declares lifecycle methods&mdash;that is,
  has methods annotated with a lifecycle annotation like <a href="jakarta/data/repository/Insert.html" title="annotation interface in jakarta.data.repository"><code>Insert</code></a>,
@@ -1281,22 +1311,22 @@ loadScripts(document, 'script');</script>
  type annotated as an entity&mdash;and all of these methods share the same
  entity type, then the primary entity type for the repository is that entity
  type. For example,
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Products {
-     &#64;Insert
+     @Insert
      List&lt;Product&gt; add(List&lt;Product&gt; p);
 
-     &#64;Update
+     @Update
      Product modify(Product p);
 
-     &#64;Save
+     @Save
      Product[] save(Product... p);
 
      // applies to the primary entity type: Product
      boolean existsByName(String name);
  }
- </pre>
+ </code></pre>
  </li>
  </ol>
 
@@ -1318,32 +1348,32 @@ loadScripts(document, 'script');</script>
  and cascading validation, where the <code>Email</code> and <code>NotNull</code> constraints
  on the entity that is supplied to <code>save</code> are validated,</p>
 
- <pre>
+ <pre><code>
  import jakarta.validation.Valid;
  import jakarta.validation.constraints.Email;
  import jakarta.validation.constraints.NotEmpty;
  import jakarta.validation.constraints.NotNull;
  ...
 
- &#64;Repository
+ @Repository
  public interface AddressBook extends DataRepository&lt;Contact, Long&gt; {
 
-     List&lt;Contact&gt; findByEmailIn(&#64;NotEmpty Set&lt;String&gt; emails);
+     List&lt;Contact&gt; findByEmailIn(@NotEmpty Set&lt;String&gt; emails);
 
-     &#64;Save
-     void save(&#64;Valid Contact c);
+     @Save
+     void save(@Valid Contact c);
  }
 
- &#64;Entity
+ @Entity
  public class Contact {
-     &#64;Email
-     &#64;NotNull
+     @Email
+     @NotNull
      public String email;
-     &#64;Id
+     @Id
      public long id;
      ...
  }
- </pre>
+ </code></pre>
 
 
  <h2 id="jakarta-interceptors-heading">Jakarta Interceptors</h2>
@@ -1393,22 +1423,22 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html#completeExceptionally(java.lang.Throwable)" title="class or interface in java.util.concurrent" class="external-link">completes exceptionally</a>
  with the error.</p>
 
- <pre>
+ <pre><code>
  import jakarta.data.*;
  import jakarta.enterprise.concurrent.Asynchronous;
  import jakarta.transaction.Transactional;
  import jakarta.transaction.Transactional.TxType;
  import java.util.concurrent.CompletionStage;
 
- &#64;Repository
+ @Repository
  public interface Products extends BasicRepository&lt;Product, Long&gt; {
 
-     &#64;Asynchronous
-     &#64;Transactional(TxType.REQUIRES_NEW)
-     &#64;Query("UPDATE Product SET price=?1 WHERE id=?2")
+     @Asynchronous
+     @Transactional(TxType.REQUIRES_NEW)
+     @Query("UPDATE Product SET price=?1 WHERE id=?2")
      CompletionStage&lt;Integer&gt; setPriceAsync(float newPrice, Long productId);
  }
- </pre></div>
+ </code></pre></div>
 </section>
 <section class="summary">
 <ul class="summary-list">

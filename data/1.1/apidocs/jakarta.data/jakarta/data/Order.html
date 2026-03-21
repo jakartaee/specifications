@@ -115,15 +115,16 @@ implements <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
  <a href="metamodel/StaticMetamodel.html" title="annotation interface in jakarta.data.metamodel"><code>StaticMetamodel</code></a> for helping to enforce type safety of sort criteria
  during development. For example,</p>
 
- <pre>
- Page&lt;Employee&gt;&gt; findByYearHired(int year, PageRequest pageRequest, Order&lt;Employee&gt;);
+ <pre><code>
+ Page&lt;Employee&gt; findByYearHired(int year, PageRequest pageRequest, Order&lt;Employee&gt;);
+
  ...
  page1 = employees.findByYearHired(Year.now(),
                                    PageRequest.ofSize(10),
                                    Order.by(_Employee.salary.desc(),
                                             _Employee.lastName.asc(),
                                             _Employee.firstName.asc()));
- </pre>
+ </code></pre>
 
  <p>The relative precedence of an instance of <a href="Sort.html" title="class in jakarta.data"><code>Sort</code></a> belonging
  to an <code>Order</code> is determined by its position within the

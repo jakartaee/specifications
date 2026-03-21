@@ -107,21 +107,21 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  entity attribute by defining a method parameter that is of type
  <code>NotIn</code>. For example,</p>
 
- <pre>
- &#64;Find
- List&lt;Car&gt; excludingManufacturers(&#64;By(_Car.MAKE) NotIn&lt;String&gt; excluded);
+ <pre><code>
+ @Find
+ List&lt;Car&gt; excludingManufacturers(@By(_Car.MAKE) NotIn&lt;String&gt; excluded);
  ...
 
  found = cars.excludingManufacturers(NotIn.values("Leakoil Motors",
                                                   "Stallmore Motors"));
- </pre>
+ </code></pre>
 
  <p>Repository methods can also accept <code>NotIn</code> constraints at run time
  in the form of a <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a> on an <a href="../expression/Expression.html" title="interface in jakarta.data.expression"><code>Expression</code></a>. For example,
  </p>
 
- <pre>
- &#64;Find
+ <pre><code>
+ @Find
  List&lt;Car&gt; searchAll(Restriction&lt;Car&gt; restrict, Order&lt;Car&gt; sorts);
 
  ...
@@ -130,7 +130,7 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
                                         "Stallmore Motors"),
                         Order.by(_Car.make.asc(),
                                  _Car.model.asc()));
- </pre>
+ </code></pre>
 
  <p>The <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel">entity and static metamodel</a> for the code
  examples within this class are shown in the <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> Javadoc.
@@ -208,10 +208,10 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
 <div class="block"><p>Requires that the constraint target not equal any of the given
  <code>values</code>. For example,</p>
 
- <pre>
- found = cars.excludingManufacturers(NotIn.values("Stallmore Motors",
-                                                  "Knockhard Motors"));
- </pre></div>
+ <pre><code>
+     found = cars.excludingManufacturers(NotIn.values("Stallmore Motors",
+                                                      "Knockhard Motors"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -234,10 +234,10 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
 <div class="block"><p>Requires that the constraint target not equal any of the given
  <code>values</code>. For example,</p>
 
- <pre>
- found = cars.excludingManufacturers(NotIn.values(Set.of("Leakoil Motors",
-                                                         "Knockhard Motors")));
- </pre></div>
+ <pre><code>
+     found = cars.excludingManufacturers(NotIn.values(Set.of("Leakoil Motors",
+                                                             "Knockhard Motors")));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -260,11 +260,11 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
 <div class="block"><p>Requires that the constraint target not equal any of the values to
  which the given <code>expressions</code> evaluate. For example,</p>
 
- <pre>
- found = cars.excludingManufacturers(
+ <pre><code>
+     found = cars.excludingManufacturers(
                  NotIn.expressions(List.of(_Car.model.left(_Car.make.length()),
                                            _Car.model.right(_Car.make.length()))));
- </pre></div>
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or
@@ -289,11 +289,11 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
 <div class="block"><p>Requires that the constraint target not equal any of the values to
  which the given <code>expressions</code> evaluate. For example,</p>
 
- <pre>
- found = cars.excludingManufacturers(
+ <pre><code>
+     found = cars.excludingManufacturers(
                  NotIn.expressions(_Car.model.left(_Car.make.length()),
                                    _Car.model.right(_Car.make.length())));
- </pre></div>
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or

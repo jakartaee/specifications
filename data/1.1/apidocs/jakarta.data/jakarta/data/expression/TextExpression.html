@@ -331,10 +331,10 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  value to which the current expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     _Car.model.prepend("Model ").equalTo(model));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         _Car.model.prepend("Model ").equalTo(model));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that computes the concatenated
@@ -353,10 +353,10 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  which the current expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     _Car.model.append(" Hybrid").equalTo(hybridModel));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         _Car.model.append(" Hybrid").equalTo(hybridModel));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that computes the concatenated
@@ -376,11 +376,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  expression evaluates.</p>
 
  <p>Example:</p>
- <pre>TODO
- found = cars.search(
-         make,
-         _Car.model.prepend(_Car.year.append(" ")).equalTo(yearAndModel));
- </pre></div>
+ <pre>TODO <code>
+     found = cars.search(
+             make,
+             _Car.model.prepend(_Car.year.append(" ")).equalTo(yearAndModel));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that computes the concatenated
@@ -400,9 +400,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(_Car.make.append(' ').append(_Car.model).equalTo(makeAndModel));
- </pre></div>
+ <pre><code>
+     found = cars.search(_Car.make.append(' ').append(_Car.model).equalTo(makeAndModel));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that computes the concatenated
@@ -420,9 +420,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  which the current expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(_Car.make.upper().startsWith("CHEV"));
- </pre></div>
+ <pre><code>
+     found = cars.search(_Car.make.upper().startsWith("CHEV"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that computes the upper case form
@@ -438,10 +438,10 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  which the current expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     _Car.model.lower().startsWith("f-"));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         _Car.model.lower().startsWith("f-"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that computes the lower case form
@@ -458,10 +458,10 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  evaluates.</p>
 
  <p>Example:</p>
- <pre>
- startsWithCX = cars.search(make,
-                            _Car.model.left(2).equalTo("CX"));
- </pre></div>
+ <pre><code>
+     startsWithCX = cars.search(make,
+                                _Car.model.left(2).equalTo("CX"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that obtains the leftmost
@@ -478,10 +478,10 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  evaluates.</p>
 
  <p>Example:</p>
- <pre>
- endsWithHybrid = cars.search(make,
-                              _Car.model.right(6).equalTo("Hybrid"));
- </pre></div>
+ <pre><code>
+     endsWithHybrid = cars.search(make,
+                                  _Car.model.right(6).equalTo("Hybrid"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that obtains the rightmost
@@ -497,10 +497,10 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  which the current expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- withModelNamesUpTo10Chars = cars.search(make,
-                                         _Car.model.length().lessThanEqual(10));
- </pre></div>
+ <pre><code>
+     withModelNamesUpTo10Chars = cars.search(make,
+                                             _Car.model.length().lessThanEqual(10));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that obtains the length of the
@@ -517,9 +517,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  pattern.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.like(Like.pattern("% Hybrid")));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.like(Like.pattern("% Hybrid")));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - pattern against which to compare. Must not be
@@ -540,9 +540,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  specified pattern.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(_Car.make.like("Chev%"));
- </pre></div>
+ <pre><code>
+     found = cars.search(_Car.make.like("Chev%"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - pattern against which to compare. Must not be
@@ -566,9 +566,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  pattern.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.like("F-_50%", '_', '%'));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.like("F-_50%", '_', '%'));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - pattern against which to compare. Must not be
@@ -599,9 +599,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  pattern.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.like("_R-V%", '_', '%', '^'));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.like("_R-V%", '_', '%', '^'));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - pattern against which to compare. Must not be
@@ -632,9 +632,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  <a href="../constraint/NotLike.html#pattern(java.lang.String)">not like</a> the specified pattern.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.notLike("% EV"));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.notLike("% EV"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - pattern against which to compare. Must not be
@@ -658,9 +658,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  pattern.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.notLike("CX-_0 *", '_', '*'));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.notLike("CX-_0 *", '_', '*'));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - pattern against which to compare. Must not be
@@ -689,9 +689,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  specified pattern.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.notLike("* EV*", '_', '*', '^'));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.notLike("* EV*", '_', '*', '^'));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - pattern against which to compare. Must not be
@@ -722,9 +722,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  the specified substring.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.contains("Hybrid"));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.contains("Hybrid"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>substring</code> - substring against which to compare. Must not be
@@ -746,9 +746,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  substring.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.notContains(" EV"));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.notContains(" EV"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>substring</code> - substring against which to compare. Must not be
@@ -769,9 +769,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  the specified prefix.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(_Car.make.startsWith("Chev"));
- </pre></div>
+ <pre><code>
+     found = cars.search(_Car.make.startsWith("Chev"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>prefix</code> - prefix against which to compare. Must not be <code>null</code>.</dd>
@@ -792,9 +792,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  prefix.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.notStartsWith("CR-"));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.notStartsWith("CR-"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>prefix</code> - prefix against which to compare. Must not be <code>null</code>.</dd>
@@ -814,9 +814,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  the specified suffix.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.endsWith(" EV"));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.endsWith(" EV"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>suffix</code> - suffix against which to compare. Must not be <code>null</code>.</dd>
@@ -837,9 +837,9 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  suffix.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, _Car.model.notEndsWith(" Hybrid"));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, _Car.model.notEndsWith(" Hybrid"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>suffix</code> - suffix against which to compare. Must not be <code>null</code>.</dd>

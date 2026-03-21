@@ -108,21 +108,21 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <code>NotBetween</code> and is of the same type or a subtype of the entity
  attribute. For example,</p>
 
- <pre>
- &#64;Find
- List&lt;Car&gt; byModelYear(&#64;By(_Car.YEAR) NotBetween&lt;Integer&gt; yearsToExclude);
+ <pre><code>
+ @Find
+ List&lt;Car&gt; byModelYear(@By(_Car.YEAR) NotBetween&lt;Integer&gt; yearsToExclude);
 
  ...
 
  found = cars.byModelYear(NotBetween.bounds(2020, 2022));
- </pre>
+ </code></pre>
 
  <p>Repository methods can also accept <code>NotBetween</code> constraints at
  run time in the form of a <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a> on a
  <a href="../expression/ComparableExpression.html" title="interface in jakarta.data.expression"><code>ComparableExpression</code></a>. For example,</p>
 
- <pre>
- &#64;Find
+ <pre><code>
+ @Find
  List&lt;Car&gt; searchAll(Restriction&lt;Car&gt; restrict, Order&lt;Car&gt; sorts);
 
  ...
@@ -131,7 +131,7 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
                         Order.by(_Car.year.desc(),
                                  _Car.price.desc(),
                                  _Car.vin.asc()));
- </pre>
+ </code></pre>
 
  <p>The <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel">entity and static metamodel</a> for the code
  examples within this class are shown in the <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> Javadoc.
@@ -225,9 +225,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  less than the given <code>lower</code> bound or greater than the given
  <code>upper</code> bound. For example,</p>
 
- <pre>
- found = cars.byModelYear(NotBetween.bounds(2022, 2024));
- </pre></div>
+ <pre><code>
+     found = cars.byModelYear(NotBetween.bounds(2022, 2024));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -251,10 +251,10 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  less than the given <code>lower</code> bound or greater than the value to
  which the given <code>upper</code> expression evaluates. For example,</p>
 
- <pre>
- found = cars.byModelYear(NotBetween.bounds(2015,
-                                            _Car.firstModelYear.plus(5)));
- </pre></div>
+ <pre><code>
+     found = cars.byModelYear(NotBetween.bounds(2015,
+                                                _Car.firstModelYear.plus(5)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -280,9 +280,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  evaluates or greater than the given <code>upper</code> bound. For example,
  </p>
 
- <pre>
- found = cars.byModelYear(NotBetween.bounds(_Car.firstModelYear, 2022));
- </pre></div>
+ <pre><code>
+     found = cars.byModelYear(NotBetween.bounds(_Car.firstModelYear, 2022));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -308,10 +308,10 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  evaluates or greater than the value to which the given <code>upper</code>
  expression evaluates. For example,</p>
 
- <pre>
- found = cars.byModelYear(NotBetween.bounds(_Car.firstModelYear,
-                                            _Car.firstModelYear.plus(2)));
- </pre></div>
+ <pre><code>
+     found = cars.byModelYear(NotBetween.bounds(_Car.firstModelYear,
+                                                _Car.firstModelYear.plus(2)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive

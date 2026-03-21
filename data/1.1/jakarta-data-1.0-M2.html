@@ -525,14 +525,14 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .head .head{color:#f4f}
 </style>
 <!-- revnumber comes from plugin configuration -->
-<link rel="canonical" href="https://jakarta.ee/specifications/data/1.1.0-M1/jakarta-data-1.1.0-M1" />
+<link rel="canonical" href="https://jakarta.ee/specifications/data/1.0/jakarta-data-1.0" />
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
 <h1>Jakarta Data</h1>
 <div class="details">
-<span id="revnumber"> 1.1.0-M1,</span>
-<span id="revdate">October 09, 2025</span>
+<span id="revnumber"> 1.0,</span>
+<span id="revdate">February 15, 2026</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -600,11 +600,16 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_repository_interfaces">4. Repository interfaces</a>
 <ul class="sectlevel2">
 <li><a href="#_lifecycle_methods">4.1. Lifecycle methods</a></li>
-<li><a href="#_annotated_query_methods">4.2. Annotated query methods</a></li>
+<li><a href="#_annotated_query_methods">4.2. Annotated query methods</a>
+<ul class="sectlevel3">
+<li><a href="#_query_annotations_from_jakarta_persistence">4.2.1. Query annotations from Jakarta Persistence</a></li>
+<li><a href="#_limitations_of_jpql_and_native_sql_queries">4.2.2. Limitations of JPQL and native SQL queries</a></li>
+</ul>
+</li>
 <li><a href="#_parameter_based_automatic_query_methods">4.3. Parameter-based automatic query methods</a></li>
 <li><a href="#_resource_accessor_methods">4.4. Resource accessor methods</a></li>
 <li><a href="#_conflicting_repository_method_annotations">4.5. Conflicting repository method annotations</a></li>
-<li><a href="#special-parameters">4.6. Special parameters for limits, sorting, and pagination</a></li>
+<li><a href="#special-parameters">4.6. Special parameters for additional filtering, limits, sorting, and pagination</a></li>
 <li><a href="#_precedence_of_sort_criteria">4.7. Precedence of sort criteria</a>
 <ul class="sectlevel3">
 <li><a href="#_sort_criteria_within_query_language">4.7.1. Sort criteria within query language</a></li>
@@ -632,96 +637,64 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 </ul>
 </li>
-<li><a href="#_jakarta_data_query_language">5. Jakarta Data Query Language</a>
+<li><a href="#_jakarta_common_query_language">5. Jakarta Common Query Language</a>
 <ul class="sectlevel2">
-<li><a href="#_type_system">5.1. Type system</a></li>
-<li><a href="#_lexical_structure">5.2. Lexical structure</a>
+<li><a href="#_additional_requirements_from_jakarta_data">5.1. Additional requirements from Jakarta Data</a>
 <ul class="sectlevel3">
-<li><a href="#_identifiers_and_keywords">5.2.1. Identifiers and keywords</a></li>
-<li><a href="#_parameters">5.2.2. Parameters</a></li>
-<li><a href="#_operators_and_punctuation">5.2.3. Operators and punctuation</a></li>
-<li><a href="#_string_literals">5.2.4. String literals</a></li>
-<li><a href="#_numeric_literals">5.2.5. Numeric literals</a></li>
-<li><a href="#_whitespace">5.2.6. Whitespace</a></li>
+<li><a href="#_types">5.1.1. Types</a></li>
+<li><a href="#_compound_path_expressions">5.1.2. Compound path expressions</a></li>
+<li><a href="#_select_clause">5.1.3. Select clause</a></li>
 </ul>
 </li>
-<li><a href="#_expressions">5.3. Expressions</a>
+<li><a href="#_limitations_for_non_relational_datastores">5.2. Limitations for non-relational datastores</a>
 <ul class="sectlevel3">
-<li><a href="#_literal_expressions">5.3.1. Literal expressions</a></li>
-<li><a href="#_special_values">5.3.2. Special values</a></li>
-<li><a href="#_parameter_expressions">5.3.3. Parameter expressions</a></li>
-<li><a href="#_enum_literals">5.3.4. Enum literals</a></li>
-<li><a href="#_path_expressions">5.3.5. Path expressions</a></li>
-<li><a href="#_identifier_expressions">5.3.6. Identifier expressions</a></li>
-<li><a href="#_function_calls">5.3.7. Function calls</a></li>
-<li><a href="#_operator_expressions">5.3.8. Operator expressions</a></li>
-<li><a href="#_numeric_types_and_numeric_type_promotion">5.3.9. Numeric types and numeric type promotion</a></li>
+<li><a href="#_arithmetic_operations_and_parentheses">5.2.1. Arithmetic operations and parentheses</a></li>
+<li><a href="#_equality_and_inequality_operators">5.2.2. Equality and inequality operators</a></li>
+<li><a href="#_sorting_and_ordering">5.2.3. Sorting and ordering</a></li>
+<li><a href="#_logical_operators">5.2.4. Logical operators</a></li>
+<li><a href="#_select_clause_2">5.2.5. Select clause</a></li>
+<li><a href="#_where_clause">5.2.6. WHERE clause</a></li>
+<li><a href="#_update_statements">5.2.7. Update statements</a></li>
+<li><a href="#_delete_statements">5.2.8. Delete statements</a></li>
 </ul>
 </li>
-<li><a href="#_conditional_expressions">5.4. Conditional expressions</a>
-<ul class="sectlevel3">
-<li><a href="#_null_comparisons">5.4.1. Null comparisons</a></li>
-<li><a href="#_in_expressions">5.4.2. In expressions</a></li>
-<li><a href="#_between_expressions">5.4.3. Between expressions</a></li>
-<li><a href="#_like_expressions">5.4.4. Like expressions</a></li>
-<li><a href="#_equality_and_inequality_operators">5.4.5. Equality and inequality operators</a></li>
-<li><a href="#_ordering">5.4.6. Ordering</a></li>
-<li><a href="#_logical_operators">5.4.7. Logical operators</a></li>
+<li><a href="#_providers_and_repositories">5.3. Providers and repositories</a></li>
+<li><a href="#_provider_support_for_entities">5.4. Provider support for entities</a></li>
+<li><a href="#_provider_name">5.5. Provider name</a></li>
 </ul>
 </li>
-<li><a href="#_clauses">5.5. Clauses</a>
-<ul class="sectlevel3">
-<li><a href="#_from_clause">5.5.1. From clause</a></li>
-<li><a href="#_where_clause">5.5.2. Where clause</a></li>
-<li><a href="#_select_clause">5.5.3. Select clause</a></li>
-<li><a href="#_set_clause">5.5.4. Set clause</a></li>
-<li><a href="#_order_clause">5.5.5. Order clause</a></li>
-</ul>
-</li>
-<li><a href="#_statements">5.6. Statements</a>
-<ul class="sectlevel3">
-<li><a href="#_select_statements">5.6.1. Select statements</a></li>
-<li><a href="#_update_statements">5.6.2. Update statements</a></li>
-<li><a href="#_delete_statements">5.6.3. Delete statements</a></li>
-</ul>
-</li>
-<li><a href="#_syntax">5.7. Syntax</a></li>
-</ul>
-</li>
-<li><a href="#_jakarta_data_providers">6. Jakarta Data providers</a>
+<li><a href="#_interoperability_with_other_jakarta_ee_specifications">6. Interoperability with other Jakarta EE specifications</a>
 <ul class="sectlevel2">
-<li><a href="#_providers_and_repositories">6.1. Providers and repositories</a></li>
-<li><a href="#_provider_support_for_entities">6.2. Provider support for entities</a></li>
-<li><a href="#_provider_name">6.3. Provider name</a></li>
-</ul>
-</li>
-<li><a href="#_interoperability_with_other_jakarta_ee_specifications">7. Interoperability with other Jakarta EE specifications</a>
-<ul class="sectlevel2">
-<li><a href="#_jakarta_contexts_and_dependency_injection">7.1. Jakarta Contexts and Dependency Injection</a>
+<li><a href="#_jakarta_contexts_and_dependency_injection">6.1. Jakarta Contexts and Dependency Injection</a>
 <ul class="sectlevel3">
-<li><a href="#_cdi_dependency_injection">7.1.1. CDI dependency injection</a></li>
-<li><a href="#_cdi_events">7.1.2. CDI events</a></li>
-<li><a href="#_cdi_extensions_for_jakarta_data_providers">7.1.3. CDI extensions for Jakarta Data providers</a></li>
+<li><a href="#_cdi_dependency_injection">6.1.1. CDI dependency injection</a></li>
+<li><a href="#_cdi_events">6.1.2. CDI events</a></li>
+<li><a href="#_cdi_extensions_for_jakarta_data_providers">6.1.3. CDI extensions for Jakarta Data providers</a></li>
 </ul>
 </li>
-<li><a href="#_jakarta_interceptors">7.2. Jakarta Interceptors</a></li>
-<li><a href="#_jakarta_transactions">7.3. Jakarta Transactions</a></li>
-<li><a href="#_jakarta_persistence">7.4. Jakarta Persistence</a></li>
-<li><a href="#_jakarta_nosql">7.5. Jakarta NoSQL</a></li>
-<li><a href="#_jakarta_bean_validation">7.6. Jakarta Bean Validation</a></li>
+<li><a href="#_jakarta_interceptors">6.2. Jakarta Interceptors</a></li>
+<li><a href="#_jakarta_transactions">6.3. Jakarta Transactions</a></li>
+<li><a href="#_jakarta_persistence">6.4. Jakarta Persistence</a></li>
+<li><a href="#_jakarta_nosql">6.5. Jakarta NoSQL</a></li>
+<li><a href="#_jakarta_bean_validation">6.6. Jakarta Bean Validation</a></li>
 </ul>
 </li>
-<li><a href="#_portability_in_jakarta_data">8. Portability in Jakarta Data</a>
+<li><a href="#_portability_in_jakarta_data">7. Portability in Jakarta Data</a>
 <ul class="sectlevel2">
-<li><a href="#_portability_for_relational_databases">8.1. Portability for relational databases</a></li>
-<li><a href="#_portability_for_nosql_databases">8.2. Portability for NoSQL databases</a>
+<li><a href="#_portability_for_relational_databases">7.1. Portability for relational databases</a></li>
+<li><a href="#_portability_for_nosql_databases">7.2. Portability for NoSQL databases</a>
 <ul class="sectlevel3">
-<li><a href="#_key_value_databases">8.2.1. Key-value databases</a></li>
-<li><a href="#_wide_column_databases">8.2.2. Wide-column databases</a></li>
-<li><a href="#_document_databases">8.2.3. Document databases</a></li>
-<li><a href="#_graph_databases">8.2.4. Graph databases</a></li>
+<li><a href="#_key_value_databases">7.2.1. Key-value databases</a></li>
+<li><a href="#_wide_column_databases">7.2.2. Wide-column databases</a></li>
+<li><a href="#_document_databases">7.2.3. Document databases</a></li>
+<li><a href="#_graph_databases">7.2.4. Graph databases</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#_deprecations">8. Deprecations</a>
+<ul class="sectlevel2">
+<li><a href="#_generic_untyped_sort_criteria">8.1. Generic, untyped Sort criteria</a></li>
 </ul>
 </li>
 </ul>
@@ -734,11 +707,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta Data
 
-Version: 1.1.0-M1
+Version: 1.0
 
 Status: Draft
 
-Release: October 09, 2025</pre>
+Release: February 15, 2026</pre>
 </div>
 </div>
 </div>
@@ -1256,7 +1229,7 @@ The primary entity type is determined by the argument to the first generic type 
 <p><a href="#_parameter_based_automatic_query_methods">parameter-based automatic query methods</a>, that is, <code>@Find</code> and <code>@Delete</code>, and</p>
 </li>
 <li>
-<p><a href="#_annotated_query_methods">annotated query methods</a>, that is <code>@Query</code> and <a href="#_jakarta_data_query_language">Jakarta Data Query Language</a> or Jakarta Persistence Query Language.</p>
+<p><a href="#_annotated_query_methods">annotated query methods</a>, that is <code>@Query</code> and <a href="#_jakarta_common_query_language">Jakarta Common Query Language</a> or Jakarta Persistence Query Language.</p>
 </li>
 </ul>
 </div>
@@ -1794,7 +1767,7 @@ Support for entity associations is not required by this specification.
 <div class="sect2">
 <h3 id="_entity_names_and_persistent_attribute_names">3.2. Entity names and persistent attribute names</h3>
 <div class="paragraph">
-<p>Entities and their persistent attributes may be referenced by name in the query language defined in <a href="#_jakarta_data_query_language">Jakarta Data Query Language</a>.</p>
+<p>Entities and their persistent attributes may be referenced by name in the query language defined in <a href="#_jakarta_common_query_language">Jakarta Common Query Language</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="_entity_names">3.2.1. Entity names</h4>
@@ -2358,7 +2331,7 @@ The query annotation specifies a query in some datastore-native query language.<
 <p>have exactly the same type and position within the parameter list of the method as a positional parameter of the query, or</p>
 </li>
 <li>
-<p>be of type <code>Limit</code>, <code>Order</code>, <code>PageRequest</code>, or <code>Sort</code>.</p>
+<p>be of type <code>Restriction</code>, <code>Sort</code>, <code>Order</code>, <code>Limit</code>, or <code>PageRequest</code>.</p>
 </li>
 </ul>
 </div>
@@ -2400,7 +2373,7 @@ However, Jakarta Data implementations are strongly encouraged to support the fol
 </table>
 </div>
 <div class="paragraph">
-<p>This specification defines the built-in <code>@Query</code> annotation, which may be used to specify a query written in the <a href="#_jakarta_data_query_language">Jakarta Data Query Language</a> defined in the next chapter.</p>
+<p>This specification defines the built-in <code>@Query</code> annotation, which may be used to specify a query written in the <a href="#_jakarta_common_query_language">Jakarta Common Query Language</a> defined in the next chapter.</p>
 </div>
 <div class="paragraph">
 <p>For example, using a named parameter:</p>
@@ -2428,7 +2401,7 @@ Optional&lt;Product&gt; findByName(<span class="annotation">@Param</span>(<span 
 </div>
 <div class="paragraph">
 <p>Programs which make use of annotated query methods are not in general portable between providers.
-However, when the <code>@Query</code> annotation specifies a query written in JDQL, the annotated query method is portable between providers to the extent to which its semantics can be implemented on the underlying data store.</p>
+However, when the <code>@Query</code> annotation specifies a query written in JCQL, the annotated query method is portable between providers to the extent to which its semantics can be implemented on the underlying data store.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2438,8 +2411,7 @@ However, when the <code>@Query</code> annotation specifies a query written in JD
 </td>
 <td class="content">
 <div class="paragraph">
-<p>A Jakarta Data provider might extend this specification to define its own query annotation types.
-For example, a provider might define a <code>@SQL</code> annotation for declaring queries written in SQL.</p>
+<p>A Jakarta Data provider might extend this specification to define its own query annotation types.</p>
 </div>
 </td>
 </tr>
@@ -2448,6 +2420,53 @@ For example, a provider might define a <code>@SQL</code> annotation for declarin
 <div class="paragraph">
 <p>There is no special programming model for query annotations.
 The Jakarta Data implementation automatically recognizes the query annotations it supports.</p>
+</div>
+<div class="sect3">
+<h4 id="_query_annotations_from_jakarta_persistence">4.2.1. Query annotations from Jakarta Persistence</h4>
+<div class="paragraph">
+<p>The Jakarta Persistence specification defines several annotations in the <code>jakarta.persistence.query</code> package that can be used on Jakarta Data repositories.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@StaticNativeQuery</code>, which can annotate a Jakarta Data repository method in place of Jakarta Data&#8217;s <code>@Query</code> to supply a native SQL query.</p>
+</li>
+<li>
+<p><code>@StaticQuery</code>, which can annotate a Jakarta Data repository method in place of Jakarta Data&#8217;s <code>@Query</code> to supply a JPQL query.</p>
+</li>
+<li>
+<p><code>@ReadQueryOptions</code>, which can annotate a Jakarta Data repository method annotated <code>@Query</code>, <code>@StaticQuery</code>, or <code>@StaticNativeQuery</code> that performs a <code>SELECT</code> operation. Alternatively, it can annotate a Jakarta Data repository method annotated <code>@Find</code>. The <code>ReadQueryOptions</code> annotation allows the application to supply additional options defined by Jakarta Persistence for queries that perform read operations.</p>
+</li>
+<li>
+<p><code>@WriteQueryOptions</code>, which can annotate a Jakarta Data repository method annotated <code>@Query</code>, <code>@StaticQuery</code>, or <code>@StaticNativeQuery</code> that performs a <code>DELETE</code> or <code>UPDATE</code> operation. Alternatively, it can annotate a Jakarta Data repository method annotated <code>@Delete</code> when the latter is not used as a lifecycle annotation.  The <code>WriteQueryOptions</code> annotation allows the application to supply additional options defined by Jakarta Persistence for queries that perform write operations.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_limitations_of_jpql_and_native_sql_queries">4.2.2. Limitations of JPQL and native SQL queries</h4>
+<div class="paragraph">
+<p>The Jakarta Data provider is not required to support JPQL or native SQL for repository query methods that require generating or modifying the query, including repository methods with any of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Projections</p>
+</li>
+<li>
+<p><code>Restriction</code> and <code>Constraint</code>-typed parameters</p>
+</li>
+<li>
+<p>Sort criteria other than that which is part of the <code>ORDER BY</code> clause of the given query value</p>
+</li>
+<li>
+<p>Cursor-based pagination</p>
+</li>
+<li>
+<p>Total count of pages or results</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2474,10 +2493,16 @@ The Jakarta Data implementation automatically recognizes the query annotations i
 <div class="ulist">
 <ul>
 <li>
-<p>have exactly the same type and name as a persistent attribute of the entity class, or</p>
+<p>have exactly the same type and name as a persistent attribute of the entity class,</p>
 </li>
 <li>
-<p>be of type <code>Limit</code>, <code>Order</code>, <code>PageRequest</code>, or <code>Sort</code>.</p>
+<p>have exactly the same name as a persistent attribute of the entity class and be of type <code>C&lt;T&gt;</code>, where <code>C</code> is <code>Constraint</code> or any interface which extends <code>Constraint</code> and <code>T</code> is the type of the persistent attribute,</p>
+</li>
+<li>
+<p>have exactly the same name as a persistent attribute of the entity class, be annotated <code>@Is(C.class)</code>, where <code>C</code> is an interface which extends <code>Constraint</code>, and be of the same type as the parameter of a unary static method of <code>C</code> returning <code>C&lt;T&gt;</code> where <code>T</code> is the type of the persistent attribute, or</p>
+</li>
+<li>
+<p>be of type <code>Restriction</code>, <code>Sort</code>, <code>Order</code>, <code>Limit</code>, or <code>PageRequest</code>.</p>
 </li>
 </ul>
 </div>
@@ -2608,9 +2633,9 @@ reject such a method declaration at compile time.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="special-parameters">4.6. Special parameters for limits, sorting, and pagination</h3>
+<h3 id="special-parameters">4.6. Special parameters for additional filtering, limits, sorting, and pagination</h3>
 <div class="paragraph">
-<p>An <a href="#_annotated_query_methods">annotated</a>, <a href="#_parameter_based_automatic_query_methods">parameter-based</a>, or Query by Method Name query method may have <em>special parameters</em> of type <code>Limit</code>, <code>Order</code>, <code>Sort</code>, or <code>PageRequest</code> if the method return type indicates that the method may return multiple entities, that is, if the return type is:</p>
+<p>An <a href="#_annotated_query_methods">annotated</a>, <a href="#_parameter_based_automatic_query_methods">parameter-based</a>, or Query by Method Name query method may have <em>special parameters</em> of type <code>Sort</code>, <code>Order</code>, <code>Limit</code>, or <code>PageRequest</code> if the method return type indicates that the method may return multiple entities, that is, if the return type is:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2626,20 +2651,39 @@ reject such a method declaration at compile time.</p>
 </ul>
 </div>
 <div class="paragraph">
+<p>Any <a href="#_annotated_query_methods">annotated</a> or <a href="#_parameter_based_automatic_query_methods">parameter-based</a> query method may also have a special parameter of type <code>Restriction</code>.</p>
+</div>
+<div class="paragraph">
 <p>A special parameter controls which query results are returned to the caller of a repository method, or in what order the results are returned:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>a <code>Limit</code> allows the query results to be limited to a given range defined in terms of an offset and maximum number of results,</p>
+<p>a <code>Restriction</code> allows the query results to be restricted by applying constraints to entity attributes,</p>
 </li>
 <li>
-<p>a <code>Sort</code> or <code>Order</code> allows the query results to be sorted by a given entity attribute or list of attributes, respectively, and</p>
+<p>a <code>Sort</code> or <code>Order</code> allows the query results to be sorted by a given entity attribute or list of attributes, respectively,</p>
+</li>
+<li>
+<p>a <code>Limit</code> allows the query results to be limited to a given range defined in terms of an offset and maximum number of results, and</p>
 </li>
 <li>
 <p>a <code>PageRequest</code> splits results into pages. A parameter of this type must be declared when the repository method returns a <code>Page</code> of results, as specified below in <a href="#_offset_based_pagination">Offset-based pagination</a>, or a <code>CursoredPage</code>, as specified in <a href="#_cursor_based_pagination">Cursor-based pagination</a>.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The types <code>Restriction</code>, <code>Sort</code>, and <code>Order</code> are parameterized by an entity type.
+Any special parameter declared with one of these types must be declared with type argument <code>E</code> or <code>? super E</code> where <code>E</code> is the queried entity type. Usage of the generic type argument <code>?</code> in a special parameter of type <code>Sort&lt;?&gt;&#8230;&#8203;</code> is deprecated.</p>
+</div>
+<div class="paragraph">
+<p>For example, this repository method allows a list of cars to be filtered and sorted by attributes of <code>Car</code> or of its supertype <code>Vehicle</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">List</span>&lt;Car&gt; cars(Restriction&lt;? <span class="local-variable">super</span> Car&gt; restriction,
+               Order&lt;? <span class="local-variable">super</span> Car&gt; order);</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>A repository method throws <code>NullPointerException</code> if an argument to a special parameter of the method is null.</p>
@@ -2690,7 +2734,7 @@ reject such a method declaration at compile time.</p>
     Page&lt;Product&gt; findByName(<span class="predefined-type">String</span> name, PageRequest pageRequest, Order&lt;Product&gt; order);
 
     <span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">where name like :pattern</span><span class="delimiter">&quot;</span></span>)
-    <span class="predefined-type">List</span>&lt;Product&gt; findByNameLike(<span class="predefined-type">String</span> pattern, Limit max, Sort&lt;?&gt;... sorts);
+    <span class="predefined-type">List</span>&lt;Product&gt; findByNameLike(<span class="predefined-type">String</span> pattern, Limit max, Sort&lt;Product&gt; sort);
 
 }</code></pre>
 </div>
@@ -2767,7 +2811,7 @@ Page&lt;User&gt; findByNamePrefix(<span class="predefined-type">String</span> na
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">WHERE u.age &gt; ?1</span><span class="delimiter">&quot;</span></span>)
 <span class="annotation">@OrderBy</span>(_User.AGE)
-<span class="predefined-type">List</span>&lt;User&gt; findByNamePrefix(<span class="predefined-type">String</span> namePrefix, Sort&lt;?&gt;... sorts);</code></pre>
+<span class="predefined-type">List</span>&lt;User&gt; findByNamePrefix(<span class="predefined-type">String</span> namePrefix, Sort&lt;User&gt; sort);</code></pre>
 </div>
 </div>
 </div>
@@ -2804,7 +2848,7 @@ This parameter allows the caller of a repository method to programmatically expr
 <p>expressed via <a href="#_parameter_based_automatic_query_methods">parameters</a> of a method annotated <code>@Find</code>, or</p>
 </li>
 <li>
-<p>given in the <a href="#_where_clause">where clause</a> of a query specified by a <code>@Query</code> annotation.</p>
+<p>given in the <a href="#Where clause">where clause</a> of a query specified by a <code>@Query</code> annotation.</p>
 </li>
 </ul>
 </div>
@@ -3655,10 +3699,10 @@ An implementation of Jakarta Data should flush as needed to ensure that query re
 </div>
 </div>
 <div class="sect1">
-<h2 id="_jakarta_data_query_language">5. Jakarta Data Query Language</h2>
+<h2 id="_jakarta_common_query_language">5. Jakarta Common Query Language</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Jakarta Data Query Language (JDQL) is a simple language designed to be used inside the <code>@Query</code> annotation to specify the semantics of query methods of Jakarta Data repositories. The language is in essence a subset of the widely-used Jakarta Persistence Query Language (JPQL), and thus a dialect of SQL. But, consistent with the goals of Jakarta Data, it is sufficiently limited in functionality that it is easily implementable across a wide variety of data storage technologies. Thus, the language defined in this chapter excludes features of JPQL which, while useful when the target datasource is a relational database, cannot be easily implemented on all non-relational datastores. In particular, the <code>from</code> clause of a Jakarta Data query may contain only a single entity.</p>
+<p>The Jakarta Common Query Language (JCQL) is defined by the Jakarta Query specification. JCQL is designed to be used inside the <code>@Query</code> annotation to specify the semantics of query methods of Jakarta Data repositories. The language is in essence a subset of the widely-used Jakarta Persistence Query Language (JPQL), and thus a dialect of SQL. But, consistent with the goals of Jakarta Data, it is sufficiently limited in functionality that it is easily implementable across a wide variety of data storage technologies. Thus, the language defined in this chapter excludes features of JPQL which, while useful when the target datasource is a relational database, cannot be easily implemented on all non-relational datastores. In particular, the <code>from</code> clause of a Jakarta Data query may contain only a single entity.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3672,11 +3716,6 @@ A Jakarta Data provider backed by access to a relational database might choose t
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_type_system">5.1. Type system</h3>
-<div class="paragraph">
-<p>Every expression in a JDQL query is assigned a Java type. An implementation of JDQL is required to support the Java types listed in <a href="#_basic_types">Basic types</a>, that is: primitive types, <code>String</code>, <code>LocalDate</code>, <code>LocalDateTime</code>, <code>LocalTime</code>, <code>Year</code>, and <code>Instant</code>, <code>java.util.UUID</code>, <code>java.math.BigInteger</code> and <code>java.math.BigDecimal</code>, <code>byte[]</code>, and  <code>enum</code> types.</p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3684,67 +3723,20 @@ A Jakarta Data provider backed by access to a relational database might choose t
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-An implementation of JDQL is permitted and encouraged to support additional types. Use of such types is not guaranteed to be portable between implementations.
+The initial release of Jakarta Data defined Jakarta Data Query Language (JDQL), which served the same purpose as JCQL. Upon creation of the Jakarta Query specification for Jakarta EE 12, JDQL was donated to the Jakarta Query specification to become JCQL, which remains fully backward compatible with JDQL.
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>The interpretation of an operator expression or literal expression of a given type is given by the interpretation of the equivalent expression in Java. However, the precise behavior of some queries might vary depending on the native semantics of queries on the underlying datastore. For example, numeric precision and overflow, string collation, and integer division are permitted to depart from the semantics of the Java language.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This specification should not be interpreted to mandate an inefficient implementation of query language constructs in cases where the native behavior of the database varies from Java in such minor ways. That said, portability between Jakarta Data providers is maximized when their behavior is closest to the Java language.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Since an attribute of an entity may be null, a JDQL expression may evaluate to a null value.</p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="_lexical_structure">5.2. Lexical structure</h3>
+<h3 id="_additional_requirements_from_jakarta_data">5.1. Additional requirements from Jakarta Data</h3>
 <div class="paragraph">
-<p>Lexical analysis requires recognition of the following token types:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>keywords (reserved identifiers),</p>
-</li>
-<li>
-<p>regular identifiers,</p>
-</li>
-<li>
-<p>named and ordinal parameters,</p>
-</li>
-<li>
-<p>operators and punctuation characters,</p>
-</li>
-<li>
-<p>literal strings, and</p>
-</li>
-<li>
-<p>integer and decimal number literals.</p>
-</li>
-</ul>
+<p>Jakarta Data imposes some additional requirements when a repository query method is annotated to run a JCQL query.</p>
 </div>
 <div class="sect3">
-<h4 id="_identifiers_and_keywords">5.2.1. Identifiers and keywords</h4>
+<h4 id="_types">5.1.1. Types</h4>
 <div class="paragraph">
-<p>An <em>identifier</em> is any legal Java identifier which is not a keyword. Identifiers are case-sensitive: <code>hello</code>, <code>Hello</code>, and <code>HELLO</code> are distinct identifiers.</p>
-</div>
-<div class="paragraph">
-<p>In the JDQL grammar, identifiers are labelled with the <code>IDENTIFIER</code> token type.</p>
-</div>
-<div class="paragraph">
-<p>The following identifiers are <em>keywords</em>: <code>select</code>, <code>update</code>, <code>set</code>, <code>delete</code>, <code>from</code>, <code>where</code>, <code>order</code>, <code>by</code>, <code>asc</code>, <code>desc</code>, <code>not</code>, <code>and</code>, <code>or</code>, <code>between</code>, <code>like</code>, <code>in</code>, <code>null</code>, <code>local</code>, <code>true</code>, <code>false</code>. In addition, every reserved identifier listed in section 4.4.1 of the Jakarta Persistence specification version 3.2 is also considered a reserved identifier. Keywords and other reserved identifiers are case-insensitive: <code>null</code>, <code>Null</code>, and <code>NULL</code> are three ways to write the same keyword.</p>
+<p>Every expression in a JCQL query is assigned a Java type. A Jakarta Data provider is required to support the Java types listed in <a href="#_basic_types">Basic types</a>, that is: primitive types, <code>String</code>, <code>LocalDate</code>, <code>LocalDateTime</code>, <code>LocalTime</code>, <code>Year</code>, and <code>Instant</code>, <code>java.util.UUID</code>, <code>java.math.BigInteger</code> and <code>java.math.BigDecimal</code>, <code>byte[]</code>, and  <code>enum</code> types.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3753,39 +3745,32 @@ This specification should not be interpreted to mandate an inefficient implement
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Use of a reserved identifier as a regular identifier in JDQL might be accepted by a given Jakarta Data provider, but such usage is not guaranteed to be portable between providers.
+A Jakarta Data provider is permitted and encouraged to support additional types. Use of such types is not guaranteed to be portable between implementations.
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_parameters">5.2.2. Parameters</h4>
+<h4 id="_compound_path_expressions">5.1.2. Compound path expressions</h4>
 <div class="paragraph">
-<p>A <em>named parameter</em> is a legal Java identifier prefixed with the <code>:</code> character, for example, <code>:name</code>.</p>
-</div>
-<div class="paragraph">
-<p>An <em>ordinal parameter</em> is a decimal integer prefixed with the <code>?</code> character, for example, <code>?1</code>.</p>
-</div>
-<div class="paragraph">
-<p>Ordinal parameters are numbered sequentially, starting with <code>?1</code>.</p>
+<p>A Jakarta Data provider is not required to support embedded attributes or associations. Therefore it is not required to support compound path expressions in JCQL.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_operators_and_punctuation">5.2.3. Operators and punctuation</h4>
+<h4 id="_select_clause">5.1.3. Select clause</h4>
 <div class="paragraph">
-<p>The character sequences <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>||</code>, <code>=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code> are <em>operators</em>.</p>
+<p>When a <code>select</code> clause contains more than one item, the query return type must be a Java <code>record</code> type. The elements of the tuple are repackaged as an instance of the query return type by calling a constructor of the <code>record</code>, passing the elements in the same order.</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_limitations_for_non_relational_datastores">5.2. Limitations for non-relational datastores</h3>
 <div class="paragraph">
-<p>The characters <code>(</code>, <code>)</code>, and <code>,</code> are <em>punctuation characters</em>.</p>
+<p>This section describes some limitations on JCQL queries that apply when accessing a non-relational datastore.</p>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
+<div class="sect3">
+<h4 id="_arithmetic_operations_and_parentheses">5.2.1. Arithmetic operations and parentheses</h4>
 <div class="paragraph">
 <p>When working with NoSQL databases, the support for arithmetic operations and support of parentheses for precedence might vary significantly:</p>
 </div>
@@ -3812,595 +3797,31 @@ Use of a reserved identifier as a regular identifier in JDQL might be accepted b
 <div class="paragraph">
 <p>Due to the diversity of NoSQL database types and their querying capabilities, there is no guarantee that all NoSQL providers will support punctuation characters such as parentheses <code>(</code>, <code>)</code> for defining operation precedence. It is recommended to consult your NoSQL provider&#8217;s documentation to confirm the supported query features and their behavior.</p>
 </div>
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect3">
-<h4 id="_string_literals">5.2.4. String literals</h4>
-<div class="paragraph">
-<p>A <em>literal string</em> is a character sequence quoted using the character <code>'</code>.</p>
-</div>
-<div class="paragraph">
-<p>A single literal <code>'</code> character may be included within a string literal by self-escaping it, that is, by writing <code>''</code>. For example, the string literal <code>'Furry''s theorem has nothing to do with furries.'</code> evaluates to the string <code>Furry's theorem has nothing to do with furries.</code>.</p>
-</div>
-<div class="paragraph">
-<p>In the grammar, literal strings are labelled with the <code>STRING</code> token type.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_numeric_literals">5.2.5. Numeric literals</h4>
-<div class="paragraph">
-<p>Numeric literals come in two flavors:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>any legal Java decimal literal of type <code>int</code> or <code>long</code> is an <em>integer literal</em>, and</p>
-</li>
-<li>
-<p>any legal Java literal of type <code>float</code> or <code>double</code> is a <em>decimal literal</em>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>In the grammar, integer and decimal literals are labelled with the <code>INTEGER</code> and <code>DOUBLE</code> token types respectively.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-JDQL does not require support for literals written in octal or hexadecimal.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_whitespace">5.2.6. Whitespace</h4>
-<div class="paragraph">
-<p>The characters Space, Horizontal Tab, Line Feed, Form Feed, and Carriage Return are considered whitespace characters and make no contribution to the token stream.</p>
-</div>
-<div class="paragraph">
-<p>As usual, token recognition is "greedy". Therefore, whitespace must be placed between two tokens when:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>a keyword directly follows an identifier or named parameter,</p>
-</li>
-<li>
-<p>an identifier directly follows a keyword or named parameter, or</p>
-</li>
-<li>
-<p>a numeric literal directly follows an identifier, keyword, or parameter.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_expressions">5.3. Expressions</h3>
-<div class="paragraph">
-<p>An expression is a sequence of tokens to which a Java type can be assigned, and which evaluates to a well-defined value when the query is executed. In JDQL, expressions may be categorized as:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>literals,</p>
-</li>
-<li>
-<p>special values,</p>
-</li>
-<li>
-<p>parameters,</p>
-</li>
-<li>
-<p>enum literals,</p>
-</li>
-<li>
-<p>paths,</p>
-</li>
-<li>
-<p>function calls, and</p>
-</li>
-<li>
-<p>operator expressions.</p>
-</li>
-</ul>
-</div>
-<div class="sect3">
-<h4 id="_literal_expressions">5.3.1. Literal expressions</h4>
-<div class="paragraph">
-<p>A string, integer, or decimal literal is assigned the type it would be assigned in Java. So, for example, <code>'Hello'</code> is assigned the type <code>java.lang.String</code>, <code>123</code> is assigned the type <code>int</code>, <code>1e4</code> is assigned the type <code>double</code>, and <code>1.23f</code> is assigned the type <code>float</code>.</p>
-</div>
-<div class="paragraph">
-<p>The syntax for literal expressions is given by the <code>literal</code> grammar rule, and in the previous section titled <a href="#_lexical_structure">Lexical structure</a>.</p>
-</div>
-<div class="paragraph">
-<p>When executed, a literal expression evaluates to its literal value.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_special_values">5.3.2. Special values</h4>
-<div class="paragraph">
-<p>The special values <code>true</code> and <code>false</code> are assigned the type <code>boolean</code>, and evaluate to their literal values.</p>
-</div>
-<div class="paragraph">
-<p>The special values <code>local date</code>, <code>local time</code>, and <code>local datetime</code> are assigned the types <code>java.time.LocalDate</code>, <code>java.time.LocalTime</code>, and <code>java.time.LocalDateTime</code>, and evaluate to the current date and current datetime of the database server, respectively.</p>
-</div>
-<div class="paragraph">
-<p>The syntax for special values is given by the <code>special_expression</code> grammar rule.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_parameter_expressions">5.3.3. Parameter expressions</h4>
-<div class="paragraph">
-<p>A parameter expression, with syntax given by <code>input_parameter</code>, is assigned the type of the repository method parameter it matches. For example, the parameter <code>:titlePattern</code> is assigned the type <code>java.lang.String</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">where title like :titlePattern</span><span class="delimiter">&quot;</span></span>)
-<span class="predefined-type">List</span>&lt;<span class="predefined-type">Book</span>&gt; booksMatchingTitle(<span class="predefined-type">String</span> titlePattern);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>When executed, a parameter expression evaluates to the argument supplied to the parameter of the repository method.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Positional and named parameters must not be mixed in a single query.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_enum_literals">5.3.4. Enum literals</h4>
-<div class="paragraph">
-<p>An <em>enum literal expression</em> is a Java identifier, with syntax specified by <code>enum_literal</code>, and may only occur as the right operand of a <code>set</code> assignment or <code>=</code>/<code>&lt;&gt;</code> equality comparison. It is assigned the type of the left operand of the assignment or comparison. The type must be a Java <code>enum</code> type, and the identifier must be the name of an enumerated value of the <code>enum</code> type including the fully qualified Java enum class name. For example, <code>day &lt;&gt; java.time.DayOfWeek.MONDAY</code> is a legal comparison expression.</p>
-</div>
-<div class="paragraph">
-<p>When executed, an enum expression evaluates to the named member of the Java <code>enum</code> type.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_path_expressions">5.3.5. Path expressions</h4>
-<div class="paragraph">
-<p>A <em>path expression</em> is a period-separated list of Java identifiers, with syntax specified by <code>state_field_path_expression</code>. Each identifier is interpreted as the name of an attribute of an entity or embeddable class. Each prefix of the list is assigned a Java type:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>the first element of the list is assigned the type of the named attribute of the entity being queried, and</p>
-</li>
-<li>
-<p>each subsequent element is assigned the type of the named attribute of the type assigned to the previous element.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The type of the whole path expression is the type of the last element of the list. For example, <code>pages</code> is assigned the type <code>int</code>, <code>address</code> is assigned the type <code>org.example.Address</code>, and <code>address.street</code> is assigned the type <code>java.lang.String</code>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Typically, the last element of a path expression is assigned a <a href="#_basic_types">basic type</a>. Non-terminal path elements are usually assigned an embeddable type, if the element references an <a href="#_embedded_attributes_and_embeddable_classes">embedded attribute</a>, or an entity type, if the element references an <a href="#_entity_associations">association attribute</a>. However, since a Jakarta Data provider is not required to support embedded attributes or associations, a JDQL implementation is not required to support compound path expressions.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>When a path expression is executed, each element of the path is evaluated in turn:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>the first element of the path expression is evaluated in the context of a given record of the queried entity type, and evaluates to the value of the named entity attribute of the given record, and then</p>
-</li>
-<li>
-<p>each subsequent element is evaluated in the context of the result produced the previous element (typically, and embeddable class or associated entity class), and evaluates to the value of the named attribute of the result.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If any element of a path expression evaluates to a null value, the whole path expression evaluates to a null value.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_identifier_expressions">5.3.6. Identifier expressions</h4>
-<div class="paragraph">
-<p>An <em>identifier expression</em>, with syntax given by <code>id_expression</code>, is assigned the type of the unique identifier of the queried entity and evaluates to the unique identifier of a given record. An identifier expression is a synonym for a path expression with one element matching the identifier attribute of the queried entity type. An identifier expression may occur in the <code>select</code> clause, in the <code>order</code> clause, or as a scalar expression in the <code>where</code> clause.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_function_calls">5.3.7. Function calls</h4>
-<div class="paragraph">
-<p>A <em>function call</em> is the name of a JDQL function, followed by a parenthesized list of argument expressions, with syntax given by <code>function_expression</code>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>abs()</code> function is assigned the type of its numeric argument, and evaluates to the absolute value of the numeric value to which its argument evaluates. Its argument must be of numeric type.</p>
-</li>
-<li>
-<p>The <code>length()</code> function is assigned the type <code>java.lang.Integer</code>, and evaluates to the length of string to which its argument evaluates. Its argument must be of type <code>java.lang.String</code>.</p>
-</li>
-<li>
-<p>The <code>lower()</code> function is assigned the type <code>java.lang.String</code>, and evaluates to the lowercase form of the string to which its argument evaluates. Its argument must be of type <code>java.lang.String</code>.</p>
-</li>
-<li>
-<p>The <code>upper()</code> function is assigned the type <code>java.lang.String</code>, and evaluates to the uppercase form of the string to which its argument evaluates. Its argument must be of type <code>java.lang.String</code>.</p>
-</li>
-<li>
-<p>The <code>left()</code> function is assigned the type <code>java.lang.String</code>, and evaluates to a prefix of the string to which its first argument evaluates. The length of the prefix is given by the integer value to which its second argument evaluates. The first argument must be of type <code>java.lang.String</code>, and the second argument must be of integral numeric type.</p>
-</li>
-<li>
-<p>The <code>right()</code> function is assigned the type <code>java.lang.String</code>, and evaluates to a suffix of the string to which its first argument evaluates. The length of the suffix is given by the integer value to which its second argument evaluates. The first argument must be of type <code>java.lang.String</code>, and the second argument must be of integral numeric type.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When any argument expression of any function call evaluates to a null value, the whole function call evaluates to null.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-These functions cannot be emulated on every datastore. When a function cannot be reasonably emulated via the native query capabilities of the database, a JDQL implementation is not required to provide the function.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>If the JDQL implementation does not support a standard function explicitly listed above, it must throw <code>UnsupportedOperationException</code> when the function name occurs in a query. Alternatively, the Jakarta Data provider is permitted to reject a repository method declaration at compilation time if its <code>@Query</code> annotation uses an unsupported function.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-On the other hand, an implementation of JDQL might provide additional built-in functions, and might even allow invocation of user-defined functions. Section 4.7 of the Jakarta Persistence specification defines a set of functions that all JPQL implementations are required to provide, including <code>concat</code>, <code>substring</code>, <code>trim</code>, <code>locate</code>, <code>ceiling</code>, <code>floor</code>, <code>exp</code>, <code>ln</code>, <code>mod</code>, <code>power</code>, <code>round</code>, <code>sign</code>, <code>sqrt</code>, <code>cast</code>, <code>extract</code>, <code>coalesce</code>, and <code>nullif</code>. JDQL implementations are encouraged to support any of these functions which are reasonably implementable.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_operator_expressions">5.3.8. Operator expressions</h4>
-<div class="paragraph">
-<p>The syntax of an <em>operator expression</em> is given by the <code>scalar_expression</code> rule. Within an operator expression, parentheses indicate grouping.</p>
-</div>
-<div class="paragraph">
-<p>All binary infix operators are left-associative. The relative precedence, from highest to lowest precedence, is given by:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><code>*</code> and <code>/</code>,</p>
-</li>
-<li>
-<p><code>+</code> and <code>-</code>,</p>
-</li>
-<li>
-<p><code>||</code>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The unary prefix operators <code>+</code> and <code>-</code> have higher precedence than the binary infix operators. Thus, <code>2 * -3 + 5</code> means <code>(2 * (-3)) + 5</code> and evaluates to <code>-1</code>.</p>
-</div>
-<div class="paragraph">
-<p>The concatenation operator <code>||</code> is assigned the type <code>java.lang.String</code>. Its operand expressions must also be of type <code>java.lang.String</code>. When executed, a concatenation operator expression evaluates to a new string concatenating the strings to which its arguments evaluate.</p>
-</div>
-<div class="paragraph">
-<p>The numeric operators <code>+</code>, <code>-</code>, <code>*</code>, and <code>/</code> have the same meaning for primitive numeric types they have in Java, and operator expression involving these operators are assigned the types they would be assigned in Java.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-As an exception, when the operands of <code>/</code> are both integers, a JDQL implementation is not required to interpret the operator expression as integer division if that is not the native semantics of the database. However, portability is maximized when Jakarta Data providers <em>do</em> interpret such an expression as integer division.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The four numeric operators may also be applied to an operand of wrapper type, for example, to <code>java.lang.Integer</code> or <code>java.lang.Double</code>. In this case, the operator expression is assigned a wrapper type, and evaluates to a null value when either of its operands evaluates to a null value. When both operands are non-null, the semantics are identical to the semantics of an operator expression involving the corresponding primitive types.</p>
-</div>
-<div class="paragraph">
-<p>The four numeric operators may also be applied to operands of type <code>java.math.BigInteger</code> or <code>java.math.BigDecimal</code>.</p>
-</div>
-<div class="paragraph">
-<p>A numeric operator expression is evaluated according to the native semantics of the database. In translating an operator expression to the native query language of the database, a Jakarta Data provider is encouraged, but not required, to apply reasonable transformations so that evaluation of the expression more closely mimics the semantics of the Java language.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_numeric_types_and_numeric_type_promotion">5.3.9. Numeric types and numeric type promotion</h4>
-<div class="paragraph">
-<p>The type assigned to an operator expression depends on the types of its operand expression, which need not be identical. The rules for numeric promotion are given in section 4.7 of the Jakarta Persistence specification version 3.2:</p>
-</div>
-<div class="quoteblock">
-<blockquote>
-<div class="ulist">
-<ul>
-<li>
-<p>If there is an operand of type <code>Double</code> or <code>double</code>, the expression is of type <code>Double</code>;</p>
-</li>
-<li>
-<p>otherwise, if there is an operand of type <code>Float</code> or <code>float</code>, the expression is of type <code>Float</code>;</p>
-</li>
-<li>
-<p>otherwise, if there is an operand of type <code>BigDecimal</code>, the expression is of type <code>BigDecimal</code>;</p>
-</li>
-<li>
-<p>otherwise, if there is an operand of type <code>BigInteger</code>, the expression is of type <code>BigInteger</code>, unless the operator is <code>/</code> (division), in which case the expression type is not defined here;</p>
-</li>
-<li>
-<p>otherwise, if there is an operand of type <code>Long</code> or <code>long</code>, the expression is of type <code>Long</code>, unless the operator is <code>/</code> (division), in which case the expression type is not defined here;</p>
-</li>
-<li>
-<p>otherwise, if there is an operand of integral type, the expression is of type <code>Integer</code>, unless the operator is <code>/</code> (division), in which case the expression type is not defined here.</p>
-</li>
-</ul>
-</div>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_conditional_expressions">5.4. Conditional expressions</h3>
-<div class="paragraph">
-<p>A <em>conditional expression</em> is a sequence of tokens which specifies a condition which, for a given record, might be <em>satisfied</em> or <em>unsatisfied</em>. Unlike the scalar <a href="#_expressions">Expressions</a> defined in the previous section, a conditional expression is not considered to have a well-defined type.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-JPQL defines the result of a conditional expression in terms of ternary logic. JDQL does not specify that a conditional expression evaluates to well-defined value, only the effect of the conditional expression when it is used as a restriction. The "value" of a conditional expression is not considered observable by the application program.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Conditional expressions may be categorized as:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>null</code> comparisons,</p>
-</li>
-<li>
-<p><code>in</code> expressions,</p>
-</li>
-<li>
-<p><code>between</code> expressions,</p>
-</li>
-<li>
-<p><code>like</code> expressions,</p>
-</li>
-<li>
-<p>equality and inequality operator expressions, and</p>
-</li>
-<li>
-<p>logical operator expressions.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The syntax for conditional expressions is given by the <code>conditional_expression</code> rule. Within a conditional expression, parentheses indicate grouping.</p>
-</div>
-<div class="sect3">
-<h4 id="_null_comparisons">5.4.1. Null comparisons</h4>
-<div class="paragraph">
-<p>A <code>null</code> comparison, with syntax given by <code>null_comparison_expression</code> is satisfied when:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>the <code>not</code> keyword is missing, and its operand evaluates to a null value, or</p>
-</li>
-<li>
-<p>the <code>not</code> keyword occurs, and its operand evaluates to any non-null value.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_in_expressions">5.4.2. In expressions</h4>
-<div class="paragraph">
-<p>An <code>in</code> expression, with syntax given by <code>in_expression</code> is satisfied when its leftmost operand evaluates to a non-null value, and:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>the <code>not</code> keyword is missing, and any one of its parenthesized operands evaluates to the same value as its leftmost operand, or</p>
-</li>
-<li>
-<p>the <code>not</code> keyword occurs, and none of its parenthesized operands evaluate to the same value as its leftmost operand.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>All operands must have the same type.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_between_expressions">5.4.3. Between expressions</h4>
-<div class="paragraph">
-<p>A <code>between</code> expression, with syntax given by <code>between_expression</code> is satisfied when its operands all evaluate to non-null values, and, if the <code>not</code> keyword is missing, its left operand evaluates to a value which is:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>larger than or equal to the value taken by its middle operand, and</p>
-</li>
-<li>
-<p>smaller than or equal to the value taken by its right operand.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Or, if the <code>not</code> keyword occurs, the left operand must evaluate to a value which is:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>strictly smaller than to the value taken by its middle operand, or</p>
-</li>
-<li>
-<p>strictly larger than the value taken by its right operand.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>All three operands must have the same type.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_like_expressions">5.4.4. Like expressions</h4>
-<div class="paragraph">
-<p>A <code>like</code> expression is satisfied when its left operand evaluates to a non-null value and:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>the <code>not</code> keyword is missing, and this value matches the pattern, or</p>
-</li>
-<li>
-<p>the <code>not</code> keyword occurs, and the value does not match the pattern.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The left operand must have type <code>java.lang.String</code>.</p>
-</div>
-<div class="paragraph">
-<p>Within the pattern, <code>_</code> matches any single character, and <code>%</code> matches any sequence of characters.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_equality_and_inequality_operators">5.4.5. Equality and inequality operators</h4>
-<div class="paragraph">
-<p>The equality and inequality operators are <code>=</code>, <code>&lt;&gt;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>For primitive types, these operators have the same meaning they have in Java, except for <code>&lt;&gt;</code> which has the same meaning that <code>!=</code> has in Java. Such an operator expression is satisfied when the equivalent operator expression would evaluate to <code>true</code> in Java.</p>
-</li>
-<li>
-<p>For wrapper types, these operators are satisfied if both operands evaluate to non-null values, and the equivalent operator expression involving primitives would be satisfied.</p>
-</li>
-<li>
-<p>For other types, these operators are evaluated according to the native semantics of the database.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The operands of an equality or inequality operator must have the same type.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Portability is maximized when Jakarta Data providers interpret equality and inequality operators in a manner consistent with the implementation of <code>Object.equals()</code> or <code>Comparable.compareTo()</code> for the assigned Java type.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
+<h4 id="_equality_and_inequality_operators">5.2.2. Equality and inequality operators</h4>
 <div class="paragraph">
 <p>When using NoSQL databases, there are limitations to the support of equality and inequality operators:</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Key-Value Databases</strong>: Support for the equality restriction on the key attribute is required. The key attribute is defined by the annotation <code>jakarta.nosql.Id</code>. Key-value databases are not required to support any other restrictions.</p>
-</li>
-<li>
-<p><strong>Wide-Column Databases</strong>: Support for equality restriction and the inequality restriction on the <code>Id</code> attribute is required. Support for restrictions on other entity attributes is not required. These operations typically work only with the <code>Id</code> by default but might be compatible for other entity attributes if secondary indexes are configured in the database schema.</p>
-</li>
-<li>
-<p><strong>Graph and Document Databases</strong>: Support for all equality and inequality operators is required.</p>
-</li>
-</ol>
-</div>
-</td>
-</tr>
-</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Key-Value Databases</dt>
+<dd>
+<p>Support for the equality restriction on the unique identifier attribute is required. The unique identifier attribute is defined by the annotation <code>jakarta.nosql.Id</code>. Key-value databases are not required to support any other restrictions.</p>
+</dd>
+<dt class="hdlist1">Wide-Column Databases</dt>
+<dd>
+<p>Support for equality restriction and the inequality restriction on the <code>Id</code> attribute is required. Support for restrictions on other entity attributes is not required. These operations typically work only with the <code>Id</code> by default but might be compatible for other entity attributes if secondary indexes are configured in the database schema.</p>
+</dd>
+<dt class="hdlist1">Graph and Document Databases</dt>
+<dd>
+<p>Support for all equality and inequality operators is required when one of the operands is a value. Some Graph and Document databases might not be capable of comparisons when both of the operands are entity attributes.</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ordering">5.4.6. Ordering</h4>
-<div class="paragraph">
-<p>Every <a href="#_basic_types">basic type</a> can, in principle, be equipped with a total order. An order for a type determines the result of inequality comparisons, and the effect of the <a href="#_order_clause">Order clause</a>.</p>
-</div>
-<div class="paragraph">
-<p>For numeric types, and for date, time, and datetime types, the total order is unique and completely determined by the semantics of the type. JDQL implementations must sort these types according to their natural order, that is, the order in JDQL must agree with the order defined by Java.</p>
-</div>
-<div class="paragraph">
-<p>Boolean values must be ordered so that <code>false &lt; true</code> is satisfied.</p>
-</div>
-<div class="paragraph">
-<p>For other types, there is at least some freedom in the choice of order. Usually, the order is determined by the native semantics of the database. Note that:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Textual data is represented in JDQL as the type <code>java.lang.String</code>. Strings are in general ordered lexicographically, but the ordering also depends on the character set and collation used by the database server. Applications must not assume that the order agrees with the <code>compareTo()</code> method of <code>java.lang.String</code>. In evaluating an inequality involving string operands, an implementation of JDQL is not required to emulate Java collation.</p>
-</li>
-<li>
-<p>Binary data is represented in JDQL as the type <code>byte[]</code>. Binary data is in general ordered lexicographically with respect to the constituent bytes. However, since this ordering is rarely meaningful, this specification does not require implementations of JDQL to respect it.</p>
-</li>
-<li>
-<p>This specification does not define an order for the sorting of Java <code>enum</code> values, which is provider-dependent. A programming model for entity classes might allow control over the order of <code>enum</code> values. For example, Jakarta Persistence allows this via the <code>@Enumerated</code> annotation.</p>
-</li>
-<li>
-<p>This specification does not define an order for UUID values, which is provider-dependent.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
+<h4 id="_sorting_and_ordering">5.2.3. Sorting and ordering</h4>
 <div class="paragraph">
 <p>When using NoSQL databases, sorting support varies by database type:</p>
 </div>
@@ -4416,7 +3837,7 @@ Portability is maximized when Jakarta Data providers interpret equality and ineq
 <div class="ulist">
 <ul>
 <li>
-<p>The key attribute, defined by an annotation such as <code>jakarta.nosql.Id</code>.</p>
+<p>The unique identifier attribute, defined by an annotation such as <code>jakarta.nosql.Id</code>.</p>
 </li>
 <li>
 <p>Fields that are indexed as secondary indexes.</p>
@@ -4446,56 +3867,14 @@ Portability is maximized when Jakarta Data providers interpret equality and ineq
 </dd>
 </dl>
 </div>
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>If the Jakarta Data provider cannot satisfy a request for sorted query results, it must throw <code>DataException</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_logical_operators">5.4.7. Logical operators</h4>
+<h4 id="_logical_operators">5.2.4. Logical operators</h4>
 <div class="paragraph">
-<p>The logical operators are <code>and</code>, <code>or</code>, and <code>not</code>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>An <code>and</code> operator expression is satisfied if and only if both its operands are satisfied.</p>
-</li>
-<li>
-<p>An <code>or</code> operator expression is satisfied if at least one of its operands is satisfied.</p>
-</li>
-<li>
-<p>A <code>not</code> operator expression is never satisfied if its operand <em>is</em> satisfied.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>This specification leaves undefined the interpretation of the <code>not</code> operator when its operand <em>is not</em> satisfied.</p>
-</div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-A compliant implementation of JDQL might feature SQL/JPQL-style ternary logic, where <code>not n &gt; 0</code> is an unsatisfied logical expression when <code>n</code> evaluates to null, or it might feature binary logic where the same expression is considered satisfied. Application programmers should take great care when using the <code>not</code> operator with scalar expressions involving <code>null</code> values.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Syntactically, logical operators are parsed with lower precedence than <a href="#_equality_and_inequality_operators">equality and inequality operators</a> and other <a href="#_conditional_expressions">conditional expressions listed above</a>. The <code>not</code> operator has higher precedence than <code>and</code> and <code>or</code>. The <code>and</code> operator has higher precedence than <code>or</code>.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>When using NoSQL databases, the support for restrictions varies depending on the database type:</p>
+<p>When using NoSQL databases, support varies depending on the database type:</p>
 </div>
 <div class="dlist">
 <dl>
@@ -4505,7 +3884,7 @@ A compliant implementation of JDQL might feature SQL/JPQL-style ternary logic, w
 </dd>
 <dt class="hdlist1">Wide-column databases</dt>
 <dd>
-<p>Wide-column databases are not required to support the <code>AND</code> operator or the <code>OR</code> operator. Restrictions must be supported for the key attribute that is annotated with <code>jakarta.nosql.Id</code>. Support for restrictions on other attributes is not required. Typically they can be used if they are indexed as secondary indexes, although support varies by database provider.</p>
+<p>Wide-column databases are not required to support the <code>AND</code> operator or the <code>OR</code> operator. Restrictions must be supported for the unique identifier attribute that is annotated with <code>jakarta.nosql.Id</code>. Support for restrictions on other attributes is not required. Typically they can be used if they are indexed as secondary indexes, although support varies by database provider.</p>
 </dd>
 <dt class="hdlist1">Graph and document databases</dt>
 <dd>
@@ -4513,148 +3892,9 @@ A compliant implementation of JDQL might feature SQL/JPQL-style ternary logic, w
 </dd>
 </dl>
 </div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_clauses">5.5. Clauses</h3>
-<div class="paragraph">
-<p>Each JDQL statement is built from a sequence of <em>clauses</em>. The beginning of a clause is identified by a keyword: <code>from</code>, <code>where</code>, <code>select</code>, <code>set</code>, or <code>order</code>.</p>
-</div>
-<div class="paragraph">
-<p>There is a logical ordering of clauses, reflecting the order in which their effect must be computed by the datastore:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><code>from</code></p>
-</li>
-<li>
-<p><code>where</code>,</p>
-</li>
-<li>
-<p><code>select</code> or <code>set</code>,</p>
-</li>
-<li>
-<p><code>order</code>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The interpretation and effect of each clause in this list is influenced by clauses occurring earlier in the list, but not by clauses occurring later in the list.</p>
 </div>
 <div class="sect3">
-<h4 id="_from_clause">5.5.1. From clause</h4>
-<div class="paragraph">
-<p>The <code>from</code> clause, with syntax given by <code>from_clause</code>, specifies an <em>entity name</em> which identifies the queried entity. Path expressions occurring in later clauses are interpreted with respect to this entity. That is, the first element of each path expression in the query must be a persistent attribute of the entity named in the <code>from</code> clause. The entity name is a Java identifier, usually the unqualified name of the entity class, as specified in <a href="#_entity_names">Entity names</a>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The syntax of the <code>update</code> statement is irregular, with the <code>from</code> keyword implied. That is, the syntax <em>should</em> be <code>update from Entity</code>, but for historical reasons it is simply <code>update Entity</code>.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The <code>from</code> clause is optional in <code>select</code> statements. When it is missing, the queried entity is determined by the return type of the repository method, or, if the return type is not an entity type, by the primary entity type of the repository.</p>
-</div>
-<div class="paragraph">
-<p>For example, this repository method declaration:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">where title like :title</span><span class="delimiter">&quot;</span></span>)
-<span class="predefined-type">List</span>&lt;<span class="predefined-type">Book</span>&gt; booksByType(<span class="predefined-type">String</span> title);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>is equivalent to:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Query</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">from Book where title like :title</span><span class="delimiter">&quot;</span></span>)
-<span class="predefined-type">List</span>&lt;<span class="predefined-type">Book</span>&gt; booksByType(<span class="predefined-type">String</span> title);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_where_clause">5.5.2. Where clause</h4>
-<div class="paragraph">
-<p>The <code>where</code> clause, with syntax given by <code>where_clause</code>, specifies a conditional expression used to restrict the records returned, deleted, or updated by the query. Only records for which the conditional expression is satisfied are returned, deleted, or updated.</p>
-</div>
-<div class="paragraph">
-<p>The <code>where</code> clause is always optional. When it is missing, there is no restriction, and all records of the queried entity type are returned, deleted, or updated.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_select_clause">5.5.3. Select clause</h4>
-<div class="paragraph">
-<p>The <code>select</code> clause, with syntax given by <code>select_clause</code>, specifies one or more path expressions which determine the values returned by the query. Each path expression is evaluated for each record which satisfies the restriction imposed by the <code>where</code> clause, as specified in <a href="#_path_expressions">Path expressions</a>, and a tuple containing the resulting values is added to the query results.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-When a <code>select</code> clause contains more than one item, the query return type must be a Java <code>record</code> type, and the elements of the tuple are repackaged as an instance of the query return type by calling a constructor of the <code>record</code>, passing the elements in the same order they occur in the <code>select</code> list.
-When the <code>select</code> clause contains only one item, the query directly returns the values of the path expression.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Alternatively, the <code>select</code> clause may contain either:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>a single <code>count(this)</code> aggregate expression, which evaluates to the number of records which satisfy the restriction, or</p>
-</li>
-<li>
-<p>a single <a href="#_identifier_expressions">identifier expression</a>, which evaluates to the unique identifier of each record.</p>
-<div class="literalblock">
-<div class="content">
-<pre>A query beginning with `select count(this)` always returns a single result of type `Long`, no matter how many records satisfy the conditional expression in the `where` clause.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If a datastore does not natively provide the ability to count query results, the Jakarta Data provider is strongly encouraged, but not required, to implement this operation by counting the query results in Java.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>If the JDQL implementation does not support <code>count(this)</code>, it must throw <code>UnsupportedOperationException</code> when this aggregate expression occurs in a query.  Alternatively, the Jakarta Data provider is permitted to reject a repository method declaration at compilation time if its <code>@Query</code> annotation uses the unsupported aggregate expression.</p>
-</div>
-<div class="paragraph">
-<p>The <code>select</code> clause is optional in <code>select</code> statements. When it is missing, the query returns the queried entity.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
+<h4 id="_select_clause_2">5.2.5. Select clause</h4>
 <div class="paragraph">
 <p>When working with NoSQL databases, the <code>select</code> clause behavior may vary depending on the database structure and capabilities:</p>
 </div>
@@ -4680,253 +3920,52 @@ If a datastore does not natively provide the ability to count query results, the
 <div class="paragraph">
 <p>It is advisable to review your NoSQL provider&#8217;s documentation to confirm the support and performance implications of <code>select</code> clauses and aggregate functions in your queries.</p>
 </div>
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>If the Jakarta Data provider does not support <code>count(this)</code>, it must throw <code>UnsupportedOperationException</code> when this aggregate expression occurs in a query.  Alternatively, the Jakarta Data provider is permitted to reject a repository method declaration at compilation time if its <code>@Query</code> annotation uses the unsupported aggregate expression.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_set_clause">5.5.4. Set clause</h4>
+<h4 id="_where_clause">5.2.6. WHERE clause</h4>
 <div class="paragraph">
-<p>The <code>set</code> clause, with syntax given by <code>set_clause</code>, specifies a list of updates to attributes of the queried entity. For each record which satisfies the restriction imposed by the <code>where</code> clause, and for each element of the list, the scalar expression is evaluated and assigned to the entity attribute identified by the path expression.</p>
+<p>When working with NoSQL databases, the <code>WHERE</code> clause behavior may vary depending on the database structure and capabilities:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Key-Value Databases</dt>
+<dd>
+<p>Support for a <code>WHERE</code> clause with an equality restriction on the unique identifier attribute is required. A key-value database might not be capable of processing a query without a <code>WHERE</code> clause or with a <code>WHERE</code> clause that does not include an equality restriction on the unique identifier attribute.</p>
+</dd>
+<dt class="hdlist1">Wide-Column Databases</dt>
+<dd>
+<p>Support for a <code>WHERE</code> clause with an equality restriction on the unique identifier attribute is required. A wide-column database might not be capable of processing a query without a <code>WHERE</code> clause or with a <code>WHERE</code> clause that restricts an attribute other than the unique identifier.</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_order_clause">5.5.5. Order clause</h4>
-<div class="paragraph">
-<p>The <code>order</code> clause (or <code>order by</code> clause), with syntax given by <code>orderby_clause</code>, specifies a lexicographic order for the query results, that is, a list of entity attributes used to sort the records which satisfy the restriction imposed by the <code>where</code> clause. The keywords <code>asc</code> and <code>desc</code> specify that a given attribute should be sorted in ascending or descending order respectively; when neither is specified, ascending order is the default.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-An implementation of JDQL is not required to support sorting by entity attributes which are not returned by the query. If a query returns the queried entity, then any sortable attribute of the queried entity may occur in the <code>order</code> clause. Otherwise, if the query has an explicit <code>select</code> clause, a provider might require that an attribute which occurs in the <code>order</code> also occurs in the <code>select</code>.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Entity attributes occurring earlier in the <code>order by</code> clause take precedence. That is, an attribute occurring later in the <code>order by</code> clause is only used to resolve "ties" between records which cannot be unambiguously ordered using only earlier attributes.</p>
-</div>
-<div class="paragraph">
-<p>This specification does not define how null values are ordered with respect to non-null values. The ordering of null values may vary between data stores and between Jakarta Data providers.</p>
-</div>
-<div class="paragraph">
-<p>The <code>order</code> clause is always optional. When it is missing, and when no sort criteria are given as arguments to a parameter of the repository method, the order of the query results is undefined, and might not be deterministic.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If a datastore does not natively provide the ability to sort query results, the Jakarta Data provider is strongly encouraged, but not required, to sort the query results in Java before returning the results to the client.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>If the Jakarta Data provider cannot satisfy a request for sorted query results, it must throw <code>DataException</code>.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_statements">5.6. Statements</h3>
-<div class="paragraph">
-<p>Finally, there are three kinds of <em>statement</em>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>select</code> statements,</p>
-</li>
-<li>
-<p><code>update</code> statements, and</p>
-</li>
-<li>
-<p><code>delete</code> statements.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The clauses which can appear in a statement are given by the grammar for each kind of statement.</p>
-</div>
-<div class="sect3">
-<h4 id="_select_statements">5.6.1. Select statements</h4>
-<div class="paragraph">
-<p>A <code>select</code> statement, with syntax given by <code>select_statement</code>, returns data to the client. For each record which satisfies the restriction imposed by the <code>where</code> clause, a result is returned containing the value obtained by evaluating the path expression in the <code>select</code> clause. Alternatively, for the case of <code>select count(this)</code>, the query returns the number of records which satisfied the restriction.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_update_statements">5.6.2. Update statements</h4>
-<div class="paragraph">
-<p>An <code>update</code> statement, with syntax given by <code>update_statement</code>, updates each record which satisfies the restriction imposed by the <code>where</code> clause, and returns the number of updated records to the client.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
+<h4 id="_update_statements">5.2.7. Update statements</h4>
 <div class="paragraph">
 <p>If a NoSQL database is not capable of conditional updates or cannot determine the number of matching records reliably for an <code>update</code> operation that returns an <code>int</code> or <code>long</code>, the <code>update</code> operation must throw an <code>UnsupportedOperationException</code>.</p>
 </div>
 <div class="paragraph">
 <p>Additionally, in databases with <strong>append-only semantics</strong>—such as many time-series and wide-column databases—the <code>update</code> operation may behave more like an <code>insert</code>, and repeated updates to the same record might not overwrite previous values.</p>
 </div>
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect3">
-<h4 id="_delete_statements">5.6.3. Delete statements</h4>
+<h4 id="_delete_statements">5.2.8. Delete statements</h4>
 <div class="paragraph">
-<p>A <code>delete</code> statement, with syntax given by <code>delete_statement</code>, deletes each record which satisfies the restriction imposed by the <code>where</code> clause, and returns the number of deleted records to the client.</p>
+<p>If a NoSQL database is not capable of the execution of conditional deletes or cannot determine the number of deleted records reliably for a <code>delete</code> operation that returns an <code>int</code> or <code>long</code>, the <code>delete</code> operation must throw an <code>UnsupportedOperationException</code>.
+== Jakarta Data providers</p>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If a NoSQL database is not capable of the execution of conditional deletes or cannot determine the number of deleted records reliably for a <code>delete</code> operation that returns an <code>int</code> or <code>long</code>, the <code>delete</code> operation must throw an <code>UnsupportedOperationException</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_syntax">5.7. Syntax</h3>
-<div class="paragraph">
-<p>The following grammar defines the syntax of JDQL, via ANTLR4-style BNF.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="antlrv4">grammar JDQL;
-
-statement : select_statement | update_statement | delete_statement;
-
-select_statement : select_clause? from_clause? where_clause? orderby_clause?;
-update_statement : 'UPDATE' entity_name set_clause where_clause?;
-delete_statement : 'DELETE' from_clause where_clause?;
-
-from_clause : 'FROM' entity_name;
-
-where_clause : 'WHERE' conditional_expression;
-
-set_clause : 'SET' update_item (',' update_item)*;
-update_item : state_field_path_expression '=' (scalar_expression | 'NULL');
-
-select_clause : 'SELECT' (select_item | select_items);
-select_item
-    : state_field_path_expression
-    | id_expression
-    | aggregate_expression
-    ;
-select_items
-    : state_field_path_expression (',' state_field_path_expression)+
-    ;
-
-orderby_clause : 'ORDER' 'BY' orderby_item (',' orderby_item)*;
-orderby_item : (state_field_path_expression | id_expression) ('ASC' | 'DESC');
-
-conditional_expression
-    // highest to lowest precedence
-    : '(' conditional_expression ')'
-    | null_comparison_expression
-    | in_expression
-    | between_expression
-    | like_expression
-    | comparison_expression
-    | 'NOT' conditional_expression
-    | conditional_expression 'AND' conditional_expression
-    | conditional_expression 'OR' conditional_expression
-    ;
-
-comparison_expression : scalar_expression ('=' | '&gt;' | '&gt;=' | '&lt;' | '&lt;=' | '&lt;&gt;') scalar_expression;
-between_expression : scalar_expression 'NOT'? 'BETWEEN' scalar_expression 'AND' scalar_expression;
-like_expression : scalar_expression 'NOT'? 'LIKE' STRING;
-
-in_expression : state_field_path_expression 'NOT'? 'IN' '(' in_item (',' in_item)* ')';
-in_item : literal | enum_literal | input_parameter;
-
-null_comparison_expression : state_field_path_expression 'IS' 'NOT'? 'NULL';
-
-scalar_expression
-    // highest to lowest precedence
-    : '(' scalar_expression ')'
-    | primary_expression
-    | ('+' | '-') scalar_expression
-    | scalar_expression ('*' | '/') scalar_expression
-    | scalar_expression ('+' | '-') scalar_expression
-    | scalar_expression '||' scalar_expression
-    ;
-
-primary_expression
-    : function_expression
-    | special_expression
-    | id_expression
-    | state_field_path_expression
-    | enum_literal
-    | input_parameter
-    | literal
-    ;
-
-id_expression : 'ID' '(' 'THIS' ')' ;
-
-aggregate_expression : 'COUNT' '(' 'THIS' ')';
-
-function_expression
-    : 'ABS' '(' scalar_expression ')'
-    | 'LENGTH' '(' scalar_expression ')'
-    | 'LOWER' '(' scalar_expression ')'
-    | 'UPPER' '(' scalar_expression ')'
-    | 'LEFT' '(' scalar_expression ',' scalar_expression ')'
-    | 'RIGHT' '(' scalar_expression ',' scalar_expression ')'
-    ;
-
-special_expression
-    : 'LOCAL' 'DATE'
-    | 'LOCAL' 'DATETIME'
-    | 'LOCAL' 'TIME'
-    | 'TRUE'
-    | 'FALSE'
-    ;
-
-state_field_path_expression : IDENTIFIER ('.' IDENTIFIER)*;
-
-entity_name : IDENTIFIER; // no ambiguity
-
-enum_literal : IDENTIFIER ('.' IDENTIFIER)*; // ambiguity with state_field_path_expression resolvable semantically
-
-input_parameter : ':' IDENTIFIER | '?' INTEGER;
-
-literal : STRING | INTEGER | DOUBLE;</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_jakarta_data_providers">6. Jakarta Data providers</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>A Jakarta Data provider might come as an integrated component of a Jakarta EE container, or it might be a separate component that integrates with the Jakarta EE container via standard or proprietary SPIs.
 For example, a Jakarta Data provider might use a CDI portable extension to integrate with dependency injection.
 The role of the Jakarta Data provider is to supply implementations of application-defined repositories.</p>
 </div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="_providers_and_repositories">6.1. Providers and repositories</h3>
+<h3 id="_providers_and_repositories">5.3. Providers and repositories</h3>
 <div class="paragraph">
 <p>A Jakarta Data provider must supply an implementation of each repository interface which either:</p>
 </div>
@@ -4967,7 +4006,7 @@ It is the responsibility of the application developer to ensure that each reposi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_provider_support_for_entities">6.2. Provider support for entities</h3>
+<h3 id="_provider_support_for_entities">5.4. Provider support for entities</h3>
 <div class="paragraph">
 <p>A Jakarta Data provider typically supports one entity-defining annotation type, but it may support multiple entity-defining annotation types.
 A provider may even have no entity-defining annotation and feature a programming model for entity classes where the entity classes are unannotated.</p>
@@ -5017,7 +4056,7 @@ If the entities associated with a given repository are declared using a mix of a
 </div>
 </div>
 <div class="sect2">
-<h3 id="_provider_name">6.3. Provider name</h3>
+<h3 id="_provider_name">5.5. Provider name</h3>
 <div class="paragraph">
 <p>The entity-defining annotation type is the preferred way to avoid conflicts between Jakarta Data providers.
 But when multiple Jakarta Data providers support the same entity-defining annotation, the application must disambiguate the Jakarta Data provider for a repository by explicitly specifying the <code>provider</code> attribute of the <code>Repository</code> annotation.</p>
@@ -5029,18 +4068,18 @@ But when multiple Jakarta Data providers support the same entity-defining annota
 </div>
 </div>
 <div class="sect1">
-<h2 id="_interoperability_with_other_jakarta_ee_specifications">7. Interoperability with other Jakarta EE specifications</h2>
+<h2 id="_interoperability_with_other_jakarta_ee_specifications">6. Interoperability with other Jakarta EE specifications</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section discusses interoperability with related Jakarta EE <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> specifications. When operating within a Jakarta EE product, the availability of other Jakarta EE technologies depends on whether the Jakarta EE Core profile, Jakarta EE Web profile, or Jakarta EE Platform is used.</p>
 </div>
 <div class="sect2">
-<h3 id="_jakarta_contexts_and_dependency_injection">7.1. Jakarta Contexts and Dependency Injection</h3>
+<h3 id="_jakarta_contexts_and_dependency_injection">6.1. Jakarta Contexts and Dependency Injection</h3>
 <div class="paragraph">
 <p>Contexts and Dependency Injection <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> (CDI) is a specification in the Jakarta EE Core profile that provides a powerful and flexible dependency injection framework for Java applications. CDI provides a programming model based around decoupled components with container-managed lifecycles and container-injected dependencies, enabling loose coupling and promoting modular and reusable code.</p>
 </div>
 <div class="sect3">
-<h4 id="_cdi_dependency_injection">7.1.1. CDI dependency injection</h4>
+<h4 id="_cdi_dependency_injection">6.1.1. CDI dependency injection</h4>
 <div class="paragraph">
 <p>In the Jakarta EE environment, CDI allows implementations of Jakarta Data repositories to be made available for injection via the <code>@Inject</code> annotation.</p>
 </div>
@@ -5124,14 +4163,14 @@ CarRepository repository;
 </div>
 </div>
 <div class="sect3">
-<h4 id="_cdi_events">7.1.2. CDI events</h4>
+<h4 id="_cdi_events">6.1.2. CDI events</h4>
 <div class="paragraph">
 <p>A repository implementation may raise CDI events.
 In the Jakarta EE environment, the repository implementation is required to raise the event types defined in the package <code>jakarta.data.event</code> when lifecycle methods annotated <code>@Insert</code>, <code>@Update</code>, or <code>@Delete</code> are invoked, as specified by the API documentation of these annotations.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_cdi_extensions_for_jakarta_data_providers">7.1.3. CDI extensions for Jakarta Data providers</h4>
+<h4 id="_cdi_extensions_for_jakarta_data_providers">6.1.3. CDI extensions for Jakarta Data providers</h4>
 <div class="paragraph">
 <p>In environments where CDI Full or CDI Lite is available, Jakarta Data providers can make use of a CDI extension&#8212;&#8203;an implementation of <code>jakarta.enterprise.inject.spi.Extension</code> or <code>jakarta.enterprise.inject.build.compatible.spi.BuildCompatibleExtension</code>--to discover interfaces annotated with <code>@Repository</code> and make their implementations available for injection.</p>
 </div>
@@ -5174,14 +4213,14 @@ Jakarta Data providers that wish to provide both extensions can use CDI&#8217;s 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_jakarta_interceptors">7.2. Jakarta Interceptors</h3>
+<h3 id="_jakarta_interceptors">6.2. Jakarta Interceptors</h3>
 <div class="paragraph">
 <p>A repository interface or method of a repository interface may be annotated with an interceptor binding annotation.
 In the Jakarta EE environment&#8212;&#8203;or in any other environment where Jakarta Interceptors <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> is available and integrated with Jakarta CDI&#8212;&#8203;if the repository implementation is instantiated by the CDI bean container then the interceptor binding annotation is inherited by the repository implementation. That is, the interceptor binding annotation must be treated as if it were placed directly on the repository implementation bean. The interceptors bound to the annotation are applied automatically by the implementation of Jakarta Interceptors.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_jakarta_transactions">7.3. Jakarta Transactions</h3>
+<h3 id="_jakarta_transactions">6.3. Jakarta Transactions</h3>
 <div class="paragraph">
 <p>Work performed by a repository might occur within the scope of a transaction managed by Jakarta Transactions.<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup> This is usually transparent to the code acting as client of the repository. When:</p>
 </div>
@@ -5238,13 +4277,13 @@ When a repository operation marked <code>@Transactional</code> is called in an e
 </div>
 </div>
 <div class="sect2">
-<h3 id="_jakarta_persistence">7.4. Jakarta Persistence</h3>
+<h3 id="_jakarta_persistence">6.4. Jakarta Persistence</h3>
 <div class="paragraph">
 <p>Integration with Jakarta Persistence is left undefined in this first release of Jakarta Data.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_jakarta_nosql">7.5. Jakarta NoSQL</h3>
+<h3 id="_jakarta_nosql">6.5. Jakarta NoSQL</h3>
 <div class="paragraph">
 <p>When integrating Jakarta Data with Jakarta NoSQL, developers can use the NoSQL annotations to define the mapping of entities in repositories. Entities in Jakarta NoSQL are typically annotated with <code>jakarta.nosql.Entity</code> to indicate their suitability for persistence in NoSQL databases.</p>
 </div>
@@ -5256,7 +4295,7 @@ When a repository operation marked <code>@Transactional</code> is called in an e
 </div>
 </div>
 <div class="sect2">
-<h3 id="_jakarta_bean_validation">7.6. Jakarta Bean Validation</h3>
+<h3 id="_jakarta_bean_validation">6.6. Jakarta Bean Validation</h3>
 <div class="paragraph">
 <p>Integrating with Jakarta Bean Validation <sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> ensures data consistency within the Java layer. By applying validation rules to the data, developers can enforce constraints and business rules, preventing invalid or inconsistent information from being processed or persisted.</p>
 </div>
@@ -5309,7 +4348,7 @@ When a repository operation marked <code>@Transactional</code> is called in an e
 </div>
 </div>
 <div class="sect1">
-<h2 id="_portability_in_jakarta_data">8. Portability in Jakarta Data</h2>
+<h2 id="_portability_in_jakarta_data">7. Portability in Jakarta Data</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Jakarta Data offers varying degrees of portability depending on the database and capabilities used. A subset of function is standardized across all database types, while other subsets of function are standardized only for the specific types of databases to which the capability pertains. These requirements are explicitly called out in documentation throughout the specification, such as the "Unavailable In" column of the tables of repository keywords in the Jakarta Data module Javadoc. The Jakarta Data specification levies requirements against applications and Jakarta Data providers, but not against databases. The Jakarta Data specification requires the Jakarta Data provider to offer function to the extent that the database is capable and to raise an exception where the database is not capable. It is not the aim of Jakarta Data to offer the ability to switch between different databases, but to standardize a common starting point for data access from which capability that is specific to the various types of databases is able to build upon.</p>
@@ -5318,7 +4357,7 @@ When a repository operation marked <code>@Transactional</code> is called in an e
 <p>The portability that is offered by Jakarta Data pertains to usage of the Jakarta Data API by application code, enabling application code that restricts itself to the Jakarta Data API to remain the same when used with any Jakarta Data provider running against the same database. Jakarta Data relies on external persistence specifications such as Jakarta Persistence and Jakarta NoSQL to standardize entity models. Jakarta Data does not place any requirements on the format of data to make persisted data and other database artifacts portable across providers. Jakarta Data does not offer any means to migrate data that is persisted by one provider to a form that is usable by another provider.</p>
 </div>
 <div class="sect2">
-<h3 id="_portability_for_relational_databases">8.1. Portability for relational databases</h3>
+<h3 id="_portability_for_relational_databases">7.1. Portability for relational databases</h3>
 <div class="paragraph">
 <p>A Jakarta Data provider backed by access to relational data must support the built-in lifecycle annotations <code>@Insert</code>, <code>@Update</code>, and <code>@Delete</code>, along with the built-in repository types <code>BasicRepository</code> and <code>CrudRepository</code>. It must also fully support Jakarta Data query methods, including pagination, ordering, and limiting, subject to the caveat that follows.</p>
 </div>
@@ -5342,12 +4381,12 @@ A Jakarta Data provider is not required to supply an implementation of a reposit
 </div>
 </div>
 <div class="sect2">
-<h3 id="_portability_for_nosql_databases">8.2. Portability for NoSQL databases</h3>
+<h3 id="_portability_for_nosql_databases">7.2. Portability for NoSQL databases</h3>
 <div class="paragraph">
 <p>Portability in Jakarta Data extends to various NoSQL databases, each presenting unique challenges and capabilities. Jakarta Data aims to provide a consistent experience across these NoSQL database types. This section covers the key portability aspects for four categories of NoSQL databases: key-value, wide-column, document, and graph databases.</p>
 </div>
 <div class="sect3">
-<h4 id="_key_value_databases">8.2.1. Key-value databases</h4>
+<h4 id="_key_value_databases">7.2.1. Key-value databases</h4>
 <div class="paragraph">
 <p>Key-value databases resemble dictionaries or Maps in Java, where data is primarily accessed using a key. In such databases, queries unrelated to keys are typically limited. To ensure a minimum level of support, Jakarta Data mandates the implementation of <code>BasicRepository</code> built-in methods that require an identifier or a key. However, the deleteAll and count methods are not required. Methods relying on complex queries, which are defined as queries that do not use the Key or identifier, raise <code>java.lang.UnsupportedOperationException</code> due to the fundamental nature of key-value databases.</p>
 </div>
@@ -5365,13 +4404,13 @@ For any NoSQL database type not covered here, such as time series databases, the
 </div>
 </div>
 <div class="sect3">
-<h4 id="_wide_column_databases">8.2.2. Wide-column databases</h4>
+<h4 id="_wide_column_databases">7.2.2. Wide-column databases</h4>
 <div class="paragraph">
 <p>Wide-column databases offer more query flexibility, even allowing the use of secondary indexes, albeit potentially impacting performance. When interacting with wide-column databases, Jakarta Data requires the implementation of the <code>BasicRepository</code> along with all of its methods. However, developers should be mindful that certain query keywords, such as "And" or "Or," may not be universally supported in these databases. The full set of required keywords is documented in the section of the Jakarta Data module Javadoc that is titled "Reserved Keywords for Query by Method Name".</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_document_databases">8.2.3. Document databases</h4>
+<h4 id="_document_databases">7.2.3. Document databases</h4>
 <div class="paragraph">
 <p>Document databases provide query flexibility akin to relational databases, offering robust query capabilities. They encourage denormalization for performance optimization. When interfacing with document databases, Jakarta Data goes a step further by supporting both built-in repositories: <code>BasicRepository</code> and <code>CrudRepository</code>. Additionally, Query by Method Name is available, though developers should be aware that some keywords may not be universally supported.  The full set of required keywords is documented in the section of the Jakarta Data module Javadoc that is titled "Reserved Keywords for Query by Method Name".</p>
 </div>
@@ -5380,7 +4419,7 @@ For any NoSQL database type not covered here, such as time series databases, the
 </div>
 </div>
 <div class="sect3">
-<h4 id="_graph_databases">8.2.4. Graph databases</h4>
+<h4 id="_graph_databases">7.2.4. Graph databases</h4>
 <div class="paragraph">
 <p>A Graph database, a specialized NoSQL variant, excels in managing intricate data relationships, rivaling traditional relational databases. Its unique strength lies in its ability to handle both directed and undirected edges (or relationships) between vertices (or nodes) and store entity attributes on both vertices and edges.</p>
 </div>
@@ -5389,6 +4428,56 @@ For any NoSQL database type not covered here, such as time series databases, the
 </div>
 <div class="paragraph">
 <p>It is important to note that in Jakarta Data the Graph database supports the built-in repositories: <code>BasicRepository</code> and <code>DataRepository</code>. Additionally, Query by Method Name is available, though developers should be aware that some keywords may not be universally supported. The full set of required keywords is documented in the section of the Jakarta Data module Javadoc that is titled "Reserved Keywords for Query by Method Name".</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deprecations">8. Deprecations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following capability is deprecated and might be removed in future releases of Jakarta Data.</p>
+</div>
+<div class="sect2">
+<h3 id="_generic_untyped_sort_criteria">8.1. Generic, untyped Sort criteria</h3>
+<div class="paragraph">
+<p>The ability to supply generic, untyped <code>Sort</code> criteria to a repository method by means of a variable arguments <code>Sort&lt;?&gt;&#8230;&#8203;</code> parameter is deprecated. Use an <code>Order</code> parameter instead.</p>
+</div>
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Find</span>
+Product<span class="type">[]</span> namedLike(<span class="annotation">@By</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>) <span class="annotation">@Is</span>(Like.class) <span class="predefined-type">String</span> pattern,
+                    Limit max,
+                    Sort&lt;?&gt;... sortBy);
+...
+
+found = products.namedLike(namePattern,
+                           Limit.of(<span class="integer">25</span>),
+                           Sort.desc(<span class="string"><span class="delimiter">&quot;</span><span class="content">price</span><span class="delimiter">&quot;</span></span>),
+                           Sort.desc(<span class="string"><span class="delimiter">&quot;</span><span class="content">amountSold</span><span class="delimiter">&quot;</span></span>),
+                           Sort.asc(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>is replaced by,</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Find</span>
+Product<span class="type">[]</span> namedLike(<span class="annotation">@By</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>) <span class="annotation">@Is</span>(Like.class) <span class="predefined-type">String</span> pattern,
+                    Limit max,
+                    Order&lt;Product&gt; sortBy);
+...
+
+found = products.namedLike(namePattern,
+                           Limit.of(<span class="integer">25</span>),
+                           Order.by(Sort.desc(<span class="string"><span class="delimiter">&quot;</span><span class="content">price</span><span class="delimiter">&quot;</span></span>),
+                                    Sort.desc(<span class="string"><span class="delimiter">&quot;</span><span class="content">amountSold</span><span class="delimiter">&quot;</span></span>),
+                                    Sort.asc(<span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>)));</code></pre>
 </div>
 </div>
 </div>
@@ -5424,8 +4513,8 @@ For any NoSQL database type not covered here, such as time series databases, the
 </div>
 <div id="footer">
 <div id="footer-text">
- 1.1.0-M1<br>
-Last updated 2025-06-12 07:25:58 +0100
+ 1.0<br>
+Last updated 2025-11-06 15:52:43 UTC
 </div>
 </div>
 <script type="text/x-mathjax-config">

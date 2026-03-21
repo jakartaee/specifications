@@ -103,13 +103,13 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <code>NotLike</code> or is annotated <a href="../repository/Is.html" title="annotation interface in jakarta.data.repository"><code>@Is(NotLike.class)</code></a> and is of
  type <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link"><code>String</code></a>. For example,</p>
 
- <pre>
- &#64;Find
- List&lt;Car&gt; matchVIN(&#64;By(_Car.VIN) NotLike pattern);
+ <pre><code>
+ @Find
+ List&lt;Car&gt; matchVIN(@By(_Car.VIN) NotLike pattern);
 
- &#64;Find
- List&lt;Car&gt; ofMakeNotModel(&#64;By(_Car.MAKE) String manufacturer,
-                          &#64;By(_Car.MODEL) &#64;Is(NotLike.class) String excludePattern,
+ @Find
+ List&lt;Car&gt; ofMakeNotModel(@By(_Car.MAKE) String manufacturer,
+                          @By(_Car.MODEL) @Is(NotLike.class) String excludePattern,
                           Order&lt;Car&gt; sorts);
 
  ...
@@ -119,14 +119,14 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  found = cars.ofMakeNotModel("Jakarta Motors",
                              "%Hybrid%",
                              Order.by(_Car.price.desc()));
- </pre>
+ </code></pre>
 
  <p>Repository methods can also accept <code>NotLike</code> constraints at
  run time in the form of a <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a> on a <a href="../expression/TextExpression.html" title="interface in jakarta.data.expression"><code>TextExpression</code></a>.
  For example,</p>
 
- <pre>
- &#64;Find
+ <pre><code>
+ @Find
  List&lt;Car&gt; searchAll(Restriction&lt;Car&gt; restrict, Order&lt;Car&gt; sorts);
 
  ...
@@ -136,8 +136,8 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
                                      _Car.model.notEndsWith("EV")),
                         Order.by(_Car.model.asc(),
                                  _Car.year.desc(),
-                                 _Car.price.asc());
- </pre>
+                                 _Car.price.asc()));
+ </code></pre>
 
  <p>The <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel">entity and static metamodel</a> for the code
  examples within this class are shown in the <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> Javadoc.
@@ -256,9 +256,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <code>JHM</code> as its first 3 character positions and <code>E</code> in
  character position 7.</p>
 
- <pre>
- found = cars.matchVIN(NotLike.pattern("JHM___E%"));
- </pre></div>
+ <pre><code>
+     found = cars.matchVIN(NotLike.pattern("JHM___E%"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - a pattern in which <code>_</code> matches a single character
@@ -284,9 +284,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <code>JHM</code> as its first 3 character positions and <code>F</code> in
  character position 7.</p>
 
- <pre>
- found = cars.matchVIN(NotLike.pattern("JHM???F*", '?', '*'));
- </pre></div>
+ <pre><code>
+     found = cars.matchVIN(NotLike.pattern("JHM???F*", '?', '*'));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - a pattern that can include the given wildcard
@@ -315,9 +315,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <code>JHM</code> as its first 3 character positions and <code>C</code> in
  character position 7.</p>
 
- <pre>
- found = cars.matchVIN(Like.pattern("JHM---^CC", '-', 'C', '^'));
- </pre></div>
+ <pre><code>
+     found = cars.matchVIN(Like.pattern("JHM---^CC", '-', 'C', '^'));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pattern</code> - a pattern that can include the given wildcard
@@ -362,9 +362,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <p>For example, the following requires that the first 3 positions of a
  VIN number are not the characters <code>JTP</code>.</p>
 
- <pre>
- found = cars.matchVIN(NotLike.prefix("JTP"));
- </pre></div>
+ <pre><code>
+     found = cars.matchVIN(NotLike.prefix("JTP"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>prefix</code> - text that the beginning characters of the constraint
@@ -386,9 +386,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <p>For example, the following requires that the entity attribute value
  not contain the character string <code>Hybrid</code>,</p>
 
- <pre>
- found = cars.ofModel(NotLike.substring("Hybrid"));
- </pre></div>
+ <pre><code>
+     found = cars.ofModel(NotLike.substring("Hybrid"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>substring</code> - text that must not be contained in the constraint
@@ -410,9 +410,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <p>For example, the following requires that the entity attribute value
  not end with the characters <code>EV</code>,</p>
 
- <pre>
- found = cars.ofModel(NotLike.suffix("EV"));
- </pre></div>
+ <pre><code>
+     found = cars.ofModel(NotLike.suffix("EV"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>suffix</code> - text that the ending characters of the constraint
@@ -436,9 +436,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <p>For example, the following requires a VIN number to exactly match,
  </p>
 
- <pre>
- found = cars.ofModel(NotLike.literal("J-150"));
- </pre></div>
+ <pre><code>
+     found = cars.ofModel(NotLike.literal("J-150"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - a value that must not match the constraint target.</dd>

@@ -113,21 +113,25 @@ loadScripts(document, 'script');</script>
  providers.
  </p>
  <p>For example, consider an interface representing a garage:</p>
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  interface Garage {
-     &#64;Save
+     @Save
      Car park(Car car);
  }
- </pre>
+ </code></pre>
  <p>The operation performed by the annotated method depends on whether the database already holds an entity with the
- unique identifier of an entity passed as an argument:
+ unique identifier of an entity passed as an argument. From the point of view of the caller:
  </p>
  <ul>
  <li>If there is such an entity already held in the database, the annotated method must behave as if it were annotated
-     <a href="Update.html" title="annotation interface in jakarta.data.repository"><code>@Update</code></a>.
+     <a href="Update.html" title="annotation interface in jakarta.data.repository"><code>@Update</code></a>, with the exception that it is permitted to raise <a href="../event/PreUpsertEvent.html" title="class in jakarta.data.event"><code>PreUpsertEvent</code></a>
+     and <a href="../event/PostUpsertEvent.html" title="class in jakarta.data.event"><code>PostUpsertEvent</code></a> instead of <a href="../event/PreUpdateEvent.html" title="class in jakarta.data.event"><code>PreUpdateEvent</code></a> and
+     <a href="../event/PostUpdateEvent.html" title="class in jakarta.data.event"><code>PostUpdateEvent</code></a> respectively.
  <li>Otherwise, if there is no such entity in the database, the annotated method must behave as if it were annotated
-     <a href="Insert.html" title="annotation interface in jakarta.data.repository"><code>@Insert</code></a>.
+     <a href="Insert.html" title="annotation interface in jakarta.data.repository"><code>@Insert</code></a>, with the exception that it is permitted to raise <a href="../event/PreUpsertEvent.html" title="class in jakarta.data.event"><code>PreUpsertEvent</code></a>
+     and <a href="../event/PostUpsertEvent.html" title="class in jakarta.data.event"><code>PostUpsertEvent</code></a> instead of <a href="../event/PreInsertEvent.html" title="class in jakarta.data.event"><code>PreInsertEvent</code></a> and
+     <a href="../event/PostInsertEvent.html" title="class in jakarta.data.event"><code>PostInsertEvent</code></a> respectively.
  </ul>
  <p>Annotations such as <code>@Find</code>, <code>@Query</code>, <code>@Insert</code>, <code>@Update</code>, <code>@Delete</code>, and
  <code>@Save</code> are mutually-exclusive. A given method of a repository interface may have at most one <code>@Find</code>
