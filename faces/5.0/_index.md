@@ -122,14 +122,14 @@ Interested parties can join in the evolution/discussion in at least the followin
 * [Jakarta Faces 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/5.0)
 
 
-* [Jakarta Faces 5.0 M1 Specification Document](./jakarta-faces-5.0.0-M1.pdf) (PDF)
-* [Jakarta Faces 5.0 M1 Specification Document](./jakarta-faces-5.0.0-M1.html) (HTML)
+* [Jakarta Faces 5.0 M1 Specification Document](./jakarta-faces-5.0-M1.pdf) (PDF)
+* [Jakarta Faces 5.0 M1 Specification Document](./jakarta-faces-5.0-M1.html) (HTML)
 * [Jakarta Faces 5.0 M1 Javadoc](./apidocs)
 * [Jakarta Faces 5.0 M1 Tsdoc](./tsdoc)
 * [Jakarta Faces 5.0 M1 Renderkitdoc](./renderkitdoc)
 * [Jakarta Faces 5.0 M1 VDLDoc](./vdldoc)
 * Maven coordinates
-  * [jakarta.faces:jakarta.faces-api:jar:5.0.0-M1](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/5.0.0-M1)
+  * [jakarta.faces:jakarta.faces-api:jar:5.0-M1](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/5.0-M1)
 * [Jakarta Faces 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/5.0)
 
 
@@ -139,7 +139,7 @@ Interested parties can join in the evolution/discussion in at least the followin
 
 # Compatible Implementations
 
-* [Mojarra 5.0.0] (Mojarra 5.0.0-M1 implements Faces 5.0.0-M1)
+* [Mojarra 5.0.0] (Mojarra 5.0.0-M1 implements Faces 5.0-M1)
 
 # Ballots
 
