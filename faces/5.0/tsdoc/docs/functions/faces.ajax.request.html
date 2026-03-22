@@ -1,0 +1,272 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>request | tsdoc</title><meta name="description" content="Documentation for tsdoc"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">tsdoc</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="../modules/faces.html">faces</a></li><li><a href="../modules/faces.ajax.html">ajax</a></li><li><a href="" aria-current="page">request</a></li></ul><h1>Function request</h1></div><section class="tsd-panel"><ul class="tsd-signatures"><li class=""><div class="tsd-signature tsd-anchor-link" id="request"><span class="tsd-kind-call-signature">request</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">source</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-symbol">{</span><br/>        <span class="tsd-kind-property">delay</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">execute</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">onerror</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">onevent</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">params</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">render</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">resetValues</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#request" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div><div class="tsd-description"><div class="tsd-comment tsd-typography"><p><span class="changed_modified_2_2">Send</span> an
+asynchronous Ajax request to the server.
+<p><b>Usage:</b></p>
+Example showing all optional arguments:
+<pre><code>&lt;button
+    id="button1"
+    value="submit"
+    onclick="faces.ajax.request(this, event, {
+        execute: 'button1',
+        render: 'status',
+        onevent: handleEvent,
+        onerror: handleError
+     }); return false;"&gt;
+&lt;/button&gt;
+</code></pre>
+<p><b>Implementation Requirements:</b></p>
+This function must:
+<ul>
+<li>Be used within the context of a <code>form</code><span class="changed_added_2_3">,
+else throw an error</span>.</li>
+<li>Capture the element that triggered this Ajax request
+(from the <code>source</code> argument, also known as the
+<code>source</code> element.</li>
+<li>If the <code>source</code> element is <code>null</code> or
+<code>undefined</code> throw an error.</li>
+<li>If the <code>source</code> argument is not a <code>string</code> or
+DOM element object, throw an error.</li>
+<li>If the <code>source</code> argument is a <code>string</code>, find the
+DOM element for that <code>string</code> identifier.
+<li>If the DOM element could not be determined, throw an error.</li>
+<li class="changed_added_2_3">If the <code>jakarta.faces.ViewState</code>
+element could not be found, throw an error.</li>
+<li class="changed_added_2_3">If the ID of the <code>jakarta.faces.ViewState</code>
+element has a <code>&lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt;&lt;SEP&gt;</code>
+prefix, where &lt;SEP&gt; is the currently configured
+<code>UINamingContainer.getSeparatorChar()</code> and
+&lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt; is the return from
+<code>UIViewRoot.getContainerClientId()</code> on the
+view from whence this state originated, then remember it as <i>namespace prefix</i>.
+This is needed during encoding of the set of post data arguments.</li>
+<li>If the <code>onerror</code> and <code>onevent</code> arguments are set,
+they must be functions, or throw an error.
+<li>Determine the <code>source</code> element's <code>form</code>
+element.</li>
+<li>Get the <code>form</code> view state by calling
+<code><a href="faces.getViewState.html" class="tsd-kind-function">faces.getViewState</a></code> passing the
+<code>form</code> element as the argument.</li>
+<li>Collect post data arguments for the Ajax request.
+<ul>
+<li>The following name/value pairs are required post data arguments:
+<table border="1">
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+<tr>
+<td><code>jakarta.faces.ViewState</code></td>
+<td>Contents of <code>jakarta.faces.ViewState</code> hidden field.This is included when
+<code><a href="faces.getViewState.html" class="tsd-kind-function">faces.getViewState</a></code> is used.</td>
+</tr>
+<tr>
+<td><code>jakarta.faces.partial.ajax</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>jakarta.faces.source</code></td>
+<td>The identifier of the element that triggered this request.</td>
+</tr>
+<tr class="changed_added_2_2">
+<td><code>jakarta.faces.ClientWindow</code></td>
+<td>Call <code><a href="faces.getClientWindow.html" class="tsd-kind-function">faces.getClientWindow</a></code>, passing the current
+form.  If the return is non-<code>null</code>, it must be set as the
+value of this name/value pair, otherwise, a name/value
+pair for client window must not be sent.</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+<li>Collect optional post data arguments for the Ajax request.
+<ul>
+<li>Determine additional arguments (if any) from the <code>options</code>
+argument. If <code>options.execute</code> exists:
+<ul>
+<li>If the keyword <code>@none</code> is present, do not create and send
+the post data argument <code>jakarta.faces.partial.execute</code>.</li>
+<li>If the keyword <code>@all</code> is present, create the post data argument with
+the name <code>jakarta.faces.partial.execute</code> and the value <code>@all</code>.</li>
+<li>Otherwise, there are specific identifiers that need to be sent.  Create the post
+data argument with the name <code>jakarta.faces.partial.execute</code> and the value as a
+space delimited <code>string</code> of client identifiers.</li>
+</ul>
+</li>
+<li>If <code>options.execute</code> does not exist, create the post data argument with the
+name <code>jakarta.faces.partial.execute</code> and the value as the identifier of the
+element that caused this request.</li>
+<li>If <code>options.render</code> exists:
+<ul>
+<li>If the keyword <code>@none</code> is present, do not create and send
+the post data argument <code>jakarta.faces.partial.render</code>.</li>
+<li>If the keyword <code>@all</code> is present, create the post data argument with
+the name <code>jakarta.faces.partial.render</code> and the value <code>@all</code>.</li>
+<li>Otherwise, there are specific identifiers that need to be sent.  Create the post
+data argument with the name <code>jakarta.faces.partial.render</code> and the value as a
+space delimited <code>string</code> of client identifiers.</li>
+</ul>
+<li>If <code>options.render</code> does not exist do not create and send the
+post data argument <code>jakarta.faces.partial.render</code>.</li>
+<li class="changed_added_2_2">If
+<code>options.delay</code> exists let it be the value
+<em>delay</em>, for this discussion.  If
+<code>options.delay</code> does not exist, or is the
+literal string <code>'none'</code>, without the quotes,
+no delay is used.  If less than <em>delay</em>
+milliseconds elapses between calls to <em>request()</em>
+only the most recent one is sent and all other requests
+are discarded.</li>
+<li class="changed_added_2_2">If
+<code>options.resetValues</code> exists and its value is
+<code>true</code>, ensure a post data argument with the
+name <code>jakarta.faces.partial.resetValues</code> and the
+value <code>true</code> is sent in addition to the other
+post data arguments.  This will cause
+<code>UIViewRoot.resetValues()</code> to be called,
+passing the value of the "render" attribute.  Note: do
+not use any of the <code>@</code> keywords such as
+<code>@form</code> or <code>@this</code> with this option
+because <code>UIViewRoot.resetValues()</code> does not
+descend into the children of the listed components.</li>
+<li>Determine additional arguments (if any) from the <code>event</code>
+argument.  The following name/value pairs may be used from the
+<code>event</code> object:
+<ul>
+<li><code>target</code> - the ID of the element that triggered the event.</li>
+<li><code>captured</code> - the ID of the element that captured the event.</li>
+<li><code>type</code> - the type of event (ex: onkeypress)</li>
+<li><code>alt</code> - <code>true</code> if ALT key was pressed.</li>
+<li><code>ctrl</code> - <code>true</code> if CTRL key was pressed.</li>
+<li><code>shift</code> - <code>true</code> if SHIFT key was pressed. </li>
+<li><code>meta</code> - <code>true</code> if META key was pressed. </li>
+<li><code>right</code> - <code>true</code> if right mouse button
+was pressed. </li>
+<li><code>left</code> - <code>true</code> if left mouse button
+was pressed. </li>
+<li><code>keycode</code> - the key code.
+</ul>
+</li>
+</ul>
+</li>
+<li>Encode the set of post data arguments. <span class="changed_added_2_3">
+If the <code>jakarta.faces.ViewState</code> element has a namespace prefix, then
+make sure that all post data arguments are prefixed with this namespace prefix.
+</span></li>
+<li>Join the encoded view state with the encoded set of post data arguments
+to form the <code>query string</code> that will be sent to the server.</li>
+<li>Create a request <code>context</code> object and set the properties:
+<ul><li><code>source</code> (the source DOM element for this request)</li>
+<li><code>onerror</code> (the error handler for this request)</li>
+<li><code>onevent</code> (the event handler for this request)</li></ul>
+The request context will be used during error/event handling.</li>
+<li>Send a <code>begin</code> event following the procedure as outlined
+in the Jakarta Faces Specification Document section 13.3.5.3 "Sending Events".</li>
+<li>Set the request header with the name: <code>Faces-Request</code> and the
+value: <code>partial/ajax</code>.</li>
+<li>Determine the <code>posting URL</code> as follows: If the hidden field
+<code>jakarta.faces.encodedURL</code> is present in the submitting form, use its
+value as the <code>posting URL</code>.  Otherwise, use the <code>action</code>
+property of the <code>form</code> element as the <code>URL</code>.</li>
+<li>
+<p><span class="changed_modified_2_2">Determine whether
+or not the submitting form is using
+<code>multipart/form-data</code> as its
+<code>enctype</code> attribute.  If not, send the request
+as an <code>asynchronous POST</code> using the
+<code>posting URL</code> that was determined in the
+previous step.</span> <span
+class="changed_added_2_2">Otherwise, send the request
+using a multi-part capable transport layer, such as a
+hidden inline frame.  Note that using a hidden inline
+frame does <strong>not</strong> use
+<code>XMLHttpRequest</code>, but the request must be sent
+with all the parameters that a Faces
+<code>XMLHttpRequest</code> would have been sent with.
+In this way, the server side processing of the request
+will be identical whether or the request is multipart or
+not.</span></p>
+<div class="changed_added_2_2">
+<p>The <code>begin</code>, <code>complete</code>, and
+<code>success</code> events must be emulated when using
+the multipart transport.  This allows any listeners to
+behave uniformly regardless of the multipart or
+<code>XMLHttpRequest</code> nature of the transport.</p>
+</div></li>
+</ul>
+Form serialization should occur just before the request is sent to minimize
+the amount of time between the creation of the serialized form data and the
+sending of the serialized form data (in the case of long requests in the queue).
+Before the request is sent it must be put into a queue to ensure requests
+are sent in the same order as when they were initiated.  The request callback function
+must examine the queue and determine the next request to be sent.  The behavior of the
+request callback function must be as follows:
+<ul>
+<li>If the request completed successfully invoke <code><a href="faces.ajax.response.html" class="tsd-kind-function">faces.ajax.response</a></code>
+passing the <code>request</code> object.</li>
+<li>If the request did not complete successfully, notify the client.</li>
+<li>Regardless of the outcome of the request (success or error) every request in the
+queue must be handled.  Examine the status of each request in the queue starting from
+the request that has been in the queue the longest.  If the status of the request is
+<code>complete</code> (readyState 4), dequeue the request (remove it from the queue).
+If the request has not been sent (readyState 0), send the request.  Requests that are
+taken off the queue and sent should not be put back on the queue.</li>
+</ul>
+</p></div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">source</span>: <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">Element</span></span><div class="tsd-comment tsd-typography"><p>The DOM element that triggered this Ajax request, or an id string of the
+element to use as the triggering element.</p>
+</div></li><li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">Event</span></span><div class="tsd-comment tsd-typography"><p>The DOM event that triggered this Ajax request.  The
+<code>event</code> argument is optional.</p>
+</div></li><li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-symbol">{</span><br/>    <span class="tsd-kind-property">delay</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">execute</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">onerror</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">onevent</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">params</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">render</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">resetValues</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">;</span><br/><span class="tsd-signature-symbol">}</span></span><div class="tsd-comment tsd-typography"><p>The set of available options that can be sent as
+request parameters to control client and/or server side
+request processing. Acceptable name/value pair options are:</p>
+<table border="1">
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+<tr>
+<td><code>execute</code></td>
+<td>space seperated list of client identifiers</td>
+</tr>
+<tr>
+<td><code>render</code></td>
+<td>space seperated list of client identifiers</td>
+</tr>
+<tr>
+<td><code>onevent</code></td>
+<td>function to callback for event</td>
+</tr>
+<tr>
+<td><code>onerror</code></td>
+<td>function to callback for error</td>
+</tr>
+<tr>
+<td><code>params</code></td>
+<td>object containing parameters to include in the request</td>
+</tr>
+<tr class="changed_added_2_2">
+<td><code>delay</code></td>
+<td>If less than <em>delay</em> milliseconds elapses
+between calls to <em>request()</em> only the most recent
+one is sent and all other requests are discarded. If the
+value of <em>delay</em> is the literal string
+<code>'none'</code> without the quotes, or no delay is
+specified, no delay is used. </td>
+</tr>
+<tr class="changed_added_2_2">
+<td><code>resetValues</code></td>
+<td>If true, ensure a post data argument with the name
+jakarta.faces.partial.resetValues and the value true is
+sent in addition to the other post data arguments. This
+will cause UIViewRoot.resetValues() to be called, passing
+the value of the "render" attribute. Note: do not use any
+of the @ keywords such as <code>@form</code> or <code>@this</code> with this option
+because UIViewRoot.resetValues() does not descend into
+the children of the listed components.</td>
+</tr>
+</table>
+The <code>options</code> argument is optional.</div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><div class="tsd-comment tsd-typography"><div class="tsd-tag-throws"><h4 class="tsd-anchor-link" id="throws">Throws<a href="#throws" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If first required argument
+<code>element</code> is not specified, or if one or more
+of the components in the <code>options.execute</code>
+list is a file upload component, but the form's enctype
+is not set to <code>multipart/form-data</code></p>
+</div><div class="tsd-tag-since"><h4 class="tsd-anchor-link" id="since">Since<a href="#since" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>2.0</p>
+</div></div><aside class="tsd-sources"><ul><li>Defined in faces.d.ts:382</li></ul></aside></div></li></ul></section></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div></div><div class="site-menu"><nav class="tsd-navigation"><a href="../modules.html">tsdoc</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

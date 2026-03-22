@@ -1,0 +1,15 @@
+export { AbstractComponent } from "./component.js";
+export * from "./fs.js";
+export { getLoadedPaths, hasBeenLoadedMultipleTimes, TYPEDOC_ROOT } from "./general.js";
+export { FancyConsoleLogger } from "./loggers.js";
+export { ArgumentsReader, CommentStyle, Option, OptionDefaults, Options, PackageJsonReader, ParameterHint, ParameterType, TSConfigReader, TypeDocReader, } from "./options/index.js";
+export * from "./paths.js";
+export { loadPlugins } from "./plugins.js";
+export { getSortFunction } from "./sort.js";
+export * from "./entry-point.js";
+export * from "./declaration-maps.js";
+export * from "./highlighter.js";
+export * from "./html.js";
+export * from "./tsconfig.js";
+export * from "./tsutils.js";
+export * from "./ValidatingFileRegistry.js";
