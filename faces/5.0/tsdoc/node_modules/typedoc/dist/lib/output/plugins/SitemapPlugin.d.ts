@@ -1,8 +1,0 @@
-import { RendererComponent } from "../components.js";
-import type { Renderer } from "../index.js";
-export declare class SitemapPlugin extends RendererComponent {
-    private get hostedBaseUrl();
-    constructor(owner: Renderer);
-    private onRendererBegin;
-    private buildSitemap;
-}
