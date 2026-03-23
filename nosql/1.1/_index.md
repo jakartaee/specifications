@@ -101,8 +101,8 @@ Jakarta NoSQL 1.1 is designed with a **Driver Communication API** that acts as a
 * [Jakarta NoSQL 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.1)
 
 * [Jakarta NoSQL Release Plan](https://projects.eclipse.org/projects/ee4j.nosql/releases/1.0)
-* [Jakarta NoSQL 1.1 M2 Specification Document](./akarta-nosql-1.1-M2.pdf) (PDF)
-* [Jakarta NoSQL 1.1 M2 Specification Document](./akarta-nosql-1.1-M2.html) (HTML)
+* [Jakarta NoSQL 1.1 M2 Specification Document](./jakarta-nosql-1.1-M2.pdf) (PDF)
+* [Jakarta NoSQL 1.1 M2 Specification Document](./jakarta-nosql-1.1-M2.html) (HTML)
 * [Jakarta NoSQL 1.1 M2 Specification Javadoc](./apidocs)
 * Maven coordinates
   * [jakarta-nosql:jakarta.nosql-api:jar:1.1.0-M2](https://central.sonatype.com/artifact/jakarta.nosql/jakarta.nosql-api)
