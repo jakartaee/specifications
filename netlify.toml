@@ -3,31 +3,31 @@ publish = "website/public"
 command = "./build.sh && cd website && hugo --buildFuture"
 
 [build.environment]
-NODE_VERSION = "18.13.0"
+NODE_VERSION = "22.14.0"
 
 [context.production.environment]
-HUGO_VERSION = "0.110.0"
+HUGO_VERSION = "0.144.2"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
 [context.split1]
-command = "./build.sh && cd website && npm run disallow_robots_txt && hugo --buildFuture --enableGitInfo"
+command = "./build.sh && cd website && yarn run disallow_robots_txt && hugo --buildFuture --enableGitInfo"
 
 [context.split1.environment]
-HUGO_VERSION = "0.110.0"
+HUGO_VERSION = "0.144.2"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "./build.sh && cd website && npm run disallow_robots_txt && hugo --buildFuture -b $DEPLOY_PRIME_URL"
+command = "./build.sh && cd website && yarn run disallow_robots_txt && hugo --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.110.0"
+HUGO_VERSION = "0.144.2"
 
 [context.branch-deploy]
-command = "./build.sh && cd website && npm run disallow_robots_txt && hugo --buildFuture -b $DEPLOY_PRIME_URL"
+command = "./build.sh && cd website && yarn run disallow_robots_txt && hugo --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-HUGO_VERSION = "0.110.0"
+HUGO_VERSION = "0.144.2"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
