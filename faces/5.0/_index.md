@@ -130,7 +130,6 @@ Interested parties can join in the evolution/discussion in at least the followin
 * [Jakarta Faces 5.0 M1 VDLDoc](./vdldoc)
 * Maven coordinates
   * [jakarta.faces:jakarta.faces-api:jar:5.0.0-M1](https://central.sonatype.com/artifact/jakarta.faces/jakarta.faces-api/5.0.0-M1)
-* [Jakarta Faces 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.faces/releases/5.0)
 
 
 * Schemas
