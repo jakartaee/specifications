@@ -29,7 +29,7 @@ The Jakarta EE Platform defines a standard platform for hosting Jakarta EE appli
    * [Jakarta EE Platform 11 Specification Document](./jakarta-platform-spec-11.0.pdf) (PDF)
    * [Jakarta EE Platform 11 Specification Document](./jakarta-platform-spec-11.0.html) (HTML)
 * [Jakarta EE Platform 11 Javadoc](./apidocs)
-* [Jakarta EE Platform 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.1.zip) ([sig](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.1.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.1.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+* [Jakarta EE Platform 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.2.zip) ([sig](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.2.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.2.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/platform/11/)
 * Maven coordinates
    * [jakarta.platform:jakarta.jakartaee-api:jar:11.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-api/11.0.0/jar)
