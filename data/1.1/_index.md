@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Data 1.1 (under development)"
-date: 2025-01-28
+date: 2026-02-09
 summary: "Enhancements for Jakarta EE 12"
 ---
 
@@ -27,7 +27,7 @@ List<Product> found = products.findAll(
 **Inclusion of projection with Record**: A repository method can return a projection by having the result type be a Java record. 
 
 ```java
-record ModelInfo(String model, String manufacturer,                     int designYear) {}
+record ModelInfo(String model, String manufacturer, int designYear) {}
 
 @Repository
 public interface Cars extends BasicRepository<Car, String> {
@@ -38,7 +38,7 @@ Optional<ModelInfo> getModelInfo(@By(_Car.VIN) String vehicleIdNum);
 ```
 
 **Stateful Repository Operations** Jakarta Data includes the concept of stateful repositories that manage entities according to a persistence context. A complete definition of a persistence context can be found in the Jakarta Persistence specification. Stateful repositories have their own lifecycle annotations that provide fine-grained control over entity state transitions such as persisting, merging, refreshing, detaching, and removing entities. Lifecycle annotations for stateful operations must not be intermixed with lifecycle annotations for stateless operations. Consequently, each repository is either stateful or or stateless.
-An example of a stateless repository follows:
+An example of a stateful repository follows:
 
 
 ```java
@@ -49,10 +49,10 @@ public interface Products extends DataRepository<Product, String> {
     void add(Product product);
 
     @Merge
-    Product update(Product product);
+    Product merge(Product product);
 
     @Remove
-    void delete(Product product);
+    void remove(Product product);
 
     @Refresh
     void reload(Product product);
@@ -87,13 +87,15 @@ public interface Products extends DataRepository<Product, String> {
 # Details
 
 * [Jakarta Data 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.1)
-* [Jakarta Data 1.1 M1 Specification Document](./jakarta-data-1.1.0-M1.pdf) (PDF)
-* [Jakarta Data 1.1 M1 Specification Document](./jakarta-data-1.1.0-M1.html) (HTML)
-* [Jakarta Data 1.1 M1 Javadoc](./apidocs)
+<!-- Comment in when the correct versions are added
+* [Jakarta Data 1.1 M2 Specification Document](./jakarta-data-1.1.0-M2.pdf) (PDF)
+* [Jakarta Data 1.1 M2 Specification Document](./jakarta-data-1.1.0-M2.html) (HTML)
+-->
+* [Jakarta Data 1.1 M2 Javadoc](./apidocs)
 * [Jakarta Data 1.1 TCK](http://downloads.eclipse.org/jakarta/data/1.1/data-tck-1.1.0.zip) (Does not exist yet)
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/data/1.1) (Does not exist yet)
 * Maven coordinates
-  * [jakarta.data:jakarta.data-api:jar:1.1.0-M1](https://search.maven.org/artifact/jakarta.data/jakarta.data-api/1.1.0-M1/jar)
+  * [jakarta.data:jakarta.data-api:jar:1.1.0-M2](https://search.maven.org/artifact/jakarta.data/jakarta.data-api/1.1.0-M2/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [To Be Determined](https://github.com/)
 

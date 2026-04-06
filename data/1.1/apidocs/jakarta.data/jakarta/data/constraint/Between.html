@@ -108,30 +108,30 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <code>Between</code> and is of the same type or a subtype of the entity
  attribute. For example,</p>
 
- <pre>
- &#64;Find
- List&lt;Car&gt; byModelYear(&#64;By(_Car.YEAR) Between&lt;Integer&gt; yearRange,
+ <pre><code>
+ @Find
+ List&lt;Car&gt; byModelYear(@By(_Car.YEAR) Between&lt;Integer&gt; yearRange,
                        Order&lt;Car&gt; sorts);
 
  ...
 
  found = cars.byModelYear(Between.bounds(2021, 2024));
- </pre>
+ </code></pre>
 
  <p>Repository methods can also accept <code>Between</code> constraints at
  run time in the form of a <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a> on a
  <a href="../expression/ComparableExpression.html" title="interface in jakarta.data.expression"><code>ComparableExpression</code></a>. For example,</p>
 
- <pre>
- &#64;Find
+ <pre><code>
+ @Find
  List&lt;Car&gt; searchAll(Restriction&lt;Car&gt; restrict, Order&lt;Car&gt; sorts);
 
  ...
 
  found = cars.searchAll(_Car.price.between(25000, 35000),
                         Order.by(_Car.price.desc(),
-                                 _Car.year.desc());
- </pre>
+                                 _Car.year.desc()));
+ </code></pre>
 
  <p>The <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel">entity and static metamodel</a> for the code
  examples within this class are shown in the <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> Javadoc.
@@ -227,10 +227,10 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  greater than or equal to the given <code>minimum</code> and less than or
  equals to the given <code>maximum</code>. For example,</p>
 
- <pre>
- found = cars.byPrice(Between.bounds(27000, 37000),
-                      Order.by(_Car.price.desc()));
- </pre></div>
+ <pre><code>
+     found = cars.byPrice(Between.bounds(27000, 37000),
+                          Order.by(_Car.price.desc()));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -255,10 +255,10 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  equal to the value to which the given <code>maximum</code> expression
  evaluates. For example,</p>
 
- <pre>
- found = cars.byModelYear(Between.bounds(2020, _Car.firstModelYear.plus(5)),
-                          Order.by(_Car.price.desc()));
- </pre></div>
+ <pre><code>
+     found = cars.byModelYear(Between.bounds(2020, _Car.firstModelYear.plus(5)),
+                              Order.by(_Car.price.desc()));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -283,10 +283,10 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  expression evaluates and less than or equal to the given
  <code>maximum</code>. For example,</p>
 
- <pre>
- found = cars.byModelYear(Between.bounds(_Car.firstModelYear.plus(2), 2024),
-                          Order.by(_Car.year.desc()));
- </pre></div>
+ <pre><code>
+     found = cars.byModelYear(Between.bounds(_Car.firstModelYear.plus(2), 2024),
+                              Order.by(_Car.year.desc()));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -311,13 +311,13 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  expression evaluates and less than or equal to the value to which the
  given <code>maximum</code> expression evaluates. For example,</p>
 
- <pre>
- found = cars.byModelYear(Between.bounds(_Car.firstModelYear.plus(1),
-                                         _Car.firstModelYear.plus(4)),
-                          Order.by(_Car.price.desc(),
-                                   _Car.year.desc(),
-                                   _Car.vin.asc()));
- </pre></div>
+ <pre><code>
+     found = cars.byModelYear(Between.bounds(_Car.firstModelYear.plus(1),
+                                             _Car.firstModelYear.plus(4)),
+                              Order.by(_Car.price.desc(),
+                                       _Car.year.desc(),
+                                       _Car.vin.asc()));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive

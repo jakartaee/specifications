@@ -1,0 +1,220 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>response | tsdoc</title><meta name="description" content="Documentation for tsdoc"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">tsdoc</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="../modules/faces.html">faces</a></li><li><a href="../modules/faces.ajax.html">ajax</a></li><li><a href="" aria-current="page">response</a></li></ul><h1>Function response</h1></div><section class="tsd-panel"><ul class="tsd-signatures"><li class=""><div class="tsd-signature tsd-anchor-link" id="response"><span class="tsd-kind-call-signature">response</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">XMLHttpRequest</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">context</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-kind-property">onerror</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">;</span> <span class="tsd-kind-property">onevent</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">;</span> <span class="tsd-kind-property">sourceid</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#response" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div><div class="tsd-description"><div class="tsd-comment tsd-typography"><p><span class="changed_modified_2_2">Receive</span> an Ajax response
+from the server.
+<p><b>Usage:</b></p>
+<pre><code>faces.ajax.response(request, context);</code></pre>
+<p><b>Implementation Requirements:</b></p>
+This function must evaluate the markup returned in the
+<code>request.responseXML</code> object and perform the following action:
+<ul>
+<li>If there is no XML response returned, signal an <code>emptyResponse</code>
+error. If the XML response does not follow the format as outlined
+in Appendix A.3 "XML Schema Definition For Partial Response" of the Jakarta Faces Specification Document
+signal a <code>malformedError</code> error.  Refer to
+Jakarta Faces Specification Document section 13.3.6.3 "Signaling Errors".</li>
+<li>If the response was successfully processed, send a <code>success</code>
+event as outlined in Jakarta Faces Specification Document section 13.3.5.3 "Sending Events".</li>
+</ul>
+<p><i>Update Element Processing</i></p>
+The <code>update</code> element is used to update a single DOM element.  The
+"id" attribute of the <code>update</code> element refers to the DOM element that
+will be updated.  The contents of the <code>CDATA</code> section is the data that
+will be used when updating the contents of the DOM element as specified by the
+<code>&lt;update&gt;</code> element identifier.
+<ul>
+<li>If an <code>&lt;update&gt;</code> element is found in the response
+with the identifier <code>jakarta.faces.ViewRoot</code>:
+<pre><code>&lt;update id="jakarta.faces.ViewRoot"&gt;
+    &lt;![CDATA[...]]&gt;
+&lt;/update&gt;</code></pre>
+Update the entire DOM replacing the appropriate <code>head</code> and/or
+<code>body</code> sections with the content from the response.</li>
+<li class="changed_modified_2_2">If an
+<code>&lt;update&gt;</code> element is found in the
+response with an identifier containing
+<code>jakarta.faces.ViewState</code>:
+<pre><code>&lt;update id="&lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt;&lt;SEP&gt;jakarta.faces.ViewState&lt;SEP&gt;&lt;UNIQUE_PER_VIEW_NUMBER&gt;"&gt;
+   &lt;![CDATA[...]]&gt;
+&lt;/update&gt;</code></pre>
+locate and update the submitting form's
+<code>jakarta.faces.ViewState</code> value with the
+<code>CDATA</code> contents from the response.
+&lt;SEP&gt; is the currently configured
+<code>UINamingContainer.getSeparatorChar()</code>.
+&lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt; is the return from
+<code>UIViewRoot.getContainerClientId()</code> on the
+view from whence this state originated.
+&lt;UNIQUE_PER_VIEW_NUMBER&gt; is a number that must be
+unique within this view, but must not be included in the
+view state.  This requirement is simply to satisfy XML
+correctness in parity with what is done in the
+corresponding non-partial Faces view.  Locate and update
+the <code>jakarta.faces.ViewState</code> value for all
+Faces forms covered in the <code>render</code> target
+list whose ID starts with the same
+&lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt; value.</li>
+<li class="changed_added_2_2">If an
+<code>update</code> element is found in the response with
+an identifier containing
+<code>jakarta.faces.ClientWindow</code>:
+<pre><code>&lt;update id="&lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt;&lt;SEP&gt;jakarta.faces.ClientWindow&lt;SEP&gt;&lt;UNIQUE_PER_VIEW_NUMBER&gt;"&gt;
+   &lt;![CDATA[...]]&gt;
+&lt;/update&gt;</code></pre>
+locate and update the submitting form's
+<code>jakarta.faces.ClientWindow</code> value with the
+<code>CDATA</code> contents from the response.
+&lt;SEP&gt; is the currently configured
+<code>UINamingContainer.getSeparatorChar()</code>.
+&lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt; is the return from
+<code>UIViewRoot.getContainerClientId()</code> on the
+view from whence this state originated.
+&lt;UNIQUE_PER_VIEW_NUMBER&gt; is a number that must be
+unique within this view, but must not be included in the
+view state.  This requirement is simply to satisfy XML
+correctness in parity with what is done in the
+corresponding non-partial Faces view.  Locate and update
+the <code>jakarta.faces.ClientWindow</code> value for all
+Faces forms covered in the <code>render</code> target
+list whose ID starts with the same
+&lt;VIEW_ROOT_CONTAINER_CLIENT_ID&gt; value.</li>
+<li class="changed_added_2_3">If an <code>update</code> element is found in the response with the
+identifier <code>jakarta.faces.Resource</code>:
+<pre><code>&lt;update id="jakarta.faces.Resource"&gt;
+   &lt;![CDATA[...]]&gt;
+&lt;/update&gt;</code></pre>
+append any element found in the <code>CDATA</code> contents which is absent in the document to the
+document's <code>head</code> section.
+</li>
+<li>If an <code>update</code> element is found in the response with the identifier
+<code>jakarta.faces.ViewHead</code>:
+<pre><code>&lt;update id="jakarta.faces.ViewHead"&gt;
+   &lt;![CDATA[...]]&gt;
+&lt;/update&gt;</code></pre>
+update the document's <code>head</code> section with the <code>CDATA</code>
+contents from the response.</li>
+<li>If an <code>update</code> element is found in the response with the identifier
+<code>jakarta.faces.ViewBody</code>:
+<pre><code>&lt;update id="jakarta.faces.ViewBody"&gt;
+   &lt;![CDATA[...]]&gt;
+&lt;/update&gt;</code></pre>
+update the document's <code>body</code> section with the <code>CDATA</code>
+contents from the response.</li>
+<li>For any other <code>&lt;update&gt;</code> element:
+<pre><code>&lt;update id="update id"&gt;
+   &lt;![CDATA[...]]&gt;
+&lt;/update&gt;</code></pre>
+Find the DOM element with the identifier that matches the
+<code>&lt;update&gt;</code> element identifier, and replace its contents with
+the <code>&lt;update&gt;</code> element's <code>CDATA</code> contents.</li>
+</li>
+</ul>
+<p><i>Insert Element Processing</i></p>
+<ul>
+<li>If an <code>&lt;insert&gt;</code> element is found in
+the response with a nested <code>&lt;before&gt;</code>
+element:
+<pre><code>&lt;insert&gt;
+    &lt;before id="before id"&gt;
+       &lt;![CDATA[...]]&gt;
+    &lt;/before&gt;
+&lt;/insert&gt;</code></pre>
+<ul>
+<li>Extract this <code>&lt;before&gt;</code> element's <code>CDATA</code> contents
+from the response.</li>
+<li>Find the DOM element whose identifier matches <code>before id</code> and insert
+the <code>&lt;before&gt;</code> element's <code>CDATA</code> content before
+the DOM element in the document.</li>
+</ul>
+</li>
+<li>If an <code>&lt;insert&gt;</code> element is found in
+the response with a nested <code>&lt;after&gt;</code>
+element:
+<pre><code>&lt;insert&gt;
+    &lt;after id="after id"&gt;
+       &lt;![CDATA[...]]&gt;
+    &lt;/after&gt;
+&lt;/insert&gt;</code></pre>
+<ul>
+<li>Extract this <code>&lt;after&gt;</code> element's <code>CDATA</code> contents
+from the response.</li>
+<li>Find the DOM element whose identifier matches <code>after id</code> and insert
+the <code>&lt;after&gt;</code> element's <code>CDATA</code> content after
+the DOM element in the document.</li>
+</ul>
+</li>
+</ul>
+<p><i>Delete Element Processing</i></p>
+<ul>
+<li>If a <code>&lt;delete&gt;</code> element is found in the response:
+<pre><code>&lt;delete id="delete id"/&gt;</code></pre>
+Find the DOM element whose identifier matches <code>delete id</code> and remove it
+from the DOM.</li>
+</ul>
+<p><i>Element Attribute Update Processing</i></p>
+<ul>
+<li>If an <code>&lt;attributes&gt;</code> element is found in the response:
+<pre><code>&lt;attributes id="id of element with attribute"&gt;
+   &lt;attribute name="attribute name" value="attribute value"&gt;
+   ...
+&lt/attributes&gt;</code></pre>
+<ul>
+<li>Find the DOM element that matches the <code>&lt;attributes&gt;</code> identifier.</li>
+<li>For each nested <code>&lt;attribute&gt;</code> element in <code>&lt;attribute&gt;</code>,
+update the DOM element attribute value (whose name matches <code>attribute name</code>),
+with <code>attribute value</code>.</li>
+</ul>
+</li>
+</ul>
+<p><i>JavaScript Processing</i></p>
+<ul>
+<li>If an <code>&lt;eval&gt;</code> element is found in the response:
+<pre><code>&lt;eval&gt;
+   &lt;![CDATA[...JavaScript...]]&gt;
+&lt;/eval&gt;</code></pre>
+<ul>
+<li>Extract this <code>&lt;eval&gt;</code> element's <code>CDATA</code> contents
+from the response and execute it as if it were JavaScript code.</li>
+</ul>
+</li>
+<li class="changed_added_5_0">If a CSP <code>nonce</code> attribute is present on the
+<code>&lt;script&gt;</code> element that corresponds to the <code>jakarta.faces:faces.js</code>
+resource, for example:
+<pre><code>&lt;script
+    src=".../jakarta.faces.resource/faces.js?ln=jakarta.faces"
+    nonce="..."&gt;
+&lt;/script&gt;</code></pre>
+<ul>
+<li>Extract this CSP <code>nonce</code> attribute and apply it when executing the JavaScript
+code so that the browser permits execution.</li>
+<li>This CSP <code>nonce</code> attribute should also be applied when executing the JavaScript
+code found in other response elements, such as <code>&lt;update&gt;</code>,
+<code>&lt;insert&gt;</code> and <code>&lt;extensions&gt;</code>.</li>
+</ul>
+</li>
+</ul>
+<p><i>Redirect Processing</i></p>
+<ul>
+<li>If a <code>&lt;redirect&gt;</code> element is found in the response:
+<pre><code>&lt;redirect url="redirect url"/&gt;</code></pre>
+Cause a redirect to the url <code>redirect url</code>.</li>
+<p><i>Error Processing</i></p>
+<li>If an <code>&lt;error&gt;</code> element is found in the response:
+<pre><code>&lt;error&gt;
+   &lt;error-name&gt;..fully qualified class name string...&lt;error-name&gt;
+   &lt;error-message&gt;&lt;![CDATA[...]]&gt;&lt;error-message&gt;
+&lt;/error&gt;</code></pre>
+Extract this <code>&lt;error&gt;</code> element's <code>error-name</code> contents
+and the <code>error-message</code> contents. Signal a <code>serverError</code> passing
+the <code>errorName</code> and <code>errorMessage</code>.  Refer to
+Jakarta Faces Specification Document section 13.3.6.3 "Signaling Errors".</li>
+</ul>
+<p><i>Extensions</i></p>
+<ul>
+<li>The <code>&lt;extensions&gt;</code> element provides a way for framework
+implementations to provide their own information.</li>
+</ul></div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">request</span>: <span class="tsd-signature-type">XMLHttpRequest</span></span><div class="tsd-comment tsd-typography"><p>The <code>XMLHttpRequest</code> instance that
+contains the status code and response message from the server.</p>
+</div></li><li><span><span class="tsd-kind-parameter">context</span>: <span class="tsd-signature-symbol">{</span> <span class="tsd-kind-property">onerror</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">;</span> <span class="tsd-kind-property">onevent</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">;</span> <span class="tsd-kind-property">sourceid</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">}</span></span><div class="tsd-comment tsd-typography"><p>An object containing the request context, including the following properties:
+the identifier of the source element, per call onerror callback function, and per call onevent callback function.</p>
+</div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><div class="tsd-comment tsd-typography"><div class="tsd-tag-throws"><h4 class="tsd-anchor-link" id="throws">Throws<a href="#throws" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If request contains no data.</p>
+</div><div class="tsd-tag-since"><h4 class="tsd-anchor-link" id="since">Since<a href="#since" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>2.0</p>
+</div></div><aside class="tsd-sources"><ul><li>Defined in faces.d.ts:611</li></ul></aside></div></li></ul></section></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div></div><div class="site-menu"><nav class="tsd-navigation"><a href="../modules.html">tsdoc</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

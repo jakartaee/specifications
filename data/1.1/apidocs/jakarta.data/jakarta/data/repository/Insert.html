@@ -115,13 +115,13 @@ loadScripts(document, 'script');</script>
  <p>For example, if the method is annotated with <code>@Insert</code> and takes a parameter of type <code>Car car</code>, the
  return type can be <code>Car</code>. Similarly, if the parameter is of type <code>Iterable&lt;Car&gt;</code>, the return type can be
  <code>Iterable&lt;Car&gt;</code>. Consider an interface representing a garage:</p>
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  interface Garage {
-     &#64;Insert
+     @Insert
      Car park(Car car);
  }
- </pre>
+ </code></pre>
  <p>When the annotated method is non-<code>void</code>, it must return an inserted entity instance for each entity instance
  passed as an argument. Instances returned by the annotated method must include all values that were written to the
  database, including all automatically generated identifiers, initial versions, and other values which changed as a

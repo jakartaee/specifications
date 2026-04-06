@@ -124,8 +124,17 @@ loadScripts(document, 'script');</script>
  <li>have exactly the same type and name (the parameter name in the Java source,
      or a name assigned by <a href="By.html" title="annotation interface in jakarta.data.repository"><code>@By</code></a>) as an attribute of the entity class,
      or</li>
- <li>be of type <a href="../Limit.html" title="class in jakarta.data"><code>Limit</code></a>, <a href="../Order.html" title="class in jakarta.data"><code>Order</code></a>, <a href="../page/PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a>,
-     <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a>, or <a href="../Sort.html" title="class in jakarta.data"><code>Sort</code></a>.</li>
+ <li>have exactly the same name as a persistent attribute of the entity class
+     and be of type <code>C&lt;T&gt;</code>, where <code>C</code> is <a href="../constraint/Constraint.html" title="interface in jakarta.data.constraint"><code>Constraint</code></a> or any
+     interface which extends <a href="../constraint/Constraint.html" title="interface in jakarta.data.constraint"><code>Constraint</code></a> and <code>T</code> is the type of
+     the persistent attribute,
+ <li>have exactly the same name as a persistent attribute of the entity class,
+     be annotated <a href="Is.html" title="annotation interface in jakarta.data.repository"><code>@Is(C.class)</code></a>, where <code>C</code> is an interface
+     which extends <a href="../constraint/Constraint.html" title="interface in jakarta.data.constraint"><code>Constraint</code></a>, and be of the same type as the parameter
+     of a unary static method of <code>C</code> returning <code>C&lt;T&gt;</code> where <code>T</code>
+     is the type of the persistent attribute, or
+ <li>be of type <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a>, <a href="../Sort.html" title="class in jakarta.data"><code>Sort</code></a>, <a href="../Order.html" title="class in jakarta.data"><code>Order</code></a>, <a href="../Limit.html" title="class in jakarta.data"><code>Limit</code></a>,
+     or <a href="../page/PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a>.</li>
  </ul>
  <p>The query is inferred from the method parameters which match attributes of
  the entity.</p>
@@ -135,13 +144,13 @@ loadScripts(document, 'script');</script>
  defined by the Jakarta Data specification.</p>
 
  <p>For example, consider an interface representing a garage:</p>
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  interface Garage {
-     &#64;Find
+     @Find
      List&lt;Car&gt; getCarsWithModel(@By("model") String model);
  }
- </pre>
+ </code></pre>
  <p>The <code>@Find</code> annotation indicates that the <code>getCarsWithModel(model)</code>
  method retrieves <code>Car</code> instances with the given value of the <code>model</code>
  attribute.</p>
@@ -164,17 +173,17 @@ loadScripts(document, 'script');</script>
  <p>For example, if a <code>Car</code> entity has attribute names including <code>make</code>,
  <code>model</code>, <code>year</code>, and <code>vin</code>, a repository can use a Java record
  to request that only a subset of entity attributes be retrieved,</p>
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Cars extends BasicRepository&lt;Car, String&gt; {
      record ModelInfo(String make,
                       String model,
                       int year) {}
 
-     &#64;Find
+     @Find
      Optional&lt;ModelInfo&gt; getModelInfo(@By("vin") String vehicleIdNum);
  }
- </pre>
+ </code></pre>
 
  <p>An automatic query method annotated <code>Find</code> returns an entity instance,
  Java record instance, or entity attribute instance for every database record
@@ -189,6 +198,11 @@ loadScripts(document, 'script');</script>
      the query conditions, the method must throw
      <a href="../exceptions/EmptyResultException.html" title="class in jakarta.data.exceptions"><code>EmptyResultException</code></a>.</li>
  </ul>
+
+ <p>If the Jakarta Data provider is backed by a Jakarta Persistence provider,
+ an automatic query method annotated <code>Find</code> can also be annotated
+ <code>jakarta.persistence.query.ReadQueryOptions</code> to supply additional
+ query options that are specific to Jakarta Persistence.</p>
 
  <p>Annotations such as <code>@Find</code>, <code>@Query</code>, <code>@Insert</code>, <code>@Update</code>, <code>@Delete</code>, and
  <code>@Save</code> are mutually-exclusive. A given method of a repository interface may have at most one <code>@Find</code>
@@ -250,16 +264,16 @@ loadScripts(document, 'script');</script>
 
  <p>For example,</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface Vehicles {
-     &#64;Find(Car.class)
-     &#64;Select(_Car.PRICE)
+     @Find(Car.class)
+     @Select(_Car.PRICE)
      Optional&lt;Float&gt; getPrice(@By(_Car.VIN) String vehicleIdNum);
 
      ...
  }
- </pre></div>
+ </code></pre></div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>void.class</code></dd>

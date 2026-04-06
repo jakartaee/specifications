@@ -108,12 +108,12 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <code>AtMost</code> or is annotated <a href="../repository/Is.html" title="annotation interface in jakarta.data.repository"><code>@Is(AtMost.class)</code></a> and is
  of the same type or a subtype of the entity attribute. For example,</p>
 
- <pre>
- &#64;Find
- List&lt;Car&gt; withMaximumPrice(&#64;By(_Car.PRICE) AtMost&lt;Integer&gt; maxPrice);
+ <pre><code>
+ @Find
+ List&lt;Car&gt; withMaximumPrice(@By(_Car.PRICE) AtMost&lt;Integer&gt; maxPrice);
 
- &#64;Find
- List&lt;Car&gt; pricedAtMost(&#64;By(_Car.PRICE) &#64;Is(AtMost.class) int maximum,
+ @Find
+ List&lt;Car&gt; pricedAtMost(@By(_Car.PRICE) @Is(AtMost.class) int maximum,
                         Order&lt;Car&gt; sorts);
 
  ...
@@ -123,22 +123,22 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  found = cars.pricedAtMost(36000,
                            Order.by(_Car.price.desc(),
                                     _Car.vin.asc()));
- </pre>
+ </code></pre>
 
  <p>Repository methods can also accept <code>AtMost</code> constraints at
  run time in the form of a <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a> on a
  <a href="../expression/ComparableExpression.html" title="interface in jakarta.data.expression"><code>ComparableExpression</code></a>. For example,</p>
 
- <pre>
- &#64;Find
+ <pre><code>
+ @Find
  List&lt;Car&gt; searchAll(Restriction&lt;Car&gt; restrict, Order&lt;Car&gt; sorts);
 
  ...
 
  found = cars.searchAll(_Car.price.lessThanEqual(35000),
                         Order.by(_Car.price.desc(),
-                                 _Car.year.desc());
- </pre>
+                                 _Car.year.desc()));
+ </code></pre>
 
  <p>The <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel">entity and static metamodel</a> for the code
  examples within this class are shown in the <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> Javadoc.
@@ -204,9 +204,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
 <div class="block"><p>Requires that the constraint target evaluates to a value that is
  less than or equal to the given <code>maximum</code>. For example,</p>
 
- <pre>
- found = cars.withMaximumPrice(AtMost.max(33000));
- </pre></div>
+ <pre><code>
+     found = cars.withMaximumPrice(AtMost.max(33000));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -228,9 +228,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  less than or equal the value to which the the given <code>maximum</code>
  expression evaluates. For example,</p>
 
- <pre>
- found = cars.withMaxFirstYear(AtMost.max(_Car.year.minus(2)));
- </pre></div>
+ <pre><code>
+     found = cars.withMaxFirstYear(AtMost.max(_Car.year.minus(2)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive

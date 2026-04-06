@@ -90,16 +90,17 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/ElementType.html#METHOD" title="class or interface in java.lang.annotation" class="external-link">METHOD</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">Query</span></div>
 <div class="block"><p>Annotates a repository method as a query method, specifying a query
- written in Jakarta Data Query Language (JDQL) or in Jakarta Persistence
- Query Language (JPQL). A Jakarta Data provider is not required to support
+ written in Jakarta Common Query Language (JCQL) or in Jakarta Persistence
+ Query Language (JPQL). JCQL and JPQL are defined by the Jakarta Query
+ specification. A Jakarta Data provider is not required to support
  the complete JPQL language, which targets relational data stores. However,
  a given provider might offer features of JPQL which go beyond the subset
- required by JDQL, or might even offer vendor-specific extensions to JDQL
+ required by JCQL, or might even offer vendor-specific extensions to JCQL
  which target particular capabilities of the target data store technology.
  Such extensions come with no guarantee of portability between providers,
  nor between databases.</p>
 
- <p>The required <a href="#value()"><code>value()</code></a> member specifies the JDQL or JPQL query as
+ <p>The required <a href="#value()"><code>value()</code></a> member specifies the JCQL or JPQL query as
  a string.</p>
 
  <p>For <code>select</code> statements, the return type of the query method must
@@ -132,14 +133,14 @@ loadScripts(document, 'script');</script>
      </li>
  </ul>
 
- <p>Compared to SQL, JDQL allows an abbreviated syntax for <code>select</code>
+ <p>Compared to SQL, JCQL allows an abbreviated syntax for <code>select</code>
  statements:</p>
  <ul>
- <li>The <code>from</code> clause is optional in JDQL. When it is missing, the
+ <li>The <code>from</code> clause is optional in JCQL. When it is missing, the
      queried entity is determined by the return type of the repository
      method, or, if the return type is not an entity type, by the primary
      entity type of the repository.</li>
- <li>The <code>select</code> clause is optional in both JDQL and JPQL. When it
+ <li>The <code>select</code> clause is optional in both JCQL and JPQL. When it
      is missing, the query returns the queried entity.</li>
  </ul>
 
@@ -159,8 +160,8 @@ loadScripts(document, 'script');</script>
      of the query,</li>
  <li>have exactly the same type and position within the parameter list of
      the method as a positional parameter of the query, or</li>
- <li>be of type <a href="../Limit.html" title="class in jakarta.data"><code>Limit</code></a>, <a href="../Order.html" title="class in jakarta.data"><code>Order</code></a>, <a href="../page/PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a>,
-     <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a>, or <a href="../Sort.html" title="class in jakarta.data"><code>Sort</code></a>.</li>
+ <li>be of type <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a>, <a href="../Sort.html" title="class in jakarta.data"><code>Sort</code></a>, <a href="../Order.html" title="class in jakarta.data"><code>Order</code></a>, <a href="../Limit.html" title="class in jakarta.data"><code>Limit</code></a>,
+     or <a href="../page/PageRequest.html" title="interface in jakarta.data.page"><code>PageRequest</code></a>.</li>
  </ul>
 
  <p>The <a href="Param.html" title="annotation interface in jakarta.data.repository"><code>Param</code></a> annotation associates a method parameter with a named
@@ -175,33 +176,33 @@ loadScripts(document, 'script');</script>
 
  <p>For example,</p>
 
- <pre>
- &#64;Repository
+ <pre><code>
+ @Repository
  public interface People extends CrudRepository&lt;Person, Long&gt; {
 
-     // JDQL with positional parameters
-     &#64;Query("where firstName = ?1 and lastName = ?2")
+     // JCQL with positional parameters
+     @Query("where firstName = ?1 and lastName = ?2")
      List&lt;Person&gt; byName(String first, String last);
 
-     // JDQL with a named parameter
-     &#64;Query("where firstName || ' ' || lastName like :pattern")
+     // JCQL with a named parameter
+     @Query("where firstName || ' ' || lastName like :pattern")
      List&lt;Person&gt; byName(String pattern);
 
      // JPQL using a positional parameter
-     &#64;Query("from Person where extract(year from birthdate) = ?1")
+     @Query("from Person where extract(year from birthdate) = ?1")
      List&lt;Person&gt; bornIn(int year);
 
      // JPQL using named parameters
-     &#64;Query("select distinct name from Person " +
+     @Query("select distinct name from Person " +
             "where length(name) &gt;= :min and length(name) &lt;= :max")
-     Page&lt;String&gt; namesOfLength(&#64;Param("min") int minLength,
-                                &#64;Param("max") int maxLength,
+     Page&lt;String&gt; namesOfLength(@Param("min") int minLength,
+                                @Param("max") int maxLength,
                                 PageRequest pageRequest,
                                 Order&lt;Person&gt; order);
 
      ...
  }
- </pre>
+ </code></pre>
 
  <p>A method annotated with <code>@Query</code> must return one of the following types:</p>
  <ul>
@@ -252,7 +253,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color"><code><a href="#value()" class="member-name-link">value</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Specifies the query executed by the annotated repository method,
- in JDQL or JPQL.</div>
+ in JCQL or JPQL.</div>
 </div>
 </div>
 </section>
@@ -271,7 +272,7 @@ loadScripts(document, 'script');</script>
 <h3>value</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">value</span></div>
 <div class="block"><p>Specifies the query executed by the annotated repository method,
- in JDQL or JPQL.</p>
+ in JCQL or JPQL.</p>
 
  <p>If the annotated repository method accepts other forms of sorting
  (such as a parameter of type <a href="../Sort.html" title="class in jakarta.data"><code>Sort</code></a>), it is the responsibility of

@@ -94,17 +94,17 @@ loadScripts(document, 'script');</script>
  may be limited to a given <a href="#value()">maximum number of results</a>. For
  example,</p>
 
- <pre>
- &#64;Find &#64;First
- &#64;OrderBy(value = _Employee.SALARY, descending = true)
+ <pre><code>
+ @Find @First
+ @OrderBy(value = _Employee.SALARY, descending = true)
  Employee highestPaid(String jobTitle);
- </pre>
+ </code></pre>
 
- <pre>
- &#64;First(10)
- &#64;Query("order by playCount desc")
+ <pre><code>
+ @First(10)
+ @Query("order by playCount desc")
  List&lt;Song&gt; topTen();
- </pre>
+ </code></pre>
 
  <p>A repository method may not be declared with:
  <ul>

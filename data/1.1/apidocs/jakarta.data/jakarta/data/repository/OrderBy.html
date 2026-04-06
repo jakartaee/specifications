@@ -104,12 +104,12 @@ loadScripts(document, 'script');</script>
  attribute, also in ascending order. For entities with the same
  <code>lastName</code> and <code>firstName</code>.</p>
 
- <pre>
- &#64;OrderBy("lastName")
- &#64;OrderBy("firstName")
- &#64;OrderBy("id")
+ <pre><code>
+ @OrderBy("lastName")
+ @OrderBy("firstName")
+ @OrderBy("id")
  Person[] findByZipCode(int zipCode, PageRequest pageRequest);
- </pre>
+ </code></pre>
 
  <p>The interpretation of ascending and descending order is determined
  by the database, but, in general:</p>
@@ -134,9 +134,10 @@ loadScripts(document, 'script');</script>
  have:</p>
  <ul>
  <li>the <em>Query by Method Name</em> <code>OrderBy</code> keyword in its
-     name, nor</li>
- <li>a <a href="Query.html" title="annotation interface in jakarta.data.repository"><code>@Query</code></a> annotation specifying a JDQL or JPQL query
-     with an <code>ORDER BY</code> clause.</li>
+     name,</li>
+ <li>a <a href="Query.html" title="annotation interface in jakarta.data.repository"><code>Query</code></a> or <code>jakarta.persistence.query.StaticQuery</code>
+     annotation specifying a query with an <code>ORDER BY</code> clause, nor</li>
+ <li>a <code>jakarta.persistence.query.StaticNativeQuery</code> annotation.</li>
  </ul>
  <p>A Jakarta Data provider is permitted to reject such a repository
  method declaration at compile time or to implement the method to

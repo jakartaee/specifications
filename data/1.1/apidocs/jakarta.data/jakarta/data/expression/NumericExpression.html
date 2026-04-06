@@ -160,14 +160,14 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  current expression evaluates to <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link"><code>Long</code></a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a><wbr>&lt;<a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#divide(jakarta.data.expression.NumericExpression)" class="member-name-link">divide</a><wbr>(<a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a>&lt;? super <a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;&nbsp;divisorExpression)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#dividedBy(jakarta.data.expression.NumericExpression)" class="member-name-link">dividedBy</a><wbr>(<a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a>&lt;? super <a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;&nbsp;divisorExpression)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Represents the division function that computes the quotient of the
  value to which the current expression evaluates divided by the value to
  which the divisor expression evaluates.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a><wbr>&lt;<a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#divide(N)" class="member-name-link">divide</a><wbr>(<a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&nbsp;divisor)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#dividedBy(N)" class="member-name-link">dividedBy</a><wbr>(<a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&nbsp;divisor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Represents the division function that computes the quotient of the
  value to which the current expression evaluates divided by the given
@@ -261,11 +261,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  the current expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- within2YearsOf2024 = cars.search(make,
-                                  model,
-                                  _Car.year.minus(2024).abs().lessThanEqual(2));
- </pre></div>
+ <pre><code>
+     within2YearsOf2024 = cars.search(make,
+                                      model,
+                                      _Car.year.minus(2024).abs().lessThanEqual(2));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that computes the absolute value.</dd>
@@ -282,12 +282,12 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  no effect on the value <code>0</code>.</p>
 
  <p>Example:</p>
- <pre>
- atLeast2YearsBeyondOriginalModelYear = cars.search(
-         make,
-         model,
-         _Car.firstModelYear.minus(_Car.year).negated().greaterThanEqual(2));
- </pre></div>
+ <pre><code>
+     atLeast2YearsBeyondOriginalModelYear = cars.search(
+             make,
+             model,
+             _Car.firstModelYear.minus(_Car.year).negated().greaterThanEqual(2));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that computes negation of value.</dd>
@@ -302,11 +302,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  to which the current expression evaluates plus the given value.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.price.plus(fees).lessThan(30000));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.price.plus(fees).lessThan(30000));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - the value to add. Must not be <code>null</code>.</dd>
@@ -326,11 +326,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  value.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.price.minus(discount).lessThanEqual(25000));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.price.minus(discount).lessThanEqual(25000));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - the value to subtract. Must not be <code>null</code>.</dd>
@@ -350,13 +350,13 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(
-         make,
-         model,
-         _Car.price.asDouble().times(_Car.discountRate.subtractedFrom(1.0))
-                 .lessThanEqual(33000.0));
- </pre></div>
+ <pre><code>
+     found = cars.search(
+             make,
+             model,
+             _Car.price.asDouble().times(_Car.discountRate.subtractedFrom(1.0))
+                     .lessThanEqual(33000.0));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - the value to subtract from. Must not be <code>null</code>.</dd>
@@ -393,12 +393,12 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  factor.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(
-         make,
-         model,
-         _Car.price.asDouble().times(1.0 + taxRate).lessThan(35000.0));
- </pre></div>
+ <pre><code>
+     found = cars.search(
+             make,
+             model,
+             _Car.price.asDouble().times(1.0 + taxRate).lessThan(35000.0));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>factor</code> - the value times which to multiply. Must not be
@@ -411,20 +411,20 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
 </section>
 </li>
 <li>
-<section class="detail" id="divide(N)">
-<h3 id="divide(java.lang.Number)">divide</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a>&lt;<a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;</span>&nbsp;<span class="element-name">divide</span><wbr><span class="parameters">(<a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&nbsp;divisor)</span></div>
+<section class="detail" id="dividedBy(N)">
+<h3 id="dividedBy(java.lang.Number)">dividedBy</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a>&lt;<a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;</span>&nbsp;<span class="element-name">dividedBy</span><wbr><span class="parameters">(<a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&nbsp;divisor)</span></div>
 <div class="block"><p>Represents the division function that computes the quotient of the
  value to which the current expression evaluates divided by the given
  divisor value.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(
-         make,
-         model,
-         _Car.price.asDouble().divide(1.0 + discountRate).lessThan(27000.0));
- </pre></div>
+ <pre><code>
+     found = cars.search(
+             make,
+             model,
+             _Car.price.asDouble().dividedBy(1.0 + discountRate).lessThan(27000.0));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>divisor</code> - the value by which to divide. Must not be <code>0</code> or
@@ -444,12 +444,13 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  to which the current expression and the given expression evaluate.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(
-         make,
-         model,
-         _Car.price.plus(_Car.price.times(percentTax).divide(100)).lessThan(32000));
- </pre></div>
+ <pre><code>
+     found = cars.search(
+             make,
+             model,
+             _Car.price.plus(_Car.price.times(percentTax).dividedBy(100))
+                       .lessThan(32000));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expression</code> - expression that evaluates to the value to add. Must
@@ -470,11 +471,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  which the given expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.year.minus(_Car.firstModelYear).greaterThan(1));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.year.minus(_Car.firstModelYear).greaterThan(1));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expression</code> - expression that evaluates to the value to subtract.
@@ -495,12 +496,12 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  expression evaluate.</p>
 
  <p>Example:</p>
- <pre>
- discountedMoreThan2000 = cars.search(
-         make,
-         model,
-         _Car.price.asDouble().times(_Car.discountRate).greaterThan(2000.0));
- </pre></div>
+ <pre><code>
+     discountedMoreThan2000 = cars.search(
+             make,
+             model,
+             _Car.price.asDouble().times(_Car.discountRate).greaterThan(2000.0));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>factorExpression</code> - expression that evaluates to the value by which
@@ -513,20 +514,20 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
 </section>
 </li>
 <li>
-<section class="detail" id="divide(jakarta.data.expression.NumericExpression)">
-<h3>divide</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a>&lt;<a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;</span>&nbsp;<span class="element-name">divide</span><wbr><span class="parameters">(<a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a>&lt;? super <a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;&nbsp;divisorExpression)</span></div>
+<section class="detail" id="dividedBy(jakarta.data.expression.NumericExpression)">
+<h3>dividedBy</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a>&lt;<a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;</span>&nbsp;<span class="element-name">dividedBy</span><wbr><span class="parameters">(<a href="NumericExpression.html" title="interface in jakarta.data.expression">NumericExpression</a>&lt;? super <a href="NumericExpression.html" title="type parameter in NumericExpression">T</a>,<wbr><a href="NumericExpression.html" title="type parameter in NumericExpression">N</a>&gt;&nbsp;divisorExpression)</span></div>
 <div class="block"><p>Represents the division function that computes the quotient of the
  value to which the current expression evaluates divided by the value to
  which the divisor expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- pricedUnder95PercentWithRebate = cars.search(
-         make,
-         model,
-         _Car.price.minus(rebate).times(100).divide(_Car.price).lessThan(95);
- </pre></div>
+ <pre><code>
+     pricedUnder95PercentWithRebate = cars.search(
+             make,
+             model,
+             _Car.price.minus(rebate).times(100).dividedBy(_Car.price).lessThan(95));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>divisorExpression</code> - expression that evaluates to the value by which
@@ -546,11 +547,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  current expression evaluates to <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link"><code>Long</code></a>.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.price.asLong().lessThan(36000L));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.price.asLong().lessThan(36000L));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that casts to <code>Long</code>.</dd>
@@ -565,11 +566,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  current expression evaluates to <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link"><code>Double</code></a>.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.price.asDouble().lessThan(34000.0));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.price.asDouble().lessThan(34000.0));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that casts to <code>Double</code>.</dd>
@@ -584,11 +585,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  current expression evaluates to <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigInteger.html" title="class or interface in java.math" class="external-link"><code>BigInteger</code></a>.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.price.asBigInteger().lessThan(BigInteger.valueOf(50000L)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.price.asBigInteger().lessThan(BigInteger.valueOf(50000L)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that casts to <code>BigInteger</code>.</dd>
@@ -603,11 +604,11 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.data.exp
  current expression evaluates to <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link"><code>BigDecimal</code></a>.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.price.asBigDecimal().lessThan(BigDecimal.valueOf(45000L)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.price.asBigDecimal().lessThan(BigDecimal.valueOf(45000L)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an expression for the function that casts to <code>BigDecimal</code>.</dd>

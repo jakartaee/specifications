@@ -108,13 +108,13 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  <code>NotEqualTo</code> or is annotated <a href="../repository/Is.html" title="annotation interface in jakarta.data.repository"><code>@Is(NotEqualTo.class)</code></a> and is
  of the same type or a subtype of the entity attribute. For example,</p>
 
- <pre>
- &#64;Find
- List&lt;Car&gt; excludingManufacturer(&#64;By(_Car.MAKE) NotEqualTo&lt;String&gt; excludedManufacturer);
+ <pre><code>
+ @Find
+ List&lt;Car&gt; excludingManufacturer(@By(_Car.MAKE) NotEqualTo&lt;String&gt; excludedManufacturer);
 
- &#64;Find
- List&lt;Car&gt; ofMakeNotModel(&#64;By(_Car.MAKE) &#64;Is(EqualTo.class) String manufacturer,
-                          &#64;By(_Car.MODEL) &#64;Is(NotEqualTo.class) String excludedModel,
+ @Find
+ List&lt;Car&gt; ofMakeNotModel(@By(_Car.MAKE) @Is(EqualTo.class) String manufacturer,
+                          @By(_Car.MODEL) @Is(NotEqualTo.class) String excludedModel,
                           Order&lt;Car&gt; sorts);
  ...
 
@@ -123,22 +123,22 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
  found = cars.ofMakeNotModel("Jakarta Motors",
                              "J-150",
                              Order.by(_Car.price.desc()));
- </pre>
+ </code></pre>
 
  <p>Repository methods can also accept <code>NotEqualTo</code> constraints at
  run time in the form of a <a href="../restrict/Restriction.html" title="interface in jakarta.data.restrict"><code>Restriction</code></a> on an <a href="../expression/Expression.html" title="interface in jakarta.data.expression"><code>Expression</code></a>.
  For example,</p>
 
- <pre>
- &#64;Find
+ <pre><code>
+ @Find
  List&lt;Car&gt; searchAll(Restriction&lt;Car&gt; restrict, Order&lt;Car&gt; sorts);
 
  ...
 
  found = cars.searchAll(_Car.make.notEqualTo("Coalback Motors"),
                         Order.by(_Car.year.desc(),
-                                 _Car.price.asc());
- </pre>
+                                 _Car.price.asc()));
+ </code></pre>
 
  <p>The <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel">entity and static metamodel</a> for the code
  examples within this class are shown in the <a href="../metamodel/Attribute.html" title="interface in jakarta.data.metamodel"><code>Attribute</code></a> Javadoc.
@@ -202,10 +202,10 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
 <div class="block"><p>Requires that the constraint target not equal the value to which the
  given <code>expression</code> evaluates. For example,</p>
 
- <pre>
- found = cars.excludingManufacturer(
+ <pre><code>
+     found = cars.excludingManufacturer(
                  NotEqualTo.expression(_Car.model.left(_Car.make.length())));
- </pre></div>
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive
@@ -227,9 +227,9 @@ extends <a href="Constraint.html" title="interface in jakarta.data.constraint">C
 <div class="block"><p>Requires that the constraint target not equal the given value.
  For example,</p>
 
- <pre>
- found = cars.excludingManufacturer(NotEqualTo.value("Leakoil Motors"));
- </pre></div>
+ <pre><code>
+     found = cars.excludingManufacturer(NotEqualTo.value("Leakoil Motors"));
+ </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><code>V</code> - type of the entity attribute or a subtype or primitive

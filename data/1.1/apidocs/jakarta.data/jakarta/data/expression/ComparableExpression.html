@@ -251,9 +251,9 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  </p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, model, _Car.year.between(2022, 2025));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, model, _Car.year.between(2022, 2025));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>min</code> - the lower bound on the range. Must not be <code>null</code>.</dd>
@@ -277,13 +277,13 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  the values to which the given expressions evaluate.</p>
 
  <p>Example:</p>
- <pre>
- preOwnedInRangeOfModelYears = cars.search(
+ <pre><code>
+     preOwnedInRangeOfModelYears = cars.search(
          make,
          model,
          _Car.year.between(_Car.firstModelYear.plus(2),
                            _Car.firstModelYear.plus(5)));
- </pre></div>
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>minExpression</code> - expression that evaluates to the lower bound
@@ -305,9 +305,9 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  evaluate to a value greater than the given value.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, model, _Car.price.greaterThan(25000));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, model, _Car.price.greaterThan(25000));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - value against which to compare. Must not be <code>null</code>.</dd>
@@ -327,11 +327,11 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.year.greaterThan(_Car.firstModelYear));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.year.greaterThan(_Car.firstModelYear));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expression</code> - expression against which to compare. Must not be
@@ -352,9 +352,9 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  value.</p>
 
  <p>Example:</p>
- <pre>
- atLeast2024 = cars.search(make, model, _Car.year.greaterThanEqual(2024));
- </pre></div>
+ <pre><code>
+     atLeast2024 = cars.search(make, model, _Car.year.greaterThanEqual(2024));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - value against which to compare. Must not be <code>null</code>.</dd>
@@ -374,11 +374,11 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  given expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.year.greaterThanEqual(_Car.firstModelYear.plus(2)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.year.greaterThanEqual(_Car.firstModelYear.plus(2)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expression</code> - expression against which to compare. Must not be
@@ -398,9 +398,9 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  evaluate to a value smaller than the given value.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, model, _Car.price.lessThan(35000));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, model, _Car.price.lessThan(35000));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - value against which to compare. Must not be <code>null</code>.</dd>
@@ -420,11 +420,11 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- listedBeforeToday = cars.search(make,
-                                 model,
-                                 _Car.listed.lessThan(CurrentDate.now()));
- </pre></div>
+ <pre><code>
+     listedBeforeToday = cars.search(make,
+                                     model,
+                                     _Car.listed.lessThan(CurrentDate.now()));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expression</code> - expression against which to compare. Must not be
@@ -445,9 +445,9 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  </p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, model, _Car.price.lessThanEqual(25000));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, model, _Car.price.lessThanEqual(25000));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - value against which to compare. Must not be <code>null</code>.</dd>
@@ -467,11 +467,11 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  given expression evaluates.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.firstModelYear.lessThanEqual(_Car.year.minus(2)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.firstModelYear.lessThanEqual(_Car.year.minus(2)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expression</code> - expression against which to compare. Must not be
@@ -492,9 +492,9 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  evaluate to a value falling outside the range between given values.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make, model, _Car.year.notBetween(2021, 2023));
- </pre></div>
+ <pre><code>
+     found = cars.search(make, model, _Car.year.notBetween(2021, 2023));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>min</code> - the lower bound on the range. Must not be <code>null</code>.</dd>
@@ -518,12 +518,12 @@ extends <a href="Expression.html" title="interface in jakarta.data.expression">E
  which the given expressions evaluate.</p>
 
  <p>Example:</p>
- <pre>
- found = cars.search(make,
-                     model,
-                     _Car.year.notBetween(_Car.firstModelYear,
-                                          _Car.firstModelYear.plus(2)));
- </pre></div>
+ <pre><code>
+     found = cars.search(make,
+                         model,
+                         _Car.year.notBetween(_Car.firstModelYear,
+                                              _Car.firstModelYear.plus(2)));
+ </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>minExpression</code> - expression that evaluates to the lower bound

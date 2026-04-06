@@ -34,7 +34,7 @@ Note: If any item does not apply, check it and mark N/A below it.
   - [ ] Index page {spec}/x.y/_index.md following [template](https://github.com/jakartaee/specification-committee/blob/master/spec_page_template.md)
   - [ ] Index page {spec}/_index.md following [template](https://github.com/jakartaee/specification-committee/blob/master/spec_index_template.md)
   - [ ] No other files (e.g., no jakarta_ee_logo_schooner_color_stacked_default.png)
-  - [ ] Staging repository link of the form https://jakarta.oss.sonatype.org/content/repositories/staging/jakarta/{spec}/jakarta.{spec}-api/x.y.z/
+  - [ ] Staging repository link of the form https://repo.eclipse.org/repository/ee4j-staging/jakarta/{spec}/jakarta.{spec}-api/x.y.z/
   - [ ] EFTL TCK link of the form http://download.eclipse.org/.../+.zip
   - [ ] Compatibility certification link of the form https://github.com/eclipse-ee4j/{project}/#{issue}
   - [ ] N/A (Optional) Second PR for just apidocs
