@@ -98,7 +98,35 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">QueryMapper.MapperNameCondition</span></div>
-<div class="block">Represents a condition based on a column name.</div>
+<div class="block">Represents a predicate definition step based on a column name in the fluent query API.
+ <p>
+ This interface is reached after specifying a column name using <code>where(String)</code>
+ and defines the set of comparison and matching operations that can be applied
+ to that column to filter query results.
+ </p>
+
+ <p>
+ Each predicate method produces a conditional expression and returns a
+ <a href="QueryMapper.MapperWhere.html" title="interface in jakarta.nosql"><code>QueryMapper.MapperWhere</code></a> instance, allowing further condition composition,
+ ordering, pagination, or query execution.
+ </p>
+
+ <p>
+ Support for specific predicate operations depends on the capabilities of
+ the underlying NoSQL database. Unsupported predicates may result in an
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link"><code>UnsupportedOperationException</code></a>.
+ </p>
+
+ <pre><code>
+ @Inject
+ Template template;
+
+ template.select(Book.class)
+     .where("author").eq("Ada")
+     .result();
+ </code></pre>
+
+ This step is mutable and not thread-safe.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -459,7 +487,7 @@ loadScripts(document, 'script');</script>
 </main>
 <footer role="contentinfo">
 <hr>
-<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2024, 2025 Eclipse Foundation. All rights reserved.<br>Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2025 Eclipse Foundation. All rights reserved.<br></small></p>
 </footer>
 </div>
 </div>

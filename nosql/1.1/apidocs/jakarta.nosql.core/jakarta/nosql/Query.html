@@ -98,7 +98,7 @@ loadScripts(document, 'script');</script>
  It provides a consistent mechanism for dynamically executing queries using either
  named or positional parameters, and supports core query operations such as <code>SELECT</code>,
  <code>UPDATE</code>, and <code>DELETE</code>.
- This API is based on Jakarta Query and supports the Jakarta Query Core language,
+ This API is based on Jakarta Query and supports the Jakarta Common Query Language (JCQL),
  including clauses such as <code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code>,
  <code>UPDATE SET</code>, and <code>DELETE FROM</code>.
 
@@ -128,6 +128,10 @@ loadScripts(document, 'script');</script>
  template.query("UPDATE Person SET active = true WHERE name = 'Ada'")
          .executeUpdate();
  </code></pre></div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>1.1.0</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -353,7 +357,7 @@ loadScripts(document, 'script');</script>
 </main>
 <footer role="contentinfo">
 <hr>
-<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2024, 2025 Eclipse Foundation. All rights reserved.<br>Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2025 Eclipse Foundation. All rights reserved.<br></small></p>
 </footer>
 </div>
 </div>

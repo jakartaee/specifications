@@ -98,7 +98,21 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">QueryMapper.MapperDeleteQueryBuild</span></div>
-<div class="block">Represents the last step of the delete query fluent API execution.</div>
+<div class="block">Represents the final execution step of the delete query fluent API.
+ <p>
+ This interface defines the terminal operation used to execute a delete
+ query after all conditions have been specified.
+ </p>
+
+ <pre><code>
+ @Inject
+ Template template;
+
+ template.delete(Book.class)
+     .where("author").eq("Ada")
+     .and("publishedYear").gte(2020)
+     .execute();
+ </code></pre></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -137,7 +151,9 @@ loadScripts(document, 'script');</script>
 <h3>execute</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">execute</span>()</div>
 <div class="block">Executes the delete query based on the specified conditions.
-  Use this method to remove entities from the database that match the defined criteria.
+ Use this method to remove entities from the database that match the
+ defined criteria.
+
  <pre><code>
  template.delete(Book.class)
          .where("author").eq("Ada")
@@ -146,10 +162,12 @@ loadScripts(document, 'script');</script>
  </code></pre></div>
 <dl class="notes">
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - If a NoSQL database does not support a specific operation or if the
-                                       database does not support certain query conditions, an exception will be raised. For example, a wide-column
-                                       may not support the OR operator, or a document database may not support the BETWEEN operator.
-                                       The level of NoSQL database support for various conditions may vary depending on the database provider.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - if the underlying NoSQL database
+         does not support a specific delete operation or query condition.
+         For example, a wide-column database may not support the OR
+         operator, or a document database may not support the BETWEEN
+         operator. Support for delete operations and conditions varies
+         depending on the database provider.</dd>
 </dl>
 </section>
 </li>
@@ -162,7 +180,7 @@ loadScripts(document, 'script');</script>
 </main>
 <footer role="contentinfo">
 <hr>
-<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2024, 2025 Eclipse Foundation. All rights reserved.<br>Use is subject to <a href="../../../doc-files/speclicense.html" target="_top">license terms</a>.</small></p>
+<p class="legal-copy"><small>Comments to: <a href="mailto:nosql-dev@eclipse.org">nosql-dev@eclipse.org</a>.<br>Copyright &#169; 2025 Eclipse Foundation. All rights reserved.<br></small></p>
 </footer>
 </div>
 </div>
