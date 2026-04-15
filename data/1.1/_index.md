@@ -88,8 +88,8 @@ public interface Products extends DataRepository<Product, String> {
 
 * [Jakarta Data 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.1)
 
-* [Jakarta Data 1.1 M3 Specification Document](./jakarta-data-1.1.0-M3.pdf) (PDF)
-* [Jakarta Data 1.1 M3 Specification Document](./jakarta-data-1.1.0-M3.html) (HTML)
+* [Jakarta Data 1.1 M3 Specification Document](./jakarta-data-1.1-M3.pdf) (PDF)
+* [Jakarta Data 1.1 M3 Specification Document](./jakarta-data-1.1-M3.html) (HTML)
 * [Jakarta Data 1.1 M3 Javadoc](./apidocs)
 * [Jakarta Data 1.1 TCK](http://downloads.eclipse.org/jakarta/data/1.1/data-tck-1.1.0.zip) (Does not exist yet)
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/data/1.1) (Does not exist yet)
