@@ -525,15 +525,15 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .head .head{color:#f4f}
 </style>
 <!-- revnumber comes from plugin configuration -->
-<link rel="canonical" href="https://jakarta.ee/specifications/data/1.0/jakarta-data-1.0" />
+<link rel="canonical" href="https://jakarta.ee/specifications/data/1.1-M3/jakarta-data-1.1-M3" />
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
 <h1>Jakarta Data</h1>
 <div class="details">
-<span id="revnumber"> 1.0,</span>
-<span id="revdate">February 15, 2026</span>
-<br><span id="revremark">Draft</span>
+<span id="revnumber"> 1.1-M3,</span>
+<span id="revdate">April 15, 2026</span>
+<br><span id="revremark">M3</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -650,12 +650,13 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <ul class="sectlevel3">
 <li><a href="#_arithmetic_operations_and_parentheses">5.2.1. Arithmetic operations and parentheses</a></li>
 <li><a href="#_equality_and_inequality_operators">5.2.2. Equality and inequality operators</a></li>
-<li><a href="#_sorting_and_ordering">5.2.3. Sorting and ordering</a></li>
-<li><a href="#_logical_operators">5.2.4. Logical operators</a></li>
-<li><a href="#_select_clause_2">5.2.5. Select clause</a></li>
-<li><a href="#_where_clause">5.2.6. WHERE clause</a></li>
-<li><a href="#_update_statements">5.2.7. Update statements</a></li>
-<li><a href="#_delete_statements">5.2.8. Delete statements</a></li>
+<li><a href="#_string_functions_and_concatenation_operator">5.2.3. String functions and concatenation operator</a></li>
+<li><a href="#_sorting_and_ordering">5.2.4. Sorting and ordering</a></li>
+<li><a href="#_logical_operators">5.2.5. Logical operators</a></li>
+<li><a href="#_select_clause_2">5.2.6. Select clause</a></li>
+<li><a href="#_where_clause">5.2.7. WHERE clause</a></li>
+<li><a href="#_update_statements">5.2.8. Update statements</a></li>
+<li><a href="#_delete_statements">5.2.9. Delete statements</a></li>
 </ul>
 </li>
 <li><a href="#_providers_and_repositories">5.3. Providers and repositories</a></li>
@@ -707,11 +708,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta Data
 
-Version: 1.0
+Version: 1.1-M3
 
-Status: Draft
+Status: M3
 
-Release: February 15, 2026</pre>
+Release: April 15, 2026</pre>
 </div>
 </div>
 </div>
@@ -3821,7 +3822,29 @@ A Jakarta Data provider is permitted and encouraged to support additional types.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_sorting_and_ordering">5.2.3. Sorting and ordering</h4>
+<h4 id="_string_functions_and_concatenation_operator">5.2.3. String functions and concatenation operator</h4>
+<div class="paragraph">
+<p>For NoSQL databases, availability of the <code>LEFT</code> and <code>RIGHT</code>, <code>LENGTH</code>, <code>LOWER</code> and <code>UPPER</code> functions and string concatenation (the <code>||</code> operator) varies by database.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Key-value databases</dt>
+<dd>
+<p>Might not be capable of string functions and concatenation.</p>
+</dd>
+<dt class="hdlist1">Wide-column databases</dt>
+<dd>
+<p>Might not be capable of string functions and concatenation.</p>
+</dd>
+<dt class="hdlist1">Document databases</dt>
+<dd>
+<p>Might not be capable of string functions and concatenation.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sorting_and_ordering">5.2.4. Sorting and ordering</h4>
 <div class="paragraph">
 <p>When using NoSQL databases, sorting support varies by database type:</p>
 </div>
@@ -3872,7 +3895,7 @@ A Jakarta Data provider is permitted and encouraged to support additional types.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_logical_operators">5.2.4. Logical operators</h4>
+<h4 id="_logical_operators">5.2.5. Logical operators</h4>
 <div class="paragraph">
 <p>When using NoSQL databases, support varies depending on the database type:</p>
 </div>
@@ -3894,7 +3917,7 @@ A Jakarta Data provider is permitted and encouraged to support additional types.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_select_clause_2">5.2.5. Select clause</h4>
+<h4 id="_select_clause_2">5.2.6. Select clause</h4>
 <div class="paragraph">
 <p>When working with NoSQL databases, the <code>select</code> clause behavior may vary depending on the database structure and capabilities:</p>
 </div>
@@ -3925,7 +3948,7 @@ A Jakarta Data provider is permitted and encouraged to support additional types.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_where_clause">5.2.6. WHERE clause</h4>
+<h4 id="_where_clause">5.2.7. WHERE clause</h4>
 <div class="paragraph">
 <p>When working with NoSQL databases, the <code>WHERE</code> clause behavior may vary depending on the database structure and capabilities:</p>
 </div>
@@ -3943,16 +3966,19 @@ A Jakarta Data provider is permitted and encouraged to support additional types.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_update_statements">5.2.7. Update statements</h4>
+<h4 id="_update_statements">5.2.8. Update statements</h4>
 <div class="paragraph">
 <p>If a NoSQL database is not capable of conditional updates or cannot determine the number of matching records reliably for an <code>update</code> operation that returns an <code>int</code> or <code>long</code>, the <code>update</code> operation must throw an <code>UnsupportedOperationException</code>.</p>
+</div>
+<div class="paragraph">
+<p>If a NoSQL database is not capable of performing computations (such as addition and subtraction) for the assignment of values in the <code>UPDATE</code> clause, the respective <code>update</code> operation must throw an <code>UnsupportedOperationException</code>.</p>
 </div>
 <div class="paragraph">
 <p>Additionally, in databases with <strong>append-only semantics</strong>—such as many time-series and wide-column databases—the <code>update</code> operation may behave more like an <code>insert</code>, and repeated updates to the same record might not overwrite previous values.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_delete_statements">5.2.8. Delete statements</h4>
+<h4 id="_delete_statements">5.2.9. Delete statements</h4>
 <div class="paragraph">
 <p>If a NoSQL database is not capable of the execution of conditional deletes or cannot determine the number of deleted records reliably for a <code>delete</code> operation that returns an <code>int</code> or <code>long</code>, the <code>delete</code> operation must throw an <code>UnsupportedOperationException</code>.
 == Jakarta Data providers</p>
@@ -4513,7 +4539,7 @@ found = products.namedLike(namePattern,
 </div>
 <div id="footer">
 <div id="footer-text">
- 1.0<br>
+ 1.1-M3<br>
 Last updated 2025-11-06 15:52:43 UTC
 </div>
 </div>
