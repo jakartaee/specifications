@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -79,7 +79,30 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">PersistenceUnit</span></div>
 <div class="block">Expresses a dependency on an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> and
-its associated persistence unit.</div>
+ its associated persistence unit. When this annotation occurs
+ on a method or field of a managed bean, it declares an
+ injection point of type <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a>.
+ 
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.PersistenceUnit1"><code class="language-java">@PersistenceUnit EntityManagerFactory factory;
+</code></pre>
+</div>
+
+ When the annotation occurs on a managed bean class, it assigns
+ a name to the <code>EntityManagerFactory</code> in the environment
+ referencing context <code>java:comp/env</code> of the containing
+ module.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.PersistenceUnit2"><code class="language-java">@PersistenceUnit(name = "Library")
+class Bean
+    ...
+    EntityManagerFactory =
+            new InitialContext()
+                    .lookup("java:comp/env/Library");
+    ...
+</code></pre>
+</div>
+</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
@@ -100,15 +123,14 @@ its associated persistence unit.</div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">(Optional) The name by which the entity manager factory
-is to be accessed in the environment referencing context;
-not needed when dependency injection is used.</div>
+<div class="block">(Optional) The name at which the <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a>
+is accessed in the environment referencing context.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#unitName()" class="member-name-link">unitName</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">(Optional) The name of the persistence unit as defined
-in the <code>persistence.xml</code> file.</div>
+<div class="block">(Optional) The name of the persistence unit as defined in the
+<code>persistence.xml</code> file.</div>
 </div>
 </div>
 </section>
@@ -127,9 +149,12 @@ in the <code>persistence.xml</code> file.</div>
 <h3>name</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">name</span></div>
-<div class="block">(Optional) The name by which the entity manager factory
-is to be accessed in the environment referencing context;
-not needed when dependency injection is used.</div>
+<div class="block">(Optional) The name at which the <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a>
+is accessed in the environment referencing context. If the
+specified name does not begin with <code>java:</code>, then the
+prefix <code>java:comp/env</code> is assumed. This member is not
+usually specified when <code>@PersistenceUnit</code> annotates an
+injection point.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>""</code></dd>
@@ -142,10 +167,9 @@ not needed when dependency injection is used.</div>
 <h3>unitName</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">unitName</span></div>
-<div class="block">(Optional) The name of the persistence unit as defined
-in the <code>persistence.xml</code> file. If specified, the
-persistence unit for the entity manager factory that is
-accessible in JNDI must have the same name.</div>
+<div class="block">(Optional) The name of the persistence unit as defined in the
+<code>persistence.xml</code> file. This member is optional if there
+is only one persistence unit defined by the containing module.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>""</code></dd>

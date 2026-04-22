@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -114,37 +114,50 @@ that is a managed type with inheritance.</div>
 <div class="block">Add a node to the graph that corresponds to a map key
 that is a managed type.</div>
 </div>
-<div class="col-first even-row-color"><code>&lt;X&gt;&nbsp;<a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;X&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addSubgraph(jakarta.persistence.metamodel.Attribute)" class="member-name-link">addSubgraph</a><wbr>(<a href="../metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="../Graph.html#type-param-T" title="type parameter in Graph">T</a>, X&gt;&nbsp;attribute)</code></div>
+<div class="col-first even-row-color"><code><a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;<a href="../AttributeNode.html#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">AttributeNode.</span><code><a href="../AttributeNode.html#addSubgraph()" class="member-name-link">addSubgraph</a>()</code></div>
 <div class="col-last even-row-color">
-<div class="block">Add a node to the graph that corresponds to a managed
-type.</div>
+<div class="block">Add a subgraph rooted at this attribute node, which
+must be an embedded attribute or an association to
+an entity class.</div>
 </div>
 <div class="col-first odd-row-color"><code>&lt;X&gt;&nbsp;<a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;X&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addSubgraph(java.lang.String)" class="member-name-link">addSubgraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addSubgraph(jakarta.persistence.metamodel.Attribute)" class="member-name-link">addSubgraph</a><wbr>(<a href="../metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="../Graph.html#type-param-T" title="type parameter in Graph">T</a>, X&gt;&nbsp;attribute)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Add a node to the graph that corresponds to a managed type.</div>
 </div>
 <div class="col-first even-row-color"><code>&lt;X&gt;&nbsp;<a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;X&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addSubgraph(java.lang.String,java.lang.Class)" class="member-name-link">addSubgraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;type)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addSubgraph(java.lang.String)" class="member-name-link">addSubgraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Add a node to the graph that corresponds to a managed type.</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;X&gt;&nbsp;<a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;X&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addSubgraph(java.lang.String,java.lang.Class)" class="member-name-link">addSubgraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;type)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Add a node to the graph that corresponds to a managed
 type with inheritance.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;E&gt;&nbsp;<a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;E&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addTreatedElementSubgraph(jakarta.persistence.metamodel.PluralAttribute,java.lang.Class)" class="member-name-link">addTreatedElementSubgraph</a><wbr>(<a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="../Graph.html#type-param-T" title="type parameter in Graph">T</a>, ?, ? super E&gt;&nbsp;attribute,
+<div class="col-first even-row-color"><code>&lt;E&gt;&nbsp;<a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;E&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addTreatedElementSubgraph(jakarta.persistence.metamodel.PluralAttribute,java.lang.Class)" class="member-name-link">addTreatedElementSubgraph</a><wbr>(<a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="../Graph.html#type-param-T" title="type parameter in Graph">T</a>, ?, ? super E&gt;&nbsp;attribute,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;type)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Add a node to the graph that corresponds to a collection element
 that is a managed type.</div>
 </div>
-<div class="col-first even-row-color"><code>&lt;K&gt;&nbsp;<a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;K&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addTreatedMapKeySubgraph(jakarta.persistence.metamodel.MapAttribute,java.lang.Class)" class="member-name-link">addTreatedMapKeySubgraph</a><wbr>(<a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="../Graph.html#type-param-T" title="type parameter in Graph">T</a>, ? super K, ?&gt;&nbsp;attribute,
+<div class="col-first odd-row-color"><code>&lt;K&gt;&nbsp;<a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;K&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#addTreatedMapKeySubgraph(jakarta.persistence.metamodel.MapAttribute,java.lang.Class)" class="member-name-link">addTreatedMapKeySubgraph</a><wbr>(<a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="../Graph.html#type-param-T" title="type parameter in Graph">T</a>, ? super K, ?&gt;&nbsp;attribute,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;K&gt;&nbsp;type)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last odd-row-color">
 <div class="block">Add a node to the graph that corresponds to a map key
 that is a managed type with inheritance.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;S extends <a href="../AttributeNode.html#type-param-T" title="type parameter in AttributeNode">T</a>&gt;<br><a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;S&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">AttributeNode.</span><code><a href="../AttributeNode.html#addTreatedSubgraph(java.lang.Class)" class="member-name-link">addTreatedSubgraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;S&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Add a subgraph rooted at this attribute node, which
+must be an association to an entity class, for an
+entity subclass of the entity class.</div>
 </div>
 <div class="col-first odd-row-color"><code>&lt;S extends <a href="../EntityGraph.html#type-param-T" title="type parameter in EntityGraph">T</a>&gt;<br><a href="../Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;S&gt;</code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">EntityGraph.</span><code><a href="../EntityGraph.html#addTreatedSubgraph(java.lang.Class)" class="member-name-link">addTreatedSubgraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;S&gt;&nbsp;type)</code></div>

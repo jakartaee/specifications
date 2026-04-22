@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -84,7 +84,7 @@ loadScripts(document, 'script');</script>
 <div class="block">A map keyed by <a href="../../SqlResultSetMapping.html#name()">name</a>, containing
 a typed <a href="../ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a> for every result set mapping defined
 <a href="../../SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">in annotations</a> whose inferred result
-type is assignable to the given Java type.</div>
+type is exactly the given Java type.</div>
 </div>
 </div>
 <div class="caption"><span>Methods in <a href="../../package-summary.html">jakarta.persistence</a> with parameters of type <a href="../ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a></span></div>
@@ -120,6 +120,11 @@ any mapping or result class already specified.</div>
 <div class="block">Retrieve a single result from the next result set, specifying a
 <a href="../ResultSetMapping.html" title="interface in jakarta.persistence.sql">result set mapping</a> which overrides
 any mapping or result class already specified.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;R&gt;&nbsp;<a href="../../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StatementOrTypedQuery.</span><code><a href="../../StatementOrTypedQuery.html#withResultSetMapping(jakarta.persistence.sql.ResultSetMapping)" class="member-name-link">withResultSetMapping</a><wbr>(<a href="../ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Obtain a <a href="../../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given result set mapping.</div>
 </div>
 </div>
 </section>

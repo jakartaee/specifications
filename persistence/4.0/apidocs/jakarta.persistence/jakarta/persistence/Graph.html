@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -205,8 +205,7 @@ that is a managed type.</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X&gt;&nbsp;<a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;X&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addSubgraph(jakarta.persistence.metamodel.Attribute)" class="member-name-link">addSubgraph</a><wbr>(<a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="#type-param-T" title="type parameter in Graph">T</a>, X&gt;&nbsp;attribute)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Add a node to the graph that corresponds to a managed
-type.</div>
+<div class="block">Add a node to the graph that corresponds to a managed type.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X&gt;&nbsp;<a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;X&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addSubgraph(java.lang.String)" class="member-name-link">addSubgraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</code></div>
@@ -325,7 +324,13 @@ with the given name.</div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a>&lt;Y&gt;</span>&nbsp;<span class="element-name">addAttributeNode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Get an existing attribute node for the attribute with the given
-name, or add a new attribute node if there is no existing node.</div>
+name, or add a new attribute node if there is no existing node.
+
+<p>Added nodes are reflected in the list of
+<a href="#getAttributeNodes()">child nodes</a> as instances of
+<a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> with option <a href="FetchType.html#EAGER"><code>FetchType.EAGER</code></a>,
+except when the effect of this call is simply to cancel the
+effect of a prior <a href="#removeAttributeNode(java.lang.String)">removal</a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attributeName</code> - name of the attribute</dd>
@@ -348,7 +353,13 @@ name, or add a new attribute node if there is no existing node.</div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a>&lt;Y&gt;</span>&nbsp;<span class="element-name">addAttributeNode</span><wbr><span class="parameters">(<a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="#type-param-T" title="type parameter in Graph">T</a>, Y&gt;&nbsp;attribute)</span></div>
 <div class="block">Get an existing attribute node for the given attribute, or add
-a new attribute node if there is no existing node.</div>
+a new attribute node if there is no existing node.
+
+<p>Added nodes are reflected in the list of
+<a href="#getAttributeNodes()">child nodes</a> as instances of
+<a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> with option <a href="FetchType.html#EAGER"><code>FetchType.EAGER</code></a>,
+except when the effect of this call is simply to cancel the
+effect of a prior <a href="#removeAttributeNode(java.lang.String)">removal</a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attribute</code> - attribute</dd>
@@ -456,7 +467,13 @@ suppresses inclusion of an attribute mapped for eager fetching.
 The effect of this call may be overridden by subsequent
 invocations of <a href="#addAttributeNode(java.lang.String)"><code>addAttributeNode(String)</code></a> or <a href="#addSubgraph(jakarta.persistence.metamodel.Attribute)"><code>addSubgraph(Attribute)</code></a>.
 If there is no existing node for the given attribute name, this
-operation has no effect.</div>
+operation has no effect.
+
+<p>Removed nodes are reflected in the list of
+<a href="#getAttributeNodes()">child nodes</a> as instances of
+<a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> with option <a href="FetchType.html#LAZY"><code>FetchType.LAZY</code></a>, except
+when the effect of this call is simply to cancel the effect of a
+prior <a href="#addAttributeNode(java.lang.String)">addition</a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attributeName</code> - name of the attribute</dd>
@@ -477,7 +494,13 @@ suppresses inclusion of an attribute mapped for eager fetching.
 The effect of this call may be overridden by subsequent
 invocations of <a href="#addAttributeNode(java.lang.String)"><code>addAttributeNode(String)</code></a> or <a href="#addSubgraph(jakarta.persistence.metamodel.Attribute)"><code>addSubgraph(Attribute)</code></a>.
 If there is no existing node for the given attribute, this
-operation has no effect.</div>
+operation has no effect.
+
+<p>Removed nodes are reflected in the list of
+<a href="#getAttributeNodes()">child nodes</a> as instances of
+<a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> with option <a href="FetchType.html#LAZY"><code>FetchType.LAZY</code></a>, except
+when the effect of this call is simply to cancel the effect of a
+prior <a href="#addAttributeNode(java.lang.String)">addition</a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attribute</code> - attribute</dd>
@@ -496,7 +519,13 @@ operation has no effect.</div>
 When this graph is interpreted as a load graph, this operation
 suppresses inclusion of attributes mapped for eager fetching.
 The effect of this call may be overridden by subsequent
-invocations of <a href="#addAttributeNode(java.lang.String)"><code>addAttributeNode(String)</code></a> or <a href="#addSubgraph(jakarta.persistence.metamodel.Attribute)"><code>addSubgraph(Attribute)</code></a>.</div>
+invocations of <a href="#addAttributeNode(java.lang.String)"><code>addAttributeNode(String)</code></a> or <a href="#addSubgraph(jakarta.persistence.metamodel.Attribute)"><code>addSubgraph(Attribute)</code></a>.
+
+<p>Removed nodes are reflected in the list of
+<a href="#getAttributeNodes()">child nodes</a> as instances of
+<a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> with option <a href="FetchType.html#LAZY"><code>FetchType.LAZY</code></a>, except
+when the effect of this call is simply to cancel the effect of a
+prior <a href="#addAttributeNode(java.lang.String)">addition</a>.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>3.2</dd>
@@ -512,7 +541,13 @@ invocations of <a href="#addAttributeNode(java.lang.String)"><code>addAttributeN
 <div class="block">Add one or more attribute nodes to the entity graph.
 If there is already an existing node for one of the given
 attribute names, that particular argument is ignored and
-has no effect.</div>
+has no effect.
+
+<p>Added nodes are reflected in the list of
+<a href="#getAttributeNodes()">child nodes</a> as instances of
+<a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> with option <a href="FetchType.html#EAGER"><code>FetchType.EAGER</code></a>,
+except when the effect of this call is simply to cancel the
+effect of a prior <a href="#removeAttributeNode(java.lang.String)">removal</a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attributeName</code> - name of the attribute</dd>
@@ -533,7 +568,13 @@ has no effect.</div>
 <div class="block">Add one or more attribute nodes to the entity graph.
 If there is already an existing node for one of the given
 attributes, that particular argument is ignored and has no
-effect.</div>
+effect.
+
+<p>Added nodes are reflected in the list of
+<a href="#getAttributeNodes()">child nodes</a> as instances of
+<a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> with option <a href="FetchType.html#EAGER"><code>FetchType.EAGER</code></a>,
+except when the effect of this call is simply to cancel the
+effect of a prior <a href="#removeAttributeNode(java.lang.String)">removal</a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attribute</code> - attribute</dd>
@@ -549,12 +590,14 @@ effect.</div>
 <h3>addSubgraph</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;X&gt;</span>&nbsp;<span class="element-name">addSubgraph</span><wbr><span class="parameters">(<a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="#type-param-T" title="type parameter in Graph">T</a>, X&gt;&nbsp;attribute)</span></div>
-<div class="block">Add a node to the graph that corresponds to a managed
-type. This allows for construction of multi-node entity graphs
+<div class="block">Add a node to the graph that corresponds to a managed type.
+This allows for construction of multi-node entity graphs
 that include related managed types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addSubgraph(jakarta.persistence.metamodel.Attribute)-type-param-X"><code>X</code> - the managed type of the attribute</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute</dd>
+<dd><code>attribute</code> - the attribute</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the attribute</dd>
 <dt>Throws:</dt>
@@ -573,14 +616,16 @@ that include related managed types.</div>
 <div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;Y&gt;</span>&nbsp;<span class="element-name">addTreatedSubgraph</span><wbr><span class="parameters">(<a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="#type-param-T" title="type parameter in Graph">T</a>, ? super Y&gt;&nbsp;attribute,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
 <div class="block">Add a node to the graph that corresponds to a managed
-type with inheritance.  This allows for multiple subclass
+type with inheritance. This allows for multiple subclass
 subgraphs to be defined for this node of the entity
 graph. Subclass subgraphs will automatically include the
 specified attributes of superclass subgraphs.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addTreatedSubgraph(jakarta.persistence.metamodel.Attribute,java.lang.Class)-type-param-Y"><code>Y</code> - the type of the subclass</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute</dd>
-<dd><code>type</code> - entity subclass</dd>
+<dd><code>attribute</code> - the attribute</dd>
+<dd><code>type</code> - an entity subclass of the attribute type</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the attribute</dd>
 <dt>Throws:</dt>
@@ -603,8 +648,10 @@ specified attributes of superclass subgraphs.</div>
 This allows for construction of multi-node entity graphs
 that include related managed types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addSubgraph(java.lang.String)-type-param-X"><code>X</code> - the managed type of the attribute</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute</dd>
+<dd><code>attributeName</code> - the name of the attribute</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the attribute</dd>
 <dt>Throws:</dt>
@@ -625,14 +672,16 @@ that include related managed types.</div>
 <div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;X&gt;</span>&nbsp;<span class="element-name">addSubgraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;type)</span></div>
 <div class="block">Add a node to the graph that corresponds to a managed
-type with inheritance.  This allows for multiple subclass
+type with inheritance. This allows for multiple subclass
 subgraphs to be defined for this node of the entity
 graph. Subclass subgraphs will automatically include the
 specified attributes of superclass subgraphs</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addSubgraph(java.lang.String,java.lang.Class)-type-param-X"><code>X</code> - the type of the subclass</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute</dd>
-<dd><code>type</code> - entity subclass</dd>
+<dd><code>attributeName</code> - the name of the attribute</dd>
+<dd><code>type</code> - an entity subclass of the collection element type</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the attribute</dd>
 <dt>Throws:</dt>
@@ -655,8 +704,10 @@ specified attributes of superclass subgraphs</div>
 that is a managed type. This allows for construction of
 multi-node entity graphs that include related managed types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addElementSubgraph(jakarta.persistence.metamodel.PluralAttribute)-type-param-E"><code>E</code> - the managed type of the collection element</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute</dd>
+<dd><code>attribute</code> - the attribute</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the element attribute</dd>
 <dt>Throws:</dt>
@@ -680,8 +731,10 @@ multi-node entity graphs that include related managed types.</div>
 that is a managed type. This allows for construction of
 multi-node entity graphs that include related managed types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addTreatedElementSubgraph(jakarta.persistence.metamodel.PluralAttribute,java.lang.Class)-type-param-E"><code>E</code> - the managed type of the collection element</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute</dd>
+<dd><code>attribute</code> - the attribute</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the element attribute</dd>
 <dt>Throws:</dt>
@@ -704,8 +757,10 @@ multi-node entity graphs that include related managed types.</div>
 that is a managed type. This allows for construction of
 multi-node entity graphs that include related managed types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addElementSubgraph(java.lang.String)-type-param-X"><code>X</code> - the managed type of the collection element</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute</dd>
+<dd><code>attributeName</code> - the name of the attribute</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the element attribute</dd>
 <dt>Throws:</dt>
@@ -729,9 +784,11 @@ multi-node entity graphs that include related managed types.</div>
 that is a managed type. This allows for construction of
 multi-node entity graphs that include related managed types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addElementSubgraph(java.lang.String,java.lang.Class)-type-param-X"><code>X</code> - the type of the subclass</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute</dd>
-<dd><code>type</code> - entity subclass</dd>
+<dd><code>attributeName</code> - the name of the attribute</dd>
+<dd><code>type</code> - an entity subclass of the collection element type</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the element attribute</dd>
 <dt>Throws:</dt>
@@ -754,8 +811,10 @@ multi-node entity graphs that include related managed types.</div>
 that is a managed type. This allows for construction of
 multi-node entity graphs that include related managed types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addMapKeySubgraph(jakarta.persistence.metamodel.MapAttribute)-type-param-K"><code>K</code> - the managed type of the map key</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute</dd>
+<dd><code>attribute</code> - the attribute</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the key attribute</dd>
 <dt>Throws:</dt>
@@ -776,12 +835,14 @@ multi-node entity graphs that include related managed types.</div>
 <div class="block">Add a node to the graph that corresponds to a map key
 that is a managed type with inheritance. This allows for
 construction of multi-node entity graphs that include related
-managed types.  Subclass subgraphs will automatically include
+managed types. Subclass subgraphs will automatically include
 the specified attributes of superclass subgraphs</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addTreatedMapKeySubgraph(jakarta.persistence.metamodel.MapAttribute,java.lang.Class)-type-param-K"><code>K</code> - the type of the subclass</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute</dd>
-<dd><code>type</code> - entity subclass</dd>
+<dd><code>attribute</code> - the attribute</dd>
+<dd><code>type</code> - an entity subclass of the map key type</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the attribute</dd>
 <dt>Throws:</dt>
@@ -802,8 +863,10 @@ the specified attributes of superclass subgraphs</div>
 that is a managed type. This allows for construction of
 multi-node entity graphs that include related managed types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addKeySubgraph(java.lang.String)-type-param-X"><code>X</code> - the managed type of the map key</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute</dd>
+<dd><code>attributeName</code> - the name of the attribute</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the key attribute</dd>
 <dt>Throws:</dt>
@@ -826,12 +889,14 @@ multi-node entity graphs that include related managed types.</div>
 <div class="block">Add a node to the graph that corresponds to a map key
 that is a managed type with inheritance. This allows for
 construction of multi-node entity graphs that include related
-managed types.  Subclass subgraphs will include the specified
+managed types. Subclass subgraphs will include the specified
 attributes of superclass subgraphs</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addKeySubgraph(java.lang.String,java.lang.Class)-type-param-X"><code>X</code> - the type of the subclass</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute</dd>
-<dd><code>type</code> - entity subclass</dd>
+<dd><code>attributeName</code> - the name of the attribute</dd>
+<dd><code>type</code> - an entity subclass of the map key type</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the attribute</dd>
 <dt>Throws:</dt>
@@ -851,11 +916,19 @@ attributes of superclass subgraphs</div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getAttributeNodes</span>()</div>
 <div class="block">Return the attribute nodes corresponding to the attributes of
-this managed type that are included in the graph.</div>
+this managed type that are included in the graph. The
+<a href="AttributeNode.html#getOptions()">options</a> of the returned
+nodes may be used to distinguish added nodes from removed nodes.
+<ul>
+<li>Added nodes are represented by instances of
+    <a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> with option <a href="FetchType.html#EAGER"><code>FetchType.EAGER</code></a>.
+<li>Removed nodes are represented by instances of
+    <a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> with option <a href="FetchType.html#LAZY"><code>FetchType.LAZY</code></a>.
+</ul></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>list of attribute nodes included in the graph or an
-empty list if none have been defined</dd>
+<dd>list of attribute nodes added to or removed from the
+        graph, or an empty list if no nodes have been defined</dd>
 </dl>
 </div>
 </section>

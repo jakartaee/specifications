@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -68,6 +68,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#lockScope()" tabindex="0">lockScope</a></li>
 <li><a href="#hints()" tabindex="0">hints</a></li>
 <li><a href="#entityGraph()" tabindex="0">entityGraph</a></li>
+<li><a href="#flush()" tabindex="0">flush</a></li>
 </ol>
 </li>
 </ol>
@@ -81,7 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html" title="class or interface in java.lang.annotation" class="external-link">@Repeatable</a>(<a href="NamedQueries.html" title="annotation interface in jakarta.persistence">NamedQueries</a>.class)
-<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE" title="class or interface in java.lang.annotation" class="external-link">TYPE</a>)
+<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE" title="class or interface in java.lang.annotation" class="external-link">TYPE</a>,<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#PACKAGE" title="class or interface in java.lang.annotation" class="external-link">PACKAGE</a>,<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#MODULE" title="class or interface in java.lang.annotation" class="external-link">MODULE</a>})
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">NamedQuery</span></div>
 <div class="block">Declares a named query written in the Jakarta Persistence Query
@@ -181,25 +182,31 @@ query language.</div>
 entity graph</a> interpreted as a load graph and applied to the
 entity returned by the query.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="QueryHint.html" title="annotation interface in jakarta.persistence">QueryHint</a>[]</code></div>
-<div class="col-second odd-row-color"><code><a href="#hints()" class="member-name-link">hints</a></code></div>
+<div class="col-first odd-row-color"><code><a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#flush()" class="member-name-link">flush</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">(Optional) The <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a>
+to use when executing the query.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="QueryHint.html" title="annotation interface in jakarta.persistence">QueryHint</a>[]</code></div>
+<div class="col-second even-row-color"><code><a href="#hints()" class="member-name-link">hints</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">(Optional) Query properties and hints.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></code></div>
-<div class="col-second even-row-color"><code><a href="#lockMode()" class="member-name-link">lockMode</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#lockMode()" class="member-name-link">lockMode</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">(Optional) The lock mode type to use in query execution.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#lockScope()" class="member-name-link">lockScope</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a></code></div>
+<div class="col-second even-row-color"><code><a href="#lockScope()" class="member-name-link">lockScope</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">(Optional) The pessimistic lock scope to use in query execution
 if a pessimistic lock mode is specified via <a href="#lockMode()"><code>lockMode()</code></a>.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#resultClass()" class="member-name-link">resultClass</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="#resultClass()" class="member-name-link">resultClass</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">(Optional) The class of each query result.</div>
 </div>
 </div>
@@ -358,7 +365,7 @@ vendor-specific query hints.</div>
 entity graph</a> interpreted as a load graph and applied to the
 entity returned by the query. The named <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>
 may be overridden by calling
-<a href="TypedQuery.html#setEntityGraph(jakarta.persistence.EntityGraph)"><code>TypedQuery.setEntityGraph(EntityGraph)</code></a>.</div>
+<a href="StatementOrTypedQuery.html#withEntityGraph(jakarta.persistence.EntityGraph)"><code>StatementOrTypedQuery.withEntityGraph(EntityGraph)</code></a>.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>4.0</dd>
@@ -366,6 +373,30 @@ may be overridden by calling
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>""</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="flush()">
+<h3>flush</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a></span>&nbsp;<span class="element-name">flush</span></div>
+<div class="block">(Optional) The <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a>
+to use when executing the query.</div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>4.0</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list-long">
+<li><a href="Query.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>Query.setQueryFlushMode(QueryFlushMode)</code></a></li>
+</ul>
+</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd><code>DEFAULT</code></dd>
 </dl>
 </div>
 </section>

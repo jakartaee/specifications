@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -119,7 +119,8 @@ extends <a href="Graph.html" title="interface in jakarta.persistence">Graph</a>&
  An entity graph passed as the first argument to
  <a href="EntityHandler.html#find(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)"><code>EntityHandler.find(EntityGraph, Object, FindOption...)</code></a>,
  <a href="EntityHandler.html#get(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)"><code>EntityHandler.get(EntityGraph, Object, FindOption...)</code></a>,
- or <a href="TypedQuery.html#setEntityGraph(jakarta.persistence.EntityGraph)"><code>TypedQuery.setEntityGraph(EntityGraph)</code></a> is
+ <a href="EntityHandler.html#createQuery(java.lang.String,jakarta.persistence.EntityGraph)"><code>EntityHandler.createQuery(String, EntityGraph)</code></a>, or
+ <a href="StatementOrTypedQuery.html#withEntityGraph(jakarta.persistence.EntityGraph)"><code>StatementOrTypedQuery.withEntityGraph(EntityGraph)</code></a> is
  interpreted as a load graph.
  
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
@@ -159,7 +160,8 @@ extends <a href="Graph.html" title="interface in jakarta.persistence">Graph</a>&
 <li><a href="EntityManagerFactory.html#getNamedEntityGraphs(java.lang.Class)"><code>EntityManagerFactory.getNamedEntityGraphs(Class)</code></a></li>
 <li><a href="EntityHandler.html#find(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)"><code>EntityHandler.find(EntityGraph, Object, FindOption...)</code></a></li>
 <li><a href="EntityHandler.html#get(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)"><code>EntityHandler.get(EntityGraph, Object, FindOption...)</code></a></li>
-<li><a href="TypedQuery.html#setEntityGraph(jakarta.persistence.EntityGraph)"><code>TypedQuery.setEntityGraph(EntityGraph)</code></a></li>
+<li><a href="EntityHandler.html#createQuery(java.lang.String,jakarta.persistence.EntityGraph)"><code>EntityHandler.createQuery(String, EntityGraph)</code></a></li>
+<li><a href="StatementOrTypedQuery.html#withEntityGraph(jakarta.persistence.EntityGraph)"><code>StatementOrTypedQuery.withEntityGraph(EntityGraph)</code></a></li>
 </ul>
 </dd>
 <dt>API note:</dt>
@@ -240,8 +242,10 @@ correspond to attributes of subclasses of the entity type of
 this <code>EntityGraph</code>. Subclass subgraphs automatically
 include the specified attributes of superclass subgraphs.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addTreatedSubgraph(java.lang.Class)-type-param-S"><code>S</code> - the type of the subclass</span></dd>
 <dt>Parameters:</dt>
-<dd><code>type</code> - entity subclass</dd>
+<dd><code>type</code> - an entity subclass of the root entity class</dd>
 <dt>Returns:</dt>
 <dd>subgraph for the subclass</dd>
 <dt>Throws:</dt>

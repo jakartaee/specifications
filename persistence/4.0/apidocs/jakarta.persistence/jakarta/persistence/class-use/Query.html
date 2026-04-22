@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -82,13 +82,20 @@ loadScripts(document, 'script');</script>
 <div class="block">Interface used to control the execution of executable statements.</div>
 </div>
 <div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../StoredProcedureQuery.html" class="type-name-link" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><code><a href="../StatementOrTypedQuery.html" class="type-name-link" title="interface in jakarta.persistence">StatementOrTypedQuery</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Interface used to control execution of a stored procedure query.</div>
+<div class="block">Declares operations allowing a <a href="../Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>
+to be obtained when the type of a query or statement has not yet been
+specified.</div>
 </div>
 <div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../TypedQuery.html" class="type-name-link" title="interface in jakarta.persistence">TypedQuery</a>&lt;X&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="../StoredProcedureQuery.html" class="type-name-link" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Interface used to control execution of a stored procedure query.</div>
+</div>
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../TypedQuery.html" class="type-name-link" title="interface in jakarta.persistence">TypedQuery</a>&lt;X&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Interface used to control the execution of typed queries.</div>
 </div>
 </div>
@@ -97,39 +104,6 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createNamedQuery(java.lang.String)" class="member-name-link">createNamedQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Create an instance of <a href="../Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a named
-query written in the Jakarta Persistence query language,
-usually an <code>UPDATE</code> or <code>DELETE</code> statement, or
-in native SQL, usually an <code>INSERT</code>, <code>UPDATE</code>,
-<code>MERGE</code>, or <code>DELETE</code> statement.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createNativeQuery(java.lang.String)" class="member-name-link">createNativeQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Create an instance of <a href="../Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a
-native SQL statement, usually an <code>INSERT</code>,
-<code>UPDATE</code>, <code>MERGE</code>, or <code>DELETE</code>
-statement.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createNativeQuery(java.lang.String,java.lang.String)" class="member-name-link">createNativeQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;resultSetMapping)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Create an instance of <a href="../Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a native SQL
-query, using the <a href="../SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">mapping</a> with
-the given <a href="../SqlResultSetMapping.html#name()">name</a> to interpret
-the JDBC result set.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(java.lang.String)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Create an instance of <a href="../Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a
-Jakarta Persistence query language statement, usually
-an <code>UPDATE</code> or <code>DELETE</code> statement.</div>
-</div>
 <div class="col-first even-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">QueryTimeoutException.</span><code><a href="../QueryTimeoutException.html#getQuery()" class="member-name-link">getQuery</a>()</code></div>
 <div class="col-last even-row-color">
@@ -177,8 +151,9 @@ converter</a> to use.</div>
 <div class="col-first even-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Set the <a href="../FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
-used when the query is executed.</div>
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="../Query.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>Query.setQueryFlushMode(QueryFlushMode)</code></a>.</div>
+</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#setHint(java.lang.String,java.lang.Object)" class="member-name-link">setHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
@@ -312,13 +287,19 @@ specifying the parameter type.</div>
 specifying the parameter type.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" class="member-name-link">setQueryFlushMode</a><wbr>(<a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Set the query timeout.</div>
+<div class="block">Set the <a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
+used when the query is executed.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Set the query timeout.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Set the query timeout, in milliseconds.</div>
 </div>
 </div>

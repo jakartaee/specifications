@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -60,9 +60,6 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#asStatement()" tabindex="0">asStatement()</a></li>
-<li><a href="#ofType(java.lang.Class)" tabindex="0">ofType(Class)</a></li>
-<li><a href="#withEntityGraph(jakarta.persistence.EntityGraph)" tabindex="0">withEntityGraph(EntityGraph)</a></li>
 <li><a href="#getResultList()" tabindex="0">getResultList()</a></li>
 <li><a href="#getResultStream()" tabindex="0">getResultStream()</a></li>
 <li><a href="#getSingleResult()" tabindex="0">getSingleResult()</a></li>
@@ -98,6 +95,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#getParameterValue(jakarta.persistence.Parameter)" tabindex="0">getParameterValue(Parameter)</a></li>
 <li><a href="#getParameterValue(java.lang.String)" tabindex="0">getParameterValue(String)</a></li>
 <li><a href="#getParameterValue(int)" tabindex="0">getParameterValue(int)</a></li>
+<li><a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" tabindex="0">setQueryFlushMode(QueryFlushMode)</a></li>
+<li><a href="#getQueryFlushMode()" tabindex="0">getQueryFlushMode()</a></li>
 <li><a href="#setFlushMode(jakarta.persistence.FlushModeType)" tabindex="0">setFlushMode(FlushModeType)</a></li>
 <li><a href="#getFlushMode()" tabindex="0">getFlushMode()</a></li>
 <li><a href="#setLockMode(jakarta.persistence.LockModeType)" tabindex="0">setLockMode(LockModeType)</a></li>
@@ -122,54 +121,25 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a>, <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a>, <a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;X&gt;</code></dd>
+<dd><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a>, <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a>, <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a>, <a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;X&gt;</code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Query</span></div>
-<div class="block">Declares common operations for controlling the
-execution of statements and queries written in the Jakarta
-Persistence query language or in native SQL.
+<div class="block">Declares common operations for controlling the execution of
+statements and queries written in the Jakarta Persistence
+query language or in native SQL.
 <ul>
 <li>For a Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
     statement, or for a native SQL statement that returns a row
-    count, an instance <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> should be used to
+    count, an instance of <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> should be used to
     execute the statement.
 <li>For a Jakarta Persistence <code>SELECT</code> query or for any
     native SQL query that returns a result set, an instance of
     <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> should be used.
 <li>For a stored procedure call, a <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a>
     should be used.
-</ul>
-<p>If an instance of this interface represents an <code>UPDATE</code>
-or <code>DELETE</code> statement, then a <code>Statement</code> representing
-the same statement may be obtained by calling <a href="#asStatement()"><code>asStatement()</code></a>.
-<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.Query1"><code class="language-java">int updated =
-        em.createQuery("delete from Temporary where timestamp &gt; ?1")
-                .asStatement()
-                .setParameter(1, cutoffDateTime)
-                .execute();
-</code></pre>
-</div>
-
-<p>If an instance of this interface represents a <code>SELECT</code>
-query, then a <code>TypedQuery</code> representing the same query may
-be obtained by calling <a href="#ofType(java.lang.Class)"><code>ofType(Class)</code></a>, passing the result
-type of the query.
-<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.Query2"><code class="language-java">List&lt;Book&gt; books =
-        em.createQuery("from Book where extract(year from publicationDate) &gt; :year")
-                .ofType(Book.class)
-                .setParameter("year", Year.of(2000))
-                .setMaxResults(10)
-                .setCacheRetrieveMode(CacheRetrieveMode.BYPASS)
-                .getResultList();
-</code></pre>
-</div>
-
-<p>These operations may be viewed as a sort of type cast to a
-given subtype of this interface.</div>
+</ul></div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
@@ -179,6 +149,7 @@ given subtype of this interface.</div>
 <li><a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a></li>
 <li><a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a></li>
 <li><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a></li>
+<li><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a></li>
 <li><a href="Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a></li>
 </ul>
 </dd>
@@ -206,116 +177,114 @@ execute statements, is declared as deprecated; the new operation
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#asStatement()" class="member-name-link">asStatement</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Obtain a <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> representing this query, which
-must be some kind of executable statement, that is, a
-Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
-statement, or any native SQL statement that returns a row
-count.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#executeUpdate()" class="member-name-link">executeUpdate</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#executeUpdate()" class="member-name-link">executeUpdate</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="Statement.html#execute()"><code>Statement.execute()</code></a>.</div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#getCacheRetrieveMode()"><code>TypedQuery.getCacheRetrieveMode()</code></a></div>
 </div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getCacheStoreMode()" class="member-name-link">getCacheStoreMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getCacheStoreMode()" class="member-name-link">getCacheStoreMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#getCacheStoreMode()"><code>TypedQuery.getCacheStoreMode()</code></a></div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getFirstResult()" class="member-name-link">getFirstResult</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getFirstResult()" class="member-name-link">getFirstResult</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#getFirstResult()"><code>TypedQuery.getFirstResult()</code></a></div>
 </div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFlushMode()" class="member-name-link">getFlushMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Get the flush mode which will be in effect when the query
-is executed.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getFlushMode()" class="member-name-link">getFlushMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="#getQueryFlushMode()"><code>getQueryFlushMode()</code></a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHints()" class="member-name-link">getHints</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHints()" class="member-name-link">getHints</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get the properties and hints and associated values that are in
 effect for the query instance.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getLockMode()" class="member-name-link">getLockMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getLockMode()" class="member-name-link">getLockMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#getLockMode()"><code>TypedQuery.getLockMode()</code></a></div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getMaxResults()" class="member-name-link">getMaxResults</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getMaxResults()" class="member-name-link">getMaxResults</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#getMaxResults()"><code>TypedQuery.getMaxResults()</code></a></div>
 </div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameter(int)" class="member-name-link">getParameter</a><wbr>(int&nbsp;position)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameter(int)" class="member-name-link">getParameter</a><wbr>(int&nbsp;position)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get the <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> object representing the declared
 positional parameter with the given position.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameter(int,java.lang.Class)" class="member-name-link">getParameter</a><wbr>(int&nbsp;position,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameter(int,java.lang.Class)" class="member-name-link">getParameter</a><wbr>(int&nbsp;position,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get the <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> object corresponding to the declared
 positional parameter with the given position and type.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameter(java.lang.String)" class="member-name-link">getParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameter(java.lang.String)" class="member-name-link">getParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get the <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> object representing the declared
 named parameter with the given name.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameter(java.lang.String,java.lang.Class)" class="member-name-link">getParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameter(java.lang.String,java.lang.Class)" class="member-name-link">getParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get the <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> object representing the declared
 named parameter with the given name and type.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;?&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameters()" class="member-name-link">getParameters</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;?&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameters()" class="member-name-link">getParameters</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get the <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> objects representing the declared
 parameters of the query or an empty set if the query has no
 parameters.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameterValue(int)" class="member-name-link">getParameterValue</a><wbr>(int&nbsp;position)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameterValue(int)" class="member-name-link">getParameterValue</a><wbr>(int&nbsp;position)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the input value bound to the positional parameter.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameterValue(jakarta.persistence.Parameter)" class="member-name-link">getParameterValue</a><wbr>(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameterValue(jakarta.persistence.Parameter)" class="member-name-link">getParameterValue</a><wbr>(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the input value bound to the parameter.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameterValue(java.lang.String)" class="member-name-link">getParameterValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameterValue(java.lang.String)" class="member-name-link">getParameterValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the input value bound to the named parameter.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getQueryFlushMode()" class="member-name-link">getQueryFlushMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the flush mode which will be in effect when the query
+is executed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getResultList()" class="member-name-link">getResultList</a>()</code></div>
@@ -359,37 +328,22 @@ parameters.</div>
 been bound to the parameter represented by the given
 parameter object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;R&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#ofType(java.lang.Class)" class="member-name-link">ofType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given query result type,
-which must be a supertype of the result type of this query.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)" class="member-name-link">setCacheRetrieveMode</a><wbr>(<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)" class="member-name-link">setCacheRetrieveMode</a><wbr>(<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)"><code>TypedQuery.setCacheRetrieveMode(CacheRetrieveMode)</code></a></div>
 </div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setCacheStoreMode(jakarta.persistence.CacheStoreMode)" class="member-name-link">setCacheStoreMode</a><wbr>(<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setCacheStoreMode(jakarta.persistence.CacheStoreMode)" class="member-name-link">setCacheStoreMode</a><wbr>(<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)"><code>TypedQuery.setCacheStoreMode(CacheStoreMode)</code></a></div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setConvertedParameter(int,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(int&nbsp;position,
- P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Bind an argument value to a named parameter, explicitly
-specifying an <a href="AttributeConverter.html" title="interface in jakarta.persistence">attribute
-converter</a> to use.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setConvertedParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setConvertedParameter(int,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(int&nbsp;position,
  P&nbsp;value,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -397,58 +351,58 @@ converter</a> to use.</div>
 specifying an <a href="AttributeConverter.html" title="interface in jakarta.persistence">attribute
 converter</a> to use.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setFirstResult(int)" class="member-name-link">setFirstResult</a><wbr>(int&nbsp;startPosition)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setConvertedParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Bind an argument value to a named parameter, explicitly
+specifying an <a href="AttributeConverter.html" title="interface in jakarta.persistence">attribute
+converter</a> to use.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setFirstResult(int)" class="member-name-link">setFirstResult</a><wbr>(int&nbsp;startPosition)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#setFirstResult(int)"><code>TypedQuery.setFirstResult(int)</code></a></div>
 </div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set the <a href="FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
-used when the query is executed.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>setQueryFlushMode(QueryFlushMode)</code></a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setHint(java.lang.String,java.lang.Object)" class="member-name-link">setHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setHint(java.lang.String,java.lang.Object)" class="member-name-link">setHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set a query property or hint.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setLockMode(jakarta.persistence.LockModeType)" class="member-name-link">setLockMode</a><wbr>(<a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setLockMode(jakarta.persistence.LockModeType)" class="member-name-link">setLockMode</a><wbr>(<a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#setLockMode(jakarta.persistence.LockModeType)"><code>TypedQuery.setLockMode(LockModeType)</code></a></div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setMaxResults(int)" class="member-name-link">setMaxResults</a><wbr>(int&nbsp;maxResult)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setMaxResults(int)" class="member-name-link">setMaxResults</a><wbr>(int&nbsp;maxResult)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="TypedQuery.html#setMaxResults(int)"><code>TypedQuery.setMaxResults(int)</code></a></div>
 </div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(int,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(int,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Bind an argument value to a positional parameter.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(int,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
- <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Newly written code should use the date/time types
-            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
-</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(int,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(int,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -456,35 +410,35 @@ used when the query is executed.</div>
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(int,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
- P&nbsp;value,
- <a href="metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Bind an argument value to a positional parameter, explicitly
-specifying the parameter type.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(int,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Newly written code should use the date/time types
+            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
+</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(int,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(int,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
  P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
+ <a href="metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Bind an argument value to a positional parameter, explicitly
 specifying the parameter type.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(jakarta.persistence.Parameter,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
- <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Newly written code should use the date/time types
-            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
-</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(int,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Bind an argument value to a positional parameter, explicitly
+specifying the parameter type.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(jakarta.persistence.Parameter,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(jakarta.persistence.Parameter,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -492,32 +446,32 @@ specifying the parameter type.</div>
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(jakarta.persistence.Parameter,T)" class="member-name-link">setParameter</a><wbr>(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(jakarta.persistence.Parameter,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Newly written code should use the date/time types
+            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(jakarta.persistence.Parameter,T)" class="member-name-link">setParameter</a><wbr>(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
  T&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Bind an argument to a parameter of this query respresented as
 a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(java.lang.String,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(java.lang.String,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Bind an argument value to a named parameter.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(java.lang.String,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
- <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Newly written code should use the date/time types
-            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
-</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(java.lang.String,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(java.lang.String,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -525,21 +479,37 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setParameter(java.lang.String,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Newly written code should use the date/time types
+            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  P&nbsp;value,
  <a href="metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Bind an argument value to a named parameter, explicitly
+specifying the parameter type.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Bind an argument value to a named parameter, explicitly
 specifying the parameter type.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;P&gt;&nbsp;<a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" class="member-name-link">setQueryFlushMode</a><wbr>(<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Bind an argument value to a named parameter, explicitly
-specifying the parameter type.</div>
+<div class="block">Set the <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
+used when the query is executed.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
@@ -557,13 +527,6 @@ specifying the parameter type.</div>
 <div class="block">Return an object of the specified type to allow access to 
 a provider-specific API.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;R&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#withEntityGraph(jakarta.persistence.EntityGraph)" class="member-name-link">withEntityGraph</a><wbr>(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;R&gt;&nbsp;graph)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given entity graph,
-which must be rooted at a supertype of the result type of
-this query.</div>
-</div>
 </div>
 </div>
 </div>
@@ -578,80 +541,6 @@ this query.</div>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="asStatement()">
-<h3>asStatement</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">asStatement</span>()</div>
-<div class="block">Obtain a <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> representing this query, which
-must be some kind of executable statement, that is, a
-Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
-statement, or any native SQL statement that returns a row
-count. The executable statement may be executed by calling
-<a href="Statement.html#execute()"><code>Statement.execute()</code></a>.</div>
-<dl class="notes">
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if this query is a
-        Jakarta Persistence <code>SELECT</code> query</dd>
-<dt>Since:</dt>
-<dd>4.0</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="ofType(java.lang.Class)">
-<h3>ofType</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;R&gt;</span>&nbsp;<span class="element-name">ofType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</span></div>
-<div class="block">Obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given query result type,
-which must be a supertype of the result type of this query.
-This query must be a Jakarta Persistence <code>SELECT</code> query
-or a native SQL query which returns a result set.</div>
-<dl class="notes">
-<dt>Type Parameters:</dt>
-<dd><span id="ofType(java.lang.Class)-type-param-R"><code>R</code> - The query result type</span></dd>
-<dt>Parameters:</dt>
-<dd><code>resultType</code> - The Java class of the query result type</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the given result type is
-        not a supertype of the result type of this query</dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if this query is a
-        Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
-        statement</dd>
-<dt>Since:</dt>
-<dd>4.0</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="withEntityGraph(jakarta.persistence.EntityGraph)">
-<h3>withEntityGraph</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;R&gt;</span>&nbsp;<span class="element-name">withEntityGraph</span><wbr><span class="parameters">(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;R&gt;&nbsp;graph)</span></div>
-<div class="block">Obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given entity graph,
-which must be rooted at a supertype of the result type of
-this query. This query must be a Jakarta Persistence
-<code>SELECT</code> query which returns a single entity type.</div>
-<dl class="notes">
-<dt>Type Parameters:</dt>
-<dd><span id="withEntityGraph(jakarta.persistence.EntityGraph)-type-param-R"><code>R</code> - The query result type</span></dd>
-<dt>Parameters:</dt>
-<dd><code>graph</code> - The entity graph, interpreted as a load graph</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the given graph type is
-        not rooted at a supertype of the result type of this
-        query</dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if this query is a
-        Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
-        statement</dd>
-<dt>Since:</dt>
-<dd>4.0</dd>
-</dl>
-</div>
-</section>
-</li>
 <li>
 <section class="detail" id="getResultList()">
 <h3>getResultList</h3>
@@ -1157,7 +1046,7 @@ of a native query.
 
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-setParameter(java.lang.String,P,java.lang.Class)2"><code class="language-java">var books =
-    session.createNativeQuery("select * from books where :limit is null or pub_date &gt; :limit",
+    em.createNativeQuery("select * from books where :limit is null or pub_date &gt; :limit",
                               Book.class)
         .setParameter("limit", optionalDateLimit, LocalDate.class)
         .getResultList();
@@ -1352,7 +1241,7 @@ of a native SQL query.
 
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-setParameter(int,P,java.lang.Class)2"><code class="language-java">var books =
-    session.createNativeQuery("select * from books where ?1 is null or pub_date &gt; ?1",
+    em.createNativeQuery("select * from books where ?1 is null or pub_date &gt; ?1",
                               Book.class)
         .setParameter(1, optionalDateLimit, LocalDate.class)
         .getResultList();
@@ -1733,10 +1622,51 @@ parameter object.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="setQueryFlushMode(jakarta.persistence.QueryFlushMode)">
+<h3>setQueryFlushMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="Query.html" title="interface in jakarta.persistence">Query</a></span>&nbsp;<span class="element-name">setQueryFlushMode</span><wbr><span class="parameters">(<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</span></div>
+<div class="block">Set the <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
+used when the query is executed. This flush mode overrides
+the <a href="EntityManager.html#getFlushMode()">flush mode type
+of the entity manager</a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>flushMode</code> - The new flush mode</dd>
+<dt>Returns:</dt>
+<dd>the same query instance</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getQueryFlushMode()">
+<h3>getQueryFlushMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a></span>&nbsp;<span class="element-name">getQueryFlushMode</span>()</div>
+<div class="block">Get the flush mode which will be in effect when the query
+is executed. If a flush mode has not been set for this query
+object, return <a href="QueryFlushMode.html#DEFAULT"><code>QueryFlushMode.DEFAULT</code></a>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>flush mode</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="setFlushMode(jakarta.persistence.FlushModeType)">
 <h3>setFlushMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Query.html" title="interface in jakarta.persistence">Query</a></span>&nbsp;<span class="element-name">setFlushMode</span><wbr><span class="parameters">(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="4.0")
+</span><span class="return-type"><a href="Query.html" title="interface in jakarta.persistence">Query</a></span>&nbsp;<span class="element-name">setFlushMode</span><wbr><span class="parameters">(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>setQueryFlushMode(QueryFlushMode)</code></a>.</div>
+</div>
 <div class="block">Set the <a href="FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
 used when the query is executed. This flush mode overrides
 the <a href="EntityManager.html#getFlushMode()">flush mode type
@@ -1754,7 +1684,11 @@ of the entity manager</a>.</div>
 <section class="detail" id="getFlushMode()">
 <h3>getFlushMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></span>&nbsp;<span class="element-name">getFlushMode</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="4.0")
+</span><span class="return-type"><a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></span>&nbsp;<span class="element-name">getFlushMode</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="#getQueryFlushMode()"><code>getQueryFlushMode()</code></a>.</div>
+</div>
 <div class="block">Get the flush mode which will be in effect when the query
 is executed. If a flush mode has not been set for this query
 object, return the <a href="EntityManager.html#getFlushMode()">current flush mode type of the entity manager</a>.</div>

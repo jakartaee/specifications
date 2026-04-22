@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -76,6 +76,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#setParameter(int,P,java.lang.Class)" tabindex="0">setParameter(int, P, Class)</a></li>
 <li><a href="#setParameter(int,P,jakarta.persistence.metamodel.Type)" tabindex="0">setParameter(int, P, Type)</a></li>
 <li><a href="#setConvertedParameter(int,P,java.lang.Class)" tabindex="0">setConvertedParameter(int, P, Class)</a></li>
+<li><a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" tabindex="0">setQueryFlushMode(QueryFlushMode)</a></li>
 <li><a href="#setFlushMode(jakarta.persistence.FlushModeType)" tabindex="0">setFlushMode(FlushModeType)</a></li>
 <li><a href="#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)" tabindex="0">setCacheRetrieveMode(CacheRetrieveMode)</a></li>
 <li><a href="#setCacheStoreMode(jakarta.persistence.CacheStoreMode)" tabindex="0">setCacheStoreMode(CacheStoreMode)</a></li>
@@ -413,11 +414,12 @@ converter</a> to use.</div>
 specifying an <a href="AttributeConverter.html" title="interface in jakarta.persistence">attribute
 converter</a> to use.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set the <a href="FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
-used when the query is executed.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>setQueryFlushMode(QueryFlushMode)</code></a>.</div>
+</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setHint(java.lang.String,java.lang.Object)" class="member-name-link">setHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
@@ -537,13 +539,19 @@ specifying the parameter type.</div>
 specifying the parameter type.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" class="member-name-link">setQueryFlushMode</a><wbr>(<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set the query timeout.</div>
+<div class="block">Set the <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
+used when the query is executed.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Set the query timeout.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set the query timeout, in milliseconds.</div>
 </div>
 </div>
@@ -551,7 +559,7 @@ specifying the parameter type.</div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.Query">Methods inherited from interface&nbsp;<a href="Query.html#method-summary" title="interface in jakarta.persistence">Query</a></h3>
-<code><a href="Query.html#asStatement()" title="asStatement()">asStatement</a>, <a href="Query.html#getCacheRetrieveMode()" title="getCacheRetrieveMode()">getCacheRetrieveMode</a>, <a href="Query.html#getCacheStoreMode()" title="getCacheStoreMode()">getCacheStoreMode</a>, <a href="Query.html#getFirstResult()" title="getFirstResult()">getFirstResult</a>, <a href="Query.html#getFlushMode()" title="getFlushMode()">getFlushMode</a>, <a href="Query.html#getHints()" title="getHints()">getHints</a>, <a href="Query.html#getLockMode()" title="getLockMode()">getLockMode</a>, <a href="Query.html#getMaxResults()" title="getMaxResults()">getMaxResults</a>, <a href="Query.html#getParameter(int)" title="getParameter(int)">getParameter</a>, <a href="Query.html#getParameter(int,java.lang.Class)" title="getParameter(int, Class)">getParameter</a>, <a href="Query.html#getParameter(java.lang.String)" title="getParameter(String)">getParameter</a>, <a href="Query.html#getParameter(java.lang.String,java.lang.Class)" title="getParameter(String, Class)">getParameter</a>, <a href="Query.html#getParameters()" title="getParameters()">getParameters</a>, <a href="Query.html#getParameterValue(int)" title="getParameterValue(int)">getParameterValue</a>, <a href="Query.html#getParameterValue(jakarta.persistence.Parameter)" title="getParameterValue(Parameter)">getParameterValue</a>, <a href="Query.html#getParameterValue(java.lang.String)" title="getParameterValue(String)">getParameterValue</a>, <a href="Query.html#getResultStream()" title="getResultStream()">getResultStream</a>, <a href="Query.html#getTimeout()" title="getTimeout()">getTimeout</a>, <a href="Query.html#isBound(jakarta.persistence.Parameter)" title="isBound(Parameter)">isBound</a>, <a href="Query.html#ofType(java.lang.Class)" title="ofType(Class)">ofType</a>, <a href="Query.html#setFirstResult(int)" title="setFirstResult(int)">setFirstResult</a>, <a href="Query.html#setLockMode(jakarta.persistence.LockModeType)" title="setLockMode(LockModeType)">setLockMode</a>, <a href="Query.html#setMaxResults(int)" title="setMaxResults(int)">setMaxResults</a>, <a href="Query.html#unwrap(java.lang.Class)" title="unwrap(Class)">unwrap</a>, <a href="Query.html#withEntityGraph(jakarta.persistence.EntityGraph)" title="withEntityGraph(EntityGraph)">withEntityGraph</a></code></div>
+<code><a href="Query.html#getCacheRetrieveMode()" title="getCacheRetrieveMode()">getCacheRetrieveMode</a>, <a href="Query.html#getCacheStoreMode()" title="getCacheStoreMode()">getCacheStoreMode</a>, <a href="Query.html#getFirstResult()" title="getFirstResult()">getFirstResult</a>, <a href="Query.html#getFlushMode()" title="getFlushMode()">getFlushMode</a>, <a href="Query.html#getHints()" title="getHints()">getHints</a>, <a href="Query.html#getLockMode()" title="getLockMode()">getLockMode</a>, <a href="Query.html#getMaxResults()" title="getMaxResults()">getMaxResults</a>, <a href="Query.html#getParameter(int)" title="getParameter(int)">getParameter</a>, <a href="Query.html#getParameter(int,java.lang.Class)" title="getParameter(int, Class)">getParameter</a>, <a href="Query.html#getParameter(java.lang.String)" title="getParameter(String)">getParameter</a>, <a href="Query.html#getParameter(java.lang.String,java.lang.Class)" title="getParameter(String, Class)">getParameter</a>, <a href="Query.html#getParameters()" title="getParameters()">getParameters</a>, <a href="Query.html#getParameterValue(int)" title="getParameterValue(int)">getParameterValue</a>, <a href="Query.html#getParameterValue(jakarta.persistence.Parameter)" title="getParameterValue(Parameter)">getParameterValue</a>, <a href="Query.html#getParameterValue(java.lang.String)" title="getParameterValue(String)">getParameterValue</a>, <a href="Query.html#getQueryFlushMode()" title="getQueryFlushMode()">getQueryFlushMode</a>, <a href="Query.html#getResultStream()" title="getResultStream()">getResultStream</a>, <a href="Query.html#getTimeout()" title="getTimeout()">getTimeout</a>, <a href="Query.html#isBound(jakarta.persistence.Parameter)" title="isBound(Parameter)">isBound</a>, <a href="Query.html#setFirstResult(int)" title="setFirstResult(int)">setFirstResult</a>, <a href="Query.html#setLockMode(jakarta.persistence.LockModeType)" title="setLockMode(LockModeType)">setLockMode</a>, <a href="Query.html#setMaxResults(int)" title="setMaxResults(int)">setMaxResults</a>, <a href="Query.html#unwrap(java.lang.Class)" title="unwrap(Class)">unwrap</a></code></div>
 </section>
 </li>
 </ul>
@@ -1014,10 +1022,36 @@ converter</a> to use.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="setQueryFlushMode(jakarta.persistence.QueryFlushMode)">
+<h3>setQueryFlushMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setQueryFlushMode</span><wbr><span class="parameters">(<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</span></div>
+<div class="block">Set the <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
+used when the query is executed. This flush mode overrides
+the <a href="EntityManager.html#getFlushMode()">flush mode type
+of the entity manager</a>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Query.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)">setQueryFlushMode</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>flushMode</code> - The new flush mode</dd>
+<dt>Returns:</dt>
+<dd>the same query instance</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="setFlushMode(jakarta.persistence.FlushModeType)">
 <h3>setFlushMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setFlushMode</span><wbr><span class="parameters">(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setFlushMode</span><wbr><span class="parameters">(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>setQueryFlushMode(QueryFlushMode)</code></a>.</div>
+</div>
 <div class="block">Set the <a href="FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
 used when the query is executed. This flush mode overrides
 the <a href="EntityManager.html#getFlushMode()">flush mode type

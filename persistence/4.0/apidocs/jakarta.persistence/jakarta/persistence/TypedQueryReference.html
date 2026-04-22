@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -109,7 +109,7 @@ the query parameter named <code>pattern</code> and with the
     @Inject EntityManager entityManager;
 
     @StaticQuery("select a from Book b join b.authors a where b.title like :pattern")
-    @ReadQueryOptions(cacheStoreMode = CacheStoreMode.BYPASS)
+    @StaticQueryOptions(cacheStoreMode = CacheStoreMode.BYPASS)
     List&lt;Author&gt; findAuthorsGivenTitles(String pattern) {
         return entityManager.createQuery(Library_.findAuthorsGivenTitles(pattern))
                 .getResultList();
@@ -279,7 +279,7 @@ or <code>null</code> when the default mode of the
 <dd>
 <ul class="tag-list-long">
 <li><a href="TypedQuery.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)"><code>TypedQuery.setCacheRetrieveMode(CacheRetrieveMode)</code></a></li>
-<li><a href="query/ReadQueryOptions.html#cacheRetrieveMode()"><code>ReadQueryOptions.cacheRetrieveMode()</code></a></li>
+<li><a href="query/StaticQueryOptions.html#cacheRetrieveMode()"><code>StaticQueryOptions.cacheRetrieveMode()</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -301,7 +301,7 @@ or <code>null</code> when the default mode of the
 <dd>
 <ul class="tag-list-long">
 <li><a href="TypedQuery.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)"><code>TypedQuery.setCacheStoreMode(CacheStoreMode)</code></a></li>
-<li><a href="query/ReadQueryOptions.html#cacheStoreMode()"><code>ReadQueryOptions.cacheStoreMode()</code></a></li>
+<li><a href="query/StaticQueryOptions.html#cacheStoreMode()"><code>StaticQueryOptions.cacheStoreMode()</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -324,7 +324,7 @@ was specified.</div>
 <ul class="tag-list-long">
 <li><a href="TypedQuery.html#setLockMode(jakarta.persistence.LockModeType)"><code>TypedQuery.setLockMode(LockModeType)</code></a></li>
 <li><a href="NamedQuery.html#lockMode()"><code>NamedQuery.lockMode()</code></a></li>
-<li><a href="query/ReadQueryOptions.html#lockMode()"><code>ReadQueryOptions.lockMode()</code></a></li>
+<li><a href="query/StaticQueryOptions.html#lockMode()"><code>StaticQueryOptions.lockMode()</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -347,7 +347,7 @@ if no lock scope was specified.</div>
 <ul class="tag-list-long">
 <li><a href="TypedQuery.html#setLockScope(jakarta.persistence.PessimisticLockScope)"><code>TypedQuery.setLockScope(PessimisticLockScope)</code></a></li>
 <li><a href="NamedQuery.html#lockScope()"><code>NamedQuery.lockScope()</code></a></li>
-<li><a href="query/ReadQueryOptions.html#lockScope()"><code>ReadQueryOptions.lockScope()</code></a></li>
+<li><a href="query/StaticQueryOptions.html#lockScope()"><code>StaticQueryOptions.lockScope()</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -368,9 +368,8 @@ specified.</div>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list-long">
-<li><a href="TypedQuery.html#setEntityGraph(jakarta.persistence.EntityGraph)"><code>TypedQuery.setEntityGraph(EntityGraph)</code></a></li>
 <li><a href="NamedQuery.html#entityGraph()"><code>NamedQuery.entityGraph()</code></a></li>
-<li><a href="query/ReadQueryOptions.html#entityGraph()"><code>ReadQueryOptions.entityGraph()</code></a></li>
+<li><a href="query/StaticQueryOptions.html#entityGraph()"><code>StaticQueryOptions.entityGraph()</code></a></li>
 </ul>
 </dd>
 </dl>

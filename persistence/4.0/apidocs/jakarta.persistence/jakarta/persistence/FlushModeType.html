@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -62,6 +62,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#enum-constant-detail" tabindex="0">Enum Constant Details</a>
 <ol class="toc-list">
+<li><a href="#EXPLICIT" tabindex="0">EXPLICIT</a></li>
 <li><a href="#COMMIT" tabindex="0">COMMIT</a></li>
 <li><a href="#AUTO" tabindex="0">AUTO</a></li>
 </ol>
@@ -94,32 +95,36 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">FlushModeType</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&gt;</span></div>
 <div class="block">Enumerates flush modes recognized by the <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>.
+The <a href="EntityManager.html#getFlushMode()">flush mode of a
+persistence context</a> controls synchronization of modifications
+to managed entities with the database.
 
-<p>When a Jakarta Persistence or native SQL query is executed
-within a transaction via an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> obtained
-from an <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> joined to the transaction, the
-effective flush mode is determined by the current
-<a href="Query.html#getFlushMode()">flush mode of the query object</a>,
-which defaults to the current
-<a href="EntityManager.html#getFlushMode()">flush mode of the
-persistence context</a>.
+<p>When a transaction is active and the persistence context is
+joined to the transaction, the persistence provider runtime is
+permitted to flush pending modifications to the database. The
+application can influence the timing of synchronization via the
+method <a href="EntityManager.html#flush()"><code>EntityManager.flush()</code></a>, by setting the
+<a href="FlushModeType.html" title="enum class in jakarta.persistence"><code>FlushModeType</code></a>, or by specifying a <a href="QueryFlushMode.html" title="enum class in jakarta.persistence"><code>QueryFlushMode</code></a>.
 <ul>
-<li>If <a href="#AUTO"><code>AUTO</code></a> is in effect, the persistence provider must
-    ensure that every modification to the state of every entity
-    associated with the persistence context which could possibly
-    affect the result of the query is visible to the processing
-    of the query. The persistence provider implementation might
-    guarantee this by flushing pending updates to modified
-    entities to the database before executing the query.
-<li>Otherwise, if <a href="#COMMIT"><code>COMMIT</code></a> is set, the effect on the
-    results of the query of pending modifications to entities
-    in the persistence context is unspecified.
+<li>When the <code>flush()</code> method is called, the provider must
+    synchronize every pending modification made to every entity
+    currently associated with the persistence context.
+<li>The method <a href="EntityManager.html#setFlushMode(jakarta.persistence.FlushModeType)"><code>EntityManager.setFlushMode(FlushModeType)</code></a> can be used to
+    control synchronization initiated automatically by the provider.
+    Unless <a href="#EXPLICIT"><code>EXPLICIT</code></a> is specified, all pending modifications
+    are synchronized with the database when the transaction commits.
+    When <a href="#AUTO"><code>AUTO</code></a> is specified, pending modifications might be
+    automatically flushed to the database before execution of a
+    query.
+<li>The effect of the <a href="FlushModeType.html" title="enum class in jakarta.persistence"><code>FlushModeType</code></a> of the entity manager
+    may be overridden during execution of a given query by
+    explicitly specifying a <a href="QueryFlushMode.html" title="enum class in jakarta.persistence"><code>QueryFlushMode</code></a> via the method
+    <a href="Query.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>Query.setQueryFlushMode(QueryFlushMode)</code></a>.</li>
 </ul>
 
-<p>When there is no transaction active, or if the persistence
-context has not been joined to the current transaction, the
-persistence provider must not flush pending modifications to
-the database, regardless of the flush mode.
+<p>If there is no transaction active or if the persistence context
+has not been joined to the current transaction, the persistence
+provider must not flush modifications to the database.
 
 <p>An <a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a> has no associated persistence context,
 and so flush modes have no effect on an entity agent, nor on
@@ -132,6 +137,7 @@ and so flush modes have no effect on an entity agent, nor on
 <ul class="tag-list-long">
 <li><a href="EntityManager.html#setFlushMode(jakarta.persistence.FlushModeType)"><code>EntityManager.setFlushMode(FlushModeType)</code></a></li>
 <li><a href="Query.html#setFlushMode(jakarta.persistence.FlushModeType)"><code>Query.setFlushMode(FlushModeType)</code></a></li>
+<li><a href="QueryFlushMode.html" title="enum class in jakarta.persistence"><code>QueryFlushMode</code></a></li>
 <li><a href="SynchronizationType.html" title="enum class in jakarta.persistence"><code>SynchronizationType</code></a></li>
 </ul>
 </dd>
@@ -160,14 +166,21 @@ and so flush modes have no effect on an entity agent, nor on
 <div class="col-first even-row-color"><code><a href="#AUTO" class="member-name-link">AUTO</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Pending modifications to entities associated with a
-persistence context joined to the current transaction
-are flushed to the database when the transaction commits.</div>
+persistence context joined to the current transaction are
+automatically flushed to the database when the transaction
+commits.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="#COMMIT" class="member-name-link">COMMIT</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">Pending modifications to entities associated with a
-persistence context joined to the current transaction
-are flushed to the database when the transaction commits.</div>
+persistence context joined to the current transaction are
+automatically flushed to the database when the transaction
+commits.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="#EXPLICIT" class="member-name-link">EXPLICIT</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Every flush is an explicit operation requested by the
+application program by calling <a href="EntityManager.html#flush()"><code>EntityManager.flush()</code></a>.</div>
 </div>
 </div>
 </section>
@@ -215,15 +228,35 @@ the order they are declared.</div>
 <h2>Enum Constant Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="EXPLICIT">
+<h3>EXPLICIT</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></span>&nbsp;<span class="element-name">EXPLICIT</span></div>
+<div class="block">Every flush is an explicit operation requested by the
+application program by calling <a href="EntityManager.html#flush()"><code>EntityManager.flush()</code></a>.
+The persistence context is never automatically flushed.
+Pending modifications to entities held in the persistence
+context might not be visible to the processing of queries
+and might never be made persistent.</div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="COMMIT">
 <h3>COMMIT</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></span>&nbsp;<span class="element-name">COMMIT</span></div>
 <div class="block">Pending modifications to entities associated with a
-persistence context joined to the current transaction
-are flushed to the database when the transaction commits.
-The provider is permitted to flush at other times, but is
-not required to.</div>
+persistence context joined to the current transaction are
+automatically flushed to the database when the transaction
+commits. The provider is permitted to flush at other times,
+but is not required to. Pending modifications to entities
+associated with the persistence context might not be visible
+to the processing of queries.</div>
 </div>
 </section>
 </li>
@@ -233,13 +266,13 @@ not required to.</div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></span>&nbsp;<span class="element-name">AUTO</span></div>
 <div class="block">Pending modifications to entities associated with a
-persistence context joined to the current transaction
-are flushed to the database when the transaction commits.
-In addition, the persistence provider must ensure that
-every modification to the state of every entity associated
-with the persistence context which could possibly affect
-the result of a query is visible to the processing of the
-query. The persistence provider implementation might
+persistence context joined to the current transaction are
+automatically flushed to the database when the transaction
+commits. In addition, the persistence provider must ensure
+that every modification to the state of every entity
+associated with the persistence context which could possibly
+affect the result of a query is visible to the processing
+of the query. The persistence provider implementation might
 guarantee this by flushing pending modifications to the
 database before executing the query. The provider is
 permitted to flush at other times, but is not required to.

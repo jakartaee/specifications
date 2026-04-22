@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -89,12 +89,17 @@ is responsible for updating the ordering upon flushing to the
 database to reflect any insertion, deletion, or reordering
 affecting the list.
 
-<p>The <code>OrderColumn</code> annotation is specified on a
+<p>This annotation is specified on the owning side of a
 <a href="OneToMany.html" title="annotation interface in jakarta.persistence"><code>OneToMany</code></a> or <a href="ManyToMany.html" title="annotation interface in jakarta.persistence"><code>ManyToMany</code></a> relationship or on an
-element collection. The <code>OrderColumn</code> annotation is specified
-on the side of the relationship that references the collection that
-is to be ordered. The order column is not visible as part of the
-state of the entity or embeddable class.
+element collection&mdash;and always on the side of the relationship
+that references the collection that is ordered. The order column is
+not visible as part of the state of the entity or embeddable class.
+
+<p>This annotation is used with owned collections. For unowned
+collections, that is, for association mappings which specify
+<code>mappedBy</code>, the <a href="OrderBy.html" title="annotation interface in jakarta.persistence"><code>OrderBy</code></a> annotation should be used.
+Use of the <code>OrderColumn</code> annotation on the unowned side of a
+relationship is not portable between persistence providers.
 
 <p>The <a href="OrderBy.html" title="annotation interface in jakarta.persistence"><code>OrderBy</code></a> annotation should be used for ordering that
 is visible as persistent state and maintained by the application.

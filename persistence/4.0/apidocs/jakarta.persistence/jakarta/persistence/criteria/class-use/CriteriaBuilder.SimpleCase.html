@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -82,28 +82,33 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Create a simple case expression.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a><wbr>&lt;<a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>,<wbr><a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.SimpleCase.</span><code><a href="../CriteriaBuilder.SimpleCase.html#when(C,jakarta.persistence.criteria.Expression)" class="member-name-link">when</a><wbr>(<a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>&nbsp;condition,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&gt;&nbsp;result)</code></div>
+<div class="col-first odd-row-color"><code>&lt;R&gt;&nbsp;<a href="../CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a><wbr>&lt;<a href="../Expression.html#type-param-T" title="type parameter in Expression">T</a>,<wbr>R&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#selectCase()" class="member-name-link">selectCase</a>()</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Add a when/then clause to the case expression.</div>
+<div class="block">Create a simple case expression to test against this expression.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a><wbr>&lt;<a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>,<wbr><a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.SimpleCase.</span><code><a href="../CriteriaBuilder.SimpleCase.html#when(C,R)" class="member-name-link">when</a><wbr>(<a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>&nbsp;condition,
- <a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&nbsp;result)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.SimpleCase.</span><code><a href="../CriteriaBuilder.SimpleCase.html#when(C,jakarta.persistence.criteria.Expression)" class="member-name-link">when</a><wbr>(<a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>&nbsp;condition,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&gt;&nbsp;result)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Add a when/then clause to the case expression.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a><wbr>&lt;<a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>,<wbr><a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.SimpleCase.</span><code><a href="../CriteriaBuilder.SimpleCase.html#when(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">when</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>&gt;&nbsp;condition,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&gt;&nbsp;result)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.SimpleCase.</span><code><a href="../CriteriaBuilder.SimpleCase.html#when(C,R)" class="member-name-link">when</a><wbr>(<a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>&nbsp;condition,
+ <a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&nbsp;result)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Add a when/then clause to the case expression.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a><wbr>&lt;<a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>,<wbr><a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.SimpleCase.</span><code><a href="../CriteriaBuilder.SimpleCase.html#when(jakarta.persistence.criteria.Expression,R)" class="member-name-link">when</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>&gt;&nbsp;condition,
- <a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&nbsp;result)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.SimpleCase.</span><code><a href="../CriteriaBuilder.SimpleCase.html#when(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">when</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>&gt;&nbsp;condition,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&gt;&nbsp;result)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Add a when/then clause to the case expression.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a><wbr>&lt;<a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>,<wbr><a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.SimpleCase.</span><code><a href="../CriteriaBuilder.SimpleCase.html#when(jakarta.persistence.criteria.Expression,R)" class="member-name-link">when</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../CriteriaBuilder.SimpleCase.html#type-param-C" title="type parameter in CriteriaBuilder.SimpleCase">C</a>&gt;&nbsp;condition,
+ <a href="../CriteriaBuilder.SimpleCase.html#type-param-R" title="type parameter in CriteriaBuilder.SimpleCase">R</a>&nbsp;result)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Add a when/then clause to the case expression.</div>
 </div>
 </div>

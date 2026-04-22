@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -62,8 +62,12 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#getAttributeName()" tabindex="0">getAttributeName()</a></li>
 <li><a href="#getAttribute()" tabindex="0">getAttribute()</a></li>
+<li><a href="#addSubgraph()" tabindex="0">addSubgraph()</a></li>
+<li><a href="#addTreatedSubgraph(java.lang.Class)" tabindex="0">addTreatedSubgraph(Class)</a></li>
 <li><a href="#getSubgraphs()" tabindex="0">getSubgraphs()</a></li>
 <li><a href="#getKeySubgraphs()" tabindex="0">getKeySubgraphs()</a></li>
+<li><a href="#addOption(jakarta.persistence.FetchOption)" tabindex="0">addOption(FetchOption)</a></li>
+<li><a href="#getOptions()" tabindex="0">getOptions()</a></li>
 </ol>
 </li>
 </ol>
@@ -109,22 +113,48 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a><wbr>&lt;?,<wbr><a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAttribute()" class="member-name-link">getAttribute</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addOption(jakarta.persistence.FetchOption)" class="member-name-link">addOption</a><wbr>(<a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&nbsp;option)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Specify an <a href="FetchOption.html" title="interface in jakarta.persistence">option</a> controlling
+how this node is fetched.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addSubgraph()" class="member-name-link">addSubgraph</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Add a subgraph rooted at this attribute node, which
+must be an embedded attribute or an association to
+an entity class.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;S extends <a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;<br><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;S&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addTreatedSubgraph(java.lang.Class)" class="member-name-link">addTreatedSubgraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;S&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Add a subgraph rooted at this attribute node, which
+must be an association to an entity class, for an
+entity subclass of the entity class.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a><wbr>&lt;?,<wbr><a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAttribute()" class="member-name-link">getAttribute</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The attribute from which this branch of the graph or subgraph is forked.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAttributeName()" class="member-name-link">getAttributeName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAttributeName()" class="member-name-link">getAttributeName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the name of the attribute corresponding to the
 attribute node.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;, <a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;?&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKeySubgraphs()" class="member-name-link">getKeySubgraphs</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;, <a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;?&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKeySubgraphs()" class="member-name-link">getKeySubgraphs</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return a map of subgraphs associated with this attribute
 node's map key.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOptions()" class="member-name-link">getOptions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the <a href="FetchOption.html" title="interface in jakarta.persistence">options</a> controlling
+how this node is fetched.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;, <a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;?&gt;&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSubgraphs()" class="member-name-link">getSubgraphs</a>()</code></div>
@@ -176,6 +206,56 @@ attribute node.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="addSubgraph()">
+<h3>addSubgraph</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;<a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="element-name">addSubgraph</span>()</div>
+<div class="block">Add a subgraph rooted at this attribute node, which
+must be an embedded attribute or an association to
+an entity class.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the added subgraph</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="Graph.html#addSubgraph(jakarta.persistence.metamodel.Attribute)"><code>Graph.addSubgraph(Attribute)</code></a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addTreatedSubgraph(java.lang.Class)">
+<h3>addTreatedSubgraph</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="type-parameters">&lt;S extends <a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="return-type"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;S&gt;</span>&nbsp;<span class="element-name">addTreatedSubgraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;S&gt;&nbsp;type)</span></div>
+<div class="block">Add a subgraph rooted at this attribute node, which
+must be an association to an entity class, for an
+entity subclass of the entity class.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addTreatedSubgraph(java.lang.Class)-type-param-S"><code>S</code> - The type of the subclass</span></dd>
+<dt>Parameters:</dt>
+<dd><code>type</code> - The subclass of the entity class</dd>
+<dt>Returns:</dt>
+<dd>the added subgraph</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list-long">
+<li><a href="Graph.html#addTreatedSubgraph(jakarta.persistence.metamodel.Attribute,java.lang.Class)"><code>Graph.addTreatedSubgraph(Attribute, Class)</code></a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="getSubgraphs()">
 <h3>getSubgraphs</h3>
 <div class="horizontal-scroll">
@@ -203,6 +283,46 @@ node's map key.</div>
 <dd>a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a> of subgraphs associated with this
 attribute node's map key or an empty <code>Map</code> if none
 have been defined</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addOption(jakarta.persistence.FetchOption)">
+<h3>addOption</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a>&lt;<a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="element-name">addOption</span><wbr><span class="parameters">(<a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&nbsp;option)</span></div>
+<div class="block">Specify an <a href="FetchOption.html" title="interface in jakarta.persistence">option</a> controlling
+how this node is fetched.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>option</code> - The option</dd>
+<dt>Returns:</dt>
+<dd>the receiving instance</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getOptions()">
+<h3>getOptions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&gt;</span>&nbsp;<span class="element-name">getOptions</span>()</div>
+<div class="block">Return the <a href="FetchOption.html" title="interface in jakarta.persistence">options</a> controlling
+how this node is fetched.
+<ul>
+<li>If this is an <a href="Graph.html#addAttributeNode(java.lang.String)">added</a>
+    node, the returned options contain <a href="FetchType.html#EAGER"><code>FetchType.EAGER</code></a>.
+<li>If this is a <a href="Graph.html#removeAttributeNode(java.lang.String)">removed</a>
+    node, the returned options contain <a href="FetchType.html#LAZY"><code>FetchType.LAZY</code></a>.
+</ul></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The options for this node</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
 </dl>
 </div>
 </section>

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -77,7 +77,26 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">Inheritance</span></div>
 <div class="block">Specifies the inheritance mapping strategy for the entity class
-hierarchy which descends from the annotated entity class.
+hierarchy which descends from the annotated entity class. The
+inheritance strategy for the whole entity class hierarchy is
+determined by the mapping of the root class of the hierarchy.
+
+<p>There are <a href="InheritanceType.html" title="enum class in jakarta.persistence">three basic strategies</a>
+which may be used when mapping an entity class hierarchy to tables
+in a relational database:
+<ul>
+<li>With a <b>single table per class hierarchy</b>, every field
+    declared by any class in the hierarchy maps to a column of the
+    same table. A subclass shares the table of its superclasses.
+<li>With a <b>table per concrete entity class</b>, every field
+    declared or inherited by a given subclass is mapped to the
+    same table, but each concrete class in the hierarchy has its
+    own separate table
+<li>For the <b>joined subclass</b> strategy, any field which is
+    declared by a subclass is mapped to a separate table from the
+    fields which are declared by its superclass. Joins may be used
+    to retrieve all fields declared and inherited by the subclass.
+</ul>
 
 <p>This annotation must be applied to the entity class that is
 the root of the entity class hierarchy. If the <code>Inheritance</code>

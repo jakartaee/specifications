@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -61,16 +61,18 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping%5B%5D)" tabindex="0">EntityMapping(Class, LockModeType, String, MemberMapping[])</a></li>
+<li><a href="#%3Cinit%3E(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping%5B%5D,java.lang.String)" tabindex="0">EntityMapping(Class, LockModeType, String, MemberMapping[], String)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#fields()" tabindex="0">fields()</a></li>
 <li><a href="#getJavaType()" tabindex="0">getJavaType()</a></li>
 <li><a href="#getAlias()" tabindex="0">getAlias()</a></li>
+<li><a href="#withAlias(java.lang.String)" tabindex="0">withAlias(String)</a></li>
+<li><a href="#withLockMode(jakarta.persistence.LockModeType)" tabindex="0">withLockMode(LockModeType)</a></li>
 <li><a href="#of(java.lang.Class,jakarta.persistence.sql.MemberMapping...)" tabindex="0">of(Class, MemberMapping...)</a></li>
 <li><a href="#of(java.lang.Class,java.lang.String,jakarta.persistence.sql.MemberMapping...)" tabindex="0">of(Class, String, MemberMapping...)</a></li>
-<li><a href="#of(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping...)" tabindex="0">of(Class, LockModeType, String, MemberMapping...)</a></li>
 <li><a href="#type()" tabindex="0">type()</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
@@ -78,7 +80,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#entityClass()" tabindex="0">entityClass()</a></li>
 <li><a href="#lockMode()" tabindex="0">lockMode()</a></li>
 <li><a href="#discriminatorColumn()" tabindex="0">discriminatorColumn()</a></li>
-<li><a href="#fields()" tabindex="0">fields()</a></li>
+<li><a href="#alias()" tabindex="0">alias()</a></li>
 </ol>
 </li>
 </ol>
@@ -103,7 +105,8 @@ loadScripts(document, 'script');</script>
 <dd><code><span id="param-discriminatorColumn">discriminatorColumn</span></code> - The name of the column holding the
        <a href="../DiscriminatorColumn.html" title="annotation interface in jakarta.persistence">discriminator</a>; a <code>null</code> value indicates that
        there is no discriminator column.</dd>
-<dd><code><span id="param-fields">fields</span></code> - Mappings for fields or properties of the entity</dd>
+<dd><code><span id="param-fields">fields</span></code> - Mappings for fields or properties of the entity
+              and of its entity subclasses</dd>
 </dl>
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
@@ -111,7 +114,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">EntityMapping&lt;T&gt;</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;&nbsp;entityClass, <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn, <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;?&gt;[]&nbsp;fields)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">EntityMapping&lt;T&gt;</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;&nbsp;entityClass, <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn, <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;? extends <a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;[]&nbsp;fields, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;T&gt;, <a href="ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;T&gt;</span></div>
 <div class="block">Maps columns of a JDBC <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ResultSet.html" title="class or interface in java.sql" class="external-link"><code>ResultSet</code></a> to a given
@@ -138,10 +141,11 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping%5B%5D)" class="member-name-link">EntityMapping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;&nbsp;entityClass,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping%5B%5D,java.lang.String)" class="member-name-link">EntityMapping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;&nbsp;entityClass,
  <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn,
- <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;?&gt;[]&nbsp;fields)</code></div>
+ <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;? extends <a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;[]&nbsp;fields,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>EntityMapping</code> record class.</div>
 </div>
@@ -160,52 +164,51 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discriminatorColumn()" class="member-name-link">discriminatorColumn</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#alias()" class="member-name-link">alias</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>alias</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discriminatorColumn()" class="member-name-link">discriminatorColumn</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-discriminatorColumn"><code>discriminatorColumn</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#entityClass()" class="member-name-link">entityClass</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#entityClass()" class="member-name-link">entityClass</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-entityClass"><code>entityClass</code></a> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;?&gt;[]</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fields()" class="member-name-link">fields</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;? extends <a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fields()" class="member-name-link">fields</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-fields"><code>fields</code></a> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAlias()" class="member-name-link">getAlias</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Always returns <code>null</code>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaType()" class="member-name-link">getJavaType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAlias()" class="member-name-link">getAlias</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the alias specified via <a href="#withAlias(java.lang.String)"><code>withAlias(String)</code></a>,
+which may be used to retrieve an entity instance using
+<a href="../Tuple.html#get(java.lang.String,java.lang.Class)"><code>Tuple.get(String, Class)</code></a></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaType()" class="member-name-link">getJavaType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The entity class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lockMode()" class="member-name-link">lockMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lockMode()" class="member-name-link">lockMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-lockMode"><code>lockMode</code></a> record component.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;<a href="EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
- <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn,
- <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Construct a new instance.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;<a href="EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a><wbr>&lt;T&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.Class,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
@@ -216,7 +219,7 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;<a href="EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a><wbr>&lt;T&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.Class,java.lang.String,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn,
- <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>
+ <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;? extends T&gt;...&nbsp;fields)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Construct a new instance.</div>
 </div>
@@ -229,6 +232,16 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The entity class.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a><wbr>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAlias(java.lang.String)" class="member-name-link">withAlias</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Specify an alias for this entity in the result set.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a><wbr>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLockMode(jakarta.persistence.LockModeType)" class="member-name-link">withLockMode</a><wbr>(<a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Specify the lock mode obtained on this entity.</div>
 </div>
 </div>
 </div>
@@ -248,13 +261,14 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping[])">
+<section class="detail" id="&lt;init&gt;(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping[],java.lang.String)">
 <h3>EntityMapping</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">EntityMapping</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;&nbsp;entityClass,
  <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn,
- <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;?&gt;[]&nbsp;fields)</span></div>
+ <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;? extends <a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;[]&nbsp;fields,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</span></div>
 <div class="block">Creates an instance of a <code>EntityMapping</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -262,6 +276,7 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <dd><code>lockMode</code> - the value for the <a href="#param-lockMode"><code>lockMode</code></a> record component</dd>
 <dd><code>discriminatorColumn</code> - the value for the <a href="#param-discriminatorColumn"><code>discriminatorColumn</code></a> record component</dd>
 <dd><code>fields</code> - the value for the <a href="#param-fields"><code>fields</code></a> record component</dd>
+<dd><code>alias</code> - the value for the <code>alias</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -274,6 +289,19 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="fields()">
+<h3>fields</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;? extends <a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;[]</span>&nbsp;<span class="element-name">fields</span>()</div>
+<div class="block">Returns the value of the <a href="#param-fields"><code>fields</code></a> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <a href="#param-fields"><code>fields</code></a> record component</dd>
+</dl>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="getJavaType()">
 <h3>getJavaType</h3>
@@ -294,12 +322,42 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <h3>getAlias</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAlias</span>()</div>
-<div class="block">Always returns <code>null</code>.</div>
+<div class="block">Return the alias specified via <a href="#withAlias(java.lang.String)"><code>withAlias(String)</code></a>,
+which may be used to retrieve an entity instance using
+<a href="../Tuple.html#get(java.lang.String,java.lang.Class)"><code>Tuple.get(String, Class)</code></a></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../TupleElement.html#getAlias()">getAlias</a></code>&nbsp;in interface&nbsp;<code><a href="../TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</code></dd>
 <dt>Returns:</dt>
-<dd>alias</dd>
+<dd>the explicitly specified alias or <code>null</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withAlias(java.lang.String)">
+<h3>withAlias</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</span>&nbsp;<span class="element-name">withAlias</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</span></div>
+<div class="block">Specify an alias for this entity in the result set.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MappingElement.html#withAlias(java.lang.String)">withAlias</a></code>&nbsp;in interface&nbsp;<code><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>alias</code> - The alias</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withLockMode(jakarta.persistence.LockModeType)">
+<h3>withLockMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a>&lt;<a href="#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</span>&nbsp;<span class="element-name">withLockMode</span><wbr><span class="parameters">(<a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode)</span></div>
+<div class="block">Specify the lock mode obtained on this entity.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>lockMode</code> - The lock mode</dd>
 </dl>
 </div>
 </section>
@@ -329,7 +387,7 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/SafeVarargs.html" title="class or interface in java.lang" class="external-link">@SafeVarargs</a>
 </span><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a>&lt;T&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn,
- <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</span></div>
+ <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;? extends T&gt;...&nbsp;fields)</span></div>
 <div class="block">Construct a new instance.</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
@@ -339,31 +397,8 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 <dd><code>discriminatorColumn</code> - The name of the column holding the
        <a href="../DiscriminatorColumn.html" title="annotation interface in jakarta.persistence">discriminator</a>; a <code>null</code> value indicates that
        there is no discriminator column.</dd>
-<dd><code>fields</code> - Mappings for fields or properties of the entity</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="of(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping...)">
-<h3>of</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/SafeVarargs.html" title="class or interface in java.lang" class="external-link">@SafeVarargs</a>
-</span><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a>&lt;T&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
- <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn,
- <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</span></div>
-<div class="block">Construct a new instance.</div>
-<dl class="notes">
-<dt>Type Parameters:</dt>
-<dd><span id="of(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping...)-type-param-T"><code>T</code> - The entity type</span></dd>
-<dt>Parameters:</dt>
-<dd><code>entityClass</code> - The entity class</dd>
-<dd><code>lockMode</code> - The lock mode acquired by the SQL query</dd>
-<dd><code>discriminatorColumn</code> - The name of the column holding the
-       <a href="../DiscriminatorColumn.html" title="annotation interface in jakarta.persistence">discriminator</a>; a <code>null</code> value indicates that
-       there is no discriminator column.</dd>
-<dd><code>fields</code> - Mappings for fields or properties of the entity</dd>
+<dd><code>fields</code> - Mappings for fields or properties of the entity
+              and of its entity subclasses</dd>
 </dl>
 </div>
 </section>
@@ -468,14 +503,14 @@ implements <a href="MappingElement.html" title="interface in jakarta.persistence
 </section>
 </li>
 <li>
-<section class="detail" id="fields()">
-<h3>fields</h3>
+<section class="detail" id="alias()">
+<h3>alias</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;?&gt;[]</span>&nbsp;<span class="element-name">fields</span>()</div>
-<div class="block">Returns the value of the <a href="#param-fields"><code>fields</code></a> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">alias</span>()</div>
+<div class="block">Returns the value of the <code>alias</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <a href="#param-fields"><code>fields</code></a> record component</dd>
+<dd>the value of the <code>alias</code> record component</dd>
 </dl>
 </div>
 </section>

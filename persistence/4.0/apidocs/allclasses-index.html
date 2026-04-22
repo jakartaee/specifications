@@ -34,7 +34,7 @@ loadScripts(document, 'script');</script>
 <li><a href="search.html">Search</a></li>
 <li><a href="help-doc.html#all-classes">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -117,13 +117,33 @@ single database column.</div>
 (possibly an <a href="jakarta.persistence/jakarta/persistence/Enumerated.html" title="annotation interface in jakarta.persistence">enumerated</a>, <a href="jakarta.persistence/jakarta/persistence/Lob.html" title="annotation interface in jakarta.persistence">LOB</a>, or
 <a href="jakarta.persistence/jakarta/persistence/Temporal.html" title="annotation interface in jakarta.persistence">temporal</a> type).</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/Bindable.html" title="interface in jakarta.persistence.metamodel">Bindable&lt;T&gt;</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jakarta.persistence/jakarta/persistence/BatchSize.html" title="class in jakarta.persistence">BatchSize</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">Specifies a batch size, that is, how many entities should be
+fetched in each request to the database.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/Bindable.html" title="interface in jakarta.persistence.metamodel">Bindable&lt;T&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">An instances of the type <code>Bindable</code> represents an object
 or attribute type that can be bound into a <a href="jakarta.persistence/jakarta/persistence/criteria/Path.html" title="interface in jakarta.persistence.criteria"><code>Path</code></a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/metamodel/Bindable.BindableType.html" title="enum class in jakarta.persistence.metamodel">Bindable.BindableType</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/metamodel/Bindable.BindableType.html" title="enum class in jakarta.persistence.metamodel">Bindable.BindableType</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/BooleanAttribute.html" title="interface in jakarta.persistence.metamodel">BooleanAttribute&lt;X&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Instances of the type <a href="jakarta.persistence/jakarta/persistence/metamodel/BooleanAttribute.html" title="interface in jakarta.persistence.metamodel">BooleanAttribute</a> represents persistent
+single-valued properties or fields of boolean type.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Type for boolean query expressions.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/BooleanPath.html" title="interface in jakarta.persistence.criteria">BooleanPath</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Represents a simple or compound attribute path from a
+bound type or collection, and is a "primitive" expression
+of a boolean type.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Cache.html" title="interface in jakarta.persistence">Cache</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Interface used to interact with the second-level cache.</div>
@@ -197,47 +217,60 @@ value in the result returned by the query.</div>
 annotation to map a column of the <code>SELECT</code> list of
 a SQL query to a scalar (non-entity) value.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/CommonAbstractCriteria.html" title="interface in jakarta.persistence.criteria">CommonAbstractCriteria</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ColumnResult.ColumnResults.html" title="annotation interface in jakarta.persistence">ColumnResult.ColumnResults</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/CommonAbstractCriteria.html" title="interface in jakarta.persistence.criteria">CommonAbstractCriteria</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">The <code>CommonAbstractCriteria</code> interface defines functionality
 that is common to both top-level criteria queries and subqueries as 
 well as to update and delete criteria operations.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jakarta.persistence/jakarta/persistence/sql/CompoundMapping.html" title="class in jakarta.persistence.sql">CompoundMapping</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/ComparableAttribute.html" title="interface in jakarta.persistence.metamodel">ComparableAttribute&lt;X,<wbr>C&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Instances of the type <a href="jakarta.persistence/jakarta/persistence/metamodel/ComparableAttribute.html" title="interface in jakarta.persistence.metamodel">ComparableAttribute</a> represents persistent
+single-valued properties or fields of comparable type.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/ComparableExpression.html" title="interface in jakarta.persistence.criteria">ComparableExpression&lt;C&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Type for comparable query expressions.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jakarta.persistence/jakarta/persistence/sql/CompoundMapping.html" title="class in jakarta.persistence.sql">CompoundMapping</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Maps a JDBC <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ResultSet.html" title="class or interface in java.sql" class="external-link"><code>ResultSet</code></a> to a tuple of values
 packaged as an object array.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/CompoundSelection.html" title="interface in jakarta.persistence.criteria">CompoundSelection&lt;X&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/CompoundSelection.html" title="interface in jakarta.persistence.criteria">CompoundSelection&lt;X&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">The <code>CompoundSelection</code> interface defines a compound
 selection item (a tuple, array, or result of a constructor).</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/ConnectionConsumer.html" title="interface in jakarta.persistence">ConnectionConsumer&lt;C&gt;</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/ConnectionConsumer.html" title="interface in jakarta.persistence">ConnectionConsumer&lt;C&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">An executable action which makes use of a native database connection.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/ConnectionFunction.html" title="interface in jakarta.persistence">ConnectionFunction&lt;C,<wbr>T&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/ConnectionFunction.html" title="interface in jakarta.persistence">ConnectionFunction&lt;C,<wbr>T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">A function which makes use of a native database connection to compute
 a result.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/ConstraintMode.html" title="enum class in jakarta.persistence">ConstraintMode</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/ConstraintMode.html" title="enum class in jakarta.persistence">ConstraintMode</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Used to control the application of a constraint.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jakarta.persistence/jakarta/persistence/sql/ConstructorMapping.html" title="class in jakarta.persistence.sql">ConstructorMapping&lt;T&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jakarta.persistence/jakarta/persistence/sql/ConstructorMapping.html" title="class in jakarta.persistence.sql">ConstructorMapping&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Maps columns of a JDBC <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ResultSet.html" title="class or interface in java.sql" class="external-link"><code>ResultSet</code></a> to parameters
 of the constructor of a Java class.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ConstructorResult.html" title="annotation interface in jakarta.persistence">ConstructorResult</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ConstructorResult.html" title="annotation interface in jakarta.persistence">ConstructorResult</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Used in conjunction with the <a href="jakarta.persistence/jakarta/persistence/SqlResultSetMapping.html" title="annotation interface in jakarta.persistence"><code>SqlResultSetMapping</code></a> or
 <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotation to map the <code>SELECT</code>
 clause of a SQL query to the constructor of an arbitrary
 Java class.</div>
 </div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ConstructorResult.ConstructorResults.html" title="annotation interface in jakarta.persistence">ConstructorResult.ConstructorResults</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Convert.html" title="annotation interface in jakarta.persistence">Convert</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies how the values of a field or property are converted to
@@ -309,64 +342,71 @@ queries.</div>
 <div class="block">The <code>CriteriaUpdate</code> interface defines functionality for
 performing bulk update operations using the Criteria API.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/DiscriminatorColumn.html" title="annotation interface in jakarta.persistence">DiscriminatorColumn</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/spi/Discoverable.html" title="annotation interface in jakarta.persistence.spi">Discoverable</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="block">Specifies that the meta-annotated annotation type identifies
+classes which are automatically discovered by the Jakarta EE
+container and passed on to the persistence provider via
+<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html#getAllClassNames()"><code>PersistenceUnitInfo.getAllClassNames()</code></a>.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/DiscriminatorColumn.html" title="annotation interface in jakarta.persistence">DiscriminatorColumn</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies the discriminator column for the 
 <a href="jakarta.persistence/jakarta/persistence/InheritanceType.html#SINGLE_TABLE"><code>SINGLE_TABLE</code></a> and
 <a href="jakarta.persistence/jakarta/persistence/InheritanceType.html#JOINED"><code>JOINED</code></a> <a href="jakarta.persistence/jakarta/persistence/Inheritance.html" title="annotation interface in jakarta.persistence">inheritance mapping strategies</a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/DiscriminatorType.html" title="enum class in jakarta.persistence">DiscriminatorType</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/DiscriminatorType.html" title="enum class in jakarta.persistence">DiscriminatorType</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Defines supported types of the discriminator column.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/DiscriminatorValue.html" title="annotation interface in jakarta.persistence">DiscriminatorValue</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/DiscriminatorValue.html" title="annotation interface in jakarta.persistence">DiscriminatorValue</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies the value of the discriminator column for the annotated
 entity type.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ElementCollection.html" title="annotation interface in jakarta.persistence">ElementCollection</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ElementCollection.html" title="annotation interface in jakarta.persistence">ElementCollection</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a collection of instances of a <a href="jakarta.persistence/jakarta/persistence/Basic.html" title="annotation interface in jakarta.persistence">basic type</a>
 or <a href="jakarta.persistence/jakarta/persistence/Embeddable.html" title="annotation interface in jakarta.persistence">embeddable class</a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Embeddable.html" title="annotation interface in jakarta.persistence">Embeddable</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Embeddable.html" title="annotation interface in jakarta.persistence">Embeddable</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a type whose instances are stored as an intrinsic
 part of an owning entity, sharing the identity of the entity.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/EmbeddableType.html" title="interface in jakarta.persistence.metamodel">EmbeddableType&lt;X&gt;</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/EmbeddableType.html" title="interface in jakarta.persistence.metamodel">EmbeddableType&lt;X&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">An instance of <code>EmbeddableType</code> represents an
 <a href="jakarta.persistence/jakarta/persistence/Embeddable.html" title="annotation interface in jakarta.persistence">embeddable</a>
 type.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Embedded.html" title="annotation interface in jakarta.persistence">Embedded</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Embedded.html" title="annotation interface in jakarta.persistence">Embedded</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a persistent field or property of an entity whose
 value is an instance of an embeddable class.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/EmbeddedId.html" title="annotation interface in jakarta.persistence">EmbeddedId</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/EmbeddedId.html" title="annotation interface in jakarta.persistence">EmbeddedId</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies that the annotated persistent field or property
 of an entity class or mapped superclass is the composite
 primary key of the entity.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jakarta.persistence/jakarta/persistence/sql/EmbeddedMapping.html" title="class in jakarta.persistence.sql">EmbeddedMapping&lt;C,<wbr>T&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jakarta.persistence/jakarta/persistence/sql/EmbeddedMapping.html" title="class in jakarta.persistence.sql">EmbeddedMapping&lt;C,<wbr>T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Maps columns of a JDBC <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ResultSet.html" title="class or interface in java.sql" class="external-link"><code>ResultSet</code></a> to a given
 <a href="jakarta.persistence/jakarta/persistence/Embedded.html" title="annotation interface in jakarta.persistence">embedded object</a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Entity.html" title="annotation interface in jakarta.persistence">Entity</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Entity.html" title="annotation interface in jakarta.persistence">Entity</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares that the annotated class is an entity.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Provides entity operations that are performed independently
 of a persistence context.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/EntityExistsException.html" title="class in jakarta.persistence">EntityExistsException</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/EntityExistsException.html" title="class in jakarta.persistence">EntityExistsException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Thrown by the persistence provider when:
 
 a detached instance of an entity type is passed to
@@ -376,15 +416,20 @@ an instance of an entity type with an identifier already
     <a href="jakarta.persistence/jakarta/persistence/EntityAgent.html#insert(java.lang.Object)"><code>EntityAgent.insert(Object)</code></a>, and a record with the
     assigned identifier value already exists in the database.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/EntityGraph.html" title="interface in jakarta.persistence">EntityGraph&lt;T&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/EntityGraph.html" title="interface in jakarta.persistence">EntityGraph&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">An entity graph is a template that captures the boundaries of an
  operation or query.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Declares operations common to <a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> and
 <a href="jakarta.persistence/jakarta/persistence/EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a>.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/EntityListener.html" title="annotation interface in jakarta.persistence">EntityListener</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="block">Declares an entity listener class and determines the entity
+classes to which it applies.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/EntityListenerRegistration.html" title="interface in jakarta.persistence">EntityListenerRegistration</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
@@ -434,57 +479,65 @@ an entity is passed to <a href="jakarta.persistence/jakarta/persistence/EntityMa
 <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotation to map the <code>SELECT</code>
 clause of a SQL query to an entity result.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/EntityTransaction.html" title="interface in jakarta.persistence">EntityTransaction</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/EntityResult.EntityResults.html" title="annotation interface in jakarta.persistence">EntityResult.EntityResults</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/EntityTransaction.html" title="interface in jakarta.persistence">EntityTransaction</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Interface used to control transactions involving resource-local entity
 managers and entity agents.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType&lt;X&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType&lt;X&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">An instance of <code>EntityType</code> represents
 an <a href="jakarta.persistence/jakarta/persistence/Entity.html" title="annotation interface in jakarta.persistence">entity</a>
 type.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Enumerated.html" title="annotation interface in jakarta.persistence">Enumerated</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Enumerated.html" title="annotation interface in jakarta.persistence">Enumerated</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies that a persistent property or field should be persisted
 as an enumerated type.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/EnumeratedValue.html" title="annotation interface in jakarta.persistence">EnumeratedValue</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/EnumeratedValue.html" title="annotation interface in jakarta.persistence">EnumeratedValue</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies that an annotated field of a Java <code>enum</code>
 type is the source of database column values for an
 <a href="jakarta.persistence/jakarta/persistence/Enumerated.html" title="annotation interface in jakarta.persistence">enumerated</a> mapping.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/EnumType.html" title="enum class in jakarta.persistence">EnumType</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/EnumType.html" title="enum class in jakarta.persistence">EnumType</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Enumerates available options for mapping enumerated types.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ExcludeDefaultListeners.html" title="annotation interface in jakarta.persistence">ExcludeDefaultListeners</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ExcludeDefaultListeners.html" title="annotation interface in jakarta.persistence">ExcludeDefaultListeners</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies that the invocation of default listeners is to
 be excluded for the entity class (or mapped superclass)
 and its subclasses.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ExcludedFromVersioning.html" title="annotation interface in jakarta.persistence">ExcludedFromVersioning</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ExcludedFromVersioning.html" title="annotation interface in jakarta.persistence">ExcludedFromVersioning</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies that mutation of the annotated field or property does
 not result in incrementation of the <a href="jakarta.persistence/jakarta/persistence/Version.html" title="annotation interface in jakarta.persistence">version
 field or property</a> of the entity.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ExcludeSuperclassListeners.html" title="annotation interface in jakarta.persistence">ExcludeSuperclassListeners</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/ExcludeSuperclassListeners.html" title="annotation interface in jakarta.persistence">ExcludeSuperclassListeners</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies that the invocation of superclass listeners is 
 to be excluded for the entity class (or mapped superclass) 
 and its subclasses.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Expression.html" title="interface in jakarta.persistence.criteria">Expression&lt;T&gt;</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Expression.html" title="interface in jakarta.persistence.criteria">Expression&lt;T&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Type for query expressions.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Fetch.html" title="interface in jakarta.persistence.criteria">Fetch&lt;Z,<wbr>X&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Fetch.html" title="interface in jakarta.persistence.criteria">Fetch&lt;Z,<wbr>X&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Represents a join-fetched association or attribute.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/FetchOption.html" title="interface in jakarta.persistence">FetchOption</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">An option influencing how an
+<a href="jakarta.persistence/jakarta/persistence/AttributeNode.html" title="interface in jakarta.persistence">attribute node</a> belonging
+to an <a href="jakarta.persistence/jakarta/persistence/EntityGraph.html" title="interface in jakarta.persistence">entity graph</a> is fetched.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/FetchParent.html" title="interface in jakarta.persistence.criteria">FetchParent&lt;Z,<wbr>X&gt;</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
@@ -721,9 +774,12 @@ by the query.</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/MapsId.html" title="annotation interface in jakarta.persistence">MapsId</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Designates a <a href="jakarta.persistence/jakarta/persistence/ManyToOne.html" title="annotation interface in jakarta.persistence"><code>ManyToOne</code></a> or <a href="jakarta.persistence/jakarta/persistence/OneToOne.html" title="annotation interface in jakarta.persistence"><code>OneToOne</code></a> relationship
-attribute that provides the mapping for an <a href="jakarta.persistence/jakarta/persistence/EmbeddedId.html" title="annotation interface in jakarta.persistence"><code>EmbeddedId</code></a>
-primary key, an attribute within an <code>EmbeddedId</code> primary
-key, or a simple primary key of the parent entity.</div>
+attribute that provides the mapping for
+
+an <a href="jakarta.persistence/jakarta/persistence/Id.html" title="annotation interface in jakarta.persistence"><code>Id</code></a> or <a href="jakarta.persistence/jakarta/persistence/EmbeddedId.html" title="annotation interface in jakarta.persistence"><code>EmbeddedId</code></a> attribute of an entity
+    with a derived identity, or
+an attribute of the <a href="jakarta.persistence/jakarta/persistence/EmbeddedId.html" title="annotation interface in jakarta.persistence"><code>EmbeddedId</code></a> class of an entity
+    with a derived identity.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/sql/MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping&lt;T&gt;</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
@@ -746,28 +802,28 @@ element of a <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.h
 <div class="block">Declares a named <a href="jakarta.persistence/jakarta/persistence/EntityGraph.html" title="interface in jakarta.persistence">entity graph</a> or subgraph
 of a named entity graph.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphAttributeNode.html" title="annotation interface in jakarta.persistence">NamedEntityGraphAttributeNode</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNode.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNode</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Declares that the annotated attribute is an attribute node
-in a <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity graph</a>.</div>
+<div class="block">Declares that the annotated attribute is an attribute
+node in a <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity graph</a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphAttributeNodes.html" title="annotation interface in jakarta.persistence">NamedEntityGraphAttributeNodes</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNodes.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNodes</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Groups <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphAttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphAttributeNode</code></a> annotations.</div>
+<div class="block">Groups <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.AttributeNode</code></a> annotations.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphs.html" title="annotation interface in jakarta.persistence">NamedEntityGraphs</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraph</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Used to group <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a> annotations.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphSubgraph.html" title="annotation interface in jakarta.persistence">NamedEntityGraphSubgraph</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares that the annotated association is the root of a
 subgraph of a <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity
 graph</a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphSubgraphs.html" title="annotation interface in jakarta.persistence">NamedEntityGraphSubgraphs</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraphs.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraphs</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="block">Groups <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.Subgraph</code></a> annotations.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphs.html" title="annotation interface in jakarta.persistence">NamedEntityGraphs</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Groups <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphSubgraph</code></a> annotations.</div>
+<div class="block">Used to group <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a> annotations.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/NamedNativeQueries.html" title="annotation interface in jakarta.persistence">NamedNativeQueries</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
@@ -835,9 +891,19 @@ query result to return.</div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Specifies the precedence of null values within query result sets.</div>
 </div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/NumericAttribute.html" title="interface in jakarta.persistence.metamodel">NumericAttribute&lt;X,<wbr>N&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Instances of the type <a href="jakarta.persistence/jakarta/persistence/metamodel/NumericAttribute.html" title="interface in jakarta.persistence.metamodel">NumericAttribute</a> represents persistent
+single-valued properties or fields of number type.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression&lt;N&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Type for number query expressions.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/OneToMany.html" title="annotation interface in jakarta.persistence">OneToMany</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Specifies a many-valued association with one-to-many multiplicity.</div>
+<div class="block">Specifies a many-valued association to another entity class that has
+one-to-many multiplicity.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/OneToOne.html" title="annotation interface in jakarta.persistence">OneToOne</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
@@ -926,8 +992,8 @@ creation of an <a href="jakarta.persistence/jakarta/persistence/EntityManagerFac
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PersistenceContext.html" title="annotation interface in jakarta.persistence">PersistenceContext</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Expresses a dependency on a container-managed <a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> and
-its associated persistence context.</div>
+<div class="block">Expresses a dependency on a container-managed <a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>
+ and its associated persistence context.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PersistenceContexts.html" title="annotation interface in jakarta.persistence">PersistenceContexts</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
@@ -962,7 +1028,7 @@ providers</a> available in the runtime environment.</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PersistenceUnit.html" title="annotation interface in jakarta.persistence">PersistenceUnit</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Expresses a dependency on an <a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> and
-its associated persistence unit.</div>
+ its associated persistence unit.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html" title="interface in jakarta.persistence.spi">PersistenceUnitInfo</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
@@ -1006,93 +1072,102 @@ persistent collection-valued attributes.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/metamodel/PluralAttribute.CollectionType.html" title="enum class in jakarta.persistence.metamodel">PluralAttribute.CollectionType</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/PluralJoin.html" title="interface in jakarta.persistence.criteria">PluralJoin&lt;Z,<wbr>C,<wbr>E&gt;</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/PluralExpression.html" title="interface in jakarta.persistence.criteria">PluralExpression&lt;C,<wbr>E&gt;</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Type for collection query expressions.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/PluralJoin.html" title="interface in jakarta.persistence.criteria">PluralJoin&lt;Z,<wbr>C,<wbr>E&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">The <code>PluralJoin</code> interface defines functionality
 that is common to joins to all collection types.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostDelete.html" title="annotation interface in jakarta.persistence">PostDelete</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Declares a callback method for the corresponding lifecycle event.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostInsert.html" title="annotation interface in jakarta.persistence">PostInsert</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostDelete.html" title="annotation interface in jakarta.persistence">PostDelete</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostLoad.html" title="annotation interface in jakarta.persistence">PostLoad</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostInsert.html" title="annotation interface in jakarta.persistence">PostInsert</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostPersist.html" title="annotation interface in jakarta.persistence">PostPersist</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostLoad.html" title="annotation interface in jakarta.persistence">PostLoad</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostRemove.html" title="annotation interface in jakarta.persistence">PostRemove</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostPersist.html" title="annotation interface in jakarta.persistence">PostPersist</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostUpdate.html" title="annotation interface in jakarta.persistence">PostUpdate</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostRemove.html" title="annotation interface in jakarta.persistence">PostRemove</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostUpsert.html" title="annotation interface in jakarta.persistence">PostUpsert</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostUpdate.html" title="annotation interface in jakarta.persistence">PostUpdate</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreDelete.html" title="annotation interface in jakarta.persistence">PreDelete</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PostUpsert.html" title="annotation interface in jakarta.persistence">PostUpsert</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreDelete.html" title="annotation interface in jakarta.persistence">PreDelete</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="block">Declares a callback method for the corresponding lifecycle event.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">The type of a simple or compound predicate: a conjunction or
 disjunction of restrictions.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/criteria/Predicate.BooleanOperator.html" title="enum class in jakarta.persistence.criteria">Predicate.BooleanOperator</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreInsert.html" title="annotation interface in jakarta.persistence">PreInsert</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Declares a callback method for the corresponding lifecycle event.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreMerge.html" title="annotation interface in jakarta.persistence">PreMerge</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/criteria/Predicate.BooleanOperator.html" title="enum class in jakarta.persistence.criteria">Predicate.BooleanOperator</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreInsert.html" title="annotation interface in jakarta.persistence">PreInsert</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PrePersist.html" title="annotation interface in jakarta.persistence">PrePersist</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreMerge.html" title="annotation interface in jakarta.persistence">PreMerge</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreRemove.html" title="annotation interface in jakarta.persistence">PreRemove</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PrePersist.html" title="annotation interface in jakarta.persistence">PrePersist</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreUpdate.html" title="annotation interface in jakarta.persistence">PreUpdate</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreRemove.html" title="annotation interface in jakarta.persistence">PreRemove</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreUpsert.html" title="annotation interface in jakarta.persistence">PreUpsert</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreUpdate.html" title="annotation interface in jakarta.persistence">PreUpdate</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a callback method for the corresponding lifecycle event.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PrimaryKeyJoinColumn.html" title="annotation interface in jakarta.persistence">PrimaryKeyJoinColumn</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PreUpsert.html" title="annotation interface in jakarta.persistence">PreUpsert</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="block">Declares a callback method for the corresponding lifecycle event.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PrimaryKeyJoinColumn.html" title="annotation interface in jakarta.persistence">PrimaryKeyJoinColumn</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies a primary key column that is used as a foreign key
 to join to another table.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PrimaryKeyJoinColumns.html" title="annotation interface in jakarta.persistence">PrimaryKeyJoinColumns</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/PrimaryKeyJoinColumns.html" title="annotation interface in jakarta.persistence">PrimaryKeyJoinColumns</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies the mapping for a composite foreign key which is also a
 primary key.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/spi/ProviderUtil.html" title="interface in jakarta.persistence.spi">ProviderUtil</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/spi/ProviderUtil.html" title="interface in jakarta.persistence.spi">ProviderUtil</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Utility interface implemented by the persistence provider.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Query.html" title="interface in jakarta.persistence">Query</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Declares common operations for controlling the
-execution of statements and queries written in the Jakarta
-Persistence query language or in native SQL.</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Query.html" title="interface in jakarta.persistence">Query</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Declares common operations for controlling the execution of
+statements and queries written in the Jakarta Persistence
+query language or in native SQL.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
+<div class="block">Enumerates the possible flush modes for execution of a
+<a href="jakarta.persistence/jakarta/persistence/Query.html" title="interface in jakarta.persistence"><code>Query</code></a>.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/QueryHint.html" title="annotation interface in jakarta.persistence">QueryHint</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
@@ -1104,44 +1179,39 @@ or <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title
 <div class="block">Thrown by the persistence provider when a query times out and
 only the statement is rolled back.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/query/ReadQueryOptions.html" title="annotation interface in jakarta.persistence.query">ReadQueryOptions</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Configures options that affect the execution of a
-database read operation.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Reference.html" title="interface in jakarta.persistence">Reference</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Reference.html" title="interface in jakarta.persistence">Reference</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">A reference to a named statement or query declared via the
 <a href="jakarta.persistence/jakarta/persistence/NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
 or using <a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
 <a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">An option influencing the behavior of <a href="jakarta.persistence/jakarta/persistence/EntityManager.html#refresh(java.lang.Object)"><code>EntityManager.refresh(Object)</code></a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping&lt;T&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Specifies a mapping of the columns of a result set of a SQL query or stored procedure
  to <a href="jakarta.persistence/jakarta/persistence/sql/EntityMapping.html" title="class in jakarta.persistence.sql">entities</a>, <a href="jakarta.persistence/jakarta/persistence/sql/ColumnMapping.html" title="class in jakarta.persistence.sql">scalar values</a>, and
  <a href="jakarta.persistence/jakarta/persistence/sql/ConstructorMapping.html" title="class in jakarta.persistence.sql">Java class constructors</a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/RollbackException.html" title="class in jakarta.persistence">RollbackException</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/RollbackException.html" title="class in jakarta.persistence">RollbackException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Thrown by the persistence provider when a resource-local transaction
 cannot be committed, that is, when <a href="jakarta.persistence/jakarta/persistence/EntityTransaction.html#commit()"><code>EntityTransaction.commit()</code></a>
 fails.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Root.html" title="interface in jakarta.persistence.criteria">Root&lt;X&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Root.html" title="interface in jakarta.persistence.criteria">Root&lt;X&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">A root type in the from clause.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/SchemaManagementAction.html" title="enum class in jakarta.persistence">SchemaManagementAction</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/SchemaManagementAction.html" title="enum class in jakarta.persistence">SchemaManagementAction</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Represents an action that can be performed by the schema management tooling.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/SchemaManager.html" title="interface in jakarta.persistence">SchemaManager</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/SchemaManager.html" title="interface in jakarta.persistence">SchemaManager</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Allows programmatic <a href="jakarta.persistence/jakarta/persistence/SchemaManager.html#create(boolean)">schema creation</a>,
 <a href="jakarta.persistence/jakarta/persistence/SchemaManager.html#validate()">schema validation</a>,
 <a href="jakarta.persistence/jakarta/persistence/SchemaManager.html#truncate()">data cleanup</a>, and
@@ -1149,67 +1219,71 @@ fails.</div>
 <a href="jakarta.persistence/jakarta/persistence/SchemaManager.html#drop(boolean)">schema cleanup</a> for entities belonging
 to a certain persistence unit.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/SchemaValidationException.html" title="class in jakarta.persistence">SchemaValidationException</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/SchemaValidationException.html" title="class in jakarta.persistence">SchemaValidationException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Thrown when <a href="jakarta.persistence/jakarta/persistence/SchemaManager.html#validate()">schema validation</a> fails.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SecondaryTable.html" title="annotation interface in jakarta.persistence">SecondaryTable</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SecondaryTable.html" title="annotation interface in jakarta.persistence">SecondaryTable</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies a secondary table for the annotated entity class.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SecondaryTables.html" title="annotation interface in jakarta.persistence">SecondaryTables</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SecondaryTables.html" title="annotation interface in jakarta.persistence">SecondaryTables</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies multiple secondary tables for an entity.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Selection.html" title="interface in jakarta.persistence.criteria">Selection&lt;X&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Selection.html" title="interface in jakarta.persistence.criteria">Selection&lt;X&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">The <code>Selection</code> interface defines an item that is to be
 returned in a query result.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SequenceGenerator.html" title="annotation interface in jakarta.persistence">SequenceGenerator</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Defines a primary key generator that may be referenced by name when
-a generator element is specified for the <a href="jakarta.persistence/jakarta/persistence/GeneratedValue.html" title="annotation interface in jakarta.persistence"><code>GeneratedValue</code></a>
-annotation.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SequenceGenerators.html" title="annotation interface in jakarta.persistence">SequenceGenerators</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SequenceGenerator.html" title="annotation interface in jakarta.persistence">SequenceGenerator</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="block">Defines a primary key generator backed by a database sequence.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SequenceGenerators.html" title="annotation interface in jakarta.persistence">SequenceGenerators</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Used to group <a href="jakarta.persistence/jakarta/persistence/SequenceGenerator.html" title="annotation interface in jakarta.persistence"><code>SequenceGenerator</code></a> annotations.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute&lt;X,<wbr>E&gt;</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute&lt;X,<wbr>E&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Instances of the type <code>SetAttribute</code> represent
 persistent <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>-valued attributes.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin&lt;Z,<wbr>E&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin&lt;Z,<wbr>E&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">The <code>SetJoin</code> interface is the type of the result of
 joining to a collection over an association or element 
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/SharedCacheMode.html" title="enum class in jakarta.persistence">SharedCacheMode</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/SharedCacheMode.html" title="enum class in jakarta.persistence">SharedCacheMode</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Enumerates policies which control how the provider determines if
 an entity type is eligible for storage in the second-level cache.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute&lt;X,<wbr>T&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute&lt;X,<wbr>T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Instances of the type <code>SingularAttribute</code> represents persistent
 single-valued properties or fields.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">SqlResultSetMapping</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">SqlResultSetMapping</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies an explicit mapping of the columns of a result set of a native
 SQL query or stored procedure to <a href="jakarta.persistence/jakarta/persistence/EntityResult.html" title="annotation interface in jakarta.persistence">entity classes</a>,
 <a href="jakarta.persistence/jakarta/persistence/ColumnResult.html" title="annotation interface in jakarta.persistence">scalar values</a>, and <a href="jakarta.persistence/jakarta/persistence/ConstructorResult.html" title="annotation interface in jakarta.persistence">Java class constructors</a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SqlResultSetMappings.html" title="annotation interface in jakarta.persistence">SqlResultSetMappings</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/SqlResultSetMappings.html" title="annotation interface in jakarta.persistence">SqlResultSetMappings</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Used to define one or more <a href="jakarta.persistence/jakarta/persistence/SqlResultSetMapping.html" title="annotation interface in jakarta.persistence"><code>SqlResultSetMapping</code></a> annotations.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Statement.html" title="interface in jakarta.persistence">Statement</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Statement.html" title="interface in jakarta.persistence">Statement</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Interface used to control the execution of executable statements.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Declares operations allowing a <a href="jakarta.persistence/jakarta/persistence/Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or <a href="jakarta.persistence/jakarta/persistence/TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>
+to be obtained when the type of a query or statement has not yet been
+specified.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
@@ -1230,140 +1304,156 @@ a metamodel class that represents the Java type designated by the
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies a query expressed in the Jakarta Persistence Query Language.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html" title="class in jakarta.persistence.query">StaticStatementReference</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="block">Configures options that affect the execution of a query.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html" title="class in jakarta.persistence.query">StaticStatementReference</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">A reference to a statement declared using a <a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a>
 or <a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a> annotation.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference&lt;R&gt;</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference&lt;R&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">A reference to a query declared using a <a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a>
 or <a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a> annotation.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/StoredProcedureParameter.html" title="annotation interface in jakarta.persistence">StoredProcedureParameter</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/StoredProcedureParameter.html" title="annotation interface in jakarta.persistence">StoredProcedureParameter</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares a parameter of a named stored procedure query.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Interface used to control execution of a stored procedure query.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Subgraph.html" title="interface in jakarta.persistence">Subgraph&lt;T&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Subgraph.html" title="interface in jakarta.persistence">Subgraph&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">This type represents a subgraph for an attribute node that
 corresponds to a managed type.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html" title="interface in jakarta.persistence.criteria">Subquery&lt;T&gt;</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html" title="interface in jakarta.persistence.criteria">Subquery&lt;T&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">The <code>Subquery</code> interface defines functionality that is
 specific to subqueries.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/SynchronizationType.html" title="enum class in jakarta.persistence">SynchronizationType</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/SynchronizationType.html" title="enum class in jakarta.persistence">SynchronizationType</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Specifies whether the persistence context associated with an
 <a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> is always automatically synchronized with
 the current transaction.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Table.html" title="annotation interface in jakarta.persistence">Table</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Table.html" title="annotation interface in jakarta.persistence">Table</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies the primary table mapped by the annotated entity type.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/TableGenerator.html" title="annotation interface in jakarta.persistence">TableGenerator</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Defines a primary key generator that may be referenced
-by name when a generator element is specified for the
-<a href="jakarta.persistence/jakarta/persistence/GeneratedValue.html" title="annotation interface in jakarta.persistence"><code>GeneratedValue</code></a> annotation.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/TableGenerators.html" title="annotation interface in jakarta.persistence">TableGenerators</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/TableGenerator.html" title="annotation interface in jakarta.persistence">TableGenerator</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="block">Defines a primary key generator backed by a row of a database
+table.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/TableGenerators.html" title="annotation interface in jakarta.persistence">TableGenerators</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Used to group <a href="jakarta.persistence/jakarta/persistence/TableGenerator.html" title="annotation interface in jakarta.persistence"><code>TableGenerator</code></a> annotations.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Temporal.html" title="annotation interface in jakarta.persistence">Temporal</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">Deprecated.
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Temporal.html" title="annotation interface in jakarta.persistence">Temporal</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">Deprecated.
 <div class="deprecation-comment">Newly written code should use the date/time types
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/TemporalField.html" title="interface in jakarta.persistence.criteria">TemporalField&lt;N,<wbr>T&gt;</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/TemporalAttribute.html" title="interface in jakarta.persistence.metamodel">TemporalAttribute&lt;X,<wbr>T&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Instances of the type <a href="jakarta.persistence/jakarta/persistence/metamodel/TemporalAttribute.html" title="interface in jakarta.persistence.metamodel">TemporalAttribute</a> represents persistent
+single-valued properties or fields of a temporal type.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression&lt;T&gt;</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Type for temporal query expressions.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/TemporalField.html" title="interface in jakarta.persistence.criteria">TemporalField&lt;N,<wbr>T&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Each instance represents a type of field which can be
 extracted from a date, time, or datetime.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">Deprecated.
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">Deprecated.
 <div class="deprecation-comment">Newly written code should use the date/time types
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.persistence/jakarta/persistence/Timeout.html" title="class in jakarta.persistence">Timeout</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/TextAttribute.html" title="interface in jakarta.persistence.metamodel">TextAttribute&lt;X&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Instances of the type <a href="jakarta.persistence/jakarta/persistence/metamodel/TextAttribute.html" title="interface in jakarta.persistence.metamodel">TextAttribute</a> represents persistent
+single-valued properties or fields of string type.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/criteria/TextExpression.html" title="interface in jakarta.persistence.criteria">TextExpression</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Type for string query expressions.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.persistence/jakarta/persistence/Timeout.html" title="class in jakarta.persistence">Timeout</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Specifies a timeout for a database request.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/TransactionRequiredException.html" title="class in jakarta.persistence">TransactionRequiredException</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/TransactionRequiredException.html" title="class in jakarta.persistence">TransactionRequiredException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Thrown by the persistence provider when a transaction is required but is not
 active.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/spi/TransformerException.html" title="class in jakarta.persistence.spi">TransformerException</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.persistence/jakarta/persistence/spi/TransformerException.html" title="class in jakarta.persistence.spi">TransformerException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Thrown by the persistence provider when a problem during
 class re-definition occurs.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Transient.html" title="annotation interface in jakarta.persistence">Transient</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Transient.html" title="annotation interface in jakarta.persistence">Transient</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies that the annotated property or field is not
 persistent.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Tuple.html" title="interface in jakarta.persistence">Tuple</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/Tuple.html" title="interface in jakarta.persistence">Tuple</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Interface for extracting the elements of a query result tuple.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/TupleElement.html" title="interface in jakarta.persistence">TupleElement&lt;X&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/TupleElement.html" title="interface in jakarta.persistence">TupleElement&lt;X&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">The <code>TupleElement</code> interface defines an element that is
 returned in a query result tuple.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jakarta.persistence/jakarta/persistence/sql/TupleMapping.html" title="class in jakarta.persistence.sql">TupleMapping</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jakarta.persistence/jakarta/persistence/sql/TupleMapping.html" title="class in jakarta.persistence.sql">TupleMapping</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Map columns of a JDBC <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ResultSet.html" title="class or interface in java.sql" class="external-link"><code>ResultSet</code></a> to entries
 in a tuple of values packaged as an instance of <a href="jakarta.persistence/jakarta/persistence/Tuple.html" title="interface in jakarta.persistence"><code>Tuple</code></a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type&lt;X&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type&lt;X&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">An instance of the type <code>Type</code> represents a persistent
 object or attribute type.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/metamodel/Type.PersistenceType.html" title="enum class in jakarta.persistence.metamodel">Type.PersistenceType</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/TypedQuery.html" title="interface in jakarta.persistence">TypedQuery&lt;X&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/metamodel/Type.PersistenceType.html" title="enum class in jakarta.persistence.metamodel">Type.PersistenceType</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/TypedQuery.html" title="interface in jakarta.persistence">TypedQuery&lt;X&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Interface used to control the execution of typed queries.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference&lt;R&gt;</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference&lt;R&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">A reference to a typed named query declared via the
 <a href="jakarta.persistence/jakarta/persistence/NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
 or using <a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
 <a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/UniqueConstraint.html" title="annotation interface in jakarta.persistence">UniqueConstraint</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/UniqueConstraint.html" title="annotation interface in jakarta.persistence">UniqueConstraint</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Specifies that a unique constraint is to be included in the
 generated DDL for a primary or secondary table.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.persistence/jakarta/persistence/ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">The validation mode to be used by the provider for the persistence
 unit.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Version.html" title="annotation interface in jakarta.persistence">Version</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/Version.html" title="annotation interface in jakarta.persistence">Version</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Declares the version field or property of an entity class, which
 is used to detect optimistic locking conflicts, ensuring the integrity
 of optimistic transactions.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.persistence/jakarta/persistence/query/WriteQueryOptions.html" title="annotation interface in jakarta.persistence.query">WriteQueryOptions</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Configures options that affect the execution of a
-database write operation.</div>
 </div>
 </div>
 </div>

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -86,27 +86,39 @@ or property of the entity class. If the property or field is
 declared by a <a href="Embedded.html" title="annotation interface in jakarta.persistence">child embeddable object</a>, then
 <a href="#name()"><code>name()</code></a> specifies a qualified path.
 
-<p>Example:
+<p>Consider the following SQL query:
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.FieldResult1"><code class="language-java">Query q = em.createNativeQuery(
-    "SELECT o.id AS order_id, " +
-        "o.quantity AS order_quantity, " +
-        "o.item AS order_item, " +
-      "FROM Order o, Item i " +
-      "WHERE (order_quantity &gt; 25) AND (order_item = i.id)",
-    "OrderResults");
+<pre class="snippet" id="snippet-jakarta.persistence.FieldResult1"><code class="language-java">Query orders =
+        em.createNativeQuery(
+            """
+               SELECT o.id AS order_id,
+                      o.quantity AS order_quantity,
+                      o.item AS order_item
+               FROM Order o
+               WHERE o.quantity &gt; 25
+            """,
+            ResultMappings_.MAPPING_ORDERS
+        );
+</code></pre>
+</div>
 
-@SqlResultSetMapping(
-    name = "OrderResults",
-    entities = {
-        @EntityResult(
-            entityClass = com.acme.Order.class,
-            fields = {
-                @FieldResult(name = "id", column = "order_id"),
-                @FieldResult(name = "quantity", column = "order_quantity"),
-                @FieldResult(name = "item", column = "order_item")
-            })
-    })
+<p>The result set mapping might be defined as follows:
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.FieldResult2"><code class="language-java">@SqlResultSetMapping(
+    name = "Orders",
+    entities = @EntityResult(
+         entityClass = Order.class,
+         fields = {
+             @FieldResult(name = Order_.ID,
+                          column = "order_id"),
+             @FieldResult(name = Order_.QUANTITY,
+                          column = "order_quantity"),
+             @FieldResult(name = Order_.ITEM,
+                          column = "order_item")
+        }
+    )
+)
+interface ResultMappings {}
 </code></pre>
 </div>
 

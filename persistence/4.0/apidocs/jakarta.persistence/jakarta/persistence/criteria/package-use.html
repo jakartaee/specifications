@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -82,20 +82,15 @@ loadScripts(document, 'script');</script>
 <div class="block">Used to construct criteria queries, compound selections, 
 expressions, predicates, orderings.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/CriteriaQuery.html#jakarta.persistence">CriteriaQuery</a></div>
+<div class="col-first odd-row-color"><a href="class-use/CriteriaSelect.html#jakarta.persistence">CriteriaSelect</a></div>
 <div class="col-last odd-row-color">
-<div class="block">The <code>CriteriaQuery</code> interface defines functionality that is
-specific to top-level queries.</div>
-</div>
-<div class="col-first even-row-color"><a href="class-use/CriteriaSelect.html#jakarta.persistence">CriteriaSelect</a></div>
-<div class="col-last even-row-color">
 <div class="block">Abstracts over <a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">top-level queries</a> and
 <a href="CriteriaBuilder.html#union(jakarta.persistence.criteria.CriteriaSelect,jakarta.persistence.criteria.CriteriaSelect)">unions</a> and
 <a href="CriteriaBuilder.html#intersect(jakarta.persistence.criteria.CriteriaSelect,jakarta.persistence.criteria.CriteriaSelect)">intersections</a> of top-level
 queries.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/CriteriaStatement.html#jakarta.persistence">CriteriaStatement</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/CriteriaStatement.html#jakarta.persistence">CriteriaStatement</a></div>
+<div class="col-last even-row-color">
 <div class="block">Declares operations common to <a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria"><code>CriteriaUpdate</code></a> and
 <a href="CriteriaDelete.html" title="interface in jakarta.persistence.criteria"><code>CriteriaDelete</code></a>.</div>
 </div>
@@ -113,17 +108,25 @@ queries.</div>
 <div class="block">The <code>AbstractQuery</code> interface defines functionality that is common
 to both top-level queries and subqueries.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/CollectionJoin.html#jakarta.persistence.criteria">CollectionJoin</a></div>
+<div class="col-first odd-row-color"><a href="class-use/BooleanExpression.html#jakarta.persistence.criteria">BooleanExpression</a></div>
 <div class="col-last odd-row-color">
+<div class="block">Type for boolean query expressions.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/CollectionJoin.html#jakarta.persistence.criteria">CollectionJoin</a></div>
+<div class="col-last even-row-color">
 <div class="block">The <code>CollectionJoin</code> interface is the type of the result of
 joining to a collection over an association or element 
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link"><code>Collection</code></a>.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/CommonAbstractCriteria.html#jakarta.persistence.criteria">CommonAbstractCriteria</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="class-use/CommonAbstractCriteria.html#jakarta.persistence.criteria">CommonAbstractCriteria</a></div>
+<div class="col-last odd-row-color">
 <div class="block">The <code>CommonAbstractCriteria</code> interface defines functionality
 that is common to both top-level criteria queries and subqueries as 
 well as to update and delete criteria operations.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/ComparableExpression.html#jakarta.persistence.criteria">ComparableExpression</a></div>
+<div class="col-last even-row-color">
+<div class="block">Type for comparable query expressions.</div>
 </div>
 <div class="col-first odd-row-color"><a href="class-use/CompoundSelection.html#jakarta.persistence.criteria">CompoundSelection</a></div>
 <div class="col-last odd-row-color">
@@ -235,18 +238,26 @@ collection that has been specified as a <a href="https://docs.oracle.com/en/java
 <div class="col-last odd-row-color">
 <div class="block">Specifies the precedence of null values within query result sets.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/Order.html#jakarta.persistence.criteria">Order</a></div>
+<div class="col-first even-row-color"><a href="class-use/NumericExpression.html#jakarta.persistence.criteria">NumericExpression</a></div>
 <div class="col-last even-row-color">
+<div class="block">Type for number query expressions.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/Order.html#jakarta.persistence.criteria">Order</a></div>
+<div class="col-last odd-row-color">
 <div class="block">An object that defines an ordering over the query results.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/ParameterExpression.html#jakarta.persistence.criteria">ParameterExpression</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/ParameterExpression.html#jakarta.persistence.criteria">ParameterExpression</a></div>
+<div class="col-last even-row-color">
 <div class="block">Type of criteria query parameter expressions.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/Path.html#jakarta.persistence.criteria">Path</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="class-use/Path.html#jakarta.persistence.criteria">Path</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Represents a simple or compound attribute path from a 
 bound type or collection, and is a "primitive" expression.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/PluralExpression.html#jakarta.persistence.criteria">PluralExpression</a></div>
+<div class="col-last even-row-color">
+<div class="block">Type for collection query expressions.</div>
 </div>
 <div class="col-first odd-row-color"><a href="class-use/PluralJoin.html#jakarta.persistence.criteria">PluralJoin</a></div>
 <div class="col-last odd-row-color">
@@ -280,10 +291,18 @@ collection that has been specified as a <a href="https://docs.oracle.com/en/java
 <div class="block">The <code>Subquery</code> interface defines functionality that is
 specific to subqueries.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/TemporalField.html#jakarta.persistence.criteria">TemporalField</a></div>
+<div class="col-first even-row-color"><a href="class-use/TemporalExpression.html#jakarta.persistence.criteria">TemporalExpression</a></div>
 <div class="col-last even-row-color">
+<div class="block">Type for temporal query expressions.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/TemporalField.html#jakarta.persistence.criteria">TemporalField</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Each instance represents a type of field which can be
 extracted from a date, time, or datetime.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/TextExpression.html#jakarta.persistence.criteria">TextExpression</a></div>
+<div class="col-last even-row-color">
+<div class="block">Type for string query expressions.</div>
 </div>
 </div>
 </section>

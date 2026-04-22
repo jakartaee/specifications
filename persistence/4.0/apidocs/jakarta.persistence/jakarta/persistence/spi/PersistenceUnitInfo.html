@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -71,7 +71,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#getJarFileUrls()" tabindex="0">getJarFileUrls()</a></li>
 <li><a href="#getPersistenceUnitRootUrl()" tabindex="0">getPersistenceUnitRootUrl()</a></li>
 <li><a href="#getManagedClassNames()" tabindex="0">getManagedClassNames()</a></li>
-<li><a href="#getAllManagedClassNames()" tabindex="0">getAllManagedClassNames()</a></li>
+<li><a href="#getAllClassNames()" tabindex="0">getAllClassNames()</a></li>
 <li><a href="#excludeUnlistedClasses()" tabindex="0">excludeUnlistedClasses()</a></li>
 <li><a href="#getSharedCacheMode()" tabindex="0">getSharedCacheMode()</a></li>
 <li><a href="#getValidationMode()" tabindex="0">getValidationMode()</a></li>
@@ -131,17 +131,22 @@ that have not been explicitly listed are to be included in the
 set of managed classes.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAllManagedClassNames()" class="member-name-link">getAllManagedClassNames</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAllClassNames()" class="member-name-link">getAllClassNames</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Returns the names of all classes belonging to the
-persistence unit, including classes:
+<div class="block">Returns the names of all classes (compiled Java types,
+module descriptors, and package descriptors) belonging
+to the persistence unit, including classes:
 
 named explicitly in the <code>persistence.xml</code>
     file,
 named explicitly in <code>META-INF/orm.xml</code> or
     in an XML mapping file listed in
     <code>persistence.xml</code>, or
-discovered by the container via scanning.</div>
+discovered by the container via scanning the
+    archive containing the <code>persistence.xml</code>
+    file and all archives referenced by
+    <code>&lt;jar-file&gt;</code> elements of the persistence
+    unit definiton.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html" title="class or interface in java.lang" class="external-link">ClassLoader</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClassLoader()" class="member-name-link">getClassLoader</a>()</code></div>
@@ -462,30 +467,46 @@ of the <code>persistence.xml</code> file.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="getAllManagedClassNames()">
-<h3>getAllManagedClassNames</h3>
+<section class="detail" id="getAllClassNames()">
+<h3>getAllClassNames</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getAllManagedClassNames</span>()</div>
-<div class="block">Returns the names of all classes belonging to the
-persistence unit, including classes:
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getAllClassNames</span>()</div>
+<div class="block">Returns the names of all classes (compiled Java types,
+module descriptors, and package descriptors) belonging
+to the persistence unit, including classes:
 <ul>
 <li>named explicitly in the <code>persistence.xml</code>
     file,
 <li>named explicitly in <code>META-INF/orm.xml</code> or
     in an XML mapping file listed in
     <code>persistence.xml</code>, or
-<li>discovered by the container via scanning.
+<li>discovered by the container via scanning the
+    archive containing the <code>persistence.xml</code>
+    file and all archives referenced by
+    <code>&lt;jar-file&gt;</code> elements of the persistence
+    unit definiton.
 </ul>
-<p>The classes include every entity class, mapped
-superclass, embeddable class, attribute converter
-class, or type declaring a named query or statement
-which belongs to the persistence unit.</div>
+<p>A class is discoverable via scanning if it bears
+a <a href="Discoverable.html" title="annotation interface in jakarta.persistence.spi">discoverable annotation</a>.
+Discoverable classes include entity classes, mapped
+superclasses, embeddable classes, attribute converter
+classes, and every type declaring a named query,
+named statement, named stored procedure query, or
+SQL result set mapping. Classes bearing custom
+discoverable annotation types are also discoverable.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the list of names of all classes belonging
-to the persistence unit</dd>
+to the persistence unit, including types, module
+descriptors, and package descriptors</dd>
 <dt>Since:</dt>
 <dd>4.0</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="Discoverable.html" title="annotation interface in jakarta.persistence.spi"><code>Discoverable</code></a></li>
+</ul>
+</dd>
 </dl>
 </div>
 </section>

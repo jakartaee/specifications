@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -81,8 +81,30 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE" title="class or interface in java.lang.annotation" class="external-link">TYPE</a>,<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#METHOD" title="class or interface in java.lang.annotation" class="external-link">METHOD</a>,<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#FIELD" title="class or interface in java.lang.annotation" class="external-link">FIELD</a>})
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">PersistenceContext</span></div>
-<div class="block">Expresses a dependency on a container-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> and
-its associated persistence context.</div>
+<div class="block">Expresses a dependency on a container-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>
+ and its associated persistence context. When this annotation occurs
+ on a method or field of a managed bean, it declares an injection point
+ of type <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>.
+ 
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.PersistenceContext1"><code class="language-java">@PersistenceContext EntityManager manager;
+</code></pre>
+</div>
+
+ When the annotation occurs on a managed bean class, it assigns a
+ name to the <code>EntityManager</code> in the environment referencing
+ context <code>java:comp/env</code> of the containing module.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.PersistenceContext2"><code class="language-java">@PersistenceContext(name = "LibraryManager")
+class Bean
+    ...
+    EntityManagerFactory =
+            new InitialContext()
+                    .lookup("java:comp/env/LibraryManager");
+    ...
+</code></pre>
+</div>
+</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
@@ -103,9 +125,8 @@ its associated persistence context.</div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">(Optional) The name by which the entity manager is to be accessed
-in the environment referencing context; not needed when dependency
-injection is used.</div>
+<div class="block">(Optional) The name at which the <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> is
+accessed in the environment referencing context.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="PersistenceProperty.html" title="annotation interface in jakarta.persistence">PersistenceProperty</a>[]</code></div>
 <div class="col-second odd-row-color"><code><a href="#properties()" class="member-name-link">properties</a></code></div>
@@ -124,8 +145,8 @@ method.</div>
 <div class="col-first odd-row-color"><code><a href="PersistenceContextType.html" title="enum class in jakarta.persistence">PersistenceContextType</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#type()" class="member-name-link">type</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">(Optional) Specifies whether a transaction-scoped persistence
-context or an extended persistence context is to be used.</div>
+<div class="block">(Optional) Specifies whether a transaction-scoped or extended
+persistence context is required.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#unitName()" class="member-name-link">unitName</a></code></div>
@@ -150,9 +171,12 @@ context or an extended persistence context is to be used.</div>
 <h3>name</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">name</span></div>
-<div class="block">(Optional) The name by which the entity manager is to be accessed
-in the environment referencing context; not needed when dependency
-injection is used.</div>
+<div class="block">(Optional) The name at which the <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> is
+accessed in the environment referencing context. If the
+specified name does not begin with <code>java:</code>, then the
+prefix <code>java:comp/env</code> is assumed. This member is not
+usually specified when <code>@PersistenceUnit</code> annotates
+an injection point.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>""</code></dd>
@@ -166,9 +190,8 @@ injection is used.</div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">unitName</span></div>
 <div class="block">(Optional) The name of the persistence unit as defined in the
-<code>persistence.xml</code> file. If the <code>unitName</code> element
-is specified, the persistence unit for the entity manager that is
-accessible in JNDI must have the same name.</div>
+<code>persistence.xml</code> file. This member is optional if there
+is only one persistence unit defined by the containing module.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>""</code></dd>
@@ -181,8 +204,8 @@ accessible in JNDI must have the same name.</div>
 <h3>type</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="PersistenceContextType.html" title="enum class in jakarta.persistence">PersistenceContextType</a></span>&nbsp;<span class="element-name">type</span></div>
-<div class="block">(Optional) Specifies whether a transaction-scoped persistence
-context or an extended persistence context is to be used.</div>
+<div class="block">(Optional) Specifies whether a transaction-scoped or extended
+persistence context is required.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>TRANSACTION</code></dd>
@@ -217,7 +240,7 @@ method.</div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="PersistenceProperty.html" title="annotation interface in jakarta.persistence">PersistenceProperty</a>[]</span>&nbsp;<span class="element-name">properties</span></div>
 <div class="block">(Optional) Properties for the container or persistence provider.
-Vendor specific properties may be included in this set of
+Vendor-specific properties may be included in this set of
 properties. Properties that are not recognized by a vendor are
 ignored.</div>
 <dl class="notes">

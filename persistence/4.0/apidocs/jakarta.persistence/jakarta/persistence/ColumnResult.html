@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#annotation-interface-required-element-summary" tabindex="0">Required Element Summary</a></li>
 <li><a href="#annotation-interface-optional-element-summary" tabindex="0">Optional Element Summary</a></li>
 <li><a href="#annotation-interface-element-detail" tabindex="0">Element Details</a>
@@ -75,8 +76,9 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({})
+<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#METHOD" title="class or interface in java.lang.annotation" class="external-link">METHOD</a>)
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
+<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html" title="class or interface in java.lang.annotation" class="external-link">@Repeatable</a>(<a href="ColumnResult.ColumnResults.html" title="annotation interface in jakarta.persistence">ColumnResult.ColumnResults</a>.class)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">ColumnResult</span></div>
 <div class="block">Used in conjunction with the <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence"><code>SqlResultSetMapping</code></a>,
 <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a>, or <a href="ConstructorResult.html" title="annotation interface in jakarta.persistence"><code>ConstructorResult</code></a>
@@ -88,31 +90,42 @@ in the <code>SELECT</code> list&mdash;that is, the column alias,
 if applicable. Scalar result types can be included in the
 query result by specifying this annotation in the metadata.
 
-<p>Example:
+<p>Consider the following SQL query:
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.ColumnResult1"><code class="language-java">Query q = em.createNativeQuery(
-    "SELECT o.id AS order_id, " +
-        "o.quantity AS order_quantity, " +
-        "o.item AS order_item, " +
-        "i.name AS item_name, " +
-      "FROM Order o, Item i " +
-      "WHERE (order_quantity &gt; 25) AND (order_item = i.id)",
-    "OrderResults");
+<pre class="snippet" id="snippet-jakarta.persistence.ColumnResult1"><code class="language-java">Query ordersWithItemNames =
+        em.createNativeQuery(
+            """
+               SELECT o.id AS order_id,
+                      o.quantity AS order_quantity,
+                      o.item AS order_item,
+                      i.name AS item_name
+               FROM Order o,
+               JOIN Item i ON o.item = i.id
+               WHERE o.quantity &gt; 25
+            """,
+            ResultMappings_.MAPPING_ORDERS_WITH_ITEM_NAMES
+        );
+</code></pre>
+</div>
 
-@SqlResultSetMapping(
-    name = "OrderResults",
-    entities = {
-        @EntityResult(
-            entityClass = com.acme.Order.class,
-            fields = {
-                @FieldResult(name = "id", column = "order_id"),
-                @FieldResult(name = "quantity", column = "order_quantity"),
-                @FieldResult(name = "item", column = "order_item")
-            })
-    },
-    columns = {
-        @ColumnResult(name = "item_name")
-    })
+<p>The result set mapping might be defined as follows:
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.ColumnResult2"><code class="language-java">@SqlResultSetMapping(
+    name = "OrdersWithItemNames",
+    entities = @EntityResult(
+        entityClass = Order.class,
+        fields = {
+            @FieldResult(name = Order_.ID,
+                         column = "order_id"),
+            @FieldResult(name = Order_.QUANTITY,
+                         column = "order_quantity"),
+            @FieldResult(name = Order_.ITEM,
+                         column = "order_item")
+        }
+    ),
+    columns = @ColumnResult(name = "item_name")
+)
+interface ResultMappings {}
 </code></pre>
 </div>
 
@@ -120,7 +133,17 @@ query result by specifying this annotation in the metadata.
 <p>At runtime, a <code>ColumnResult</code> annotation is represented by an
 instance of <a href="sql/ColumnMapping.html" title="class in jakarta.persistence.sql"><code>ColumnMapping</code></a>
 in the <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a>
-returned by <a href="EntityManagerFactory.html#getResultSetMappings(java.lang.Class)"><code>EntityManagerFactory.getResultSetMappings(Class)</code></a>.</div>
+returned by <a href="EntityManagerFactory.html#getResultSetMappings(java.lang.Class)"><code>EntityManagerFactory.getResultSetMappings(Class)</code></a>.
+
+<p>This annotation may be placed directly on a method annotated
+<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.ColumnResult3"><code class="language-java">@StaticNativeQuery("SELECT count(*) AS title_count FROM books WHERE title LIKE :pattern")
+@ColumnResult(name="title_count")
+int countBooks(String pattern);
+</code></pre>
+</div>
+</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
@@ -138,6 +161,21 @@ returned by <a href="EntityManagerFactory.html#getResultSetMappings(java.lang.Cl
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static @interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="ColumnResult.ColumnResults.html" class="type-name-link" title="annotation interface in jakarta.persistence">ColumnResult.ColumnResults</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- =========== ANNOTATION INTERFACE REQUIRED MEMBER SUMMARY =========== -->
 <li>
 <section class="member-summary" id="annotation-interface-required-element-summary">

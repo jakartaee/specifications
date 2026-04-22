@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -96,8 +96,9 @@ all objects contained in the persistence context.</div>
 <div class="col-first odd-row-color"><code><a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#getFlushMode()" class="member-name-link">getFlushMode</a>()</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Get the flush mode which will be in effect when the query
-is executed.</div>
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="../Query.html#getQueryFlushMode()"><code>Query.getQueryFlushMode()</code></a>.</div>
+</div>
 </div>
 <div class="col-first even-row-color"><code>static <a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">FlushModeType.</span><code><a href="../FlushModeType.html#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
@@ -125,26 +126,30 @@ all objects contained in the persistence context.</div>
 <div class="col-first odd-row-color"><code><a href="../Query.html" title="interface in jakarta.persistence">Query</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Set the <a href="../FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
-used when the query is executed.</div>
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="../Query.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>Query.setQueryFlushMode(QueryFlushMode)</code></a>.</div>
+</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Set the <a href="../FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
-used when the query is executed.</div>
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="../Statement.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>Statement.setQueryFlushMode(QueryFlushMode)</code></a>.</div>
+</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Set the <a href="../FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
-used when the query is executed.</div>
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="../StoredProcedureQuery.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>StoredProcedureQuery.setQueryFlushMode(QueryFlushMode)</code></a>.</div>
+</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Set the <a href="../FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
-used when the query is executed.</div>
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="../TypedQuery.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>TypedQuery.setQueryFlushMode(QueryFlushMode)</code></a>.</div>
+</div>
 </div>
 </div>
 </section>

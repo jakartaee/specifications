@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -95,7 +95,7 @@ loadScripts(document, 'script');</script>
 <pre class="snippet" id="snippet-jakarta.persistence.query.StaticNativeQuery1"><code class="language-java"> interface Library {
 
      @StaticNativeQuery("select * from books where title like ?")
-     @ReadQueryOptions(cacheStoreMode = CacheStoreMode.BYPASS)
+     @StaticQueryOptions(cacheStoreMode = CacheStoreMode.BYPASS)
      List&lt;Book&gt; findBooksByTitle(String title);
 
      @StaticNativeQuery("select * from books where isbn = ?")
@@ -103,7 +103,7 @@ loadScripts(document, 'script');</script>
 
      @StaticNativeQuery("delete from documents"
              + " where id in (select document_id from trash)")
-     @WriteQueryOptions(timeout = 30_000)
+     @StaticQueryOptions(timeout = 30_000)
      int emptyTrash();
  }
 </code></pre>
@@ -165,22 +165,32 @@ loadScripts(document, 'script');</script>
  string <code>"."</code>, and the name of the annotated member, for example,
  <code>"Library.getBookWithIsbn"</code>.
 
- <p> If a <a href="../SqlResultSetMapping.html" title="annotation interface in jakarta.persistence"><code>SqlResultSetMapping</code></a> exists with
- the same name as the query, it is used to map the result set of the
- query. If the <code>@SqlResultSetMapping</code> annotation occurs on the
- same method as <code>@StaticNativeQuery</code> annotation, name defaulting
- rules conspire to ensure that no name needs to be explicitly specified.
+ <p> A <a href="../SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">result set
+ mapping</a> may be specified by annotating the method with one or more
+ <a href="../EntityResult.html" title="annotation interface in jakarta.persistence"><code>EntityResult</code></a>,
+ <a href="../ColumnResult.html" title="annotation interface in jakarta.persistence"><code>ColumnResult</code></a>, or
+ <a href="../ConstructorResult.html" title="annotation interface in jakarta.persistence"><code>ConstructorResult</code></a> annotations. The inferred
+ result set mapping has the same name as the query.
  
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-jakarta.persistence.query.StaticNativeQuery5"><code class="language-java">@StaticNativeQuery("select * from books where isbn = ?")
-@SqlResultSetMapping(entities =
-        @EntityResult(entityClass = Book.class,
-                fields = {@FieldResult(name = "isbn", column = "isbn_13"),
-                          @FieldResult(name = "title", column = "title_en"})
+@EntityResult(entityClass = Book.class,
+    fields = {@FieldResult(name = Book_.ISBN, column = "isbn_13"),
+              @FieldResult(name = Book_.TITLE, column = "title_en")})
 Book getBookWithIsbn(String isbn);
 </code></pre>
 </div>
 
+
+ <p>When more than one result mapping annotation is specified, each
+ row of the mapped query result set is represented as an instance of
+ <code>Object[]</code> whose elements are, in order:
+ <ol>
+ <li>entity results, in the order in which they are declared;
+ <li>constructor results, in the order in which they are declared;
+     and then
+ <li>scalar results, in the order in which they are declared.
+ </ol>
 
  <p> An implementation of Jakarta Data backed by Jakarta Persistence
  must treat this annotation as a Jakarta Data query annotation.

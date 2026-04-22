@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -94,19 +94,19 @@ the subquery results.</div>
 the subquery results.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#having(jakarta.persistence.criteria.Expression)" class="member-name-link">having</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#having(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">having</a><wbr>(<a href="../BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Specify a restriction over the groups of the subquery.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#having(jakarta.persistence.criteria.Predicate...)" class="member-name-link">having</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
 <div class="block">Specify restrictions over the groups of the subquery
 according the conjunction of the specified restriction 
 predicates.</div>
 </div>
+<div class="col-first even-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#having(jakarta.persistence.criteria.Expression)" class="member-name-link">having</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Specify a restriction over the groups of the subquery.</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#having(java.util.List)" class="member-name-link">having</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#having(java.util.List)" class="member-name-link">having</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction
@@ -129,19 +129,19 @@ result.</div>
 <div class="block">Create a subquery of the query.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#where(jakarta.persistence.criteria.Expression)" class="member-name-link">where</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#where(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">where</a><wbr>(<a href="../BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Modify the subquery to restrict the result according
-to the specified boolean expression.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#where(jakarta.persistence.criteria.Predicate...)" class="member-name-link">where</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
 <div class="block">Modify the subquery to restrict the result according 
 to the conjunction of the specified restriction predicates.</div>
 </div>
+<div class="col-first even-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#where(jakarta.persistence.criteria.Expression)" class="member-name-link">where</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Modify the subquery to restrict the result according
+to the specified boolean expression.</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.</div>
@@ -167,9 +167,15 @@ to the conjunction of the specified restriction predicates.</div>
 <div class="col-last even-row-color">
 <div class="block">Create a predicate testing the existence of a subquery result.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;Y&gt;&nbsp;<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;Y&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#some(jakarta.persistence.criteria.Subquery)" class="member-name-link">some</a><wbr>(<a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;Y&gt;&nbsp;subquery)</code></div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#in(jakarta.persistence.criteria.Subquery)" class="member-name-link">in</a><wbr>(<a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="../Expression.html#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;subquery)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Create a predicate to test whether the expression is returned
+by the subquery.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;Y&gt;&nbsp;<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;Y&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#some(jakarta.persistence.criteria.Subquery)" class="member-name-link">some</a><wbr>(<a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;Y&gt;&nbsp;subquery)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create a some expression over the subquery results.</div>
 </div>
 </div>

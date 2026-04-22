@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -66,12 +66,12 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#elements()" tabindex="0">elements()</a></li>
 <li><a href="#of(jakarta.persistence.sql.MappingElement...)" tabindex="0">of(MappingElement...)</a></li>
 <li><a href="#type()" tabindex="0">type()</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
-<li><a href="#elements()" tabindex="0">elements()</a></li>
 </ol>
 </li>
 </ol>
@@ -123,7 +123,14 @@ entityManager.createNativeQuery("select isbn, title, pages from Book",
     });
 </code></pre>
 </div>
-</div>
+
+
+<p>Each result <a href="../Tuple.html" title="interface in jakarta.persistence"><code>Tuple</code></a> contains an entry for each
+element of the <code>TupleMapping</code>.
+The index and alias of a tuple entry are determined by the
+position of the element in <code>TupleMapping</code> and the
+<a href="../TupleElement.html#getAlias()">alias</a> of the element,
+respectively.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>4.0</dd>
@@ -234,6 +241,19 @@ entityManager.createNativeQuery("select isbn, title, pages from Book",
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="elements()">
+<h3>elements</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]</span>&nbsp;<span class="element-name">elements</span>()</div>
+<div class="block">Returns the value of the <a href="#param-elements"><code>elements</code></a> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <a href="#param-elements"><code>elements</code></a> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="of(jakarta.persistence.sql.MappingElement...)">
 <h3>of</h3>
 <div class="horizontal-scroll">
@@ -302,19 +322,6 @@ entityManager.createNativeQuery("select isbn, title, pages from Book",
 <dd><code>o</code> - the object with which to compare</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if this object is the same as the <code>o</code> argument; <code>false</code> otherwise.</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="elements()">
-<h3>elements</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]</span>&nbsp;<span class="element-name">elements</span>()</div>
-<div class="block">Returns the value of the <a href="#param-elements"><code>elements</code></a> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <a href="#param-elements"><code>elements</code></a> record component</dd>
 </dl>
 </div>
 </section>

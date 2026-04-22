@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -81,6 +81,12 @@ annotated class. This annotation may be applied to an
 <a href="Entity.html" title="annotation interface in jakarta.persistence">entity class</a> or to a
 <a href="MappedSuperclass.html" title="annotation interface in jakarta.persistence">mapped superclass</a>.
 
+<p>This annotation is an alternative to <a href="EntityListener.html" title="annotation interface in jakarta.persistence"><code>EntityListener</code></a>.
+Entity listeners declared using this annotation do not need to
+be annotated <code>@EntityListener</code>. Callback methods of
+listeners declared using this annotation are invoked after
+callback methods of listeners declared using <code>EntityListener</code>.
+
 <p>Every entity listener class must have a public constructor
 with no parameters.
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
@@ -122,10 +128,9 @@ which the entity listener applies.
 </div>
 
 
-<p>An entity listener class may have multiple callback
-methods for a given type of lifecycle event, but at most
-one callback method for a given type of event and given
-parameter type.
+<p>An entity listener class may have multiple callback methods
+for a given type of lifecycle event, but at most one callback
+method for a given type of event and given parameter type.
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-jakarta.persistence.EntityListeners3"><code class="language-java">class Observer {
 
@@ -163,6 +168,12 @@ instance is destroyed, respectively.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="EntityListener.html" title="annotation interface in jakarta.persistence"><code>EntityListener</code></a></li>
+</ul>
+</dd>
 </dl>
 </div>
 </section>
@@ -180,7 +191,9 @@ instance is destroyed, respectively.</div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;[]</code></div>
 <div class="col-second even-row-color"><code><a href="#value()" class="member-name-link">value</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The callback listener classes for the annotated entity.</div>
+<div class="block">The callback listener classes for the annotated entity,
+in the order in which their lifecycle callback methods
+are invoked.</div>
 </div>
 </div>
 </section>
@@ -199,7 +212,9 @@ instance is destroyed, respectively.</div>
 <h3>value</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;[]</span>&nbsp;<span class="element-name">value</span></div>
-<div class="block">The callback listener classes for the annotated entity.</div>
+<div class="block">The callback listener classes for the annotated entity,
+in the order in which their lifecycle callback methods
+are invoked.</div>
 </div>
 </section>
 </li>

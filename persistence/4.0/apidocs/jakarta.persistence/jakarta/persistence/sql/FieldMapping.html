@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -106,7 +106,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">FieldMapping&lt;C,<wbr>T&gt;</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;&nbsp;container, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in FieldMapping">T</a>&gt;&nbsp;type, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">FieldMapping&lt;C,<wbr>T&gt;</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? super <a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;&nbsp;container, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in FieldMapping">T</a>&gt;&nbsp;type, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;C&gt;</span></div>
 <div class="block">Maps a column of a JDBC <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ResultSet.html" title="class or interface in java.sql" class="external-link"><code>ResultSet</code></a> to a given
@@ -133,7 +133,7 @@ field or column of an entity or embeddable type.</div>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.Class,java.lang.Class,java.lang.String,java.lang.String)" class="member-name-link">FieldMapping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;&nbsp;container,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.Class,java.lang.Class,java.lang.String,java.lang.String)" class="member-name-link">FieldMapping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? super <a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;&nbsp;container,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in FieldMapping">T</a>&gt;&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</code></div>
@@ -159,7 +159,7 @@ field or column of an entity or embeddable type.</div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-columnName"><code>columnName</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;? super <a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#container()" class="member-name-link">container</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-container"><code>container</code></a> record component.</div>
@@ -180,13 +180,13 @@ field or column of an entity or embeddable type.</div>
 <div class="block">Returns the value of the <a href="#param-name"><code>name</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="FieldMapping.html" title="class in jakarta.persistence.sql">FieldMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(jakarta.persistence.metamodel.SingularAttribute,java.lang.String)" class="member-name-link">of</a><wbr>(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;C,<wbr>T&gt;&nbsp;attribute,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(jakarta.persistence.metamodel.SingularAttribute,java.lang.String)" class="member-name-link">of</a><wbr>(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super C, T&gt;&nbsp;attribute,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Construct a new instance.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="FieldMapping.html" title="class in jakarta.persistence.sql">FieldMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.Class,java.lang.Class,java.lang.String,java.lang.String)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;C&gt;&nbsp;container,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.Class,java.lang.Class,java.lang.String,java.lang.String)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? super C&gt;&nbsp;container,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</code></div>
@@ -224,7 +224,7 @@ field or column of an entity or embeddable type.</div>
 <section class="detail" id="&lt;init&gt;(java.lang.Class,java.lang.Class,java.lang.String,java.lang.String)">
 <h3>FieldMapping</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">FieldMapping</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;&nbsp;container,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">FieldMapping</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? super <a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;&nbsp;container,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in FieldMapping">T</a>&gt;&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</span></div>
@@ -251,7 +251,7 @@ field or column of an entity or embeddable type.</div>
 <section class="detail" id="of(java.lang.Class,java.lang.Class,java.lang.String,java.lang.String)">
 <h3>of</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;C,<wbr>T&gt;</span>&nbsp;<span class="return-type"><a href="FieldMapping.html" title="class in jakarta.persistence.sql">FieldMapping</a>&lt;C,<wbr>T&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;C&gt;&nbsp;container,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;C,<wbr>T&gt;</span>&nbsp;<span class="return-type"><a href="FieldMapping.html" title="class in jakarta.persistence.sql">FieldMapping</a>&lt;C,<wbr>T&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? super C&gt;&nbsp;container,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</span></div>
@@ -273,7 +273,7 @@ field or column of an entity or embeddable type.</div>
 <section class="detail" id="of(jakarta.persistence.metamodel.SingularAttribute,java.lang.String)">
 <h3>of</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;C,<wbr>T&gt;</span>&nbsp;<span class="return-type"><a href="FieldMapping.html" title="class in jakarta.persistence.sql">FieldMapping</a>&lt;C,<wbr>T&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;C,<wbr>T&gt;&nbsp;attribute,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;C,<wbr>T&gt;</span>&nbsp;<span class="return-type"><a href="FieldMapping.html" title="class in jakarta.persistence.sql">FieldMapping</a>&lt;C,<wbr>T&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super C, T&gt;&nbsp;attribute,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</span></div>
 <div class="block">Construct a new instance.</div>
 <dl class="notes">
@@ -338,7 +338,7 @@ field or column of an entity or embeddable type.</div>
 <section class="detail" id="container()">
 <h3>container</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;</span>&nbsp;<span class="element-name">container</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? super <a href="#type-param-C" title="type parameter in FieldMapping">C</a>&gt;</span>&nbsp;<span class="element-name">container</span>()</div>
 <div class="block">Returns the value of the <a href="#param-container"><code>container</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>

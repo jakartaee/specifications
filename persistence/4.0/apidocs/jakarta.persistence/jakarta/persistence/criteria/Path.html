@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,6 +63,11 @@ loadScripts(document, 'script');</script>
 <li><a href="#getModel()" tabindex="0">getModel()</a></li>
 <li><a href="#getParentPath()" tabindex="0">getParentPath()</a></li>
 <li><a href="#get(jakarta.persistence.metamodel.SingularAttribute)" tabindex="0">get(SingularAttribute)</a></li>
+<li><a href="#get(jakarta.persistence.metamodel.BooleanAttribute)" tabindex="0">get(BooleanAttribute)</a></li>
+<li><a href="#get(jakarta.persistence.metamodel.ComparableAttribute)" tabindex="0">get(ComparableAttribute)</a></li>
+<li><a href="#get(jakarta.persistence.metamodel.TemporalAttribute)" tabindex="0">get(TemporalAttribute)</a></li>
+<li><a href="#get(jakarta.persistence.metamodel.NumericAttribute)" tabindex="0">get(NumericAttribute)</a></li>
+<li><a href="#get(jakarta.persistence.metamodel.TextAttribute)" tabindex="0">get(TextAttribute)</a></li>
 <li><a href="#get(jakarta.persistence.metamodel.PluralAttribute)" tabindex="0">get(PluralAttribute)</a></li>
 <li><a href="#get(jakarta.persistence.metamodel.MapAttribute)" tabindex="0">get(MapAttribute)</a></li>
 <li><a href="#type()" tabindex="0">type()</a></li>
@@ -87,7 +92,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;Z,<wbr>E&gt;, <a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;Z,<wbr>X&gt;, <a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;Z,<wbr>X&gt;, <a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;Z,<wbr>E&gt;, <a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;Z,<wbr>K,<wbr>V&gt;, <a href="PluralJoin.html" title="interface in jakarta.persistence.criteria">PluralJoin</a>&lt;Z,<wbr>C,<wbr>E&gt;, <a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;, <a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;Z,<wbr>E&gt;</code></dd>
+<dd><code><a href="BooleanPath.html" title="interface in jakarta.persistence.criteria">BooleanPath</a>, <a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;Z,<wbr>E&gt;, <a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;Z,<wbr>X&gt;, <a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;Z,<wbr>X&gt;, <a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;Z,<wbr>E&gt;, <a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;Z,<wbr>K,<wbr>V&gt;, <a href="PluralJoin.html" title="interface in jakarta.persistence.criteria">PluralJoin</a>&lt;Z,<wbr>C,<wbr>E&gt;, <a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;, <a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;Z,<wbr>E&gt;</code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
@@ -114,43 +119,73 @@ bound type or collection, and is a "primitive" expression.</div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;K, V, M extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;K,<wbr>V&gt;&gt;<br><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;M&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.MapAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, K, V&gt;&nbsp;map)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a path corresponding to the referenced 
-map-valued attribute.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;E, C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;E&gt;&gt;<br><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;C&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.PluralAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, C, E&gt;&nbsp;collection)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a path corresponding to the referenced 
-collection-valued attribute.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;Y&gt;&nbsp;<a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a><wbr>&lt;Y&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.SingularAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, Y&gt;&nbsp;attribute)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.BooleanAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/BooleanAttribute.html" title="interface in jakarta.persistence.metamodel">BooleanAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>&gt;&nbsp;attribute)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a path corresponding to the referenced
 single-valued attribute.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;Y&gt;&nbsp;<a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a><wbr>&lt;Y&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(java.lang.String)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super C&gt;&gt;<br><a href="ComparableExpression.html" title="interface in jakarta.persistence.criteria">ComparableExpression</a><wbr>&lt;C&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.ComparableAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/ComparableAttribute.html" title="interface in jakarta.persistence.metamodel">ComparableAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, C&gt;&nbsp;attribute)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;K, V, M extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;K,<wbr>V&gt;&gt;<br><a href="PluralExpression.html" title="interface in jakarta.persistence.criteria">PluralExpression</a><wbr>&lt;M,<wbr>V&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.MapAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, K, V&gt;&nbsp;map)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a path corresponding to the referenced
+map-valued attribute.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;N extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;N&gt;&gt;<br><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a><wbr>&lt;N&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.NumericAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/NumericAttribute.html" title="interface in jakarta.persistence.metamodel">NumericAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, N&gt;&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;E, C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;E&gt;&gt;<br><a href="PluralExpression.html" title="interface in jakarta.persistence.criteria">PluralExpression</a><wbr>&lt;C,<wbr>E&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.PluralAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, C, E&gt;&nbsp;collection)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a path corresponding to the referenced
+collection-valued attribute.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;Y&gt;&nbsp;<a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a><wbr>&lt;Y&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.SingularAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, Y&gt;&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/Temporal.html" title="class or interface in java.time.temporal" class="external-link">Temporal</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super T&gt;&gt;<br><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.TemporalAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/TemporalAttribute.html" title="interface in jakarta.persistence.metamodel">TemporalAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, T&gt;&nbsp;attribute)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TextExpression.html" title="interface in jakarta.persistence.criteria">TextExpression</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.metamodel.TextAttribute)" class="member-name-link">get</a><wbr>(<a href="../metamodel/TextAttribute.html" title="interface in jakarta.persistence.metamodel">TextAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>&gt;&nbsp;attribute)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;Y&gt;&nbsp;<a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a><wbr>&lt;Y&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(java.lang.String)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a path corresponding to the referenced attribute.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../metamodel/Bindable.html" title="interface in jakarta.persistence.metamodel">Bindable</a><wbr>&lt;<a href="#type-param-X" title="type parameter in Path">X</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModel()" class="member-name-link">getModel</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../metamodel/Bindable.html" title="interface in jakarta.persistence.metamodel">Bindable</a><wbr>&lt;<a href="#type-param-X" title="type parameter in Path">X</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModel()" class="member-name-link">getModel</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the bindable object that corresponds to the path
 expression.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParentPath()" class="member-name-link">getParentPath</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParentPath()" class="member-name-link">getParentPath</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the parent "node" in the path or null if no parent.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="#type-param-X" title="type parameter in Path">X</a>&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="#type-param-X" title="type parameter in Path">X</a>&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an expression corresponding to the type of the path.</div>
 </div>
 </div>
@@ -158,7 +193,7 @@ expression.</div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Expression">Methods inherited from interface&nbsp;<a href="Expression.html#method-summary" title="interface in jakarta.persistence.criteria">Expression</a></h3>
-<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a></code></div>
+<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#coalesce(jakarta.persistence.criteria.Expression)" title="coalesce(Expression)">coalesce</a>, <a href="Expression.html#coalesce(T)" title="coalesce(X)">coalesce</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#nullif(jakarta.persistence.criteria.Expression)" title="nullif(Expression)">nullif</a>, <a href="Expression.html#nullif(T)" title="nullif(X)">nullif</a>, <a href="Expression.html#selectCase()" title="selectCase()">selectCase</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Selection">Methods inherited from interface&nbsp;<a href="Selection.html#method-summary" title="interface in jakarta.persistence.criteria">Selection</a></h3>
 <code><a href="Selection.html#alias(java.lang.String)" title="alias(String)">alias</a>, <a href="Selection.html#getCompoundSelectionItems()" title="getCompoundSelectionItems()">getCompoundSelectionItems</a>, <a href="Selection.html#isCompoundSelection()" title="isCompoundSelection()">isCompoundSelection</a></code></div>
@@ -220,11 +255,104 @@ single-valued attribute.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="get(jakarta.persistence.metamodel.BooleanAttribute)">
+<h3>get</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="../metamodel/BooleanAttribute.html" title="interface in jakarta.persistence.metamodel">BooleanAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>&gt;&nbsp;attribute)</span></div>
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attribute</code> - single-valued attribute</dd>
+<dt>Returns:</dt>
+<dd>path corresponding to the referenced attribute</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="get(jakarta.persistence.metamodel.ComparableAttribute)">
+<h3>get</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="type-parameters">&lt;C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super C&gt;&gt;</span>
+<span class="return-type"><a href="ComparableExpression.html" title="interface in jakarta.persistence.criteria">ComparableExpression</a>&lt;C&gt;</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="../metamodel/ComparableAttribute.html" title="interface in jakarta.persistence.metamodel">ComparableAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, C&gt;&nbsp;attribute)</span></div>
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attribute</code> - single-valued attribute</dd>
+<dt>Returns:</dt>
+<dd>path corresponding to the referenced attribute</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="get(jakarta.persistence.metamodel.TemporalAttribute)">
+<h3>get</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="type-parameters">&lt;T extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/Temporal.html" title="class or interface in java.time.temporal" class="external-link">Temporal</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super T&gt;&gt;</span>
+<span class="return-type"><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;T&gt;</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="../metamodel/TemporalAttribute.html" title="interface in jakarta.persistence.metamodel">TemporalAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, T&gt;&nbsp;attribute)</span></div>
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attribute</code> - single-valued attribute</dd>
+<dt>Returns:</dt>
+<dd>path corresponding to the referenced attribute</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="get(jakarta.persistence.metamodel.NumericAttribute)">
+<h3>get</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="type-parameters">&lt;N extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;N&gt;&gt;</span>
+<span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;N&gt;</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="../metamodel/NumericAttribute.html" title="interface in jakarta.persistence.metamodel">NumericAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, N&gt;&nbsp;attribute)</span></div>
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attribute</code> - single-valued attribute</dd>
+<dt>Returns:</dt>
+<dd>path corresponding to the referenced attribute</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="get(jakarta.persistence.metamodel.TextAttribute)">
+<h3>get</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="TextExpression.html" title="interface in jakarta.persistence.criteria">TextExpression</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="../metamodel/TextAttribute.html" title="interface in jakarta.persistence.metamodel">TextAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>&gt;&nbsp;attribute)</span></div>
+<div class="block">Create a path corresponding to the referenced
+single-valued attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attribute</code> - single-valued attribute</dd>
+<dt>Returns:</dt>
+<dd>path corresponding to the referenced attribute</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="get(jakarta.persistence.metamodel.PluralAttribute)">
 <h3>get</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E, C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;E&gt;&gt;</span>&nbsp;<span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;C&gt;</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, C, E&gt;&nbsp;collection)</span></div>
-<div class="block">Create a path corresponding to the referenced 
+<div class="member-signature"><span class="type-parameters">&lt;E, C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;E&gt;&gt;</span>&nbsp;<span class="return-type"><a href="PluralExpression.html" title="interface in jakarta.persistence.criteria">PluralExpression</a>&lt;C,<wbr>E&gt;</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, C, E&gt;&nbsp;collection)</span></div>
+<div class="block">Create a path corresponding to the referenced
 collection-valued attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -239,8 +367,8 @@ collection-valued attribute.</div>
 <section class="detail" id="get(jakarta.persistence.metamodel.MapAttribute)">
 <h3>get</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;K, V, M extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;K,<wbr>V&gt;&gt;</span>&nbsp;<span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;M&gt;</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, K, V&gt;&nbsp;map)</span></div>
-<div class="block">Create a path corresponding to the referenced 
+<div class="member-signature"><span class="type-parameters">&lt;K, V, M extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;K,<wbr>V&gt;&gt;</span>&nbsp;<span class="return-type"><a href="PluralExpression.html" title="interface in jakarta.persistence.criteria">PluralExpression</a>&lt;M,<wbr>V&gt;</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in Path">X</a>, K, V&gt;&nbsp;map)</span></div>
+<div class="block">Create a path corresponding to the referenced
 map-valued attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -271,7 +399,7 @@ map-valued attribute.</div>
 <div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a>&lt;Y&gt;</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Create a path corresponding to the referenced attribute.
 
-<p> Note: Applications using the string-based API may need to 
+<p> Note: Applications using the string-based API may need to
 specify the type resulting from the <a href="#get(jakarta.persistence.metamodel.SingularAttribute)"><code>get(SingularAttribute)</code></a> operation in
 order to avoid the use of <code>Path</code> variables.
 
