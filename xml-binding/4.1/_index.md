@@ -61,20 +61,28 @@ The Release Review Specification Committee Ballot concluded successfully on 2019
 |Committer Members      |         |         |          |
 -->
 
-<!--
 ## Plan Review
 
-The Plan Review Specification Committee Ballot concluded successfully on 2019-09-31 with the following results.
+The Plan Review Specification Committee Ballot concluded successfully on 2026-04-25 with the following results.
 
-|                       |  Yes    | No  | Abstain  |
-|-----------------------|---------|-----|----------|
-|Fujitsu                |         |     |          |
-|IBM                    |         |     |          |
-|Oracle                 |         |     |          |
-|Payara                 |         |     |          |
-|Red Hat                |         |     |          |
-|Tomitribe              |         |     |          |
-|EE4J PMC               |         |     |          |
-|Participant Members    |         |     |          |
-|Committer Members      |         |     |          |
--->
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |    +1   |
+| Emily Jiang, Tom Watson                        | IBM                 |    +1   |
+| Dmitry Kornilov                                | Oracle              |    +1   |
+| Andrew Pielage                                 | Payara              | no vote |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           | no vote |
+| Ivar Grimstad                                  | EE4J PMC            |    +1   |
+| Arjan Tijms                                    | Participant Members |    +1   |
+| Werner Keil                                    | Committer Members   |    +1   |
+| Jun Qian                                       | Enterprise Members  |    +1   |
+| Zhai Luchao                                    | Enterprise Members  |    +1   |
+|                                                | **Total**           |  **8**   |
+
+Non-binding Votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Michael Redlich		                         | Community           |    +1   |
+|                                                | **Total**           |  **1**  |
+
+The ballot was run on the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg04260.html)
