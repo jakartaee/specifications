@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -104,14 +104,6 @@ whose root type is exactly the given entity type.</div>
 <div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#getEntityGraph(java.lang.String)" class="member-name-link">getEntityGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;graphName)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Obtain a mutable copy of the named <a href="../EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a><wbr>&lt;? super <a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#getEntityGraph()" class="member-name-link">getEntityGraph</a>()</code></div>
-<div class="col-last even-row-color">
-<div class="block">Retrieve the <a href="../EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> to be applied to the entity
-returned by the query, or <code>null</code> if no entity graph was
-specified via <a href="../TypedQuery.html#setEntityGraph(jakarta.persistence.EntityGraph)"><code>TypedQuery.setEntityGraph(EntityGraph)</code></a> or
-<a href="../NamedQuery.html#entityGraph()"><code>NamedQuery.entityGraph()</code></a>.</div>
 </div>
 </div>
 <div class="caption"><span>Methods in <a href="../package-summary.html">jakarta.persistence</a> that return types with arguments of type <a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a></span></div>
@@ -205,15 +197,9 @@ in the list matches the position of its identifier in
 the given array, and fetching associations specified by
 the load graph.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setEntityGraph(jakarta.persistence.EntityGraph)" class="member-name-link">setEntityGraph</a><wbr>(<a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? super <a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;&nbsp;entityGraph)</code></div>
+<div class="col-first even-row-color"><code>&lt;R&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StatementOrTypedQuery.</span><code><a href="../StatementOrTypedQuery.html#withEntityGraph(jakarta.persistence.EntityGraph)" class="member-name-link">withEntityGraph</a><wbr>(<a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;R&gt;&nbsp;graph)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Specify an <a href="../EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> to be applied to the entity
-returned by the Jakarta Persistence query.</div>
-</div>
-<div class="col-first odd-row-color"><code>&lt;R&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#withEntityGraph(jakarta.persistence.EntityGraph)" class="member-name-link">withEntityGraph</a><wbr>(<a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;R&gt;&nbsp;graph)</code></div>
-<div class="col-last odd-row-color">
 <div class="block">Obtain a <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given entity graph,
 which must be rooted at a supertype of the result type of
 this query.</div>

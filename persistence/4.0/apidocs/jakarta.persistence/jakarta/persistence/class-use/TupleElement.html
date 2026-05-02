@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -110,6 +110,18 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Interface</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/BooleanExpression.html" class="type-name-link" title="interface in jakarta.persistence.criteria">BooleanExpression</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Type for boolean query expressions.</div>
+</div>
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/BooleanPath.html" class="type-name-link" title="interface in jakarta.persistence.criteria">BooleanPath</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Represents a simple or compound attribute path from a
+bound type or collection, and is a "primitive" expression
+of a boolean type.</div>
+</div>
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="../criteria/CollectionJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;Z,<wbr>E&gt;</code></div>
 <div class="col-last even-row-color">
 <div class="block">The <code>CollectionJoin</code> interface is the type of the result of
@@ -117,61 +129,71 @@ joining to a collection over an association or element
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link"><code>Collection</code></a>.</div>
 </div>
 <div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../criteria/CompoundSelection.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CompoundSelection</a>&lt;X&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/ComparableExpression.html" class="type-name-link" title="interface in jakarta.persistence.criteria">ComparableExpression</a>&lt;C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super C&gt;&gt;</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Type for comparable query expressions.</div>
+</div>
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/CompoundSelection.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CompoundSelection</a>&lt;X&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">The <code>CompoundSelection</code> interface defines a compound
 selection item (a tuple, array, or result of a constructor).</div>
 </div>
-<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../criteria/CriteriaBuilder.Case.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a>&lt;R&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/CriteriaBuilder.Case.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a>&lt;R&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Interface used to build general case expressions.</div>
 </div>
-<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../criteria/CriteriaBuilder.Coalesce.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Coalesce</a>&lt;T&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/CriteriaBuilder.Coalesce.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Coalesce</a>&lt;T&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">Interface used to build coalesce expressions.</div>
 </div>
-<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../criteria/CriteriaBuilder.In.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CriteriaBuilder.In</a>&lt;T&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/CriteriaBuilder.In.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CriteriaBuilder.In</a>&lt;T&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Interface used to build in predicates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../criteria/CriteriaBuilder.SimpleCase.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a>&lt;C,<wbr>R&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/CriteriaBuilder.SimpleCase.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a>&lt;C,<wbr>R&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">Interface used to build simple case expressions.</div>
 </div>
-<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../criteria/Expression.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Expression</a>&lt;T&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/Expression.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Expression</a>&lt;T&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Type for query expressions.</div>
 </div>
-<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../criteria/From.html" class="type-name-link" title="interface in jakarta.persistence.criteria">From</a>&lt;Z,<wbr>X&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/From.html" class="type-name-link" title="interface in jakarta.persistence.criteria">From</a>&lt;Z,<wbr>X&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">Represents a bound type, usually an entity that appears in
 the from clause, but may also be an embeddable belonging to
 an entity in the from clause.</div>
 </div>
-<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../criteria/Join.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Join</a>&lt;Z,<wbr>X&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/Join.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Join</a>&lt;Z,<wbr>X&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">A join to an entity, embeddable, or basic type.</div>
 </div>
-<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../criteria/ListJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;Z,<wbr>E&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/ListJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;Z,<wbr>E&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">The <code>ListJoin</code> interface is the type of the result of
 joining to a collection over an association or element 
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List</code></a>.</div>
 </div>
-<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../criteria/MapJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;Z,<wbr>K,<wbr>V&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/MapJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;Z,<wbr>K,<wbr>V&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">The <code>MapJoin</code> interface is the type of the result of
 joining to a collection over an association or element 
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>.</div>
+</div>
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/NumericExpression.html" class="type-name-link" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;N extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;N&gt;&gt;</code></div>
+<div class="col-last even-row-color">
+<div class="block">Type for number query expressions.</div>
 </div>
 <div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="../criteria/ParameterExpression.html" class="type-name-link" title="interface in jakarta.persistence.criteria">ParameterExpression</a>&lt;T&gt;</code></div>
@@ -185,40 +207,55 @@ collection that has been specified as a <a href="https://docs.oracle.com/en/java
 bound type or collection, and is a "primitive" expression.</div>
 </div>
 <div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../criteria/PluralJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">PluralJoin</a>&lt;Z,<wbr>C,<wbr>E&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/PluralExpression.html" class="type-name-link" title="interface in jakarta.persistence.criteria">PluralExpression</a>&lt;C,<wbr>E&gt;</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Type for collection query expressions.</div>
+</div>
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/PluralJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">PluralJoin</a>&lt;Z,<wbr>C,<wbr>E&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">The <code>PluralJoin</code> interface defines functionality
 that is common to joins to all collection types.</div>
 </div>
-<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../criteria/Predicate.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/Predicate.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">The type of a simple or compound predicate: a conjunction or
 disjunction of restrictions.</div>
 </div>
-<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../criteria/Root.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/Root.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">A root type in the from clause.</div>
 </div>
-<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../criteria/Selection.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Selection</a>&lt;X&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/Selection.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Selection</a>&lt;X&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">The <code>Selection</code> interface defines an item that is to be
 returned in a query result.</div>
 </div>
-<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../criteria/SetJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;Z,<wbr>E&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/SetJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;Z,<wbr>E&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">The <code>SetJoin</code> interface is the type of the result of
 joining to a collection over an association or element 
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>.</div>
 </div>
-<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../criteria/Subquery.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;T&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/Subquery.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;T&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">The <code>Subquery</code> interface defines functionality that is
 specific to subqueries.</div>
+</div>
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../criteria/TemporalExpression.html" class="type-name-link" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;T extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/Temporal.html" title="class or interface in java.time.temporal" class="external-link">Temporal</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super T&gt;&gt;</code></div>
+<div class="col-last even-row-color">
+<div class="block">Type for temporal query expressions.</div>
+</div>
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../criteria/TextExpression.html" class="type-name-link" title="interface in jakarta.persistence.criteria">TextExpression</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Type for string query expressions.</div>
 </div>
 </div>
 </section>

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -88,12 +88,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="FetchType.html" title="enum class in jakarta.persistence">FetchType</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
+<dd><code><a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="FetchType.html" title="enum class in jakarta.persistence">FetchType</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">FetchType</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="FetchType.html" title="enum class in jakarta.persistence">FetchType</a>&gt;</span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="FetchType.html" title="enum class in jakarta.persistence">FetchType</a>&gt;
+implements <a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a></span></div>
 <div class="block">Defines policies for fetching data from the database.
 <ul>
 <li>The <a href="#EAGER"><code>EAGER</code></a> policy is a requirement on the
@@ -143,13 +144,14 @@ may be explicitly requested precisely where needed using an
 <dd>1.0</dd>
 <dt>See Also:</dt>
 <dd>
-<ul class="tag-list">
+<ul class="tag-list-long">
 <li><a href="Basic.html" title="annotation interface in jakarta.persistence"><code>Basic</code></a></li>
 <li><a href="ElementCollection.html" title="annotation interface in jakarta.persistence"><code>ElementCollection</code></a></li>
 <li><a href="ManyToMany.html" title="annotation interface in jakarta.persistence"><code>ManyToMany</code></a></li>
 <li><a href="OneToMany.html" title="annotation interface in jakarta.persistence"><code>OneToMany</code></a></li>
 <li><a href="ManyToOne.html" title="annotation interface in jakarta.persistence"><code>ManyToOne</code></a></li>
 <li><a href="OneToOne.html" title="annotation interface in jakarta.persistence"><code>OneToOne</code></a></li>
+<li><a href="AttributeNode.html#addOption(jakarta.persistence.FetchOption)"><code>AttributeNode.addOption(FetchOption)</code></a></li>
 </ul>
 </dd>
 <dt>API note:</dt>

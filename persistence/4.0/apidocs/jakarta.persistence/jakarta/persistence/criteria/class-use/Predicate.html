@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -88,41 +88,78 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">BooleanExpression.</span><code><a href="../BooleanExpression.html#and(jakarta.persistence.criteria.Expression)" class="member-name-link">and</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a conjunction of this and the given boolean expressions.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#and(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">and</a><wbr>(<a href="../BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a conjunction of the given restriction predicates.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#and(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">and</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;x,
  <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;y)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Create a conjunction of the given boolean expressions.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#and(jakarta.persistence.criteria.Predicate...)" class="member-name-link">and</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#and(java.util.List)" class="member-name-link">and</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Create a conjunction of the given restriction predicates.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#and(java.util.List)" class="member-name-link">and</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#between(C,C)" class="member-name-link">between</a><wbr>(<a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&nbsp;x,
+ <a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&nbsp;y)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Create a conjunction of the given restriction predicates.</div>
-</div>
-<div class="col-first odd-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#between(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">between</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;v,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;y)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Create a predicate for testing whether the first argument is 
-between the second and third arguments in value.</div>
-</div>
-<div class="col-first even-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#between(jakarta.persistence.criteria.Expression,Y,Y)" class="member-name-link">between</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;v,
- Y&nbsp;x,
- Y&nbsp;y)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Create a predicate for testing whether the first argument is 
-between the second and third arguments in value.</div>
+<div class="block">Create a predicate for testing whether this expression is
+between the first and second arguments in value.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#conjunction()" class="member-name-link">conjunction</a>()</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#between(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">between</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&gt;&nbsp;x,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&gt;&nbsp;y)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+between the first and second arguments in value.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#between(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">between</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;v,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether the first argument is 
+between the second and third arguments in value.</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#between(jakarta.persistence.criteria.Expression,Y,Y)" class="member-name-link">between</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;v,
+ Y&nbsp;x,
+ Y&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether the first argument is 
+between the second and third arguments in value.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#conjunction()" class="member-name-link">conjunction</a>()</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create a conjunction (with zero conjuncts).</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">PluralExpression.</span><code><a href="../PluralExpression.html#contains(E)" class="member-name-link">contains</a><wbr>(<a href="../PluralExpression.html#type-param-E" title="type parameter in PluralExpression">E</a>&nbsp;elem)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate that tests whether an element is
+a member of this collection.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">PluralExpression.</span><code><a href="../PluralExpression.html#contains(jakarta.persistence.criteria.Expression)" class="member-name-link">contains</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../PluralExpression.html#type-param-E" title="type parameter in PluralExpression">E</a>&gt;&nbsp;elem)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate that tests whether an element is
+a member of this collection.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#contains(java.lang.String)" class="member-name-link">contains</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;substring)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+contains the given substring.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#disjunction()" class="member-name-link">disjunction</a>()</code></div>
@@ -130,33 +167,44 @@ between the second and third arguments in value.</div>
 <div class="block">Create a disjunction (with zero disjuncts).</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#equal(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">equal</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;x,
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#endsWith(java.lang.String)" class="member-name-link">endsWith</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;suffix)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+ends with the given suffix.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#equal(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">equal</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;x,
  <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;y)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Create a predicate for testing the arguments for equality.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#equal(jakarta.persistence.criteria.Expression,java.lang.Object)" class="member-name-link">equal</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;x,
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#equal(jakarta.persistence.criteria.Expression,java.lang.Object)" class="member-name-link">equal</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;x,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;y)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last odd-row-color">
 <div class="block">Create a predicate for testing the arguments for equality.</div>
 </div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#equalTo(jakarta.persistence.criteria.Expression)" class="member-name-link">equalTo</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;value)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate to test whether the expression is equal to
+the argument.</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#equalTo(jakarta.persistence.criteria.Expression)" class="member-name-link">equalTo</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;value)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#equalTo(java.lang.Object)" class="member-name-link">equalTo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Create a predicate to test whether the expression is equal to
 the argument.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#equalTo(java.lang.Object)" class="member-name-link">equalTo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#exists(jakarta.persistence.criteria.Subquery)" class="member-name-link">exists</a><wbr>(<a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;?&gt;&nbsp;subquery)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Create a predicate to test whether the expression is equal to
-the argument.</div>
+<div class="block">Create a predicate testing the existence of a subquery result.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#exists(jakarta.persistence.criteria.Subquery)" class="member-name-link">exists</a><wbr>(<a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;?&gt;&nbsp;subquery)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#exists()" class="member-name-link">exists</a>()</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Create a predicate testing the existence of a subquery result.</div>
+<div class="block">Create a predicate testing the existence of this subquery result.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#ge(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">ge</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;x,
@@ -171,6 +219,18 @@ greater than or equal to the second.</div>
 <div class="col-last odd-row-color">
 <div class="block">Create a predicate for testing whether the first argument is 
 greater than or equal to the second.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">NumericExpression.</span><code><a href="../NumericExpression.html#ge(jakarta.persistence.criteria.Expression)" class="member-name-link">ge</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+greater than or equal to the first argument.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">NumericExpression.</span><code><a href="../NumericExpression.html#ge(java.lang.Number)" class="member-name-link">ge</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+greater than or equal to the first argument.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">AbstractQuery.</span><code><a href="../AbstractQuery.html#getGroupRestriction()" class="member-name-link">getGroupRestriction</a>()</code></div>
@@ -193,6 +253,18 @@ has been specified.</div>
 restriction(s), or null if no restrictions have been
 specified.</div>
 </div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#greaterThan(C)" class="member-name-link">greaterThan</a><wbr>(<a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+greater than the first argument.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#greaterThan(jakarta.persistence.criteria.Expression)" class="member-name-link">greaterThan</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+greater than the first argument.</div>
+</div>
 <div class="col-first odd-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#greaterThan(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">greaterThan</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
  <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;y)</code></div>
@@ -206,6 +278,18 @@ greater than the second.</div>
 <div class="col-last even-row-color">
 <div class="block">Create a predicate for testing whether the first argument is 
 greater than the second.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#greaterThanOrEqualTo(C)" class="member-name-link">greaterThanOrEqualTo</a><wbr>(<a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+greater than or equal to the first argument.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#greaterThanOrEqualTo(jakarta.persistence.criteria.Expression)" class="member-name-link">greaterThanOrEqualTo</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+greater than or equal to the first argument.</div>
 </div>
 <div class="col-first odd-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#greaterThanOrEqualTo(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">greaterThanOrEqualTo</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
@@ -236,6 +320,18 @@ greater than the second.</div>
 greater than the second.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">NumericExpression.</span><code><a href="../NumericExpression.html#gt(jakarta.persistence.criteria.Expression)" class="member-name-link">gt</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+greater than the first argument.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">NumericExpression.</span><code><a href="../NumericExpression.html#gt(java.lang.Number)" class="member-name-link">gt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+greater than the first argument.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#in(jakarta.persistence.criteria.Expression...)" class="member-name-link">in</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;values)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Create a predicate to test whether the expression is a member
@@ -248,21 +344,32 @@ of the argument list.</div>
 of the collection.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#in(java.lang.Object...)" class="member-name-link">in</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;values)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#in(jakarta.persistence.criteria.Subquery)" class="member-name-link">in</a><wbr>(<a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="../Expression.html#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;subquery)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Create a predicate to test whether the expression is returned
+by the subquery.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#in(java.lang.Object...)" class="member-name-link">in</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;values)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create a predicate to test whether the expression is a member
 of the argument list.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#in(java.util.Collection)" class="member-name-link">in</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&nbsp;values)</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#in(java.util.Collection)" class="member-name-link">in</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&nbsp;values)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Create a predicate to test whether the expression is a member
 of the collection.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isEmpty(jakarta.persistence.criteria.Expression)" class="member-name-link">isEmpty</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;C&gt;&nbsp;collection)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>&lt;C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isEmpty(jakarta.persistence.criteria.Expression)" class="member-name-link">isEmpty</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;C&gt;&nbsp;collection)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create a predicate that tests whether a collection is empty.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">PluralExpression.</span><code><a href="../PluralExpression.html#isEmpty()" class="member-name-link">isEmpty</a>()</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate that tests whether this collection is empty.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isFalse(jakarta.persistence.criteria.Expression)" class="member-name-link">isFalse</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;x)</code></div>
@@ -283,10 +390,22 @@ a member of a collection.</div>
 <div class="block">Create a predicate that tests whether an element is
 a member of a collection.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isNotEmpty(jakarta.persistence.criteria.Expression)" class="member-name-link">isNotEmpty</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;C&gt;&nbsp;collection)</code></div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#isMember(jakarta.persistence.criteria.Expression)" class="member-name-link">isMember</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="../Expression.html#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Create a predicate that tests whether this expression is
+a member of a collection.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isNotEmpty(jakarta.persistence.criteria.Expression)" class="member-name-link">isNotEmpty</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;C&gt;&nbsp;collection)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create a predicate that tests whether a collection is
+not empty.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">PluralExpression.</span><code><a href="../PluralExpression.html#isNotEmpty()" class="member-name-link">isNotEmpty</a>()</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate that tests whether this collection is
 not empty.</div>
 </div>
 <div class="col-first even-row-color"><code>&lt;E, C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;E&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
@@ -304,132 +423,231 @@ not a member of a collection.</div>
 not a member of a collection.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isNotNull(jakarta.persistence.criteria.Expression)" class="member-name-link">isNotNull</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;x)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" class="member-name-link">isNotMember</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="../Expression.html#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Create a predicate to test whether the expression is not null.</div>
+<div class="block">Create a predicate that tests whether this expression is
+not a member of a collection.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#isNotNull()" class="member-name-link">isNotNull</a>()</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isNotNull(jakarta.persistence.criteria.Expression)" class="member-name-link">isNotNull</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;x)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Create a predicate to test whether the expression is not null.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#isNotNull()" class="member-name-link">isNotNull</a>()</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create a predicate to test whether the expression is 
 not null.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isNull(jakarta.persistence.criteria.Expression)" class="member-name-link">isNull</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;x)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Create a predicate to test whether the expression is null.</div>
-</div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#isNull()" class="member-name-link">isNull</a>()</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isNull(jakarta.persistence.criteria.Expression)" class="member-name-link">isNull</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;x)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Create a predicate to test whether the expression is null.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isTrue(jakarta.persistence.criteria.Expression)" class="member-name-link">isTrue</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;x)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Expression.</span><code><a href="../Expression.html#isNull()" class="member-name-link">isNull</a>()</code></div>
 <div class="col-last even-row-color">
+<div class="block">Create a predicate to test whether the expression is null.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#isTrue(jakarta.persistence.criteria.Expression)" class="member-name-link">isTrue</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;x)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Create a predicate testing for a true value.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#le(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">le</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;x,
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#le(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">le</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;x,
  <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether the first argument is 
+less than or equal to the second.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#le(jakarta.persistence.criteria.Expression,java.lang.Number)" class="member-name-link">le</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;x,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;y)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Create a predicate for testing whether the first argument is 
 less than or equal to the second.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#le(jakarta.persistence.criteria.Expression,java.lang.Number)" class="member-name-link">le</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;x,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;y)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">NumericExpression.</span><code><a href="../NumericExpression.html#le(jakarta.persistence.criteria.Expression)" class="member-name-link">le</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;y)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Create a predicate for testing whether the first argument is 
-less than or equal to the second.</div>
-</div>
-<div class="col-first odd-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lessThan(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">lessThan</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;y)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Create a predicate for testing whether the first argument is 
-less than the second.</div>
-</div>
-<div class="col-first even-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lessThan(jakarta.persistence.criteria.Expression,Y)" class="member-name-link">lessThan</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
- Y&nbsp;y)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Create a predicate for testing whether the first argument is 
-less than the second.</div>
-</div>
-<div class="col-first odd-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lessThanOrEqualTo(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">lessThanOrEqualTo</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;y)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Create a predicate for testing whether the first argument is 
-less than or equal to the second.</div>
-</div>
-<div class="col-first even-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lessThanOrEqualTo(jakarta.persistence.criteria.Expression,Y)" class="member-name-link">lessThanOrEqualTo</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
- Y&nbsp;y)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Create a predicate for testing whether the first argument is 
-less than or equal to the second.</div>
+<div class="block">Create a predicate for testing whether this expression is
+less than or equal to the first argument.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
+<div class="col-second odd-row-color"><span class="type-name-label">NumericExpression.</span><code><a href="../NumericExpression.html#le(java.lang.Number)" class="member-name-link">le</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+less than or equal to the first argument.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#lessThan(C)" class="member-name-link">lessThan</a><wbr>(<a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+less than the first argument.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#lessThan(jakarta.persistence.criteria.Expression)" class="member-name-link">lessThan</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&gt;&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+less than the first argument.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lessThan(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">lessThan</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether the first argument is 
+less than the second.</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lessThan(jakarta.persistence.criteria.Expression,Y)" class="member-name-link">lessThan</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
+ Y&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether the first argument is 
+less than the second.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#lessThanOrEqualTo(C)" class="member-name-link">lessThanOrEqualTo</a><wbr>(<a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+less than or equal to the first argument.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">ComparableExpression.</span><code><a href="../ComparableExpression.html#lessThanOrEqualTo(jakarta.persistence.criteria.Expression)" class="member-name-link">lessThanOrEqualTo</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../ComparableExpression.html#type-param-C" title="type parameter in ComparableExpression">C</a>&gt;&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+less than or equal to the first argument.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lessThanOrEqualTo(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">lessThanOrEqualTo</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether the first argument is 
+less than or equal to the second.</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;Y extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super Y&gt;&gt;<br><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lessThanOrEqualTo(jakarta.persistence.criteria.Expression,Y)" class="member-name-link">lessThanOrEqualTo</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;x,
+ Y&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether the first argument is 
+less than or equal to the second.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
  <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Create a predicate for testing whether the expression
-satisfies the given pattern.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression,char)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern,
- char&nbsp;escapeChar)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Create a predicate for testing whether the expression
 satisfies the given pattern.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression,char)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
  <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html" title="class or interface in java.lang" class="external-link">Character</a>&gt;&nbsp;escapeChar)</code></div>
+ char&nbsp;escapeChar)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Create a predicate for testing whether the expression
 satisfies the given pattern.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,java.lang.String)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html" title="class or interface in java.lang" class="external-link">Character</a>&gt;&nbsp;escapeChar)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether the expression
+satisfies the given pattern.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,java.lang.String)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last odd-row-color">
 <div class="block">Create a predicate for testing whether the expression
 satisfies the given pattern.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,java.lang.String,char)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,java.lang.String,char)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern,
  char&nbsp;escapeChar)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Create a predicate for testing whether the expression
-satisfies the given pattern.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,java.lang.String,jakarta.persistence.criteria.Expression)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html" title="class or interface in java.lang" class="external-link">Character</a>&gt;&nbsp;escapeChar)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Create a predicate for testing whether the expression
 satisfies the given pattern.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lt(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">lt</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;x,
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#like(jakarta.persistence.criteria.Expression,java.lang.String,jakarta.persistence.criteria.Expression)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;x,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html" title="class or interface in java.lang" class="external-link">Character</a>&gt;&nbsp;escapeChar)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether the expression
+satisfies the given pattern.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#like(jakarta.persistence.criteria.Expression)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression
+satisfies the given pattern.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#like(jakarta.persistence.criteria.Expression,char)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern,
+ char&nbsp;escapeChar)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+satisfies the given pattern.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#like(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">like</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html" title="class or interface in java.lang" class="external-link">Character</a>&gt;&nbsp;escapeChar)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression
+satisfies the given pattern.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#like(java.lang.String)" class="member-name-link">like</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+satisfies the given pattern.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#like(java.lang.String,char)" class="member-name-link">like</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern,
+ char&nbsp;escapeChar)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression
+satisfies the given pattern.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#like(java.lang.String,jakarta.persistence.criteria.Expression)" class="member-name-link">like</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html" title="class or interface in java.lang" class="external-link">Character</a>&gt;&nbsp;escapeChar)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+satisfies the given pattern.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lt(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">lt</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;x,
  <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether the first argument is 
+less than the second.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lt(jakarta.persistence.criteria.Expression,java.lang.Number)" class="member-name-link">lt</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;x,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;y)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Create a predicate for testing whether the first argument is 
 less than the second.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#lt(jakarta.persistence.criteria.Expression,java.lang.Number)" class="member-name-link">lt</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;x,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;y)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">NumericExpression.</span><code><a href="../NumericExpression.html#lt(jakarta.persistence.criteria.Expression)" class="member-name-link">lt</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&gt;&nbsp;y)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Create a predicate for testing whether the first argument is 
-less than the second.</div>
+<div class="block">Create a predicate for testing whether this expression is
+less than the first argument.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">NumericExpression.</span><code><a href="../NumericExpression.html#lt(java.lang.Number)" class="member-name-link">lt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;y)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression is
+less than the first argument.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">BooleanExpression.</span><code><a href="../BooleanExpression.html#not()" class="member-name-link">not</a>()</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a negation of this restriction.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#not(jakarta.persistence.criteria.Expression)" class="member-name-link">not</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
@@ -440,6 +658,30 @@ less than the second.</div>
 <div class="col-second even-row-color"><span class="type-name-label">Predicate.</span><code><a href="../Predicate.html#not()" class="member-name-link">not</a>()</code></div>
 <div class="col-last even-row-color">
 <div class="block">Create a negation of the predicate.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">PluralExpression.</span><code><a href="../PluralExpression.html#notContains(E)" class="member-name-link">notContains</a><wbr>(<a href="../PluralExpression.html#type-param-E" title="type parameter in PluralExpression">E</a>&nbsp;elem)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate that tests whether an element is
+not a member of this collection.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">PluralExpression.</span><code><a href="../PluralExpression.html#notContains(jakarta.persistence.criteria.Expression)" class="member-name-link">notContains</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../PluralExpression.html#type-param-E" title="type parameter in PluralExpression">E</a>&gt;&nbsp;elem)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate that tests whether an element is
+not a member of this collection.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#notContains(java.lang.String)" class="member-name-link">notContains</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;substring)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+does not contain the given substring.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#notEndsWith(java.lang.String)" class="member-name-link">notEndsWith</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;suffix)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression
+does not end with the given suffix.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#notEqual(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">notEqual</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;x,
@@ -512,174 +754,77 @@ does not satisfy the given pattern.</div>
 does not satisfy the given pattern.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#or(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">or</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;x,
- <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;y)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#notLike(jakarta.persistence.criteria.Expression)" class="member-name-link">notLike</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+does not satisfy the given pattern.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#notLike(jakarta.persistence.criteria.Expression,char)" class="member-name-link">notLike</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern,
+ char&nbsp;escapeChar)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression
+does not satisfy the given pattern.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#notLike(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">notLike</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;pattern,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html" title="class or interface in java.lang" class="external-link">Character</a>&gt;&nbsp;escapeChar)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+does not satisfy the given pattern.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#notLike(java.lang.String)" class="member-name-link">notLike</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression
+does not satisfy the given pattern.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#notLike(java.lang.String,char)" class="member-name-link">notLike</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern,
+ char&nbsp;escapeChar)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+does not satisfy the given pattern.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#notLike(java.lang.String,jakarta.persistence.criteria.Expression)" class="member-name-link">notLike</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pattern,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html" title="class or interface in java.lang" class="external-link">Character</a>&gt;&nbsp;escapeChar)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a predicate for testing whether this expression
+does not satisfy the given pattern.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#notStartsWith(java.lang.String)" class="member-name-link">notStartsWith</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;prefix)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a predicate for testing whether this expression
+does not start with the given prefix.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">BooleanExpression.</span><code><a href="../BooleanExpression.html#or(jakarta.persistence.criteria.Expression)" class="member-name-link">or</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a disjunction of this and the given boolean expressions.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#or(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">or</a><wbr>(<a href="../BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a disjunction of the given restriction predicates.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#or(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">or</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;x,
+ <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create a disjunction of the given boolean expressions.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#or(jakarta.persistence.criteria.Predicate...)" class="member-name-link">or</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Create a disjunction of the given restriction predicates.</div>
-</div>
 <div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#or(java.util.List)" class="member-name-link">or</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#or(java.util.List)" class="member-name-link">or</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Create a disjunction of the given restriction predicates.</div>
 </div>
-</div>
-<div class="caption"><span>Methods in <a href="../package-summary.html">jakarta.persistence.criteria</a> with parameters of type <a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Method</div>
-<div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#and(jakarta.persistence.criteria.Predicate...)" class="member-name-link">and</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TextExpression.</span><code><a href="../TextExpression.html#startsWith(java.lang.String)" class="member-name-link">startsWith</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;prefix)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Create a conjunction of the given restriction predicates.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="../AbstractQuery.html#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">AbstractQuery.</span><code><a href="../AbstractQuery.html#having(jakarta.persistence.criteria.Predicate...)" class="member-name-link">having</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Specify restrictions over the groups of the query
-according the conjunction of the specified restriction 
-predicates.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a><wbr>&lt;<a href="../CriteriaQuery.html#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaQuery.</span><code><a href="../CriteriaQuery.html#having(jakarta.persistence.criteria.Predicate...)" class="member-name-link">having</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Specify restrictions over the groups of the query
-according the conjunction of the specified restriction 
-predicates.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#having(jakarta.persistence.criteria.Predicate...)" class="member-name-link">having</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Specify restrictions over the groups of the subquery
-according the conjunction of the specified restriction 
-predicates.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a><wbr>&lt;<a href="../CollectionJoin.html#type-param-Z" title="type parameter in CollectionJoin">Z</a>,<wbr><a href="../CollectionJoin.html#type-param-E" title="type parameter in CollectionJoin">E</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CollectionJoin.</span><code><a href="../CollectionJoin.html#on(jakarta.persistence.criteria.Predicate...)" class="member-name-link">on</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Modify the join to restrict the result according to the
-specified ON condition and return the join object.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../Join.html" title="interface in jakarta.persistence.criteria">Join</a><wbr>&lt;<a href="../Join.html#type-param-Z" title="type parameter in Join">Z</a>,<wbr><a href="../Join.html#type-param-X" title="type parameter in Join">X</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Join.</span><code><a href="../Join.html#on(jakarta.persistence.criteria.Predicate...)" class="member-name-link">on</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Modify the join to restrict the result according to the
-specified ON condition and return the join object.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a><wbr>&lt;<a href="../ListJoin.html#type-param-Z" title="type parameter in ListJoin">Z</a>,<wbr><a href="../ListJoin.html#type-param-E" title="type parameter in ListJoin">E</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">ListJoin.</span><code><a href="../ListJoin.html#on(jakarta.persistence.criteria.Predicate...)" class="member-name-link">on</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Modify the join to restrict the result according to the
-specified ON condition and return the join object.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a><wbr>&lt;<a href="../MapJoin.html#type-param-Z" title="type parameter in MapJoin">Z</a>,<wbr><a href="../MapJoin.html#type-param-K" title="type parameter in MapJoin">K</a>,<wbr><a href="../MapJoin.html#type-param-V" title="type parameter in MapJoin">V</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">MapJoin.</span><code><a href="../MapJoin.html#on(jakarta.persistence.criteria.Predicate...)" class="member-name-link">on</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Modify the join to restrict the result according to the
-specified ON condition and return the join object.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a><wbr>&lt;<a href="../SetJoin.html#type-param-Z" title="type parameter in SetJoin">Z</a>,<wbr><a href="../SetJoin.html#type-param-E" title="type parameter in SetJoin">E</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">SetJoin.</span><code><a href="../SetJoin.html#on(jakarta.persistence.criteria.Predicate...)" class="member-name-link">on</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Modify the join to restrict the result according to the
-specified ON condition and return the join object.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#or(jakarta.persistence.criteria.Predicate...)" class="member-name-link">or</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Create a disjunction of the given restriction predicates.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="../AbstractQuery.html#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">AbstractQuery.</span><code><a href="../AbstractQuery.html#where(jakarta.persistence.criteria.Predicate...)" class="member-name-link">where</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Modify the query to restrict the query results according 
-to the conjunction of the specified restriction predicates.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../CriteriaDelete.html" title="interface in jakarta.persistence.criteria">CriteriaDelete</a><wbr>&lt;<a href="../CriteriaDelete.html#type-param-T" title="type parameter in CriteriaDelete">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaDelete.</span><code><a href="../CriteriaDelete.html#where(jakarta.persistence.criteria.Predicate...)" class="member-name-link">where</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Modify the DELETE query to restrict the target of the deletion
-according to the conjunction of the specified restriction 
-predicates.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a><wbr>&lt;<a href="../CriteriaQuery.html#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaQuery.</span><code><a href="../CriteriaQuery.html#where(jakarta.persistence.criteria.Predicate...)" class="member-name-link">where</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Modify the query to restrict the query result according 
-to the conjunction of the specified restriction predicates.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a><wbr>&lt;<a href="../CriteriaUpdate.html#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaUpdate.</span><code><a href="../CriteriaUpdate.html#where(jakarta.persistence.criteria.Predicate...)" class="member-name-link">where</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Modify the update query to restrict the target of the
-update according to the conjunction of the specified
-restriction predicates.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#where(jakarta.persistence.criteria.Predicate...)" class="member-name-link">where</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Modify the subquery to restrict the result according 
-to the conjunction of the specified restriction predicates.</div>
-</div>
-</div>
-<div class="caption"><span>Method parameters in <a href="../package-summary.html">jakarta.persistence.criteria</a> with type arguments of type <a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Method</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#and(java.util.List)" class="member-name-link">and</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Create a conjunction of the given restriction predicates.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="../AbstractQuery.html#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">AbstractQuery.</span><code><a href="../AbstractQuery.html#having(java.util.List)" class="member-name-link">having</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Specify restrictions over the groups of the query
-according the conjunction of the specified restriction
-predicates.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a><wbr>&lt;<a href="../CriteriaQuery.html#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaQuery.</span><code><a href="../CriteriaQuery.html#having(java.util.List)" class="member-name-link">having</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Specify restrictions over the groups of the query
-according the conjunction of the specified restriction
-predicates.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#having(java.util.List)" class="member-name-link">having</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Specify restrictions over the groups of the query
-according the conjunction of the specified restriction
-predicates.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#or(java.util.List)" class="member-name-link">or</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Create a disjunction of the given restriction predicates.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="../AbstractQuery.html#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">AbstractQuery.</span><code><a href="../AbstractQuery.html#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Modify the query to restrict the query result according
-to the conjunction of the specified restriction predicates.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a><wbr>&lt;<a href="../CriteriaQuery.html#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaQuery.</span><code><a href="../CriteriaQuery.html#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Modify the query to restrict the query result according
-to the conjunction of the specified restriction predicates.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="../Subquery.html#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Subquery.</span><code><a href="../Subquery.html#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Modify the query to restrict the query result according
-to the conjunction of the specified restriction predicates.</div>
+<div class="block">Create a predicate for testing whether this expression
+starts with the given prefix.</div>
 </div>
 </div>
 </section>

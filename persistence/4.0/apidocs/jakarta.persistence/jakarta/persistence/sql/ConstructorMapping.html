@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -61,20 +61,22 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(java.lang.Class,jakarta.persistence.sql.MappingElement%5B%5D)" tabindex="0">ConstructorMapping(Class, MappingElement[])</a></li>
+<li><a href="#%3Cinit%3E(java.lang.Class,jakarta.persistence.sql.MappingElement%5B%5D,java.lang.String)" tabindex="0">ConstructorMapping(Class, MappingElement[], String)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#arguments()" tabindex="0">arguments()</a></li>
 <li><a href="#getJavaType()" tabindex="0">getJavaType()</a></li>
 <li><a href="#getAlias()" tabindex="0">getAlias()</a></li>
+<li><a href="#withAlias(java.lang.String)" tabindex="0">withAlias(String)</a></li>
 <li><a href="#of(java.lang.Class,jakarta.persistence.sql.MappingElement...)" tabindex="0">of(Class, MappingElement...)</a></li>
 <li><a href="#type()" tabindex="0">type()</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
 <li><a href="#targetClass()" tabindex="0">targetClass()</a></li>
-<li><a href="#arguments()" tabindex="0">arguments()</a></li>
+<li><a href="#alias()" tabindex="0">alias()</a></li>
 </ol>
 </li>
 </ol>
@@ -103,7 +105,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ConstructorMapping&lt;T&gt;</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;&nbsp;targetClass, <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;arguments)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ConstructorMapping&lt;T&gt;</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;&nbsp;targetClass, <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;arguments, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;T&gt;, <a href="ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;T&gt;</span></div>
 <div class="block">Maps columns of a JDBC <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ResultSet.html" title="class or interface in java.sql" class="external-link"><code>ResultSet</code></a> to parameters
@@ -130,8 +132,9 @@ of the constructor of a Java class.</div>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.Class,jakarta.persistence.sql.MappingElement%5B%5D)" class="member-name-link">ConstructorMapping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;&nbsp;targetClass,
- <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;arguments)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.Class,jakarta.persistence.sql.MappingElement%5B%5D,java.lang.String)" class="member-name-link">ConstructorMapping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;&nbsp;targetClass,
+ <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;arguments,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>ConstructorMapping</code> record class.</div>
 </div>
@@ -149,51 +152,63 @@ of the constructor of a Java class.</div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#arguments()" class="member-name-link">arguments</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#alias()" class="member-name-link">alias</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>alias</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#arguments()" class="member-name-link">arguments</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-arguments"><code>arguments</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAlias()" class="member-name-link">getAlias</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Always returns <code>null</code>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaType()" class="member-name-link">getJavaType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAlias()" class="member-name-link">getAlias</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the alias specified via <a href="#withAlias(java.lang.String)"><code>withAlias(String)</code></a>,
+which may be used to retrieve a constructed value using
+<a href="../Tuple.html#get(java.lang.String,java.lang.Class)"><code>Tuple.get(String, Class)</code></a></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaType()" class="member-name-link">getJavaType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The Java class which declares the constructor.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;<a href="ConstructorMapping.html" title="class in jakarta.persistence.sql">ConstructorMapping</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.Class,jakarta.persistence.sql.MappingElement...)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;targetClass,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;<a href="ConstructorMapping.html" title="class in jakarta.persistence.sql">ConstructorMapping</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.Class,jakarta.persistence.sql.MappingElement...)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;targetClass,
  <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;...&nbsp;arguments)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Construct a new instance.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetClass()" class="member-name-link">targetClass</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetClass()" class="member-name-link">targetClass</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-targetClass"><code>targetClass</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The Java class which declares the constructor.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ConstructorMapping.html" title="class in jakarta.persistence.sql">ConstructorMapping</a><wbr>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAlias(java.lang.String)" class="member-name-link">withAlias</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Specify an alias for this constructor result in the result set.</div>
 </div>
 </div>
 </div>
@@ -213,16 +228,18 @@ of the constructor of a Java class.</div>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.Class,jakarta.persistence.sql.MappingElement[])">
+<section class="detail" id="&lt;init&gt;(java.lang.Class,jakarta.persistence.sql.MappingElement[],java.lang.String)">
 <h3>ConstructorMapping</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ConstructorMapping</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;&nbsp;targetClass,
- <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;arguments)</span></div>
+ <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;arguments,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</span></div>
 <div class="block">Creates an instance of a <code>ConstructorMapping</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targetClass</code> - the value for the <a href="#param-targetClass"><code>targetClass</code></a> record component</dd>
 <dd><code>arguments</code> - the value for the <a href="#param-arguments"><code>arguments</code></a> record component</dd>
+<dd><code>alias</code> - the value for the <code>alias</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -235,6 +252,19 @@ of the constructor of a Java class.</div>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="arguments()">
+<h3>arguments</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]</span>&nbsp;<span class="element-name">arguments</span>()</div>
+<div class="block">Returns the value of the <a href="#param-arguments"><code>arguments</code></a> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <a href="#param-arguments"><code>arguments</code></a> record component</dd>
+</dl>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="getJavaType()">
 <h3>getJavaType</h3>
@@ -255,12 +285,29 @@ of the constructor of a Java class.</div>
 <h3>getAlias</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAlias</span>()</div>
-<div class="block">Always returns <code>null</code>.</div>
+<div class="block">Return the alias specified via <a href="#withAlias(java.lang.String)"><code>withAlias(String)</code></a>,
+which may be used to retrieve a constructed value using
+<a href="../Tuple.html#get(java.lang.String,java.lang.Class)"><code>Tuple.get(String, Class)</code></a></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../TupleElement.html#getAlias()">getAlias</a></code>&nbsp;in interface&nbsp;<code><a href="../TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</code></dd>
 <dt>Returns:</dt>
-<dd>alias</dd>
+<dd>the explicitly specified alias or <code>null</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withAlias(java.lang.String)">
+<h3>withAlias</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ConstructorMapping.html" title="class in jakarta.persistence.sql">ConstructorMapping</a>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</span>&nbsp;<span class="element-name">withAlias</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</span></div>
+<div class="block">Specify an alias for this constructor result in the result set.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MappingElement.html#withAlias(java.lang.String)">withAlias</a></code>&nbsp;in interface&nbsp;<code><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;<a href="#type-param-T" title="type parameter in ConstructorMapping">T</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>alias</code> - The alias</dd>
 </dl>
 </div>
 </section>
@@ -356,14 +403,14 @@ of the constructor of a Java class.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="arguments()">
-<h3>arguments</h3>
+<section class="detail" id="alias()">
+<h3>alias</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]</span>&nbsp;<span class="element-name">arguments</span>()</div>
-<div class="block">Returns the value of the <a href="#param-arguments"><code>arguments</code></a> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">alias</span>()</div>
+<div class="block">Returns the value of the <code>alias</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <a href="#param-arguments"><code>arguments</code></a> record component</dd>
+<dd>the value of the <code>alias</code> record component</dd>
 </dl>
 </div>
 </section>

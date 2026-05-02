@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#annotation-interface-optional-element-summary" tabindex="0">Optional Element Summary</a></li>
 <li><a href="#annotation-interface-element-detail" tabindex="0">Element Details</a>
 <ol class="toc-list">
@@ -85,9 +86,11 @@ loadScripts(document, 'script');</script>
 of a named entity graph. This annotation must be applied to the root
 entity of the graph or subgraph.
 
-<p> The <a href="AttributeNode.html" title="interface in jakarta.persistence">nodes</a> and <a href="Subgraph.html" title="interface in jakarta.persistence">subgraphs</a> of an entity graph control the limits of the graph of
-associated attributes and entities fetched when an operation which
-retrieves an instance or instances of the root entity is executed.
+<p> The <a href="AttributeNode.html" title="interface in jakarta.persistence">nodes</a> and
+<a href="Subgraph.html" title="interface in jakarta.persistence">subgraphs</a> of an entity
+graph control the limits of the graph of associated attributes and
+entities fetched when an operation which retrieves an instance or
+instances of the root entity is executed.
 
 <p> A well-defined entity graph is a tree. The application program
 is responsible for ensuring that every named entity graph is acyclic.
@@ -100,11 +103,10 @@ Portable applications must avoid relying on such behavior.
 <p> There are two ways to specify the nodes and subgraphs of a named
 entity graph defined in annotations:
 <ul>
-<li>By annotating persistent attributes of the entity class with
-    <a href="NamedEntityGraphAttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphAttributeNode</code></a> and
-    <a href="NamedEntityGraphSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphSubgraph</code></a> annotations which reference
-    the containing <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a> by name.
-<li>By nesting <a href="NamedAttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedAttributeNode</code></a> and <a href="NamedSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedSubgraph</code></a>
+<li>by annotating persistent attributes of the entity class with
+    <a href="NamedEntityGraph.AttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.AttributeNode</code></a> and <a href="NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.Subgraph</code></a> annotations which
+    reference the containing <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a> by name, or
+<li>by nesting <a href="NamedAttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedAttributeNode</code></a> and <a href="NamedSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedSubgraph</code></a>
     annotations within the <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a> annotation.
 </ul>
 <p> The two approaches may be mixed within the same entity graph
@@ -118,11 +120,11 @@ is distributed across the entity class and its associated classes.
 public class Employee {
     ...
     // fetched attribute node
-    @NamedEntityGraphAttributeNode(graph = "EmployeeWithProjectTasksAndEmployer")
+    @NamedEntityGraph.AttributeNode(graph = "EmployeeWithProjectTasksAndEmployer")
     @ManyToOne(fetch=LAZY) Employer employer;
 
     // reference to subgraph defined in Project class
-    @NamedEntityGraphSubgraph(graph = "EmployeeWithProjectTasksAndEmployer")
+    @NamedEntityGraph.Subgraph(graph = "EmployeeWithProjectTasksAndEmployer")
     @ManyToMany Set&lt;Project&gt; projects;
 }
 
@@ -131,23 +133,22 @@ public class Employee {
 public class Project {
     ...
     // reference to subgraph defined in Task class
-    @NamedEntityGraphSubgraph(graph = "EmployeeWithProjectTasksAndEmployer")
+    @NamedEntityGraph.Subgraph(graph = "EmployeeWithProjectTasksAndEmployer")
     @OneToMany List&lt;Task&gt; tasks;
 }
 </code></pre>
 </div>
 
 
-<p> When <a href="NamedEntityGraphSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphSubgraph</code></a> is used, there might be
-multiple entity classes with <code>NamedEntityGraph</code> annotations
-specifying identical values for the <code>name</code> member. In this
-scenario, the root entity of the named graph is identified by it
-being the unique entity class that is not referenced by the
-<code>subgraph</code> member of any <a href="NamedEntityGraphSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphSubgraph</code></a>
-annotation belonging to the named graph. If there is no such entity
-class, or if it is not unique, the behavior is undefined. An
-application must ensure that each named entity graph has a unique
-root entity.
+<p> When <a href="NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.Subgraph</code></a> is used, there might be multiple entity
+classes with <code>NamedEntityGraph</code> annotations specifying
+identical values for the <code>name</code> member. In this scenario,
+the root entity of the named graph is identified by it being the
+unique entity class that is not referenced by the <code>subgraph</code>
+member of any <a href="NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.Subgraph</code></a> annotation belonging to the named
+graph. If there is no such entity class, or if it is not unique,
+the behavior is undefined. An application must ensure that each
+named entity graph has a unique root entity.
 
 <p> In the second approach, the definition of the named entity graph
 is contained entirely within the <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a> annotation.
@@ -189,7 +190,8 @@ public class Employee { ... }
 <p> A named entity graph defined using annotations is reified at
 runtime as an instance of <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>, and its child
 nodes and subgraphs are reified respectively as instances of
-<a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> and <a href="Subgraph.html" title="interface in jakarta.persistence"><code>Subgraph</code></a>.
+<a href="AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a> and
+<a href="Subgraph.html" title="interface in jakarta.persistence"><code>Subgraph</code></a>.
 
 <p> A reference to a named entity graph may be obtained by
 calling <a href="EntityManagerFactory.html#getNamedEntityGraphs(java.lang.Class)"><code>EntityManagerFactory.getNamedEntityGraphs(Class)</code></a>
@@ -230,8 +232,6 @@ from the static metamodel.
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list">
-<li><a href="NamedEntityGraphAttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphAttributeNode</code></a></li>
-<li><a href="NamedEntityGraphSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphSubgraph</code></a></li>
 <li><a href="NamedAttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedAttributeNode</code></a></li>
 <li><a href="NamedSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedSubgraph</code></a></li>
 <li><a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a></li>
@@ -242,6 +242,41 @@ from the static metamodel.
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static @interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="NamedEntityGraph.AttributeNode.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNode</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Declares that the annotated attribute is an attribute
+node in a <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity graph</a>.</div>
+</div>
+<div class="col-first odd-row-color"><code>static @interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="NamedEntityGraph.AttributeNodes.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNodes</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Groups <a href="NamedEntityGraph.AttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.AttributeNode</code></a> annotations.</div>
+</div>
+<div class="col-first even-row-color"><code>static @interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="NamedEntityGraph.Subgraph.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraph</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Declares that the annotated association is the root of a
+subgraph of a <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity
+graph</a>.</div>
+</div>
+<div class="col-first odd-row-color"><code>static @interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="NamedEntityGraph.Subgraphs.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraphs</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Groups <a href="NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.Subgraph</code></a> annotations.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- =========== ANNOTATION INTERFACE OPTIONAL MEMBER SUMMARY =========== -->
 <li>
 <section class="member-summary" id="annotation-interface-optional-element-summary">
@@ -274,8 +309,8 @@ without the need to explicitly list them.</div>
 <div class="col-second odd-row-color"><code><a href="#subclassSubgraphs()" class="member-name-link">subclassSubgraphs</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">(Optional) A list of subgraphs that will add additional
-attributes for subclasses of the annotated entity class to the
-entity graph.</div>
+attributes for subclasses of the annotated entity class to
+the entity graph.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="NamedSubgraph.html" title="annotation interface in jakarta.persistence">NamedSubgraph</a>[]</code></div>
 <div class="col-second even-row-color"><code><a href="#subgraphs()" class="member-name-link">subgraphs</a></code></div>
@@ -307,7 +342,7 @@ entity.
 <p>Entity graph names must be unique within a given persistence unit.
 If two <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>@NamedEntityGraph</code></a> annotations declare
 the same name, then one must be a subgraph of the other, as specified
-via the <a href="NamedEntityGraphSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphSubgraph</code></a> annotations.</div>
+via the <a href="NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.Subgraph</code></a> annotations.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>""</code></dd>
@@ -324,7 +359,7 @@ via the <a href="NamedEntityGraphSubgraph.html" title="annotation interface in j
 this graph.</div>
 <dl class="notes">
 <dt>API note:</dt>
-<dd>Alternatively, use <a href="NamedEntityGraphAttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphAttributeNode</code></a></dd>
+<dd>Alternatively, use <a href="NamedEntityGraph.AttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.AttributeNode</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -366,7 +401,7 @@ entity graph. These are referenced by name from
 </ul>
 </dd>
 <dt>API note:</dt>
-<dd>Alternatively, use <a href="NamedEntityGraphSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraphSubgraph</code></a></dd>
+<dd>Alternatively, use <a href="NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.Subgraph</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -381,9 +416,9 @@ entity graph. These are referenced by name from
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="NamedSubgraph.html" title="annotation interface in jakarta.persistence">NamedSubgraph</a>[]</span>&nbsp;<span class="element-name">subclassSubgraphs</span></div>
 <div class="block">(Optional) A list of subgraphs that will add additional
-attributes for subclasses of the annotated entity class to the
-entity graph. Specified attributes from superclasses are
-included in subclasses.</div>
+attributes for subclasses of the annotated entity class to
+the entity graph. Specified attributes from superclasses
+are included in subclasses.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>

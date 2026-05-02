@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;, <a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;, <a href="../TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</code></dd>
+<dd><code><a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>, <a href="ComparableExpression.html" title="interface in jakarta.persistence.criteria">ComparableExpression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;, <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;, <a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;, <a href="../TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Predicate</span><span class="extends-implements">
-extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span></div>
+extends <a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a></span></div>
 <div class="block">The type of a simple or compound predicate: a conjunction or
 disjunction of restrictions.
 A simple predicate is considered to be a conjunction with a
@@ -152,8 +152,14 @@ or by calling <a href="CriteriaBuilder.html#not(jakarta.persistence.criteria.Exp
 </div>
 </div>
 <div class="inherited-list">
+<h3 id="methods-inherited-from-class-jakarta.persistence.criteria.BooleanExpression">Methods inherited from interface&nbsp;<a href="BooleanExpression.html#method-summary" title="interface in jakarta.persistence.criteria">BooleanExpression</a></h3>
+<code><a href="BooleanExpression.html#and(jakarta.persistence.criteria.Expression)" title="and(Expression)">and</a>, <a href="BooleanExpression.html#coalesce(jakarta.persistence.criteria.Expression)" title="coalesce(Expression)">coalesce</a>, <a href="BooleanExpression.html#coalesce(java.lang.Boolean)" title="coalesce(Boolean)">coalesce</a>, <a href="BooleanExpression.html#nullif(jakarta.persistence.criteria.Expression)" title="nullif(Expression)">nullif</a>, <a href="BooleanExpression.html#nullif(java.lang.Boolean)" title="nullif(Boolean)">nullif</a>, <a href="BooleanExpression.html#or(jakarta.persistence.criteria.Expression)" title="or(Expression)">or</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-jakarta.persistence.criteria.ComparableExpression">Methods inherited from interface&nbsp;<a href="ComparableExpression.html#method-summary" title="interface in jakarta.persistence.criteria">ComparableExpression</a></h3>
+<code><a href="ComparableExpression.html#asc()" title="asc()">asc</a>, <a href="ComparableExpression.html#asc(jakarta.persistence.criteria.Nulls)" title="asc(Nulls)">asc</a>, <a href="ComparableExpression.html#between(C,C)" title="between(Boolean, Boolean)">between</a>, <a href="ComparableExpression.html#between(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" title="between(Expression, Expression)">between</a>, <a href="ComparableExpression.html#desc()" title="desc()">desc</a>, <a href="ComparableExpression.html#desc(jakarta.persistence.criteria.Nulls)" title="desc(Nulls)">desc</a>, <a href="ComparableExpression.html#greaterThan(C)" title="greaterThan(Boolean)">greaterThan</a>, <a href="ComparableExpression.html#greaterThan(jakarta.persistence.criteria.Expression)" title="greaterThan(Expression)">greaterThan</a>, <a href="ComparableExpression.html#greaterThanOrEqualTo(C)" title="greaterThanOrEqualTo(Boolean)">greaterThanOrEqualTo</a>, <a href="ComparableExpression.html#greaterThanOrEqualTo(jakarta.persistence.criteria.Expression)" title="greaterThanOrEqualTo(Expression)">greaterThanOrEqualTo</a>, <a href="ComparableExpression.html#lessThan(C)" title="lessThan(Boolean)">lessThan</a>, <a href="ComparableExpression.html#lessThan(jakarta.persistence.criteria.Expression)" title="lessThan(Expression)">lessThan</a>, <a href="ComparableExpression.html#lessThanOrEqualTo(C)" title="lessThanOrEqualTo(Boolean)">lessThanOrEqualTo</a>, <a href="ComparableExpression.html#lessThanOrEqualTo(jakarta.persistence.criteria.Expression)" title="lessThanOrEqualTo(Expression)">lessThanOrEqualTo</a>, <a href="ComparableExpression.html#max()" title="max()">max</a>, <a href="ComparableExpression.html#min()" title="min()">min</a></code></div>
+<div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Expression">Methods inherited from interface&nbsp;<a href="Expression.html#method-summary" title="interface in jakarta.persistence.criteria">Expression</a></h3>
-<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a></code></div>
+<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#selectCase()" title="selectCase()">selectCase</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Selection">Methods inherited from interface&nbsp;<a href="Selection.html#method-summary" title="interface in jakarta.persistence.criteria">Selection</a></h3>
 <code><a href="Selection.html#alias(java.lang.String)" title="alias(String)">alias</a>, <a href="Selection.html#getCompoundSelectionItems()" title="getCompoundSelectionItems()">getCompoundSelectionItems</a>, <a href="Selection.html#isCompoundSelection()" title="isCompoundSelection()">isCompoundSelection</a></code></div>
@@ -224,8 +230,16 @@ Modifications to the list do not affect the query.</div>
 <div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">not</span>()</div>
 <div class="block">Create a negation of the predicate.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="BooleanExpression.html#not()">not</a></code>&nbsp;in interface&nbsp;<code><a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a></code></dd>
 <dt>Returns:</dt>
 <dd>negated predicate</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list-long">
+<li><a href="CriteriaBuilder.html#not(jakarta.persistence.criteria.Expression)"><code>CriteriaBuilder.not(Expression)</code></a></li>
+</ul>
+</dd>
 </dl>
 </div>
 </section>

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -79,8 +79,23 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>&lt;T&gt;&nbsp;<a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a><wbr>&lt;T&gt;</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#createCriteriaUpdate(java.lang.Class)" class="member-name-link">createCriteriaUpdate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;targetEntity)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Create a <a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria"><code>CriteriaUpdate</code></a> query object to perform a
-bulk update operation.</div>
+<div class="block">Create a <a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria"><code>CriteriaUpdate</code></a> object to perform a bulk
+update operation.</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;T&gt;&nbsp;<a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#createCriteriaUpdate(java.lang.Class,java.lang.String)" class="member-name-link">createCriteriaUpdate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;targetEntity,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jpql)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Create a <a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria"><code>CriteriaUpdate</code></a> object representing the
+given Jakarta Persistence query language <code>UPDATE</code>
+query with the given target entity type.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#createCriteriaUpdate(java.lang.String)" class="member-name-link">createCriteriaUpdate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jpql)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Create a <a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria"><code>CriteriaUpdate</code></a> object representing the
+given Jakarta Persistence query language <code>UPDATE</code>
+query.</div>
 </div>
 <div class="col-first odd-row-color"><code>&lt;Y&gt;&nbsp;<a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a><wbr>&lt;<a href="../CriteriaUpdate.html#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">CriteriaUpdate.</span><code><a href="../CriteriaUpdate.html#set(jakarta.persistence.criteria.Path,jakarta.persistence.criteria.Expression)" class="member-name-link">set</a><wbr>(<a href="../Path.html" title="interface in jakarta.persistence.criteria">Path</a>&lt;Y&gt;&nbsp;attribute,
@@ -113,17 +128,17 @@ bulk update operation.</div>
 <div class="block">Update the value of the specified attribute.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a><wbr>&lt;<a href="../CriteriaUpdate.html#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaUpdate.</span><code><a href="../CriteriaUpdate.html#where(jakarta.persistence.criteria.Expression)" class="member-name-link">where</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaUpdate.</span><code><a href="../CriteriaUpdate.html#where(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">where</a><wbr>(<a href="../BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Modify the update query to restrict the target of the
-update according to the specified boolean expression.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a><wbr>&lt;<a href="../CriteriaUpdate.html#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaUpdate.</span><code><a href="../CriteriaUpdate.html#where(jakarta.persistence.criteria.Predicate...)" class="member-name-link">where</a><wbr>(<a href="../Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color">
 <div class="block">Modify the update query to restrict the target of the
 update according to the conjunction of the specified
 restriction predicates.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a><wbr>&lt;<a href="../CriteriaUpdate.html#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaUpdate.</span><code><a href="../CriteriaUpdate.html#where(jakarta.persistence.criteria.Expression)" class="member-name-link">where</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Modify the update query to restrict the target of the
+update according to the specified boolean expression.</div>
 </div>
 </div>
 </section>

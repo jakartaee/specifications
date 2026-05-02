@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -75,13 +75,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="../EmbeddedMapping.html" title="class in jakarta.persistence.sql">EmbeddedMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">ResultSetMapping.</span><code><a href="../ResultSetMapping.html#embedded(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">embedded</a><wbr>(<a href="../../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;C,<wbr>T&gt;&nbsp;embedded,
+<div class="col-second even-row-color"><span class="type-name-label">ResultSetMapping.</span><code><a href="../ResultSetMapping.html#embedded(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">embedded</a><wbr>(<a href="../../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super C, T&gt;&nbsp;embedded,
  <a href="../MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Construct a mapping for an embedded object.</div>
 </div>
 <div class="col-first odd-row-color"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="../EmbeddedMapping.html" title="class in jakarta.persistence.sql">EmbeddedMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">ResultSetMapping.</span><code><a href="../ResultSetMapping.html#embedded(java.lang.Class,java.lang.Class,java.lang.String,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">embedded</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;C&gt;&nbsp;container,
+<div class="col-second odd-row-color"><span class="type-name-label">ResultSetMapping.</span><code><a href="../ResultSetMapping.html#embedded(java.lang.Class,java.lang.Class,java.lang.String,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">embedded</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? super C&gt;&nbsp;container,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;embeddableClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="../MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>
@@ -89,13 +89,13 @@ loadScripts(document, 'script');</script>
 <div class="block">Construct a mapping for an embedded object.</div>
 </div>
 <div class="col-first even-row-color"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="../EmbeddedMapping.html" title="class in jakarta.persistence.sql">EmbeddedMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EmbeddedMapping.</span><code><a href="../EmbeddedMapping.html#of(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="../../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;C,<wbr>T&gt;&nbsp;embedded,
+<div class="col-second even-row-color"><span class="type-name-label">EmbeddedMapping.</span><code><a href="../EmbeddedMapping.html#of(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="../../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super C, T&gt;&nbsp;embedded,
  <a href="../MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Construct a new instance.</div>
 </div>
 <div class="col-first odd-row-color"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="../EmbeddedMapping.html" title="class in jakarta.persistence.sql">EmbeddedMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EmbeddedMapping.</span><code><a href="../EmbeddedMapping.html#of(java.lang.Class,java.lang.Class,java.lang.String,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;C&gt;&nbsp;container,
+<div class="col-second odd-row-color"><span class="type-name-label">EmbeddedMapping.</span><code><a href="../EmbeddedMapping.html#of(java.lang.Class,java.lang.Class,java.lang.String,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? super C&gt;&nbsp;container,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;embeddableClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="../MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>

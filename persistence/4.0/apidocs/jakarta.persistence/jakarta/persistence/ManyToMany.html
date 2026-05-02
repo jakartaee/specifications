@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -81,18 +81,66 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">ManyToMany</span></div>
 <div class="block">Specifies a many-valued association with many-to-many multiplicity,
 mapping to an intermediate table called the <em>join table</em>.
+If the target entity class cannot be inferred from the type arguments
+of the declared type of the annotated field or property, then
+<a href="#targetEntity()"><code>targetEntity()</code></a> must be explicitly specified.
 
-<p>Every many-to-many association has two sides, the owning side
-and the non-owning, or inverse, side. The join table is specified
-on the owning side. If the association is bidirectional, either
-side may be designated as the owning side, and the non-owning side
-must use the <a href="#mappedBy()"><code>mappedBy()</code></a> element of the <code>ManyToMany</code>
-annotation to specify the relationship field or property of the
-owning side.
+<p>The optional <a href="JoinTable.html" title="annotation interface in jakarta.persistence"><code>JoinTable</code></a> annotation specifies the mapped join
+table.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.ManyToMany1"><code class="language-java">@ManyToMany
+@JoinTable(name = "BOOK_AUTHOR",
+           joinColumns = @JoinColumn(name = "BOOK_ISBN",
+                                     referencedColumnName = "ISBN"),
+           inverseJoinColumns = @JoinColumn(name = "AUTHOR_SSN",
+                                            referencedColumnName = "SSN"))
+Set&lt;Author&gt; authors;
+</code></pre>
+</div>
 
-<p>The join table for the relationship, if not defaulted, is
-specified on the owning side. The <a href="JoinTable.html" title="annotation interface in jakarta.persistence"><code>JoinTable</code></a> annotation
-specifies a mapping to a database table.
+
+<p>The annotated field or property might represent one side of a
+<em>bidirectional</em> association. Every bidirectional association
+has an <em>owning</em> side and an <em>inverse</em> (alternatively,
+<em>non-owning</em> or <em>unowned</em>) side. Modifications to the
+owning side of an association determine the updates made to the
+relationship in the database. If the inverse side of an association
+is modified without a corresponding modification to the owning side,
+the behavior is undefined. The persistence provider is permitted to
+ignore any modification made only to the inverse side of a
+bidirectional association.
+
+<p>The inverse side of a bidirectional <code>ManyToMany</code> association
+must be a field or property also annotated <code>@ManyToMany</code> of the
+<a href="#targetEntity()">target entity</a>, and the inverse side must
+specify the owning relationship field or property via <a href="#mappedBy()"><code>mappedBy()</code></a>.
+The join table must be specified on the owning side.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.ManyToMany2"><code class="language-java">@Entity
+public class Book {
+    @Id
+    String isbn;
+
+    // owning side
+    @ManyToMany
+    @JoinTable(name = "BOOK_AUTHOR")
+    Set&lt;Author&gt; authors;
+    ...
+}
+
+@Entity
+public class Author {
+    @Id
+    String ssn;
+
+    // inverse (unowned) side
+    @ManyToMany(mappedBy = Book_.AUTHORS)
+    Set&lt;Customer&gt; customers;
+    ...
+}
+</code></pre>
+</div>
+
 
 <p>The <code>ManyToMany</code> annotation may be used within an
 embeddable class contained within an entity class to specify a
@@ -102,59 +150,10 @@ the owner of the relationship, the non-owning side must use the
 <a href="#mappedBy()"><code>mappedBy()</code></a> element of the <code>ManyToMany</code> annotation to
 specify the relationship field or property of the embeddable class.
 The dot (<code>.</code>) notation syntax must be used in the
-<code>mappedBy</code> element to indicate the relationship attribute
+<a href="#mappedBy()"><code>mappedBy()</code></a> element to indicate the relationship attribute
 within the embedded attribute. The value of each identifier used
 with the dot notation is the name of the respective embedded field
-or property.
-
-<p>Example 1:
-<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.ManyToMany1"><code class="language-java">// In Customer class:
-
-@ManyToMany
-@JoinTable(name = "CUST_PHONES")
-public Set&lt;PhoneNumber&gt; getPhones() { return phones; }
-
-// In PhoneNumber class:
-
-@ManyToMany(mappedBy = "phones")
-public Set&lt;Customer&gt; getCustomers() { return customers; }
-</code></pre>
-</div>
-
-
-<p>Example 2:
-<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.ManyToMany2"><code class="language-java">// In Customer class:
-
-@ManyToMany(targetEntity = com.acme.PhoneNumber.class)
-public Set getPhones() { return phones; }
-
-// In PhoneNumber class:
-
-@ManyToMany(targetEntity = com.acme.Customer.class, mappedBy = "phones")
-public Set getCustomers() { return customers; }
-</code></pre>
-</div>
-
-
-<p>Example 3:
-<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.ManyToMany3"><code class="language-java">// In Customer class:
-
-@ManyToMany
-@JoinTable(name = "CUST_PHONE",
-    joinColumns = @JoinColumn(name = "CUST_ID", referencedColumnName = "ID"),
-    inverseJoinColumns = @JoinColumn(name = "PHONE_ID", referencedColumnName = "ID"))
-public Set&lt;PhoneNumber&gt; getPhones() { return phones; }
-
-// In PhoneNumberClass:
-
-@ManyToMany(mappedBy = "phones")
-public Set&lt;Customer&gt; getCustomers() { return customers; }
-</code></pre>
-</div>
-</div>
+or property.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
@@ -193,13 +192,15 @@ loaded or must be eagerly fetched.</div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#mappedBy()" class="member-name-link">mappedBy</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field that owns the relationship.</div>
+<div class="block">The field or property of the target entity that owns
+the relationship and specifies its mapping to the
+database.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;?&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#targetEntity()" class="member-name-link">targetEntity</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">(Optional) The entity class that is the target of the
-association.</div>
+<div class="block">(Optional) The entity class that is the target of
+the association.</div>
 </div>
 </div>
 </section>
@@ -218,13 +219,15 @@ association.</div>
 <h3>targetEntity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;</span>&nbsp;<span class="element-name">targetEntity</span></div>
-<div class="block">(Optional) The entity class that is the target of the
-association. Optional only if the collection-valued
-relationship property is defined using Java generics.
-Must be specified otherwise.
+<div class="block">(Optional) The entity class that is the target of
+the association. Required if the target entity type
+cannot be inferred from the declared type of the
+annotated field or property, for example, if the
+declared type is a raw collection type.
 
-<p> Defaults to the parameterized type of
-the collection when defined using generics.</div>
+<p>Defaults to the type argument of the collection
+type when the declared type of the annotated field
+or property is a non-raw collection type.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>void.class</code></dd>
@@ -240,10 +243,10 @@ the collection when defined using generics.</div>
 <div class="block">(Optional) The operations that must be cascaded to the
 target of the association.
 
-<p> When the target collection is a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>,
+<p>When the target collection is a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>,
 the <code>cascade</code> element applies to the map value.
 
-<p> Defaults to no operations being cascaded.</div>
+<p>By default, no operations are cascaded.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>{}</code></dd>
@@ -279,8 +282,14 @@ loaded or must be eagerly fetched.
 <h3>mappedBy</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">mappedBy</span></div>
-<div class="block">The field that owns the relationship. Required unless 
-the relationship is unidirectional.</div>
+<div class="block">The field or property of the target entity that owns
+the relationship and specifies its mapping to the
+database. This element is only specified on the
+inverse (non-owning) side of the association.
+
+<p>The static metamodel of the target entity may be
+used to obtain a reference to the owning side, for
+example, <code>mappedBy = Book_.AUTHORS</code>.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>""</code></dd>

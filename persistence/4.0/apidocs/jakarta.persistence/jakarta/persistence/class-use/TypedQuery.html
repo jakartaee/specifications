@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -101,72 +101,58 @@ SQL query which produces a result set, returning instances of the
 given result class.</div>
 </div>
 <div class="col-first odd-row-color"><code>&lt;T&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(jakarta.persistence.criteria.CriteriaQuery)" class="member-name-link">createQuery</a><wbr>(<a href="../criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;T&gt;&nbsp;criteriaQuery)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(jakarta.persistence.criteria.CriteriaSelect)" class="member-name-link">createQuery</a><wbr>(<a href="../criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">CriteriaSelect</a>&lt;T&gt;&nbsp;selectQuery)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Create an instance of <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
-<a href="../criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria">criteria query</a>.</div>
-</div>
-<div class="col-first even-row-color"><code>&lt;T&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(jakarta.persistence.criteria.CriteriaSelect)" class="member-name-link">createQuery</a><wbr>(<a href="../criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">CriteriaSelect</a>&lt;T&gt;&nbsp;selectQuery)</code></div>
-<div class="col-last even-row-color">
 <div class="block">Create an instance of <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
 <a href="../criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">criteria select</a>, which may be
-a union or intersection of top-level queries.</div>
+top-level query or a union or intersection of top-level
+queries.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;T&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(jakarta.persistence.TypedQueryReference)" class="member-name-link">createQuery</a><wbr>(<a href="../TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;T&gt;&nbsp;reference)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>&lt;T&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(jakarta.persistence.TypedQueryReference)" class="member-name-link">createQuery</a><wbr>(<a href="../TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;T&gt;&nbsp;reference)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create an instance of <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
 typed named query written in the Jakarta Persistence query
 language or in native SQL.</div>
 </div>
-<div class="col-first even-row-color"><code>&lt;T&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(java.lang.String,jakarta.persistence.EntityGraph)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
+<div class="col-first odd-row-color"><code>&lt;T&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(java.lang.String,jakarta.persistence.EntityGraph)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
  <a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;resultGraph)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last odd-row-color">
 <div class="block">Create an instance of <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing
 a Jakarta Persistence query language <code>SELECT</code>
 statement, specifying an <a href="../EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> which is
 interpreted as a load graph.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;T&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(java.lang.String,java.lang.Class)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
+<div class="col-first even-row-color"><code>&lt;T&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createQuery(java.lang.String,java.lang.Class)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;resultClass)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Create an instance of <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing
 a Jakarta Persistence query language <code>SELECT</code>
 statement and returning instances of the given result
 class.</div>
 </div>
-<div class="col-first even-row-color"><code>&lt;R&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#ofType(java.lang.Class)" class="member-name-link">ofType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>&lt;R&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StatementOrTypedQuery.</span><code><a href="../StatementOrTypedQuery.html#ofType(java.lang.Class)" class="member-name-link">ofType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Obtain a <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given query result type,
 which must be a supertype of the result type of this query.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)" class="member-name-link">setCacheRetrieveMode</a><wbr>(<a href="../CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)" class="member-name-link">setCacheRetrieveMode</a><wbr>(<a href="../CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Set the <a href="../CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieval mode</a>
 in effect during query execution.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)" class="member-name-link">setCacheStoreMode</a><wbr>(<a href="../CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)" class="member-name-link">setCacheStoreMode</a><wbr>(<a href="../CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Set the <a href="../CacheStoreMode.html" title="enum class in jakarta.persistence">cache storage mode</a> in
 effect during query execution.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setConvertedParameter(int,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(int&nbsp;position,
- P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Bind an argument value to a named parameter, explicitly
- specifying an <a href="../AttributeConverter.html" title="interface in jakarta.persistence">attribute
- converter</a> to use.</div>
-</div>
 <div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setConvertedParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setConvertedParameter(int,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(int&nbsp;position,
  P&nbsp;value,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
 <div class="col-last even-row-color">
@@ -174,11 +160,14 @@ effect during query execution.</div>
  specifying an <a href="../AttributeConverter.html" title="interface in jakarta.persistence">attribute
  converter</a> to use.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setEntityGraph(jakarta.persistence.EntityGraph)" class="member-name-link">setEntityGraph</a><wbr>(<a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? super <a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;&nbsp;entityGraph)</code></div>
+<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setConvertedParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Specify an <a href="../EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> to be applied to the entity
-returned by the Jakarta Persistence query.</div>
+<div class="block">Bind an argument value to a named parameter, explicitly
+ specifying an <a href="../AttributeConverter.html" title="interface in jakarta.persistence">attribute
+ converter</a> to use.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setFirstResult(int)" class="member-name-link">setFirstResult</a><wbr>(int&nbsp;startPosition)</code></div>
@@ -189,8 +178,9 @@ the client.</div>
 <div class="col-first odd-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Set the <a href="../FlushModeType.html" title="enum class in jakarta.persistence">flush mode type</a> to be
-used when the query is executed.</div>
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="../TypedQuery.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>TypedQuery.setQueryFlushMode(QueryFlushMode)</code></a>.</div>
+</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setHint(java.lang.String,java.lang.Object)" class="member-name-link">setHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
@@ -328,21 +318,32 @@ specifying the parameter type.</div>
 specifying the parameter type.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" class="member-name-link">setQueryFlushMode</a><wbr>(<a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Set the query timeout.</div>
+<div class="block">Set the <a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
+used when the query is executed.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Set the query timeout.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="../TypedQuery.html#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Set the query timeout, in milliseconds.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;R&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Query.</span><code><a href="../Query.html#withEntityGraph(jakarta.persistence.EntityGraph)" class="member-name-link">withEntityGraph</a><wbr>(<a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;R&gt;&nbsp;graph)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>&lt;R&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StatementOrTypedQuery.</span><code><a href="../StatementOrTypedQuery.html#withEntityGraph(jakarta.persistence.EntityGraph)" class="member-name-link">withEntityGraph</a><wbr>(<a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;R&gt;&nbsp;graph)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Obtain a <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given entity graph,
 which must be rooted at a supertype of the result type of
 this query.</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;R&gt;&nbsp;<a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;R&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StatementOrTypedQuery.</span><code><a href="../StatementOrTypedQuery.html#withResultSetMapping(jakarta.persistence.sql.ResultSetMapping)" class="member-name-link">withResultSetMapping</a><wbr>(<a href="../sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Obtain a <a href="../TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given result set mapping.</div>
 </div>
 </div>
 <div class="caption"><span>Methods in <a href="../package-summary.html">jakarta.persistence</a> with parameters of type <a href="../TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a></span></div>

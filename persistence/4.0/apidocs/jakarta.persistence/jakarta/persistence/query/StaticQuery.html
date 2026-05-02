@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -97,7 +97,7 @@ loadScripts(document, 'script');</script>
 <pre class="snippet" id="snippet-jakarta.persistence.query.StaticQuery1"><code class="language-java"> interface Library {
 
      @StaticQuery("from Book where title like :title")
-     @ReadQueryOptions(cacheStoreMode = CacheStoreMode.BYPASS)
+     @StaticQueryOptions(cacheStoreMode = CacheStoreMode.BYPASS)
      List&lt;Book&gt; findBooksByTitle(String title);
 
      @StaticQuery("from Book where isbn = :isbn")
@@ -112,7 +112,7 @@ loadScripts(document, 'script');</script>
      List&lt;Summary&gt; retrieveSummaries(String title, LocalDate fromDate);
 
      @StaticQuery("delete from Trash")
-     @WriteQueryOptions(timeout = 30_000)
+     @StaticQueryOptions(timeout = 30_000)
      int emptyTrash();
  }
 </code></pre>

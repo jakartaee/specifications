@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#annotation-interface-required-element-summary" tabindex="0">Required Element Summary</a></li>
 <li><a href="#annotation-interface-optional-element-summary" tabindex="0">Optional Element Summary</a></li>
 <li><a href="#annotation-interface-element-detail" tabindex="0">Element Details</a>
@@ -76,8 +77,9 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({})
+<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#METHOD" title="class or interface in java.lang.annotation" class="external-link">METHOD</a>)
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
+<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html" title="class or interface in java.lang.annotation" class="external-link">@Repeatable</a>(<a href="ConstructorResult.ConstructorResults.html" title="annotation interface in jakarta.persistence">ConstructorResult.ConstructorResults</a>.class)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">ConstructorResult</span></div>
 <div class="block">Used in conjunction with the <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence"><code>SqlResultSetMapping</code></a> or
 <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotation to map the <code>SELECT</code>
@@ -97,29 +99,39 @@ of an entity class returned as a constructor result will be
 in either the new or detached state, depending on whether a
 primary key was assigned to the constructed object.
 
-<p>Example:
+<p>Consider the following SQL query:
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.ConstructorResult1"><code class="language-java">Query q = em.createNativeQuery(
-    "SELECT c.id, c.name, " +
-        "COUNT(o) as orderCount, " +
-        "AVG(o.price) AS avgOrder " +
-      "FROM Customer c, Orders o " +
-      "WHERE o.cid = c.id " +
-      "GROUP BY c.id, c.name",
-    "CustomerDetailsResult");
+<pre class="snippet" id="snippet-jakarta.persistence.ConstructorResult1"><code class="language-java">Query customerDetails =
+        em.createNativeQuery(
+            """
+               SELECT c.id, c.name,
+                      COUNT(o) as order_count,
+                      AVG(o.price) AS avg_price
+               FROM Customer c
+               JOIN Orders o ON o.cid = c.id
+               GROUP BY c.id, c.name
+            """,
+            ResultMappings_.CUSTOMER_DETAILS
+        );
+</code></pre>
+</div>
 
-@SqlResultSetMapping(
-    name = "CustomerDetailsResult",
-    classes = {
-        @ConstructorResult(
-            targetClass = com.acme.CustomerDetails.class,
-            columns = {
-                @ColumnResult(name = "id"),
-                @ColumnResult(name = "name"),
-                @ColumnResult(name = "orderCount"),
-                @ColumnResult(name = "avgOrder", type = Double.class)
-            })
-    })
+<p>The result set mapping might be defined as follows:
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.ConstructorResult2"><code class="language-java"> @SqlResultSetMapping(
+     name = "CustomerDetails",
+     classes = @ConstructorResult(
+         targetClass = CustomerDetails.class,
+         columns = {
+             @ColumnResult(name = "id"),
+             @ColumnResult(name = "name"),
+             @ColumnResult(name = "order_count"),
+             @ColumnResult(name = "avg_price",
+                           type = Double.class)
+         }
+     )
+)
+interface ResultMappings {}
 </code></pre>
 </div>
 
@@ -127,7 +139,21 @@ primary key was assigned to the constructed object.
 <p>At runtime, a <code>ConstructorResult</code> annotation is represented by an
 instance of <a href="sql/ConstructorMapping.html" title="class in jakarta.persistence.sql"><code>ConstructorMapping</code></a>
 in the <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a>
-returned by <a href="EntityManagerFactory.html#getResultSetMappings(java.lang.Class)"><code>EntityManagerFactory.getResultSetMappings(Class)</code></a>.</div>
+returned by <a href="EntityManagerFactory.html#getResultSetMappings(java.lang.Class)"><code>EntityManagerFactory.getResultSetMappings(Class)</code></a>.
+
+<p>This annotation may be placed directly on a method annotated
+<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.ConstructorResult3"><code class="language-java">@StaticNativeQuery("SELECT pub_id, count(*) AS book_count FROM books GROUP BY pub_id")
+@ConstructorResult(
+    targetClass = PublisherBookCount.class,
+    columns = {@ColumnResult("pub_id"),
+               @ColumnResult("book_count")}
+)
+List&lt;PublisherBookCount&gt; publisherBookCounts(String pattern);
+</code></pre>
+</div>
+</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>2.1</dd>
@@ -145,6 +171,21 @@ returned by <a href="EntityManagerFactory.html#getResultSetMappings(java.lang.Cl
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static @interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="ConstructorResult.ConstructorResults.html" class="type-name-link" title="annotation interface in jakarta.persistence">ConstructorResult.ConstructorResults</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- =========== ANNOTATION INTERFACE REQUIRED MEMBER SUMMARY =========== -->
 <li>
 <section class="member-summary" id="annotation-interface-required-element-summary">
@@ -220,7 +261,7 @@ list to arguments of a constructor of the specified Java
 <a href="#targetClass()">target class</a>, in order.
 
 <p>Constructor parameters mapping directly to column
-results must occur after parameters mapping to entities.</div>
+results must occur before parameters mapping to entities.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>{}</code></dd>

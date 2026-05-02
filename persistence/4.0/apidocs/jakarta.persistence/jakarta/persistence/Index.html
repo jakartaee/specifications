@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -64,6 +64,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#name()" tabindex="0">name</a></li>
 <li><a href="#columnList()" tabindex="0">columnList</a></li>
 <li><a href="#unique()" tabindex="0">unique</a></li>
+<li><a href="#kind()" tabindex="0">kind</a></li>
+<li><a href="#type()" tabindex="0">type</a></li>
 <li><a href="#options()" tabindex="0">options</a></li>
 </ol>
 </li>
@@ -82,18 +84,10 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">Index</span></div>
 <div class="block">Used in schema generation to specify creation of an index.
 
-<p>The syntax of the <code>columnList</code> element is given by
-the following simple BNF:
-
-<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.Index1"><code class="language-java">    column_list ::= index_column [, index_column]*
-    index_column ::= column_name [ASC | DESC]
-</code></pre>
-</div>
-
-
-<p>If neither <code>ASC</code> nor <code>DESC</code> is not specified,
-<code>ASC</code>, that is, ascending order, is assumed.
+<p>The syntax of the <code>columnList</code> element depends on
+the SQL dialect, but is usually a comma-separated list of
+column names, with an optional ordering specification,
+<code>ASC</code> or <code>DESC</code>.
 
 <p>Note that it is not necessary to specify an index for a
 primary key, as the primary key has a unique constraint with
@@ -144,15 +138,27 @@ following the BNF rule <code>column_list</code> given above.</div>
 <div class="table-header col-second">Optional Element</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
+<div class="col-second even-row-color"><code><a href="#kind()" class="member-name-link">kind</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">(Optional) The name of the index.</div>
+<div class="block">(Optional) A SQL fragment representing the index kind,
+usually inserted before the keyword <code>index</code> in 
+the generated DDL which creates this index.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#options()" class="member-name-link">options</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">(Optional) The name of the index.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#options()" class="member-name-link">options</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">(Optional) A SQL fragment appended to the generated DDL
 which creates this index.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#type()" class="member-name-link">type</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">(Optional) A SQL fragment representing the index type.</div>
 </div>
 <div class="col-first even-row-color"><code>boolean</code></div>
 <div class="col-second even-row-color"><code><a href="#unique()" class="member-name-link">unique</a></code></div>
@@ -204,6 +210,44 @@ following the BNF rule <code>column_list</code> given above.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>false</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="kind()">
+<h3>kind</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">kind</span></div>
+<div class="block">(Optional) A SQL fragment representing the index kind,
+usually inserted before the keyword <code>index</code> in 
+the generated DDL which creates this index.</div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd><code>""</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="type()">
+<h3>type</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">type</span></div>
+<div class="block">(Optional) A SQL fragment representing the index type.
+When specified, it is inserted into the generated DDL 
+which creates this index.</div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd><code>""</code></dd>
 </dl>
 </div>
 </section>

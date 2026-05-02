@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -132,6 +132,42 @@ using the given join type.</div>
 <li>
 <section class="detail" id="jakarta.persistence.metamodel">
 <h2>Uses of <a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a> in <a href="../package-summary.html">jakarta.persistence.metamodel</a></h2>
+<div class="caption"><span>Subinterfaces of <a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a> in <a href="../package-summary.html">jakarta.persistence.metamodel</a></span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Interface</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../BooleanAttribute.html" class="type-name-link" title="interface in jakarta.persistence.metamodel">BooleanAttribute</a>&lt;X&gt;</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instances of the type <a href="../BooleanAttribute.html" title="interface in jakarta.persistence.metamodel">BooleanAttribute</a> represents persistent
+single-valued properties or fields of boolean type.</div>
+</div>
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../ComparableAttribute.html" class="type-name-link" title="interface in jakarta.persistence.metamodel">ComparableAttribute</a>&lt;X, C extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super C&gt;&gt;</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instances of the type <a href="../ComparableAttribute.html" title="interface in jakarta.persistence.metamodel">ComparableAttribute</a> represents persistent
+single-valued properties or fields of comparable type.</div>
+</div>
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../NumericAttribute.html" class="type-name-link" title="interface in jakarta.persistence.metamodel">NumericAttribute</a>&lt;X, N extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;N&gt;&gt;</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instances of the type <a href="../NumericAttribute.html" title="interface in jakarta.persistence.metamodel">NumericAttribute</a> represents persistent
+single-valued properties or fields of number type.</div>
+</div>
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../TemporalAttribute.html" class="type-name-link" title="interface in jakarta.persistence.metamodel">TemporalAttribute</a>&lt;X, T extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/Temporal.html" title="class or interface in java.time.temporal" class="external-link">Temporal</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super T&gt;&gt;</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Instances of the type <a href="../TemporalAttribute.html" title="interface in jakarta.persistence.metamodel">TemporalAttribute</a> represents persistent
+single-valued properties or fields of a temporal type.</div>
+</div>
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../TextAttribute.html" class="type-name-link" title="interface in jakarta.persistence.metamodel">TextAttribute</a>&lt;X&gt;</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instances of the type <a href="../TextAttribute.html" title="interface in jakarta.persistence.metamodel">TextAttribute</a> represents persistent
+single-valued properties or fields of string type.</div>
+</div>
+</div>
 <div class="caption"><span>Methods in <a href="../package-summary.html">jakarta.persistence.metamodel</a> that return <a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a></span></div>
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -223,25 +259,25 @@ identifiable type.</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="../../sql/EmbeddedMapping.html" title="class in jakarta.persistence.sql">EmbeddedMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">ResultSetMapping.</span><code><a href="../../sql/ResultSetMapping.html#embedded(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">embedded</a><wbr>(<a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;C,<wbr>T&gt;&nbsp;embedded,
+<div class="col-second even-row-color"><span class="type-name-label">ResultSetMapping.</span><code><a href="../../sql/ResultSetMapping.html#embedded(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">embedded</a><wbr>(<a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super C, T&gt;&nbsp;embedded,
  <a href="../../sql/MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Construct a mapping for an embedded object.</div>
 </div>
 <div class="col-first odd-row-color"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="../../sql/FieldMapping.html" title="class in jakarta.persistence.sql">FieldMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">ResultSetMapping.</span><code><a href="../../sql/ResultSetMapping.html#field(jakarta.persistence.metamodel.SingularAttribute,java.lang.String)" class="member-name-link">field</a><wbr>(<a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;C,<wbr>T&gt;&nbsp;attribute,
+<div class="col-second odd-row-color"><span class="type-name-label">ResultSetMapping.</span><code><a href="../../sql/ResultSetMapping.html#field(jakarta.persistence.metamodel.SingularAttribute,java.lang.String)" class="member-name-link">field</a><wbr>(<a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super C, T&gt;&nbsp;attribute,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Construct a mapping for a field or property of an entity or embeddable type.</div>
 </div>
 <div class="col-first even-row-color"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="../../sql/EmbeddedMapping.html" title="class in jakarta.persistence.sql">EmbeddedMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EmbeddedMapping.</span><code><a href="../../sql/EmbeddedMapping.html#of(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;C,<wbr>T&gt;&nbsp;embedded,
+<div class="col-second even-row-color"><span class="type-name-label">EmbeddedMapping.</span><code><a href="../../sql/EmbeddedMapping.html#of(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super C, T&gt;&nbsp;embedded,
  <a href="../../sql/MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Construct a new instance.</div>
 </div>
 <div class="col-first odd-row-color"><code>static &lt;C,<wbr>T&gt;&nbsp;<a href="../../sql/FieldMapping.html" title="class in jakarta.persistence.sql">FieldMapping</a><wbr>&lt;C,<wbr>T&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">FieldMapping.</span><code><a href="../../sql/FieldMapping.html#of(jakarta.persistence.metamodel.SingularAttribute,java.lang.String)" class="member-name-link">of</a><wbr>(<a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;C,<wbr>T&gt;&nbsp;attribute,
+<div class="col-second odd-row-color"><span class="type-name-label">FieldMapping.</span><code><a href="../../sql/FieldMapping.html#of(jakarta.persistence.metamodel.SingularAttribute,java.lang.String)" class="member-name-link">of</a><wbr>(<a href="../SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super C, T&gt;&nbsp;attribute,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Construct a new instance.</div>

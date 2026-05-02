@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,12 +63,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#from(java.lang.Class)" tabindex="0">from(Class)</a></li>
 <li><a href="#from(jakarta.persistence.metamodel.EntityType)" tabindex="0">from(EntityType)</a></li>
 <li><a href="#where(jakarta.persistence.criteria.Expression)" tabindex="0">where(Expression)</a></li>
-<li><a href="#where(jakarta.persistence.criteria.Predicate...)" tabindex="0">where(Predicate...)</a></li>
+<li><a href="#where(jakarta.persistence.criteria.BooleanExpression...)" tabindex="0">where(BooleanExpression...)</a></li>
 <li><a href="#where(java.util.List)" tabindex="0">where(List)</a></li>
 <li><a href="#groupBy(jakarta.persistence.criteria.Expression...)" tabindex="0">groupBy(Expression...)</a></li>
 <li><a href="#groupBy(java.util.List)" tabindex="0">groupBy(List)</a></li>
 <li><a href="#having(jakarta.persistence.criteria.Expression)" tabindex="0">having(Expression)</a></li>
-<li><a href="#having(jakarta.persistence.criteria.Predicate...)" tabindex="0">having(Predicate...)</a></li>
+<li><a href="#having(jakarta.persistence.criteria.BooleanExpression...)" tabindex="0">having(BooleanExpression...)</a></li>
 <li><a href="#having(java.util.List)" tabindex="0">having(List)</a></li>
 <li><a href="#distinct(boolean)" tabindex="0">distinct(boolean)</a></li>
 <li><a href="#getRoots()" tabindex="0">getRoots()</a></li>
@@ -188,19 +188,19 @@ the query results.</div>
 the query results.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(jakarta.persistence.criteria.Expression)" class="member-name-link">having</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">having</a><wbr>(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Specify a restriction over the groups of the query.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(jakarta.persistence.criteria.Predicate...)" class="member-name-link">having</a><wbr>(<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction 
 predicates.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(jakarta.persistence.criteria.Expression)" class="member-name-link">having</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Specify a restriction over the groups of the query.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(java.util.List)" class="member-name-link">having</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(java.util.List)" class="member-name-link">having</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction
@@ -213,19 +213,19 @@ predicates.</div>
 retained.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(jakarta.persistence.criteria.Expression)" class="member-name-link">where</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">where</a><wbr>(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Modify the query to restrict the query results according
-to the specified boolean expression.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(jakarta.persistence.criteria.Predicate...)" class="member-name-link">where</a><wbr>(<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Modify the query to restrict the query results according 
 to the conjunction of the specified restriction predicates.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(jakarta.persistence.criteria.Expression)" class="member-name-link">where</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Modify the query to restrict the query results according
+to the specified boolean expression.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.</div>
@@ -298,10 +298,10 @@ Replaces the previously added restriction(s), if any.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="where(jakarta.persistence.criteria.Predicate...)">
+<section class="detail" id="where(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Modify the query to restrict the query results according 
 to the conjunction of the specified restriction predicates.
 Replaces the previously added restriction(s), if any.
@@ -320,7 +320,7 @@ restrictions are simply removed.</div>
 <section class="detail" id="where(java.util.List)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.
 Replaces the previously added restriction(s), if any.
@@ -392,10 +392,10 @@ Replaces the previous having restriction(s), if any.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="having(jakarta.persistence.criteria.Predicate...)">
+<section class="detail" id="having(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction 
 predicates.
@@ -415,7 +415,7 @@ restrictions are simply removed.</div>
 <section class="detail" id="having(java.util.List)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>&gt;&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction
 predicates.

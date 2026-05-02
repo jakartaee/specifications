@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -70,8 +70,18 @@ loadScripts(document, 'script');</script>
 <li><a href="#in(jakarta.persistence.criteria.Expression...)" tabindex="0">in(Expression...)</a></li>
 <li><a href="#in(java.util.Collection)" tabindex="0">in(Collection)</a></li>
 <li><a href="#in(jakarta.persistence.criteria.Expression)" tabindex="0">in(Expression)</a></li>
+<li><a href="#in(jakarta.persistence.criteria.Subquery)" tabindex="0">in(Subquery)</a></li>
 <li><a href="#as(java.lang.Class)" tabindex="0">as(Class)</a></li>
 <li><a href="#cast(java.lang.Class)" tabindex="0">cast(Class)</a></li>
+<li><a href="#coalesce(jakarta.persistence.criteria.Expression)" tabindex="0">coalesce(Expression)</a></li>
+<li><a href="#coalesce(T)" tabindex="0">coalesce(T)</a></li>
+<li><a href="#nullif(jakarta.persistence.criteria.Expression)" tabindex="0">nullif(Expression)</a></li>
+<li><a href="#nullif(T)" tabindex="0">nullif(T)</a></li>
+<li><a href="#selectCase()" tabindex="0">selectCase()</a></li>
+<li><a href="#isMember(jakarta.persistence.criteria.Expression)" tabindex="0">isMember(Expression)</a></li>
+<li><a href="#isNotMember(jakarta.persistence.criteria.Expression)" tabindex="0">isNotMember(Expression)</a></li>
+<li><a href="#count()" tabindex="0">count()</a></li>
+<li><a href="#countDistinct()" tabindex="0">countDistinct()</a></li>
 </ol>
 </li>
 </ol>
@@ -92,7 +102,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;Z,<wbr>E&gt;, <a href="CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a>&lt;R&gt;, <a href="CriteriaBuilder.Coalesce.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Coalesce</a>&lt;T&gt;, <a href="CriteriaBuilder.In.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.In</a>&lt;T&gt;, <a href="CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a>&lt;C,<wbr>R&gt;, <a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;Z,<wbr>X&gt;, <a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;Z,<wbr>X&gt;, <a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;Z,<wbr>E&gt;, <a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;Z,<wbr>K,<wbr>V&gt;, <a href="ParameterExpression.html" title="interface in jakarta.persistence.criteria">ParameterExpression</a>&lt;T&gt;, <a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a>&lt;X&gt;, <a href="PluralJoin.html" title="interface in jakarta.persistence.criteria">PluralJoin</a>&lt;Z,<wbr>C,<wbr>E&gt;, <a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>, <a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;, <a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;Z,<wbr>E&gt;, <a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;T&gt;</code></dd>
+<dd><code><a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>, <a href="BooleanPath.html" title="interface in jakarta.persistence.criteria">BooleanPath</a>, <a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;Z,<wbr>E&gt;, <a href="ComparableExpression.html" title="interface in jakarta.persistence.criteria">ComparableExpression</a>&lt;C&gt;, <a href="CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a>&lt;R&gt;, <a href="CriteriaBuilder.Coalesce.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Coalesce</a>&lt;T&gt;, <a href="CriteriaBuilder.In.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.In</a>&lt;T&gt;, <a href="CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a>&lt;C,<wbr>R&gt;, <a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;Z,<wbr>X&gt;, <a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;Z,<wbr>X&gt;, <a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;Z,<wbr>E&gt;, <a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;Z,<wbr>K,<wbr>V&gt;, <a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;N&gt;, <a href="ParameterExpression.html" title="interface in jakarta.persistence.criteria">ParameterExpression</a>&lt;T&gt;, <a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a>&lt;X&gt;, <a href="PluralExpression.html" title="interface in jakarta.persistence.criteria">PluralExpression</a>&lt;C,<wbr>E&gt;, <a href="PluralJoin.html" title="interface in jakarta.persistence.criteria">PluralJoin</a>&lt;Z,<wbr>C,<wbr>E&gt;, <a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>, <a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;, <a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;Z,<wbr>E&gt;, <a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;T&gt;, <a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;T&gt;, <a href="TextExpression.html" title="interface in jakarta.persistence.criteria">TextExpression</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
@@ -130,6 +140,31 @@ expression object.</div>
 <div class="block">Cast this expression to the specified type, returning a
 new expression object.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#coalesce(jakarta.persistence.criteria.Expression)" class="member-name-link">coalesce</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create an expression that returns null if this and the argument
+evaluate to null, and the value of the first non-null expression
+otherwise.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#coalesce(T)" class="member-name-link">coalesce</a><wbr>(<a href="#type-param-T" title="type parameter in Expression">T</a>&nbsp;y)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create an expression that returns null if this and the argument
+evaluate to null, and the value of the first non-null expression
+otherwise.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#count()" class="member-name-link">count</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create an aggregate expression applying the count operation.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#countDistinct()" class="member-name-link">countDistinct</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create an aggregate expression applying the count distinct
+operation.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#equalTo(jakarta.persistence.criteria.Expression)" class="member-name-link">equalTo</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -155,39 +190,76 @@ of the argument list.</div>
 of the collection.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#in(java.lang.Object...)" class="member-name-link">in</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;values)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#in(jakarta.persistence.criteria.Subquery)" class="member-name-link">in</a><wbr>(<a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;subquery)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a predicate to test whether the expression is returned
+by the subquery.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#in(java.lang.Object...)" class="member-name-link">in</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a predicate to test whether the expression is a member
 of the argument list.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#in(java.util.Collection)" class="member-name-link">in</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&nbsp;values)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#in(java.util.Collection)" class="member-name-link">in</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&nbsp;values)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a predicate to test whether the expression is a member
 of the collection.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isMember(jakarta.persistence.criteria.Expression)" class="member-name-link">isMember</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a predicate that tests whether this expression is
+a member of a collection.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isNotNull()" class="member-name-link">isNotNull</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isNotMember(jakarta.persistence.criteria.Expression)" class="member-name-link">isNotMember</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a predicate that tests whether this expression is
+not a member of a collection.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isNotNull()" class="member-name-link">isNotNull</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a predicate to test whether the expression is 
 not null.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isNull()" class="member-name-link">isNull</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isNull()" class="member-name-link">isNull</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a predicate to test whether the expression is null.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#notEqualTo(jakarta.persistence.criteria.Expression)" class="member-name-link">notEqualTo</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a predicate to test whether the expression is unequal
+to the argument.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#notEqualTo(jakarta.persistence.criteria.Expression)" class="member-name-link">notEqualTo</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#notEqualTo(java.lang.Object)" class="member-name-link">notEqualTo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a predicate to test whether the expression is unequal
 to the argument.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#notEqualTo(java.lang.Object)" class="member-name-link">notEqualTo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#nullif(jakarta.persistence.criteria.Expression)" class="member-name-link">nullif</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;y)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a predicate to test whether the expression is unequal
-to the argument.</div>
+<div class="block">Create an expression that tests whether this expression
+is equal to the argument, returning null if they are
+and the value of the first expression if they are not.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#nullif(T)" class="member-name-link">nullif</a><wbr>(<a href="#type-param-T" title="type parameter in Expression">T</a>&nbsp;y)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create an expression that tests whether this expression
+is equal to the argument, returning null if they are
+and the value of the first expression if they are not.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;R&gt;&nbsp;<a href="CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>,<wbr>R&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#selectCase()" class="member-name-link">selectCase</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a simple case expression to test against this expression.</div>
 </div>
 </div>
 </div>
@@ -374,6 +446,24 @@ of the collection.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="in(jakarta.persistence.criteria.Subquery)">
+<h3>in</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(<a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;subquery)</span></div>
+<div class="block">Create a predicate to test whether the expression is returned
+by the subquery.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>subquery</code> - the subquery</dd>
+<dt>Returns:</dt>
+<dd>predicate testing for membership</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="as(java.lang.Class)">
 <h3>as</h3>
 <div class="horizontal-scroll">
@@ -420,6 +510,166 @@ not required.</em></div>
 <dd>a scalar expression of the given basic type</dd>
 <dt>Since:</dt>
 <dd>3.2</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="coalesce(jakarta.persistence.criteria.Expression)">
+<h3>coalesce</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;y)</span></div>
+<div class="block">Create an expression that returns null if this and the argument
+evaluate to null, and the value of the first non-null expression
+otherwise.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>y</code> - expression</dd>
+<dt>Returns:</dt>
+<dd>coalesce expression</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="coalesce(T)">
+<h3 id="coalesce(java.lang.Object)">coalesce</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in Expression">T</a>&nbsp;y)</span></div>
+<div class="block">Create an expression that returns null if this and the argument
+evaluate to null, and the value of the first non-null expression
+otherwise.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>y</code> - value</dd>
+<dt>Returns:</dt>
+<dd>coalesce expression</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="nullif(jakarta.persistence.criteria.Expression)">
+<h3>nullif</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;y)</span></div>
+<div class="block">Create an expression that tests whether this expression
+is equal to the argument, returning null if they are
+and the value of the first expression if they are not.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>y</code> - expression</dd>
+<dt>Returns:</dt>
+<dd>nullif expression</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="nullif(T)">
+<h3 id="nullif(java.lang.Object)">nullif</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in Expression">T</a>&nbsp;y)</span></div>
+<div class="block">Create an expression that tests whether this expression
+is equal to the argument, returning null if they are
+and the value of the first expression if they are not.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>y</code> - value</dd>
+<dt>Returns:</dt>
+<dd>nullif expression</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="selectCase()">
+<h3>selectCase</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>,<wbr>R&gt;</span>&nbsp;<span class="element-name">selectCase</span>()</div>
+<div class="block">Create a simple case expression to test against this expression.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>simple case expression</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isMember(jakarta.persistence.criteria.Expression)">
+<h3>isMember</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isMember</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</span></div>
+<div class="block">Create a predicate that tests whether this expression is
+a member of a collection.
+If the collection is empty, the predicate will be false.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>collection</code> - expression</dd>
+<dt>Returns:</dt>
+<dd>is-member predicate</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isNotMember(jakarta.persistence.criteria.Expression)">
+<h3>isNotMember</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isNotMember</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</span></div>
+<div class="block">Create a predicate that tests whether this expression is
+not a member of a collection.
+If the collection is empty, the predicate will be true.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>collection</code> - expression</dd>
+<dt>Returns:</dt>
+<dd>is-not-member predicate</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="count()">
+<h3>count</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span>&nbsp;<span class="element-name">count</span>()</div>
+<div class="block">Create an aggregate expression applying the count operation.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>count expression</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="countDistinct()">
+<h3>countDistinct</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span>&nbsp;<span class="element-name">countDistinct</span>()</div>
+<div class="block">Create an aggregate expression applying the count distinct
+operation.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>count distinct expression</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
 </dl>
 </div>
 </section>

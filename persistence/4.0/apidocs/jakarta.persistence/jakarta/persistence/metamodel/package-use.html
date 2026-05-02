@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -132,10 +132,20 @@ object or attribute type.</div>
 <div class="block">An instances of the type <code>Bindable</code> represents an object
 or attribute type that can be bound into a <a href="../criteria/Path.html" title="interface in jakarta.persistence.criteria"><code>Path</code></a>.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/CollectionAttribute.html#jakarta.persistence.criteria">CollectionAttribute</a></div>
+<div class="col-first even-row-color"><a href="class-use/BooleanAttribute.html#jakarta.persistence.criteria">BooleanAttribute</a></div>
 <div class="col-last even-row-color">
+<div class="block">Instances of the type <a href="BooleanAttribute.html" title="interface in jakarta.persistence.metamodel">BooleanAttribute</a> represents persistent
+single-valued properties or fields of boolean type.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/CollectionAttribute.html#jakarta.persistence.criteria">CollectionAttribute</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Instances of the type <code>CollectionAttribute</code> represent
 persistent <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link"><code>Collection</code></a>-valued attributes.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/ComparableAttribute.html#jakarta.persistence.criteria">ComparableAttribute</a></div>
+<div class="col-last even-row-color">
+<div class="block">Instances of the type <a href="ComparableAttribute.html" title="interface in jakarta.persistence.metamodel">ComparableAttribute</a> represents persistent
+single-valued properties or fields of comparable type.</div>
 </div>
 <div class="col-first odd-row-color"><a href="class-use/EntityType.html#jakarta.persistence.criteria">EntityType</a></div>
 <div class="col-last odd-row-color">
@@ -153,20 +163,35 @@ type.</div>
 <div class="block">Instances of the type <code>MapAttribute</code> represent
 persistent <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>-valued attributes.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/PluralAttribute.html#jakarta.persistence.criteria">PluralAttribute</a></div>
+<div class="col-first even-row-color"><a href="class-use/NumericAttribute.html#jakarta.persistence.criteria">NumericAttribute</a></div>
 <div class="col-last even-row-color">
+<div class="block">Instances of the type <a href="NumericAttribute.html" title="interface in jakarta.persistence.metamodel">NumericAttribute</a> represents persistent
+single-valued properties or fields of number type.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/PluralAttribute.html#jakarta.persistence.criteria">PluralAttribute</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Instances of the type <code>PluralAttribute</code> represent 
 persistent collection-valued attributes.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/SetAttribute.html#jakarta.persistence.criteria">SetAttribute</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/SetAttribute.html#jakarta.persistence.criteria">SetAttribute</a></div>
+<div class="col-last even-row-color">
 <div class="block">Instances of the type <code>SetAttribute</code> represent
 persistent <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>-valued attributes.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/SingularAttribute.html#jakarta.persistence.criteria">SingularAttribute</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="class-use/SingularAttribute.html#jakarta.persistence.criteria">SingularAttribute</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Instances of the type <code>SingularAttribute</code> represents persistent
 single-valued properties or fields.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/TemporalAttribute.html#jakarta.persistence.criteria">TemporalAttribute</a></div>
+<div class="col-last even-row-color">
+<div class="block">Instances of the type <a href="TemporalAttribute.html" title="interface in jakarta.persistence.metamodel">TemporalAttribute</a> represents persistent
+single-valued properties or fields of a temporal type.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/TextAttribute.html#jakarta.persistence.criteria">TextAttribute</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Instances of the type <a href="TextAttribute.html" title="interface in jakarta.persistence.metamodel">TextAttribute</a> represents persistent
+single-valued properties or fields of string type.</div>
 </div>
 </div>
 </section>
@@ -195,62 +220,67 @@ or attribute type that can be bound into a <a href="../criteria/Path.html" title
 <div class="block">Instances of the type <code>CollectionAttribute</code> represent
 persistent <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link"><code>Collection</code></a>-valued attributes.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/EmbeddableType.html#jakarta.persistence.metamodel">EmbeddableType</a></div>
+<div class="col-first odd-row-color"><a href="class-use/ComparableAttribute.html#jakarta.persistence.metamodel">ComparableAttribute</a></div>
 <div class="col-last odd-row-color">
+<div class="block">Instances of the type <a href="ComparableAttribute.html" title="interface in jakarta.persistence.metamodel">ComparableAttribute</a> represents persistent
+single-valued properties or fields of comparable type.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/EmbeddableType.html#jakarta.persistence.metamodel">EmbeddableType</a></div>
+<div class="col-last even-row-color">
 <div class="block">An instance of <code>EmbeddableType</code> represents an
 <a href="../Embeddable.html" title="annotation interface in jakarta.persistence">embeddable</a>
 type.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/EntityType.html#jakarta.persistence.metamodel">EntityType</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="class-use/EntityType.html#jakarta.persistence.metamodel">EntityType</a></div>
+<div class="col-last odd-row-color">
 <div class="block">An instance of <code>EntityType</code> represents
 an <a href="../Entity.html" title="annotation interface in jakarta.persistence">entity</a>
 type.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/IdentifiableType.html#jakarta.persistence.metamodel">IdentifiableType</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/IdentifiableType.html#jakarta.persistence.metamodel">IdentifiableType</a></div>
+<div class="col-last even-row-color">
 <div class="block">An instance of the type <code>IdentifiableType</code> represents an
 entity or mapped superclass type.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/ListAttribute.html#jakarta.persistence.metamodel">ListAttribute</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="class-use/ListAttribute.html#jakarta.persistence.metamodel">ListAttribute</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Instances of the type <code>ListAttribute</code> represent persistent 
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List</code></a>-valued attributes.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/ManagedType.html#jakarta.persistence.metamodel">ManagedType</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/ManagedType.html#jakarta.persistence.metamodel">ManagedType</a></div>
+<div class="col-last even-row-color">
 <div class="block">Instances of the type <code>ManagedType</code> represent entity, mapped 
 superclass, and embeddable types.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/MapAttribute.html#jakarta.persistence.metamodel">MapAttribute</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="class-use/MapAttribute.html#jakarta.persistence.metamodel">MapAttribute</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Instances of the type <code>MapAttribute</code> represent
 persistent <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>-valued attributes.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/PluralAttribute.html#jakarta.persistence.metamodel">PluralAttribute</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/PluralAttribute.html#jakarta.persistence.metamodel">PluralAttribute</a></div>
+<div class="col-last even-row-color">
 <div class="block">Instances of the type <code>PluralAttribute</code> represent 
 persistent collection-valued attributes.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/PluralAttribute.CollectionType.html#jakarta.persistence.metamodel">PluralAttribute.CollectionType</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="class-use/SetAttribute.html#jakarta.persistence.metamodel">SetAttribute</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first odd-row-color"><a href="class-use/PluralAttribute.CollectionType.html#jakarta.persistence.metamodel">PluralAttribute.CollectionType</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="class-use/SetAttribute.html#jakarta.persistence.metamodel">SetAttribute</a></div>
+<div class="col-last even-row-color">
 <div class="block">Instances of the type <code>SetAttribute</code> represent
 persistent <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>-valued attributes.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/SingularAttribute.html#jakarta.persistence.metamodel">SingularAttribute</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="class-use/SingularAttribute.html#jakarta.persistence.metamodel">SingularAttribute</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Instances of the type <code>SingularAttribute</code> represents persistent
 single-valued properties or fields.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/Type.html#jakarta.persistence.metamodel">Type</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/Type.html#jakarta.persistence.metamodel">Type</a></div>
+<div class="col-last even-row-color">
 <div class="block">An instance of the type <code>Type</code> represents a persistent
 object or attribute type.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/Type.PersistenceType.html#jakarta.persistence.metamodel">Type.PersistenceType</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="class-use/Type.PersistenceType.html#jakarta.persistence.metamodel">Type.PersistenceType</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>

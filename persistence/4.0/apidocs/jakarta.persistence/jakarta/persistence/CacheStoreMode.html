@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -88,13 +88,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
+<dd><code><a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>, <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">CacheStoreMode</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&gt;
-implements <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a></span></div>
+implements <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a>, <a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a></span></div>
 <div class="block">Specifies how the <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> interacts with the
 second-level cache when data is read from the database and
 when data is written to the database.
@@ -117,7 +117,7 @@ when data is written to the database.
 <dd>
 <ul class="tag-list-long">
 <li><a href="EntityHandler.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)"><code>EntityHandler.setCacheStoreMode(CacheStoreMode)</code></a></li>
-<li><a href="Query.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)"><code>Query.setCacheStoreMode(CacheStoreMode)</code></a></li>
+<li><a href="TypedQuery.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)"><code>TypedQuery.setCacheStoreMode(CacheStoreMode)</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -231,6 +231,12 @@ second-level cache when read from the database, nor when
 written to the database. The persistence provider is
 permitted to invalidate cached items when writing to the
 database.</div>
+<dl class="notes">
+<dt>API note:</dt>
+<dd>When used as a <a href="FetchOption.html" title="interface in jakarta.persistence"><code>FetchOption</code></a>, this value is
+         a hint to the persistence provider, and might be
+         ignored.</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -244,6 +250,12 @@ the second-level cache when read from the database or when
 written to the database. The persistence provider is
 required to refresh already-cached items when reading from
 the database.</div>
+<dl class="notes">
+<dt>API note:</dt>
+<dd>When used as a <a href="FetchOption.html" title="interface in jakarta.persistence"><code>FetchOption</code></a>, this value is
+         a hint to the persistence provider, and might be
+         ignored.</dd>
+</dl>
 </div>
 </section>
 </li>

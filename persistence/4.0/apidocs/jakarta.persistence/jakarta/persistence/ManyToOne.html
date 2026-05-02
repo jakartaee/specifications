@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -81,17 +81,80 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">ManyToOne</span></div>
 <div class="block">Specifies a single-valued association to another entity class that
 has many-to-one multiplicity. It is not usually necessary to specify
-the target entity explicitly since it can usually be inferred from
-the type of the object being referenced.
-
-<p>If the relationship is bidirectional, the non-owning
-<a href="OneToMany.html" title="annotation interface in jakarta.persistence"><code>OneToMany</code></a> entity side must use the <a href="OneToMany.html#mappedBy()"><code>mappedBy</code></a> element to specify the relationship field or property of the
-entity that is the owner of the relationship.
+the associated <a href="#targetEntity()">target entity</a> explicitly
+since it can usually be inferred from the declared type of the
+annotated field or property.
 
 <p>A <code>ManyToOne</code> association usually maps a foreign key column
 or columns. This mapping may be specified using the <a href="JoinColumn.html" title="annotation interface in jakarta.persistence"><code>JoinColumn</code></a>
-annotation. Alternatively, an optional <code>OneToOne</code> association is
+annotation.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.ManyToOne1"><code class="language-java">@ManyToOne(optional = false)
+@JoinColumn(name = "CUST_ID")
+Customer customer;
+</code></pre>
+</div>
+
+
+<p>Alternatively, an optional <code>ManyToOne</code> association is
 sometimes mapped to a join table using the <a href="JoinTable.html" title="annotation interface in jakarta.persistence"><code>JoinTable</code></a> annotation.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.ManyToOne2"><code class="language-java">@ManyToOne
+@JoinTable(name = "ORDER_CUSTOMER",
+           joinColumns = @JoinColumn(name="ORD_ID"),
+           inverseJoinColumns = @JoinColumn(name="CUST_ID"))
+Customer customer;
+</code></pre>
+</div>
+
+
+<p>The annotated field or property might represent one side of a
+<em>bidirectional</em> association. Every bidirectional association
+has an <em>owning</em> side and an <em>inverse</em> (alternatively,
+<em>non-owning</em> or <em>unowned</em>) side. Modifications to the
+owning side of an association determine the updates made to the
+relationship in the database. If the inverse side of an association
+is modified without a corresponding modification to the owning side,
+the behavior is undefined. The persistence provider is permitted to
+ignore any modification made only to the inverse side of a
+bidirectional association.
+
+<p>In a bidirectional association, a <code>OneToMany</code> must be the
+owning side. The inverse side of a bidirectional <code>ManyToOne</code>
+association must be a field or property annotated <a href="OneToMany.html" title="annotation interface in jakarta.persistence"><code>&#64;OneToMany</code></a> of the <a href="#targetEntity()">target entity</a>, and
+the non-owning <a href="OneToMany.html" title="annotation interface in jakarta.persistence"><code>OneToMany</code></a> side must specify the relationship
+field or property annotated <code>@ManyToOne</code> via
+<a href="OneToMany.html#mappedBy()"><code>mappedBy</code></a>. The foreign key or join table
+must be specified on the owning side.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.ManyToOne3"><code class="language-java">@Entity
+public class Order {
+    @Id
+    @GeneratedValue
+    int id;
+
+    // owning side
+    @ManyToOne(optional = false,
+               fetch = LAZY)
+    @JoinColumn(name = "CUST_ID")
+    Customer customer;
+    ...
+}
+
+@Entity
+public class Customer {
+    @Id
+    @GeneratedValue
+    long id;
+
+    // inverse (unowned) side
+    @OneToMany(mappedBy = Order_.CUSTOMER)
+    @OrderBy
+    List&lt;Order&gt; orders;
+    ...
+}
+</code></pre>
+</div>
 
 <p>The <code>ManyToOne</code> annotation may be used within an embeddable
 class to specify a relationship from the embeddable class to an entity
@@ -103,40 +166,34 @@ relationship. The dot (<code>.</code>) notation syntax must be used in the
 <code>mappedBy</code> element to indicate the relationship attribute within
 the embedded attribute. The value of each identifier used with the dot
 notation is the name of the respective embedded field or property.
-
-<p>Example 1:
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.ManyToOne1"><code class="language-java">@ManyToOne(optional = false)
-@JoinColumn(name = "CUST_ID", nullable = false, updatable = false)
-public Customer getCustomer() { return customer; }
-</code></pre>
-</div>
-
-
-<p>Example 2:
-<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.ManyToOne2"><code class="language-java">@Entity
+<pre class="snippet" id="snippet-jakarta.persistence.ManyToOne4"><code class="language-java">@Entity
 public class Employee {
     @Id
     int id;
+
     @Embedded
-    JobInfo jobInfo;
+    Job job;
     ...
 }
 
 @Embeddable
-public class JobInfo {
-    String jobDescription;
+public class Job {
+    String description;
+
+    // owning side
     @ManyToOne
-    ProgramManager pm; // Bidirectional
+    ProgramManager manager;
 }
 
 @Entity
 public class ProgramManager {
     @Id
     int id;
-    @OneToMany(mappedBy = "jobInfo.pm")
-    Collection&lt;Employee&gt; manages;
+
+    // inverse (unowned) side
+    @OneToMany(mappedBy = "job.manager")
+    Collection&lt;Employee&gt; reports;
 }
 </code></pre>
 </div>
@@ -199,10 +256,12 @@ the association.</div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;</span>&nbsp;<span class="element-name">targetEntity</span></div>
 <div class="block">(Optional) The entity class that is the target of 
-the association. 
+the association. Required if the target entity type
+cannot be inferred from the declared type of the
+annotated field or property.
 
-<p>Defaults to the type of the field or property
-that stores the association.</div>
+<p>Defaults to the declared type of the annotated
+field or property.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>void.class</code></dd>
@@ -218,7 +277,7 @@ that stores the association.</div>
 <div class="block">(Optional) The operations that must be cascaded to 
 the target of the association.
 
-<p>By default no operations are cascaded.</div>
+<p>By default, no operations are cascaded.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>{}</code></dd>
@@ -257,8 +316,16 @@ many-to-one associations.</div>
 <h3>optional</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">optional</span></div>
-<div class="block">(Optional) Whether the association is optional. If set to
-<code>false</code> then a non-null relationship must always exist.
+<div class="block">(Optional) Whether the association is optional.
+<ul>
+<li>By default, the association is optional, and the
+    annotated field or property may be set to a null
+    value.
+<li>When <code>optional=false</code>, a non-null value must
+    be assigned to the non-optional field or property
+    before the persistence provider attempts to write
+    the state of entity instance to the database.
+</ul>
 
 <p>If the annotated field or property is also annotated
 <code>@jakarta.annotation.Nonnull</code>, then <code>optional=false</code>

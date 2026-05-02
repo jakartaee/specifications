@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -76,37 +76,43 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>enum&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../CacheRetrieveMode.html" class="type-name-link" title="enum class in jakarta.persistence">CacheRetrieveMode</a></code></div>
+<div class="col-first even-row-color"><code>final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../BatchSize.html" class="type-name-link" title="class in jakarta.persistence">BatchSize</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Specifies a batch size, that is, how many entities should be
+fetched in each request to the database.</div>
+</div>
+<div class="col-first odd-row-color"><code>enum&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../CacheRetrieveMode.html" class="type-name-link" title="enum class in jakarta.persistence">CacheRetrieveMode</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Specifies how the <a href="../EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> interacts with the
 second-level cache when data is read from the database via
 the <a href="../EntityManager.html#find(java.lang.Class,java.lang.Object,java.util.Map)"><code>EntityManager.find(Class, Object, Map)</code></a> methods and execution of
 queries.</div>
 </div>
-<div class="col-first odd-row-color"><code>enum&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../CacheStoreMode.html" class="type-name-link" title="enum class in jakarta.persistence">CacheStoreMode</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>enum&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../CacheStoreMode.html" class="type-name-link" title="enum class in jakarta.persistence">CacheStoreMode</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Specifies how the <a href="../EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> interacts with the
 second-level cache when data is read from the database and
 when data is written to the database.</div>
 </div>
-<div class="col-first even-row-color"><code>enum&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../LockModeType.html" class="type-name-link" title="enum class in jakarta.persistence">LockModeType</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>enum&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../LockModeType.html" class="type-name-link" title="enum class in jakarta.persistence">LockModeType</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Enumerates the kinds of optimistic or pessimistic lock which may
 be obtained on an entity instance.</div>
 </div>
-<div class="col-first odd-row-color"><code>enum&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../PessimisticLockScope.html" class="type-name-link" title="enum class in jakarta.persistence">PessimisticLockScope</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>enum&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../PessimisticLockScope.html" class="type-name-link" title="enum class in jakarta.persistence">PessimisticLockScope</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Controls how a <a href="../LockModeType.html" title="enum class in jakarta.persistence">pessimistic lock</a>
 applied to an entity affects associated collections and
 relationships.</div>
 </div>
-<div class="col-first even-row-color"><code>class&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../Timeout.html" class="type-name-link" title="class in jakarta.persistence">Timeout</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>class&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../Timeout.html" class="type-name-link" title="class in jakarta.persistence">Timeout</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Specifies a timeout for a database request.</div>
 </div>
 </div>

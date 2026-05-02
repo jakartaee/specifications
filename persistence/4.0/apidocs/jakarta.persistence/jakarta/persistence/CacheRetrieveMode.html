@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -87,13 +87,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
+<dd><code><a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>, <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">CacheRetrieveMode</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&gt;
-implements <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a></span></div>
+implements <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a></span></div>
 <div class="block">Specifies how the <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> interacts with the
 second-level cache when data is read from the database via
 the <a href="EntityManager.html#find(java.lang.Class,java.lang.Object,java.util.Map)"><code>EntityManager.find(Class, Object, Map)</code></a> methods and execution of
@@ -114,7 +114,7 @@ queries.
 <dd>
 <ul class="tag-list-long">
 <li><a href="EntityHandler.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)"><code>EntityHandler.setCacheRetrieveMode(CacheRetrieveMode)</code></a></li>
-<li><a href="Query.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)"><code>Query.setCacheRetrieveMode(CacheRetrieveMode)</code></a></li>
+<li><a href="TypedQuery.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)"><code>TypedQuery.setCacheRetrieveMode(CacheRetrieveMode)</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -213,6 +213,12 @@ This is the default mode.</div>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></span>&nbsp;<span class="element-name">BYPASS</span></div>
 <div class="block">Specifies that data must not be read from the second-level
 cache and must be read from the database.</div>
+<dl class="notes">
+<dt>API note:</dt>
+<dd>When used as a <a href="FetchOption.html" title="interface in jakarta.persistence"><code>FetchOption</code></a>, this value is
+         a hint to the persistence provider, and might be
+         ignored.</dd>
+</dl>
 </div>
 </section>
 </li>

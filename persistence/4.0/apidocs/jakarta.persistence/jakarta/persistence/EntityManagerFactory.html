@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -436,7 +436,7 @@ for the entity manager factory.</div>
 <div class="block">A map keyed by <a href="SqlResultSetMapping.html#name()">name</a>, containing
 a typed <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a> for every result set mapping defined
 <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">in annotations</a> whose inferred result
-type is assignable to the given Java type.</div>
+type is exactly the given Java type.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="SchemaManager.html" title="interface in jakarta.persistence">SchemaManager</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSchemaManager()" class="member-name-link">getSchemaManager</a>()</code></div>
@@ -1078,10 +1078,10 @@ assignable to the given Java type.</div>
 <div class="block">A map keyed by <a href="SqlResultSetMapping.html#name()">name</a>, containing
 a typed <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a> for every result set mapping defined
 <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">in annotations</a> whose inferred result
-type is assignable to the given Java type.</div>
+type is exactly the given Java type.</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><span id="getResultSetMappings(java.lang.Class)-type-param-R"><code>R</code> - the specified upper bound on the query result types</span></dd>
+<dd><span id="getResultSetMappings(java.lang.Class)-type-param-R"><code>R</code> - the specified query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>resultType</code> - any Java type, including <code>Object.class</code>
                   meaning all result set mappings</dd>

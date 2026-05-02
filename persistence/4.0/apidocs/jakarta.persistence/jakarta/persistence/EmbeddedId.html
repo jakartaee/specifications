@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -79,7 +79,11 @@ type, and must be explicitly annotated <a href="Embeddable.html" title="annotati
 <p>If a field or property of an entity class is annotated
 <code>EmbeddedId</code>, then no other field or property of the
 entity may be annotated <a href="Id.html" title="annotation interface in jakarta.persistence"><code>Id</code></a> or <code>EmbeddedId</code>,
-and the entity class must not declare an <a href="IdClass.html" title="annotation interface in jakarta.persistence"><code>IdClass</code></a>.
+and the entity class must not declare an <a href="IdClass.html" title="annotation interface in jakarta.persistence"><code>IdClass</code></a>,
+except in the special case where the <code>EmbeddedId</code>
+represents the composite primary key of a parent entity
+in an entity with a derived identity represented as an
+<code>IdClass</code>.
 
 <p>The embedded primary key type must implement
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html#equals(java.lang.Object)" title="class or interface in java.lang.annotation" class="external-link"><code>Annotation.equals(Object)</code></a> and <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html#hashCode()" title="class or interface in java.lang.annotation" class="external-link"><code>Annotation.hashCode()</code></a>, defining value
@@ -119,17 +123,17 @@ public record EmployeePK(String empName, Date birthDay) {}
 <p>Example 2:
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-jakarta.persistence.EmbeddedId2"><code class="language-java">@Embeddable
-public class DependentId {
-    String name;
+public class PaycheckId {
+    int period;
     EmployeeId empPK;   // corresponds to primary key type of Employee
 }
 
 @Entity
-public class Dependent {
-    // default column name for "name" attribute is overridden
-    @AttributeOverride(name = "name", column = @Column(name = "dep_name"))
+public class Paycheck {
+    // default column name for 'period' attribute is overridden
+    @AttributeOverride(name = "period", column = @Column(name = "pay_period"))
     @EmbeddedId
-    DependentId id;
+    PaycheckId id;
     ...
     @MapsId("empPK")
     @ManyToOne

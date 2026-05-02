@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -83,33 +83,44 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE" title="class or interface in java.lang.annotation" class="external-link">TYPE</a>,<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#METHOD" title="class or interface in java.lang.annotation" class="external-link">METHOD</a>,<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#FIELD" title="class or interface in java.lang.annotation" class="external-link">FIELD</a>,<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#PACKAGE" title="class or interface in java.lang.annotation" class="external-link">PACKAGE</a>})
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">SequenceGenerator</span></div>
-<div class="block">Defines a primary key generator that may be referenced by name when
-a generator element is specified for the <a href="GeneratedValue.html" title="annotation interface in jakarta.persistence"><code>GeneratedValue</code></a>
-annotation. A sequence generator may be specified on the entity
-class or on the primary key field or property. The scope of the
-generator name is global to the persistence unit (across all
-generator types).
+<div class="block">Defines a primary key generator backed by a database sequence.
+This annotation may be applied to:
+<ul>
+<li>an <a href="Entity.html" title="annotation interface in jakarta.persistence">entity</a> class,
+<li>the <a href="Id.html" title="annotation interface in jakarta.persistence">primary key field or property</a> of an
+    entity class, or
+<li>a package descriptor.
+</ul>
 
-<p> If no name is explicitly specified, and the annotation occurs
-on an entity class or primary key attribute of an entity class,
-then the name defaults to the name of the entity.
+<p>Every sequence generator has a <a href="#name()">name()</a>. If this
+annotation occurs on an entity class or primary key attribute
+of an entity class, and the <a href="#name()"><code>name()</code></a> member is not
+explicitly specified by the annotation, the name defaults to
+the name of the annotated entity. The scope of the generator
+name is global to the persistence unit (across all generator
+types).
 
-<p>If no name is explicitly specified, and the annotation occurs
-on a package descriptor, then the annotation defines a recipe for
-producing a default generator when a <a href="GeneratedValue.html" title="annotation interface in jakarta.persistence"><code>GeneratedValue</code></a>
-annotation of any program element in the annotated package has
-<a href="GeneratedValue.html#strategy()"><code>strategy=SEQUENCE</code></a> and a defaulted
-<a href="GeneratedValue.html#generator()">generator name</a>. The name of
-this default generator is the defaulted generator name, and its
-other properties are determined by the members of the package
-<code>SequenceGenerator</code> annotation.
+<p>If this annotation occurs on a package descriptor, and the
+<a href="#name()"><code>name()</code></a> member is not explicitly specified by the
+annotation, then the annotation defines a recipe for producing
+a default generator when a <a href="GeneratedValue.html" title="annotation interface in jakarta.persistence"><code>GeneratedValue</code></a> annotation
+of any program element in the annotated package has
+<a href="GeneratedValue.html#strategy()"><code>strategy=SEQUENCE</code></a> and a
+defaulted <a href="GeneratedValue.html#generator()">generator name</a>.
+The name of this default generator is the defaulted generator
+name, and its other properties are determined by the members
+of the package <code>SequenceGenerator</code> annotation.
 
 <p>Example:
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-jakarta.persistence.SequenceGenerator1"><code class="language-java">@SequenceGenerator(name = "EMP_SEQ", allocationSize = 25)
 </code></pre>
 </div>
-</div>
+
+
+<p>A named generator may be referenced by the
+<a href="GeneratedValue.html#generator()"><code>generator</code></a> element of the
+<a href="GeneratedValue.html" title="annotation interface in jakarta.persistence"><code>GeneratedValue</code></a> annotation.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>

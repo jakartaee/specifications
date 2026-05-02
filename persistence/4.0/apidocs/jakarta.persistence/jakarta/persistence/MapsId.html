@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -77,9 +77,13 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">MapsId</span></div>
 <div class="block">Designates a <a href="ManyToOne.html" title="annotation interface in jakarta.persistence"><code>ManyToOne</code></a> or <a href="OneToOne.html" title="annotation interface in jakarta.persistence"><code>OneToOne</code></a> relationship
-attribute that provides the mapping for an <a href="EmbeddedId.html" title="annotation interface in jakarta.persistence"><code>EmbeddedId</code></a>
-primary key, an attribute within an <code>EmbeddedId</code> primary
-key, or a simple primary key of the parent entity.
+attribute that provides the mapping for
+<ul>
+<li>an <a href="Id.html" title="annotation interface in jakarta.persistence"><code>Id</code></a> or <a href="EmbeddedId.html" title="annotation interface in jakarta.persistence"><code>EmbeddedId</code></a> attribute of an entity
+    with a derived identity, or
+<li>an attribute of the <a href="EmbeddedId.html" title="annotation interface in jakarta.persistence"><code>EmbeddedId</code></a> class of an entity
+    with a derived identity.
+</ul>
 
 <p>The <a href="#value()"><code>value()</code></a> element specifies the attribute within a
 composite key to which the relationship attribute corresponds.
@@ -90,10 +94,13 @@ the <code>value</code> attribute is not specified.
 <p>In this example, the parent entity has simple primary key:
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-jakarta.persistence.MapsId1"><code class="language-java">@Entity
-public class Employee {
+class Employee {
+
     @Id
-    long empId;
+    long id;
+
     String name;
+
     ...
 }
 </code></pre>
@@ -104,31 +111,62 @@ public class Employee {
 declare its composite primary key:
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-jakarta.persistence.MapsId2"><code class="language-java">@Embeddable
-public class DependentId {
-    String name;
-    long empid;  // corresponds to primary key type of Employee
+class PaycheckId {
+    int period;
+    long empId;  // agrees with primary key type of Employee
 }
 
 @Entity
-public class Dependent {
+class Paycheck {
+
     @EmbeddedId
-    DependentId id;
-    ...
-    @MapsId("empid")  // maps the empid attribute of embedded id
+    PaycheckId id;
+
+    @MapsId("empId")  // maps the empId attribute of PaycheckId
     @ManyToOne
     Employee emp;
+
+    ...
 }
 </code></pre>
 </div>
 
 
-<p>
-If a <a href="ManyToOne.html" title="annotation interface in jakarta.persistence"><code>ManyToOne</code></a> or <a href="OneToOne.html" title="annotation interface in jakarta.persistence"><code>OneToOne</code></a> relationship declared by a
-dependent entity is annotated <a href="MapsId.html" title="annotation interface in jakarta.persistence"><code>MapsId</code></a>, an instance of the entity
-cannot be made persistent until the relationship has been assigned a
-reference to an instance of the parent entity, since the identity of
-the dependent entity declaring the relationship is derived from the
-referenced parent entity.</div>
+<p>Alternatively, the dependent entity may use <a href="IdClass.html" title="annotation interface in jakarta.persistence"><code>IdClass</code></a>
+to declare its composite primary key:
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.MapsId3"><code class="language-java">class PaycheckId {
+    int period;
+    long empId;  // agrees with empId field of Paycheck
+}
+
+@Entity
+@IdClass(PaycheckId.class)
+class Paycheck {
+
+    @Id
+    int period;
+
+    @Id
+    long empId;  // agrees with primary key type of Employee
+
+    @MapsId("empId")  // maps the empId attribute
+    @ManyToOne
+    Employee emp;
+
+    ...
+}
+</code></pre>
+</div>
+
+
+<p>If a <a href="ManyToOne.html" title="annotation interface in jakarta.persistence"><code>ManyToOne</code></a> or <a href="OneToOne.html" title="annotation interface in jakarta.persistence"><code>OneToOne</code></a> relationship
+declared by a dependent entity is annotated <a href="MapsId.html" title="annotation interface in jakarta.persistence"><code>MapsId</code></a>,
+an instance of the entity cannot be made persistent until
+the relationship has been assigned a reference to an
+instance of the parent entity, since the identity of the
+dependent entity declaring the relationship is derived from
+the referenced parent entity.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>2.0</dd>

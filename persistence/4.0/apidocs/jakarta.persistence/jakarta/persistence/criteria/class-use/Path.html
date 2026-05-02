@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -77,52 +77,59 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Interface</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../CollectionJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;Z,<wbr>E&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="../BooleanPath.html" class="type-name-link" title="interface in jakarta.persistence.criteria">BooleanPath</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Represents a simple or compound attribute path from a
+bound type or collection, and is a "primitive" expression
+of a boolean type.</div>
+</div>
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../CollectionJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;Z,<wbr>E&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">The <code>CollectionJoin</code> interface is the type of the result of
 joining to a collection over an association or element 
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link"><code>Collection</code></a>.</div>
 </div>
-<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../From.html" class="type-name-link" title="interface in jakarta.persistence.criteria">From</a>&lt;Z,<wbr>X&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../From.html" class="type-name-link" title="interface in jakarta.persistence.criteria">From</a>&lt;Z,<wbr>X&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">Represents a bound type, usually an entity that appears in
 the from clause, but may also be an embeddable belonging to
 an entity in the from clause.</div>
 </div>
-<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../Join.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Join</a>&lt;Z,<wbr>X&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../Join.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Join</a>&lt;Z,<wbr>X&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">A join to an entity, embeddable, or basic type.</div>
 </div>
-<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../ListJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;Z,<wbr>E&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../ListJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;Z,<wbr>E&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">The <code>ListJoin</code> interface is the type of the result of
 joining to a collection over an association or element 
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List</code></a>.</div>
 </div>
-<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../MapJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;Z,<wbr>K,<wbr>V&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../MapJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;Z,<wbr>K,<wbr>V&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">The <code>MapJoin</code> interface is the type of the result of
 joining to a collection over an association or element 
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>.</div>
 </div>
-<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../PluralJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">PluralJoin</a>&lt;Z,<wbr>C,<wbr>E&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../PluralJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">PluralJoin</a>&lt;Z,<wbr>C,<wbr>E&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">The <code>PluralJoin</code> interface defines functionality
 that is common to joins to all collection types.</div>
 </div>
-<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../Root.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../Root.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;</code></div>
+<div class="col-last odd-row-color">
 <div class="block">A root type in the from clause.</div>
 </div>
-<div class="col-first odd-row-color"><code>interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../SetJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;Z,<wbr>E&gt;</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../SetJoin.html" class="type-name-link" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;Z,<wbr>E&gt;</code></div>
+<div class="col-last even-row-color">
 <div class="block">The <code>SetJoin</code> interface is the type of the result of
 joining to a collection over an association or element 
 collection that has been specified as a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>.</div>

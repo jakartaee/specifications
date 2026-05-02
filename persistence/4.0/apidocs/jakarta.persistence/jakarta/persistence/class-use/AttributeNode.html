@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -88,14 +88,20 @@ a new attribute node if there is no existing node.</div>
 <div class="block">Get an existing attribute node for the attribute with the given
 name, or add a new attribute node if there is no existing node.</div>
 </div>
-<div class="col-first even-row-color"><code>&lt;Y&gt;&nbsp;<a href="../AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a><wbr>&lt;Y&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#getAttributeNode(jakarta.persistence.metamodel.Attribute)" class="member-name-link">getAttributeNode</a><wbr>(<a href="../metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="../Graph.html#type-param-T" title="type parameter in Graph">T</a>, Y&gt;&nbsp;attribute)</code></div>
+<div class="col-first even-row-color"><code><a href="../AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a><wbr>&lt;<a href="../AttributeNode.html#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">AttributeNode.</span><code><a href="../AttributeNode.html#addOption(jakarta.persistence.FetchOption)" class="member-name-link">addOption</a><wbr>(<a href="../FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&nbsp;option)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Get an existing attribute node for the given attribute.</div>
+<div class="block">Specify an <a href="../FetchOption.html" title="interface in jakarta.persistence">option</a> controlling
+how this node is fetched.</div>
 </div>
 <div class="col-first odd-row-color"><code>&lt;Y&gt;&nbsp;<a href="../AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a><wbr>&lt;Y&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#getAttributeNode(java.lang.String)" class="member-name-link">getAttributeNode</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#getAttributeNode(jakarta.persistence.metamodel.Attribute)" class="member-name-link">getAttributeNode</a><wbr>(<a href="../metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="../Graph.html#type-param-T" title="type parameter in Graph">T</a>, Y&gt;&nbsp;attribute)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Get an existing attribute node for the given attribute.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;Y&gt;&nbsp;<a href="../AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a><wbr>&lt;Y&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Graph.</span><code><a href="../Graph.html#getAttributeNode(java.lang.String)" class="member-name-link">getAttributeNode</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Get an existing attribute node for the attribute with the given
 name.</div>
 </div>

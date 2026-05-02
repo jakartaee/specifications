@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#annotation-interface-required-element-summary" tabindex="0">Required Element Summary</a></li>
 <li><a href="#annotation-interface-optional-element-summary" tabindex="0">Optional Element Summary</a></li>
 <li><a href="#annotation-interface-element-detail" tabindex="0">Element Details</a>
 <ol class="toc-list">
@@ -82,10 +83,20 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">SqlResultSetMapping</span></div>
 <div class="block">Specifies an explicit mapping of the columns of a result set of a native
 SQL query or stored procedure to <a href="EntityResult.html" title="annotation interface in jakarta.persistence">entity classes</a>,
-<a href="ColumnResult.html" title="annotation interface in jakarta.persistence">scalar values</a>, and <a href="ConstructorResult.html" title="annotation interface in jakarta.persistence">Java class constructors</a>. Every SQL result set mapping has a <a href="#name()"><code>name()</code></a>,
-which may be defaulted, especially when the annotation is applied at the
-method level. SQL result set mapping names must be unique within a
-persistence unit.
+<a href="ColumnResult.html" title="annotation interface in jakarta.persistence">scalar values</a>, and <a href="ConstructorResult.html" title="annotation interface in jakarta.persistence">Java class constructors</a>. Every SQL result set mapping has a <a href="#name()"><code>name()</code></a>.
+SQL result set mapping names must be unique within a persistence unit.
+
+<p>When a SQL result set mapping specifies more than one result mapping,
+each row of the mapped query result set is represented as an instance of
+<code>Object[]</code> whose elements are, in order:
+<ol>
+<li>entity results, in the order in which they are declared by the
+    <a href="#entities()"><code>entities()</code></a> element;
+<li>constructor results, in the order declared by the <a href="#classes()"><code>classes()</code></a>
+    element; and then
+<li>scalar results, in the order declared by the <a href="#columns()"><code>columns()</code></a>
+    element.
+</ol>
 
 <p>In this example, a named mapping is declared by annotating an entity
 class:
@@ -95,9 +106,9 @@ class:
         entities = @EntityResult(
             entityClass = Order.class,
             fields = {
-                @FieldResult(name = "id", column = "order_id"),
-                @FieldResult(name = "total", column = "order_total"),
-                @FieldResult(name = "item", column = "order_item")
+                @FieldResult(name = Order_.ID, column = "order_id"),
+                @FieldResult(name = Order_.TOTAL, column = "order_total"),
+                @FieldResult(name = Order_.ITEM, column = "order_item")
             }
         ),
         columns = @ColumnResult(name = "item_name")
@@ -118,34 +129,13 @@ class of the entity:
                          o.total AS order_total,
                          o.item_id AS order_item,
                          i.desc_name AS item_name
-                  FROM orders o, order_items i
-                  WHERE order_total &gt; 25 AND order_item = i.id
+                  FROM orders o
+                  JOIN order_items i
+                    ON o.id = i.order_id
+                  WHERE o.total &gt; 25
                 """,
                 Order_._orderResults
         ).getResultList();
-</code></pre>
-</div>
-
-
-<p>In this example, a mapping is specified by annotating a method
-which declares a <a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>,
-and the mapping does not need to explicitly specify its name:
-<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.SqlResultSetMapping3"><code class="language-java">@StaticNativeQuery("SELECT * FROM orders WHERE order_total &gt; ?")
-@SqlResultSetMapping(
-    entities = @EntityResult(
-            entityClass = Order.class,
-            fields = {
-                @FieldResult(name = "id", column = "order_id"),
-                @FieldResult(name = "total", column = "order_total"),
-                @FieldResult(name = "item_id", column = "order_item")
-            }
-    )
-)
-List&lt;Order&gt; largeOrders(int threshold) {
-    return entityManager.createQuery(Shop_.largeOrders(threshold))
-            .getResultList();
-}
 </code></pre>
 </div>
 
@@ -157,10 +147,10 @@ to the persistence unit may be obtained by calling
 <a href="EntityManagerFactory.html#getResultSetMappings(java.lang.Class)"><code>EntityManagerFactory.getResultSetMappings(Class)</code></a> or
 from the static metamodel class of the annotated class.
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.SqlResultSetMapping4"><code class="language-java">ResultSetMapping&lt;Order&gt; mapping =
+<pre class="snippet" id="snippet-jakarta.persistence.SqlResultSetMapping3"><code class="language-java">ResultSetMapping&lt;Order&gt; mapping =
         entityManager.getResultSetMappings(Order.class)
              .get(Order_.MAPPING_ORDER_RESULTS);
- *</code></pre>
+</code></pre>
 </div>
 </div>
 <dl class="notes">
@@ -169,10 +159,9 @@ from the static metamodel class of the annotated class.
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list-long">
-<li><a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a></li>
-<li><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a></li>
-<li><a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a></li>
-<li><a href="NamedStoredProcedureQuery.html" title="annotation interface in jakarta.persistence"><code>NamedStoredProcedureQuery</code></a></li>
+<li><a href="NamedNativeQuery.html#resultSetMapping()"><code>NamedNativeQuery.resultSetMapping()</code></a></li>
+<li><a href="NamedStoredProcedureQuery.html#resultSetMappings()"><code>NamedStoredProcedureQuery.resultSetMappings()</code></a></li>
+<li><a href="EntityHandler.html#createNativeQuery(java.lang.String,java.lang.String)"><code>EntityHandler.createNativeQuery(String, String)</code></a></li>
 <li><a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a></li>
 <li><a href="sql/CompoundMapping.html" title="class in jakarta.persistence.sql"><code>CompoundMapping</code></a></li>
 <li><a href="EntityManagerFactory.html#getResultSetMappings(java.lang.Class)"><code>EntityManagerFactory.getResultSetMappings(Class)</code></a></li>
@@ -183,6 +172,23 @@ from the static metamodel class of the annotated class.
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- =========== ANNOTATION INTERFACE REQUIRED MEMBER SUMMARY =========== -->
+<li>
+<section class="member-summary" id="annotation-interface-required-element-summary">
+<h2>Required Element Summary</h2>
+<div class="caption"><span>Required Elements</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Required Element</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">The name given to the result set mapping.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- =========== ANNOTATION INTERFACE OPTIONAL MEMBER SUMMARY =========== -->
 <li>
 <section class="member-summary" id="annotation-interface-optional-element-summary">
@@ -207,13 +213,6 @@ from the static metamodel class of the annotated class.
 <div class="col-last even-row-color">
 <div class="block">Specifies the result set mapping to entities.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">The name given to the result set mapping, and used to
-refer to it in the methods of the <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> and
-<a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> APIs.</div>
-</div>
 </div>
 </section>
 </li>
@@ -231,23 +230,14 @@ refer to it in the methods of the <a href="Query.html" title="interface in jakar
 <h3>name</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">name</span></div>
-<div class="block">The name given to the result set mapping, and used to
-refer to it in the methods of the <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> and
-<a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> APIs. If not specified,
-the name is assigned a default value depending on
-where the annotation occurs.
+<div class="block">The name given to the result set mapping. This name
+identifies the mapping in:
 <ul>
-<li>If the annotation occurs on a type, the name
-defaults to the unqualified name of the type.
-<li>Otherwise, if the annotation occurs on a member
-of a type, the name defaults to the concatenation of
-the unqualified name of the type, with the string
-<code>"."</code>, and the name of the annotated member.
+<li>methods of <a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> and
+    <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a>, and
+<li>in <a href="NamedNativeQuery.html#resultSetMapping()"><code>NamedNativeQuery.resultSetMapping()</code></a> and
+    <a href="NamedStoredProcedureQuery.html#resultSetMappings()"><code>NamedStoredProcedureQuery.resultSetMappings()</code></a>.
 </ul></div>
-<dl class="notes">
-<dt>Default:</dt>
-<dd><code>""</code></dd>
-</dl>
 </div>
 </section>
 </li>

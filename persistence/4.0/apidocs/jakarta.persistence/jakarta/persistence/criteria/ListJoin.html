@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -61,7 +61,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#on(jakarta.persistence.criteria.Expression)" tabindex="0">on(Expression)</a></li>
-<li><a href="#on(jakarta.persistence.criteria.Predicate...)" tabindex="0">on(Predicate...)</a></li>
+<li><a href="#on(jakarta.persistence.criteria.BooleanExpression...)" tabindex="0">on(BooleanExpression...)</a></li>
 <li><a href="#getModel()" tabindex="0">getModel()</a></li>
 <li><a href="#index()" tabindex="0">index()</a></li>
 </ol>
@@ -122,13 +122,13 @@ the object in the referenced association or element
 collection.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a><wbr>&lt;<a href="#type-param-Z" title="type parameter in ListJoin">Z</a>,<wbr><a href="#type-param-E" title="type parameter in ListJoin">E</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#on(jakarta.persistence.criteria.Expression)" class="member-name-link">on</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#on(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">on</a><wbr>(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Modify the join to restrict the result according to the
 specified ON condition and return the join object.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a><wbr>&lt;<a href="#type-param-Z" title="type parameter in ListJoin">Z</a>,<wbr><a href="#type-param-E" title="type parameter in ListJoin">E</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#on(jakarta.persistence.criteria.Predicate...)" class="member-name-link">on</a><wbr>(<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#on(jakarta.persistence.criteria.Expression)" class="member-name-link">on</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Modify the join to restrict the result according to the
 specified ON condition and return the join object.</div>
@@ -138,7 +138,7 @@ specified ON condition and return the join object.</div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Expression">Methods inherited from interface&nbsp;<a href="Expression.html#method-summary" title="interface in jakarta.persistence.criteria">Expression</a></h3>
-<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a></code></div>
+<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#coalesce(jakarta.persistence.criteria.Expression)" title="coalesce(Expression)">coalesce</a>, <a href="Expression.html#coalesce(T)" title="coalesce(E)">coalesce</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#nullif(jakarta.persistence.criteria.Expression)" title="nullif(Expression)">nullif</a>, <a href="Expression.html#nullif(T)" title="nullif(E)">nullif</a>, <a href="Expression.html#selectCase()" title="selectCase()">selectCase</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.FetchParent">Methods inherited from interface&nbsp;<a href="FetchParent.html#method-summary" title="interface in jakarta.persistence.criteria">FetchParent</a></h3>
 <code><a href="FetchParent.html#fetch(jakarta.persistence.metamodel.PluralAttribute)" title="fetch(PluralAttribute)">fetch</a>, <a href="FetchParent.html#fetch(jakarta.persistence.metamodel.PluralAttribute,jakarta.persistence.criteria.JoinType)" title="fetch(PluralAttribute, JoinType)">fetch</a>, <a href="FetchParent.html#fetch(jakarta.persistence.metamodel.SingularAttribute)" title="fetch(SingularAttribute)">fetch</a>, <a href="FetchParent.html#fetch(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.JoinType)" title="fetch(SingularAttribute, JoinType)">fetch</a>, <a href="FetchParent.html#fetch(java.lang.String)" title="fetch(String)">fetch</a>, <a href="FetchParent.html#fetch(java.lang.String,jakarta.persistence.criteria.JoinType)" title="fetch(String, JoinType)">fetch</a>, <a href="FetchParent.html#getFetches()" title="getFetches()">getFetches</a></code></div>
@@ -150,7 +150,7 @@ specified ON condition and return the join object.</div>
 <code><a href="Join.html#getAttribute()" title="getAttribute()">getAttribute</a>, <a href="Join.html#getJoinType()" title="getJoinType()">getJoinType</a>, <a href="Join.html#getOn()" title="getOn()">getOn</a>, <a href="Join.html#getParent()" title="getParent()">getParent</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Path">Methods inherited from interface&nbsp;<a href="Path.html#method-summary" title="interface in jakarta.persistence.criteria">Path</a></h3>
-<code><a href="Path.html#get(jakarta.persistence.metamodel.MapAttribute)" title="get(MapAttribute)">get</a>, <a href="Path.html#get(jakarta.persistence.metamodel.PluralAttribute)" title="get(PluralAttribute)">get</a>, <a href="Path.html#get(jakarta.persistence.metamodel.SingularAttribute)" title="get(SingularAttribute)">get</a>, <a href="Path.html#get(java.lang.String)" title="get(String)">get</a>, <a href="Path.html#getParentPath()" title="getParentPath()">getParentPath</a>, <a href="Path.html#type()" title="type()">type</a></code></div>
+<code><a href="Path.html#get(jakarta.persistence.metamodel.BooleanAttribute)" title="get(BooleanAttribute)">get</a>, <a href="Path.html#get(jakarta.persistence.metamodel.ComparableAttribute)" title="get(ComparableAttribute)">get</a>, <a href="Path.html#get(jakarta.persistence.metamodel.MapAttribute)" title="get(MapAttribute)">get</a>, <a href="Path.html#get(jakarta.persistence.metamodel.NumericAttribute)" title="get(NumericAttribute)">get</a>, <a href="Path.html#get(jakarta.persistence.metamodel.PluralAttribute)" title="get(PluralAttribute)">get</a>, <a href="Path.html#get(jakarta.persistence.metamodel.SingularAttribute)" title="get(SingularAttribute)">get</a>, <a href="Path.html#get(jakarta.persistence.metamodel.TemporalAttribute)" title="get(TemporalAttribute)">get</a>, <a href="Path.html#get(jakarta.persistence.metamodel.TextAttribute)" title="get(TextAttribute)">get</a>, <a href="Path.html#get(java.lang.String)" title="get(String)">get</a>, <a href="Path.html#getParentPath()" title="getParentPath()">getParentPath</a>, <a href="Path.html#type()" title="type()">type</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Selection">Methods inherited from interface&nbsp;<a href="Selection.html#method-summary" title="interface in jakarta.persistence.criteria">Selection</a></h3>
 <code><a href="Selection.html#alias(java.lang.String)" title="alias(String)">alias</a>, <a href="Selection.html#getCompoundSelectionItems()" title="getCompoundSelectionItems()">getCompoundSelectionItems</a>, <a href="Selection.html#isCompoundSelection()" title="isCompoundSelection()">isCompoundSelection</a></code></div>
@@ -190,16 +190,16 @@ Replaces the previous ON condition, if any.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="on(jakarta.persistence.criteria.Predicate...)">
+<section class="detail" id="on(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>on</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-Z" title="type parameter in ListJoin">Z</a>,<wbr><a href="#type-param-E" title="type parameter in ListJoin">E</a>&gt;</span>&nbsp;<span class="element-name">on</span><wbr><span class="parameters">(<a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-Z" title="type parameter in ListJoin">Z</a>,<wbr><a href="#type-param-E" title="type parameter in ListJoin">E</a>&gt;</span>&nbsp;<span class="element-name">on</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Modify the join to restrict the result according to the
 specified ON condition and return the join object.  
 Replaces the previous ON condition, if any.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Join.html#on(jakarta.persistence.criteria.Predicate...)">on</a></code>&nbsp;in interface&nbsp;<code><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-Z" title="type parameter in ListJoin">Z</a>,<wbr><a href="#type-param-E" title="type parameter in ListJoin">E</a>&gt;</code></dd>
+<dd><code><a href="Join.html#on(jakarta.persistence.criteria.BooleanExpression...)">on</a></code>&nbsp;in interface&nbsp;<code><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-Z" title="type parameter in ListJoin">Z</a>,<wbr><a href="#type-param-E" title="type parameter in ListJoin">E</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>restrictions</code> - zero or more restriction predicates</dd>
 <dt>Returns:</dt>

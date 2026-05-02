@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -78,7 +78,6 @@ loadScripts(document, 'script');</script>
 <li><a href="#getProperties()" tabindex="0">getProperties()</a></li>
 <li><a href="#createStatement(java.lang.String)" tabindex="0">createStatement(String)</a></li>
 <li><a href="#createQuery(java.lang.String)" tabindex="0">createQuery(String)</a></li>
-<li><a href="#createQuery(jakarta.persistence.criteria.CriteriaQuery)" tabindex="0">createQuery(CriteriaQuery)</a></li>
 <li><a href="#createQuery(jakarta.persistence.criteria.CriteriaSelect)" tabindex="0">createQuery(CriteriaSelect)</a></li>
 <li><a href="#createStatement(jakarta.persistence.criteria.CriteriaStatement)" tabindex="0">createStatement(CriteriaStatement)</a></li>
 <li><a href="#createQuery(java.lang.String,java.lang.Class)" tabindex="0">createQuery(String, Class)</a></li>
@@ -185,6 +184,10 @@ the database. However, any such operation must respect:
 the entity is available in the persistence context or in the
 second-level cache.
 
+<p>Use of the second-level cache, if any, may be controlled
+by calling <a href="#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)"><code>setCacheRetrieveMode(CacheRetrieveMode)</code></a>
+and <a href="#setCacheStoreMode(jakarta.persistence.CacheStoreMode)"><code>setCacheStoreMode(CacheStoreMode)</code></a>.
+
 <p>Outside the Jakarta EE container environment, the safest
 and simplest way to obtain an <code>EntityHandler</code> is by
 calling <a href="EntityManagerFactory.html#runInTransaction(java.util.function.Consumer)"><code>EntityManagerFactory.runInTransaction(Consumer)</code></a> or
@@ -232,14 +235,12 @@ underlying this <code>EntityHandler</code>.</div>
 <div class="block">Create a new mutable <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>, allowing programmatic
 definition of the graph.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createNamedQuery(java.lang.String)" class="member-name-link">createNamedQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a named
-query written in the Jakarta Persistence query language,
-usually an <code>UPDATE</code> or <code>DELETE</code> statement, or
-in native SQL, usually an <code>INSERT</code>, <code>UPDATE</code>,
-<code>MERGE</code>, or <code>DELETE</code> statement.</div>
+<div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> for
+executing a named query written in the Jakarta Persistence
+query language or in native SQL.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createNamedQuery(java.lang.String,java.lang.Class)" class="member-name-link">createNamedQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
@@ -263,13 +264,11 @@ SQL statement which returns a row count.</div>
 <div class="block">Create an instance of <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing
 a stored procedure in the database.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createNativeQuery(java.lang.String)" class="member-name-link">createNativeQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a
-native SQL statement, usually an <code>INSERT</code>,
-<code>UPDATE</code>, <code>MERGE</code>, or <code>DELETE</code>
-statement.</div>
+<div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> for
+executing a native SQL query or statement.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createNativeQuery(java.lang.String,jakarta.persistence.sql.ResultSetMapping)" class="member-name-link">createNativeQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
@@ -287,13 +286,14 @@ the JDBC result set.</div>
 SQL query which produces a result set, returning instances of the
 given result class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createNativeQuery(java.lang.String,java.lang.String)" class="member-name-link">createNativeQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;resultSetMapping)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a native SQL
-query, using the <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">mapping</a> with
-the given <a href="SqlResultSetMapping.html#name()">name</a> to interpret
+<div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> for
+executing a native SQL query, using the named
+<a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">result set mapping</a> with the
+given <a href="SqlResultSetMapping.html#name()">name</a> to interpret
 the JDBC result set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
@@ -305,99 +305,94 @@ an <code>INSERT</code>, <code>UPDATE</code>, <code>MERGE</code>, or
 <code>DELETE</code> statement.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(jakarta.persistence.criteria.CriteriaQuery)" class="member-name-link">createQuery</a><wbr>(<a href="criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;T&gt;&nbsp;criteriaQuery)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(jakarta.persistence.criteria.CriteriaSelect)" class="member-name-link">createQuery</a><wbr>(<a href="criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">CriteriaSelect</a>&lt;T&gt;&nbsp;selectQuery)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
-<a href="criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria">criteria query</a>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(jakarta.persistence.criteria.CriteriaSelect)" class="member-name-link">createQuery</a><wbr>(<a href="criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">CriteriaSelect</a>&lt;T&gt;&nbsp;selectQuery)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
 <a href="criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">criteria select</a>, which may be
-a union or intersection of top-level queries.</div>
+top-level query or a union or intersection of top-level
+queries.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(jakarta.persistence.TypedQueryReference)" class="member-name-link">createQuery</a><wbr>(<a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;T&gt;&nbsp;reference)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(jakarta.persistence.TypedQueryReference)" class="member-name-link">createQuery</a><wbr>(<a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;T&gt;&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
 typed named query written in the Jakarta Persistence query
 language or in native SQL.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(java.lang.String)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a
-Jakarta Persistence query language statement, usually
-an <code>UPDATE</code> or <code>DELETE</code> statement.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(java.lang.String,jakarta.persistence.EntityGraph)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
- <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;resultGraph)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(java.lang.String)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a>
+for executing a Jakarta Persistence query language
+statement.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(java.lang.String,jakarta.persistence.EntityGraph)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
+ <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;resultGraph)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing
 a Jakarta Persistence query language <code>SELECT</code>
 statement, specifying an <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> which is
 interpreted as a load graph.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(java.lang.String,java.lang.Class)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createQuery(java.lang.String,java.lang.Class)" class="member-name-link">createQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;resultClass)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing
 a Jakarta Persistence query language <code>SELECT</code>
 statement and returning instances of the given result
 class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStatement(jakarta.persistence.criteria.CriteriaStatement)" class="member-name-link">createStatement</a><wbr>(<a href="criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&nbsp;statement)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStatement(jakarta.persistence.criteria.CriteriaStatement)" class="member-name-link">createStatement</a><wbr>(<a href="criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&nbsp;statement)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a
 <a href="criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">criteria statement</a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStatement(jakarta.persistence.StatementReference)" class="member-name-link">createStatement</a><wbr>(<a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&nbsp;reference)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStatement(jakarta.persistence.StatementReference)" class="member-name-link">createStatement</a><wbr>(<a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a named
 statement written in the Jakarta Persistence query language or
 in native SQL.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStatement(java.lang.String)" class="member-name-link">createStatement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStatement(java.lang.String)" class="member-name-link">createStatement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a
 Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
 statement.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStoredProcedureQuery(java.lang.String)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStoredProcedureQuery(java.lang.String)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing a
 stored procedure in the database.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStoredProcedureQuery(java.lang.String,java.lang.Class...)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStoredProcedureQuery(java.lang.String,java.lang.Class...)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;...&nbsp;resultClasses)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing
 a stored procedure in the database, explicitly specifying the
 result class for every result set returned by the stored procedure.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStoredProcedureQuery(java.lang.String,java.lang.String...)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStoredProcedureQuery(java.lang.String,java.lang.String...)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;resultSetMappings)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create an instance of <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing
 a stored procedure in the database, explicitly specifying the
 <a href="SqlResultSetMapping.html#name()">name</a> of a result set
 <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">mapping</a> for every result set
 returned by the stored procedure.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#find(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)" class="member-name-link">find</a><wbr>(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#find(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)" class="member-name-link">find</a><wbr>(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id,
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve an instance of the root entity of the given
 <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> representing the record with the
 given identifier, or return <code>null</code> if there is
@@ -405,29 +400,29 @@ no such record in the database, using the specified
 <a href="FindOption.html" title="interface in jakarta.persistence">options</a> and interpreting the
 <code>EntityGraph</code> as a load graph.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#find(java.lang.Class,java.lang.Object)" class="member-name-link">find</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#find(java.lang.Class,java.lang.Object)" class="member-name-link">find</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve an entity representing the record with the
 given identifier, or return <code>null</code> if there is
 no such record in the database.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#find(java.lang.Class,java.lang.Object,jakarta.persistence.FindOption...)" class="member-name-link">find</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#find(java.lang.Class,java.lang.Object,jakarta.persistence.FindOption...)" class="member-name-link">find</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id,
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve an entity representing the record with the
 given identifier, or return <code>null</code> if there is
 no such record in the database, using the specified
 <a href="FindOption.html" title="interface in jakarta.persistence">options</a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#findMultiple(jakarta.persistence.EntityGraph,java.util.List,jakarta.persistence.FindOption...)" class="member-name-link">findMultiple</a><wbr>(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#findMultiple(jakarta.persistence.EntityGraph,java.util.List,jakarta.persistence.FindOption...)" class="member-name-link">findMultiple</a><wbr>(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;ids,
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve entity instances representing the records with
 the given identifiers of the root entity of the given
 <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>, using the specified
@@ -438,11 +433,11 @@ in the list matches the position of its identifier in
 the given array, and the list contains a null value
 if there is no record matching a given identifier.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#findMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)" class="member-name-link">findMultiple</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#findMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)" class="member-name-link">findMultiple</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;ids,
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve entity instances representing the records
 with the given identifiers, using the specified
 <a href="FindOption.html" title="interface in jakarta.persistence">options</a>, returning the
@@ -451,84 +446,84 @@ in the list matches the position of its identifier in
 the given array, and the list contains a null value
 if there is no record matching a given identifier.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)" class="member-name-link">get</a><wbr>(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)" class="member-name-link">get</a><wbr>(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id,
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve an entity representing the record with the
 given identifier, fetching associations specified by
 the given <a href="EntityGraph.html" title="interface in jakarta.persistence">load graph</a>, and
 using the specified <a href="FindOption.html" title="interface in jakarta.persistence">options</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(java.lang.Class,java.lang.Object)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(java.lang.Class,java.lang.Object)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve an entity representing the record with the
 given identifier.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(java.lang.Class,java.lang.Object,jakarta.persistence.FindOption...)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(java.lang.Class,java.lang.Object,jakarta.persistence.FindOption...)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id,
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve an entity representing the record with the
 given identifier, using the specified
 <a href="FindOption.html" title="interface in jakarta.persistence">options</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The cache retrieval mode for this <code>EntityHandler</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheStoreMode()" class="member-name-link">getCacheStoreMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheStoreMode()" class="member-name-link">getCacheStoreMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The cache storage mode for this <code>EntityHandler</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCriteriaBuilder()" class="member-name-link">getCriteriaBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCriteriaBuilder()" class="member-name-link">getCriteriaBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Obtain an instance of <a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria"><code>CriteriaBuilder</code></a> which may be
 used to construct <a href="criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria"><code>CriteriaQuery</code></a> objects.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntityGraph(java.lang.Class,java.lang.String)" class="member-name-link">getEntityGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;rootType,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntityGraph(java.lang.Class,java.lang.String)" class="member-name-link">getEntityGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;rootType,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;graphName)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Obtain a mutable copy of the named <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>
 whose root type is exactly the given entity type.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntityGraph(java.lang.String)" class="member-name-link">getEntityGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;graphName)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntityGraph(java.lang.String)" class="member-name-link">getEntityGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;graphName)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Obtain a mutable copy of the named <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? super T&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntityGraphs(java.lang.Class)" class="member-name-link">getEntityGraphs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? super T&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntityGraphs(java.lang.Class)" class="member-name-link">getEntityGraphs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return all named <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>s that are defined for
 the given entity class type.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntityManagerFactory()" class="member-name-link">getEntityManagerFactory</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntityManagerFactory()" class="member-name-link">getEntityManagerFactory</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <a href="EntityManagerFactory.html" title="interface in jakarta.persistence">entity manager factory</a>
 which created this <code>EntityHandler</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel">Metamodel</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMetamodel()" class="member-name-link">getMetamodel</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel">Metamodel</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMetamodel()" class="member-name-link">getMetamodel</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Obtain an instance of the <a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel"><code>Metamodel</code></a> interface which
 provides access to metamodel objects describing the managed
 types belonging to the persistence unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMultiple(jakarta.persistence.EntityGraph,java.util.List,jakarta.persistence.FindOption...)" class="member-name-link">getMultiple</a><wbr>(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMultiple(jakarta.persistence.EntityGraph,java.util.List,jakarta.persistence.FindOption...)" class="member-name-link">getMultiple</a><wbr>(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;ids,
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve entity instances representing the records with
 the given identifiers of the root entity of the given
 <a href="EntityGraph.html" title="interface in jakarta.persistence">load graph</a>, using the specified
@@ -538,11 +533,11 @@ in the list matches the position of its identifier in
 the given array, and fetching associations specified by
 the load graph.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)" class="member-name-link">getMultiple</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)" class="member-name-link">getMultiple</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;ids,
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieve entity instances representing the records
 with the given identifiers, using the specified
 <a href="FindOption.html" title="interface in jakarta.persistence">options</a>, and returning the
@@ -550,49 +545,49 @@ instances in a list where the position of an instance
 in the list matches the position of its identifier in
 the given array.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProperties()" class="member-name-link">getProperties</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProperties()" class="member-name-link">getProperties</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The properties and hints and their associated values which
 are in effect for this <code>EntityHandler</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityTransaction.html" title="interface in jakarta.persistence">EntityTransaction</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTransaction()" class="member-name-link">getTransaction</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityTransaction.html" title="interface in jakarta.persistence">EntityTransaction</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTransaction()" class="member-name-link">getTransaction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the resource-level <a href="EntityTransaction.html" title="interface in jakarta.persistence"><code>EntityTransaction</code></a> object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isOpen()" class="member-name-link">isOpen</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isOpen()" class="member-name-link">isOpen</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Determine whether the <code>EntityHandler</code> is open.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;C&gt;&nbsp;void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#runWithConnection(jakarta.persistence.ConnectionConsumer)" class="member-name-link">runWithConnection</a><wbr>(<a href="ConnectionConsumer.html" title="interface in jakarta.persistence">ConnectionConsumer</a>&lt;C&gt;&nbsp;action)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;C&gt;&nbsp;void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#runWithConnection(jakarta.persistence.ConnectionConsumer)" class="member-name-link">runWithConnection</a><wbr>(<a href="ConnectionConsumer.html" title="interface in jakarta.persistence">ConnectionConsumer</a>&lt;C&gt;&nbsp;action)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Execute the given action using the database connection underlying this
 <code>EntityHandler</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)" class="member-name-link">setCacheRetrieveMode</a><wbr>(<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)" class="member-name-link">setCacheRetrieveMode</a><wbr>(<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set the default <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieval
 mode</a> for this <code>EntityHandler</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCacheStoreMode(jakarta.persistence.CacheStoreMode)" class="member-name-link">setCacheStoreMode</a><wbr>(<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCacheStoreMode(jakarta.persistence.CacheStoreMode)" class="member-name-link">setCacheStoreMode</a><wbr>(<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set the default <a href="CacheStoreMode.html" title="enum class in jakarta.persistence">cache storage mode</a>
 for this <code>EntityHandler</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProperty(java.lang.String,java.lang.Object)" class="member-name-link">setProperty</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProperty(java.lang.String,java.lang.Object)" class="member-name-link">setProperty</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set an <code>EntityHandler</code>-scoped property or hint.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unwrap(java.lang.Class)" class="member-name-link">unwrap</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unwrap(java.lang.Class)" class="member-name-link">unwrap</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return an object of the specified type to allow access to
 a provider-specific API.</div>
 </div>
@@ -1254,10 +1249,10 @@ statement.</div>
 <section class="detail" id="createQuery(java.lang.String)">
 <h3>createQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Query.html" title="interface in jakarta.persistence">Query</a></span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</span></div>
-<div class="block">Create an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a
-Jakarta Persistence query language statement, usually
-an <code>UPDATE</code> or <code>DELETE</code> statement.
+<div class="member-signature"><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</span></div>
+<div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a>
+for executing a Jakarta Persistence query language
+statement.
 <p>If the given query is a <code>SELECT</code> statement,
 the query results might be packaged as arrays:
 <ul>
@@ -1274,8 +1269,10 @@ the query results might be packaged as arrays:
 <dt>Parameters:</dt>
 <dd><code>qlString</code> - A Jakarta Persistence query string</dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
-        to execute the given query</dd>
+<dd>An instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a>
+        which may be used to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>
+        or <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or to directly execute the
+        given query or statement</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the query string is
         found to be invalid</dd>
@@ -1290,33 +1287,11 @@ should call:
 <li>an overload which specifies a
     <a href="#createQuery(java.lang.String,java.lang.Class)">result class</a>
     or <a href="#createQuery(java.lang.String,jakarta.persistence.EntityGraph)">entity graph</a> obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>, or
-<li><a href="Query.html#asStatement()"><code>asStatement()</code></a> or
-    <a href="Query.html#ofType(java.lang.Class)"><code>ofType()</code></a> to obtain a
-    <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>, respectively,
-    from the object returned by this method.
+<li><a href="StatementOrTypedQuery.html#asStatement()"><code>asStatement()</code></a>
+    or <a href="StatementOrTypedQuery.html#ofType(java.lang.Class)"><code>ofType()</code></a>
+    to obtain a <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>,
+    respectively, from the object returned by this method.
 </ul></dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="createQuery(jakarta.persistence.criteria.CriteriaQuery)">
-<h3>createQuery</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(<a href="criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;T&gt;&nbsp;criteriaQuery)</span></div>
-<div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
-<a href="criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria">criteria query</a>.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>criteriaQuery</code> - A criteria query object</dd>
-<dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
-        to execute the given query</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the criteria query is
-        found to be invalid</dd>
-<dt>Since:</dt>
-<dd>2.0</dd>
 </dl>
 </div>
 </section>
@@ -1328,12 +1303,13 @@ should call:
 <div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(<a href="criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">CriteriaSelect</a>&lt;T&gt;&nbsp;selectQuery)</span></div>
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
 <a href="criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">criteria select</a>, which may be
-a union or intersection of top-level queries.</div>
+top-level query or a union or intersection of top-level
+queries.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>selectQuery</code> - A criteria select query object</dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
+<dd>An instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> which may be used
         to execute the given query</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the criteria query is
@@ -1379,7 +1355,8 @@ class. Either:
 <ol>
 <li>the select list of the query contains only a single
     item, which must be assignable to the result class,
-<li>the result class is <code>Object[].class</code>, or
+<li>the result class is <code>Object[].class</code> or
+    <a href="Tuple.html" title="interface in jakarta.persistence"><code>Tuple.class</code></a>, or
 <li>the result class is a non-abstract class or record
     type with a constructor with the same number of
     parameters as the query has items in its select list,
@@ -1390,7 +1367,10 @@ class. Either:
 directly to the caller. In the second case, each query
 result is packaged in an array with the array elements
 corresponding by position with the items of the query
-select list. In the third case, each query result is
+select list or in an instance of <a href="Tuple.html" title="interface in jakarta.persistence"><code>Tuple</code></a> with the
+indices and aliases of the tuple elements determined by
+the positions and aliases of the corresponding items in
+the select list. In the third case, each query result is
 automatically packaged in a new instance of the result
 class by calling the matching constructor.</div>
 <dl class="notes">
@@ -1398,7 +1378,7 @@ class by calling the matching constructor.</div>
 <dd><code>qlString</code> - A Jakarta Persistence query string</dd>
 <dd><code>resultClass</code> - The result class</dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
+<dd>An instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> which may be used
         to execute the given query</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the query string is
@@ -1429,7 +1409,7 @@ assignable to the root type of the given entity graph.</div>
 <dd><code>qlString</code> - A Jakarta Persistence query string</dd>
 <dd><code>resultGraph</code> - The <a href="EntityGraph.html" title="interface in jakarta.persistence">load graph</a></dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
+<dd>An instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> which may be used
         to execute the given query</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the query string is
@@ -1479,12 +1459,10 @@ SQL statement which returns a row count.</div>
 <section class="detail" id="createNamedQuery(java.lang.String)">
 <h3>createNamedQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Query.html" title="interface in jakarta.persistence">Query</a></span>&nbsp;<span class="element-name">createNamedQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block">Create an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a named
-query written in the Jakarta Persistence query language,
-usually an <code>UPDATE</code> or <code>DELETE</code> statement, or
-in native SQL, usually an <code>INSERT</code>, <code>UPDATE</code>,
-<code>MERGE</code>, or <code>DELETE</code> statement.
+<div class="member-signature"><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createNamedQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> for
+executing a named query written in the Jakarta Persistence
+query language or in native SQL.
 <ul>
 <li>If the named query is a <code>SELECT</code> statement
     written in the Jakarta Persistence query language,
@@ -1502,12 +1480,14 @@ in native SQL, usually an <code>INSERT</code>, <code>UPDATE</code>,
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of a query defined in metadata</dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
-        to execute the given query</dd>
+<dd>An instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> which
+        may be used to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> or
+        <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or to directly execute the
+        given query or statement</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if a query has not been
-        defined with the given name, or if the query string is
-        found to be invalid</dd>
+        defined with the given name, or if the query string
+        is found to be invalid</dd>
 <dt>Since:</dt>
 <dd>1.0</dd>
 <dt>See Also:</dt>
@@ -1517,6 +1497,22 @@ in native SQL, usually an <code>INSERT</code>, <code>UPDATE</code>,
 <li><a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a></li>
 </ul>
 </dd>
+<dt>API note:</dt>
+<dd>For backward compatibility, the returned object
+may be used to directly execute any kind of statement or
+query via its deprecated methods. Newly written code
+should call:
+<ul>
+<li><a href="#createNamedStatement(java.lang.String)"><code>createNamedStatement(String)</code></a> to obtain a
+<a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a>,
+<li>the overload which specifies a
+    <a href="#createNamedQuery(java.lang.String,java.lang.Class)">result
+    class</a> to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>, or
+<li><a href="StatementOrTypedQuery.html#asStatement()"><code>asStatement()</code></a>
+    or <a href="StatementOrTypedQuery.html#ofType(java.lang.Class)"><code>ofType()</code></a>
+    to obtain a <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>,
+    respectively, from the object returned by this method.
+</ul></dd>
 </dl>
 </div>
 </section>
@@ -1546,7 +1542,7 @@ annotation which declares the named query.</div>
 <dd><code>name</code> - The name of a query defined in metadata</dd>
 <dd><code>resultClass</code> - The type of the query result</dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
+<dd>An instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> which may be used
         to execute the given query</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if a query has not been
@@ -1660,11 +1656,9 @@ an <code>INSERT</code>, <code>UPDATE</code>, <code>MERGE</code>, or
 <section class="detail" id="createNativeQuery(java.lang.String)">
 <h3>createNativeQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Query.html" title="interface in jakarta.persistence">Query</a></span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</span></div>
-<div class="block">Create an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a
-native SQL statement, usually an <code>INSERT</code>,
-<code>UPDATE</code>, <code>MERGE</code>, or <code>DELETE</code>
-statement.
+<div class="member-signature"><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</span></div>
+<div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> for
+executing a native SQL query or statement.
 <p>If the given query produces a result set, the query
 results might be packaged as arrays:
 <ul>
@@ -1683,16 +1677,28 @@ type mappings defined by the JDBC specification.</div>
 <dt>Parameters:</dt>
 <dd><code>sqlString</code> - A native SQL query string</dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
-        to execute the given query</dd>
+<dd>An instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> which
+        may be used to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> or
+        <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or to directly execute the
+        given query or statement</dd>
 <dt>Since:</dt>
 <dd>1.0</dd>
 <dt>API note:</dt>
-<dd>This overload is most appropriate when used to
-execute a statement which returns a row count. For a
-<code>SELECT</code> statement, an overload which specifies a
-<a href="#createNativeQuery(java.lang.String,java.lang.Class)">result class</a>
-or <a href="#createNativeQuery(java.lang.String,jakarta.persistence.sql.ResultSetMapping)">result set mapping</a> is usually more appropriate.</dd>
+<dd>For backward compatibility, the returned object
+may be used to directly execute any kind of statement or
+query via its deprecated methods. Newly written code
+should call:
+<ul>
+<li><a href="#createNativeStatement(java.lang.String)"><code>createNativeStatement(String)</code></a> to obtain a
+<a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a>,
+<li>the overload which specifies a
+    <a href="#createNativeQuery(java.lang.String,java.lang.Class)">result
+    class</a> to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>, or
+<li><a href="StatementOrTypedQuery.html#asStatement()"><code>asStatement()</code></a>
+    or <a href="StatementOrTypedQuery.html#ofType(java.lang.Class)"><code>ofType()</code></a>
+    to obtain a <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>,
+    respectively, from the object returned by this method.
+</ul></dd>
 </dl>
 </div>
 </section>
@@ -1731,7 +1737,7 @@ given result class. Either:
 <dd><code>sqlString</code> - A native SQL query string</dd>
 <dd><code>resultClass</code> - The type of the query result</dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
+<dd>An instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> which may be used
         to execute the given query</dd>
 <dt>Since:</dt>
 <dd>1.0</dd>
@@ -1743,19 +1749,21 @@ given result class. Either:
 <section class="detail" id="createNativeQuery(java.lang.String,java.lang.String)">
 <h3>createNativeQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Query.html" title="interface in jakarta.persistence">Query</a></span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
+<div class="member-signature"><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;resultSetMapping)</span></div>
-<div class="block">Create an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> for executing a native SQL
-query, using the <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">mapping</a> with
-the given <a href="SqlResultSetMapping.html#name()">name</a> to interpret
+<div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> for
+executing a native SQL query, using the named
+<a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">result set mapping</a> with the
+given <a href="SqlResultSetMapping.html#name()">name</a> to interpret
 the JDBC result set.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>sqlString</code> - A native SQL query string</dd>
 <dd><code>resultSetMapping</code> - The name of the result set mapping</dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
-        to execute the given query</dd>
+<dd>An instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> which
+        may be used to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> or to
+        directly execute the given query</dd>
 <dt>Since:</dt>
 <dd>1.0</dd>
 <dt>See Also:</dt>
@@ -1765,10 +1773,18 @@ the JDBC result set.</div>
 </ul>
 </dd>
 <dt>API note:</dt>
-<dd>Use of this overloaded form of the method results in a
-type cast of each query result in client code. As an alternative,
-obtain a typed reference to the mapping from the static metamodel
-and use <a href="#createNativeQuery(java.lang.String,jakarta.persistence.sql.ResultSetMapping)"><code>createNativeQuery(String, ResultSetMapping)</code></a>.</dd>
+<dd>For backward compatibility, the returned object
+may be used to directly execute a query via its deprecated
+methods. Newly written code should call:
+<ul>
+<li>the overload which specifies a typed
+    <a href="#createNativeQuery(java.lang.String,jakarta.persistence.sql.ResultSetMapping)">result set mapping</a> to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>, or
+<li><a href="StatementOrTypedQuery.html#ofType(java.lang.Class)"><code>ofType()</code></a> to
+    obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> from the object returned
+    by this method.
+</ul>
+<p>A typed reference to the result set mapping may be
+obtained from the static metamodel.</dd>
 </dl>
 </div>
 </section>
@@ -1787,7 +1803,7 @@ the JDBC result set.</div>
 <dd><code>sqlString</code> - A native SQL query string</dd>
 <dd><code>resultSetMapping</code> - The result set mapping</dd>
 <dt>Returns:</dt>
-<dd>An instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> which may be used
+<dd>An instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> which may be used
         to execute the given query</dd>
 <dt>Since:</dt>
 <dd>4.0</dd>
@@ -1989,9 +2005,8 @@ the <a href="PersistenceException.html" title="class in jakarta.persistence"><co
 <div class="block">Close an application-managed <code>EntityHandler</code>.
 <p>After invocation of <code>close()</code>, every method of
 the <code>EntityHandler</code> instance and of any instance
-of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a>, <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>, or
-<a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> obtained from it throws
-the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link"><code>IllegalStateException</code></a>, except for
+of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> obtained from it throws the
+<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link"><code>IllegalStateException</code></a>, except for
 <a href="#getProperties()"><code>getProperties()</code></a>, <a href="#getTransaction()"><code>getTransaction()</code></a>,
 and <a href="#isOpen()"><code>isOpen()</code></a> (which returns false).
 <p>If this method is called when the <code>EntityHandler</code>

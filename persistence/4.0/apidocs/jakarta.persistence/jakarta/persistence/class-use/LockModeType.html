@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-SNAPSHOT</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -258,21 +258,10 @@ when the query is executed.</div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static &lt;T&gt;&nbsp;<a href="../sql/EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">ResultSetMapping.</span><code><a href="../sql/ResultSetMapping.html#entity(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">entity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
- <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn,
- <a href="../sql/MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>
+<div class="col-first even-row-color"><code><a href="../sql/EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a><wbr>&lt;<a href="../sql/EntityMapping.html#type-param-T" title="type parameter in EntityMapping">T</a>&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">EntityMapping.</span><code><a href="../sql/EntityMapping.html#withLockMode(jakarta.persistence.LockModeType)" class="member-name-link">withLockMode</a><wbr>(<a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Construct a mapping for an entity class.</div>
-</div>
-<div class="col-first odd-row-color"><code>static &lt;T&gt;&nbsp;<a href="../sql/EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityMapping.</span><code><a href="../sql/EntityMapping.html#of(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping...)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
- <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn,
- <a href="../sql/MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;T&gt;...&nbsp;fields)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Construct a new instance.</div>
+<div class="block">Specify the lock mode obtained on this entity.</div>
 </div>
 </div>
 <div class="caption"><span>Constructors in <a href="../sql/package-summary.html">jakarta.persistence.sql</a> with parameters of type <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></span></div>
@@ -281,10 +270,11 @@ when the query is executed.</div>
 <div class="table-header col-second">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../sql/EntityMapping.html#%3Cinit%3E(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping%5B%5D)" class="member-name-link">EntityMapping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="../sql/EntityMapping.html#type-param-T" title="type parameter in EntityMapping">T</a>&gt;&nbsp;entityClass,
+<div class="col-second even-row-color"><code><a href="../sql/EntityMapping.html#%3Cinit%3E(java.lang.Class,jakarta.persistence.LockModeType,java.lang.String,jakarta.persistence.sql.MemberMapping%5B%5D,java.lang.String)" class="member-name-link">EntityMapping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="../sql/EntityMapping.html#type-param-T" title="type parameter in EntityMapping">T</a>&gt;&nbsp;entityClass,
  <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;discriminatorColumn,
- <a href="../sql/MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;?&gt;[]&nbsp;fields)</code></div>
+ <a href="../sql/MemberMapping.html" title="interface in jakarta.persistence.sql">MemberMapping</a>&lt;? extends <a href="../sql/EntityMapping.html#type-param-T" title="type parameter in EntityMapping">T</a>&gt;[]&nbsp;fields,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>EntityMapping</code> record class.</div>
 </div>
