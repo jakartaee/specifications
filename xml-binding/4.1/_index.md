@@ -12,7 +12,7 @@ required by the Jakarta EE 12 platform.
 
 ### New features, enhancements or additions
 <!-- List here -->
-* **N/A**
+* Add @Repeatable to XmlJavaTypeAdapter, XmlElement, XmlElementRef and XmlSchemaType annotations
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
@@ -25,15 +25,15 @@ required by the Jakarta EE 12 platform.
 # Details
 
 * [Jakarta XML Binding 4.1 Release Record](https://projects.eclipse.org/projects/ee4j.jaxb/releases/4.1)
+* [Jakarta XML Binding 4.1-M1 Specification Document](./jakarta-xml-binding-spec-4.1-M1.pdf) (PDF)
+* [Jakarta XML Binding 4.1-M1 Specification Document](./jakarta-xml-binding-spec-4.1-M1.html) (HTML)
+* [Jakarta XML Binding 4.1-M1 Javadoc](./apidocs)
+* [Jakarta XML Binding 4.1-M1 XML Schema](https://jakarta.ee/xml/ns/jaxb/bindingschema_4_1.xsd)
+* Maven coordinates
+    * [jakarta.xml.bind:jakarta.xml.bind-api:jar:4.1.0-M1](https://central.sonatype.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api/4.1.0-M1/jar)
 <!--
-* [Jakarta XML Binding 4.1 Specification Document](./jakarta-xml-binding-spec-4.1.pdf) (PDF)
-* [Jakarta XML Binding 4.1 Specification Document](./jakarta-xml-binding-spec-4.1.html) (HTML)
-* [Jakarta XML Binding 4.1 Javadoc](./apidocs)
-* [Jakarta XML Binding 4.1 XML Schema](https://jakarta.ee/xml/ns/jaxb/bindingschema_4_1.xsd)
 * [Jakarta XML Binding 4.1 TCK](https://download.eclipse.org/jakartaee/xml-binding/4.1/jakarta-xml-binding-tck-4.1.0.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-binding/4.1/jakarta-xml-binding-tck-4.1.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-binding/4.1/jakarta-xml-binding-tck-4.1.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
     * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/xml-binding/4.1/)
-* Maven coordinates
-    * [jakarta.xml.bind:jakarta.xml.bind-api:jar:4.1.2](https://central.sonatype.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api/4.1.2/jar)
 -->
 
 # Compatible Implementations
