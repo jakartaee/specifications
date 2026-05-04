@@ -44,11 +44,10 @@ The following can be uncommented and version information updated as they become 
 * [Jakarta Security 5.0 Javadoc](./apidocs)
 * [Jakarta Security 5.0 TCK](https://download.eclipse.org/es/jakartaee12/staged/eftl/jakarta-security-tck-5.0.0-M2.zip), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/security/5.0/)
--->
 
 # Compatible Implementations
 
-* Soteria (TBC)
+* Soteria (TBC) (Soteria 5.0.0-M2 in combination with GlassFish 9.0.0-M2 implements this milestone)
 
 # Ballots
 
