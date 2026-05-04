@@ -35,14 +35,11 @@ The release furthermore focuses on evolving the API in various ways, and specifi
 # Details
 
 * [Jakarta Security 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.security/releases/5.0)
-
-
-The following can be uncommented and version information updated as they become available.
-
-* [Jakarta Security 5.0 Specification Document](./jakarta-security-spec-5.0-M2.pdf) (PDF)
-* [Jakarta Security 5.0 Specification Document](./jakarta-security-spec-5.0-M2.html) (HTML)
-* [Jakarta Security 5.0 Javadoc](./apidocs)
-* [Jakarta Security 5.0 TCK](https://download.eclipse.org/es/jakartaee12/staged/eftl/jakarta-security-tck-5.0.0-M2.zip), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+    * [Jakarta EE Platform 12 Release Plan](https://jakartaee.github.io/platform/jakartaee12/JakartaEE12ReleasePlan)
+* [Jakarta Security 5.0-M2 Specification Document](./jakarta-security-spec-5.0-M2.pdf) (PDF)
+* [Jakarta Security 5.0-M2 Specification Document](./jakarta-security-spec-5.0-M2.html) (HTML)
+* [Jakarta Security 5.0-M2 Javadoc](./apidocs)
+* [Jakarta Security 5.0-M2 TCK](https://download.eclipse.org/es/jakartaee12/staged/eftl/jakarta-security-tck-5.0.0-M2.zip), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/security/5.0/)
 
 # Compatible Implementations
