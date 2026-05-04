@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Security 5.0 (under development)"
-date: 2025-04-15
+date: 2026-04-04
 summary: "Release for Jakarta EE 12"
 ---
 Jakarta Security defines a standard for creating secure Jakarta EE applications in modern application paradigms.
@@ -36,13 +36,13 @@ The release furthermore focuses on evolving the API in various ways, and specifi
 
 * [Jakarta Security 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.security/releases/5.0)
 
-<!--
+
 The following can be uncommented and version information updated as they become available.
 
-* [Jakarta Security 5.0 Specification Document](./jakarta-security-spec-5.0.pdf) (PDF)
-* [Jakarta Security 5.0 Specification Document](./jakarta-security-spec-5.0.html) (HTML)
+* [Jakarta Security 5.0 Specification Document](./jakarta-security-spec-5.0-M2.pdf) (PDF)
+* [Jakarta Security 5.0 Specification Document](./jakarta-security-spec-5.0-M2.html) (HTML)
 * [Jakarta Security 5.0 Javadoc](./apidocs)
-* [Jakarta Security 5.0 TCK](https://download.eclipse.org/jakartaee/security/5.0/jakarta-security-tck-5.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/security/5.0/jakarta-security-tck-5.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/security/5.0/jakarta-security-tck-5.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Security 5.0 TCK](https://download.eclipse.org/es/jakartaee12/staged/eftl/jakarta-security-tck-5.0.0-M2.zip), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/security/5.0/)
 -->
 
