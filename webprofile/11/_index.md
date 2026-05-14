@@ -26,8 +26,9 @@ The Jakarta EE Web Profile defines a profile of the Jakarta EE Platform specific
 * [Jakarta EE 11 web profile Specification Document](./jakarta-webprofile-spec-11.0.pdf) (PDF)
 * [Jakarta EE 11 web profile Specification Document](./jakarta-webprofile-spec-11.0.html) (HTML)
 * [Jakarta Web Profile 11 Javadoc](./apidocs)
-* [Jakarta Web Profile 11 TCK](https://download.eclipse.org/jakartaee/webprofile/11.0/jakarta-web-profile-tck-11.0.0.zip) ([sig](https://download.eclipse.org/jakartaee/webprofile/11.0/jakarta-web-profile-tck-11.0.0.zip.sig),[sha](https://download.eclipse.org/jakartaee/webprofile/11.0/jakarta-web-profile-tck-11.0.0.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/webprofile/11.0/)
+* [Jakarta Web Profile 11 TCK](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.3.zip) ([sig](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.3.zip.sig),[sha](https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.3.zip.sha256),[pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+  * For 11.0.1+ TCK releases, see [download directory](https://download.eclipse.org/jakartaee/platform/11)
+  * For 11.0.0 TCK release, see [download directory](https://download.eclipse.org/jakartaee/webprofile/11.0)
 * Maven coordinates
    * [jakarta.platform:jakarta.jakartaee-web-api:jar:11.0.0](https://central.sonatype.com/artifact/jakarta.platform/jakarta.jakartaee-web-api/11.0.0/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
