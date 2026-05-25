@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="generator" content="Asciidoctor 2.0.26">
 <meta name="author" content="Jakarta Contexts and Dependency Injection Specification Project">
 <title>Jakarta Contexts and Dependency Injection</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -117,7 +117,6 @@ h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title str
 :not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
-pre>code{display:block}
 pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
 em em{font-style:normal}
 strong strong{font-weight:400}
@@ -220,6 +219,7 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
 .literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
 .listingblock>.content{position:relative}
+.listingblock pre>code{display:block}
 .listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
 .listingblock:hover code[data-lang]::before{display:block}
 .listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
@@ -609,7 +609,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <span id="author" class="author">Jakarta Contexts and Dependency Injection Specification Project</span><br>
 <span id="email" class="email"><a href="mailto:cdi-dev@eclipse.org">cdi-dev@eclipse.org</a></span><br>
 <span id="revnumber"> 5.0,</span>
-<span id="revdate">October 15, 2025</span>
+<span id="revdate">May 19, 2026</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -715,14 +715,16 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#declaring_reserve">2.8.1. Declaring a reserve</a></li>
 </ul>
 </li>
-<li><a href="#stereotypes">2.9. Stereotypes</a>
+<li><a href="#eager_initialization">2.9. Eager initialization</a></li>
+<li><a href="#auto_closing">2.10. Automatic closing</a></li>
+<li><a href="#stereotypes">2.11. Stereotypes</a>
 <ul class="sectlevel3">
-<li><a href="#defining_new_stereotype">2.9.1. Defining new stereotypes</a></li>
-<li><a href="#declaring_stereotypes">2.9.2. Declaring the stereotypes for a bean</a></li>
-<li><a href="#builtin_stereotypes">2.9.3. Built-in stereotypes</a></li>
+<li><a href="#defining_new_stereotype">2.11.1. Defining new stereotypes</a></li>
+<li><a href="#declaring_stereotypes">2.11.2. Declaring the stereotypes for a bean</a></li>
+<li><a href="#builtin_stereotypes">2.11.3. Built-in stereotypes</a></li>
 </ul>
 </li>
-<li><a href="#exceptions">2.10. Problems detected automatically by the container</a></li>
+<li><a href="#exceptions">2.12. Problems detected automatically by the container</a></li>
 </ul>
 </li>
 <li><a href="#implementation">3. Programming model</a>
@@ -844,30 +846,31 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 <li><a href="#context">6.2. The <code>Context</code> interface</a></li>
 <li><a href="#normal_scope">6.3. Normal scopes and pseudo-scopes</a></li>
-<li><a href="#dependent_context">6.4. Dependent pseudo-scope</a>
+<li><a href="#global_scope">6.4. Global scopes</a></li>
+<li><a href="#dependent_context">6.5. Dependent pseudo-scope</a>
 <ul class="sectlevel3">
-<li><a href="#dependent_objects">6.4.1. Dependent objects</a></li>
-<li><a href="#dependent_destruction">6.4.2. Destruction of objects with scope <code>@Dependent</code></a></li>
+<li><a href="#dependent_objects">6.5.1. Dependent objects</a></li>
+<li><a href="#dependent_destruction">6.5.2. Destruction of objects with scope <code>@Dependent</code></a></li>
 </ul>
 </li>
-<li><a href="#contextual_instances_and_references">6.5. Contextual instances and contextual references</a>
+<li><a href="#contextual_instances_and_references">6.6. Contextual instances and contextual references</a>
 <ul class="sectlevel3">
-<li><a href="#active_context">6.5.1. The active context object for a scope</a></li>
-<li><a href="#activating_builtin_contexts">6.5.2. Activating Built In Contexts</a></li>
-<li><a href="#contextual_instance">6.5.3. Contextual instance of a bean</a></li>
-<li><a href="#contextual_reference">6.5.4. Contextual reference for a bean</a></li>
-<li><a href="#contextual_reference_validity">6.5.5. Contextual reference validity</a></li>
-<li><a href="#injectable_reference">6.5.6. Injectable references</a></li>
-<li><a href="#injectable_reference_validity">6.5.7. Injectable reference validity</a></li>
+<li><a href="#active_context">6.6.1. The active context object for a scope</a></li>
+<li><a href="#activating_builtin_contexts">6.6.2. Activating Built-in Contexts</a></li>
+<li><a href="#contextual_instance">6.6.3. Contextual instance of a bean</a></li>
+<li><a href="#contextual_reference">6.6.4. Contextual reference for a bean</a></li>
+<li><a href="#contextual_reference_validity">6.6.5. Contextual reference validity</a></li>
+<li><a href="#injectable_reference">6.6.6. Injectable references</a></li>
+<li><a href="#injectable_reference_validity">6.6.7. Injectable reference validity</a></li>
 </ul>
 </li>
-<li><a href="#builtin_contexts">6.6. Context management for built-in scopes</a>
+<li><a href="#builtin_contexts">6.7. Context management for built-in scopes</a>
 <ul class="sectlevel3">
-<li><a href="#request_context">6.6.1. Request context lifecycle</a></li>
-<li><a href="#application_context">6.6.2. Application context lifecycle</a></li>
+<li><a href="#request_context">6.7.1. Request context lifecycle</a></li>
+<li><a href="#application_context">6.7.2. Application context lifecycle</a></li>
 </ul>
 </li>
-<li><a href="#custom_contexts">6.7. Context management for custom scopes</a></li>
+<li><a href="#custom_contexts">6.8. Context management for custom scopes</a></li>
 </ul>
 </li>
 <li><a href="#lifecycle">7. Lifecycle of contextual instances</a>
@@ -909,8 +912,9 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#observer_resolution">9.3. Observer resolution</a>
 <ul class="sectlevel3">
 <li><a href="#observers_assignability">9.3.1. Assignability of type variables, raw and parameterized types</a></li>
-<li><a href="#event_qualifier_types_with_members">9.3.2. Event qualifier types with members</a></li>
-<li><a href="#multiple_event_qualifiers">9.3.3. Multiple event qualifiers</a></li>
+<li><a href="#observers_primitive_types">9.3.2. Primitive types</a></li>
+<li><a href="#event_qualifier_types_with_members">9.3.3. Event qualifier types with members</a></li>
+<li><a href="#multiple_event_qualifiers">9.3.4. Multiple event qualifiers</a></li>
 </ul>
 </li>
 <li><a href="#observer_methods">9.4. Observer methods</a>
@@ -1247,11 +1251,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 <li><a href="#contexts_se">26. Scopes and contexts in Java SE</a>
 <ul class="sectlevel2">
-<li><a href="#builtin_contexts_se">26.1. Context management for built-in scopes in Java SE</a>
-<ul class="sectlevel3">
-<li><a href="#application_context_se">26.1.1. Application context lifecycle in Java SE</a></li>
-</ul>
-</li>
+<li><a href="#global_scope_se">26.1. Global scopes in Java SE</a></li>
 </ul>
 </li>
 <li><a href="#packaging_deployment_se">27. Packaging and deployment in Java SE</a>
@@ -1289,7 +1289,7 @@ Status: Draft
 
 Specification Lead:  Red Hat, Inc.
 
-Release: October 15, 2025
+Release: May 19, 2026
 
 Copyright 2017,2023 Red Hat, Inc.
 100 East Davie Street, Raleigh, NC 27601, U.S.A.
@@ -3123,7 +3123,34 @@ The rules for determining the default name for a bean are defined in <a href="#m
 </div>
 </div>
 <div class="sect2">
-<h3 id="stereotypes"><a class="anchor" href="#stereotypes"></a>2.9. Stereotypes</h3>
+<h3 id="eager_initialization"><a class="anchor" href="#eager_initialization"></a>2.9. Eager initialization</h3>
+<div class="paragraph">
+<p>A bean class of a managed bean, a producer method and a producer field may be annotated <code>@Eager</code>.
+This annotation marks the bean as <em>eagerly initialized</em>.</p>
+</div>
+<div class="paragraph">
+<p>Contextual instance of an eagerly initialized bean is created no later than at the moment the container fires <a href="#startup_event">the <code>Startup</code> event</a>.
+For example, it is as if an enabled bean existed that declared a synchronous observer with observed event type of <code>Startup</code>, no observed event qualifier, priority of <code>Integer.MIN_VALUE</code>, and this observer method obtained a contextual instance of the eagerly initialized bean.</p>
+</div>
+<div class="paragraph">
+<p>Only <code>@ApplicationScoped</code> beans may be eagerly initialized.
+If a bean of any other normal scope or the <code>@Dependent</code> pseudo-scope is eagerly initialized, definition error occurs.
+If a bean of any other pseudo-scope is eagerly initialized, non-portable behavior results.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="auto_closing"><a class="anchor" href="#auto_closing"></a>2.10. Automatic closing</h3>
+<div class="paragraph">
+<p>A bean class of a managed bean, a producer method and a producer field may be annotated <code>@AutoClose</code>.
+This annotation marks the bean as <em>auto-closeable</em>.</p>
+</div>
+<div class="paragraph">
+<p>If the class of a contextual instance of an auto-closeable bean implements the <code>java.lang.AutoCloseable</code> interface, the <code>close()</code> method is called on the instance during destruction.
+See <a href="#managed_bean_lifecycle">Lifecycle of managed beans</a>, <a href="#producer_method_lifecycle">Lifecycle of producer methods</a> and <a href="#producer_field_lifecycle">Lifecycle of producer fields</a> for details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="stereotypes"><a class="anchor" href="#stereotypes"></a>2.11. Stereotypes</h3>
 <div class="paragraph">
 <p>In many systems, use of architectural patterns produces a set of recurring bean roles.
 A <em>stereotype</em> allows a framework developer to identify such a role and declare some common metadata for beans with that role in a central place.</p>
@@ -3156,7 +3183,13 @@ A <em>stereotype</em> allows a framework developer to identify such a role and d
 <p>all beans with the stereotype have predefined <code>@Priority</code>, or that</p>
 </li>
 <li>
-<p>all beans with the stereotype are reserves.</p>
+<p>all beans with the stereotype are reserves, or that</p>
+</li>
+<li>
+<p>all beans with the stereotype are eagerly initialized, or that</p>
+</li>
+<li>
+<p>all beans with the stereotype are auto-closeable.</p>
 </li>
 </ul>
 </div>
@@ -3164,7 +3197,7 @@ A <em>stereotype</em> allows a framework developer to identify such a role and d
 <p>A bean may declare zero, one or multiple stereotypes.</p>
 </div>
 <div class="sect3">
-<h4 id="defining_new_stereotype"><a class="anchor" href="#defining_new_stereotype"></a>2.9.1. Defining new stereotypes</h4>
+<h4 id="defining_new_stereotype"><a class="anchor" href="#defining_new_stereotype"></a>2.11.1. Defining new stereotypes</h4>
 <div class="paragraph">
 <p>A bean stereotype is a Java annotation defined as <code>@Retention(RUNTIME)</code>. Typically a bean stereotype is defined as <code>@Target({TYPE, METHOD, FIELD})</code>, <code>@Target(TYPE)</code>, <code>@Target(METHOD)</code>, <code>@Target(FIELD)</code> or <code>@Target({METHOD, FIELD})</code>.</p>
 </div>
@@ -3180,7 +3213,7 @@ A <em>stereotype</em> allows a framework developer to identify such a role and d
 </div>
 </div>
 <div class="sect4">
-<h5 id="stereotype_default_scope"><a class="anchor" href="#stereotype_default_scope"></a>2.9.1.1. Declaring the default scope for a stereotype</h5>
+<h5 id="stereotype_default_scope"><a class="anchor" href="#stereotype_default_scope"></a>2.11.1.1. Declaring the default scope for a stereotype</h5>
 <div class="paragraph">
 <p>The default scope of a stereotype is defined by annotating the stereotype with a scope type.
 A stereotype may declare at most one scope.
@@ -3203,7 +3236,7 @@ If a stereotype declares more than one scope, the container automatically detect
 </div>
 </div>
 <div class="sect4">
-<h5 id="specify_stereotype_interceptor_bindings"><a class="anchor" href="#specify_stereotype_interceptor_bindings"></a>2.9.1.2. Specifying interceptor bindings for a stereotype</h5>
+<h5 id="specify_stereotype_interceptor_bindings"><a class="anchor" href="#specify_stereotype_interceptor_bindings"></a>2.11.1.2. Specifying interceptor bindings for a stereotype</h5>
 <div class="paragraph">
 <p>The interceptor bindings of a stereotype are defined by annotating the stereotype with the interceptor binding types.
 A stereotype may declare zero, one or multiple interceptor bindings, as defined in <a href="#stereotype_interceptor_bindings">Interceptor bindings for stereotypes</a>.</p>
@@ -3224,7 +3257,7 @@ A stereotype may declare zero, one or multiple interceptor bindings, as defined 
 </div>
 </div>
 <div class="sect4">
-<h5 id="named_stereotype"><a class="anchor" href="#named_stereotype"></a>2.9.1.3. Declaring a <code>@Named</code> stereotype</h5>
+<h5 id="named_stereotype"><a class="anchor" href="#named_stereotype"></a>2.11.1.3. Declaring a <code>@Named</code> stereotype</h5>
 <div class="paragraph">
 <p>A stereotype may declare an empty <code>@Named</code> annotation, which specifies that every bean with the stereotype has a defaulted name when a name is not explicitly specified by the bean.
 A <code>@Named</code> qualifier declared by a stereotype is not added to the qualifiers of a bean with the stereotype.</p>
@@ -3255,7 +3288,7 @@ A <code>@Named</code> qualifier declared by a stereotype is not added to the qua
 </div>
 </div>
 <div class="sect4">
-<h5 id="alternative_stereotype"><a class="anchor" href="#alternative_stereotype"></a>2.9.1.4. Declaring an <code>@Alternative</code> stereotype</h5>
+<h5 id="alternative_stereotype"><a class="anchor" href="#alternative_stereotype"></a>2.11.1.4. Declaring an <code>@Alternative</code> stereotype</h5>
 <div class="paragraph">
 <p>A stereotype may declare an <code>@Alternative</code> annotation, which specifies that every bean with the stereotype is an alternative.</p>
 </div>
@@ -3273,7 +3306,7 @@ A <code>@Named</code> qualifier declared by a stereotype is not added to the qua
 </div>
 </div>
 <div class="sect4">
-<h5 id="priority_stereotype"><a class="anchor" href="#priority_stereotype"></a>2.9.1.5. Declaring stereotype with <code>@Priority</code></h5>
+<h5 id="priority_stereotype"><a class="anchor" href="#priority_stereotype"></a>2.11.1.5. Declaring stereotype with <code>@Priority</code></h5>
 <div class="paragraph">
 <p>A stereotype may declare a <code>@Priority</code> annotation which functions as a means of enabling and ordering affected beans.</p>
 </div>
@@ -3299,7 +3332,7 @@ If the bean does not explicitly declare priority, the container automatically de
 </div>
 </div>
 <div class="sect4">
-<h5 id="reserve_stereotype"><a class="anchor" href="#reserve_stereotype"></a>2.9.1.6. Declaring a <code>@Reserve</code> stereotype</h5>
+<h5 id="reserve_stereotype"><a class="anchor" href="#reserve_stereotype"></a>2.11.1.6. Declaring a <code>@Reserve</code> stereotype</h5>
 <div class="paragraph">
 <p>A stereotype may declare a <code>@Reserve</code> annotation, which specifies that every bean with the stereotype is a reserve.</p>
 </div>
@@ -3321,7 +3354,47 @@ If the bean does not explicitly declare priority, the container automatically de
 </div>
 </div>
 <div class="sect4">
-<h5 id="stereotypes_with_additional_stereotypes"><a class="anchor" href="#stereotypes_with_additional_stereotypes"></a>2.9.1.7. Stereotypes with additional stereotypes</h5>
+<h5 id="eager_init_stereotype"><a class="anchor" href="#eager_init_stereotype"></a>2.11.1.7. Declaring an <code>@Eager</code> stereotype</h5>
+<div class="paragraph">
+<p>A stereotype may declare an <code>@Eager</code> annotation, which specifies that every bean with the stereotype is eagerly initialized.</p>
+</div>
+<div class="paragraph">
+<p>We may specify that all beans annotated with <code>@InitOnStartup</code> are <code>@ApplicationScoped</code> and eagerly initialized:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@ApplicationScoped</span>
+<span class="annotation">@Eager</span>
+<span class="annotation">@Stereotype</span>
+<span class="annotation">@Target</span>(TYPE)
+<span class="annotation">@Retention</span>(RUNTIME)
+<span class="directive">public</span> <span class="annotation">@interface</span> InitOnStartup {}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If a stereotype declares both <code>@Eager</code> and a default scope for which eager initialization is not permitted (see <a href="#eager_initialization">Eager initialization</a>), the container automatically detects the problem and treats it as a definition error.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="auto_close_stereotype"><a class="anchor" href="#auto_close_stereotype"></a>2.11.1.8. Declaring an <code>@AutoClose</code> stereotype</h5>
+<div class="paragraph">
+<p>A stereotype may declare an <code>@AutoClose</code> annotation, which specifies that every bean with the stereotype is auto-closeable.</p>
+</div>
+<div class="paragraph">
+<p>We may specify that all beans annotated with <code>@CloseOnDestroy</code> are auto-closeable:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@AutoClose</span>
+<span class="annotation">@Stereotype</span>
+<span class="annotation">@Target</span>(TYPE)
+<span class="annotation">@Retention</span>(RUNTIME)
+<span class="directive">public</span> <span class="annotation">@interface</span> CloseOnDestroy {}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="stereotypes_with_additional_stereotypes"><a class="anchor" href="#stereotypes_with_additional_stereotypes"></a>2.11.1.9. Stereotypes with additional stereotypes</h5>
 <div class="paragraph">
 <p>A stereotype may declare other stereotypes.</p>
 </div>
@@ -3344,7 +3417,7 @@ If the bean does not explicitly declare priority, the container automatically de
 </div>
 </div>
 <div class="sect3">
-<h4 id="declaring_stereotypes"><a class="anchor" href="#declaring_stereotypes"></a>2.9.2. Declaring the stereotypes for a bean</h4>
+<h4 id="declaring_stereotypes"><a class="anchor" href="#declaring_stereotypes"></a>2.11.2. Declaring the stereotypes for a bean</h4>
 <div class="paragraph">
 <p>Stereotype annotations may be applied to a bean class or producer method or field.</p>
 </div>
@@ -3374,7 +3447,7 @@ If the bean does not explicitly declare priority, the container automatically de
 </div>
 </div>
 <div class="sect3">
-<h4 id="builtin_stereotypes"><a class="anchor" href="#builtin_stereotypes"></a>2.9.3. Built-in stereotypes</h4>
+<h4 id="builtin_stereotypes"><a class="anchor" href="#builtin_stereotypes"></a>2.11.3. Built-in stereotypes</h4>
 <div class="paragraph">
 <p>The built-in stereotype <code>@jakarta.enterprise.inject.Model</code> is intended for use with beans that define the <em>model</em> layer of an MVC web application architecture such as JSF:</p>
 </div>
@@ -3394,7 +3467,7 @@ If the bean does not explicitly declare priority, the container automatically de
 </div>
 </div>
 <div class="sect2">
-<h3 id="exceptions"><a class="anchor" href="#exceptions"></a>2.10. Problems detected automatically by the container</h3>
+<h3 id="exceptions"><a class="anchor" href="#exceptions"></a>2.12. Problems detected automatically by the container</h3>
 <div class="paragraph">
 <p>When the application violates a rule defined by this specification, the container automatically detects the problem.
 There are three kinds of problem:</p>
@@ -5110,7 +5183,7 @@ The container sets the value of each injected field to an injectable reference.<
 <div class="sect3">
 <h4 id="dependent_objects_destruction"><a class="anchor" href="#dependent_objects_destruction"></a>5.5.3. Destruction of dependent objects</h4>
 <div class="paragraph">
-<p>When the container destroys an instance of a bean, the container destroys all dependent objects, as defined in <a href="#dependent_destruction">Destruction of objects with scope <code>@Dependent</code></a>, after the <code>@PreDestroy</code> callback completes.</p>
+<p>When the container destroys an instance of a bean, the container destroys all dependent objects, as defined in <a href="#dependent_destruction">Destruction of objects with scope <code>@Dependent</code></a>, after the <code>@PreDestroy</code> callback or disposer method completes and after the possible <code>AutoCloseable.close()</code> call returns.</p>
 </div>
 </div>
 <div class="sect3">
@@ -5200,7 +5273,11 @@ An instance of <code>InjectionPoint</code> may represent:</p>
 <p>an injected field or a parameter of a bean constructor, initializer method, producer method, disposer method or observer method, or</p>
 </li>
 <li>
-<p>an instance obtained dynamically using <code>Instance.get()</code>.</p>
+<p>an injection into a synthetic bean (where an injected field or parameter does not necessarily have to exist), or</p>
+</li>
+<li>
+<p>an instance obtained dynamically using <code>Instance.get()</code>.
+An <code>InjectionPoint</code> exists both when the <code>Instance</code> is injected and when it is obtained programmatically.</p>
 </li>
 </ul>
 </div>
@@ -5220,35 +5297,44 @@ An instance of <code>InjectionPoint</code> may represent:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>getBean()</code> method returns the <code>Bean</code> object representing the bean that defines the injection point.
-If the injection point does not belong to a bean, <code>getBean()</code> returns a null value.
-If the injection point represents a dynamically obtained instance, the <code>getBean()</code> method should return the <code>Bean</code> object representing the bean that defines the <code>Instance</code> injection point.</p>
+<p>The <code>getType()</code> method returns the required type of the injection point.
+If the injection point represents a dynamically obtained instance, the <code>getType()</code> method returns the required type of the <code>Instance</code>, including any required subtype as defined by <code>Instance.select()</code>.</p>
 </li>
 <li>
-<p>The <code>getType()</code> and <code>getQualifiers()</code> methods return the required type and required qualifiers of the injection point.
-If the injection point represents a dynamically obtained instance, the <code>getType()</code> and <code>getQualifiers()</code> methods should return the required type (as defined by <code>Instance.select()</code>), and required qualifiers of the injection point including any additional required qualifiers (as defined by <code>Instance.select()</code>).</p>
+<p>The <code>getQualifiers()</code> method returns the required qualifiers of the injection point.
+If the injection point represents a dynamically obtained instance, the <code>getQualifiers()</code> method returns the required qualifiers of the <code>Instance</code>, including any additional required qualifiers as defined by <code>Instance.select()</code>.</p>
+</li>
+<li>
+<p>The <code>getBean()</code> method returns the <code>Bean</code> object representing the bean that defines the injection point.
+If the injection point does not belong to a bean, the <code>getBean()</code> method returns <code>null</code>.
+If the injection point belongs to a synthetic bean, the <code>getBean()</code> method may return <code>null</code>.
+If the injection point represents a dynamically obtained instance, the <code>getBean()</code> method returns the <code>Bean</code> object representing the bean that defines the <code>Instance</code> injection point; if the <code>Instance</code> is not injected, the <code>getBean()</code> method returns <code>null</code>.</p>
 </li>
 <li>
 <p>The <code>getMember()</code> method returns the <code>Field</code> object in the case of field injection, the <code>Method</code> object in the case of method parameter injection, or the <code>Constructor</code> object in the case of constructor parameter injection.
-If the injection point represents a dynamically obtained instance, the <code>getMember()</code> method returns the <code>Field</code> object representing the field that defines the <code>Instance</code> injection point in the case of field injection, the <code>Method</code> object representing the method that defines the <code>Instance</code> injection point in the case of method parameter injection, or the <code>Constructor</code> object representing the constructor that defines the <code>Instance</code> injection point in the case of constructor parameter injection.</p>
+If the injection point belongs to a synthetic bean, the <code>getMember()</code> method may return <code>null</code>.
+If the injection point represents a dynamically obtained instance, the <code>getMember()</code> method returns the <code>Field</code> object representing the field that defines the <code>Instance</code> injection point in the case of field injection, the <code>Method</code> object representing the method that defines the <code>Instance</code> injection point in the case of method parameter injection, or the <code>Constructor</code> object representing the constructor that defines the <code>Instance</code> injection point in the case of constructor parameter injection; if the <code>Instance</code> is not injected, the <code>getMember()</code> method returns <code>null</code>.</p>
 </li>
 <li>
-<p>The <code>getAnnotated()</code> method may, in CDI Lite environment, always return <code>null</code>.
-Behavior of this method in CDI Full is specified therein.</p>
+<p>The <code>getAnnotated()</code> method returns an instance of <code>jakarta.enterprise.inject.spi.AnnotatedField</code> or <code>jakarta.enterprise.inject.spi.AnnotatedParameter</code>, depending upon whether the injection point is an injected field or a constructor/method parameter.
+If the injection point belongs to a synthetic bean, the <code>getAnnotated()</code> method may return <code>null</code>.
+If the injection point represents a dynamically obtained instance, then the <code>getAnnotated()</code> method returns an instance of <code>jakarta.enterprise.inject.spi.AnnotatedField</code> or <code>jakarta.enterprise.inject.spi.AnnotatedParameter</code> representing the <code>Instance</code> injection point, depending upon whether the injection point is an injected field or a constructor/method parameter; if the <code>Instance</code> is not injected, the <code>getAnnotated()</code> method returns <code>null</code>.</p>
+<div class="paragraph">
+<p>In CDI Lite environment, the <code>getAnnotated()</code> method may always return <code>null</code>.</p>
+</div>
 </li>
 <li>
 <p>The <code>isDelegate()</code> method may, in CDI Lite environment, always return <code>false</code>.
 Behavior of this method in CDI Full is specified therein.</p>
 </li>
 <li>
-<p>The <code>isTransient()</code> method returns <code>true</code> if the injection point is a transient field, and <code>false</code> otherwise.
-If the injection point represents a dynamically obtained instance then the <code>isTransient()</code> method returns <code>true</code> if the <code>Instance</code> injection point is a transient field, and <code>false</code> otherwise.</p>
+<p>The <code>isTransient()</code> method returns <code>true</code> if the <code>getMember()</code> method returns a <code>Field</code> which is declared <code>transient</code>, and <code>false</code> otherwise.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>Occasionally, a bean with scope <code>@Dependent</code> needs to access metadata relating to the object into which it is injected.
-For example, the following producer method creates injectable <code>Logger</code> s.
+For example, the following producer method creates injectable <code>Logger</code>s.
 The log category of a <code>Logger</code> depends upon the class of the object into which it is injected:</p>
 </div>
 <div class="listingblock">
@@ -5716,6 +5802,12 @@ Last but not least, this interface can be used to destroy the contextual instanc
 <p><code>jakarta.enterprise.util.Nonbinding</code></p>
 </li>
 <li>
+<p><code>jakarta.enterprise.context.AutoClose</code></p>
+</li>
+<li>
+<p><code>jakarta.enterprise.context.Eager</code></p>
+</li>
+<li>
 <p><code>jakarta.enterprise.context.Initialized</code></p>
 </li>
 <li>
@@ -6021,7 +6113,27 @@ The concept of a current instance is not well-defined in the case of a pseudo-sc
 </div>
 </div>
 <div class="sect2">
-<h3 id="dependent_context"><a class="anchor" href="#dependent_context"></a>6.4. Dependent pseudo-scope</h3>
+<h3 id="global_scope"><a class="anchor" href="#global_scope"></a>6.4. Global scopes</h3>
+<div class="paragraph">
+<p>Several scopes defined by this specification are <em>global</em>.
+A global scope has exactly one context object, which is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>initialized once, when the container starts up, before the event with qualifier <code>@Initialized(ApplicationScoped.class)</code> is fired,</p>
+</li>
+<li>
+<p>destroyed once, when the container shuts down, after the event with qualifier <code>@BeforeDestroyed(ApplicationScoped.class)</code> is fired,</p>
+</li>
+<li>
+<p>active on all application threads from the point the context object is initialized until it is destroyed.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dependent_context"><a class="anchor" href="#dependent_context"></a>6.5. Dependent pseudo-scope</h3>
 <div class="paragraph">
 <p>The <code>@Dependent</code> scope type is a pseudo-scope. Beans declared with scope type <code>@Dependent</code> behave differently to beans with other built-in scope types.</p>
 </div>
@@ -6051,10 +6163,10 @@ The concept of a current instance is not well-defined in the case of a pseudo-sc
 <p>Every invocation of the <code>get()</code> operation of the <code>Context</code> object for the <code>@Dependent</code> scope with no <code>CreationalContext</code> returns a null value.</p>
 </div>
 <div class="paragraph">
-<p>The <code>@Dependent</code> scope is always active.</p>
+<p>The <code>@Dependent</code> scope is global.</p>
 </div>
 <div class="sect3">
-<h4 id="dependent_objects"><a class="anchor" href="#dependent_objects"></a>6.4.1. Dependent objects</h4>
+<h4 id="dependent_objects"><a class="anchor" href="#dependent_objects"></a>6.5.1. Dependent objects</h4>
 <div class="paragraph">
 <p>Many instances of beans with scope <code>@Dependent</code> belong to some other bean and are called <em>dependent objects</em>.</p>
 </div>
@@ -6076,7 +6188,7 @@ The concept of a current instance is not well-defined in the case of a pseudo-sc
 </div>
 </div>
 <div class="sect3">
-<h4 id="dependent_destruction"><a class="anchor" href="#dependent_destruction"></a>6.4.2. Destruction of objects with scope <code>@Dependent</code></h4>
+<h4 id="dependent_destruction"><a class="anchor" href="#dependent_destruction"></a>6.5.2. Destruction of objects with scope <code>@Dependent</code></h4>
 <div class="paragraph">
 <p>Dependent objects of a contextual instance are destroyed when <code>Contextual.destroy()</code> calls <code>CreationalContext.release()</code>, as defined in <a href="#creational_context">The <code>CreationalContext</code> interface</a>.</p>
 </div>
@@ -6105,12 +6217,12 @@ The concept of a current instance is not well-defined in the case of a pseudo-sc
 </div>
 </div>
 <div class="sect2">
-<h3 id="contextual_instances_and_references"><a class="anchor" href="#contextual_instances_and_references"></a>6.5. Contextual instances and contextual references</h3>
+<h3 id="contextual_instances_and_references"><a class="anchor" href="#contextual_instances_and_references"></a>6.6. Contextual instances and contextual references</h3>
 <div class="paragraph">
 <p>The <code>Context</code> object is the ultimate source of the contextual instances that underly contextual references.</p>
 </div>
 <div class="sect3">
-<h4 id="active_context"><a class="anchor" href="#active_context"></a>6.5.1. The active context object for a scope</h4>
+<h4 id="active_context"><a class="anchor" href="#active_context"></a>6.6.1. The active context object for a scope</h4>
 <div class="paragraph">
 <p>From time to time, the container must obtain an <em>active context object</em> for a certain scope type. The container must search for an active instance of <code>Context</code> associated with the scope type.</p>
 </div>
@@ -6129,20 +6241,20 @@ The concept of a current instance is not well-defined in the case of a pseudo-sc
 </div>
 </div>
 <div class="sect3">
-<h4 id="activating_builtin_contexts"><a class="anchor" href="#activating_builtin_contexts"></a>6.5.2. Activating Built In Contexts</h4>
+<h4 id="activating_builtin_contexts"><a class="anchor" href="#activating_builtin_contexts"></a>6.6.2. Activating Built-in Contexts</h4>
 <div class="paragraph">
-<p>Certain built in contexts support the ability to be activated and deactivated.  This allows developers to control built-in contexts in ways that they could also manage custom built contexts.</p>
+<p>Certain built-in contexts support the ability to be activated and deactivated.  This allows developers to control built-in contexts in ways that they could also manage custom built contexts.</p>
 </div>
 <div class="paragraph">
-<p>When activating and deactivating built in contexts, it is important to realize that they can only be activated if not already active within a given thread.</p>
+<p>When activating and deactivating built-in contexts, it is important to realize that they can only be activated if not already active within a given thread.</p>
 </div>
 <div class="sect4">
-<h5 id="activating_request_context"><a class="anchor" href="#activating_request_context"></a>6.5.2.1. Activating a Request Context</h5>
+<h5 id="activating_request_context"><a class="anchor" href="#activating_request_context"></a>6.6.2.1. Activating a Request Context</h5>
 <div class="paragraph">
 <p>Request contexts can be managed either programmatically or via interceptor.</p>
 </div>
 <div class="paragraph">
-<p>To programmatically manage request contexts, the container provides a built in bean that is <code>@Dependent</code> scoped and of type <code>RequestContextController</code> that allows you to activate and deactivate a request context on the current thread.  The object should be considered stateful, invoking the same instance on different threads may not work properly, non-portable behavior may occur.</p>
+<p>To programmatically manage request contexts, the container provides a built-in bean that is <code>@Dependent</code> scoped and of type <code>RequestContextController</code> that allows you to activate and deactivate a request context on the current thread.  The object should be considered stateful, invoking the same instance on different threads may not work properly, non-portable behavior may occur.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6167,7 +6279,7 @@ The concept of a current instance is not well-defined in the case of a pseudo-sc
 </div>
 </div>
 <div class="sect3">
-<h4 id="contextual_instance"><a class="anchor" href="#contextual_instance"></a>6.5.3. Contextual instance of a bean</h4>
+<h4 id="contextual_instance"><a class="anchor" href="#contextual_instance"></a>6.6.3. Contextual instance of a bean</h4>
 <div class="paragraph">
 <p>From time to time, the container must obtain a <em>contextual instance</em> of a bean.
 The container must:</p>
@@ -6204,7 +6316,7 @@ However, in this case, the container is required to transform its internal repre
 </div>
 </div>
 <div class="sect3">
-<h4 id="contextual_reference"><a class="anchor" href="#contextual_reference"></a>6.5.4. Contextual reference for a bean</h4>
+<h4 id="contextual_reference"><a class="anchor" href="#contextual_reference"></a>6.6.4. Contextual reference for a bean</h4>
 <div class="paragraph">
 <p>From time to time, the container must obtain a <em>contextual reference</em> for a bean and a given bean type of the bean.
 A contextual reference implements the given bean type and all bean types of the bean which are Java interfaces.
@@ -6242,7 +6354,7 @@ If the bean has scope <code>@Dependent</code>, the container must associate it w
 </div>
 </div>
 <div class="sect3">
-<h4 id="contextual_reference_validity"><a class="anchor" href="#contextual_reference_validity"></a>6.5.5. Contextual reference validity</h4>
+<h4 id="contextual_reference_validity"><a class="anchor" href="#contextual_reference_validity"></a>6.6.5. Contextual reference validity</h4>
 <div class="paragraph">
 <p>A contextual reference for a bean is <em>valid</em> only for a certain period of time. The application should not invoke a method of an invalid reference.</p>
 </div>
@@ -6266,7 +6378,7 @@ It may be invoked even if the context associated with the pseudo-scope is not ac
 </div>
 </div>
 <div class="sect3">
-<h4 id="injectable_reference"><a class="anchor" href="#injectable_reference"></a>6.5.6. Injectable references</h4>
+<h4 id="injectable_reference"><a class="anchor" href="#injectable_reference"></a>6.6.6. Injectable references</h4>
 <div class="paragraph">
 <p>From time to time, the container must obtain an <em>injectable reference</em> for an injection point.
 The container must:</p>
@@ -6299,7 +6411,7 @@ The container must:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="injectable_reference_validity"><a class="anchor" href="#injectable_reference_validity"></a>6.5.7. Injectable reference validity</h4>
+<h4 id="injectable_reference_validity"><a class="anchor" href="#injectable_reference_validity"></a>6.6.7. Injectable reference validity</h4>
 <div class="paragraph">
 <p>Injectable references to a bean must respect the rules of contextual reference validity, with the following exceptions:</p>
 </div>
@@ -6322,7 +6434,7 @@ The container must:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="builtin_contexts"><a class="anchor" href="#builtin_contexts"></a>6.6. Context management for built-in scopes</h3>
+<h3 id="builtin_contexts"><a class="anchor" href="#builtin_contexts"></a>6.7. Context management for built-in scopes</h3>
 <div class="paragraph">
 <p>The container must provide an implementation of the <code>Context</code> interface for each of the built-in scopes defined in <a href="#builtin_scopes">Built-in scope types</a>.
 These implementations depend on the platform the container is running.</p>
@@ -6332,14 +6444,14 @@ These implementations depend on the platform the container is running.</p>
 The context does not propagate across remote method invocations or to asynchronous processes.</p>
 </div>
 <div class="sect3">
-<h4 id="request_context"><a class="anchor" href="#request_context"></a>6.6.1. Request context lifecycle</h4>
+<h4 id="request_context"><a class="anchor" href="#request_context"></a>6.7.1. Request context lifecycle</h4>
 <div class="paragraph">
 <p>The <em>request context</em> is provided by a built-in context object for the built-in scope type <code>@RequestScoped</code>.</p>
 </div>
 <div class="paragraph">
-<p>An event with qualifier <code>@Initialized(RequestScoped.class)</code> is synchronously fired when the request context is initialized.
-An event with qualifier <code>@BeforeDestroyed(RequestScoped.class)</code> is synchronously fired when the request context is about to be destroyed, i.e. before the actual destruction.
-An event with qualifier <code>@Destroyed(RequestScoped.class)</code> is synchronously fired when the request context is destroyed, i.e. after the actual destruction.</p>
+<p>An event with qualifier <code>@Initialized(RequestScoped.class)</code> is synchronously fired immediately after the request context is initialized.
+An event with qualifier <code>@BeforeDestroyed(RequestScoped.class)</code> is synchronously fired immediately before the request context is destroyed.
+An event with qualifier <code>@Destroyed(RequestScoped.class)</code> is synchronously fired immediately after the request context is destroyed.</p>
 </div>
 <div class="paragraph">
 <p>The request context is active:</p>
@@ -6369,32 +6481,45 @@ An event with qualifier <code>@Destroyed(RequestScoped.class)</code> is synchron
 </div>
 </div>
 <div class="sect3">
-<h4 id="application_context"><a class="anchor" href="#application_context"></a>6.6.2. Application context lifecycle</h4>
+<h4 id="application_context"><a class="anchor" href="#application_context"></a>6.7.2. Application context lifecycle</h4>
+<div class="paragraph">
+<p>The application scope is global.</p>
+</div>
 <div class="paragraph">
 <p>The <em>application context</em> is provided by a built-in context object for the built-in scope type <code>@ApplicationScoped</code>.</p>
 </div>
 <div class="paragraph">
-<p>An event with qualifier <code>@Initialized(ApplicationScoped.class)</code> is synchronously fired when the application context is initialized.
-An event with qualifier <code>@BeforeDestroyed(ApplicationScoped.class)</code> is synchronously fired when the application context is about to be destroyed, i.e. before the actual destruction.
-An event with qualifier <code>@Destroyed(ApplicationScoped.class)</code> is synchronously fired when the application context is destroyed, i.e. after the actual destruction.</p>
+<p>An event with qualifier <code>@Initialized(ApplicationScoped.class)</code> is synchronously fired immediately after the application context is initialized.
+An event with qualifier <code>@BeforeDestroyed(ApplicationScoped.class)</code> is synchronously fired immediately before the application context is destroyed.
+An event with qualifier <code>@Destroyed(ApplicationScoped.class)</code> is synchronously fired immediately after the application context is destroyed.</p>
+</div>
+<div class="paragraph">
+<p>The payload of the event fired when the application context is initialized or destroyed is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>any <code>java.lang.Object</code>.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="custom_contexts"><a class="anchor" href="#custom_contexts"></a>6.7. Context management for custom scopes</h3>
+<h3 id="custom_contexts"><a class="anchor" href="#custom_contexts"></a>6.8. Context management for custom scopes</h3>
 <div class="paragraph">
 <p>Custom context implementations are encouraged to synchronously fire:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>an event with qualifier <code>@Initialized(X.class)</code> when a custom context is initialized, i.e. ready for use,</p>
+<p>an event with qualifier <code>@Initialized(X.class)</code> immediately after a custom context is initialized,</p>
 </li>
 <li>
-<p>an event with qualifier <code>@BeforeDestroyed(X.class)</code> when a custom context is about to be destroyed, i.e. before the actual destruction,</p>
+<p>an event with qualifier <code>@BeforeDestroyed(X.class)</code> immediately before a custom context is destroyed,</p>
 </li>
 <li>
-<p>an event with qualifier <code>@Destroyed(X.class)</code> when a custom context is destroyed, i.e. after the actual destruction,</p>
+<p>an event with qualifier <code>@Destroyed(X.class)</code> immediately after a custom context is destroyed,</p>
 </li>
 </ul>
 </div>
@@ -6405,7 +6530,9 @@ An event with qualifier <code>@Destroyed(ApplicationScoped.class)</code> is sync
 <p>A suitable event payload should be chosen.</p>
 </div>
 <div class="paragraph">
-<p>Build compatible extensions may define custom context classes for custom scopes, but they may not define custom context classes for built-in scopes.</p>
+<p>Build compatible extensions may define custom context classes for non-global built-in scopes and for custom scopes.
+For example, a remoting framework might provide a request context object for the built-in request scope.
+If an attempt to register a custom context class for a global built-in scope is made, deployment problem occurs.</p>
 </div>
 </div>
 </div>
@@ -6523,6 +6650,9 @@ However, if the object is not a contextual reference for another bean, the objec
 <li>
 <p>Invocations of methods declared by <code>java.lang.Object</code> are not business method invocations.</p>
 </li>
+<li>
+<p>Invocations of <code>AutoCloseable.close()</code> on auto-closeable beans during destruction are not business method invocations.</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -6543,7 +6673,9 @@ However, if the object is not a contextual reference for another bean, the objec
 <p>When the <code>create()</code> method of the <code>Bean</code> object that represents a managed bean is called, the container obtains an instance of the bean, calling the bean constructor as defined by <a href="#instantiation">Injection using the bean constructor</a>, and performing dependency injection as defined in <a href="#fields_initializer_methods">Injection of fields and initializer methods</a>.</p>
 </div>
 <div class="paragraph">
-<p>When the <code>destroy()</code> method is called, the container destroys the instance, and any dependent objects, as defined in <a href="#dependent_objects_destruction">Destruction of dependent objects</a>.</p>
+<p>When the <code>destroy()</code> method is called, the container destroys the instance.
+Then, if the managed bean is auto-closeable and the class of the contextual instance implements <code>AutoCloseable</code>, the <code>close()</code> method is called on the instance.
+Finally, the container destroys dependent objects, as defined in <a href="#dependent_objects_destruction">Destruction of dependent objects</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -6560,6 +6692,7 @@ The return value of the producer method, after method interception completes, is
 </div>
 <div class="paragraph">
 <p>When the <code>destroy()</code> method is called, and if there is a disposer method for this producer method, the container must invoke the disposer method as defined by <a href="#producer_or_disposer_methods_invocation">Invocation of producer or disposer methods</a>, passing the instance given to <code>destroy()</code> to the disposed parameter.
+Then, if the producer method bean is auto-closeable and the class of the contextual instance implements <code>AutoCloseable</code>, the <code>close()</code> method is called on the instance.
 Finally, the container destroys dependent objects, as defined in <a href="#dependent_objects_destruction">Destruction of dependent objects</a>.</p>
 </div>
 </div>
@@ -6576,7 +6709,8 @@ The value of the producer field is the new contextual instance to be returned by
 <p>Otherwise, if the producer field contains a null value, and the scope of the producer field is not <code>@Dependent</code>, the <code>create()</code> method throws an <code>IllegalProductException</code>.</p>
 </div>
 <div class="paragraph">
-<p>When the <code>destroy()</code> method is called, and if there is a disposer method for this producer field, the container must invoke the disposer method as defined by <a href="#producer_or_disposer_methods_invocation">Invocation of producer or disposer methods</a>, passing the instance given to <code>destroy()</code> to the disposed parameter.</p>
+<p>When the <code>destroy()</code> method is called, and if there is a disposer method for this producer field, the container must invoke the disposer method as defined by <a href="#producer_or_disposer_methods_invocation">Invocation of producer or disposer methods</a>, passing the instance given to <code>destroy()</code> to the disposed parameter.
+Then, if the producer field bean is auto-closeable and the class of the contextual instance implements <code>AutoCloseable</code>, the <code>close()</code> method is called on the instance.</p>
 </div>
 </div>
 </div>
@@ -7026,7 +7160,14 @@ An observer method has an event qualifier if it has an observed event qualifier 
 </div>
 </div>
 <div class="sect3">
-<h4 id="event_qualifier_types_with_members"><a class="anchor" href="#event_qualifier_types_with_members"></a>9.3.2. Event qualifier types with members</h4>
+<h4 id="observers_primitive_types"><a class="anchor" href="#observers_primitive_types"></a>9.3.2. Primitive types</h4>
+<div class="paragraph">
+<p>For the purpose of observer resolution, primitive types and their corresponding wrapper types in the package <code>java.lang</code> are considered identical and assignable.
+The container performs unboxing when it invokes an observer method that declares a primitive event parameter.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="event_qualifier_types_with_members"><a class="anchor" href="#event_qualifier_types_with_members"></a>9.3.3. Event qualifier types with members</h4>
 <div class="paragraph">
 <p>As usual, the qualifier type may have annotation members:</p>
 </div>
@@ -7084,7 +7225,7 @@ public <span class="type">void</span> login() {
 </div>
 </div>
 <div class="sect3">
-<h4 id="multiple_event_qualifiers"><a class="anchor" href="#multiple_event_qualifiers"></a>9.3.3. Multiple event qualifiers</h4>
+<h4 id="multiple_event_qualifiers"><a class="anchor" href="#multiple_event_qualifiers"></a>9.3.4. Multiple event qualifiers</h4>
 <div class="paragraph">
 <p>An event parameter may have multiple qualifiers.</p>
 </div>
@@ -7170,7 +7311,10 @@ When searching for observer methods for an event, the container considers the ty
 <p>The event parameter type may contain a type variable or wildcard.</p>
 </div>
 <div class="paragraph">
-<p>The event parameter may be an array type whose component type contains a type variable or a wildcard.</p>
+<p>The event parameter type may be an array type whose component type contains a type variable or a wildcard.</p>
+</div>
+<div class="paragraph">
+<p>The event parameter type may be a primitive type.</p>
 </div>
 <div class="paragraph">
 <p>Modifications made to the event parameter in an observer method are propagated to following observers.
@@ -7497,7 +7641,7 @@ This event is fired after the event with qualifier <code>@Initialized(Applicatio
 <h4 id="shutdown_event"><a class="anchor" href="#shutdown_event"></a>9.6.2. Shutdown event</h4>
 <div class="paragraph">
 <p>Implementations are required to <em>synchronously</em> fire an event with payload <code>jakarta.enterprise.event.Shutdown</code> and qualifier <code>jakarta.enterprise.inject.Any</code> during application shutdown.
-This event is fired during CDI container shutdown but not later than the event with qualifier <code>@BeforeDestroyed(ApplicationScoped.class)</code>.</p>
+This event is fired during CDI container shutdown but before the event with qualifier <code>@BeforeDestroyed(ApplicationScoped.class)</code>.</p>
 </div>
 <div class="paragraph">
 <p>This event can be observed by integrators and libraries to perform any kind of pre-shutdown operation as well as by users as a reliable entry point for when the CDI container is about to shut down.</p>
@@ -7793,31 +7937,8 @@ Implementations are permitted to remember the identified beans and not repeat th
 </div>
 <div class="paragraph">
 <p>All instances of <code>@Dependent</code> looked up beans obtained during <code>Invoker.invoke()</code> are destroyed before the <code>invoke()</code> method returns or throws.
+(See <a href="#invoker_asynchronous_methods">Asynchronous methods</a> for a variation of this rule for asynchronous methods.)
 The order in which the instances of <code>@Dependent</code> looked up beans are destroyed is not specified.</p>
-</div>
-<div class="paragraph">
-<p>This specification recognizes the existence of <em>asynchronous</em> methods, where the action represented by the method does not always finish when the method returns; the <em>completion</em> of the action is asynchronous to the method call.
-For target methods that are considered asynchronous by the CDI container, the requirement to destroy instances of <code>@Dependent</code> looked up beans is relaxed: the instances of <code>@Dependent</code> looked up beans need not be destroyed before <code>Invoker.invoke()</code> returns.
-It is recommended that the instances of <code>@Dependent</code> looked up beans are destroyed after the asynchronous action completes and before the completion is propagated to the caller of <code>Invoker.invoke()</code>; if an asynchronous target method completes synchronously or throws synchronously, it is recommended that the instances of <code>@Dependent</code> looked up beans are destroyed before <code>invoke()</code> returns or rethrows the exception.</p>
-</div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Caution</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The rules for recognizing asynchronous methods are not specified.
-Applications which use invokers to call asynchronous methods are therefore not portable.
-Future versions of this specification may define an API to give greater control over the invocation of asynchronous methods.</p>
-</div>
-<div class="paragraph">
-<p>Implementations that support asynchronous methods are encouraged to document the rules they follow.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>The order in which instances of looked up beans are obtained during <code>Invoker.invoke()</code> in not specified.</p>
@@ -7837,6 +7958,116 @@ See <a href="#contextual">The <code>Contextual</code> interface</a> for more inf
 </td>
 </tr>
 </table>
+</div>
+<div class="sect4">
+<h5 id="invoker_asynchronous_methods"><a class="anchor" href="#invoker_asynchronous_methods"></a>10.3.1.1. Asynchronous methods</h5>
+<div class="paragraph">
+<p>Sometimes, the action started by the method does not necessarily finish when the method returns; the <em>completion</em> of the action is asynchronous to the method call.
+Such methods are called <em>asynchronous</em> methods.
+Method invokers have special support for asynchronous methods when it comes to destroying instances of looked up <code>@Dependent</code> beans.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">AsyncHandler</span> {
+    <span class="type">interface</span> <span class="class">ReturnType</span>&lt;T&gt; {
+        T transform(T original, <span class="predefined-type">Runnable</span> completion);
+    }
+
+    <span class="type">interface</span> <span class="class">ParameterType</span>&lt;T&gt; {
+        T transformArgument(T original, <span class="predefined-type">Runnable</span> completion);
+
+        <span class="keyword">default</span> <span class="predefined-type">Object</span> transformReturnValue(<span class="predefined-type">Object</span> original, <span class="predefined-type">Runnable</span> completion) {
+            <span class="keyword">return</span> original;
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An <em>async handler</em> is either a return type async handler or a parameter type async handler.</p>
+</div>
+<div class="paragraph">
+<p>A <em>return type async handler</em> is a service provider of <code>jakarta.enterprise.invoke.AsyncHandler.ReturnType</code> declared in <code>META-INF/services</code>.
+A return type async handler must have a direct superinterface type that is a parameterized type whose generic interface is <code>AsyncHandler.ReturnType</code> and its sole type argument is a class type, interface type or parameterized type, otherwise definition error occurs.
+The erasure of the type argument to <code>AsyncHandler.ReturnType</code> is called the <em>async type</em> of the return type async handler.
+The target method matches a return type async handler if the erasure of the method&#8217;s return type is identical to the async type of the async handler.</p>
+</div>
+<div class="paragraph">
+<p>A <em>parameter type async handler</em> is a service provider of <code>jakarta.enterprise.invoke.AsyncHandler.ParameterType</code> declared in <code>META-INF/services</code>.
+A parameter type async handler must have a direct superinterface type that is a parameterized type whose generic interface is <code>AsyncHandler.ParameterType</code> and its sole type argument is a class type, interface type or parameterized type, otherwise definition error occurs.
+The erasure of the type argument to <code>AsyncHandler.ParameterType</code> is called the <em>async type</em> of the parameter type async handler.
+The target method matches a parameter type async handler if it declares exactly one parameter whose type&#8217;s erasure is identical to the async type of the async handler; this parameter is called the <em>async parameter</em>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The provider-configuration file in <code>META-INF/services</code> must be named <code>jakarta.enterprise.invoke.AsyncHandler$ReturnType</code> or <code>jakarta.enterprise.invoke.AsyncHandler$ParameterType</code>, because the <code>ServiceLoader</code> requires the file name to be a <em>fully qualified binary name</em> of the service.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If an async handler is both a return type async handler and parameter type async handler, definition error occurs.</p>
+</div>
+<div class="paragraph">
+<p>An async handler must be stateless (and therefore thread safe); there are no guarantees about its lifecycle.</p>
+</div>
+<div class="paragraph">
+<p>If the target method matches exactly one async handler, the invoker becomes asynchronous.</p>
+</div>
+<div class="paragraph">
+<p>If the matching async handler is a return type async handler, an asynchronous invoker calls its <code>transform()</code> method once during <code>invoke()</code>, after the target method returns, with the return value of the target method as the <code>original</code>, and returns the result to the caller.
+When the target method throws an exception synchronously, the <code>transform()</code> method is not called.</p>
+</div>
+<div class="paragraph">
+<p>If the matching async handler is a parameter type async handler, an asynchronous invoker:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>calls its <code>transformArgument()</code> method once during <code>invoke()</code>, before the target method is called, with the given argument value of the async parameter as the <code>original</code>, and passes the result to the target method as the argument value of the async parameter;</p>
+</li>
+<li>
+<p>calls its <code>transformReturnValue()</code> method once during <code>invoke()</code>, after the target method returns, with the return value of the target method as the <code>original</code>, and returns the result to the caller.
+When the target method throws an exception synchronously, the <code>transformReturnValue()</code> method is not called.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The async handler signals completion of the asynchronous action by calling <code>completion.run()</code>.</p>
+</div>
+<div class="paragraph">
+<p>The requirement to destroy instances of <code>@Dependent</code> looked up beans is different for asynchronous invokers.
+The instances of <code>@Dependent</code> looked up beans are destroyed either after the target method returns or after the asynchronous action completes, whichever happens later.
+If an asynchronous target method throws synchronously, instances of <code>@Dependent</code> looked up beans are destroyed before <code>invoke()</code> rethrows the exception; in this case, the async handler is still permitted to call <code>completion.run()</code>, but the call must be ignored.</p>
+</div>
+<div class="paragraph">
+<p>The CDI container must include return type async handlers for the following types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>java.util.concurrent.CompletionStage</code></p>
+</li>
+<li>
+<p><code>java.util.concurrent.CompletableFuture</code></p>
+</li>
+<li>
+<p><code>java.util.concurrent.Flow.Publisher</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If two async handlers have the same async type, by default a deployment problem occurs.
+Containers are required to provide an implementation-defined means of configuring the async handler that should be used for a particular async type.
+If such configuration is present, other async handlers for the given async type are ignored; the target method only matches the configured async handler.
+If the configured async handler does not exist or its async type is different from the configured one, deployment problem occurs.
+It is possible to configure a custom async handler for the built-in types listed above.</p>
+</div>
 </div>
 </div>
 </div>
@@ -7900,14 +8131,15 @@ If methods on <code>CDI</code> are called at any other time, non-portable behavi
 </div>
 <div class="paragraph">
 <p><code>CDI</code> implements <code>jakarta.enterprise.inject.Instance</code> and therefore might be used to perform programmatic lookup as defined in <a href="#dynamic_lookup">The <code>Instance</code> interface</a>.
-If no qualifier is passed to <code>CDI.select()</code> method, the <code>@Default</code> qualifier is assumed.</p>
+Initially, the required type of the <code>Instance</code> is <code>java.lang.Object</code> and there are no required qualifiers.
+If no qualifier is passed to <code>Instance.select()</code>, there is one required qualifier: <code>@Default</code>.</p>
 </div>
 <div class="paragraph">
 <p>When <code>CDI.current()</code> is called, <code>getCDI()</code> method is called on <code>jakarta.enterprise.inject.spi.CDIProvider</code>.</p>
 </div>
 <div class="paragraph">
 <p>The <code>CDIProvider</code> to use may be set by the application or container using the <code>setCDIProvider()</code> method.
-If the <code>setCDIProvider()</code> has not been called, the service provider with highest priority of the service <code>jakarta.enterprise.inject.spi.CDIProvider</code> declared in META-INF/services is used.
+If the <code>setCDIProvider()</code> has not been called, the service provider with highest priority of the service <code>jakarta.enterprise.inject.spi.CDIProvider</code> declared in <code>META-INF/services</code> is used.
 The order of more than one <code>CDIProvider</code> with the same priority is undefined.
 If no provider is available an <code>IllegalStateException</code> is thrown.</p>
 </div>
@@ -8142,7 +8374,8 @@ The remaining parameters are event qualifiers.</p>
 <p>Instances of dependent scoped beans obtained with this <code>Instance</code> object must be explicitly released by calling <code>Instance.destroy()</code> method.</p>
 </div>
 <div class="paragraph">
-<p>If no qualifier is passed to <code>Instance.select()</code> method, the <code>@Default</code> qualifier is assumed.</p>
+<p>Initially, the required type of the <code>Instance</code> is <code>java.lang.Object</code> and there are no required qualifiers.
+If no qualifier is passed to <code>Instance.select()</code>, there is one required qualifier: <code>@Default</code>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -8193,7 +8426,7 @@ While this is useful for introspection of the contextual instance by frameworks/
 <div class="sect2">
 <h3 id="bce"><a class="anchor" href="#bce"></a>12.1. The <code>BuildCompatibleExtension</code> interface</h3>
 <div class="paragraph">
-<p>A build compatible extension is a service provider of the <code>jakarta.enterprise.inject.build.compatible.spi.BuildCompatibleExtension</code> interface, declared in <code>META-INF/services</code>.</p>
+<p>A build compatible extension is a service provider of the <code>jakarta.enterprise.inject.build.compatible.spi.BuildCompatibleExtension</code> interface declared in <code>META-INF/services</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -8516,6 +8749,8 @@ It is possible to navigate to method parameters from a <code>MethodConfig</code>
     <span class="type">boolean</span> isAlternative();
     <span class="type">boolean</span> isReserve();
     <span class="predefined-type">Integer</span> priority();
+    <span class="type">boolean</span> isEager();
+    <span class="type">boolean</span> isAutoClose();
     <span class="predefined-type">String</span> name();
     DisposerInfo disposer();
     <span class="predefined-type">Collection</span>&lt;StereotypeInfo&gt; stereotypes();
@@ -8626,13 +8861,17 @@ It is possible to navigate to method parameters from a <code>MethodConfig</code>
 <p>class of a bean creation/destruction function or observer notification function;</p>
 </li>
 <li>
+<p>injection points (only <code>SyntheticBeanBuilder</code>);</p>
+</li>
+<li>
 <p>a string-keyed parameter map.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>The container creates an instance of the bean creation/destruction function or observer notification function whenever it needs to create an instance of the bean, destroy the instance of the bean, or notify the observer.
-When invoking the bean creation/destruction function or observer notification function, the container passes the parameter map to it.</p>
+When invoking the bean creation/destruction function or observer notification function, the container passes the parameter map to it.
+When invoking the bean creation/destruction function, the container also passes an object that allows obtaining an injectable reference for each defined injection point.</p>
 </div>
 <div class="paragraph">
 <p>The parameter map may contain values of the following types:</p>
@@ -8687,12 +8926,28 @@ When such parameter is looked up from the parameter map in the synthetic bean cr
 <div class="ulist">
 <ul>
 <li>
-<p><code>Types</code></p>
+<p><code>InvokerValidation</code></p>
 </li>
 <li>
 <p><code>Messages</code></p>
 </li>
+<li>
+<p><code>Types</code></p>
+</li>
 </ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">InvokerValidation</span> {
+    <span class="type">void</span> ensureAsyncHandlerExists(<span class="predefined-type">Class</span>&lt;?&gt; asyncType);
+    <span class="type">void</span> ensureAsyncHandlerExists(<span class="predefined-type">Class</span>&lt;?&gt; asyncType, Supplier&lt;<span class="predefined-type">String</span>&gt; message);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Calling <code>InvokerValidation.ensureAsyncHandlerExists()</code> makes sure that an async handler for the given async type exists.
+If it does not exist, it registers a deployment problem as if <code>Messages.error()</code> was called.
+See <a href="#invoker_asynchronous_methods">Asynchronous methods</a> for more information about async handlers.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -9451,17 +9706,14 @@ Therefore, the container must use a client proxy whenever a bean with normal sco
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>getAnnotated()</code> method returns an instance of <code>jakarta.enterprise.inject.spi.AnnotatedField</code> or <code>jakarta.enterprise.inject.spi.AnnotatedParameter</code>, depending upon whether the injection point is an injected field or a constructor/method parameter.
-If the injection point represents a dynamically obtained instance, then the <code>getAnnotated()</code> method returns an instance of <code>jakarta.enterprise.inject.spi.AnnotatedField</code> or <code>jakarta.enterprise.inject.spi.AnnotatedParameter</code> representing the <code>Instance</code> injection point, depending upon whether the injection point is an injected field or a constructor/method parameter.</p>
+<p>The <code>isDelegate()</code> method returns <code>true</code> if the injection point is a decorator delegate injection point, and <code>false</code> otherwise.
+If the injection point represents an injection into a synthetic bean or a dynamically obtained instance, the <code>isDelegate()</code> method returns <code>false</code>.</p>
 </li>
 <li>
-<p>The <code>isDelegate()</code> method returns <code>true</code> if the injection point is a decorator delegate injection point, and <code>false</code> otherwise.
-If the injection point represents a dynamically obtained instance then <code>isDelegate()</code> returns false.</p>
+<p>The <code>isTransient()</code> method returns <code>true</code> if the <code>getMember()</code> method returns a <code>Field</code> which is declared <code>transient</code>, and <code>false</code> otherwise.
+If the injection point is declared transient, after bean&#8217;s passivation, the value will not be restored. <code>Instance</code> injection point is the preferred approach.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>If the injection point represents a dynamically obtained instance then the <code>isTransient()</code> method returns <code>true</code> if the <code>Instance</code> injection point is a transient field, and <code>false</code> otherwise. If this injection point is declared as transient, after bean&#8217;s passivation, the value will not be restored. Instance&lt;&gt; injection point is the preferred approach.</p>
 </div>
 <div class="paragraph">
 <p>In CDI Full, the built-in implementation of <code>InjectionPoint</code> must be a passivation capable dependency, as defined in <a href="#passivation_capable_dependency">Passivation capable dependencies</a>.</p>
@@ -9561,7 +9813,7 @@ If the injection point represents a dynamically obtained instance then <code>isD
 <p>The <code>Context</code> interface may be called by portable extensions.</p>
 </div>
 <div class="paragraph">
-<p>A context object may be defined for any of the built-in scopes and registered with the container using the <code>AfterBeanDiscovery</code> event as described in <a href="#after_bean_discovery"><code>AfterBeanDiscovery</code> event</a>.</p>
+<p>A context object may be defined for any of the non-global built-in scopes and registered with the container using the <code>AfterBeanDiscovery</code> event as described in <a href="#after_bean_discovery"><code>AfterBeanDiscovery</code> event</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -9844,8 +10096,9 @@ If no conversation identifier is specified, an identifier is generated by the co
 <p>In addition to rules defined in <a href="#custom_contexts">Context management for custom scopes</a>, the following rule applies.</p>
 </div>
 <div class="paragraph">
-<p>A portable extension may define a custom context object for built-in scopes and custom scopes.
-For example, a remoting framework might provide a request context object for the built-in request scope.</p>
+<p>A portable extension may define a custom context object for non-global built-in scopes and for custom scopes.
+For example, a remoting framework might provide a request context object for the built-in request scope.
+If an attempt to register a custom context object for a global built-in scope is made, deployment problem occurs.</p>
 </div>
 </div>
 </div>
@@ -9896,6 +10149,9 @@ For example, a remoting framework might provide a request context object for the
 </li>
 <li>
 <p>Invocations of methods declared by <code>java.lang.Object</code> are not business method invocations.</p>
+</li>
+<li>
+<p>Invocations of <code>AutoCloseable.close()</code> on auto-closeable beans during destruction are not business method invocations.</p>
 </li>
 </ul>
 </div>
@@ -10530,6 +10786,8 @@ The target method of the created invoker is the method represented by the <code>
     <span class="directive">public</span> <span class="predefined-type">Set</span>&lt;<span class="predefined-type">Class</span>&lt;? <span class="directive">extends</span> <span class="predefined-type">Annotation</span>&gt;&gt; getStereotypes();
     <span class="directive">public</span> <span class="type">boolean</span> isAlternative();
     <span class="directive">public</span> <span class="type">boolean</span> isReserve();
+    <span class="directive">public</span> <span class="type">boolean</span> isEager();
+    <span class="directive">public</span> <span class="type">boolean</span> isAutoClose();
 }</code></pre>
 </div>
 </div>
@@ -10543,6 +10801,12 @@ The target method of the created invoker is the method represented by the <code>
 </li>
 <li>
 <p><code>isReserve()</code> must return <code>true</code> if the bean is a reserve, and <code>false</code> otherwise.</p>
+</li>
+<li>
+<p><code>isEager()</code> must return <code>true</code> if the bean is eagerly initialized, and <code>false</code> otherwise.</p>
+</li>
+<li>
+<p><code>isAutoClose()</code> must return <code>true</code> if the bean is auto-closeable, and <code>false</code> otherwise.</p>
 </li>
 </ul>
 </div>
@@ -10731,16 +10995,16 @@ If this method is not implemented the default priority <code>APPLICATION + 500</
 </div>
 </div>
 <div class="paragraph">
-<p>For a <code>Producer</code> that represents a class:</p>
+<p>For a <code>Producer</code> that represents a managed bean:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>produce()</code> calls the constructor annotated <code>@Inject</code> if it exists, or the constructor with no parameters otherwise, as defined in <a href="#instantiation">Injection using the bean constructor</a>, and returns the resulting instance. If the class has interceptors, <code>produce()</code> is responsible for building the interceptors and decorators of the instance.
+<p><code>produce()</code> calls the constructor annotated <code>@Inject</code> if it exists, or the constructor with no parameters otherwise, as defined in <a href="#instantiation">Injection using the bean constructor</a>, and returns the resulting instance. If the bean has interceptors or decorators, <code>produce()</code> is responsible for building the interceptors and decorators of the instance.
 The instance returned by <code>produce()</code> may be a proxy.</p>
 </li>
 <li>
-<p><code>dispose()</code> does nothing.</p>
+<p><code>dispose()</code> only does one thing: if the bean is auto-closeable and the class of the contextual instance of the bean implements <code>AutoCloseable</code>, the <code>close()</code> method is called on the instance.</p>
 </li>
 <li>
 <p><code>getInjectionPoints()</code> returns the set of <code>InjectionPoint</code> objects representing all injected fields, bean constructor parameters and initializer method parameters.</p>
@@ -10756,7 +11020,8 @@ The instance returned by <code>produce()</code> may be a proxy.</p>
 <p><code>produce()</code> calls the producer method on, or accesses the producer field of, a contextual instance of the bean that declares the producer method, as defined in <a href="#producer_or_disposer_methods_invocation">Invocation of producer or disposer methods</a>.</p>
 </li>
 <li>
-<p><code>dispose()</code> calls the disposer method, if any, on a contextual instance of the bean that declares the disposer method, as defined in <a href="#producer_or_disposer_methods_invocation">Invocation of producer or disposer methods</a>, or performs any additional required cleanup, if any, to destroy state associated with a resource.</p>
+<p><code>dispose()</code> calls the disposer method, if any, on a contextual instance of the bean that declares the disposer method, as defined in <a href="#producer_or_disposer_methods_invocation">Invocation of producer or disposer methods</a>, or performs any additional required cleanup, if any, to destroy state associated with a resource.
+Then, if the bean is auto-closeable and the class of the contextual instance of the bean implements <code>AutoCloseable</code>, the <code>close()</code> method is called on the instance.</p>
 </li>
 <li>
 <p><code>getInjectionPoints()</code> returns the set of <code>InjectionPoint</code> objects representing all parameters of the producer method.</p>
@@ -11139,7 +11404,7 @@ Once <code>createInjectionTarget()</code> method has been invoked, any invocatio
 <div class="ulist">
 <ul>
 <li>
-<p>a <code>BeanAttributes</code>, which determines the bean types, qualifiers, scope, name and stereotypes of the returned <code>Bean</code>, the return values of <code>isAlternative()</code> and <code>isReserve()</code>, and</p>
+<p>a <code>BeanAttributes</code>, which determines the bean types, qualifiers, scope, name and stereotypes of the returned <code>Bean</code>, the return values of <code>isAlternative()</code>, <code>isReserve()</code>, <code>isEager()</code>, and <code>isAutoClose()</code>, and</p>
 </li>
 <li>
 <p>a class, which determines the return value of <code>Bean.getClass()</code>, and</p>
@@ -11162,7 +11427,7 @@ The method accepts:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>a <code>BeanAttributes</code>, which determines the bean types, qualifiers, scope, name and stereotypes of the returned <code>Bean</code>, the return values of <code>isAlternative()</code> and <code>isReserve()</code>, and</p>
+<p>a <code>BeanAttributes</code>, which determines the bean types, qualifiers, scope, name and stereotypes of the returned <code>Bean</code>, the return values of <code>isAlternative()</code>, <code>isReserve()</code>, <code>isEager()</code>, and <code>isAutoClose()</code>, and</p>
 </li>
 <li>
 <p>a class, which determines the return value of <code>Bean.getClass()</code>, and</p>
@@ -11803,7 +12068,7 @@ The event object must be of type <code>jakarta.enterprise.inject.spi.BeforeBeanD
 <p><code>addInterceptorBinding()</code> declares an annotation type as an interceptor binding type, and specifies its meta-annotations.</p>
 </li>
 <li>
-<p><code>addAnnotatedType()</code> adds a given <code>AnnotatedType</code> to the set of types which will be scanned during bean discovery, with an optional identifier.</p>
+<p><code>addAnnotatedType()</code> adds a given <code>AnnotatedType</code> to the set of types discovered during type discovery, with an identifier.</p>
 <div class="paragraph">
 <p>Second version of the method returns a new <code>AnnotatedTypeConfigurator</code> as defined in <a href="#annotated_type_configurator"><code>AnnotatedTypeConfigurator</code> SPI</a> to easily configure the <code>AnnotatedType</code> which will be added at the end of the observer invocation.
 The returned <code>AnnotatedTypeConfigurator</code> is initialized with type and annotations of the provided class.</p>
@@ -11868,7 +12133,7 @@ Interceptors enabled for a bean archive are not included in the list.</p>
 Decorators enabled for a bean archive are not included in the list.</p>
 </li>
 <li>
-<p><code>addAnnotatedType()</code> adds a given <code>AnnotatedType</code> to the set of types which will be scanned during bean discovery, with an identifier.</p>
+<p><code>addAnnotatedType()</code> adds a given <code>AnnotatedType</code> to the set of types discovered during type discovery, with an identifier.</p>
 <div class="paragraph">
 <p>The second version of the method, returns a new <code>AnnotatedTypeConfigurator</code> as defined in <a href="#annotated_type_configurator"><code>AnnotatedTypeConfigurator</code> SPI</a> to easily configure the <code>AnnotatedType</code> which will be added at the end of observer invocation.
 The returned <code>AnnotatedTypeConfigurator</code> is initialized with type and annotations of the provided class.</p>
@@ -12068,6 +12333,9 @@ It can be done from an existing <code>BeanAttributes</code>  or by reading metad
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">AfterDeploymentValidation</span> {
     <span class="directive">public</span> <span class="type">void</span> addDeploymentProblem(<span class="predefined-type">Throwable</span> t);
+
+    <span class="directive">public</span> <span class="type">void</span> ensureAsyncHandlerExists(<span class="predefined-type">Class</span>&lt;?&gt; asyncType);
+    <span class="directive">public</span> <span class="type">void</span> ensureAsyncHandlerExists(<span class="predefined-type">Class</span>&lt;?&gt; asyncType, Supplier&lt;<span class="predefined-type">String</span>&gt; message);
 }</code></pre>
 </div>
 </div>
@@ -12075,6 +12343,11 @@ It can be done from an existing <code>BeanAttributes</code>  or by reading metad
 <ul>
 <li>
 <p><code>addDeploymentProblem()</code> registers a deployment problem with the container, causing the container to abort deployment after all observers have been notified.</p>
+</li>
+<li>
+<p><code>ensureAsyncHandlerExists()</code> makes sure that an async handler for the given async type exists.
+If it does not exist, it registers a deployment problem as if <code>addDeploymentProblem()</code> was called.
+See <a href="#invoker_asynchronous_methods">Asynchronous methods</a> for more information about async handlers.</p>
 </li>
 </ul>
 </div>
@@ -12433,13 +12706,19 @@ Changes to <code>BeanAttributes</code> are <em>not</em> propagated to the annota
 <p>Set or add multiple stereotypes with <code>addStereotypes</code> and <code>stereotypes</code> methods.</p>
 </li>
 <li>
-<p>Set the bean name <code>name</code> method.</p>
+<p>Set the bean name with <code>name</code> method.</p>
 </li>
 <li>
-<p>Make the bean an alternative with <code>alternative</code> methods.</p>
+<p>Make the bean an alternative with <code>alternative</code> method.</p>
 </li>
 <li>
-<p>Make the bean a reserve with <code>reserve</code> methods.</p>
+<p>Make the bean a reserve with <code>reserve</code> method.</p>
+</li>
+<li>
+<p>Make the bean eagerly initialized with <code>eager</code> method.</p>
+</li>
+<li>
+<p>Make the bean auto-closeable with <code>autoClose</code> method.</p>
 </li>
 </ul>
 </div>
@@ -13079,8 +13358,9 @@ By default an exclude filter is active. If the exclude filter definition contain
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="tag">&lt;beans</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee</span><span class="delimiter">&quot;</span></span>
         <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
-        <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd</span><span class="delimiter">&quot;</span></span>
-        <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_4_1.xsd</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">4.1</span><span class="delimiter">&quot;</span></span>
+        <span class="attribute-name">bean-discovery-mode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">all</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 
     <span class="tag">&lt;trim</span><span class="tag">/&gt;</span>
 <span class="tag">&lt;/beans&gt;</span></code></pre>
@@ -13088,6 +13368,9 @@ By default an exclude filter is active. If the exclude filter definition contain
 </div>
 <div class="paragraph">
 <p>If an explicit bean archive contains the <code>&lt;trim/&gt;</code> element in its <code>beans.xml</code> file, types that don&#8217;t have either a bean defining annotation (as defined in <a href="#bean_defining_annotations">Bean defining annotations</a>) or any scope annotation, are removed from the set of discovered types.</p>
+</div>
+<div class="paragraph">
+<p>If an archive other than an explicit bean archive is marked as 'trimmed', the container automatically detects it and treats it as a deployment problem.</p>
 </div>
 </div>
 <div class="sect3">
@@ -13205,7 +13488,7 @@ All content defined in <a href="#part_1">Part I - Core CDI</a> applies to this p
 This is performed by the <code>SeContainerInitializer</code> abstract class and its static method <code>newInstance()</code>.</p>
 </div>
 <div class="paragraph">
-<p><code>SeContainerInitializer</code> is a service provider of the service <code>jakarta.enterprise.inject.se.SeContainerInitializer</code> declared in META-INF/services.
+<p><code>SeContainerInitializer</code> is a service provider of the service <code>jakarta.enterprise.inject.se.SeContainerInitializer</code> declared in <code>META-INF/services</code>.
 This class allows a user to configure the CDI container before it is bootstrapped.
 The <code>SeContainerInitializer.initialize()</code> method bootstraps the container and returns a <code>SeContainer</code> instance.</p>
 </div>
@@ -13320,7 +13603,7 @@ An implementation does not need to support multiple calls of <code>SeContainerIn
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">SeContainer</span> <span class="directive">extends</span> Instance&lt;<span class="predefined-type">Object</span>&gt;,AutoCloseable {
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">SeContainer</span> <span class="directive">extends</span> Instance&lt;<span class="predefined-type">Object</span>&gt;, AutoCloseable {
     <span class="type">void</span> close();
     <span class="type">boolean</span> isRunning();
     BeanManager getBeanManager();
@@ -13344,7 +13627,8 @@ If it is called and the container was already shutdown, it throws an <code>Illeg
 </div>
 <div class="paragraph">
 <p><code>SeContainer</code> implements <code>jakarta.enterprise.inject.Instance</code> and therefore might be used to perform programmatic lookup as defined in <a href="#dynamic_lookup">The <code>Instance</code> interface</a>.
-If no qualifier is passed to <code>SeContainer.select()</code> method, the <code>@Default</code> qualifier is assumed.</p>
+Initially, the required type of the <code>Instance</code> is <code>java.lang.Object</code> and there are no required qualifiers.
+If no qualifier is passed to <code>Instance.select()</code>, there is one required qualifier: <code>@Default</code>.</p>
 </div>
 <div class="paragraph">
 <p>If any <code>Instance.select()</code> method is called and the container was already shutdown, the <code>IllegalStateException</code> is thrown.</p>
@@ -13384,41 +13668,12 @@ If no qualifier is passed to <code>SeContainer.select()</code> method, the <code
 <h2 id="contexts_se"><a class="anchor" href="#contexts_se"></a>26. Scopes and contexts in Java SE</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="builtin_contexts_se"><a class="anchor" href="#builtin_contexts_se"></a>26.1. Context management for built-in scopes in Java SE</h3>
+<h3 id="global_scope_se"><a class="anchor" href="#global_scope_se"></a>26.1. Global scopes in Java SE</h3>
 <div class="paragraph">
-<p>When running in Java SE, the container must extend the rules defined in <a href="#builtin_contexts">Context management for built-in scopes</a> and is also required to ensure the following rules for built-in context implementation.</p>
-</div>
-<div class="sect3">
-<h4 id="application_context_se"><a class="anchor" href="#application_context_se"></a>26.1.1. Application context lifecycle in Java SE</h4>
-<div class="paragraph">
-<p>When running in Java SE the container must extend the rules defined in <a href="#application_context">Application context lifecycle</a> and is also required to ensure the following rules.</p>
+<p>In addition to rules defined in <a href="#global_scope">Global scopes</a>, the following rules apply.</p>
 </div>
 <div class="paragraph">
-<p>The application scope is active:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>during any method invocation</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The application context is shared between all method invocations that execute within the same container.</p>
-</div>
-<div class="paragraph">
-<p>The application context is destroyed when the container is shut down.</p>
-</div>
-<div class="paragraph">
-<p>The payload of the event fired when the application context is initialized or destroyed is:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>any <code>java.lang.Object</code>.</p>
-</li>
-</ul>
-</div>
+<p>A context object for a global scope only exists within a container and is not active in other containers.</p>
 </div>
 </div>
 </div>
@@ -13465,7 +13720,7 @@ If no qualifier is passed to <code>SeContainer.select()</code> method, the <code
 <div id="footer">
 <div id="footer-text">
  5.0<br>
-Last updated 2025-10-15 17:34:11 UTC
+Last updated 2026-05-19 14:53:03 UTC
 </div>
 </div>
 </body>
