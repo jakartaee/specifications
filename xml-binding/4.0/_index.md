@@ -37,7 +37,7 @@ between XML documents and Java objects.
 * [Jakarta XML Binding 4.0 TCK](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/xml-binding/4.0/jakarta-xml-binding-tck-4.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/xml-binding/4.0/)
 * Maven coordinates
-    * [jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2](https://central.sonatype.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api/4.0.2/jar)
+    * [jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.5](https://central.sonatype.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api/4.0.5/jar)
 * [Change Log](./changelog)
 
 # Compatible Implementations
