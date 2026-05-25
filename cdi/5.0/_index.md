@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Contexts and Dependency Injection 5.0 (Under development)"
-date: 2025-10-15
+date: 2026-05-19
 summary: "Release for Jakarta EE 12"
 ---
 
@@ -10,21 +10,31 @@ A complete list of issues and pull requests for this version can be viewed using
 
 ### New features, enhancements or additions
 <!-- List here -->
-Currently suggested topics includes:
-* Increase minimal Java version to 17, possibly to 21
-* Introduction a way to eagerly initialize CDI beans
+* Increase minimal Java version to 17
+* Introduction of `@Reserve` annotation as a means of declaring a default bean
+* Introduction of `@Eager` annotation for eager initialization of `@ApplicationScoped` beans
+* Introduction of `@AutoClose` annotation for automatic invocation of `close()` on `AutoCloseable` beans during destruction
+* Introduction of asynchronous invokers via the `AsyncHandler` API
+* Introduction of synthetic bean injection points via `SyntheticInjections`
+* Introduction of global scopes; application scope is now global
 * Allow registering `BuildCompatibleExtension` programmatically in CDI SE
+* Allow specifying parameterized types in `@Registration`
 * Define how `InjectionPoint` works when a bean is obtained via `CDI.current()`
-* Restrict how synthetic beans registered via `BuildCompatibleExtension` declare their injection points
 * Introduction of tests for unproxyability of sealed classes
 * Introduction of tests for records in the TCK lang model
 * Multiple small specification clarifications
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
+* Change of Maven GAV coordinates — both `groupId` and `artifactId` changed for CDI API and CDI TCK artifacts
+  * E.g. `jakarta.enterprise:jakarta.enterprise.cdi-api` is now `jakarta.cdi:jakarta.cdi-api`
+  * CDI API provides relocation artifacts for the 5.0 release to ease migration
+  * CDI TCK coordinates changed as well but without relocation artifacts
 * Removal of `SecurityManager` usage and references
 * Removal of deprecated methods from `BeanManager` API
-  * These are method related to EL and are replaced in `ElAwareBeanManager` since CDI 4.1
+  * These are methods related to EL and are replaced in `ELAwareBeanManager` since CDI 4.1
+* Forbid using trimming in non-explicit bean archives
+* Deprecation for removal of existing `SyntheticBeanCreator` and `SyntheticBeanDisposer` methods in favor of new methods using `SyntheticInjections`
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
@@ -42,9 +52,9 @@ Currently suggested topics includes:
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/cdi/5.0)
 * Maven coordinates
-  * [jakarta.enterprise:jakarta.enterprise.cdi-api:5.0.0-M1](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api/5.0.0-M1/jar)
-  * [jakarta.enterprise:jakarta.enterprise.lang-model:5.0.0-M1](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.lang-model/5.0.0-M1/jar)
-  * [jakarta.enterprise:jakarta.enterprise.cdi-el-api:5.0.0-M1](https://central.sonatype.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-el-api/5.0.0-M1/jar)
+  * [jakarta.cdi:jakarta.cdi-api:5.0.0-Beta1](https://central.sonatype.com/artifact/jakarta.cdi/jakarta.cdi-api/5.0.0-Beta1/jar)
+  * [jakarta.cdi:jakarta.cdi-lang-model-api:5.0.0-Beta1](https://central.sonatype.com/artifact/jakarta.cdi/jakarta.cdi-lang-model-api/5.0.0-Beta1/jar)
+  * [jakarta.cdi:jakarta.cdi-el-api:5.0.0-Beta1](https://central.sonatype.com/artifact/jakarta.cdi/jakarta.cdi-el-api/5.0.0-Beta1/jar)
 
 * Schemas
   * [XML Schema for the CDI 5.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_5_0.xsd)
@@ -52,7 +62,7 @@ Currently suggested topics includes:
 
 # Compatible Implementations
 
-* [Weld 7.0.0](https://weld.cdi-spec.org/download/) TBD
+* [Weld 7.0.0.Beta1](https://central.sonatype.com/artifact/org.jboss.weld/weld-core-impl/7.0.0.Beta1)
 
 # Ballots
 
