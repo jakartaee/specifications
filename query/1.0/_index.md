@@ -45,8 +45,8 @@ N/A
 
 # Details
 
-* [Jakarta Query 1.0-M1 Specification Document](./jakarta-query-1.0-M1.pdf) (PDF)
-* [Jakarta Query 1.0-M1 Specification Document](./jakarta-query-1.0-M1.html) (HTML)
+* [Jakarta Query 1.0-M2 Specification Document](./jakarta-query-1.0-M2.pdf) (PDF)
+* [Jakarta Query 1.0-M2 Specification Document](./jakarta-query-1.0-M2.html) (HTML)
 
 # Ballots
 
