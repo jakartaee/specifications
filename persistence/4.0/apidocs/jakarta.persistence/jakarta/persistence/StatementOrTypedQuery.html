@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -198,7 +198,8 @@ this query.</div>
 <section class="detail" id="asStatement()">
 <h3>asStatement</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">asStatement</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">asStatement</span>()</div>
 <div class="block">Obtain a <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> representing this statement,
 which must be some kind of executable statement, that is,
 a Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
@@ -217,7 +218,9 @@ count. The executable statement may be executed by calling
 <section class="detail" id="ofType(java.lang.Class)">
 <h3>ofType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;R&gt;</span>&nbsp;<span class="element-name">ofType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;R&gt;</span>&nbsp;<span class="element-name">ofType</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</span></div>
 <div class="block">Obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given query result type,
 which must be a supertype of the result type of this query.
 This query must be a Jakarta Persistence <code>SELECT</code> query
@@ -241,7 +244,9 @@ or a native SQL query which returns a result set.</div>
 <section class="detail" id="withEntityGraph(jakarta.persistence.EntityGraph)">
 <h3>withEntityGraph</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;R&gt;</span>&nbsp;<span class="element-name">withEntityGraph</span><wbr><span class="parameters">(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;R&gt;&nbsp;graph)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;R&gt;</span>&nbsp;<span class="element-name">withEntityGraph</span><wbr><span class="parameters">(@Nonnull
+ <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;R&gt;&nbsp;graph)</span></div>
 <div class="block">Obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given entity graph,
 which must be rooted at a supertype of the result type of
 this query. This query must be a Jakarta Persistence
@@ -266,7 +271,9 @@ this query. This query must be a Jakarta Persistence
 <section class="detail" id="withResultSetMapping(jakarta.persistence.sql.ResultSetMapping)">
 <h3>withResultSetMapping</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;R&gt;</span>&nbsp;<span class="element-name">withResultSetMapping</span><wbr><span class="parameters">(<a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;R&gt;</span>&nbsp;<span class="element-name">withResultSetMapping</span><wbr><span class="parameters">(@Nonnull
+ <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</span></div>
 <div class="block">Obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> with the given result set mapping.
 This query must be a native SQL query returning a result set
 compatible with the given mapping.</div>

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -64,7 +64,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence.criteria">jakarta.persistence.criteria</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </div>
 </div>
 <section class="class-uses">
@@ -80,18 +80,25 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>&lt;R&gt;&nbsp;<a href="../CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a><wbr>&lt;R&gt;</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#selectCase()" class="member-name-link">selectCase</a>()</code></div>
 <div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">This operation declares an unconstrained type variable.</div>
+</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;R&gt;&nbsp;<a href="../CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a><wbr>&lt;R&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#selectCase(java.lang.Class)" class="member-name-link">selectCase</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;type)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Create a general case expression.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a><wbr>&lt;<a href="../CriteriaBuilder.Case.html#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.Case.</span><code><a href="../CriteriaBuilder.Case.html#when(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">when</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;condition,
+<div class="col-first even-row-color"><code><a href="../CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a><wbr>&lt;<a href="../CriteriaBuilder.Case.html#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.Case.</span><code><a href="../CriteriaBuilder.Case.html#when(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">when</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;condition,
  <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="../CriteriaBuilder.Case.html#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;&nbsp;result)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Add a when/then clause to the case expression.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a><wbr>&lt;<a href="../CriteriaBuilder.Case.html#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</code></div>
-<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.Case.</span><code><a href="../CriteriaBuilder.Case.html#when(jakarta.persistence.criteria.Expression,R)" class="member-name-link">when</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;condition,
+<div class="col-first odd-row-color"><code><a href="../CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a><wbr>&lt;<a href="../CriteriaBuilder.Case.html#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.Case.</span><code><a href="../CriteriaBuilder.Case.html#when(jakarta.persistence.criteria.Expression,R)" class="member-name-link">when</a><wbr>(<a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;condition,
  <a href="../CriteriaBuilder.Case.html#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&nbsp;result)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last odd-row-color">
 <div class="block">Add a when/then clause to the case expression.</div>
 </div>
 </div>

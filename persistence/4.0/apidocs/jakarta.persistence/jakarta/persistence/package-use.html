@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -62,24 +62,35 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence">jakarta.persistence</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </div>
 <div class="col-first odd-row-color"><a href="#jakarta.persistence.criteria">jakarta.persistence.criteria</a></div>
 <div class="col-last odd-row-color">
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence.metamodel">jakarta.persistence.metamodel</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence Metamodel API</div>
+<div class="block">Defines the Jakarta Persistence Metamodel API, allowing runtime
+reflection on the managed types declared by a persistence unit.</div>
 </div>
 <div class="col-first odd-row-color"><a href="#jakarta.persistence.query">jakarta.persistence.query</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Defines annotations for expressing statically type safe queries by
+annotating query methods of a
+<a href="spi/Discoverable.html" title="annotation interface in jakarta.persistence.spi">discoverable</a> type
+or Jakarta Data repository.</div>
+</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence.spi">jakarta.persistence.spi</a></div>
 <div class="col-last even-row-color">
-<div class="block">SPI for Jakarta Persistence providers</div>
+<div class="block">Defines an SPI for integrating with the persistence provider
+and with the Jakarta EE platform.</div>
 </div>
 <div class="col-first odd-row-color"><a href="#jakarta.persistence.sql">jakarta.persistence.sql</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Defines an API for the programmatic definition of SQL result set
+mappings to Java classes.</div>
+</div>
 </div>
 <section class="package-uses">
 <ul class="block-list">
@@ -147,6 +158,14 @@ a result.</div>
 <div class="block">Provides entity operations that are performed independently
 of a persistence context.</div>
 </div>
+<div class="col-first even-row-color"><a href="class-use/EntityAgent.CreationOption.html#jakarta.persistence">EntityAgent.CreationOption</a></div>
+<div class="col-last even-row-color">
+<div class="block">An option controlling the creation of an entity agent.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/EntityAgent.Option.html#jakarta.persistence">EntityAgent.Option</a></div>
+<div class="col-last odd-row-color">
+<div class="block">An option controlling the behavior of an entity agent.</div>
+</div>
 <div class="col-first even-row-color"><a href="class-use/EntityGraph.html#jakarta.persistence">EntityGraph</a></div>
 <div class="col-last even-row-color">
 <div class="block">An entity graph is a template that captures the boundaries of an
@@ -165,6 +184,14 @@ listener with the <a href="EntityManagerFactory.html" title="interface in jakart
 <div class="col-first odd-row-color"><a href="class-use/EntityManager.html#jakarta.persistence">EntityManager</a></div>
 <div class="col-last odd-row-color">
 <div class="block">Interface used to interact with the persistence context.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/EntityManager.CreationOption.html#jakarta.persistence">EntityManager.CreationOption</a></div>
+<div class="col-last even-row-color">
+<div class="block">An option controlling the creation of an entity manager.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/EntityManager.Option.html#jakarta.persistence">EntityManager.Option</a></div>
+<div class="col-last odd-row-color">
+<div class="block">An option controlling the behavior of an entity manager.</div>
 </div>
 <div class="col-first even-row-color"><a href="class-use/EntityManagerFactory.html#jakarta.persistence">EntityManagerFactory</a></div>
 <div class="col-last even-row-color">
@@ -310,8 +337,8 @@ query language or in native SQL.</div>
 <div class="col-last even-row-color">
 <div class="block">A reference to a named statement or query declared via the
 <a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+or using <a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
 <div class="col-first odd-row-color"><a href="class-use/RefreshOption.html#jakarta.persistence">RefreshOption</a></div>
 <div class="col-last odd-row-color">
@@ -343,20 +370,28 @@ an entity type is eligible for storage in the second-level cache.</div>
 <div class="col-last even-row-color">
 <div class="block">Interface used to control the execution of executable statements.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/StatementOrTypedQuery.html#jakarta.persistence">StatementOrTypedQuery</a></div>
+<div class="col-first odd-row-color"><a href="class-use/Statement.Option.html#jakarta.persistence">Statement.Option</a></div>
 <div class="col-last odd-row-color">
+<div class="block">An option influencing execution of a statement.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/StatementOrTypedQuery.html#jakarta.persistence">StatementOrTypedQuery</a></div>
+<div class="col-last even-row-color">
 <div class="block">Declares operations allowing a <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>
 to be obtained when the type of a query or statement has not yet been
 specified.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/StatementReference.html#jakarta.persistence">StatementReference</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="class-use/StatementReference.html#jakarta.persistence">StatementReference</a></div>
+<div class="col-last odd-row-color">
 <div class="block">A reference to an executable named statement for an operation
 that returns a row count.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/StoredProcedureQuery.html#jakarta.persistence">StoredProcedureQuery</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/StoredProcedureQuery.html#jakarta.persistence">StoredProcedureQuery</a></div>
+<div class="col-last even-row-color">
 <div class="block">Interface used to control execution of a stored procedure query.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/StoredProcedureQuery.Option.html#jakarta.persistence">StoredProcedureQuery.Option</a></div>
+<div class="col-last odd-row-color">
+<div class="block">An option influencing execution of a stored procedure.</div>
 </div>
 <div class="col-first even-row-color"><a href="class-use/Subgraph.html#jakarta.persistence">Subgraph</a></div>
 <div class="col-last even-row-color">
@@ -389,15 +424,19 @@ returned in a query result tuple.</div>
 <div class="col-last odd-row-color">
 <div class="block">Interface used to control the execution of typed queries.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/TypedQueryReference.html#jakarta.persistence">TypedQueryReference</a></div>
+<div class="col-first even-row-color"><a href="class-use/TypedQuery.Option.html#jakarta.persistence">TypedQuery.Option</a></div>
 <div class="col-last even-row-color">
+<div class="block">An option influencing execution of a typed query.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/TypedQueryReference.html#jakarta.persistence">TypedQueryReference</a></div>
+<div class="col-last odd-row-color">
 <div class="block">A reference to a typed named query declared via the
 <a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+or using <a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/ValidationMode.html#jakarta.persistence">ValidationMode</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/ValidationMode.html#jakarta.persistence">ValidationMode</a></div>
+<div class="col-last even-row-color">
 <div class="block">The validation mode to be used by the provider for the persistence
 unit.</div>
 </div>
@@ -418,14 +457,26 @@ unit.</div>
 <div class="col-last odd-row-color">
 <div class="block">Represents a parameter of a <a href="Query.html" title="interface in jakarta.persistence">query</a>.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/Tuple.html#jakarta.persistence.criteria">Tuple</a></div>
+<div class="col-first even-row-color"><a href="class-use/StatementReference.html#jakarta.persistence.criteria">StatementReference</a></div>
 <div class="col-last even-row-color">
+<div class="block">A reference to an executable named statement for an operation
+that returns a row count.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/Tuple.html#jakarta.persistence.criteria">Tuple</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Interface for extracting the elements of a query result tuple.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/TupleElement.html#jakarta.persistence.criteria">TupleElement</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="class-use/TupleElement.html#jakarta.persistence.criteria">TupleElement</a></div>
+<div class="col-last even-row-color">
 <div class="block">The <code>TupleElement</code> interface defines an element that is
 returned in a query result tuple.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/TypedQueryReference.html#jakarta.persistence.criteria">TypedQueryReference</a></div>
+<div class="col-last odd-row-color">
+<div class="block">A reference to a typed named query declared via the
+<a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
+or using <a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
 </div>
 </section>
@@ -450,52 +501,32 @@ returned in a query result tuple.</div>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><a href="class-use/CacheRetrieveMode.html#jakarta.persistence.query">CacheRetrieveMode</a></div>
-<div class="col-last even-row-color">
-<div class="block">Specifies how the <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> interacts with the
-second-level cache when data is read from the database via
-the <a href="EntityManager.html#find(java.lang.Class,java.lang.Object,java.util.Map)"><code>EntityManager.find(Class, Object, Map)</code></a> methods and execution of
-queries.</div>
-</div>
-<div class="col-first odd-row-color"><a href="class-use/CacheStoreMode.html#jakarta.persistence.query">CacheStoreMode</a></div>
-<div class="col-last odd-row-color">
-<div class="block">Specifies how the <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> interacts with the
-second-level cache when data is read from the database and
-when data is written to the database.</div>
-</div>
-<div class="col-first even-row-color"><a href="class-use/LockModeType.html#jakarta.persistence.query">LockModeType</a></div>
-<div class="col-last even-row-color">
-<div class="block">Enumerates the kinds of optimistic or pessimistic lock which may
-be obtained on an entity instance.</div>
-</div>
-<div class="col-first odd-row-color"><a href="class-use/PessimisticLockScope.html#jakarta.persistence.query">PessimisticLockScope</a></div>
-<div class="col-last odd-row-color">
-<div class="block">Controls how a <a href="LockModeType.html" title="enum class in jakarta.persistence">pessimistic lock</a>
-applied to an entity affects associated collections and
-relationships.</div>
-</div>
 <div class="col-first even-row-color"><a href="class-use/Reference.html#jakarta.persistence.query">Reference</a></div>
 <div class="col-last even-row-color">
 <div class="block">A reference to a named statement or query declared via the
 <a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+or using <a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/StatementReference.html#jakarta.persistence.query">StatementReference</a></div>
+<div class="col-first odd-row-color"><a href="class-use/Statement.Option.html#jakarta.persistence.query">Statement.Option</a></div>
 <div class="col-last odd-row-color">
+<div class="block">An option influencing execution of a statement.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/StatementReference.html#jakarta.persistence.query">StatementReference</a></div>
+<div class="col-last even-row-color">
 <div class="block">A reference to an executable named statement for an operation
 that returns a row count.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/Timeout.html#jakarta.persistence.query">Timeout</a></div>
-<div class="col-last even-row-color">
-<div class="block">Specifies a timeout for a database request.</div>
-</div>
-<div class="col-first odd-row-color"><a href="class-use/TypedQueryReference.html#jakarta.persistence.query">TypedQueryReference</a></div>
+<div class="col-first odd-row-color"><a href="class-use/TypedQuery.Option.html#jakarta.persistence.query">TypedQuery.Option</a></div>
 <div class="col-last odd-row-color">
+<div class="block">An option influencing execution of a typed query.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/TypedQueryReference.html#jakarta.persistence.query">TypedQueryReference</a></div>
+<div class="col-last even-row-color">
 <div class="block">A reference to a typed named query declared via the
 <a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+or using <a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
 </div>
 </section>

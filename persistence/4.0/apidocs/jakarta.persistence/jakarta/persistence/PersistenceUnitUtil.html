@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -197,7 +197,9 @@ open persistence context.</div>
 <section class="detail" id="isLoaded(java.lang.Object,java.lang.String)">
 <h3>isLoaded</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isLoaded</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isLoaded</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Determine the load state of a given persistent attribute
 of an entity belonging to the persistence unit.</div>
@@ -219,11 +221,15 @@ of an entity belonging to the persistence unit.</div>
 <section class="detail" id="isLoaded(E,jakarta.persistence.metamodel.Attribute)">
 <h3 id="isLoaded(java.lang.Object,jakarta.persistence.metamodel.Attribute)">isLoaded</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isLoaded</span><wbr><span class="parameters">(E&nbsp;entity,
+<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isLoaded</span><wbr><span class="parameters">(@Nonnull
+ E&nbsp;entity,
+ @Nonnull
  <a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super E, ?&gt;&nbsp;attribute)</span></div>
 <div class="block">Determine the load state of a given persistent attribute
 of an entity belonging to the persistence unit.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="isLoaded(E,jakarta.persistence.metamodel.Attribute)-type-param-E"><code>E</code> - the entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entity</code> - entity instance containing the attribute</dd>
 <dd><code>attribute</code> - attribute whose load state is to be determined</dd>
@@ -240,7 +246,8 @@ of an entity belonging to the persistence unit.</div>
 <section class="detail" id="isLoaded(java.lang.Object)">
 <h3>isLoaded</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isLoaded</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isLoaded</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">Determine the load state of an entity belonging to the
 persistence unit. This method can be used to determine the
 load state of an entity passed as a reference. An entity is
@@ -264,7 +271,9 @@ so might lead to unintended loading of state.</div>
 <section class="detail" id="load(java.lang.Object,java.lang.String)">
 <h3>load</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Load the persistent value of a given persistent attribute
 of an entity belonging to the persistence unit and to an
@@ -291,7 +300,9 @@ database</dd>
 <section class="detail" id="load(E,jakarta.persistence.metamodel.Attribute)">
 <h3 id="load(java.lang.Object,jakarta.persistence.metamodel.Attribute)">load</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(E&nbsp;entity,
+<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(@Nonnull
+ E&nbsp;entity,
+ @Nonnull
  <a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super E, ?&gt;&nbsp;attribute)</span></div>
 <div class="block">Load the persistent value of a given persistent attribute
 of an entity belonging to the persistence unit and to an
@@ -299,6 +310,8 @@ open persistence context.
 After this method returns, <a href="#isLoaded(E,jakarta.persistence.metamodel.Attribute)"><code>isLoaded(Object,Attribute)</code></a>
 must return true with the given entity instance and attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="load(E,jakarta.persistence.metamodel.Attribute)-type-param-E"><code>E</code> - the entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entity</code> - entity instance to be loaded</dd>
 <dd><code>attribute</code> - the attribute to be loaded</dd>
@@ -318,7 +331,8 @@ database</dd>
 <section class="detail" id="load(java.lang.Object)">
 <h3>load</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">Load the persistent state of an entity belonging to the
 persistence unit and to an open persistence context.
 After this method returns, <a href="#isLoaded(java.lang.Object)"><code>isLoaded(Object)</code></a> must
@@ -342,7 +356,9 @@ database</dd>
 <section class="detail" id="isInstance(java.lang.Object,java.lang.Class)">
 <h3>isInstance</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isInstance</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isInstance</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;entityClass)</span></div>
 <div class="block">Return true if the given entity belonging to the persistence
 unit and to an open persistence context is an instance of the
@@ -371,12 +387,16 @@ database</dd>
 <section class="detail" id="getClass(T)">
 <h3 id="getClass(java.lang.Object)">getClass</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends T&gt;</span>&nbsp;<span class="element-name">getClass</span><wbr><span class="parameters">(T&nbsp;entity)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends T&gt;</span>&nbsp;<span class="element-name">getClass</span><wbr><span class="parameters">(@Nonnull
+ T&nbsp;entity)</span></div>
 <div class="block">Return the concrete entity class if the given entity belonging
 to the persistence unit and to an open persistence context.
 This method may, but is not required to, load the given entity
 by side effect.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getClass(T)-type-param-T"><code>T</code> - the entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entity</code> - entity instance</dd>
 <dt>Returns:</dt>
@@ -397,7 +417,9 @@ database</dd>
 <section class="detail" id="getIdentifier(java.lang.Object)">
 <h3>getIdentifier</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getIdentifier</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getIdentifier</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">Return the id of the entity.
 A generated id is not guaranteed to be available until after
 the database insert has occurred.
@@ -418,11 +440,13 @@ Returns null if the entity does not yet have an id.</div>
 <section class="detail" id="getVersion(java.lang.Object)">
 <h3>getVersion</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getVersion</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">Return the version of the entity.
 A generated version is not guaranteed to be available until after
 the database insert has occurred.
-Returns null if the entity does not yet have an id.</div>
+Returns null if the entity does not yet have a version.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>entity</code> - entity instance</dd>

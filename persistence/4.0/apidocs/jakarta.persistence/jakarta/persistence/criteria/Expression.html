@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#coalesce(T)" tabindex="0">coalesce(T)</a></li>
 <li><a href="#nullif(jakarta.persistence.criteria.Expression)" tabindex="0">nullif(Expression)</a></li>
 <li><a href="#nullif(T)" tabindex="0">nullif(T)</a></li>
-<li><a href="#selectCase()" tabindex="0">selectCase()</a></li>
+<li><a href="#selectCase(java.lang.Class)" tabindex="0">selectCase(Class)</a></li>
 <li><a href="#isMember(jakarta.persistence.criteria.Expression)" tabindex="0">isMember(Expression)</a></li>
 <li><a href="#isNotMember(jakarta.persistence.criteria.Expression)" tabindex="0">isNotMember(Expression)</a></li>
 <li><a href="#count()" tabindex="0">count()</a></li>
@@ -257,7 +257,7 @@ is equal to the argument, returning null if they are
 and the value of the first expression if they are not.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;R&gt;&nbsp;<a href="CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>,<wbr>R&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#selectCase()" class="member-name-link">selectCase</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#selectCase(java.lang.Class)" class="member-name-link">selectCase</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;type)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a simple case expression to test against this expression.</div>
 </div>
@@ -285,7 +285,8 @@ and the value of the first expression if they are not.</div>
 <section class="detail" id="isNull()">
 <h3>isNull</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isNull</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isNull</span>()</div>
 <div class="block">Create a predicate to test whether the expression is null.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -298,7 +299,8 @@ and the value of the first expression if they are not.</div>
 <section class="detail" id="isNotNull()">
 <h3>isNotNull</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isNotNull</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isNotNull</span>()</div>
 <div class="block">Create a predicate to test whether the expression is 
 not null.</div>
 <dl class="notes">
@@ -312,7 +314,9 @@ not null.</div>
 <section class="detail" id="equalTo(jakarta.persistence.criteria.Expression)">
 <h3>equalTo</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">equalTo</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;value)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">equalTo</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;value)</span></div>
 <div class="block">Create a predicate to test whether the expression is equal to
 the argument.</div>
 <dl class="notes">
@@ -330,7 +334,8 @@ the argument.</div>
 <section class="detail" id="equalTo(java.lang.Object)">
 <h3>equalTo</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">equalTo</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">equalTo</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 <div class="block">Create a predicate to test whether the expression is equal to
 the argument.</div>
 <dl class="notes">
@@ -348,7 +353,9 @@ the argument.</div>
 <section class="detail" id="notEqualTo(jakarta.persistence.criteria.Expression)">
 <h3>notEqualTo</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">notEqualTo</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;value)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">notEqualTo</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&nbsp;value)</span></div>
 <div class="block">Create a predicate to test whether the expression is unequal
 to the argument.</div>
 <dl class="notes">
@@ -366,7 +373,8 @@ to the argument.</div>
 <section class="detail" id="notEqualTo(java.lang.Object)">
 <h3>notEqualTo</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">notEqualTo</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">notEqualTo</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 <div class="block">Create a predicate to test whether the expression is unequal
 to the argument.</div>
 <dl class="notes">
@@ -384,7 +392,9 @@ to the argument.</div>
 <section class="detail" id="in(java.lang.Object...)">
 <h3>in</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;values)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;values)</span></div>
 <div class="block">Create a predicate to test whether the expression is a member
 of the argument list.</div>
 <dl class="notes">
@@ -400,7 +410,9 @@ of the argument list.</div>
 <section class="detail" id="in(jakarta.persistence.criteria.Expression...)">
 <h3>in</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;values)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;values)</span></div>
 <div class="block">Create a predicate to test whether the expression is a member
 of the argument list.</div>
 <dl class="notes">
@@ -416,7 +428,9 @@ of the argument list.</div>
 <section class="detail" id="in(java.util.Collection)">
 <h3>in</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&nbsp;values)</span></div>
 <div class="block">Create a predicate to test whether the expression is a member
 of the collection.</div>
 <dl class="notes">
@@ -432,7 +446,9 @@ of the collection.</div>
 <section class="detail" id="in(jakarta.persistence.criteria.Expression)">
 <h3>in</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;?&gt;&gt;&nbsp;values)</span></div>
 <div class="block">Create a predicate to test whether the expression is a member
 of the collection.</div>
 <dl class="notes">
@@ -449,7 +465,9 @@ of the collection.</div>
 <section class="detail" id="in(jakarta.persistence.criteria.Subquery)">
 <h3>in</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(<a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;subquery)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">in</span><wbr><span class="parameters">(@Nonnull
+ <a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;subquery)</span></div>
 <div class="block">Create a predicate to test whether the expression is returned
 by the subquery.</div>
 <dl class="notes">
@@ -467,13 +485,17 @@ by the subquery.</div>
 <section class="detail" id="as(java.lang.Class)">
 <h3>as</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;X&gt;</span>&nbsp;<span class="element-name">as</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;X&gt;</span>&nbsp;<span class="element-name">as</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;type)</span></div>
 <div class="block">Perform a typecast upon the expression, returning a new
 expression object.
 Unlike <a href="#cast(java.lang.Class)"><code>cast(Class)</code></a>, this method does not cause
 type conversion: the runtime type is not changed.
 <p><em>Warning: may result in a runtime failure.</em></div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="as(java.lang.Class)-type-param-X"><code>X</code> - the intended type of the expression</span></dd>
 <dt>Parameters:</dt>
 <dd><code>type</code> - intended type of the expression</dd>
 <dt>Returns:</dt>
@@ -492,7 +514,9 @@ type conversion: the runtime type is not changed.
 <section class="detail" id="cast(java.lang.Class)">
 <h3>cast</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;X&gt;</span>&nbsp;<span class="element-name">cast</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;X&gt;</span>&nbsp;<span class="element-name">cast</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;type)</span></div>
 <div class="block">Cast this expression to the specified type, returning a
 new expression object.
 Unlike <a href="#as(java.lang.Class)"><code>as(Class)</code></a>, this method <em>does</em>
@@ -504,6 +528,8 @@ scalar expressions to <a href="https://docs.oracle.com/en/java/javase/17/docs/ap
 Support for typecasts between other basic types is
 not required.</em></div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="cast(java.lang.Class)-type-param-X"><code>X</code> - the target type of the cast</span></dd>
 <dt>Parameters:</dt>
 <dd><code>type</code> - a basic type</dd>
 <dt>Returns:</dt>
@@ -518,7 +544,9 @@ not required.</em></div>
 <section class="detail" id="coalesce(jakarta.persistence.criteria.Expression)">
 <h3>coalesce</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;y)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;y)</span></div>
 <div class="block">Create an expression that returns null if this and the argument
 evaluate to null, and the value of the first non-null expression
 otherwise.</div>
@@ -537,7 +565,8 @@ otherwise.</div>
 <section class="detail" id="coalesce(T)">
 <h3 id="coalesce(java.lang.Object)">coalesce</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in Expression">T</a>&nbsp;y)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in Expression">T</a>&nbsp;y)</span></div>
 <div class="block">Create an expression that returns null if this and the argument
 evaluate to null, and the value of the first non-null expression
 otherwise.</div>
@@ -556,7 +585,9 @@ otherwise.</div>
 <section class="detail" id="nullif(jakarta.persistence.criteria.Expression)">
 <h3>nullif</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;y)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&nbsp;y)</span></div>
 <div class="block">Create an expression that tests whether this expression
 is equal to the argument, returning null if they are
 and the value of the first expression if they are not.</div>
@@ -575,7 +606,8 @@ and the value of the first expression if they are not.</div>
 <section class="detail" id="nullif(T)">
 <h3 id="nullif(java.lang.Object)">nullif</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in Expression">T</a>&nbsp;y)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in Expression">T</a>&nbsp;y)</span></div>
 <div class="block">Create an expression that tests whether this expression
 is equal to the argument, returning null if they are
 and the value of the first expression if they are not.</div>
@@ -591,12 +623,18 @@ and the value of the first expression if they are not.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="selectCase()">
+<section class="detail" id="selectCase(java.lang.Class)">
 <h3>selectCase</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>,<wbr>R&gt;</span>&nbsp;<span class="element-name">selectCase</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaBuilder.SimpleCase.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.SimpleCase</a>&lt;<a href="#type-param-T" title="type parameter in Expression">T</a>,<wbr>R&gt;</span>&nbsp;<span class="element-name">selectCase</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;type)</span></div>
 <div class="block">Create a simple case expression to test against this expression.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="selectCase(java.lang.Class)-type-param-R"><code>R</code> - the result type of the case expression</span></dd>
+<dt>Parameters:</dt>
+<dd><code>type</code> - the type of the result of the case expression</dd>
 <dt>Returns:</dt>
 <dd>simple case expression</dd>
 <dt>Since:</dt>
@@ -609,7 +647,9 @@ and the value of the first expression if they are not.</div>
 <section class="detail" id="isMember(jakarta.persistence.criteria.Expression)">
 <h3>isMember</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isMember</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isMember</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</span></div>
 <div class="block">Create a predicate that tests whether this expression is
 a member of a collection.
 If the collection is empty, the predicate will be false.</div>
@@ -628,7 +668,9 @@ If the collection is empty, the predicate will be false.</div>
 <section class="detail" id="isNotMember(jakarta.persistence.criteria.Expression)">
 <h3>isNotMember</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isNotMember</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">isNotMember</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? super <a href="#type-param-T" title="type parameter in Expression">T</a>&gt;&gt;&nbsp;collection)</span></div>
 <div class="block">Create a predicate that tests whether this expression is
 not a member of a collection.
 If the collection is empty, the predicate will be true.</div>
@@ -647,7 +689,8 @@ If the collection is empty, the predicate will be true.</div>
 <section class="detail" id="count()">
 <h3>count</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span>&nbsp;<span class="element-name">count</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span>&nbsp;<span class="element-name">count</span>()</div>
 <div class="block">Create an aggregate expression applying the count operation.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -662,7 +705,8 @@ If the collection is empty, the predicate will be true.</div>
 <section class="detail" id="countDistinct()">
 <h3>countDistinct</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span>&nbsp;<span class="element-name">countDistinct</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span>&nbsp;<span class="element-name">countDistinct</span>()</div>
 <div class="block">Create an aggregate expression applying the count distinct
 operation.</div>
 <dl class="notes">

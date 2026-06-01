@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -127,7 +127,11 @@ entity must have a field or property annotated <code>@Id</code> for
 each field or property of its id class.
 
 <p>The <code>@Id</code> annotation should never be applied to a field
-or property of an embeddable id or id class.</div>
+or property of an embeddable id or id class.
+
+<p>The persistence provider is permitted to use the value of the
+identifier and version fields or properties of an entity instance
+to determine whether the instance is new or detached.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>

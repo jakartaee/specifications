@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -67,6 +67,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#set(java.lang.String,java.lang.Object)" tabindex="0">set(String, Object)</a></li>
 <li><a href="#where(jakarta.persistence.criteria.Expression)" tabindex="0">where(Expression)</a></li>
 <li><a href="#where(jakarta.persistence.criteria.BooleanExpression...)" tabindex="0">where(BooleanExpression...)</a></li>
+<li><a href="#where(java.util.List)" tabindex="0">where(List)</a></li>
 </ol>
 </li>
 </ol>
@@ -162,6 +163,13 @@ restriction predicates.</div>
 <div class="block">Modify the update query to restrict the target of the
 update according to the specified boolean expression.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a><wbr>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Modify the update query to restrict the target of the
+update according to the conjunction of the specified
+restriction predicates.</div>
+</div>
 </div>
 </div>
 </div>
@@ -186,13 +194,18 @@ update according to the specified boolean expression.</div>
 <section class="detail" id="set(jakarta.persistence.metamodel.SingularAttribute,X)">
 <h3 id="set(jakarta.persistence.metamodel.SingularAttribute,java.lang.Object)">set</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y, X extends Y&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>, Y&gt;&nbsp;attribute,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y, X extends Y&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>, Y&gt;&nbsp;attribute,
  X&nbsp;value)</span></div>
 <div class="block">Update the value of the specified attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="set(jakarta.persistence.metamodel.SingularAttribute,X)-type-param-Y"><code>Y</code> - the type of the attribute</span></dd>
+<dd><span id="set(jakarta.persistence.metamodel.SingularAttribute,X)-type-param-X"><code>X</code> - the type of the value</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute to be updated</dd>
-<dd><code>value</code> - new value</dd>
+<dd><code>attribute</code> - the attribute to be updated</dd>
+<dd><code>value</code> - the new value to set</dd>
 <dt>Returns:</dt>
 <dd>the modified update query</dd>
 </dl>
@@ -203,13 +216,18 @@ update according to the specified boolean expression.</div>
 <section class="detail" id="set(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.Expression)">
 <h3>set</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>, Y&gt;&nbsp;attribute,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>, Y&gt;&nbsp;attribute,
+ @Nonnull
  <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;value)</span></div>
 <div class="block">Update the value of the specified attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="set(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.Expression)-type-param-Y"><code>Y</code> - the type of the attribute</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute to be updated</dd>
-<dd><code>value</code> - new value</dd>
+<dd><code>attribute</code> - the attribute to be updated</dd>
+<dd><code>value</code> - the new value to set</dd>
 <dt>Returns:</dt>
 <dd>the modified update query</dd>
 </dl>
@@ -220,13 +238,18 @@ update according to the specified boolean expression.</div>
 <section class="detail" id="set(jakarta.persistence.criteria.Path,X)">
 <h3 id="set(jakarta.persistence.criteria.Path,java.lang.Object)">set</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y, X extends Y&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a>&lt;Y&gt;&nbsp;attribute,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y, X extends Y&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(@Nonnull
+ <a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a>&lt;Y&gt;&nbsp;attribute,
  X&nbsp;value)</span></div>
 <div class="block">Update the value of the specified attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="set(jakarta.persistence.criteria.Path,X)-type-param-Y"><code>Y</code> - the type of the attribute</span></dd>
+<dd><span id="set(jakarta.persistence.criteria.Path,X)-type-param-X"><code>X</code> - the type of the value</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute to be updated</dd>
-<dd><code>value</code> - new value</dd>
+<dd><code>attribute</code> - the attribute to be updated</dd>
+<dd><code>value</code> - the new value to set</dd>
 <dt>Returns:</dt>
 <dd>the modified update query</dd>
 </dl>
@@ -237,13 +260,18 @@ update according to the specified boolean expression.</div>
 <section class="detail" id="set(jakarta.persistence.criteria.Path,jakarta.persistence.criteria.Expression)">
 <h3>set</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a>&lt;Y&gt;&nbsp;attribute,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(@Nonnull
+ <a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a>&lt;Y&gt;&nbsp;attribute,
+ @Nonnull
  <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends Y&gt;&nbsp;value)</span></div>
 <div class="block">Update the value of the specified attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="set(jakarta.persistence.criteria.Path,jakarta.persistence.criteria.Expression)-type-param-Y"><code>Y</code> - the type of the attribute</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attribute</code> - attribute to be updated</dd>
-<dd><code>value</code> - new value</dd>
+<dd><code>attribute</code> - the attribute to be updated</dd>
+<dd><code>value</code> - the new value to set</dd>
 <dt>Returns:</dt>
 <dd>the modified update query</dd>
 </dl>
@@ -254,15 +282,25 @@ update according to the specified boolean expression.</div>
 <section class="detail" id="set(java.lang.String,java.lang.Object)">
 <h3>set</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 <div class="block">Update the value of the specified attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute to be updated</dd>
-<dd><code>value</code> - new value</dd>
+<dd><code>attributeName</code> - the name of the attribute to be updated</dd>
+<dd><code>value</code> - the new value to set</dd>
 <dt>Returns:</dt>
 <dd>the modified update query</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#set(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.Expression)"><code>set(SingularAttribute,Expression)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -271,7 +309,9 @@ update according to the specified boolean expression.</div>
 <section class="detail" id="where(jakarta.persistence.criteria.Expression)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
 <div class="block">Modify the update query to restrict the target of the
 update according to the specified boolean expression.
 Replaces the previously added restriction(s), if any.</div>
@@ -288,7 +328,9 @@ Replaces the previously added restriction(s), if any.</div>
 <section class="detail" id="where(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Modify the update query to restrict the target of the
 update according to the conjunction of the specified
 restriction predicates.
@@ -300,6 +342,30 @@ restrictions are simply removed.</div>
 <dd><code>restrictions</code> - zero or more restriction predicates</dd>
 <dt>Returns:</dt>
 <dd>the modified update query</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="where(java.util.List)">
+<h3>where</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaUpdate">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
+<div class="block">Modify the update query to restrict the target of the
+update according to the conjunction of the specified
+restriction predicates.
+Replaces the previously added restriction(s), if any.
+If no restrictions are specified, any previously added
+restrictions are simply removed.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>restrictions</code> - zero or more restriction predicates</dd>
+<dt>Returns:</dt>
+<dd>the modified update query</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
 </dl>
 </div>
 </section>

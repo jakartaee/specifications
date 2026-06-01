@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -167,7 +167,8 @@ whose root entity type is exactly this type.</div>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
 <div class="block">Return the entity name.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -180,7 +181,8 @@ whose root entity type is exactly this type.</div>
 <section class="detail" id="createEntityGraph()">
 <h3>createEntityGraph</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;<a href="#type-param-X" title="type parameter in EntityType">X</a>&gt;</span>&nbsp;<span class="element-name">createEntityGraph</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;<a href="#type-param-X" title="type parameter in EntityType">X</a>&gt;</span>&nbsp;<span class="element-name">createEntityGraph</span>()</div>
 <div class="block">Create a new mutable <a href="../EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> with this given root entity type,
 allowing programmatic definition of the graph.</div>
 <dl class="notes">
@@ -202,7 +204,8 @@ allowing programmatic definition of the graph.</div>
 <section class="detail" id="getNamedEntityGraphs()">
 <h3>getNamedEntityGraphs</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;<a href="#type-param-X" title="type parameter in EntityType">X</a>&gt;&gt;</span>&nbsp;<span class="element-name">getNamedEntityGraphs</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="../EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;<a href="#type-param-X" title="type parameter in EntityType">X</a>&gt;&gt;</span>&nbsp;<span class="element-name">getNamedEntityGraphs</span>()</div>
 <div class="block">A map keyed by <a href="../NamedEntityGraph.html#name()">graph name</a>, containing every named <a href="../EntityGraph.html" title="interface in jakarta.persistence">entity graph</a>
 whose root entity type is exactly this type.</div>
 <dl class="notes">

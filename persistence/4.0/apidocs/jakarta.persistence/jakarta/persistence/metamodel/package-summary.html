@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#package">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -68,7 +68,43 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="package-signature">package <span class="element-name">jakarta.persistence.metamodel</span></div>
 <section class="package-description" id="package-description">
-<div class="block">Jakarta Persistence Metamodel API</div>
+<div class="block">Defines the Jakarta Persistence Metamodel API, allowing runtime
+reflection on the managed types declared by a persistence unit.
+<p>
+Instances of metamodel types may be obtained either:
+<ul>
+<li>via programmatic lookup using an instance of
+    <a href="Metamodel.html" title="interface in jakarta.persistence.metamodel"><code>Metamodel</code></a> obtained by
+    calling
+    <a href="../EntityManagerFactory.html#getMetamodel()"><code>EntityManagerFactory.getMetamodel()</code></a>,
+    or
+<li>in a typesafe way, using members of the generated
+    <a href="StaticMetamodel.html" title="annotation interface in jakarta.persistence.metamodel">static metamodel classes</a>.
+</ul>
+<p>
+The <code>Metamodel</code> API allows programmatic lookup, but is not
+in general typesafe.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.metamodel1"><code class="language-java">SingularAttribute&lt;Book,String&gt; isbnAttribute =
+        factory.getMetamodel()
+            .entity(Book.class)
+            .getId(String.class);
+</code></pre>
+</div>
+
+<p>
+A static metamodel class is a class with static members providing
+direct type safe access to the metamodel objects representing the
+persistent members of a given managed class.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.metamodel2"><code class="language-java">SingularAttribute&lt;Book,String&gt; isbnAttribute = Book_.isbn;
+</code></pre>
+</div>
+</div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>2.0</dd>
+</dl>
 </section>
 </div>
 <section class="summary">
@@ -81,20 +117,30 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="../package-summary.html">jakarta.persistence</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </div>
 <div class="col-first odd-row-color"><a href="../criteria/package-summary.html">jakarta.persistence.criteria</a></div>
 <div class="col-last odd-row-color">
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </div>
 <div class="col-first even-row-color"><a href="../query/package-summary.html">jakarta.persistence.query</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Defines annotations for expressing statically type safe queries by
+annotating query methods of a
+<a href="../spi/Discoverable.html" title="annotation interface in jakarta.persistence.spi">discoverable</a> type
+or Jakarta Data repository.</div>
+</div>
 <div class="col-first odd-row-color"><a href="../spi/package-summary.html">jakarta.persistence.spi</a></div>
 <div class="col-last odd-row-color">
-<div class="block">SPI for Jakarta Persistence providers</div>
+<div class="block">Defines an SPI for integrating with the persistence provider
+and with the Jakarta EE platform.</div>
 </div>
 <div class="col-first even-row-color"><a href="../sql/package-summary.html">jakarta.persistence.sql</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Defines an API for the programmatic definition of SQL result set
+mappings to Java classes.</div>
+</div>
 </div>
 </div>
 </li>

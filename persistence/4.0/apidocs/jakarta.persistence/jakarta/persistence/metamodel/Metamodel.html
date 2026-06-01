@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -156,7 +156,9 @@ entity, mapped superclass, or embeddable class.</div>
 <section class="detail" id="entity(java.lang.String)">
 <h3>entity</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;?&gt;</span>&nbsp;<span class="element-name">entity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;entityName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;?&gt;</span>&nbsp;<span class="element-name">entity</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;entityName)</span></div>
 <div class="block">Return the metamodel entity type representing the entity.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -181,9 +183,13 @@ entity, mapped superclass, or embeddable class.</div>
 <section class="detail" id="entity(java.lang.Class)">
 <h3>entity</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;X&gt;</span>&nbsp;<span class="element-name">entity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;cls)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;X&gt;</span>&nbsp;<span class="element-name">entity</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;cls)</span></div>
 <div class="block">Return the metamodel entity type representing the entity.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="entity(java.lang.Class)-type-param-X"><code>X</code> - The type of the represented entity</span></dd>
 <dt>Parameters:</dt>
 <dd><code>cls</code> - the type of the represented entity</dd>
 <dt>Returns:</dt>
@@ -198,10 +204,14 @@ entity, mapped superclass, or embeddable class.</div>
 <section class="detail" id="managedType(java.lang.Class)">
 <h3>managedType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="ManagedType.html" title="interface in jakarta.persistence.metamodel">ManagedType</a>&lt;X&gt;</span>&nbsp;<span class="element-name">managedType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;cls)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="ManagedType.html" title="interface in jakarta.persistence.metamodel">ManagedType</a>&lt;X&gt;</span>&nbsp;<span class="element-name">managedType</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;cls)</span></div>
 <div class="block">Return the metamodel managed type representing the 
 entity, mapped superclass, or embeddable class.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="managedType(java.lang.Class)-type-param-X"><code>X</code> - The type of the represented managed class</span></dd>
 <dt>Parameters:</dt>
 <dd><code>cls</code> - the type of the represented managed class</dd>
 <dt>Returns:</dt>
@@ -216,10 +226,14 @@ entity, mapped superclass, or embeddable class.</div>
 <section class="detail" id="embeddable(java.lang.Class)">
 <h3>embeddable</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="EmbeddableType.html" title="interface in jakarta.persistence.metamodel">EmbeddableType</a>&lt;X&gt;</span>&nbsp;<span class="element-name">embeddable</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;cls)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="EmbeddableType.html" title="interface in jakarta.persistence.metamodel">EmbeddableType</a>&lt;X&gt;</span>&nbsp;<span class="element-name">embeddable</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;cls)</span></div>
 <div class="block">Return the metamodel embeddable type representing the
 embeddable class.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="embeddable(java.lang.Class)-type-param-X"><code>X</code> - The type of the represented embeddable class</span></dd>
 <dt>Parameters:</dt>
 <dd><code>cls</code> - the type of the represented embeddable class</dd>
 <dt>Returns:</dt>
@@ -234,7 +248,8 @@ embeddable class.</div>
 <section class="detail" id="getManagedTypes()">
 <h3>getManagedTypes</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="ManagedType.html" title="interface in jakarta.persistence.metamodel">ManagedType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getManagedTypes</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="ManagedType.html" title="interface in jakarta.persistence.metamodel">ManagedType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getManagedTypes</span>()</div>
 <div class="block">Return the metamodel managed types.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -247,7 +262,8 @@ embeddable class.</div>
 <section class="detail" id="getEntities()">
 <h3>getEntities</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getEntities</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getEntities</span>()</div>
 <div class="block">Return the metamodel entity types.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -260,7 +276,8 @@ embeddable class.</div>
 <section class="detail" id="getEmbeddables()">
 <h3>getEmbeddables</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="EmbeddableType.html" title="interface in jakarta.persistence.metamodel">EmbeddableType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getEmbeddables</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="EmbeddableType.html" title="interface in jakarta.persistence.metamodel">EmbeddableType</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getEmbeddables</span>()</div>
 <div class="block">Return the metamodel embeddable types.
 Returns am empty set if there are no embeddable types.</div>
 <dl class="notes">

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -76,8 +76,8 @@ loadScripts(document, 'script');</script>
 <a href="EntityHandler.html#findMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)"><code>EntityHandler.findMultiple(Class, List, FindOption...)</code></a>, <a href="EntityHandler.html#get(java.lang.Class,java.lang.Object)"><code>EntityHandler.get(Class, Object)</code></a>,
 or <a href="EntityHandler.html#getMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)"><code>EntityHandler.getMultiple(Class, List, FindOption...)</code></a>.
 Built-in options control <a href="LockModeType.html" title="enum class in jakarta.persistence">locking</a>,
-<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache interaction</a>, and
-<a href="Timeout.html" title="class in jakarta.persistence">timeouts</a>.
+<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache interaction</a>,
+<a href="BatchSize.html" title="class in jakarta.persistence">batching</a>, and <a href="Timeout.html" title="class in jakarta.persistence">timeouts</a>.
 
 <p>This interface may be implemented by custom provider-specific
 options which extend the options defined by the specification.</div>
@@ -91,6 +91,7 @@ options which extend the options defined by the specification.</div>
 <li><a href="PessimisticLockScope.html" title="enum class in jakarta.persistence"><code>PessimisticLockScope</code></a></li>
 <li><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence"><code>CacheRetrieveMode</code></a></li>
 <li><a href="CacheStoreMode.html" title="enum class in jakarta.persistence"><code>CacheStoreMode</code></a></li>
+<li><a href="BatchSize.html" title="class in jakarta.persistence"><code>BatchSize</code></a></li>
 <li><a href="Timeout.html" title="class in jakarta.persistence"><code>Timeout</code></a></li>
 <li><a href="EntityHandler.html#find(java.lang.Class,java.lang.Object,jakarta.persistence.FindOption...)"><code>EntityHandler.find(Class, Object, FindOption...)</code></a></li>
 <li><a href="EntityHandler.html#find(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)"><code>EntityHandler.find(EntityGraph, Object, FindOption...)</code></a></li>

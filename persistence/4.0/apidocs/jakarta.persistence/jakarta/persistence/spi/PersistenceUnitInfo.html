@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -99,6 +99,10 @@ provider when creating an <a href="../EntityManagerFactory.html" title="interfac
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
+<dt>API note:</dt>
+<dd>This is an SPI interface forming part of the Jakarta EE
+container / persistence provider contract. It is not intended for
+direct use by application programs.</dd>
 </dl>
 </div>
 </section>
@@ -275,7 +279,8 @@ provider for the persistence unit.</div>
 <section class="detail" id="getPersistenceUnitName()">
 <h3>getPersistenceUnitName</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPersistenceUnitName</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPersistenceUnitName</span>()</div>
 <div class="block">Returns the name of the persistence unit. Corresponds to the
 <code>name</code> attribute in the <code>persistence.xml</code> file.</div>
 <dl class="notes">
@@ -289,7 +294,8 @@ provider for the persistence unit.</div>
 <section class="detail" id="getPersistenceProviderClassName()">
 <h3>getPersistenceProviderClassName</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPersistenceProviderClassName</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPersistenceProviderClassName</span>()</div>
 <div class="block">Returns the fully qualified name of the persistence provider
 implementation class. Corresponds to the <code>provider</code> element
 in the <code>persistence.xml</code> file.</div>
@@ -305,7 +311,8 @@ implementation class</dd>
 <section class="detail" id="getScopeAnnotationName()">
 <h3>getScopeAnnotationName</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getScopeAnnotationName</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getScopeAnnotationName</span>()</div>
 <div class="block">Returns the fully-qualified class name of an annotation annotated
 <code>Scope</code> or <code>NormalScope</code>. Corresponds to the <code>scope</code>
 element in <code>persistence.xml</code>.</div>
@@ -321,7 +328,8 @@ element in <code>persistence.xml</code>.</div>
 <section class="detail" id="getQualifierAnnotationNames()">
 <h3>getQualifierAnnotationNames</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getQualifierAnnotationNames</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getQualifierAnnotationNames</span>()</div>
 <div class="block">Returns the fully-qualified class names of annotations annotated
 <code>Qualifier</code>. Corresponds to the <code>qualifier</code> element in
 <code>persistence.xml</code>.</div>
@@ -338,7 +346,8 @@ element in <code>persistence.xml</code>.</div>
 <section class="detail" id="getTransactionType()">
 <h3>getTransactionType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="../PersistenceUnitTransactionType.html" title="enum class in jakarta.persistence">PersistenceUnitTransactionType</a></span>&nbsp;<span class="element-name">getTransactionType</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="../PersistenceUnitTransactionType.html" title="enum class in jakarta.persistence">PersistenceUnitTransactionType</a></span>&nbsp;<span class="element-name">getTransactionType</span>()</div>
 <div class="block">Returns the transaction type of the entity managers created by
 the <a href="../EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a>. The transaction type corresponds
 to the <code>transaction-type</code> attribute in the <code>persistence.xml</code>
@@ -346,10 +355,7 @@ file.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>transaction type of the entity managers created
-by the EntityManagerFactory
-
-<p>Note: This method will change its return type to <a href="../PersistenceUnitTransactionType.html" title="enum class in jakarta.persistence"><code>PersistenceUnitTransactionType</code></a>
-in the next major version.</dd>
+by the EntityManagerFactory</dd>
 </dl>
 </div>
 </section>
@@ -358,7 +364,8 @@ in the next major version.</dd>
 <section class="detail" id="getJtaDataSource()">
 <h3>getJtaDataSource</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html" title="class or interface in javax.sql" class="external-link">DataSource</a></span>&nbsp;<span class="element-name">getJtaDataSource</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html" title="class or interface in javax.sql" class="external-link">DataSource</a></span>&nbsp;<span class="element-name">getJtaDataSource</span>()</div>
 <div class="block">Returns the JTA-enabled data source to be used by the
 persistence provider. The data source corresponds to the
 <code>jta-data-source</code> element in the <code>persistence.xml</code>
@@ -375,7 +382,8 @@ persistence provider</dd>
 <section class="detail" id="getNonJtaDataSource()">
 <h3>getNonJtaDataSource</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html" title="class or interface in javax.sql" class="external-link">DataSource</a></span>&nbsp;<span class="element-name">getNonJtaDataSource</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html" title="class or interface in javax.sql" class="external-link">DataSource</a></span>&nbsp;<span class="element-name">getNonJtaDataSource</span>()</div>
 <div class="block">Returns the non-JTA-enabled data source to be used by the
 persistence provider for accessing data outside a JTA
 transaction. The data source corresponds to the named
@@ -394,7 +402,8 @@ transaction</dd>
 <section class="detail" id="getMappingFileNames()">
 <h3>getMappingFileNames</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getMappingFileNames</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getMappingFileNames</span>()</div>
 <div class="block">Returns the list of the names of the mapping files that the
 persistence provider must load to determine the mappings for
 the entity classes. The mapping files must be in the standard
@@ -415,7 +424,8 @@ classes</dd>
 <section class="detail" id="getJarFileUrls()">
 <h3>getJarFileUrls</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a>&gt;</span>&nbsp;<span class="element-name">getJarFileUrls</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a>&gt;</span>&nbsp;<span class="element-name">getJarFileUrls</span>()</div>
 <div class="block">Returns a list of URLs for the jar files or exploded jar
 file directories that the persistence provider must examine
 for managed classes of the persistence unit. Each URL
@@ -436,7 +446,8 @@ directories</dd>
 <section class="detail" id="getPersistenceUnitRootUrl()">
 <h3>getPersistenceUnitRootUrl</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></span>&nbsp;<span class="element-name">getPersistenceUnitRootUrl</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></span>&nbsp;<span class="element-name">getPersistenceUnitRootUrl</span>()</div>
 <div class="block">Returns the URL for the jar file or directory that is the
 root of the persistence unit. (If the persistence unit is
 rooted in the WEB-INF/classes directory, this is the URL
@@ -456,7 +467,8 @@ format can be obtained.</div>
 <section class="detail" id="getManagedClassNames()">
 <h3>getManagedClassNames</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getManagedClassNames</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getManagedClassNames</span>()</div>
 <div class="block">Returns the class names listed by <code>class</code> elements
 of the <code>persistence.xml</code> file.</div>
 <dl class="notes">
@@ -470,7 +482,8 @@ of the <code>persistence.xml</code> file.</div>
 <section class="detail" id="getAllClassNames()">
 <h3>getAllClassNames</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getAllClassNames</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getAllClassNames</span>()</div>
 <div class="block">Returns the names of all classes (compiled Java types,
 module descriptors, and package descriptors) belonging
 to the persistence unit, including classes:
@@ -534,7 +547,8 @@ included in the set of managed classes</dd>
 <section class="detail" id="getSharedCacheMode()">
 <h3>getSharedCacheMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="../SharedCacheMode.html" title="enum class in jakarta.persistence">SharedCacheMode</a></span>&nbsp;<span class="element-name">getSharedCacheMode</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="../SharedCacheMode.html" title="enum class in jakarta.persistence">SharedCacheMode</a></span>&nbsp;<span class="element-name">getSharedCacheMode</span>()</div>
 <div class="block">Returns the specification of how the provider must use
 a second-level cache for the persistence unit.
 The result of this method corresponds to the <code>shared-cache-mode</code>
@@ -553,7 +567,8 @@ provider for the persistence unit</dd>
 <section class="detail" id="getValidationMode()">
 <h3>getValidationMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="../ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a></span>&nbsp;<span class="element-name">getValidationMode</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="../ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a></span>&nbsp;<span class="element-name">getValidationMode</span>()</div>
 <div class="block">Returns the validation mode to be used by the persistence
 provider for the persistence unit.  The validation mode
 corresponds to the <code>validation-mode</code> element in the
@@ -572,7 +587,8 @@ persistence provider for the persistence unit</dd>
 <section class="detail" id="getDefaultToOneFetchType()">
 <h3>getDefaultToOneFetchType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="../FetchType.html" title="enum class in jakarta.persistence">FetchType</a></span>&nbsp;<span class="element-name">getDefaultToOneFetchType</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="../FetchType.html" title="enum class in jakarta.persistence">FetchType</a></span>&nbsp;<span class="element-name">getDefaultToOneFetchType</span>()</div>
 <div class="block">Returns the <a href="../FetchType.html#DEFAULT">default fetch type</a>
 for one-to-one and many-to-one associations. The default fetch
 type corresponds to the <code>default-to-one-fetch-type</code>
@@ -591,7 +607,8 @@ element in the <code>persistence.xml</code> file.</div>
 <section class="detail" id="getProperties()">
 <h3>getProperties</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a></span>&nbsp;<span class="element-name">getProperties</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a></span>&nbsp;<span class="element-name">getProperties</span>()</div>
 <div class="block">Returns a properties object. Each property corresponds to a
 <code>property</code> element in the <code>persistence.xml</code> file
 or to a property set by the container.</div>
@@ -606,7 +623,8 @@ or to a property set by the container.</div>
 <section class="detail" id="getPersistenceXMLSchemaVersion()">
 <h3>getPersistenceXMLSchemaVersion</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPersistenceXMLSchemaVersion</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPersistenceXMLSchemaVersion</span>()</div>
 <div class="block">Returns the schema version of the <code>persistence.xml</code> file.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -621,7 +639,8 @@ or to a property set by the container.</div>
 <section class="detail" id="getClassLoader()">
 <h3>getClassLoader</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html" title="class or interface in java.lang" class="external-link">ClassLoader</a></span>&nbsp;<span class="element-name">getClassLoader</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html" title="class or interface in java.lang" class="external-link">ClassLoader</a></span>&nbsp;<span class="element-name">getClassLoader</span>()</div>
 <div class="block">Returns ClassLoader that the provider may use to load any
 classes, resources, or open URLs.</div>
 <dl class="notes">
@@ -636,7 +655,8 @@ classes, resources, or open URLs</dd>
 <section class="detail" id="addTransformer(jakarta.persistence.spi.ClassTransformer)">
 <h3>addTransformer</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addTransformer</span><wbr><span class="parameters">(<a href="ClassTransformer.html" title="interface in jakarta.persistence.spi">ClassTransformer</a>&nbsp;transformer)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addTransformer</span><wbr><span class="parameters">(@Nonnull
+ <a href="ClassTransformer.html" title="interface in jakarta.persistence.spi">ClassTransformer</a>&nbsp;transformer)</span></div>
 <div class="block">Add a transformer supplied by the provider that is called for
 every new class definition or class redefinition that gets
 loaded by the loader returned by the
@@ -661,7 +681,8 @@ container invokes at class-(re)definition time</dd>
 <section class="detail" id="getNewTempClassLoader()">
 <h3>getNewTempClassLoader</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html" title="class or interface in java.lang" class="external-link">ClassLoader</a></span>&nbsp;<span class="element-name">getNewTempClassLoader</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html" title="class or interface in java.lang" class="external-link">ClassLoader</a></span>&nbsp;<span class="element-name">getNewTempClassLoader</span>()</div>
 <div class="block">Return a new instance of a <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html" title="class or interface in java.lang" class="external-link"><code>ClassLoader</code></a> that the provider
 may use to temporarily load any classes, resources, or open
 URLs. The scope and classpath of this loader is exactly the

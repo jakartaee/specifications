@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -271,7 +271,13 @@ the table level.</div>
 <h3>nullable</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">nullable</span></div>
-<div class="block">(Optional) Whether the database column is nullable.</div>
+<div class="block">(Optional) Whether the database column is nullable.
+<p>
+If the annotated field or property is also annotated
+with one of the Jakarta Validation constraints influencing
+nullability (e.g. <code>@jakarta.validation.constraints.NotNull</code>),
+then <code>nullable=false</code> is implied, and the value of this
+annotation member is ignored.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>true</code></dd>
@@ -370,7 +376,13 @@ If absent the column is assumed to be in the primary table.</div>
 <div class="block">(Optional) The column length.
 <p>
 Applies only to columns whose type is parameterized by length,
-for example, <code>varchar</code> or <code>varbinary</code> types.</div>
+for example, <code>varchar</code> or <code>varbinary</code> types.
+<p>
+If the annotated field or property is also annotated
+with one of the Jakarta Validation constraints influencing
+length (e.g. <code>@jakarta.validation.constraints.Size</code>),
+then <code>length=Size.max()</code> is implied, and the value of this
+annotation member is ignored.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>255</code></dd>
@@ -389,7 +401,13 @@ or <code>numeric</code>, or of similar database-native type.
 Applies only to columns of exact numeric type.
 <p>
 The default value <code>0</code> indicates that a provider-determined
-precision should be inferred.</div>
+precision should be inferred.
+<p>
+If the annotated field or property is also annotated
+with one of the Jakarta Validation constraints influencing
+precision (e.g. <code>@jakarta.validation.constraints.Digits</code>),
+then <code>precision=Digits.integer()+Digits.fraction()</code> is implied,
+and the value of this annotation member is ignored.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>0</code></dd>
@@ -408,7 +426,13 @@ precision should be inferred.</div>
 Applies only to columns of exact numeric type.
 <p>
 The default value <code>0</code> indicates that a provider-determined
-scale should be inferred.</div>
+scale should be inferred.
+<p>
+If the annotated field or property is also annotated
+with one of the Jakarta Validation constraints influencing
+scale (e.g. <code>@jakarta.validation.constraints.Digits</code>),
+then <code>scale=Digits.fraction()</code> is implied,
+and the value of this annotation member is ignored.</div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>0</code></dd>

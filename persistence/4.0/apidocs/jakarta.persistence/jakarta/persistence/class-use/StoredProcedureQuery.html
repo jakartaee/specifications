@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,7 +63,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence">jakarta.persistence</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </div>
 </div>
 <section class="class-uses">
@@ -77,72 +78,70 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createNamedStoredProcedureQuery(java.lang.String)" class="member-name-link">createNamedStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#addOption(jakarta.persistence.StoredProcedureQuery.Option)" class="member-name-link">addOption</a><wbr>(<a href="../StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a>&nbsp;option)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Specify an <a href="../StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">option</a> influencing execution
+of this stored procedure, overwriting any existing option of
+the same type.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createNamedStoredProcedureQuery(java.lang.String)" class="member-name-link">createNamedStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Create an instance of <a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing
 a stored procedure in the database.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStoredProcedureQuery(java.lang.String)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStoredProcedureQuery(java.lang.String)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create an instance of <a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing a
 stored procedure in the database.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStoredProcedureQuery(java.lang.String,java.lang.Class...)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
+<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStoredProcedureQuery(java.lang.String,java.lang.Class...)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;...&nbsp;resultClasses)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last odd-row-color">
 <div class="block">Create an instance of <a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing
 a stored procedure in the database, explicitly specifying the
 result class for every result set returned by the stored procedure.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStoredProcedureQuery(java.lang.String,java.lang.String...)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
+<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStoredProcedureQuery(java.lang.String,java.lang.String...)" class="member-name-link">createStoredProcedureQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;resultSetMappings)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Create an instance of <a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing
 a stored procedure in the database, explicitly specifying the
 <a href="../SqlResultSetMapping.html#name()">name</a> of a result set
 <a href="../SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">mapping</a> for every result set
 returned by the stored procedure.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#registerStoredProcedureParameter(int,java.lang.Class,jakarta.persistence.ParameterMode)" class="member-name-link">registerStoredProcedureParameter</a><wbr>(int&nbsp;position,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;type,
- <a href="../ParameterMode.html" title="enum class in jakarta.persistence">ParameterMode</a>&nbsp;mode)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Register a positional parameter.</div>
-</div>
 <div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#registerStoredProcedureParameter(java.lang.String,java.lang.Class,jakarta.persistence.ParameterMode)" class="member-name-link">registerStoredProcedureParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName,
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#registerStoredProcedureParameter(int,java.lang.Class,jakarta.persistence.ParameterMode)" class="member-name-link">registerStoredProcedureParameter</a><wbr>(int&nbsp;position,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;type,
  <a href="../ParameterMode.html" title="enum class in jakarta.persistence">ParameterMode</a>&nbsp;mode)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Register a named parameter.</div>
+<div class="block">Register a positional parameter.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)" class="member-name-link">setCacheRetrieveMode</a><wbr>(<a href="../CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#registerStoredProcedureParameter(java.lang.String,java.lang.Class,jakarta.persistence.ParameterMode)" class="member-name-link">registerStoredProcedureParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;type,
+ <a href="../ParameterMode.html" title="enum class in jakarta.persistence">ParameterMode</a>&nbsp;mode)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Register a named parameter.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)" class="member-name-link">setCacheRetrieveMode</a><wbr>(<a href="../CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Set the <a href="../CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieval mode</a>
 in effect during query execution.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)" class="member-name-link">setCacheStoreMode</a><wbr>(<a href="../CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)" class="member-name-link">setCacheStoreMode</a><wbr>(<a href="../CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Set the <a href="../CacheStoreMode.html" title="enum class in jakarta.persistence">cache storage mode</a> in
 effect during query execution.</div>
 </div>
-<div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setConvertedParameter(int,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(int&nbsp;position,
- P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Bind an argument value to a named parameter, explicitly
-specifying an <a href="../AttributeConverter.html" title="interface in jakarta.persistence">attribute
-converter</a> to use.</div>
-</div>
 <div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setConvertedParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setConvertedParameter(int,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(int&nbsp;position,
  P&nbsp;value,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
 <div class="col-last odd-row-color">
@@ -150,38 +149,37 @@ converter</a> to use.</div>
 specifying an <a href="../AttributeConverter.html" title="interface in jakarta.persistence">attribute
 converter</a> to use.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
+<div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setConvertedParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Bind an argument value to a named parameter, explicitly
+specifying an <a href="../AttributeConverter.html" title="interface in jakarta.persistence">attribute
+converter</a> to use.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
+<div class="col-last odd-row-color">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Use <a href="../StoredProcedureQuery.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>StoredProcedureQuery.setQueryFlushMode(QueryFlushMode)</code></a>.</div>
 </div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setHint(java.lang.String,java.lang.Object)" class="member-name-link">setHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
+<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setHint(java.lang.String,java.lang.Object)" class="member-name-link">setHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Set a query property or hint.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last odd-row-color">
 <div class="block">Bind an argument value to a positional parameter.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
- <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
-<div class="col-last odd-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Newly written code should use the date/time types
-            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
-</div>
-</div>
 <div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
  <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last even-row-color">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -189,35 +187,35 @@ converter</a> to use.</div>
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
- P&nbsp;value,
- <a href="../metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
+<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Bind an argument value to a positional parameter, explicitly
-specifying the parameter type.</div>
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Newly written code should use the date/time types
+            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
+</div>
 </div>
 <div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
  P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
+ <a href="../metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Bind an argument value to a positional parameter, explicitly
 specifying the parameter type.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(jakarta.persistence.Parameter,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
- <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
+<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(int,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
 <div class="col-last odd-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Newly written code should use the date/time types
-            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
-</div>
+<div class="block">Bind an argument value to a positional parameter, explicitly
+specifying the parameter type.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(jakarta.persistence.Parameter,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(jakarta.persistence.Parameter,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
  <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last even-row-color">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -225,69 +223,79 @@ specifying the parameter type.</div>
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;T&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(jakarta.persistence.Parameter,T)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
- T&nbsp;value)</code></div>
+<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(jakarta.persistence.Parameter,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last odd-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Newly written code should use the date/time types
+            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
+</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;T&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(jakarta.persistence.Parameter,T)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
+ T&nbsp;value)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Bind an argument to a parameter of this query respresented as
 a <a href="../Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> object.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last odd-row-color">
 <div class="block">Bind an argument value to a named parameter.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
  <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
-<div class="col-last odd-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Newly written code should use the date/time types
-            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
-</div>
-</div>
-<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
- <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last even-row-color">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
-</div>
-<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- P&nbsp;value,
- <a href="../metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Bind an argument value to a named parameter, explicitly
-specifying the parameter type.</div>
-</div>
-<div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Bind an argument value to a named parameter, explicitly
-specifying the parameter type.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" class="member-name-link">setQueryFlushMode</a><wbr>(<a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last odd-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Newly written code should use the date/time types
+            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
+</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ P&nbsp;value,
+ <a href="../metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Bind an argument value to a named parameter, explicitly
+specifying the parameter type.</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Bind an argument value to a named parameter, explicitly
+specifying the parameter type.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" class="member-name-link">setQueryFlushMode</a><wbr>(<a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Set the <a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
 used when the query is executed.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Set the query timeout.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="../StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">StoredProcedureQuery.</span><code><a href="../StoredProcedureQuery.html#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Set the query timeout, in milliseconds.</div>
 </div>
 </div>

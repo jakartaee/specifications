@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -349,7 +349,8 @@ type that corresponds to the specified name and Java type.</div>
 <section class="detail" id="getAttributes()">
 <h3>getAttributes</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;&gt;</span>&nbsp;<span class="element-name">getAttributes</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;&gt;</span>&nbsp;<span class="element-name">getAttributes</span>()</div>
 <div class="block">Return the attributes of the managed type.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -362,7 +363,8 @@ type that corresponds to the specified name and Java type.</div>
 <section class="detail" id="getDeclaredAttributes()">
 <h3>getDeclaredAttributes</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getDeclaredAttributes</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getDeclaredAttributes</span>()</div>
 <div class="block">Return the attributes declared by the managed type.
 Returns empty set if the managed type has no declared
 attributes.</div>
@@ -377,11 +379,16 @@ attributes.</div>
 <section class="detail" id="getSingularAttribute(java.lang.String,java.lang.Class)">
 <h3>getSingularAttribute</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, Y&gt;</span>&nbsp;<span class="element-name">getSingularAttribute</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, Y&gt;</span>&nbsp;<span class="element-name">getSingularAttribute</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
 <div class="block">Return the single-valued attribute of the managed 
 type that corresponds to the specified name and Java type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getSingularAttribute(java.lang.String,java.lang.Class)-type-param-Y"><code>Y</code> - The type of the represented attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>type</code> - the type of the represented attribute</dd>
@@ -398,12 +405,17 @@ type that corresponds to the specified name and Java type.</div>
 <section class="detail" id="getDeclaredSingularAttribute(java.lang.String,java.lang.Class)">
 <h3>getDeclaredSingularAttribute</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">getDeclaredSingularAttribute</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">getDeclaredSingularAttribute</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
 <div class="block">Return the single-valued attribute declared by the 
 managed type that corresponds to the specified name and 
 Java type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getDeclaredSingularAttribute(java.lang.String,java.lang.Class)-type-param-Y"><code>Y</code> - The type of the represented attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>type</code> - the type of the represented attribute</dd>
@@ -421,7 +433,8 @@ Java type.</div>
 <section class="detail" id="getSingularAttributes()">
 <h3>getSingularAttributes</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;&gt;</span>&nbsp;<span class="element-name">getSingularAttributes</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;&gt;</span>&nbsp;<span class="element-name">getSingularAttributes</span>()</div>
 <div class="block">Return the single-valued attributes of the managed type.
 Returns empty set if the managed type has no single-valued
 attributes.</div>
@@ -436,7 +449,8 @@ attributes.</div>
 <section class="detail" id="getDeclaredSingularAttributes()">
 <h3>getDeclaredSingularAttributes</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getDeclaredSingularAttributes</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getDeclaredSingularAttributes</span>()</div>
 <div class="block">Return the single-valued attributes declared by the managed
 type.
 Returns empty set if the managed type has no declared
@@ -452,11 +466,16 @@ single-valued attributes.</div>
 <section class="detail" id="getCollection(java.lang.String,java.lang.Class)">
 <h3>getCollection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, E&gt;</span>&nbsp;<span class="element-name">getCollection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, E&gt;</span>&nbsp;<span class="element-name">getCollection</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;elementType)</span></div>
 <div class="block">Return the Collection-valued attribute of the managed type 
 that corresponds to the specified name and Java element type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getCollection(java.lang.String,java.lang.Class)-type-param-E"><code>E</code> - The element type of the represented collection</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>elementType</code> - the element type of the represented 
@@ -475,12 +494,17 @@ that corresponds to the specified name and Java element type.</div>
 <section class="detail" id="getDeclaredCollection(java.lang.String,java.lang.Class)">
 <h3>getDeclaredCollection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>E&gt;</span>&nbsp;<span class="element-name">getDeclaredCollection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>E&gt;</span>&nbsp;<span class="element-name">getDeclaredCollection</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;elementType)</span></div>
 <div class="block">Return the Collection-valued attribute declared by the 
 managed type that corresponds to the specified name and Java 
 element type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getDeclaredCollection(java.lang.String,java.lang.Class)-type-param-E"><code>E</code> - The element type of the represented collection</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>elementType</code> - the element type of the represented 
@@ -499,11 +523,16 @@ element type.</div>
 <section class="detail" id="getSet(java.lang.String,java.lang.Class)">
 <h3>getSet</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, E&gt;</span>&nbsp;<span class="element-name">getSet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, E&gt;</span>&nbsp;<span class="element-name">getSet</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;elementType)</span></div>
 <div class="block">Return the Set-valued attribute of the managed type that
 corresponds to the specified name and Java element type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getSet(java.lang.String,java.lang.Class)-type-param-E"><code>E</code> - The element type of the represented set</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>elementType</code> - the element type of the represented 
@@ -521,11 +550,16 @@ corresponds to the specified name and Java element type.</div>
 <section class="detail" id="getDeclaredSet(java.lang.String,java.lang.Class)">
 <h3>getDeclaredSet</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>E&gt;</span>&nbsp;<span class="element-name">getDeclaredSet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>E&gt;</span>&nbsp;<span class="element-name">getDeclaredSet</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;elementType)</span></div>
 <div class="block">Return the Set-valued attribute declared by the managed type 
 that corresponds to the specified name and Java element type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getDeclaredSet(java.lang.String,java.lang.Class)-type-param-E"><code>E</code> - The element type of the represented set</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>elementType</code> - the element type of the represented 
@@ -544,11 +578,16 @@ that corresponds to the specified name and Java element type.</div>
 <section class="detail" id="getList(java.lang.String,java.lang.Class)">
 <h3>getList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, E&gt;</span>&nbsp;<span class="element-name">getList</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, E&gt;</span>&nbsp;<span class="element-name">getList</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;elementType)</span></div>
 <div class="block">Return the List-valued attribute of the managed type that
 corresponds to the specified name and Java element type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getList(java.lang.String,java.lang.Class)-type-param-E"><code>E</code> - The element type of the represented list</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>elementType</code> - the element type of the represented 
@@ -566,12 +605,17 @@ corresponds to the specified name and Java element type.</div>
 <section class="detail" id="getDeclaredList(java.lang.String,java.lang.Class)">
 <h3>getDeclaredList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>E&gt;</span>&nbsp;<span class="element-name">getDeclaredList</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>E&gt;</span>&nbsp;<span class="element-name">getDeclaredList</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;elementType)</span></div>
 <div class="block">Return the List-valued attribute declared by the managed 
 type that corresponds to the specified name and Java 
 element type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getDeclaredList(java.lang.String,java.lang.Class)-type-param-E"><code>E</code> - The element type of the represented list</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>elementType</code> - the element type of the represented 
@@ -590,13 +634,20 @@ element type.</div>
 <section class="detail" id="getMap(java.lang.String,java.lang.Class,java.lang.Class)">
 <h3>getMap</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, K, V&gt;</span>&nbsp;<span class="element-name">getMap</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, K, V&gt;</span>&nbsp;<span class="element-name">getMap</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;K&gt;&nbsp;keyType,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;V&gt;&nbsp;valueType)</span></div>
 <div class="block">Return the Map-valued attribute of the managed type that
 corresponds to the specified name and Java key and value
 types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getMap(java.lang.String,java.lang.Class,java.lang.Class)-type-param-K"><code>K</code> - The key type of the represented map</span></dd>
+<dd><span id="getMap(java.lang.String,java.lang.Class,java.lang.Class)-type-param-V"><code>V</code> - The value type of the represented map</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>keyType</code> - the key type of the represented attribute</dd>
@@ -615,13 +666,20 @@ types</dd>
 <section class="detail" id="getDeclaredMap(java.lang.String,java.lang.Class,java.lang.Class)">
 <h3>getDeclaredMap</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">getDeclaredMap</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">getDeclaredMap</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;K&gt;&nbsp;keyType,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;V&gt;&nbsp;valueType)</span></div>
 <div class="block">Return the Map-valued attribute declared by the managed 
 type that corresponds to the specified name and Java key 
 and value types.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getDeclaredMap(java.lang.String,java.lang.Class,java.lang.Class)-type-param-K"><code>K</code> - The key type of the represented map</span></dd>
+<dd><span id="getDeclaredMap(java.lang.String,java.lang.Class,java.lang.Class)-type-param-V"><code>V</code> - The value type of the represented map</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - the name of the represented attribute</dd>
 <dd><code>keyType</code> - the key type of the represented attribute</dd>
@@ -640,7 +698,8 @@ and value types.</div>
 <section class="detail" id="getPluralAttributes()">
 <h3>getPluralAttributes</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?, ?&gt;&gt;</span>&nbsp;<span class="element-name">getPluralAttributes</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?, ?&gt;&gt;</span>&nbsp;<span class="element-name">getPluralAttributes</span>()</div>
 <div class="block">Return all multi-valued attributes (Collection-, Set-,
 List-, and Map-valued attributes) of the managed type.
 Returns empty set if the managed type has no multi-valued
@@ -656,7 +715,8 @@ attributes.</div>
 <section class="detail" id="getDeclaredPluralAttributes()">
 <h3>getDeclaredPluralAttributes</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getDeclaredPluralAttributes</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getDeclaredPluralAttributes</span>()</div>
 <div class="block">Return all multi-valued attributes (Collection-, Set-,
 List-, and Map-valued attributes) declared by the 
 managed type.
@@ -674,7 +734,9 @@ multivalued attributes.</div>
 <section class="detail" id="getAttribute(java.lang.String)">
 <h3>getAttribute</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getAttribute</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getAttribute</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the attribute of the managed
 type that corresponds to the specified name.</div>
 <dl class="notes">
@@ -693,7 +755,9 @@ type that corresponds to the specified name.</div>
 <section class="detail" id="getDeclaredAttribute(java.lang.String)">
 <h3>getDeclaredAttribute</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredAttribute</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredAttribute</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the attribute declared by the managed
 type that corresponds to the specified name.</div>
 <dl class="notes">
@@ -712,7 +776,9 @@ type that corresponds to the specified name.</div>
 <section class="detail" id="getSingularAttribute(java.lang.String)">
 <h3>getSingularAttribute</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getSingularAttribute</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getSingularAttribute</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the single-valued attribute of the managed type that
 corresponds to the specified name.</div>
 <dl class="notes">
@@ -731,7 +797,9 @@ corresponds to the specified name.</div>
 <section class="detail" id="getDeclaredSingularAttribute(java.lang.String)">
 <h3>getDeclaredSingularAttribute</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredSingularAttribute</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredSingularAttribute</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the single-valued attribute declared by the managed
 type that corresponds to the specified name.</div>
 <dl class="notes">
@@ -751,7 +819,9 @@ type that corresponds to the specified name.</div>
 <section class="detail" id="getCollection(java.lang.String)">
 <h3>getCollection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getCollection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getCollection</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the Collection-valued attribute of the managed type 
 that corresponds to the specified name.</div>
 <dl class="notes">
@@ -770,7 +840,9 @@ that corresponds to the specified name.</div>
 <section class="detail" id="getDeclaredCollection(java.lang.String)">
 <h3>getDeclaredCollection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredCollection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredCollection</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the Collection-valued attribute declared by the 
 managed type that corresponds to the specified name.</div>
 <dl class="notes">
@@ -789,7 +861,9 @@ managed type that corresponds to the specified name.</div>
 <section class="detail" id="getSet(java.lang.String)">
 <h3>getSet</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getSet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getSet</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the Set-valued attribute of the managed type that
 corresponds to the specified name.</div>
 <dl class="notes">
@@ -808,7 +882,9 @@ corresponds to the specified name.</div>
 <section class="detail" id="getDeclaredSet(java.lang.String)">
 <h3>getDeclaredSet</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredSet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredSet</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the Set-valued attribute declared by the managed type 
 that corresponds to the specified name.</div>
 <dl class="notes">
@@ -827,7 +903,9 @@ that corresponds to the specified name.</div>
 <section class="detail" id="getList(java.lang.String)">
 <h3>getList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getList</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?&gt;</span>&nbsp;<span class="element-name">getList</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the List-valued attribute of the managed type that
 corresponds to the specified name.</div>
 <dl class="notes">
@@ -846,7 +924,9 @@ corresponds to the specified name.</div>
 <section class="detail" id="getDeclaredList(java.lang.String)">
 <h3>getDeclaredList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredList</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredList</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the List-valued attribute declared by the managed 
 type that corresponds to the specified name.</div>
 <dl class="notes">
@@ -865,7 +945,9 @@ type that corresponds to the specified name.</div>
 <section class="detail" id="getMap(java.lang.String)">
 <h3>getMap</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?, ?&gt;</span>&nbsp;<span class="element-name">getMap</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in ManagedType">X</a>, ?, ?&gt;</span>&nbsp;<span class="element-name">getMap</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the Map-valued attribute of the managed type that
 corresponds to the specified name.</div>
 <dl class="notes">
@@ -884,7 +966,9 @@ corresponds to the specified name.</div>
 <section class="detail" id="getDeclaredMap(java.lang.String)">
 <h3>getDeclaredMap</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredMap</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;<a href="#type-param-X" title="type parameter in ManagedType">X</a>,<wbr>?,<wbr>?&gt;</span>&nbsp;<span class="element-name">getDeclaredMap</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Return the Map-valued attribute declared by the managed 
 type that corresponds to the specified name.</div>
 <dl class="notes">

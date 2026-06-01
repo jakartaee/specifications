@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -201,7 +201,9 @@ should be lazily loaded or must be eagerly fetched.
 property may be null.
 
 <p>If the annotated field or property is of primitive type,
-or if it is also annotated <code>@jakarta.annotation.Nonnull</code>,
+or if it is also annotated <code>@jakarta.annotation.Nonnull</code>
+or with one of the Jakarta Validation constraints influencing
+nullability (e.g. <code>@jakarta.validation.constraints.NotNull</code>),
 then <code>optional=false</code> is implied, and the value of this
 annotation member is ignored.
 

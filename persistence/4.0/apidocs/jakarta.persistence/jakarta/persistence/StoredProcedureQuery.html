@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
@@ -106,6 +107,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#hasMoreResults()" tabindex="0">hasMoreResults()</a></li>
 <li><a href="#getUpdateCount()" tabindex="0">getUpdateCount()</a></li>
 <li><a href="#close()" tabindex="0">close()</a></li>
+<li><a href="#addOption(jakarta.persistence.StoredProcedureQuery.Option)" tabindex="0">addOption(StoredProcedureQuery.Option)</a></li>
+<li><a href="#getOptions()" tabindex="0">getOptions()</a></li>
 </ol>
 </li>
 </ol>
@@ -213,6 +216,23 @@ followed immediately by calls to <a href="#getOutputParameterValue(int)"><code>g
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Interface</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="StoredProcedureQuery.Option.html" class="type-name-link" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">An option influencing execution of a stored procedure.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method-summary">
@@ -224,24 +244,37 @@ followed immediately by calls to <a href="#getOutputParameterValue(int)"><code>g
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#close()" class="member-name-link">close</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addOption(jakarta.persistence.StoredProcedureQuery.Option)" class="member-name-link">addOption</a><wbr>(<a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a>&nbsp;option)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Specify an <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">option</a> influencing execution
+of this stored procedure, overwriting any existing option of
+the same type.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#close()" class="member-name-link">close</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Immediately destroy all resources associated with this query.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#execute()" class="member-name-link">execute</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#execute()" class="member-name-link">execute</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return true if the first result corresponds to a result set,
 and false if it is an update count or if there are no results
 other than through <code>INOUT</code> and <code>OUT</code> parameters,
 if any.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#executeUpdate()" class="member-name-link">executeUpdate</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#executeUpdate()" class="member-name-link">executeUpdate</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the update count or <code>-1</code> if there is no pending
 result or if the first result is not an update count.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOptions()" class="member-name-link">getOptions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">options</a> influencing execution of
+this stored procedure.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOutputParameterValue(int)" class="member-name-link">getOutputParameterValue</a><wbr>(int&nbsp;position)</code></div>
@@ -575,14 +608,16 @@ used when the query is executed.</div>
 <section class="detail" id="setHint(java.lang.String,java.lang.Object)">
 <h3>setHint</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setHint</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setHint</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
-<div class="block">Set a query property or hint. The hints elements may be used 
-to specify query properties and hints. Properties defined by
-this specification must be observed by the provider. 
+<div class="block">Set a query property or hint. Properties defined by this
+specification must be observed by the persistence provider.
 Vendor-specific hints that are not recognized by a provider
 must be silently ignored. Portable applications should not
-rely on the standard timeout hint. Depending on the database
+rely on the standard timeout hint; depending on the database
 in use, this hint may or may not be observed.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -593,8 +628,13 @@ in use, this hint may or may not be observed.</div>
 <dt>Returns:</dt>
 <dd>the same query instance</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the second argument is not
-        valid for the implementation</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the given property or
+        hint name is recognized by the provider, but the
+        second argument is not a legal value for the given
+        property or hint</dd>
+<dt>API note:</dt>
+<dd>The use of named hints lacks type safety compared
+         to the use of <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">options</a>.</dd>
 </dl>
 </div>
 </section>
@@ -603,13 +643,18 @@ in use, this hint may or may not be observed.</div>
 <section class="detail" id="setParameter(jakarta.persistence.Parameter,T)">
 <h3 id="setParameter(jakarta.persistence.Parameter,java.lang.Object)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
+ @Nullable
  T&nbsp;value)</span></div>
 <div class="block">Bind an argument to a parameter of this query respresented as
 a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> object.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(jakarta.persistence.Parameter,T)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(jakarta.persistence.Parameter,T)-type-param-T"><code>T</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parameter</code> - The parameter object</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -627,8 +672,12 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
+@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -656,8 +705,12 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
+@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -684,7 +737,10 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <section class="detail" id="setParameter(java.lang.String,java.lang.Object)">
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 <div class="block">Bind an argument value to a named parameter.</div>
 <dl class="notes">
@@ -708,8 +764,12 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -738,8 +798,12 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -767,7 +831,9 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <section class="detail" id="setParameter(int,java.lang.Object)">
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 <div class="block">Bind an argument value to a positional parameter.</div>
 <dl class="notes">
@@ -791,8 +857,11 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
+@Nonnull
 </span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -822,8 +891,11 @@ parameter.</div>
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
+@Nonnull
 </span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -851,8 +923,12 @@ parameter.</div>
 <section class="detail" id="setParameter(java.lang.String,P,java.lang.Class)">
 <h3 id="setParameter(java.lang.String,java.lang.Object,java.lang.Class)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</span></div>
 <div class="block">Bind an argument value to a named parameter, explicitly
 specifying the parameter type. This is most useful when
@@ -860,6 +936,8 @@ the argument might be null.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(java.lang.String,P,java.lang.Class)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(java.lang.String,P,java.lang.Class)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the parameter</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -880,8 +958,12 @@ the argument might be null.</div>
 <section class="detail" id="setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)">
 <h3 id="setParameter(java.lang.String,java.lang.Object,jakarta.persistence.metamodel.Type)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</span></div>
 <div class="block">Bind an argument value to a named parameter, explicitly
 specifying the parameter type. This is most useful when
@@ -889,6 +971,8 @@ the binding is affected by an attribute converter.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the parameter</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -909,8 +993,12 @@ the binding is affected by an attribute converter.</div>
 <section class="detail" id="setConvertedParameter(java.lang.String,P,java.lang.Class)">
 <h3 id="setConvertedParameter(java.lang.String,java.lang.Object,java.lang.Class)">setConvertedParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setConvertedParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setConvertedParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</span></div>
 <div class="block">Bind an argument value to a named parameter, explicitly
 specifying an <a href="AttributeConverter.html" title="interface in jakarta.persistence">attribute
@@ -918,6 +1006,8 @@ converter</a> to use.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setConvertedParameter(java.lang.String,P,java.lang.Class)">setConvertedParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setConvertedParameter(java.lang.String,P,java.lang.Class)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the parameter</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -938,8 +1028,11 @@ converter</a> to use.</div>
 <section class="detail" id="setParameter(int,P,java.lang.Class)">
 <h3 id="setParameter(int,java.lang.Object,java.lang.Class)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</span></div>
 <div class="block">Bind an argument value to a positional parameter, explicitly
 specifying the parameter type. This is most useful when
@@ -947,6 +1040,8 @@ the argument might be null.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(int,P,java.lang.Class)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(int,P,java.lang.Class)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>position</code> - position</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -967,8 +1062,11 @@ the argument might be null.</div>
 <section class="detail" id="setParameter(int,P,jakarta.persistence.metamodel.Type)">
 <h3 id="setParameter(int,java.lang.Object,jakarta.persistence.metamodel.Type)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</span></div>
 <div class="block">Bind an argument value to a positional parameter, explicitly
 specifying the parameter type. This is most useful when
@@ -976,6 +1074,8 @@ the binding is affected by an attribute converter.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(int,P,jakarta.persistence.metamodel.Type)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(int,P,jakarta.persistence.metamodel.Type)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>position</code> - position</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -996,8 +1096,11 @@ the binding is affected by an attribute converter.</div>
 <section class="detail" id="setConvertedParameter(int,P,java.lang.Class)">
 <h3 id="setConvertedParameter(int,java.lang.Object,java.lang.Class)">setConvertedParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setConvertedParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setConvertedParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</span></div>
 <div class="block">Bind an argument value to a named parameter, explicitly
 specifying an <a href="AttributeConverter.html" title="interface in jakarta.persistence">attribute
@@ -1005,6 +1108,8 @@ converter</a> to use.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setConvertedParameter(int,P,java.lang.Class)">setConvertedParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setConvertedParameter(int,P,java.lang.Class)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>position</code> - The parameter position</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -1025,7 +1130,9 @@ converter</a> to use.</div>
 <section class="detail" id="setQueryFlushMode(jakarta.persistence.QueryFlushMode)">
 <h3>setQueryFlushMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setQueryFlushMode</span><wbr><span class="parameters">(<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setQueryFlushMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</span></div>
 <div class="block">Set the <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
 used when the query is executed. This flush mode overrides
 the <a href="EntityManager.html#getFlushMode()">flush mode type
@@ -1048,7 +1155,9 @@ of the entity manager</a>.</div>
 <h3>setFlushMode</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setFlushMode</span><wbr><span class="parameters">(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</span></div>
+@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setFlushMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Use <a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>setQueryFlushMode(QueryFlushMode)</code></a>.</div>
 </div>
@@ -1071,7 +1180,9 @@ of the entity manager</a>.</div>
 <section class="detail" id="setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)">
 <h3>setCacheRetrieveMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setCacheRetrieveMode</span><wbr><span class="parameters">(<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setCacheRetrieveMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</span></div>
 <div class="block">Set the <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieval mode</a>
 in effect during query execution. This cache retrieval mode
 overrides the <a href="EntityHandler.html#getCacheRetrieveMode()">cache retrieve mode of the entity manager</a>.</div>
@@ -1092,7 +1203,9 @@ overrides the <a href="EntityHandler.html#getCacheRetrieveMode()">cache retrieve
 <section class="detail" id="setCacheStoreMode(jakarta.persistence.CacheStoreMode)">
 <h3>setCacheStoreMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setCacheStoreMode</span><wbr><span class="parameters">(<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setCacheStoreMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</span></div>
 <div class="block">Set the <a href="CacheStoreMode.html" title="enum class in jakarta.persistence">cache storage mode</a> in
 effect during query execution. This cache storage mode
 overrides the <a href="EntityHandler.html#getCacheStoreMode()">cache storage mode of the entity manager</a>.</div>
@@ -1113,7 +1226,9 @@ overrides the <a href="EntityHandler.html#getCacheStoreMode()">cache storage mod
 <section class="detail" id="setTimeout(java.lang.Integer)">
 <h3>setTimeout</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setTimeout</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setTimeout</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</span></div>
 <div class="block">Set the query timeout, in milliseconds. This is a hint,
 and is an alternative to <a href="#setHint(java.lang.String,java.lang.Object)">setting
 the hint</a> <code>jakarta.persistence.query.timeout</code>.</div>
@@ -1135,7 +1250,9 @@ the hint</a> <code>jakarta.persistence.query.timeout</code>.</div>
 <section class="detail" id="setTimeout(jakarta.persistence.Timeout)">
 <h3>setTimeout</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setTimeout</span><wbr><span class="parameters">(<a href="Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">setTimeout</span><wbr><span class="parameters">(@Nullable
+ <a href="Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</span></div>
 <div class="block">Set the query timeout. This is a hint.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -1154,13 +1271,17 @@ the hint</a> <code>jakarta.persistence.query.timeout</code>.</div>
 <section class="detail" id="registerResultParameter(java.lang.Class)">
 <h3>registerResultParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerResultParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;resultType)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerResultParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;resultType)</span></div>
 <div class="block">Mark this as a call to a stored procedure with a result
 parameter and register the type of the result parameter.
 This is typically required when calling a stored function.
 The result may be retrieved after execution by calling
 <a href="#getOutputParameterValue(jakarta.persistence.Parameter)"><code>getOutputParameterValue(Parameter)</code></a>.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="registerResultParameter(java.lang.Class)-type-param-T"><code>T</code> - the result parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>resultType</code> - the type of the result parameter</dd>
 <dt>Returns:</dt>
@@ -1177,14 +1298,19 @@ The result may be retrieved after execution by calling
 <section class="detail" id="registerParameter(int,java.lang.Class,jakarta.persistence.ParameterMode)">
 <h3>registerParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
+ @Nonnull
  <a href="ParameterMode.html" title="enum class in jakarta.persistence">ParameterMode</a>&nbsp;mode)</span></div>
 <div class="block">Register a positional parameter. The result of an
 <code>OUT</code> parameter may be retrieved after execution
 by calling <a href="#getOutputParameterValue(jakarta.persistence.Parameter)"><code>getOutputParameterValue(Parameter)</code></a>.
 All parameters must be registered.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="registerParameter(int,java.lang.Class,jakarta.persistence.ParameterMode)-type-param-T"><code>T</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>position</code> - the parameter position</dd>
 <dd><code>type</code> - the type of the parameter</dd>
@@ -1203,14 +1329,20 @@ All parameters must be registered.</div>
 <section class="detail" id="registerParameter(java.lang.String,java.lang.Class,jakarta.persistence.ParameterMode)">
 <h3>registerParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
+ @Nonnull
  <a href="ParameterMode.html" title="enum class in jakarta.persistence">ParameterMode</a>&nbsp;mode)</span></div>
 <div class="block">Register a named parameter. The result of an
 <code>OUT</code> parameter may be retrieved after execution
 by calling <a href="#getOutputParameterValue(jakarta.persistence.Parameter)"><code>getOutputParameterValue(Parameter)</code></a>.
 All parameters must be registered.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="registerParameter(java.lang.String,java.lang.Class,jakarta.persistence.ParameterMode)-type-param-T"><code>T</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parameterName</code> - the name of the parameter as registered
                      or specified in metadata</dd>
@@ -1230,8 +1362,11 @@ All parameters must be registered.</div>
 <section class="detail" id="registerConvertedParameter(int,java.lang.Class,jakarta.persistence.ParameterMode)">
 <h3>registerConvertedParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerConvertedParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerConvertedParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;T,<wbr>?&gt;&gt;&nbsp;converter,
+ @Nonnull
  <a href="ParameterMode.html" title="enum class in jakarta.persistence">ParameterMode</a>&nbsp;mode)</span></div>
 <div class="block">Register a positional parameter whose value is bound via
 a <a href="AttributeConverter.html" title="interface in jakarta.persistence">converter</a>. The result of
@@ -1239,6 +1374,8 @@ an <code>OUT</code> parameter may be retrieved after execution
 by calling <a href="#getOutputParameterValue(jakarta.persistence.Parameter)"><code>getOutputParameterValue(Parameter)</code></a>.
 All parameters must be registered.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="registerConvertedParameter(int,java.lang.Class,jakarta.persistence.ParameterMode)-type-param-T"><code>T</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>position</code> - the parameter position</dd>
 <dd><code>converter</code> - the class of the attribute converter</dd>
@@ -1257,8 +1394,12 @@ All parameters must be registered.</div>
 <section class="detail" id="registerConvertedParameter(java.lang.String,java.lang.Class,jakarta.persistence.ParameterMode)">
 <h3>registerConvertedParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerConvertedParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;</span>&nbsp;<span class="element-name">registerConvertedParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;T,<wbr>?&gt;&gt;&nbsp;converter,
+ @Nonnull
  <a href="ParameterMode.html" title="enum class in jakarta.persistence">ParameterMode</a>&nbsp;mode)</span></div>
 <div class="block">Register a named parameter whose value is bound via a
 <a href="AttributeConverter.html" title="interface in jakarta.persistence">converter</a>. The result of
@@ -1266,6 +1407,8 @@ an <code>OUT</code> parameter may be retrieved after execution
 by calling <a href="#getOutputParameterValue(jakarta.persistence.Parameter)"><code>getOutputParameterValue(Parameter)</code></a>.
 All parameters must be registered.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="registerConvertedParameter(java.lang.String,java.lang.Class,jakarta.persistence.ParameterMode)-type-param-T"><code>T</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parameterName</code> - the name of the parameter as registered
                      or specified in metadata</dd>
@@ -1285,8 +1428,11 @@ All parameters must be registered.</div>
 <section class="detail" id="registerStoredProcedureParameter(int,java.lang.Class,jakarta.persistence.ParameterMode)">
 <h3>registerStoredProcedureParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">registerStoredProcedureParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">registerStoredProcedureParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;type,
+ @Nonnull
  <a href="ParameterMode.html" title="enum class in jakarta.persistence">ParameterMode</a>&nbsp;mode)</span></div>
 <div class="block">Register a positional parameter.
 All parameters must be registered.</div>
@@ -1305,8 +1451,12 @@ All parameters must be registered.</div>
 <section class="detail" id="registerStoredProcedureParameter(java.lang.String,java.lang.Class,jakarta.persistence.ParameterMode)">
 <h3>registerStoredProcedureParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">registerStoredProcedureParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">registerStoredProcedureParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;type,
+ @Nonnull
  <a href="ParameterMode.html" title="enum class in jakarta.persistence">ParameterMode</a>&nbsp;mode)</span></div>
 <div class="block">Register a named parameter.
 All parameters must be registered.</div>
@@ -1349,7 +1499,8 @@ output parameters.</div>
 <section class="detail" id="getOutputParameterValue(java.lang.String)">
 <h3>getOutputParameterValue</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getOutputParameterValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName)</span></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getOutputParameterValue</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parameterName)</span></div>
 <div class="block">Retrieve a value passed back from the procedure
 through an <code>INOUT</code> or <code>OUT</code> parameter.
 For portability, all results corresponding to result sets
@@ -1373,13 +1524,16 @@ output parameters.</div>
 <section class="detail" id="getOutputParameterValue(jakarta.persistence.Parameter)">
 <h3>getOutputParameterValue</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">getOutputParameterValue</span><wbr><span class="parameters">(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter)</span></div>
+<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">getOutputParameterValue</span><wbr><span class="parameters">(@Nonnull
+ <a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter)</span></div>
 <div class="block">Retrieve a value passed back from the procedure
 through an <code>INOUT</code> or <code>OUT</code> parameter.
 For portability, all results corresponding to result sets
 and update counts must be retrieved before the values of
 output parameters.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getOutputParameterValue(jakarta.persistence.Parameter)-type-param-T"><code>T</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parameter</code> - The parameter object</dd>
 <dt>Returns:</dt>
@@ -1451,6 +1605,7 @@ provider calls <a href="#execute()"><code>execute()</code></a> if necessary.</di
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="4.0",
             <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#forRemoval()" title="class or interface in java.lang" class="external-link">forRemoval</a>=true)
+@Nullable
 </span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a></span>&nbsp;<span class="element-name">getResultList</span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">This method returns a raw <code>List</code>.
@@ -1482,7 +1637,8 @@ registered with the query.</div>
 <section class="detail" id="getSingleResult()">
 <h3>getSingleResult</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getSingleResult</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getSingleResult</span>()</div>
 <div class="block">Retrieve a single result from the next result set.
 The provider calls <a href="#execute()"><code>execute()</code></a> if necessary.
 A <code>REF_CURSOR</code> result set, if any, is retrieved
@@ -1511,7 +1667,8 @@ registered with the query.</div>
 <section class="detail" id="getSingleResultOrNull()">
 <h3>getSingleResultOrNull</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getSingleResultOrNull</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getSingleResultOrNull</span>()</div>
 <div class="block">Retrieve a single result from the next result set.
 The provider calls <a href="#execute()"><code>execute()</code></a> if necessary.
 A <code>REF_CURSOR</code> result set, if any, is retrieved in the
@@ -1539,7 +1696,9 @@ the query.</div>
 <section class="detail" id="getResultList(java.lang.Class)">
 <h3>getResultList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;R&gt;</span>&nbsp;<span class="element-name">getResultList</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultClass)</span></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;R&gt;</span>&nbsp;<span class="element-name">getResultList</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultClass)</span></div>
 <div class="block">Retrieve the list of results from the next result set, returning
 instances of the given result class, which overrides any result
 class already specified. The provider calls <a href="#execute()"><code>execute()</code></a> if
@@ -1568,6 +1727,8 @@ the query.
     specification.
 </ul></div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getResultList(java.lang.Class)-type-param-R"><code>R</code> - the query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>resultClass</code> - The type of the query result</dd>
 <dt>Returns:</dt>
@@ -1590,7 +1751,9 @@ the query.
 <section class="detail" id="getResultList(jakarta.persistence.sql.ResultSetMapping)">
 <h3>getResultList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;R&gt;</span>&nbsp;<span class="element-name">getResultList</span><wbr><span class="parameters">(<a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</span></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;R&gt;</span>&nbsp;<span class="element-name">getResultList</span><wbr><span class="parameters">(@Nonnull
+ <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</span></div>
 <div class="block">Retrieve the list of results from the next result set, specifying
 a <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">result set mapping</a> which overrides
 any mapping or result class already specified. The provider calls
@@ -1598,6 +1761,8 @@ any mapping or result class already specified. The provider calls
 if any, is retrieved in the order the <code>REF_CURSOR</code> parameter
 was registered with the query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getResultList(jakarta.persistence.sql.ResultSetMapping)-type-param-R"><code>R</code> - the query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>mapping</code> - The result set mapping to apply to the results</dd>
 <dt>Returns:</dt>
@@ -1620,7 +1785,9 @@ was registered with the query.</div>
 <section class="detail" id="getSingleResult(java.lang.Class)">
 <h3>getSingleResult</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">getSingleResult</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultClass)</span></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">getSingleResult</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultClass)</span></div>
 <div class="block">Retrieve a single result from the next result set, returning
 instances of the given result class, which overrides any result
 class already specified. The provider calls <a href="#execute()"><code>execute()</code></a> if
@@ -1649,6 +1816,8 @@ the query.
     specification.
 </ul></div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getSingleResult(java.lang.Class)-type-param-R"><code>R</code> - the query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>resultClass</code> - The type of the query result</dd>
 <dt>Returns:</dt>
@@ -1673,7 +1842,9 @@ the query.
 <section class="detail" id="getSingleResult(jakarta.persistence.sql.ResultSetMapping)">
 <h3>getSingleResult</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">getSingleResult</span><wbr><span class="parameters">(<a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</span></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">getSingleResult</span><wbr><span class="parameters">(@Nonnull
+ <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</span></div>
 <div class="block">Retrieve a single result from the next result set, specifying a
 <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">result set mapping</a> which overrides
 any mapping or result class already specified. The provider calls
@@ -1681,6 +1852,8 @@ any mapping or result class already specified. The provider calls
 if any, is retrieved in the order the <code>REF_CURSOR</code> parameter
 was registered with the query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getSingleResult(jakarta.persistence.sql.ResultSetMapping)-type-param-R"><code>R</code> - the query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>mapping</code> - The result set mapping to apply to the results</dd>
 <dt>Returns:</dt>
@@ -1705,7 +1878,9 @@ was registered with the query.</div>
 <section class="detail" id="getSingleResultOrNull(java.lang.Class)">
 <h3>getSingleResultOrNull</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">getSingleResultOrNull</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultClass)</span></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">getSingleResultOrNull</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultClass)</span></div>
 <div class="block">Retrieve a single result from the next result set, returning
 instances of the given result class, which overrides any result
 class already specified. The provider calls <a href="#execute()"><code>execute()</code></a> if
@@ -1734,6 +1909,8 @@ the query.
     specification.
 </ul></div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getSingleResultOrNull(java.lang.Class)-type-param-R"><code>R</code> - the query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>resultClass</code> - The type of the query result</dd>
 <dt>Returns:</dt>
@@ -1757,7 +1934,9 @@ the query.
 <section class="detail" id="getSingleResultOrNull(jakarta.persistence.sql.ResultSetMapping)">
 <h3>getSingleResultOrNull</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">getSingleResultOrNull</span><wbr><span class="parameters">(<a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</span></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">getSingleResultOrNull</span><wbr><span class="parameters">(@Nonnull
+ <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&nbsp;mapping)</span></div>
 <div class="block">Retrieve a single result from the next result set, specifying a
 <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">result set mapping</a> which overrides
 any mapping or result class already specified. The provider calls
@@ -1780,6 +1959,8 @@ was registered with the query.
     all the columns of the result set.
 </ul></div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getSingleResultOrNull(jakarta.persistence.sql.ResultSetMapping)-type-param-R"><code>R</code> - the query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>mapping</code> - The result set mapping to apply to the results</dd>
 <dt>Returns:</dt>
@@ -1860,6 +2041,48 @@ manager or entity agent is closed.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addOption(jakarta.persistence.StoredProcedureQuery.Option)">
+<h3>addOption</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">addOption</span><wbr><span class="parameters">(@Nonnull
+ <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a>&nbsp;option)</span></div>
+<div class="block">Specify an <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">option</a> influencing execution
+of this stored procedure, overwriting any existing option of
+the same type.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>option</code> - the option</dd>
+<dt>Returns:</dt>
+<dd>the same statement instance</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getOptions()">
+<h3>getOptions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a>&gt;</span>&nbsp;<span class="element-name">getOptions</span>()</div>
+<div class="block">Get the <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">options</a> influencing execution of
+this stored procedure. The returned set includes options set
+via <a href="#addOption(jakarta.persistence.StoredProcedureQuery.Option)"><code>addOption(StoredProcedureQuery.Option)</code></a>, along with options specified via
+<a href="#setTimeout(java.lang.Integer)"><code>setTimeout(Integer)</code></a> or <a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>setQueryFlushMode(QueryFlushMode)</code></a>. Mutation of
+the returned set does not affect the options of the stored
+procedure.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the options for this stored procedure</dd>
 <dt>Since:</dt>
 <dd>4.0</dd>
 </dl>

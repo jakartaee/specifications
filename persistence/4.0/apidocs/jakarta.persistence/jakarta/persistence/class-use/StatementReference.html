@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,10 +63,20 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence">jakarta.persistence</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </div>
-<div class="col-first odd-row-color"><a href="#jakarta.persistence.query">jakarta.persistence.query</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="#jakarta.persistence.criteria">jakarta.persistence.criteria</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
+</div>
+<div class="col-first even-row-color"><a href="#jakarta.persistence.query">jakarta.persistence.query</a></div>
+<div class="col-last even-row-color">
+<div class="block">Defines annotations for expressing statically type safe queries by
+annotating query methods of a
+<a href="../spi/Discoverable.html" title="annotation interface in jakarta.persistence.spi">discoverable</a> type
+or Jakarta Data repository.</div>
+</div>
 </div>
 <section class="class-uses">
 <ul class="block-list">
@@ -116,6 +126,41 @@ in native SQL.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="jakarta.persistence.criteria">
+<h2>Uses of <a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a> in <a href="../criteria/package-summary.html">jakarta.persistence.criteria</a></h2>
+<div class="caption"><span>Methods in <a href="../criteria/package-summary.html">jakarta.persistence.criteria</a> that return <a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code><a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../criteria/CriteriaBuilder.html#augment(jakarta.persistence.StatementReference,java.util.function.Consumer)" class="member-name-link">augment</a><wbr>(<a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&nbsp;reference,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="../criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&gt;&nbsp;augmentation)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Modify the Jakarta Persistence query language statement
+represented by the given reference, returning a reference
+to the modified statement inheriting all the options of
+the given reference.</div>
+</div>
+</div>
+<div class="caption"><span>Methods in <a href="../criteria/package-summary.html">jakarta.persistence.criteria</a> with parameters of type <a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code><a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../criteria/CriteriaBuilder.html#augment(jakarta.persistence.StatementReference,java.util.function.Consumer)" class="member-name-link">augment</a><wbr>(<a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&nbsp;reference,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="../criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&gt;&nbsp;augmentation)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Modify the Jakarta Persistence query language statement
+represented by the given reference, returning a reference
+to the modified statement inheriting all the options of
+the given reference.</div>
+</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="jakarta.persistence.query">
 <h2>Uses of <a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a> in <a href="../query/package-summary.html">jakarta.persistence.query</a></h2>
 <div class="caption"><span>Classes in <a href="../query/package-summary.html">jakarta.persistence.query</a> that implement <a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></span></div>
@@ -126,8 +171,8 @@ in native SQL.</div>
 <div class="col-first even-row-color"><code>class&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="../query/StaticStatementReference.html" class="type-name-link" title="class in jakarta.persistence.query">StaticStatementReference</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">A reference to a statement declared using a <a href="../query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a>
-or <a href="../query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a> annotation.</div>
+<div class="block">A reference to a statement declared using a <a href="../query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a>
+or <a href="../query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a> annotation.</div>
 </div>
 </div>
 </section>

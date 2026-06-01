@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,7 +63,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence">jakarta.persistence</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </div>
 </div>
 <section class="class-uses">
@@ -77,68 +78,66 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StatementOrTypedQuery.</span><code><a href="../StatementOrTypedQuery.html#asStatement()" class="member-name-link">asStatement</a>()</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#addOption(jakarta.persistence.Statement.Option)" class="member-name-link">addOption</a><wbr>(<a href="../Statement.Option.html" title="interface in jakarta.persistence">Statement.Option</a>&nbsp;option)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Specify an <a href="../Statement.Option.html" title="interface in jakarta.persistence">option</a> influencing execution
+of this statement, overwriting any existing option of the
+same type.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">StatementOrTypedQuery.</span><code><a href="../StatementOrTypedQuery.html#asStatement()" class="member-name-link">asStatement</a>()</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Obtain a <a href="../Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> representing this statement,
 which must be some kind of executable statement, that is,
 a Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
 statement, or any native SQL statement that returns a row
 count.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createNamedStatement(java.lang.String)" class="member-name-link">createNamedStatement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createNamedStatement(java.lang.String)" class="member-name-link">createNamedStatement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create an instance of <a href="../Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a
 named <code>UPDATE</code> or <code>DELETE</code> statement written
 in the Jakarta Persistence query language, or a named native
 SQL statement which returns a row count.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createNativeStatement(java.lang.String)" class="member-name-link">createNativeStatement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createNativeStatement(java.lang.String)" class="member-name-link">createNativeStatement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Create an instance of <a href="../Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a
 native SQL statement which returns a row count, usually
 an <code>INSERT</code>, <code>UPDATE</code>, <code>MERGE</code>, or
 <code>DELETE</code> statement.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityManager.</span><code><a href="../EntityManager.html#createQuery(jakarta.persistence.criteria.CriteriaStatement)" class="member-name-link">createQuery</a><wbr>(<a href="../criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&nbsp;statement)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">EntityManager.</span><code><a href="../EntityManager.html#createQuery(jakarta.persistence.criteria.CriteriaStatement)" class="member-name-link">createQuery</a><wbr>(<a href="../criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&nbsp;statement)</code></div>
+<div class="col-last even-row-color">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">Use <a href="../EntityHandler.html#createStatement(jakarta.persistence.criteria.CriteriaStatement)"><code>EntityHandler.createStatement(CriteriaStatement)</code></a>.</div>
 </div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStatement(jakarta.persistence.criteria.CriteriaStatement)" class="member-name-link">createStatement</a><wbr>(<a href="../criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&nbsp;statement)</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStatement(jakarta.persistence.criteria.CriteriaStatement)" class="member-name-link">createStatement</a><wbr>(<a href="../criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&nbsp;statement)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Create an instance of <a href="../Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a
 <a href="../criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">criteria statement</a>.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStatement(jakarta.persistence.StatementReference)" class="member-name-link">createStatement</a><wbr>(<a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&nbsp;reference)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStatement(jakarta.persistence.StatementReference)" class="member-name-link">createStatement</a><wbr>(<a href="../StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create an instance of <a href="../Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a named
 statement written in the Jakarta Persistence query language or
 in native SQL.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStatement(java.lang.String)" class="member-name-link">createStatement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">EntityHandler.</span><code><a href="../EntityHandler.html#createStatement(java.lang.String)" class="member-name-link">createStatement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Create an instance of <a href="../Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a
 Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
 statement.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setConvertedParameter(int,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(int&nbsp;position,
- P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Bind an argument value to a named parameter, explicitly
-specifying an <a href="../AttributeConverter.html" title="interface in jakarta.persistence">attribute
-converter</a> to use.</div>
-</div>
 <div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setConvertedParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setConvertedParameter(int,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(int&nbsp;position,
  P&nbsp;value,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
 <div class="col-last even-row-color">
@@ -146,38 +145,37 @@ converter</a> to use.</div>
 specifying an <a href="../AttributeConverter.html" title="interface in jakarta.persistence">attribute
 converter</a> to use.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
+<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setConvertedParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setConvertedParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Bind an argument value to a named parameter, explicitly
+specifying an <a href="../AttributeConverter.html" title="interface in jakarta.persistence">attribute
+converter</a> to use.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setFlushMode(jakarta.persistence.FlushModeType)" class="member-name-link">setFlushMode</a><wbr>(<a href="../FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</code></div>
+<div class="col-last even-row-color">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Use <a href="../Statement.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>Statement.setQueryFlushMode(QueryFlushMode)</code></a>.</div>
 </div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setHint(java.lang.String,java.lang.Object)" class="member-name-link">setHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
+<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setHint(java.lang.String,java.lang.Object)" class="member-name-link">setHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last odd-row-color">
 <div class="block">Set a query property or hint.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Bind an argument value to a positional parameter.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
- <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
-<div class="col-last even-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Newly written code should use the date/time types
-            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
-</div>
-</div>
 <div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
  <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last odd-row-color">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -185,35 +183,35 @@ converter</a> to use.</div>
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
 </div>
-<div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
- P&nbsp;value,
- <a href="../metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
+<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Bind an argument value to a positional parameter, explicitly
-specifying the parameter type.</div>
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Newly written code should use the date/time types
+            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
+</div>
 </div>
 <div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
  P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
+ <a href="../metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Bind an argument value to a positional parameter, explicitly
 specifying the parameter type.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(jakarta.persistence.Parameter,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
- <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
+<div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(int,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(int&nbsp;position,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
 <div class="col-last even-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Newly written code should use the date/time types
-            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
-</div>
+<div class="block">Bind an argument value to a positional parameter, explicitly
+specifying the parameter type.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(jakarta.persistence.Parameter,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(jakarta.persistence.Parameter,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
  <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last odd-row-color">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -221,69 +219,79 @@ specifying the parameter type.</div>
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
 </div>
-<div class="col-first even-row-color"><code>&lt;T&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(jakarta.persistence.Parameter,T)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
- T&nbsp;value)</code></div>
+<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(jakarta.persistence.Parameter,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Newly written code should use the date/time types
+            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
+</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;T&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(jakarta.persistence.Parameter,T)" class="member-name-link">setParameter</a><wbr>(<a href="../Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
+ T&nbsp;value)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Bind an argument to a parameter of this query respresented as
 a <a href="../Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> object.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,java.lang.Object)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Bind an argument value to a named parameter.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,java.util.Calendar,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
  <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
-<div class="col-last even-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Newly written code should use the date/time types
-            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
-</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
- <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last odd-row-color">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
             defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
 </div>
-</div>
-<div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- P&nbsp;value,
- <a href="../metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Bind an argument value to a named parameter, explicitly
-specifying the parameter type.</div>
-</div>
-<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- P&nbsp;value,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Bind an argument value to a named parameter, explicitly
-specifying the parameter type.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" class="member-name-link">setQueryFlushMode</a><wbr>(<a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,java.util.Date,jakarta.persistence.TemporalType)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ <a href="../TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</code></div>
 <div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Newly written code should use the date/time types
+            defined in <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html" class="external-link"><code>java.time</code></a>.</div>
+</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ P&nbsp;value,
+ <a href="../metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Bind an argument value to a named parameter, explicitly
+specifying the parameter type.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;P&gt;&nbsp;<a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setParameter(java.lang.String,P,java.lang.Class)" class="member-name-link">setParameter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ P&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Bind an argument value to a named parameter, explicitly
+specifying the parameter type.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)" class="member-name-link">setQueryFlushMode</a><wbr>(<a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Set the <a href="../QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
 used when the query is executed.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Set the query timeout.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="../Statement.html" title="interface in jakarta.persistence">Statement</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Statement.</span><code><a href="../Statement.html#setTimeout(java.lang.Integer)" class="member-name-link">setTimeout</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Set the query timeout, in milliseconds.</div>
 </div>
 </div>

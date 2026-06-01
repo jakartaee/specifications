@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -82,29 +82,30 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">PersistenceContext</span></div>
 <div class="block">Expresses a dependency on a container-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>
- and its associated persistence context. When this annotation occurs
- on a method or field of a managed bean, it declares an injection point
- of type <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>.
- 
+and its associated persistence context. When this annotation occurs
+on a method or field of a managed bean, it declares an injection
+point of type <code>EntityManager</code>.
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-jakarta.persistence.PersistenceContext1"><code class="language-java">@PersistenceContext EntityManager manager;
 </code></pre>
 </div>
 
- When the annotation occurs on a managed bean class, it assigns a
- name to the <code>EntityManager</code> in the environment referencing
- context <code>java:comp/env</code> of the containing module.
+When the annotation occurs on a managed bean class, it assigns a
+name to the <code>EntityManager</code> in the environment referencing
+context <code>java:comp/env</code> of the containing module.
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
 <pre class="snippet" id="snippet-jakarta.persistence.PersistenceContext2"><code class="language-java">@PersistenceContext(name = "LibraryManager")
 class Bean
     ...
-    EntityManagerFactory =
+    EntityManager manager =
             new InitialContext()
                     .lookup("java:comp/env/LibraryManager");
     ...
 </code></pre>
 </div>
-</div>
+
+<p>
+Every container-managed entity manager is a JTA entity manager.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
@@ -226,6 +227,12 @@ method.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>2.1</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list-long">
+<li><a href="EntityManagerFactory.html#createEntityManager(jakarta.persistence.SynchronizationType,java.util.Map)"><code>EntityManagerFactory.createEntityManager(SynchronizationType, Map)</code></a></li>
+</ul>
+</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -243,6 +250,14 @@ method.</div>
 Vendor-specific properties may be included in this set of
 properties. Properties that are not recognized by a vendor are
 ignored.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list-long">
+<li><a href="EntityManagerFactory.html#createEntityManager(jakarta.persistence.SynchronizationType,java.util.Map)"><code>EntityManagerFactory.createEntityManager(SynchronizationType, Map)</code></a></li>
+</ul>
+</dd>
+</dl>
 <dl class="notes">
 <dt>Default:</dt>
 <dd><code>{}</code></dd>

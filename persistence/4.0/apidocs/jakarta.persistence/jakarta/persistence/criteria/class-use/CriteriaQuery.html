@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,7 +63,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence.criteria">jakarta.persistence.criteria</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </div>
 </div>
 <section class="class-uses">
@@ -196,6 +196,21 @@ to the specified boolean expression.</div>
 <div class="col-last even-row-color">
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.</div>
+</div>
+</div>
+<div class="caption"><span>Method parameters in <a href="../package-summary.html">jakarta.persistence.criteria</a> with type arguments of type <a href="../CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a></span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>&lt;T&gt;&nbsp;<a href="../../TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#augment(jakarta.persistence.TypedQueryReference,java.util.function.Consumer)" class="member-name-link">augment</a><wbr>(<a href="../../TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;T&gt;&nbsp;reference,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="../CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;T&gt;&gt;&nbsp;augmentation)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Modify the Jakarta Persistence query language query
+represented by the given reference, returning a
+reference to the modified query inheriting all the
+options of the given reference.</div>
 </div>
 </div>
 </section>

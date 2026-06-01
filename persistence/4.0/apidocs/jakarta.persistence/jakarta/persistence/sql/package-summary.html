@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#package">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -67,6 +67,36 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="horizontal-scroll">
 <div class="package-signature">package <span class="element-name">jakarta.persistence.sql</span></div>
+<section class="package-description" id="package-description">
+<div class="block">Defines an API for the programmatic definition of SQL result set
+mappings to Java classes. This API is an alternative to defining
+such mappings using the annotation
+<a href="../SqlResultSetMapping.html" title="annotation interface in jakarta.persistence"><code>SqlResultSetMapping</code></a>.
+<ul>
+<li><a href="ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a> declares
+    static factory convenience methods for instantiating the
+    elements of a result set mapping.
+<li><a href="ColumnMapping.html" title="class in jakarta.persistence.sql"><code>ColumnMapping</code></a> maps a single
+    column of a SQL result set to a Java type.
+<li><a href="FieldMapping.html" title="class in jakarta.persistence.sql"><code>FieldMapping</code></a> maps a single
+    column of a SQL result set to a field or property of an
+    entity or embeddable class.
+<li><a href="EntityMapping.html" title="class in jakarta.persistence.sql"><code>EntityMapping</code></a> maps columns
+    of a SQL result set to an entity class.
+<li><a href="EmbeddedMapping.html" title="class in jakarta.persistence.sql"><code>EmbeddedMapping</code></a> maps columns
+    of a SQL result set to an embeddable class.
+<li><a href="ConstructorMapping.html" title="class in jakarta.persistence.sql"><code>ConstructorMapping</code></a> allows a
+    tuple of values to be packaged as an instance of a record
+    or class defined by the application.
+<li><a href="TupleMapping.html" title="class in jakarta.persistence.sql"><code>TupleMapping</code></a> allows a tuple
+    of values to be packaged as an instance of the class
+    <a href="../Tuple.html" title="interface in jakarta.persistence"><code>Tuple</code></a>.
+</ul></div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</section>
 </div>
 <section class="summary">
 <ul class="summary-list">
@@ -78,21 +108,29 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="../package-summary.html">jakarta.persistence</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </div>
 <div class="col-first odd-row-color"><a href="../criteria/package-summary.html">jakarta.persistence.criteria</a></div>
 <div class="col-last odd-row-color">
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </div>
 <div class="col-first even-row-color"><a href="../metamodel/package-summary.html">jakarta.persistence.metamodel</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence Metamodel API</div>
+<div class="block">Defines the Jakarta Persistence Metamodel API, allowing runtime
+reflection on the managed types declared by a persistence unit.</div>
 </div>
 <div class="col-first odd-row-color"><a href="../query/package-summary.html">jakarta.persistence.query</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Defines annotations for expressing statically type safe queries by
+annotating query methods of a
+<a href="../spi/Discoverable.html" title="annotation interface in jakarta.persistence.spi">discoverable</a> type
+or Jakarta Data repository.</div>
+</div>
 <div class="col-first even-row-color"><a href="../spi/package-summary.html">jakarta.persistence.spi</a></div>
 <div class="col-last even-row-color">
-<div class="block">SPI for Jakarta Persistence providers</div>
+<div class="block">Defines an SPI for integrating with the persistence provider
+and with the Jakarta EE platform.</div>
 </div>
 </div>
 </div>

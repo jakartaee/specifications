@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -65,6 +65,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#coalesce(jakarta.persistence.criteria.Expression)" tabindex="0">coalesce(Expression)</a></li>
 <li><a href="#nullif(T)" tabindex="0">nullif(T)</a></li>
 <li><a href="#nullif(jakarta.persistence.criteria.Expression)" tabindex="0">nullif(Expression)</a></li>
+<li><a href="#before(jakarta.persistence.criteria.Expression)" tabindex="0">before(Expression)</a></li>
+<li><a href="#before(T)" tabindex="0">before(T)</a></li>
+<li><a href="#after(jakarta.persistence.criteria.Expression)" tabindex="0">after(Expression)</a></li>
+<li><a href="#after(T)" tabindex="0">after(T)</a></li>
 </ol>
 </li>
 </ol>
@@ -72,9 +76,13 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<h1 title="Interface TemporalExpression" class="title">Interface TemporalExpression&lt;<span id="type-param-T">T extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/Temporal.html" title="class or interface in java.time.temporal" class="external-link">Temporal</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super T&gt;</span>&gt;</h1>
+<h1 title="Interface TemporalExpression" class="title">Interface TemporalExpression&lt;T extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/Temporal.html" title="class or interface in java.time.temporal" class="external-link">Temporal</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;? super T&gt;&gt;</h1>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="type-param-T"><code>T</code> - the temporal type of the expression</span></dd>
+</dl>
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
 <dd><code><a href="ComparableExpression.html" title="interface in jakarta.persistence.criteria">ComparableExpression</a>&lt;T&gt;, <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;T&gt;, <a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;T&gt;, <a href="../TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;T&gt;</code></dd>
@@ -97,12 +105,32 @@ extends <a href="ComparableExpression.html" title="interface in jakarta.persiste
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#after(jakarta.persistence.criteria.Expression)" class="member-name-link">after</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Synonym for <a href="ComparableExpression.html#greaterThan(jakarta.persistence.criteria.Expression)"><code>ComparableExpression.greaterThan(Expression)</code></a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#after(T)" class="member-name-link">after</a><wbr>(<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&nbsp;y)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Synonym for <a href="ComparableExpression.html#greaterThan(C)"><code>ComparableExpression.greaterThan(Comparable)</code></a>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#before(jakarta.persistence.criteria.Expression)" class="member-name-link">before</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;y)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Synonym for <a href="ComparableExpression.html#lessThan(jakarta.persistence.criteria.Expression)"><code>ComparableExpression.lessThan(Expression)</code></a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#before(T)" class="member-name-link">before</a><wbr>(<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&nbsp;y)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Synonym for <a href="ComparableExpression.html#lessThan(C)"><code>ComparableExpression.lessThan(Comparable)</code></a>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a><wbr>&lt;<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#coalesce(jakarta.persistence.criteria.Expression)" class="member-name-link">coalesce</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;y)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -145,7 +173,7 @@ and the value of the first expression if they are not.</div>
 <code><a href="ComparableExpression.html#asc()" title="asc()">asc</a>, <a href="ComparableExpression.html#asc(jakarta.persistence.criteria.Nulls)" title="asc(Nulls)">asc</a>, <a href="ComparableExpression.html#between(C,C)" title="between(T, T)">between</a>, <a href="ComparableExpression.html#between(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" title="between(Expression, Expression)">between</a>, <a href="ComparableExpression.html#desc()" title="desc()">desc</a>, <a href="ComparableExpression.html#desc(jakarta.persistence.criteria.Nulls)" title="desc(Nulls)">desc</a>, <a href="ComparableExpression.html#greaterThan(C)" title="greaterThan(T)">greaterThan</a>, <a href="ComparableExpression.html#greaterThan(jakarta.persistence.criteria.Expression)" title="greaterThan(Expression)">greaterThan</a>, <a href="ComparableExpression.html#greaterThanOrEqualTo(C)" title="greaterThanOrEqualTo(T)">greaterThanOrEqualTo</a>, <a href="ComparableExpression.html#greaterThanOrEqualTo(jakarta.persistence.criteria.Expression)" title="greaterThanOrEqualTo(Expression)">greaterThanOrEqualTo</a>, <a href="ComparableExpression.html#lessThan(C)" title="lessThan(T)">lessThan</a>, <a href="ComparableExpression.html#lessThan(jakarta.persistence.criteria.Expression)" title="lessThan(Expression)">lessThan</a>, <a href="ComparableExpression.html#lessThanOrEqualTo(C)" title="lessThanOrEqualTo(T)">lessThanOrEqualTo</a>, <a href="ComparableExpression.html#lessThanOrEqualTo(jakarta.persistence.criteria.Expression)" title="lessThanOrEqualTo(Expression)">lessThanOrEqualTo</a>, <a href="ComparableExpression.html#max()" title="max()">max</a>, <a href="ComparableExpression.html#min()" title="min()">min</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Expression">Methods inherited from interface&nbsp;<a href="Expression.html#method-summary" title="interface in jakarta.persistence.criteria">Expression</a></h3>
-<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#selectCase()" title="selectCase()">selectCase</a></code></div>
+<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#selectCase(java.lang.Class)" title="selectCase(Class)">selectCase</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Selection">Methods inherited from interface&nbsp;<a href="Selection.html#method-summary" title="interface in jakarta.persistence.criteria">Selection</a></h3>
 <code><a href="Selection.html#alias(java.lang.String)" title="alias(String)">alias</a>, <a href="Selection.html#getCompoundSelectionItems()" title="getCompoundSelectionItems()">getCompoundSelectionItems</a>, <a href="Selection.html#isCompoundSelection()" title="isCompoundSelection()">isCompoundSelection</a></code></div>
@@ -167,11 +195,15 @@ and the value of the first expression if they are not.</div>
 <section class="detail" id="extract(jakarta.persistence.criteria.TemporalField)">
 <h3>extract</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;N extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;N&gt;&gt;</span>
-<span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;N&gt;</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(<a href="TemporalField.html" title="interface in jakarta.persistence.criteria">TemporalField</a>&lt;N,<wbr><a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;field)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;N extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a> &amp; <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;N&gt;&gt;</span>
+<span class="return-type"><a href="NumericExpression.html" title="interface in jakarta.persistence.criteria">NumericExpression</a>&lt;N&gt;</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(@Nonnull
+ <a href="TemporalField.html" title="interface in jakarta.persistence.criteria">TemporalField</a>&lt;N,<wbr><a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;field)</span></div>
 <div class="block">Create an expression that returns the value of a
 field extracted from this date.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="extract(jakarta.persistence.criteria.TemporalField)-type-param-N"><code>N</code> - the type of the extracted value</span></dd>
 <dt>Parameters:</dt>
 <dd><code>field</code> - a temporal field type</dd>
 <dt>Returns:</dt>
@@ -190,7 +222,8 @@ field extracted from this date.</div>
 <section class="detail" id="coalesce(T)">
 <h3 id="coalesce(java.time.temporal.Temporal)">coalesce</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&nbsp;y)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&nbsp;y)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="Expression.html#coalesce(T)">Expression</a></code></span></div>
 <div class="block">Create an expression that returns null if this and the argument
 evaluate to null, and the value of the first non-null expression
@@ -212,7 +245,9 @@ otherwise.</div>
 <section class="detail" id="coalesce(jakarta.persistence.criteria.Expression)">
 <h3>coalesce</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;y)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;</span>&nbsp;<span class="element-name">coalesce</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;y)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="Expression.html#coalesce(jakarta.persistence.criteria.Expression)">Expression</a></code></span></div>
 <div class="block">Create an expression that returns null if this and the argument
 evaluate to null, and the value of the first non-null expression
@@ -234,7 +269,8 @@ otherwise.</div>
 <section class="detail" id="nullif(T)">
 <h3 id="nullif(java.time.temporal.Temporal)">nullif</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&nbsp;y)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&nbsp;y)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="Expression.html#nullif(T)">Expression</a></code></span></div>
 <div class="block">Create an expression that tests whether this expression
 is equal to the argument, returning null if they are
@@ -256,7 +292,9 @@ and the value of the first expression if they are not.</div>
 <section class="detail" id="nullif(jakarta.persistence.criteria.Expression)">
 <h3>nullif</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;y)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a>&lt;<a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;</span>&nbsp;<span class="element-name">nullif</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;y)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="Expression.html#nullif(jakarta.persistence.criteria.Expression)">Expression</a></code></span></div>
 <div class="block">Create an expression that tests whether this expression
 is equal to the argument, returning null if they are
@@ -270,6 +308,74 @@ and the value of the first expression if they are not.</div>
 <dd><code>y</code> - expression</dd>
 <dt>Returns:</dt>
 <dd>nullif expression</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="before(jakarta.persistence.criteria.Expression)">
+<h3>before</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">before</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;y)</span></div>
+<div class="block">Synonym for <a href="ComparableExpression.html#lessThan(jakarta.persistence.criteria.Expression)"><code>ComparableExpression.lessThan(Expression)</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>y</code> - expression</dd>
+<dt>Returns:</dt>
+<dd>before predicate</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="before(T)">
+<h3 id="before(java.time.temporal.Temporal)">before</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">before</span><wbr><span class="parameters">(@Nonnull
+ <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&nbsp;y)</span></div>
+<div class="block">Synonym for <a href="ComparableExpression.html#lessThan(C)"><code>ComparableExpression.lessThan(Comparable)</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>y</code> - value</dd>
+<dt>Returns:</dt>
+<dd>before predicate</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="after(jakarta.persistence.criteria.Expression)">
+<h3>after</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">after</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&gt;&nbsp;y)</span></div>
+<div class="block">Synonym for <a href="ComparableExpression.html#greaterThan(jakarta.persistence.criteria.Expression)"><code>ComparableExpression.greaterThan(Expression)</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>y</code> - expression</dd>
+<dt>Returns:</dt>
+<dd>after predicate</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="after(T)">
+<h3 id="after(java.time.temporal.Temporal)">after</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">after</span><wbr><span class="parameters">(@Nonnull
+ <a href="#type-param-T" title="type parameter in TemporalExpression">T</a>&nbsp;y)</span></div>
+<div class="block">Synonym for <a href="ComparableExpression.html#greaterThan(C)"><code>ComparableExpression.greaterThan(Comparable)</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>y</code> - value</dd>
+<dt>Returns:</dt>
+<dd>after predicate</dd>
 </dl>
 </div>
 </section>

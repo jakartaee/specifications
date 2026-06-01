@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -61,10 +61,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#getResultType()" tabindex="0">getResultType()</a></li>
-<li><a href="#getCacheRetrieveMode()" tabindex="0">getCacheRetrieveMode()</a></li>
-<li><a href="#getCacheStoreMode()" tabindex="0">getCacheStoreMode()</a></li>
-<li><a href="#getLockMode()" tabindex="0">getLockMode()</a></li>
-<li><a href="#getPessimisticLockScope()" tabindex="0">getPessimisticLockScope()</a></li>
+<li><a href="#getOptions()" tabindex="0">getOptions()</a></li>
 <li><a href="#getEntityGraphName()" tabindex="0">getEntityGraphName()</a></li>
 </ol>
 </li>
@@ -94,8 +91,8 @@ loadScripts(document, 'script');</script>
 extends <a href="Reference.html" title="interface in jakarta.persistence">Reference</a></span></div>
 <div class="block">A reference to a typed named query declared via the
 <a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>. An
+or using <a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>. An
 instance of <code>TypedQueryReference</code> is usually obtained
 from the static metamodel of the annotated type.
 
@@ -108,8 +105,8 @@ the query parameter named <code>pattern</code> and with the
 <pre class="snippet" id="snippet-jakarta.persistence.TypedQueryReference1"><code class="language-java">class Library {
     @Inject EntityManager entityManager;
 
-    @StaticQuery("select a from Book b join b.authors a where b.title like :pattern")
-    @StaticQueryOptions(cacheStoreMode = CacheStoreMode.BYPASS)
+    @JakartaQuery("select a from Book b join b.authors a where b.title like :pattern")
+    @QueryOptions(cacheStoreMode = CacheStoreMode.BYPASS)
     List&lt;Author&gt; findAuthorsGivenTitles(String pattern) {
         return entityManager.createQuery(Library_.findAuthorsGivenTitles(pattern))
                 .getResultList();
@@ -188,20 +185,6 @@ a result set.</div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The specified <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence"><code>CacheRetrieveMode</code></a>, if any,
-or <code>null</code> when the default mode of the
-<a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> should be used.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheStoreMode()" class="member-name-link">getCacheStoreMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The specified <a href="CacheStoreMode.html" title="enum class in jakarta.persistence"><code>CacheStoreMode</code></a>, if any,
-or <code>null</code> when the default mode of the
-<a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> should be used.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntityGraphName()" class="member-name-link">getEntityGraphName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -209,36 +192,30 @@ or <code>null</code> when the default mode of the
 or <code>null</code> if no entity graph was
 specified.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLockMode()" class="member-name-link">getLockMode</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOptions()" class="member-name-link">getOptions</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The specified <a href="LockModeType.html" title="enum class in jakarta.persistence"><code>LockModeType</code></a>, if any,
-oo <a href="LockModeType.html#NONE"><code>LockModeType.NONE</code></a> if no lock mode
-was specified.</div>
+<div class="block">All <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">options</a> specified by
+<a href="query/QueryOptions.html" title="annotation interface in jakarta.persistence.query"><code>QueryOptions</code></a>,
+<a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a>, or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a>, or an
+empty set if no options were specified.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPessimisticLockScope()" class="member-name-link">getPessimisticLockScope</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;? extends <a href="#type-param-R" title="type parameter in TypedQueryReference">R</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResultType()" class="member-name-link">getResultType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The specified <a href="PessimisticLockScope.html" title="enum class in jakarta.persistence"><code>PessimisticLockScope</code></a>,
-if any, or <a href="PessimisticLockScope.html#NORMAL"><code>PessimisticLockScope.NORMAL</code></a>
-if no lock scope was specified.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;? extends <a href="#type-param-R" title="type parameter in TypedQueryReference">R</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResultType()" class="member-name-link">getResultType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The result type of the query, as specified by
 <a href="NamedQuery.html#resultClass()"><code>NamedQuery.resultClass()</code></a> or
 <a href="NamedNativeQuery.html#resultClass()"><code>NamedNativeQuery.resultClass()</code></a>, or as inferred
 from the declared return type of the method annotated
-<a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+<a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.Reference">Methods inherited from interface&nbsp;<a href="Reference.html#method-summary" title="interface in jakarta.persistence">Reference</a></h3>
-<code><a href="Reference.html#getArguments()" title="getArguments()">getArguments</a>, <a href="Reference.html#getHints()" title="getHints()">getHints</a>, <a href="Reference.html#getName()" title="getName()">getName</a>, <a href="Reference.html#getParameterNames()" title="getParameterNames()">getParameterNames</a>, <a href="Reference.html#getParameterTypes()" title="getParameterTypes()">getParameterTypes</a>, <a href="Reference.html#getTimeout()" title="getTimeout()">getTimeout</a></code></div>
+<code><a href="Reference.html#getArguments()" title="getArguments()">getArguments</a>, <a href="Reference.html#getHints()" title="getHints()">getHints</a>, <a href="Reference.html#getName()" title="getName()">getName</a>, <a href="Reference.html#getParameterNames()" title="getParameterNames()">getParameterNames</a>, <a href="Reference.html#getParameterTypes()" title="getParameterTypes()">getParameterTypes</a></code></div>
 </section>
 </li>
 </ul>
@@ -254,100 +231,40 @@ from the declared return type of the method annotated
 <section class="detail" id="getResultType()">
 <h3>getResultType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="#type-param-R" title="type parameter in TypedQueryReference">R</a>&gt;</span>&nbsp;<span class="element-name">getResultType</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="#type-param-R" title="type parameter in TypedQueryReference">R</a>&gt;</span>&nbsp;<span class="element-name">getResultType</span>()</div>
 <div class="block">The result type of the query, as specified by
 <a href="NamedQuery.html#resultClass()"><code>NamedQuery.resultClass()</code></a> or
 <a href="NamedNativeQuery.html#resultClass()"><code>NamedNativeQuery.resultClass()</code></a>, or as inferred
 from the declared return type of the method annotated
-<a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+<a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="getCacheRetrieveMode()">
-<h3>getCacheRetrieveMode</h3>
+<section class="detail" id="getOptions()">
+<h3>getOptions</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></span>&nbsp;<span class="element-name">getCacheRetrieveMode</span>()</div>
-<div class="block">The specified <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence"><code>CacheRetrieveMode</code></a>, if any,
-or <code>null</code> when the default mode of the
-<a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> should be used.</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a>&gt;</span>&nbsp;<span class="element-name">getOptions</span>()</div>
+<div class="block">All <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">options</a> specified by
+<a href="query/QueryOptions.html" title="annotation interface in jakarta.persistence.query"><code>QueryOptions</code></a>,
+<a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a>, or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a>, or an
+empty set if no options were specified.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>4.0</dd>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list-long">
-<li><a href="TypedQuery.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)"><code>TypedQuery.setCacheRetrieveMode(CacheRetrieveMode)</code></a></li>
-<li><a href="query/StaticQueryOptions.html#cacheRetrieveMode()"><code>StaticQueryOptions.cacheRetrieveMode()</code></a></li>
-</ul>
-</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getCacheStoreMode()">
-<h3>getCacheStoreMode</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></span>&nbsp;<span class="element-name">getCacheStoreMode</span>()</div>
-<div class="block">The specified <a href="CacheStoreMode.html" title="enum class in jakarta.persistence"><code>CacheStoreMode</code></a>, if any,
-or <code>null</code> when the default mode of the
-<a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> should be used.</div>
-<dl class="notes">
-<dt>Since:</dt>
-<dd>4.0</dd>
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list-long">
-<li><a href="TypedQuery.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)"><code>TypedQuery.setCacheStoreMode(CacheStoreMode)</code></a></li>
-<li><a href="query/StaticQueryOptions.html#cacheStoreMode()"><code>StaticQueryOptions.cacheStoreMode()</code></a></li>
-</ul>
-</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getLockMode()">
-<h3>getLockMode</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></span>&nbsp;<span class="element-name">getLockMode</span>()</div>
-<div class="block">The specified <a href="LockModeType.html" title="enum class in jakarta.persistence"><code>LockModeType</code></a>, if any,
-oo <a href="LockModeType.html#NONE"><code>LockModeType.NONE</code></a> if no lock mode
-was specified.</div>
-<dl class="notes">
-<dt>Since:</dt>
-<dd>4.0</dd>
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list-long">
-<li><a href="TypedQuery.html#setLockMode(jakarta.persistence.LockModeType)"><code>TypedQuery.setLockMode(LockModeType)</code></a></li>
-<li><a href="NamedQuery.html#lockMode()"><code>NamedQuery.lockMode()</code></a></li>
-<li><a href="query/StaticQueryOptions.html#lockMode()"><code>StaticQueryOptions.lockMode()</code></a></li>
-</ul>
-</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getPessimisticLockScope()">
-<h3>getPessimisticLockScope</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a></span>&nbsp;<span class="element-name">getPessimisticLockScope</span>()</div>
-<div class="block">The specified <a href="PessimisticLockScope.html" title="enum class in jakarta.persistence"><code>PessimisticLockScope</code></a>,
-if any, or <a href="PessimisticLockScope.html#NORMAL"><code>PessimisticLockScope.NORMAL</code></a>
-if no lock scope was specified.</div>
-<dl class="notes">
-<dt>Since:</dt>
-<dd>4.0</dd>
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list-long">
-<li><a href="TypedQuery.html#setLockScope(jakarta.persistence.PessimisticLockScope)"><code>TypedQuery.setLockScope(PessimisticLockScope)</code></a></li>
-<li><a href="NamedQuery.html#lockScope()"><code>NamedQuery.lockScope()</code></a></li>
-<li><a href="query/StaticQueryOptions.html#lockScope()"><code>StaticQueryOptions.lockScope()</code></a></li>
+<li><a href="TypedQuery.html#addOption(jakarta.persistence.TypedQuery.Option)"><code>TypedQuery.addOption(TypedQuery.Option)</code></a></li>
+<li><a href="query/QueryOptions.html#cacheStoreMode()"><code>QueryOptions.cacheStoreMode()</code></a></li>
+<li><a href="query/QueryOptions.html#cacheRetrieveMode()"><code>QueryOptions.cacheRetrieveMode()</code></a></li>
+<li><a href="query/QueryOptions.html#lockMode()"><code>QueryOptions.lockMode()</code></a></li>
+<li><a href="query/QueryOptions.html#lockScope()"><code>QueryOptions.lockScope()</code></a></li>
+<li><a href="query/QueryOptions.html#timeout()"><code>QueryOptions.timeout()</code></a></li>
+<li><a href="query/QueryOptions.html#flush()"><code>QueryOptions.flush()</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -358,7 +275,8 @@ if no lock scope was specified.</div>
 <section class="detail" id="getEntityGraphName()">
 <h3>getEntityGraphName</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getEntityGraphName</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getEntityGraphName</span>()</div>
 <div class="block">The specified entity graph name, if any,
 or <code>null</code> if no entity graph was
 specified.</div>
@@ -367,9 +285,9 @@ specified.</div>
 <dd>4.0</dd>
 <dt>See Also:</dt>
 <dd>
-<ul class="tag-list-long">
+<ul class="tag-list">
 <li><a href="NamedQuery.html#entityGraph()"><code>NamedQuery.entityGraph()</code></a></li>
-<li><a href="query/StaticQueryOptions.html#entityGraph()"><code>StaticQueryOptions.entityGraph()</code></a></li>
+<li><a href="query/QueryOptions.html#entityGraph()"><code>QueryOptions.entityGraph()</code></a></li>
 </ul>
 </dd>
 </dl>

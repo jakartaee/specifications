@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -96,7 +96,7 @@ loadScripts(document, 'script');</script>
 <pre class="snippet" id="snippet-jakarta.persistence.PersistenceUnit2"><code class="language-java">@PersistenceUnit(name = "Library")
 class Bean
     ...
-    EntityManagerFactory =
+    EntityManagerFactory factory =
             new InitialContext()
                     .lookup("java:comp/env/Library");
     ...

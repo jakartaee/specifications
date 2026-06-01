@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -72,9 +72,13 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<h1 title="Interface CriteriaBuilder.Case" class="title">Interface CriteriaBuilder.Case&lt;<span id="type-param-R">R</span>&gt;</h1>
+<h1 title="Interface CriteriaBuilder.Case" class="title">Interface CriteriaBuilder.Case&lt;R&gt;</h1>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="type-param-R"><code>R</code> - the result type of the case expression</span></dd>
+</dl>
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
 <dd><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;R&gt;, <a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;R&gt;, <a href="../TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;R&gt;</code></dd>
@@ -136,7 +140,7 @@ they are specified.</div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Expression">Methods inherited from interface&nbsp;<a href="Expression.html#method-summary" title="interface in jakarta.persistence.criteria">Expression</a></h3>
-<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#coalesce(jakarta.persistence.criteria.Expression)" title="coalesce(Expression)">coalesce</a>, <a href="Expression.html#coalesce(T)" title="coalesce(R)">coalesce</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#nullif(jakarta.persistence.criteria.Expression)" title="nullif(Expression)">nullif</a>, <a href="Expression.html#nullif(T)" title="nullif(R)">nullif</a>, <a href="Expression.html#selectCase()" title="selectCase()">selectCase</a></code></div>
+<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#coalesce(jakarta.persistence.criteria.Expression)" title="coalesce(Expression)">coalesce</a>, <a href="Expression.html#coalesce(T)" title="coalesce(R)">coalesce</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#nullif(jakarta.persistence.criteria.Expression)" title="nullif(Expression)">nullif</a>, <a href="Expression.html#nullif(T)" title="nullif(R)">nullif</a>, <a href="Expression.html#selectCase(java.lang.Class)" title="selectCase(Class)">selectCase</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Selection">Methods inherited from interface&nbsp;<a href="Selection.html#method-summary" title="interface in jakarta.persistence.criteria">Selection</a></h3>
 <code><a href="Selection.html#alias(java.lang.String)" title="alias(String)">alias</a>, <a href="Selection.html#getCompoundSelectionItems()" title="getCompoundSelectionItems()">getCompoundSelectionItems</a>, <a href="Selection.html#isCompoundSelection()" title="isCompoundSelection()">isCompoundSelection</a></code></div>
@@ -158,7 +162,9 @@ they are specified.</div>
 <section class="detail" id="when(jakarta.persistence.criteria.Expression,R)">
 <h3 id="when(jakarta.persistence.criteria.Expression,java.lang.Object)">when</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a>&lt;<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</span>&nbsp;<span class="element-name">when</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;condition,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a>&lt;<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</span>&nbsp;<span class="element-name">when</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;condition,
  <a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&nbsp;result)</span></div>
 <div class="block">Add a when/then clause to the case expression.</div>
 <dl class="notes">
@@ -175,7 +181,10 @@ they are specified.</div>
 <section class="detail" id="when(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)">
 <h3>when</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a>&lt;<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</span>&nbsp;<span class="element-name">when</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;condition,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaBuilder.Case.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder.Case</a>&lt;<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</span>&nbsp;<span class="element-name">when</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;condition,
+ @Nonnull
  <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;&nbsp;result)</span></div>
 <div class="block">Add a when/then clause to the case expression.</div>
 <dl class="notes">
@@ -192,7 +201,8 @@ they are specified.</div>
 <section class="detail" id="otherwise(R)">
 <h3 id="otherwise(java.lang.Object)">otherwise</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</span>&nbsp;<span class="element-name">otherwise</span><wbr><span class="parameters">(<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&nbsp;result)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</span>&nbsp;<span class="element-name">otherwise</span><wbr><span class="parameters">(<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&nbsp;result)</span></div>
 <div class="block">Add an "else" clause to the case expression.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -207,7 +217,9 @@ they are specified.</div>
 <section class="detail" id="otherwise(jakarta.persistence.criteria.Expression)">
 <h3>otherwise</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</span>&nbsp;<span class="element-name">otherwise</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;&nbsp;result)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;</span>&nbsp;<span class="element-name">otherwise</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;? extends <a href="#type-param-R" title="type parameter in CriteriaBuilder.Case">R</a>&gt;&nbsp;result)</span></div>
 <div class="block">Add an "else" clause to the case expression.</div>
 <dl class="notes">
 <dt>Parameters:</dt>

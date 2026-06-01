@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -202,10 +202,13 @@ attribute of the entity or mapped superclass.</div>
 <section class="detail" id="getId(java.lang.Class)">
 <h3>getId</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in IdentifiableType">X</a>, Y&gt;</span>&nbsp;<span class="element-name">getId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in IdentifiableType">X</a>, Y&gt;</span>&nbsp;<span class="element-name">getId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
 <div class="block">Return the attribute that corresponds to the id attribute of 
 the entity or mapped superclass.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getId(java.lang.Class)-type-param-Y"><code>Y</code> - The type of the represented id attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>type</code> - the type of the represented id attribute</dd>
 <dt>Returns:</dt>
@@ -222,10 +225,13 @@ the entity or mapped superclass.</div>
 <section class="detail" id="getDeclaredId(java.lang.Class)">
 <h3>getDeclaredId</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in IdentifiableType">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">getDeclaredId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in IdentifiableType">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">getDeclaredId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
 <div class="block">Return the attribute that corresponds to the id attribute 
 declared by the entity or mapped superclass.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getDeclaredId(java.lang.Class)-type-param-Y"><code>Y</code> - The type of the represented declared id attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>type</code> - the type of the represented declared 
              id attribute</dd>
@@ -243,10 +249,13 @@ declared by the entity or mapped superclass.</div>
 <section class="detail" id="getVersion(java.lang.Class)">
 <h3>getVersion</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in IdentifiableType">X</a>, Y&gt;</span>&nbsp;<span class="element-name">getVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in IdentifiableType">X</a>, Y&gt;</span>&nbsp;<span class="element-name">getVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
 <div class="block">Return the attribute that corresponds to the version 
 attribute of the entity or mapped superclass.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getVersion(java.lang.Class)-type-param-Y"><code>Y</code> - The type of the represented version attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>type</code> - the type of the represented version attribute</dd>
 <dt>Returns:</dt>
@@ -262,10 +271,13 @@ attribute of the entity or mapped superclass.</div>
 <section class="detail" id="getDeclaredVersion(java.lang.Class)">
 <h3>getDeclaredVersion</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in IdentifiableType">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">getDeclaredVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;<a href="#type-param-X" title="type parameter in IdentifiableType">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">getDeclaredVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;type)</span></div>
 <div class="block">Return the attribute that corresponds to the version 
 attribute declared by the entity or mapped superclass.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getDeclaredVersion(java.lang.Class)-type-param-Y"><code>Y</code> - The type of the represented declared version attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>type</code> - the type of the represented declared version 
              attribute</dd>
@@ -282,7 +294,8 @@ attribute declared by the entity or mapped superclass.</div>
 <section class="detail" id="getSupertype()">
 <h3>getSupertype</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="IdentifiableType.html" title="interface in jakarta.persistence.metamodel">IdentifiableType</a>&lt;? super <a href="#type-param-X" title="type parameter in IdentifiableType">X</a>&gt;</span>&nbsp;<span class="element-name">getSupertype</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="IdentifiableType.html" title="interface in jakarta.persistence.metamodel">IdentifiableType</a>&lt;? super <a href="#type-param-X" title="type parameter in IdentifiableType">X</a>&gt;</span>&nbsp;<span class="element-name">getSupertype</span>()</div>
 <div class="block">Return the identifiable type that corresponds to the most
 specific mapped superclass or entity extended by the entity 
 or mapped superclass.</div>
@@ -328,7 +341,8 @@ for an idclass.</div>
 <section class="detail" id="getIdClassAttributes()">
 <h3>getIdClassAttributes</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in IdentifiableType">X</a>, ?&gt;&gt;</span>&nbsp;<span class="element-name">getIdClassAttributes</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in IdentifiableType">X</a>, ?&gt;&gt;</span>&nbsp;<span class="element-name">getIdClassAttributes</span>()</div>
 <div class="block">Return the attributes corresponding to the id class of the
 identifiable type.</div>
 <dl class="notes">
@@ -345,7 +359,8 @@ identifiable type.</div>
 <section class="detail" id="getIdType()">
 <h3>getIdType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getIdType</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getIdType</span>()</div>
 <div class="block">Return the type that represents the type of the id.</div>
 <dl class="notes">
 <dt>Returns:</dt>

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,7 +63,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence">jakarta.persistence</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </div>
 </div>
 <section class="class-uses">
@@ -101,74 +102,80 @@ part of an owning entity, sharing the identity of the entity.</div>
 classes to which it applies.</div>
 </div>
 <div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../../MappedSuperclass.html" class="type-name-link" title="annotation interface in jakarta.persistence">MappedSuperclass</a></code></div>
+<div class="col-second even-row-color"><code><a href="../../EntityListeners.html" class="type-name-link" title="annotation interface in jakarta.persistence">EntityListeners</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Specifies the entity listener classes associated with the
+annotated class, package, or module.</div>
+</div>
+<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../../MappedSuperclass.html" class="type-name-link" title="annotation interface in jakarta.persistence">MappedSuperclass</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Declares a class which is not itself an entity, but whose
 mappings are inherited by the entities which extend it.</div>
 </div>
-<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../../NamedNativeQueries.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedNativeQueries</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../../NamedNativeQueries.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedNativeQueries</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Declares multiple native SQL named queries.</div>
 </div>
-<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../../NamedNativeQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedNativeQuery</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../../NamedNativeQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedNativeQuery</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Declares a named native SQL query and, optionally, the mapping
 of the result of the native SQL query.</div>
 </div>
-<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../../NamedQueries.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedQueries</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../../NamedQueries.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedQueries</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Declares multiple named Jakarta Persistence query language queries.</div>
 </div>
-<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../../NamedQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedQuery</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../../NamedQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedQuery</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Declares a named query written in the Jakarta Persistence Query
 Language.</div>
 </div>
-<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../../NamedStatement.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedStatement</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../../NamedStatement.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedStatement</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Declares a named <a href="../../Statement.html" title="interface in jakarta.persistence">statement</a> written in the
 Jakarta Persistence Query Language.</div>
 </div>
-<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../../NamedStatements.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedStatements</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../../NamedStatements.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedStatements</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Declares multiple named Jakarta Persistence query language <a href="../../Statement.html" title="interface in jakarta.persistence">statements</a>.</div>
 </div>
-<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../../NamedStoredProcedureQueries.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedStoredProcedureQueries</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../../NamedStoredProcedureQueries.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedStoredProcedureQueries</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Specifies multiple named stored procedure queries.</div>
 </div>
-<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../../NamedStoredProcedureQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedStoredProcedureQuery</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../../NamedStoredProcedureQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedStoredProcedureQuery</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Declares and names a stored procedure, its parameters, and its result type.</div>
 </div>
-<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../../SequenceGenerator.html" class="type-name-link" title="annotation interface in jakarta.persistence">SequenceGenerator</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../../SequenceGenerator.html" class="type-name-link" title="annotation interface in jakarta.persistence">SequenceGenerator</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Defines a primary key generator backed by a database sequence.</div>
 </div>
-<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../../SqlResultSetMapping.html" class="type-name-link" title="annotation interface in jakarta.persistence">SqlResultSetMapping</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../../SqlResultSetMapping.html" class="type-name-link" title="annotation interface in jakarta.persistence">SqlResultSetMapping</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Specifies an explicit mapping of the columns of a result set of a native
 SQL query or stored procedure to <a href="../../EntityResult.html" title="annotation interface in jakarta.persistence">entity classes</a>,
 <a href="../../ColumnResult.html" title="annotation interface in jakarta.persistence">scalar values</a>, and <a href="../../ConstructorResult.html" title="annotation interface in jakarta.persistence">Java class constructors</a>.</div>
 </div>
-<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../../SqlResultSetMappings.html" class="type-name-link" title="annotation interface in jakarta.persistence">SqlResultSetMappings</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../../SqlResultSetMappings.html" class="type-name-link" title="annotation interface in jakarta.persistence">SqlResultSetMappings</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Used to define one or more <a href="../../SqlResultSetMapping.html" title="annotation interface in jakarta.persistence"><code>SqlResultSetMapping</code></a> annotations.</div>
 </div>
-<div class="col-first even-row-color"><code>@interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../../TableGenerator.html" class="type-name-link" title="annotation interface in jakarta.persistence">TableGenerator</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>@interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="../../TableGenerator.html" class="type-name-link" title="annotation interface in jakarta.persistence">TableGenerator</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Defines a primary key generator backed by a row of a database
 table.</div>
 </div>

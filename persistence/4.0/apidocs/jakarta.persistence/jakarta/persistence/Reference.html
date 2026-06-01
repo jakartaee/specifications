@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -61,11 +61,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#getName()" tabindex="0">getName()</a></li>
-<li><a href="#getHints()" tabindex="0">getHints()</a></li>
 <li><a href="#getParameterTypes()" tabindex="0">getParameterTypes()</a></li>
 <li><a href="#getParameterNames()" tabindex="0">getParameterNames()</a></li>
 <li><a href="#getArguments()" tabindex="0">getArguments()</a></li>
-<li><a href="#getTimeout()" tabindex="0">getTimeout()</a></li>
+<li><a href="#getHints()" tabindex="0">getHints()</a></li>
 </ol>
 </li>
 </ol>
@@ -90,8 +89,8 @@ loadScripts(document, 'script');</script>
 <span class="permits">permits <a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>, <a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;R&gt;</span></div>
 <div class="block">A reference to a named statement or query declared via the
 <a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>. An
+or using <a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>. An
 instance of <code>Reference</code> is usually obtained from the
 static metamodel. This interface declares operations common
 to <a href="StatementReference.html" title="interface in jakarta.persistence"><code>StatementReference</code></a> and <a href="TypedQueryReference.html" title="interface in jakarta.persistence"><code>TypedQueryReference</code></a>.</div>
@@ -125,7 +124,7 @@ or query, or <code>null</code> if no arguments were supplied.</div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">A map keyed by hint name of all hints specified via
 <a href="NamedQuery.html#hints()"><code>NamedQuery.hints()</code></a>, <a href="NamedNativeQuery.html#hints()"><code>NamedNativeQuery.hints()</code></a>,
-<a href="query/StaticQueryOptions.html#hints()"><code>StaticQueryOptions.hints()</code></a>, or</div>
+or <a href="query/QueryOptions.html#hints()"><code>QueryOptions.hints()</code></a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
@@ -133,8 +132,8 @@ or query, or <code>null</code> if no arguments were supplied.</div>
 <div class="block">The name of the statement or query, as specified by
 <a href="NamedQuery.html#name()"><code>NamedQuery.name()</code></a> or <a href="NamedNativeQuery.html#name()"><code>NamedNativeQuery.name()</code></a>,
 or as inferred from the name of the method annotated
-<a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+<a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParameterNames()" class="member-name-link">getParameterNames</a>()</code></div>
@@ -151,12 +150,6 @@ supplied.</div>
 <a href="#getArguments()">arguments</a> to parameters of the
 statement or query, or <code>null</code> if no arguments were
 supplied.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimeout()" class="member-name-link">getTimeout</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The specified <a href="Timeout.html" title="class in jakarta.persistence"><code>Timeout</code></a>, if any, or
-<code>null</code> if no timeout was specified.</div>
 </div>
 </div>
 </div>
@@ -176,26 +169,13 @@ supplied.</div>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
 <div class="block">The name of the statement or query, as specified by
 <a href="NamedQuery.html#name()"><code>NamedQuery.name()</code></a> or <a href="NamedNativeQuery.html#name()"><code>NamedNativeQuery.name()</code></a>,
 or as inferred from the name of the method annotated
-<a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getHints()">
-<h3>getHints</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getHints</span>()</div>
-<div class="block">A map keyed by hint name of all hints specified via
-<a href="NamedQuery.html#hints()"><code>NamedQuery.hints()</code></a>, <a href="NamedNativeQuery.html#hints()"><code>NamedNativeQuery.hints()</code></a>,
-<a href="query/StaticQueryOptions.html#hints()"><code>StaticQueryOptions.hints()</code></a>, or
-<p>
-Any attempted mutation of the returned map results in an
-<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link"><code>UnsupportedOperationException</code></a>.</div>
+<a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
 </section>
 </li>
@@ -203,7 +183,8 @@ Any attempted mutation of the returned map results in an
 <section class="detail" id="getParameterTypes()">
 <h3>getParameterTypes</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getParameterTypes</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getParameterTypes</span>()</div>
 <div class="block">The types of the supplied
 <a href="#getArguments()">arguments</a> to parameters of the
 statement or query, or <code>null</code> if no arguments were
@@ -224,7 +205,8 @@ Any mutation of the returned list results in an
 <section class="detail" id="getParameterNames()">
 <h3>getParameterNames</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getParameterNames</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getParameterNames</span>()</div>
 <div class="block">The names assigned to the supplied
 <a href="#getArguments()">arguments</a> to parameters of the
 statement or query, or <code>null</code> if no arguments were
@@ -247,7 +229,8 @@ Any mutation of the returned list results in an
 <section class="detail" id="getArguments()">
 <h3>getArguments</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getArguments</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getArguments</span>()</div>
 <div class="block">The arguments supplied to the parameters of the statement
 or query, or <code>null</code> if no arguments were supplied.
 Arguments are present when this is a reference to a query
@@ -279,23 +262,17 @@ Any mutation of the returned list results in an
 </section>
 </li>
 <li>
-<section class="detail" id="getTimeout()">
-<h3>getTimeout</h3>
+<section class="detail" id="getHints()">
+<h3>getHints</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></span>&nbsp;<span class="element-name">getTimeout</span>()</div>
-<div class="block">The specified <a href="Timeout.html" title="class in jakarta.persistence"><code>Timeout</code></a>, if any, or
-<code>null</code> if no timeout was specified.</div>
-<dl class="notes">
-<dt>Since:</dt>
-<dd>4.0</dd>
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list">
-<li><a href="Query.html#setTimeout(jakarta.persistence.Timeout)"><code>Query.setTimeout(Timeout)</code></a></li>
-<li><a href="query/StaticQueryOptions.html#timeout()"><code>StaticQueryOptions.timeout()</code></a></li>
-</ul>
-</dd>
-</dl>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getHints</span>()</div>
+<div class="block">A map keyed by hint name of all hints specified via
+<a href="NamedQuery.html#hints()"><code>NamedQuery.hints()</code></a>, <a href="NamedNativeQuery.html#hints()"><code>NamedNativeQuery.hints()</code></a>,
+or <a href="query/QueryOptions.html#hints()"><code>QueryOptions.hints()</code></a>.
+<p>
+Any attempted mutation of the returned map results in an
+<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link"><code>UnsupportedOperationException</code></a>.</div>
 </div>
 </section>
 </li>
