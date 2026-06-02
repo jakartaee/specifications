@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -157,7 +157,9 @@ that is affected by the statement.</div>
 <section class="detail" id="from(java.lang.Class)">
 <h3>from</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;</span>&nbsp;<span class="element-name">from</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;&nbsp;entityClass)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;</span>&nbsp;<span class="element-name">from</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;&nbsp;entityClass)</span></div>
 <div class="block">Create and add a statement root corresponding to the entity
 that is affected by the statement.
 A statement has a single root, the entity that is affected.</div>
@@ -174,7 +176,9 @@ A statement has a single root, the entity that is affected.</div>
 <section class="detail" id="from(jakarta.persistence.metamodel.EntityType)">
 <h3>from</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;</span>&nbsp;<span class="element-name">from</span><wbr><span class="parameters">(<a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;&nbsp;entity)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;</span>&nbsp;<span class="element-name">from</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;&nbsp;entity)</span></div>
 <div class="block">Create and add a statement root corresponding to the entity
 that is affected by the statement.
 A statement has a single root, the entity that is affected.</div>
@@ -191,7 +195,8 @@ A statement has a single root, the entity that is affected.</div>
 <section class="detail" id="getRoot()">
 <h3>getRoot</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;</span>&nbsp;<span class="element-name">getRoot</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaStatement">T</a>&gt;</span>&nbsp;<span class="element-name">getRoot</span>()</div>
 <div class="block">Return the statement root.</div>
 <dl class="notes">
 <dt>Returns:</dt>

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -97,7 +97,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">TupleMapping</span>(<a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;elements)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">TupleMapping</span>(@Nonnull <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;elements)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;<a href="../Tuple.html" title="interface in jakarta.persistence">Tuple</a>&gt;</span></div>
 <div class="block">Map columns of a JDBC <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ResultSet.html" title="class or interface in java.sql" class="external-link"><code>ResultSet</code></a> to entries
@@ -223,7 +223,8 @@ respectively.</div>
 <section class="detail" id="&lt;init&gt;(jakarta.persistence.sql.MappingElement[])">
 <h3>TupleMapping</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TupleMapping</span><wbr><span class="parameters">(<a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;elements)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TupleMapping</span><wbr><span class="parameters">(@Nonnull
+ <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]&nbsp;elements)</span></div>
 <div class="block">Creates an instance of a <code>TupleMapping</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -244,7 +245,8 @@ respectively.</div>
 <section class="detail" id="elements()">
 <h3>elements</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]</span>&nbsp;<span class="element-name">elements</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;[]</span>&nbsp;<span class="element-name">elements</span>()</div>
 <div class="block">Returns the value of the <a href="#param-elements"><code>elements</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -257,7 +259,9 @@ respectively.</div>
 <section class="detail" id="of(jakarta.persistence.sql.MappingElement...)">
 <h3>of</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TupleMapping.html" title="class in jakarta.persistence.sql">TupleMapping</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;...&nbsp;elements)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TupleMapping.html" title="class in jakarta.persistence.sql">TupleMapping</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(@Nonnull
+ <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;?&gt;...&nbsp;elements)</span></div>
 <div class="block">Construct a new instance.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -270,7 +274,8 @@ respectively.</div>
 <section class="detail" id="type()">
 <h3>type</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="../Tuple.html" title="interface in jakarta.persistence">Tuple</a>&gt;</span>&nbsp;<span class="element-name">type</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="../Tuple.html" title="interface in jakarta.persistence">Tuple</a>&gt;</span>&nbsp;<span class="element-name">type</span>()</div>
 <div class="block">Always returns <a href="../Tuple.html" title="interface in jakarta.persistence"><code>Tuple.class</code></a>.</div>
 <dl class="notes">
 <dt>Specified by:</dt>

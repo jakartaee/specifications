@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -117,7 +117,8 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addOption(jakarta.persistence.FetchOption)" class="member-name-link">addOption</a><wbr>(<a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&nbsp;option)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Specify an <a href="FetchOption.html" title="interface in jakarta.persistence">option</a> controlling
-how this node is fetched.</div>
+how this node is fetched, overwriting any existing
+option of the same type.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a><wbr>&lt;<a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addSubgraph()" class="member-name-link">addSubgraph</a>()</code></div>
@@ -180,7 +181,8 @@ node.</div>
 <section class="detail" id="getAttributeName()">
 <h3>getAttributeName</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAttributeName</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAttributeName</span>()</div>
 <div class="block">Return the name of the attribute corresponding to the
 attribute node.</div>
 <dl class="notes">
@@ -194,7 +196,8 @@ attribute node.</div>
 <section class="detail" id="getAttribute()">
 <h3>getAttribute</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;?,<wbr><a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="element-name">getAttribute</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="metamodel/Attribute.html" title="interface in jakarta.persistence.metamodel">Attribute</a>&lt;?,<wbr><a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="element-name">getAttribute</span>()</div>
 <div class="block">The attribute from which this branch of the graph or subgraph is forked.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -209,7 +212,8 @@ attribute node.</div>
 <section class="detail" id="addSubgraph()">
 <h3>addSubgraph</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;<a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="element-name">addSubgraph</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;<a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="element-name">addSubgraph</span>()</div>
 <div class="block">Add a subgraph rooted at this attribute node, which
 must be an embedded attribute or an association to
 an entity class.</div>
@@ -232,7 +236,9 @@ an entity class.</div>
 <section class="detail" id="addTreatedSubgraph(java.lang.Class)">
 <h3>addTreatedSubgraph</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;S extends <a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="return-type"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;S&gt;</span>&nbsp;<span class="element-name">addTreatedSubgraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;S&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;S extends <a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="return-type"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;S&gt;</span>&nbsp;<span class="element-name">addTreatedSubgraph</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;S&gt;&nbsp;type)</span></div>
 <div class="block">Add a subgraph rooted at this attribute node, which
 must be an association to an entity class, for an
 entity subclass of the entity class.</div>
@@ -259,7 +265,8 @@ entity subclass of the entity class.</div>
 <section class="detail" id="getSubgraphs()">
 <h3>getSubgraphs</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;, <a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getSubgraphs</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;, <a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getSubgraphs</span>()</div>
 <div class="block">Return a map of subgraphs associated with this attribute
 node.</div>
 <dl class="notes">
@@ -275,7 +282,8 @@ defined</dd>
 <section class="detail" id="getKeySubgraphs()">
 <h3>getKeySubgraphs</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;, <a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getKeySubgraphs</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;, <a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getKeySubgraphs</span>()</div>
 <div class="block">Return a map of subgraphs associated with this attribute
 node's map key.</div>
 <dl class="notes">
@@ -291,9 +299,12 @@ have been defined</dd>
 <section class="detail" id="addOption(jakarta.persistence.FetchOption)">
 <h3>addOption</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a>&lt;<a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="element-name">addOption</span><wbr><span class="parameters">(<a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&nbsp;option)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a>&lt;<a href="#type-param-T" title="type parameter in AttributeNode">T</a>&gt;</span>&nbsp;<span class="element-name">addOption</span><wbr><span class="parameters">(@Nonnull
+ <a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&nbsp;option)</span></div>
 <div class="block">Specify an <a href="FetchOption.html" title="interface in jakarta.persistence">option</a> controlling
-how this node is fetched.</div>
+how this node is fetched, overwriting any existing
+option of the same type.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>option</code> - The option</dd>
@@ -309,7 +320,8 @@ how this node is fetched.</div>
 <section class="detail" id="getOptions()">
 <h3>getOptions</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&gt;</span>&nbsp;<span class="element-name">getOptions</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a>&gt;</span>&nbsp;<span class="element-name">getOptions</span>()</div>
 <div class="block">Return the <a href="FetchOption.html" title="interface in jakarta.persistence">options</a> controlling
 how this node is fetched.
 <ul>
@@ -317,7 +329,9 @@ how this node is fetched.
     node, the returned options contain <a href="FetchType.html#EAGER"><code>FetchType.EAGER</code></a>.
 <li>If this is a <a href="Graph.html#removeAttributeNode(java.lang.String)">removed</a>
     node, the returned options contain <a href="FetchType.html#LAZY"><code>FetchType.LAZY</code></a>.
-</ul></div>
+</ul>
+Mutation of the returned set does not affect the options
+of the node.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The options for this node</dd>

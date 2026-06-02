@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#package">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -68,7 +68,94 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="package-signature">package <span class="element-name">jakarta.persistence</span></div>
 <section class="package-description" id="package-description">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.
+<ul>
+<li><a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> is the central
+    interface used to interact with a stateful persistence
+    context. An instance of <code>EntityManager</code> must never
+    be shared across independent units of work nor between
+    concurrently executing threads.
+<li><a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a> provides an
+    alternative more direct approach to interaction with the
+    database, with no intermediating persistence context. An
+    instance of <code>EntityAgent</code> must never be shared
+    between concurrently executing threads.
+<li><a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>,
+    <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a>, and
+    <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> allow
+    control over the execution of queries, statememts, and
+    stored procedures.
+<li><a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> acts
+    as a factory for instances of <code>EntityManager</code> and
+    <code>EntityAgent</code> and provides access to other APIs
+    including <a href="Cache.html" title="interface in jakarta.persistence"><code>Cache</code></a>,
+    <a href="SchemaManager.html" title="interface in jakarta.persistence"><code>SchemaManager</code></a>,
+    <a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria"><code>CriteriaBuilder</code></a>,
+    <a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel"><code>Metamodel</code></a>, and
+    <a href="PersistenceUnitUtil.html" title="interface in jakarta.persistence"><code>PersistenceUnitUtil</code></a>. There
+    is usally one instance of <code>EntityManager</code> for each
+    configured persistence unit.
+<li><a href="Persistence.html" title="class in jakarta.persistence"><code>Persistence</code></a> is an entry point
+    for construction of an <code>EntityManagerFactory</code> in
+    Java SE and defines standard configuration properties.
+<li>As an alternative to the use of <code>persistence.xml</code>,
+    <a href="PersistenceConfiguration.html" title="class in jakarta.persistence"><code>PersistenceConfiguration</code></a>
+    allows a persistence unit to be configured programatically.
+<li><a href="SchemaManager.html" title="interface in jakarta.persistence"><code>SchemaManager</code></a> provides
+    operations for direct programmatic management of the
+    database schema.
+<li><a href="Cache.html" title="interface in jakarta.persistence"><code>Cache</code></a> provides operations for
+    direct management of the second-level cache.
+<li><a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> provides a way to
+    specify the boundaries of an operation on entity types.
+</ul>
+<p>
+The following example demonstrates one way to quickly
+configure and start Jakarta Persistence in Java SE:
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence1"><code class="language-java">// configure the persistence unit
+var library = new PersistenceConfiguration("Library");
+library.nonJtaDataSource("java:global/jdbc/LibraryDatabase");
+library.defaultToOneFetchType(FetchType.LAZY);
+// register the entity classes
+List.of(Book.class, Author.class, Publisher.class)
+	       .forEach(library::managedClass);
+// create the entity manager factory
+try (var factory = config.createEntityManagerFactory()) {
+	   // export the schema and test data
+    factory.getSchemaManager().create(true);
+    // start a transaction and obtain an entity agent
+    factory.runInTransaction(EntityAgent.class, agent -&gt; {
+        // obtain an entity instance by providing its primary key
+        var book = agent.get(Book.class, isbn);
+        ...
+    });
+}
+</code></pre>
+</div>
+
+Note, however, that <code>createEntityManagerFactory</code> is an
+expensive operation which should be called just once for each
+persistence unit in the application program.
+<p>
+Furthermore, this package provides a suite of annotation
+types which may be used:
+<ul>
+<li>to specify a model of persistent entity types, their
+    relationships, and their attributes,
+<li>map the entity types to database tables,
+<li>declare
+    <a href="NamedQuery.html" title="annotation interface in jakarta.persistence">named queries</a>,
+    <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence">named
+    native SQL queries</a>, and
+    <a href="NamedStoredProcedureQuery.html" title="annotation interface in jakarta.persistence">named stored procedures</a>,
+<li>declare <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity graphs</a> and
+    <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">named SQL result set mappings</a>, and
+<li>inject an <a href="PersistenceContext.html" title="annotation interface in jakarta.persistence">entity manager</a> or
+    <a href="PersistenceUnit.html" title="annotation interface in jakarta.persistence">factory</a>
+    in a Jakarta EE environment.
+</ul></div>
 </section>
 </div>
 <section class="summary">
@@ -81,20 +168,30 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="criteria/package-summary.html">jakarta.persistence.criteria</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </div>
 <div class="col-first odd-row-color"><a href="metamodel/package-summary.html">jakarta.persistence.metamodel</a></div>
 <div class="col-last odd-row-color">
-<div class="block">Jakarta Persistence Metamodel API</div>
+<div class="block">Defines the Jakarta Persistence Metamodel API, allowing runtime
+reflection on the managed types declared by a persistence unit.</div>
 </div>
 <div class="col-first even-row-color"><a href="query/package-summary.html">jakarta.persistence.query</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Defines annotations for expressing statically type safe queries by
+annotating query methods of a
+<a href="spi/Discoverable.html" title="annotation interface in jakarta.persistence.spi">discoverable</a> type
+or Jakarta Data repository.</div>
+</div>
 <div class="col-first odd-row-color"><a href="spi/package-summary.html">jakarta.persistence.spi</a></div>
 <div class="col-last odd-row-color">
-<div class="block">SPI for Jakarta Persistence providers</div>
+<div class="block">Defines an SPI for integrating with the persistence provider
+and with the Jakarta EE platform.</div>
 </div>
 <div class="col-first even-row-color"><a href="sql/package-summary.html">jakarta.persistence.sql</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Defines an API for the programmatic definition of SQL result set
+mappings to Java classes.</div>
+</div>
 </div>
 </div>
 </li>
@@ -291,16 +388,22 @@ primary key of the entity.</div>
 <div class="block">Provides entity operations that are performed independently
 of a persistence context.</div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="EntityAgent.CreationOption.html" title="interface in jakarta.persistence">EntityAgent.CreationOption</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">An option controlling the creation of an entity agent.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="EntityAgent.Option.html" title="interface in jakarta.persistence">EntityAgent.Option</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">An option controlling the behavior of an entity agent.</div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab5"><a href="EntityExistsException.html" title="class in jakarta.persistence">EntityExistsException</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab5">
 <div class="block">Thrown by the persistence provider when:
 
 a detached instance of an entity type is passed to
     <a href="EntityManager.html#persist(java.lang.Object)"><code>EntityManager.persist(Object)</code></a>, or
-an instance of an entity type with an identifier already
-    assigned by the application is passed to
-    <a href="EntityAgent.html#insert(java.lang.Object)"><code>EntityAgent.insert(Object)</code></a>, and a record with the
-    assigned identifier value already exists in the database.</div>
+any kind of uniqueness constraint is violated when an
+    entity is inserted in the database.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;</div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
@@ -325,11 +428,19 @@ listener with the <a href="EntityManagerFactory.html" title="interface in jakart
 <div class="col-first even-row-color class-summary class-summary-tab6"><a href="EntityListeners.html" title="annotation interface in jakarta.persistence">EntityListeners</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab6">
 <div class="block">Specifies the entity listener classes associated with the
-annotated class.</div>
+annotated class, package, or module.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Interface used to interact with the persistence context.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="EntityManager.CreationOption.html" title="interface in jakarta.persistence">EntityManager.CreationOption</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">An option controlling the creation of an entity manager.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="EntityManager.Option.html" title="interface in jakarta.persistence">EntityManager.Option</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">An option controlling the behavior of an entity manager.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
@@ -385,8 +496,8 @@ type is the source of database column values for an
 <div class="col-first even-row-color class-summary class-summary-tab6"><a href="ExcludeDefaultListeners.html" title="annotation interface in jakarta.persistence">ExcludeDefaultListeners</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab6">
 <div class="block">Specifies that the invocation of default listeners is to
-be excluded for the entity class (or mapped superclass)
-and its subclasses.</div>
+be excluded for the annotated entity class or mapped
+superclass and for its subclasses.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab6"><a href="ExcludedFromVersioning.html" title="annotation interface in jakarta.persistence">ExcludedFromVersioning</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab6">
@@ -397,9 +508,15 @@ field or property</a> of the entity.</div>
 <div class="col-first even-row-color class-summary class-summary-tab6"><a href="ExcludeSuperclassListeners.html" title="annotation interface in jakarta.persistence">ExcludeSuperclassListeners</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab6">
 <div class="block">Specifies that the invocation of superclass listeners is 
-to be excluded for the entity class (or mapped superclass) 
-and its subclasses.</div>
+to be excluded for the annotated entity class or mapped
+superclass and for its subclasses.</div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab6"><a href="Fetch.html" title="annotation interface in jakarta.persistence">Fetch</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab6">
+<div class="block">Specifies options influencing how an attribute is fetched.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab6"><a href="Fetch.Fetches.html" title="annotation interface in jakarta.persistence">Fetch.Fetches</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab6">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="FetchOption.html" title="interface in jakarta.persistence">FetchOption</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">An option influencing how an
@@ -571,25 +688,6 @@ element of a <a href="NamedEntityGraph.html" title="annotation interface in jaka
 <div class="block">Declares a named <a href="EntityGraph.html" title="interface in jakarta.persistence">entity graph</a> or subgraph
 of a named entity graph.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab6"><a href="NamedEntityGraph.AttributeNode.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNode</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab6">
-<div class="block">Declares that the annotated attribute is an attribute
-node in a <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity graph</a>.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab6"><a href="NamedEntityGraph.AttributeNodes.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNodes</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab6">
-<div class="block">Groups <a href="NamedEntityGraph.AttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.AttributeNode</code></a> annotations.</div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab6"><a href="NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraph</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab6">
-<div class="block">Declares that the annotated association is the root of a
-subgraph of a <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity
-graph</a>.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab6"><a href="NamedEntityGraph.Subgraphs.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraphs</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab6">
-<div class="block">Groups <a href="NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.Subgraph</code></a> annotations.</div>
-</div>
 <div class="col-first odd-row-color class-summary class-summary-tab6"><a href="NamedEntityGraphs.html" title="annotation interface in jakarta.persistence">NamedEntityGraphs</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab6">
 <div class="block">Used to group <a href="NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a> annotations.</div>
@@ -692,8 +790,8 @@ a list.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="Persistence.html" title="class in jakarta.persistence">Persistence</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Bootstrap class used to obtain an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a>
-in Java SE environments.</div>
+<div class="block">Bootstrap class used to obtain an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> in
+Java SE environments.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Persistence.BeanManagementProperties.html" title="interface in jakarta.persistence">Persistence.BeanManagementProperties</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
@@ -728,6 +826,15 @@ in <code>persistence.xml</code>.</div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Properties used to control the integration with Bean Validation.</div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab6"><a href="PersistenceAgent.html" title="annotation interface in jakarta.persistence">PersistenceAgent</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab6">
+<div class="block">Expresses a dependency on a container-managed <a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a>
+and its associated persistence unit.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab6"><a href="PersistenceAgents.html" title="annotation interface in jakarta.persistence">PersistenceAgents</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab6">
+<div class="block">Declares one or more <a href="PersistenceAgent.html" title="annotation interface in jakarta.persistence"><code>PersistenceAgent</code></a> annotations.</div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="PersistenceConfiguration.html" title="class in jakarta.persistence">PersistenceConfiguration</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Represents a configuration of a persistence unit, allowing programmatic
@@ -736,7 +843,7 @@ creation of an <a href="EntityManagerFactory.html" title="interface in jakarta.p
 <div class="col-first even-row-color class-summary class-summary-tab6"><a href="PersistenceContext.html" title="annotation interface in jakarta.persistence">PersistenceContext</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab6">
 <div class="block">Expresses a dependency on a container-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>
- and its associated persistence context.</div>
+and its associated persistence context.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab6"><a href="PersistenceContexts.html" title="annotation interface in jakarta.persistence">PersistenceContexts</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab6">
@@ -881,8 +988,8 @@ only the statement is rolled back.</div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">A reference to a named statement or query declared via the
 <a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+or using <a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
@@ -946,24 +1053,32 @@ SQL query or stored procedure to <a href="EntityResult.html" title="annotation i
 <div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Interface used to control the execution of executable statements.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Statement.Option.html" title="interface in jakarta.persistence">Statement.Option</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">An option influencing execution of a statement.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Declares operations allowing a <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>
 to be obtained when the type of a query or statement has not yet been
 specified.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">A reference to an executable named statement for an operation
 that returns a row count.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab6"><a href="StoredProcedureParameter.html" title="annotation interface in jakarta.persistence">StoredProcedureParameter</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab6">
+<div class="col-first odd-row-color class-summary class-summary-tab6"><a href="StoredProcedureParameter.html" title="annotation interface in jakarta.persistence">StoredProcedureParameter</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab6">
 <div class="block">Declares a parameter of a named stored procedure query.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Interface used to control execution of a stored procedure query.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">An option influencing execution of a stored procedure.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="Subgraph.html" title="interface in jakarta.persistence">Subgraph</a>&lt;T&gt;</div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
@@ -1026,27 +1141,31 @@ returned in a query result tuple.</div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Interface used to control the execution of typed queries.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;R&gt;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">An option influencing execution of a typed query.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;R&gt;</div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">A reference to a typed named query declared via the
 <a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+or using <a href="query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab6"><a href="UniqueConstraint.html" title="annotation interface in jakarta.persistence">UniqueConstraint</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab6">
+<div class="col-first odd-row-color class-summary class-summary-tab6"><a href="UniqueConstraint.html" title="annotation interface in jakarta.persistence">UniqueConstraint</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab6">
 <div class="block">Specifies that a unique constraint is to be included in the
 generated DDL for a primary or secondary table.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab3">
+<div class="col-first even-row-color class-summary class-summary-tab3"><a href="ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab3">
 <div class="block">The validation mode to be used by the provider for the persistence
 unit.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab6"><a href="Version.html" title="annotation interface in jakarta.persistence">Version</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab6">
-<div class="block">Declares the version field or property of an entity class, which
-is used to detect optimistic locking conflicts, ensuring the integrity
+<div class="col-first odd-row-color class-summary class-summary-tab6"><a href="Version.html" title="annotation interface in jakarta.persistence">Version</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab6">
+<div class="block">Declares the version field or property of an entity class, which is
+used to detect optimistic locking conflicts, ensuring the integrity
 of optimistic transactions.</div>
 </div>
 </div>

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -83,6 +83,10 @@ the class is defined by the JVM.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
+<dt>API note:</dt>
+<dd>This is an SPI interface forming part of the Jakarta EE
+container / persistence provider contract. It is not intended for
+direct use by application programs.</dd>
 </dl>
 </div>
 </section>
@@ -126,10 +130,16 @@ the class is defined by the JVM.</div>
 <section class="detail" id="transform(java.lang.ClassLoader,java.lang.String,java.lang.Class,java.security.ProtectionDomain,byte[])">
 <h3>transform</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">byte[]</span>&nbsp;<span class="element-name">transform</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html" title="class or interface in java.lang" class="external-link">ClassLoader</a>&nbsp;loader,
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type">byte[]</span>&nbsp;<span class="element-name">transform</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html" title="class or interface in java.lang" class="external-link">ClassLoader</a>&nbsp;loader,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;className,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;classBeingRedefined,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/security/ProtectionDomain.html" title="class or interface in java.security" class="external-link">ProtectionDomain</a>&nbsp;protectionDomain,
+ @Nonnull
  byte[]&nbsp;classfileBuffer)</span>
           throws <span class="exceptions"><a href="TransformerException.html" title="class in jakarta.persistence.spi">TransformerException</a></span></div>
 <div class="block">Invoked when a class is being loaded or redefined.

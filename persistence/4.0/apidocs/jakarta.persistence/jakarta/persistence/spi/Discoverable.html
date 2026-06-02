@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -80,7 +80,11 @@ package descriptors.
 A persistence provider may define its own custom discoverable
 annotation types. Classes annotated with custom discoverable
 annotations must be included in the list of class names passed
-by the container to the provider.</div>
+by the container to the provider.
+<p>
+Exceptionally, <code>jakarta.data.repository.Repository</code> is
+treated as a discoverable annotation type, even though it is
+not explicitly annotated <code>@Discoverable</code>.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>4.0</dd>

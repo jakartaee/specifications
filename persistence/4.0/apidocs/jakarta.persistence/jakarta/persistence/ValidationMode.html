@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -95,10 +95,26 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">ValidationMode</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a>&gt;</span></div>
 <div class="block">The validation mode to be used by the provider for the persistence
-unit.</div>
+unit.
+<p>
+A <code>ValidationMode</code> may be specified by:
+<ul>
+<li>the <code>&lt;validation-mode&gt;</code> element of <code>persistence.xml</code>,
+<li>the property
+    <a href="Persistence.ValidationProperties.html#VALIDATION_MODE">"jakarta.persistence.validation.mode"</a>, or
+<li><a href="PersistenceConfiguration.html#validationMode(jakarta.persistence.ValidationMode)"><code>PersistenceConfiguration.validationMode(ValidationMode)</code></a>.
+</ul></div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>2.0</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list-long">
+<li><a href="spi/PersistenceUnitInfo.html#getValidationMode()"><code>PersistenceUnitInfo.getValidationMode()</code></a></li>
+<li><a href="PersistenceConfiguration.html#validationMode()"><code>PersistenceConfiguration.validationMode()</code></a></li>
+<li><a href="Persistence.ValidationProperties.html#VALIDATION_MODE"><code>Persistence.ValidationProperties.VALIDATION_MODE</code></a></li>
+</ul>
+</dd>
 </dl>
 </div>
 </section>
@@ -123,7 +139,7 @@ unit.</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#AUTO" class="member-name-link">AUTO</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">If a Bean Validation provider is present in the environment,
+<div class="block">If a Jakarta Validation provider is present in the environment,
 the persistence provider must perform the automatic validation
 of entities.</div>
 </div>
@@ -187,11 +203,15 @@ the order they are declared.</div>
 <h3>AUTO</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a></span>&nbsp;<span class="element-name">AUTO</span></div>
-<div class="block">If a Bean Validation provider is present in the environment,
+<div class="block">If a Jakarta Validation provider is present in the environment,
 the persistence provider must perform the automatic validation
-of entities. If no Bean Validation provider is present in the
+of entities. If no Jakarta Validation provider is present in the
 environment, no lifecycle event validation takes place.
-This is the default behavior.</div>
+This is the default behavior.
+<p>
+To ensure deterministic behavior and prevent silent validation omissions,
+applications should explicitly set the <code>validation-mode</code>
+to <a href="#CALLBACK"><code>CALLBACK</code></a> rather than relying on the default.</div>
 </div>
 </section>
 </li>
@@ -201,7 +221,7 @@ This is the default behavior.</div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a></span>&nbsp;<span class="element-name">CALLBACK</span></div>
 <div class="block">The persistence provider must perform the lifecycle event
-validation. It is an error if there is no Bean Validation
+validation. It is an error if there is no Jakarta Validation
 provider present in the environment.</div>
 </div>
 </section>

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -70,6 +70,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#having(jakarta.persistence.criteria.BooleanExpression...)" tabindex="0">having(BooleanExpression...)</a></li>
 <li><a href="#having(java.util.List)" tabindex="0">having(List)</a></li>
 <li><a href="#distinct(boolean)" tabindex="0">distinct(boolean)</a></li>
+<li><a href="#correlate(jakarta.persistence.criteria.From)" tabindex="0">correlate(From)</a></li>
 <li><a href="#correlate(jakarta.persistence.criteria.Root)" tabindex="0">correlate(Root)</a></li>
 <li><a href="#correlate(jakarta.persistence.criteria.Join)" tabindex="0">correlate(Join)</a></li>
 <li><a href="#correlate(jakarta.persistence.criteria.CollectionJoin)" tabindex="0">correlate(CollectionJoin)</a></li>
@@ -145,123 +146,129 @@ specific to subqueries.
 <div class="block">Create a subquery collection join object correlated to a 
 collection join object of the enclosing query.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X,<wbr>Y&gt;&nbsp;<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a><wbr>&lt;X,<wbr>Y&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.Join)" class="member-name-link">correlate</a><wbr>(<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;X,<wbr>Y&gt;&nbsp;parentJoin)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X,<wbr>Y&gt;&nbsp;<a href="From.html" title="interface in jakarta.persistence.criteria">From</a><wbr>&lt;X,<wbr>Y&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.From)" class="member-name-link">correlate</a><wbr>(<a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;X,<wbr>Y&gt;&nbsp;parent)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Create a subquery root or join correlated to a root or join
+of the enclosing query.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X,<wbr>Y&gt;&nbsp;<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a><wbr>&lt;X,<wbr>Y&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.Join)" class="member-name-link">correlate</a><wbr>(<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;X,<wbr>Y&gt;&nbsp;parentJoin)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a subquery join object correlated to a join object
 of the enclosing query.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X,<wbr>Y&gt;&nbsp;<a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a><wbr>&lt;X,<wbr>Y&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.ListJoin)" class="member-name-link">correlate</a><wbr>(<a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentList)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X,<wbr>Y&gt;&nbsp;<a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a><wbr>&lt;X,<wbr>Y&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.ListJoin)" class="member-name-link">correlate</a><wbr>(<a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentList)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a subquery list join object correlated to a list join
 object of the enclosing query.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X,<wbr>K,<wbr>V&gt;&nbsp;<a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a><wbr>&lt;X,<wbr>K,<wbr>V&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.MapJoin)" class="member-name-link">correlate</a><wbr>(<a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;X,<wbr>K,<wbr>V&gt;&nbsp;parentMap)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X,<wbr>K,<wbr>V&gt;&nbsp;<a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a><wbr>&lt;X,<wbr>K,<wbr>V&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.MapJoin)" class="member-name-link">correlate</a><wbr>(<a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;X,<wbr>K,<wbr>V&gt;&nbsp;parentMap)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a subquery map join object correlated to a map join
 object of the enclosing query.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;Y&gt;&nbsp;<a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a><wbr>&lt;Y&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.Root)" class="member-name-link">correlate</a><wbr>(<a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;Y&gt;&nbsp;parentRoot)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;Y&gt;&nbsp;<a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a><wbr>&lt;Y&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.Root)" class="member-name-link">correlate</a><wbr>(<a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;Y&gt;&nbsp;parentRoot)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a subquery root correlated to a root of the 
 enclosing query.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X,<wbr>Y&gt;&nbsp;<a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a><wbr>&lt;X,<wbr>Y&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.SetJoin)" class="member-name-link">correlate</a><wbr>(<a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentSet)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;X,<wbr>Y&gt;&nbsp;<a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a><wbr>&lt;X,<wbr>Y&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#correlate(jakarta.persistence.criteria.SetJoin)" class="member-name-link">correlate</a><wbr>(<a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentSet)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a subquery set join object correlated to a set join
 object of the enclosing query.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#distinct(boolean)" class="member-name-link">distinct</a><wbr>(boolean&nbsp;distinct)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#distinct(boolean)" class="member-name-link">distinct</a><wbr>(boolean&nbsp;distinct)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Specify whether duplicate query results are eliminated.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#exists()" class="member-name-link">exists</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#exists()" class="member-name-link">exists</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a predicate testing the existence of this subquery result.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CommonAbstractCriteria.html" title="interface in jakarta.persistence.criteria">CommonAbstractCriteria</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getContainingQuery()" class="member-name-link">getContainingQuery</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CommonAbstractCriteria.html" title="interface in jakarta.persistence.criteria">CommonAbstractCriteria</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getContainingQuery()" class="member-name-link">getContainingQuery</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the query of which this is a subquery.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;?,<wbr>?&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCorrelatedJoins()" class="member-name-link">getCorrelatedJoins</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;?,<wbr>?&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCorrelatedJoins()" class="member-name-link">getCorrelatedJoins</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the correlated joins of the subquery.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParent()" class="member-name-link">getParent</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParent()" class="member-name-link">getParent</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the query of which this is a subquery.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSelection()" class="member-name-link">getSelection</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSelection()" class="member-name-link">getSelection</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return the selection expression.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#groupBy(jakarta.persistence.criteria.Expression...)" class="member-name-link">groupBy</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;grouping)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Specify the expressions that are used to form groups over
+the subquery results.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#groupBy(jakarta.persistence.criteria.Expression...)" class="member-name-link">groupBy</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;grouping)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#groupBy(java.util.List)" class="member-name-link">groupBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;&nbsp;grouping)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Specify the expressions that are used to form groups over
 the subquery results.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#groupBy(java.util.List)" class="member-name-link">groupBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;&nbsp;grouping)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">having</a><wbr>(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Specify the expressions that are used to form groups over
-the subquery results.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">having</a><wbr>(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Specify restrictions over the groups of the subquery
 according the conjunction of the specified restriction 
 predicates.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(jakarta.persistence.criteria.Expression)" class="member-name-link">having</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(jakarta.persistence.criteria.Expression)" class="member-name-link">having</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Specify a restriction over the groups of the subquery.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(java.util.List)" class="member-name-link">having</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#having(java.util.List)" class="member-name-link">having</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction
 predicates.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#select(jakarta.persistence.criteria.Expression)" class="member-name-link">select</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;&nbsp;expression)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#select(jakarta.persistence.criteria.Expression)" class="member-name-link">select</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;&nbsp;expression)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Specify the item that is to be returned as the subquery 
 result.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#some()" class="member-name-link">some</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#some()" class="member-name-link">some</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a some expression over the subquery results.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">where</a><wbr>(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(jakarta.persistence.criteria.BooleanExpression...)" class="member-name-link">where</a><wbr>(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Modify the subquery to restrict the result according 
 to the conjunction of the specified restriction predicates.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(jakarta.persistence.criteria.Expression)" class="member-name-link">where</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(jakarta.persistence.criteria.Expression)" class="member-name-link">where</a><wbr>(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Modify the subquery to restrict the result according
 to the specified boolean expression.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.</div>
 </div>
@@ -276,7 +283,7 @@ to the conjunction of the specified restriction predicates.</div>
 <code><a href="CommonAbstractCriteria.html#getParameters()" title="getParameters()">getParameters</a>, <a href="CommonAbstractCriteria.html#getRestriction()" title="getRestriction()">getRestriction</a>, <a href="CommonAbstractCriteria.html#subquery(jakarta.persistence.metamodel.EntityType)" title="subquery(EntityType)">subquery</a>, <a href="CommonAbstractCriteria.html#subquery(java.lang.Class)" title="subquery(Class)">subquery</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Expression">Methods inherited from interface&nbsp;<a href="Expression.html#method-summary" title="interface in jakarta.persistence.criteria">Expression</a></h3>
-<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#coalesce(jakarta.persistence.criteria.Expression)" title="coalesce(Expression)">coalesce</a>, <a href="Expression.html#coalesce(T)" title="coalesce(T)">coalesce</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#nullif(jakarta.persistence.criteria.Expression)" title="nullif(Expression)">nullif</a>, <a href="Expression.html#nullif(T)" title="nullif(T)">nullif</a>, <a href="Expression.html#selectCase()" title="selectCase()">selectCase</a></code></div>
+<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#coalesce(jakarta.persistence.criteria.Expression)" title="coalesce(Expression)">coalesce</a>, <a href="Expression.html#coalesce(T)" title="coalesce(T)">coalesce</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#nullif(jakarta.persistence.criteria.Expression)" title="nullif(Expression)">nullif</a>, <a href="Expression.html#nullif(T)" title="nullif(T)">nullif</a>, <a href="Expression.html#selectCase(java.lang.Class)" title="selectCase(Class)">selectCase</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Selection">Methods inherited from interface&nbsp;<a href="Selection.html#method-summary" title="interface in jakarta.persistence.criteria">Selection</a></h3>
 <code><a href="Selection.html#alias(java.lang.String)" title="alias(String)">alias</a>, <a href="Selection.html#getCompoundSelectionItems()" title="getCompoundSelectionItems()">getCompoundSelectionItems</a>, <a href="Selection.html#isCompoundSelection()" title="isCompoundSelection()">isCompoundSelection</a></code></div>
@@ -298,7 +305,9 @@ to the conjunction of the specified restriction predicates.</div>
 <section class="detail" id="select(jakarta.persistence.criteria.Expression)">
 <h3>select</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">select</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;&nbsp;expression)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">select</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;&nbsp;expression)</span></div>
 <div class="block">Specify the item that is to be returned as the subquery 
 result.
 Replaces the previously specified selection, if any.</div>
@@ -316,7 +325,9 @@ Replaces the previously specified selection, if any.</div>
 <section class="detail" id="where(jakarta.persistence.criteria.Expression)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
 <div class="block">Modify the subquery to restrict the result according
 to the specified boolean expression.
 Replaces the previously added restriction(s), if any.
@@ -337,7 +348,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="where(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Modify the subquery to restrict the result according 
 to the conjunction of the specified restriction predicates.
 Replaces the previously added restriction(s), if any.
@@ -360,7 +373,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="where(java.util.List)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.
 Replaces the previously added restriction(s), if any.
@@ -385,7 +400,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="groupBy(jakarta.persistence.criteria.Expression...)">
 <h3>groupBy</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;grouping)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;grouping)</span></div>
 <div class="block">Specify the expressions that are used to form groups over
 the subquery results.
 Replaces the previous specified grouping expressions, if any.
@@ -408,7 +425,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="groupBy(java.util.List)">
 <h3>groupBy</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;&nbsp;grouping)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;&nbsp;grouping)</span></div>
 <div class="block">Specify the expressions that are used to form groups over
 the subquery results.
 Replaces the previous specified grouping expressions, if any.
@@ -431,7 +450,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="having(jakarta.persistence.criteria.Expression)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
 <div class="block">Specify a restriction over the groups of the subquery.
 Replaces the previous having restriction(s), if any.
 This method only overrides the return type of the 
@@ -451,7 +472,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="having(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(@Nonnull
+ <a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Specify restrictions over the groups of the subquery
 according the conjunction of the specified restriction 
 predicates.
@@ -475,7 +498,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="having(java.util.List)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction
 predicates.
@@ -501,7 +526,8 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="distinct(boolean)">
 <h3>distinct</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">distinct</span><wbr><span class="parameters">(boolean&nbsp;distinct)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">distinct</span><wbr><span class="parameters">(boolean&nbsp;distinct)</span></div>
 <div class="block">Specify whether duplicate query results are eliminated.
 A true value will cause duplicates to be eliminated.
 A false value will cause duplicates to be retained.
@@ -523,13 +549,40 @@ corresponding <code>AbstractQuery</code> method.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="correlate(jakarta.persistence.criteria.From)">
+<h3>correlate</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="return-type"><a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(@Nonnull
+ <a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;X,<wbr>Y&gt;&nbsp;parent)</span></div>
+<div class="block">Create a subquery root or join correlated to a root or join
+of the enclosing query.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="correlate(jakarta.persistence.criteria.From)-type-param-X"><code>X</code> - the source type</span></dd>
+<dd><span id="correlate(jakarta.persistence.criteria.From)-type-param-Y"><code>Y</code> - the target type</span></dd>
+<dt>Parameters:</dt>
+<dd><code>parent</code> - root or join of the containing query</dd>
+<dt>Returns:</dt>
+<dd>subquery from</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="correlate(jakarta.persistence.criteria.Root)">
 <h3>correlate</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(<a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;Y&gt;&nbsp;parentRoot)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(@Nonnull
+ <a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;Y&gt;&nbsp;parentRoot)</span></div>
 <div class="block">Create a subquery root correlated to a root of the 
 enclosing query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="correlate(jakarta.persistence.criteria.Root)-type-param-Y"><code>Y</code> - the entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parentRoot</code> - a root of the containing query</dd>
 <dt>Returns:</dt>
@@ -542,10 +595,15 @@ enclosing query.</div>
 <section class="detail" id="correlate(jakarta.persistence.criteria.Join)">
 <h3>correlate</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;X,<wbr>Y&gt;&nbsp;parentJoin)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(@Nonnull
+ <a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;X,<wbr>Y&gt;&nbsp;parentJoin)</span></div>
 <div class="block">Create a subquery join object correlated to a join object
 of the enclosing query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="correlate(jakarta.persistence.criteria.Join)-type-param-X"><code>X</code> - the source type</span></dd>
+<dd><span id="correlate(jakarta.persistence.criteria.Join)-type-param-Y"><code>Y</code> - the target type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parentJoin</code> - join object of the containing query</dd>
 <dt>Returns:</dt>
@@ -558,10 +616,15 @@ of the enclosing query.</div>
 <section class="detail" id="correlate(jakarta.persistence.criteria.CollectionJoin)">
 <h3>correlate</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(<a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentCollection)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(@Nonnull
+ <a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentCollection)</span></div>
 <div class="block">Create a subquery collection join object correlated to a 
 collection join object of the enclosing query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="correlate(jakarta.persistence.criteria.CollectionJoin)-type-param-X"><code>X</code> - the source type</span></dd>
+<dd><span id="correlate(jakarta.persistence.criteria.CollectionJoin)-type-param-Y"><code>Y</code> - the element type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parentCollection</code> - join object of the containing query</dd>
 <dt>Returns:</dt>
@@ -574,10 +637,15 @@ collection join object of the enclosing query.</div>
 <section class="detail" id="correlate(jakarta.persistence.criteria.SetJoin)">
 <h3>correlate</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(<a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentSet)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(@Nonnull
+ <a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentSet)</span></div>
 <div class="block">Create a subquery set join object correlated to a set join
 object of the enclosing query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="correlate(jakarta.persistence.criteria.SetJoin)-type-param-X"><code>X</code> - the source type</span></dd>
+<dd><span id="correlate(jakarta.persistence.criteria.SetJoin)-type-param-Y"><code>Y</code> - the element type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parentSet</code> - join object of the containing query</dd>
 <dt>Returns:</dt>
@@ -590,10 +658,15 @@ object of the enclosing query.</div>
 <section class="detail" id="correlate(jakarta.persistence.criteria.ListJoin)">
 <h3>correlate</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(<a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentList)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;X,<wbr>Y&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(@Nonnull
+ <a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;X,<wbr>Y&gt;&nbsp;parentList)</span></div>
 <div class="block">Create a subquery list join object correlated to a list join
 object of the enclosing query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="correlate(jakarta.persistence.criteria.ListJoin)-type-param-X"><code>X</code> - the source type</span></dd>
+<dd><span id="correlate(jakarta.persistence.criteria.ListJoin)-type-param-Y"><code>Y</code> - the element type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parentList</code> - join object of the containing query</dd>
 <dt>Returns:</dt>
@@ -606,10 +679,16 @@ object of the enclosing query.</div>
 <section class="detail" id="correlate(jakarta.persistence.criteria.MapJoin)">
 <h3>correlate</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;X,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(<a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;X,<wbr>K,<wbr>V&gt;&nbsp;parentMap)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;X,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">correlate</span><wbr><span class="parameters">(@Nonnull
+ <a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;X,<wbr>K,<wbr>V&gt;&nbsp;parentMap)</span></div>
 <div class="block">Create a subquery map join object correlated to a map join
 object of the enclosing query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="correlate(jakarta.persistence.criteria.MapJoin)-type-param-X"><code>X</code> - the source type</span></dd>
+<dd><span id="correlate(jakarta.persistence.criteria.MapJoin)-type-param-K"><code>K</code> - the key type</span></dd>
+<dd><span id="correlate(jakarta.persistence.criteria.MapJoin)-type-param-V"><code>V</code> - the value type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parentMap</code> - join object of the containing query</dd>
 <dt>Returns:</dt>
@@ -622,7 +701,8 @@ object of the enclosing query.</div>
 <section class="detail" id="getParent()">
 <h3>getParent</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getParent</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getParent</span>()</div>
 <div class="block">Return the query of which this is a subquery.
 This must be a CriteriaQuery or a Subquery.</div>
 <dl class="notes">
@@ -636,7 +716,8 @@ This must be a CriteriaQuery or a Subquery.</div>
 <section class="detail" id="getContainingQuery()">
 <h3>getContainingQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CommonAbstractCriteria.html" title="interface in jakarta.persistence.criteria">CommonAbstractCriteria</a></span>&nbsp;<span class="element-name">getContainingQuery</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CommonAbstractCriteria.html" title="interface in jakarta.persistence.criteria">CommonAbstractCriteria</a></span>&nbsp;<span class="element-name">getContainingQuery</span>()</div>
 <div class="block">Return the query of which this is a subquery.
 This may be a CriteriaQuery, CriteriaUpdate, CriteriaDelete,
 or a Subquery.</div>
@@ -653,7 +734,8 @@ or a Subquery.</div>
 <section class="detail" id="getSelection()">
 <h3>getSelection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">getSelection</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">getSelection</span>()</div>
 <div class="block">Return the selection expression.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -668,7 +750,8 @@ or a Subquery.</div>
 <section class="detail" id="getCorrelatedJoins()">
 <h3>getCorrelatedJoins</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;?,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getCorrelatedJoins</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;?,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getCorrelatedJoins</span>()</div>
 <div class="block">Return the correlated joins of the subquery.
 Returns empty set if the subquery has no correlated
 joins.
@@ -684,7 +767,8 @@ Modifications to the set do not affect the query.</div>
 <section class="detail" id="exists()">
 <h3>exists</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">exists</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">exists</span>()</div>
 <div class="block">Create a predicate testing the existence of this subquery result.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -705,7 +789,8 @@ Modifications to the set do not affect the query.</div>
 <section class="detail" id="all()">
 <h3>all</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">all</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">all</span>()</div>
 <div class="block">Create an all expression over the subquery results.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -726,7 +811,8 @@ Modifications to the set do not affect the query.</div>
 <section class="detail" id="some()">
 <h3>some</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">some</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">some</span>()</div>
 <div class="block">Create a some expression over the subquery results.
 This expression is equivalent to an <code>any</code> expression.</div>
 <dl class="notes">
@@ -748,7 +834,8 @@ This expression is equivalent to an <code>any</code> expression.</div>
 <section class="detail" id="any()">
 <h3>any</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">any</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="#type-param-T" title="type parameter in Subquery">T</a>&gt;</span>&nbsp;<span class="element-name">any</span>()</div>
 <div class="block">Create an any expression over the subquery results.
 This expression is equivalent to a <code>some</code> expression.</div>
 <dl class="notes">

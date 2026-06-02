@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -83,13 +83,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="LockOption.html" title="interface in jakarta.persistence">LockOption</a>, <a href="RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a></code></dd>
+<dd><code><a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="LockOption.html" title="interface in jakarta.persistence">LockOption</a>, <a href="RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a>, <a href="Statement.Option.html" title="interface in jakarta.persistence">Statement.Option</a>, <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a>, <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Timeout</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a>, <a href="LockOption.html" title="interface in jakarta.persistence">LockOption</a></span></div>
+implements <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>, <a href="RefreshOption.html" title="interface in jakarta.persistence">RefreshOption</a>, <a href="LockOption.html" title="interface in jakarta.persistence">LockOption</a>, <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a>, <a href="Statement.Option.html" title="interface in jakarta.persistence">Statement.Option</a>, <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a></span></div>
 <div class="block">Specifies a timeout for a database request. This option is
 always a hint, and may be ignored by the provider.</div>
 <dl class="notes">
@@ -166,7 +166,8 @@ always a hint, and may be ignored by the provider.</div>
 <section class="detail" id="s(int)">
 <h3>s</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></span>&nbsp;<span class="element-name">s</span><wbr><span class="parameters">(int&nbsp;seconds)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></span>&nbsp;<span class="element-name">s</span><wbr><span class="parameters">(int&nbsp;seconds)</span></div>
 <div class="block">Specify a timeout in seconds.
 (Abbreviation of <a href="#seconds(int)"><code>seconds(int)</code></a>.)</div>
 </div>
@@ -176,7 +177,8 @@ always a hint, and may be ignored by the provider.</div>
 <section class="detail" id="ms(int)">
 <h3>ms</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></span>&nbsp;<span class="element-name">ms</span><wbr><span class="parameters">(int&nbsp;milliseconds)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></span>&nbsp;<span class="element-name">ms</span><wbr><span class="parameters">(int&nbsp;milliseconds)</span></div>
 <div class="block">Specify a timeout in milliseconds.
 (Abbreviation of <a href="#milliseconds(int)"><code>milliseconds(int)</code></a>.)</div>
 </div>
@@ -186,7 +188,8 @@ always a hint, and may be ignored by the provider.</div>
 <section class="detail" id="seconds(int)">
 <h3>seconds</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></span>&nbsp;<span class="element-name">seconds</span><wbr><span class="parameters">(int&nbsp;seconds)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></span>&nbsp;<span class="element-name">seconds</span><wbr><span class="parameters">(int&nbsp;seconds)</span></div>
 <div class="block">Specify a timeout in seconds.</div>
 </div>
 </section>
@@ -195,7 +198,8 @@ always a hint, and may be ignored by the provider.</div>
 <section class="detail" id="milliseconds(int)">
 <h3>milliseconds</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></span>&nbsp;<span class="element-name">milliseconds</span><wbr><span class="parameters">(int&nbsp;milliseconds)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Timeout.html" title="class in jakarta.persistence">Timeout</a></span>&nbsp;<span class="element-name">milliseconds</span><wbr><span class="parameters">(int&nbsp;milliseconds)</span></div>
 <div class="block">Specify a timeout in milliseconds.</div>
 </div>
 </section>

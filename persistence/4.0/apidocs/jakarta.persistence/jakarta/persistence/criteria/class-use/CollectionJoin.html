@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,7 +63,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence.criteria">jakarta.persistence.criteria</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </div>
 </div>
 <section class="class-uses">
@@ -119,6 +119,17 @@ specified ON condition and return the join object.</div>
 <div class="col-last even-row-color">
 <div class="block">Modify the join to restrict the result according to the
 specified ON condition and return the join object.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a><wbr>&lt;<a href="../CollectionJoin.html#type-param-Z" title="type parameter in CollectionJoin">Z</a>,<wbr><a href="../CollectionJoin.html#type-param-E" title="type parameter in CollectionJoin">E</a>&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">CollectionJoin.</span><code><a href="../CollectionJoin.html#on(java.util.List)" class="member-name-link">on</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Modify the join to restrict the result according to the
+specified ON condition and return the join object.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;T extends <a href="../CollectionJoin.html#type-param-E" title="type parameter in CollectionJoin">E</a>&gt;<br><a href="../CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a><wbr>&lt;<a href="../CollectionJoin.html#type-param-Z" title="type parameter in CollectionJoin">Z</a>,<wbr>T&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CollectionJoin.</span><code><a href="../CollectionJoin.html#treat(java.lang.Class)" class="member-name-link">treat</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Downcast the element type to the given type.</div>
 </div>
 <div class="col-first odd-row-color"><code>&lt;X, T, E extends T&gt;<br><a href="../CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a><wbr>&lt;X,<wbr>E&gt;</code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#treat(jakarta.persistence.criteria.CollectionJoin,java.lang.Class)" class="member-name-link">treat</a><wbr>(<a href="../CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;X,<wbr>T&gt;&nbsp;join,

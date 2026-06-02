@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,7 +63,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence.spi">jakarta.persistence.spi</a></div>
 <div class="col-last even-row-color">
-<div class="block">SPI for Jakarta Persistence providers</div>
+<div class="block">Defines an SPI for integrating with the persistence provider
+and with the Jakarta EE platform.</div>
 </div>
 </div>
 <section class="class-uses">
@@ -78,12 +79,12 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="../ClassTransformer.html" title="interface in jakarta.persistence.spi">ClassTransformer</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">PersistenceProvider.</span><code><a href="../PersistenceProvider.html#getClassTransformer(jakarta.persistence.spi.PersistenceUnitInfo,java.util.Map)" class="member-name-link">getClassTransformer</a><wbr>(<a href="../PersistenceUnitInfo.html" title="interface in jakarta.persistence.spi">PersistenceUnitInfo</a>&nbsp;info,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;map)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;properties)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Obtain a transformer supplied by the provider that is called
-for every new class definition or class redefinition that gets
-loaded by the loader returned by the
-<a href="../PersistenceUnitInfo.html#getClassLoader()"><code>PersistenceUnitInfo.getClassLoader()</code></a> method.</div>
+<div class="block">Obtain a provider-supplied class transformer that is called
+for every new class definition or class redefinition performed
+by the class loader returned by
+<a href="../PersistenceUnitInfo.html#getClassLoader()"><code>PersistenceUnitInfo.getClassLoader()</code></a>.</div>
 </div>
 </div>
 <div class="caption"><span>Methods in <a href="../package-summary.html">jakarta.persistence.spi</a> with parameters of type <a href="../ClassTransformer.html" title="interface in jakarta.persistence.spi">ClassTransformer</a></span></div>

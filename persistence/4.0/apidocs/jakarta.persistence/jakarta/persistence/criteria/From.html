@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -87,6 +87,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#joinSet(java.lang.String,jakarta.persistence.criteria.JoinType)" tabindex="0">joinSet(String, JoinType)</a></li>
 <li><a href="#joinList(java.lang.String,jakarta.persistence.criteria.JoinType)" tabindex="0">joinList(String, JoinType)</a></li>
 <li><a href="#joinMap(java.lang.String,jakarta.persistence.criteria.JoinType)" tabindex="0">joinMap(String, JoinType)</a></li>
+<li><a href="#treat(java.lang.Class)" tabindex="0">treat(Class)</a></li>
 </ol>
 </li>
 </ol>
@@ -144,7 +145,7 @@ embeddables, and collections belonging to the type, and for
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the parent <a href="From.html" title="interface in jakarta.persistence.criteria"><code>From</code></a> object from which the correlated
 <a href="From.html" title="interface in jakarta.persistence.criteria"><code>From</code></a> object has been obtained through correlation (use
-of <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Subquery.correlate(Root)</code></a> method).</div>
+of <a href="Subquery.html#correlate(jakarta.persistence.criteria.From)"><code>Subquery.correlate(From)</code></a> method).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>?&gt;&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getJoins()" class="member-name-link">getJoins</a>()</code></div>
@@ -155,7 +156,7 @@ of <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Su
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isCorrelated()" class="member-name-link">isCorrelated</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Whether the <a href="From.html" title="interface in jakarta.persistence.criteria"><code>From</code></a> object has been obtained as a result
-of correlation (use of a <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Subquery.correlate(Root)</code></a> method).</div>
+of correlation (use of a <a href="Subquery.html#correlate(jakarta.persistence.criteria.From)"><code>Subquery.correlate(From)</code></a> method).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;Y&gt;&nbsp;<a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a><wbr>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#join(jakarta.persistence.metamodel.CollectionAttribute)" class="member-name-link">join</a><wbr>(<a href="../metamodel/CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;collection)</code></div>
@@ -308,12 +309,17 @@ attribute.</div>
 <div class="block">Create a join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>-valued attribute
 using the given join type.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T extends <a href="#type-param-X" title="type parameter in From">X</a>&gt;<br><a href="From.html" title="interface in jakarta.persistence.criteria">From</a><wbr>&lt;?,<wbr>T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#treat(java.lang.Class)" class="member-name-link">treat</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Downcast the bound type to the given type.</div>
+</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.Expression">Methods inherited from interface&nbsp;<a href="Expression.html#method-summary" title="interface in jakarta.persistence.criteria">Expression</a></h3>
-<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#coalesce(jakarta.persistence.criteria.Expression)" title="coalesce(Expression)">coalesce</a>, <a href="Expression.html#coalesce(T)" title="coalesce(X)">coalesce</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#nullif(jakarta.persistence.criteria.Expression)" title="nullif(Expression)">nullif</a>, <a href="Expression.html#nullif(T)" title="nullif(X)">nullif</a>, <a href="Expression.html#selectCase()" title="selectCase()">selectCase</a></code></div>
+<code><a href="Expression.html#as(java.lang.Class)" title="as(Class)">as</a>, <a href="Expression.html#cast(java.lang.Class)" title="cast(Class)">cast</a>, <a href="Expression.html#coalesce(jakarta.persistence.criteria.Expression)" title="coalesce(Expression)">coalesce</a>, <a href="Expression.html#coalesce(T)" title="coalesce(X)">coalesce</a>, <a href="Expression.html#count()" title="count()">count</a>, <a href="Expression.html#countDistinct()" title="countDistinct()">countDistinct</a>, <a href="Expression.html#equalTo(jakarta.persistence.criteria.Expression)" title="equalTo(Expression)">equalTo</a>, <a href="Expression.html#equalTo(java.lang.Object)" title="equalTo(Object)">equalTo</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression...)" title="in(Expression...)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Expression)" title="in(Expression)">in</a>, <a href="Expression.html#in(jakarta.persistence.criteria.Subquery)" title="in(Subquery)">in</a>, <a href="Expression.html#in(java.lang.Object...)" title="in(Object...)">in</a>, <a href="Expression.html#in(java.util.Collection)" title="in(Collection)">in</a>, <a href="Expression.html#isMember(jakarta.persistence.criteria.Expression)" title="isMember(Expression)">isMember</a>, <a href="Expression.html#isNotMember(jakarta.persistence.criteria.Expression)" title="isNotMember(Expression)">isNotMember</a>, <a href="Expression.html#isNotNull()" title="isNotNull()">isNotNull</a>, <a href="Expression.html#isNull()" title="isNull()">isNull</a>, <a href="Expression.html#notEqualTo(jakarta.persistence.criteria.Expression)" title="notEqualTo(Expression)">notEqualTo</a>, <a href="Expression.html#notEqualTo(java.lang.Object)" title="notEqualTo(Object)">notEqualTo</a>, <a href="Expression.html#nullif(jakarta.persistence.criteria.Expression)" title="nullif(Expression)">nullif</a>, <a href="Expression.html#nullif(T)" title="nullif(X)">nullif</a>, <a href="Expression.html#selectCase(java.lang.Class)" title="selectCase(Class)">selectCase</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jakarta.persistence.criteria.FetchParent">Methods inherited from interface&nbsp;<a href="FetchParent.html#method-summary" title="interface in jakarta.persistence.criteria">FetchParent</a></h3>
 <code><a href="FetchParent.html#fetch(jakarta.persistence.metamodel.PluralAttribute)" title="fetch(PluralAttribute)">fetch</a>, <a href="FetchParent.html#fetch(jakarta.persistence.metamodel.PluralAttribute,jakarta.persistence.criteria.JoinType)" title="fetch(PluralAttribute, JoinType)">fetch</a>, <a href="FetchParent.html#fetch(jakarta.persistence.metamodel.SingularAttribute)" title="fetch(SingularAttribute)">fetch</a>, <a href="FetchParent.html#fetch(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.JoinType)" title="fetch(SingularAttribute, JoinType)">fetch</a>, <a href="FetchParent.html#fetch(java.lang.String)" title="fetch(String)">fetch</a>, <a href="FetchParent.html#fetch(java.lang.String,jakarta.persistence.criteria.JoinType)" title="fetch(String, JoinType)">fetch</a>, <a href="FetchParent.html#getFetches()" title="getFetches()">getFetches</a></code></div>
@@ -341,7 +347,8 @@ using the given join type.</div>
 <section class="detail" id="getJoins()">
 <h3>getJoins</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getJoins</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getJoins</span>()</div>
 <div class="block">Return the joins that have been made from this bound type.
 Returns empty set if no joins have been made from this
 bound type.
@@ -359,7 +366,7 @@ Modifications to the set do not affect the query.</div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isCorrelated</span>()</div>
 <div class="block">Whether the <a href="From.html" title="interface in jakarta.persistence.criteria"><code>From</code></a> object has been obtained as a result
-of correlation (use of a <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Subquery.correlate(Root)</code></a> method).</div>
+of correlation (use of a <a href="Subquery.html#correlate(jakarta.persistence.criteria.From)"><code>Subquery.correlate(From)</code></a> method).</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>boolean indicating whether the object has been
@@ -372,10 +379,11 @@ of correlation (use of a <a href="Subquery.html#correlate(jakarta.persistence.cr
 <section class="detail" id="getCorrelationParent()">
 <h3>getCorrelationParent</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;<a href="#type-param-Z" title="type parameter in From">Z</a>,<wbr><a href="#type-param-X" title="type parameter in From">X</a>&gt;</span>&nbsp;<span class="element-name">getCorrelationParent</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;<a href="#type-param-Z" title="type parameter in From">Z</a>,<wbr><a href="#type-param-X" title="type parameter in From">X</a>&gt;</span>&nbsp;<span class="element-name">getCorrelationParent</span>()</div>
 <div class="block">Returns the parent <a href="From.html" title="interface in jakarta.persistence.criteria"><code>From</code></a> object from which the correlated
 <a href="From.html" title="interface in jakarta.persistence.criteria"><code>From</code></a> object has been obtained through correlation (use
-of <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Subquery.correlate(Root)</code></a> method).</div>
+of <a href="Subquery.html#correlate(jakarta.persistence.criteria.From)"><code>Subquery.correlate(From)</code></a> method).</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the parent of the correlated <code>From</code> object</dd>
@@ -390,9 +398,13 @@ of <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Su
 <section class="detail" id="join(java.lang.Class)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;entityClass)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;entityClass)</span></div>
 <div class="block">Create and add an inner join to the given entity.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(java.lang.Class)-type-param-Y"><code>Y</code> - the target entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - the target entity class</dd>
 <dt>Returns:</dt>
@@ -407,10 +419,15 @@ of <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Su
 <section class="detail" id="join(java.lang.Class,jakarta.persistence.criteria.JoinType)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;entityClass,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;Y&gt;&nbsp;entityClass,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;joinType)</span></div>
 <div class="block">Create and add a join to the given entity.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(java.lang.Class,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the target entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - the target entity class</dd>
 <dd><code>joinType</code> - join type</dd>
@@ -426,9 +443,13 @@ of <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Su
 <section class="detail" id="join(jakarta.persistence.metamodel.EntityType)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;Y&gt;&nbsp;entity)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;Y&gt;&nbsp;entity)</span></div>
 <div class="block">Create and add an inner join to the given entity.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.EntityType)-type-param-Y"><code>Y</code> - the target entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entity</code> - metamodel entity representing the join target</dd>
 <dt>Returns:</dt>
@@ -443,10 +464,15 @@ of <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Su
 <section class="detail" id="join(jakarta.persistence.metamodel.EntityType,jakarta.persistence.criteria.JoinType)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;Y&gt;&nbsp;entity,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;Y&gt;&nbsp;entity,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;joinType)</span></div>
 <div class="block">Create and add a join to the given entity.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.EntityType,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the target entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entity</code> - metamodel entity representing the join target</dd>
 <dd><code>joinType</code> - join type</dd>
@@ -462,10 +488,14 @@ of <a href="Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Su
 <section class="detail" id="join(jakarta.persistence.metamodel.SingularAttribute)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;attribute)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;attribute)</span></div>
 <div class="block">Create an inner join to the specified single-valued 
 attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.SingularAttribute)-type-param-Y"><code>Y</code> - the type of the joined attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>attribute</code> - target of the join</dd>
 <dt>Returns:</dt>
@@ -478,11 +508,16 @@ attribute.</div>
 <section class="detail" id="join(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.JoinType)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;attribute,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;attribute,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified single-valued attribute 
 using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the type of the joined attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>attribute</code> - target of the join</dd>
 <dd><code>jt</code> - join type</dd>
@@ -496,10 +531,14 @@ using the given join type.</div>
 <section class="detail" id="join(jakarta.persistence.metamodel.CollectionAttribute)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;collection)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;collection)</span></div>
 <div class="block">Create an inner join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link"><code>Collection</code></a>-valued
 attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.CollectionAttribute)-type-param-Y"><code>Y</code> - the element type of the joined collection</span></dd>
 <dt>Parameters:</dt>
 <dd><code>collection</code> - target of the join</dd>
 <dt>Returns:</dt>
@@ -512,10 +551,14 @@ attribute.</div>
 <section class="detail" id="join(jakarta.persistence.metamodel.SetAttribute)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;set)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;set)</span></div>
 <div class="block">Create an inner join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>-valued
 attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.SetAttribute)-type-param-Y"><code>Y</code> - the element type of the joined set</span></dd>
 <dt>Parameters:</dt>
 <dd><code>set</code> - target of the join</dd>
 <dt>Returns:</dt>
@@ -528,10 +571,14 @@ attribute.</div>
 <section class="detail" id="join(jakarta.persistence.metamodel.ListAttribute)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;list)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;list)</span></div>
 <div class="block">Create an inner join to the specified
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List</code></a>-valued attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.ListAttribute)-type-param-Y"><code>Y</code> - the element type of the joined list</span></dd>
 <dt>Parameters:</dt>
 <dd><code>list</code> - target of the join</dd>
 <dt>Returns:</dt>
@@ -544,10 +591,15 @@ attribute.</div>
 <section class="detail" id="join(jakarta.persistence.metamodel.MapAttribute)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, K, V&gt;&nbsp;map)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, K, V&gt;&nbsp;map)</span></div>
 <div class="block">Create an inner join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>-valued
 attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.MapAttribute)-type-param-K"><code>K</code> - the key type of the joined map</span></dd>
+<dd><span id="join(jakarta.persistence.metamodel.MapAttribute)-type-param-V"><code>V</code> - the value type of the joined map</span></dd>
 <dt>Parameters:</dt>
 <dd><code>map</code> - target of the join</dd>
 <dt>Returns:</dt>
@@ -560,11 +612,16 @@ attribute.</div>
 <section class="detail" id="join(jakarta.persistence.metamodel.CollectionAttribute,jakarta.persistence.criteria.JoinType)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;collection,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/CollectionAttribute.html" title="interface in jakarta.persistence.metamodel">CollectionAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;collection,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link"><code>Collection</code></a>-valued
 attribute using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.CollectionAttribute,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the element type of the joined collection</span></dd>
 <dt>Parameters:</dt>
 <dd><code>collection</code> - target of the join</dd>
 <dd><code>jt</code> - join type</dd>
@@ -578,11 +635,16 @@ attribute using the given join type.</div>
 <section class="detail" id="join(jakarta.persistence.metamodel.SetAttribute,jakarta.persistence.criteria.JoinType)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;set,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/SetAttribute.html" title="interface in jakarta.persistence.metamodel">SetAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;set,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>-valued attribute
 using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.SetAttribute,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the element type of the joined set</span></dd>
 <dt>Parameters:</dt>
 <dd><code>set</code> - target of the join</dd>
 <dd><code>jt</code> - join type</dd>
@@ -596,11 +658,16 @@ using the given join type.</div>
 <section class="detail" id="join(jakarta.persistence.metamodel.ListAttribute,jakarta.persistence.criteria.JoinType)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;list,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/ListAttribute.html" title="interface in jakarta.persistence.metamodel">ListAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, Y&gt;&nbsp;list,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List</code></a>-valued attribute
 using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.ListAttribute,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the element type of the joined list</span></dd>
 <dt>Parameters:</dt>
 <dd><code>list</code> - target of the join</dd>
 <dd><code>jt</code> - join type</dd>
@@ -614,11 +681,17 @@ using the given join type.</div>
 <section class="detail" id="join(jakarta.persistence.metamodel.MapAttribute,jakarta.persistence.criteria.JoinType)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, K, V&gt;&nbsp;map,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/MapAttribute.html" title="interface in jakarta.persistence.metamodel">MapAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in From">X</a>, K, V&gt;&nbsp;map,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>-valued attribute
 using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(jakarta.persistence.metamodel.MapAttribute,jakarta.persistence.criteria.JoinType)-type-param-K"><code>K</code> - the key type of the joined map</span></dd>
+<dd><span id="join(jakarta.persistence.metamodel.MapAttribute,jakarta.persistence.criteria.JoinType)-type-param-V"><code>V</code> - the value type of the joined map</span></dd>
 <dt>Parameters:</dt>
 <dd><code>map</code> - target of the join</dd>
 <dd><code>jt</code> - join type</dd>
@@ -632,17 +705,26 @@ using the given join type.</div>
 <section class="detail" id="join(java.lang.String)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Create an inner join to the specified attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(java.lang.String)-type-param-Y"><code>Y</code> - the type of the joined attribute</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-                      target of the join</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.SingularAttribute)"><code>join(SingularAttribute)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -651,18 +733,27 @@ using the given join type.</div>
 <section class="detail" id="joinCollection(java.lang.String)">
 <h3>joinCollection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinCollection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinCollection</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Create an inner join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link"><code>Collection</code></a>-valued
 attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="joinCollection(java.lang.String)-type-param-Y"><code>Y</code> - the element type of the joined collection</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-                      target of the join</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.CollectionAttribute)"><code>join(CollectionAttribute)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -671,18 +762,27 @@ attribute.</div>
 <section class="detail" id="joinSet(java.lang.String)">
 <h3>joinSet</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinSet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinSet</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Create an inner join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>-valued
 attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="joinSet(java.lang.String)-type-param-Y"><code>Y</code> - the element type of the joined set</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-                      target of the join</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.SetAttribute)"><code>join(SetAttribute)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -691,18 +791,27 @@ attribute.</div>
 <section class="detail" id="joinList(java.lang.String)">
 <h3>joinList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinList</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinList</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Create an inner join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List</code></a>-valued
 attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="joinList(java.lang.String)-type-param-Y"><code>Y</code> - the element type of the joined list</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-                      target of the join</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.ListAttribute)"><code>join(ListAttribute)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -711,18 +820,28 @@ attribute.</div>
 <section class="detail" id="joinMap(java.lang.String)">
 <h3>joinMap</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">joinMap</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">joinMap</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Create an inner join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>-valued
 attribute.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="joinMap(java.lang.String)-type-param-K"><code>K</code> - the key type of the joined map</span></dd>
+<dd><span id="joinMap(java.lang.String)-type-param-V"><code>V</code> - the value type of the joined map</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-                      target of the join</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.MapAttribute)"><code>join(MapAttribute)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -731,20 +850,30 @@ attribute.</div>
 <section class="detail" id="join(java.lang.String,jakarta.persistence.criteria.JoinType)">
 <h3>join</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">join</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified attribute using the given
 join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="join(java.lang.String,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the type of the joined attribute</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-                      target of the join</dd>
-<dd><code>jt</code> - join type</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
+<dd><code>jt</code> - the join type</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.JoinType)"><code>join(SingularAttribute, JoinType)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -753,20 +882,30 @@ join type.</div>
 <section class="detail" id="joinCollection(java.lang.String,jakarta.persistence.criteria.JoinType)">
 <h3>joinCollection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinCollection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinCollection</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link"><code>Collection</code></a>-valued
 attribute using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="joinCollection(java.lang.String,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the element type of the joined collection</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the 
-                      target of the join</dd>
-<dd><code>jt</code> - join type</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
+<dd><code>jt</code> - the join type</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.CollectionAttribute,jakarta.persistence.criteria.JoinType)"><code>join(CollectionAttribute, JoinType)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -775,20 +914,30 @@ attribute using the given join type.</div>
 <section class="detail" id="joinSet(java.lang.String,jakarta.persistence.criteria.JoinType)">
 <h3>joinSet</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinSet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinSet</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>-valued attribute
 using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="joinSet(java.lang.String,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the element type of the joined set</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-                      target of the join</dd>
-<dd><code>jt</code> - join type</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
+<dd><code>jt</code> - the join type</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.SetAttribute,jakarta.persistence.criteria.JoinType)"><code>join(SetAttribute, JoinType)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -797,20 +946,30 @@ using the given join type.</div>
 <section class="detail" id="joinList(java.lang.String,jakarta.persistence.criteria.JoinType)">
 <h3>joinList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinList</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">joinList</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List</code></a>-valued attribute
 using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="joinList(java.lang.String,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the element type of the joined list</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-                      target of the join</dd>
-<dd><code>jt</code> - join type</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
+<dd><code>jt</code> - the join type</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.ListAttribute,jakarta.persistence.criteria.JoinType)"><code>join(ListAttribute, JoinType)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -819,20 +978,54 @@ using the given join type.</div>
 <section class="detail" id="joinMap(java.lang.String,jakarta.persistence.criteria.JoinType)">
 <h3>joinMap</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">joinMap</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;K,<wbr>V&gt;</span>&nbsp;<span class="return-type"><a href="MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a>&lt;<a href="#type-param-X" title="type parameter in From">X</a>,<wbr>K,<wbr>V&gt;</span>&nbsp;<span class="element-name">joinMap</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a join to the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a>-valued attribute
 using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="joinMap(java.lang.String,jakarta.persistence.criteria.JoinType)-type-param-K"><code>K</code> - the key type of the joined map</span></dd>
+<dd><span id="joinMap(java.lang.String,jakarta.persistence.criteria.JoinType)-type-param-V"><code>V</code> - the value type of the joined map</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-                      target of the join</dd>
-<dd><code>jt</code> - join type</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+                     target of the join</dd>
+<dd><code>jt</code> - the join type</dd>
 <dt>Returns:</dt>
 <dd>the resulting join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-       name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#join(jakarta.persistence.metamodel.MapAttribute,jakarta.persistence.criteria.JoinType)"><code>join(MapAttribute, JoinType)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="treat(java.lang.Class)">
+<h3>treat</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T extends <a href="#type-param-X" title="type parameter in From">X</a>&gt;</span>&nbsp;<span class="return-type"><a href="From.html" title="interface in jakarta.persistence.criteria">From</a>&lt;?,<wbr>T&gt;</span>&nbsp;<span class="element-name">treat</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</span></div>
+<div class="block">Downcast the bound type to the given type.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Path.html#treat(java.lang.Class)">treat</a></code>&nbsp;in interface&nbsp;<code><a href="Path.html" title="interface in jakarta.persistence.criteria">Path</a>&lt;<a href="#type-param-Z" title="type parameter in From">Z</a>&gt;</code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="treat(java.lang.Class)-type-param-T"><code>T</code> - the subtype of the bound type</span></dd>
+<dt>Parameters:</dt>
+<dd><code>type</code> - a subtype of the bound type</dd>
+<dt>Returns:</dt>
+<dd>this root or join downcast to the given type</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
 </dl>
 </div>
 </section>

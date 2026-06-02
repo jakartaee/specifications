@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -150,9 +150,13 @@ specified.</div>
 <section class="detail" id="subquery(java.lang.Class)">
 <h3>subquery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;U&gt;</span>&nbsp;<span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;U&gt;</span>&nbsp;<span class="element-name">subquery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;U&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;U&gt;</span>&nbsp;<span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;U&gt;</span>&nbsp;<span class="element-name">subquery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;U&gt;&nbsp;type)</span></div>
 <div class="block">Create a subquery of the query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="subquery(java.lang.Class)-type-param-U"><code>U</code> - the subquery result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>type</code> - the subquery result type</dd>
 <dt>Returns:</dt>
@@ -165,9 +169,13 @@ specified.</div>
 <section class="detail" id="subquery(jakarta.persistence.metamodel.EntityType)">
 <h3>subquery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;U&gt;</span>&nbsp;<span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;U&gt;</span>&nbsp;<span class="element-name">subquery</span><wbr><span class="parameters">(<a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;U&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;U&gt;</span>&nbsp;<span class="return-type"><a href="Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a>&lt;U&gt;</span>&nbsp;<span class="element-name">subquery</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;U&gt;&nbsp;type)</span></div>
 <div class="block">Create a subquery of the query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="subquery(jakarta.persistence.metamodel.EntityType)-type-param-U"><code>U</code> - the subquery result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>type</code> - the subquery result type</dd>
 <dt>Returns:</dt>
@@ -180,7 +188,8 @@ specified.</div>
 <section class="detail" id="getRestriction()">
 <h3>getRestriction</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">getRestriction</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">getRestriction</span>()</div>
 <div class="block">Return the predicate that corresponds to the where clause
 restriction(s), or null if no restrictions have been
 specified.</div>
@@ -195,7 +204,8 @@ specified.</div>
 <section class="detail" id="getParameters()">
 <h3>getParameters</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="ParameterExpression.html" title="interface in jakarta.persistence.criteria">ParameterExpression</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getParameters</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="ParameterExpression.html" title="interface in jakarta.persistence.criteria">ParameterExpression</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getParameters</span>()</div>
 <div class="block">Return the parameters of the query.  Returns empty set if
 there are no parameters.
 Modifications to the set do not affect the query.</div>

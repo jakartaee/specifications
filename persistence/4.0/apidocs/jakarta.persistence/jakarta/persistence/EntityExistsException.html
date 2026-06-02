@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -98,17 +98,22 @@ loadScripts(document, 'script');</script>
 <ul>
 <li>a detached instance of an entity type is passed to
     <a href="EntityManager.html#persist(java.lang.Object)"><code>EntityManager.persist(Object)</code></a>, or
-<li>an instance of an entity type with an identifier already
-    assigned by the application is passed to
-    <a href="EntityAgent.html#insert(java.lang.Object)"><code>EntityAgent.insert(Object)</code></a>, and a record with the
-    assigned identifier value already exists in the database.
+<li>any kind of uniqueness constraint is violated when an
+    entity is inserted in the database.
 </ul>
 
-<p> If a detached instance is passed to the persist operation,
-an <code>EntityExistsException</code> may be immediately thrown by
-<code>persist()</code>, or the <code>EntityExistsException</code> or
-another <a href="PersistenceException.html" title="class in jakarta.persistence"><code>PersistenceException</code></a> may be thrown at flush or
-commit time.
+<p> The persistence provider is always permitted to postpone
+an <code>EntityExistsException</code> until execution of the
+resulting database insert operation. If a detached instance
+is passed to the persist operation, either:
+<ul>
+<li>an <code>EntityExistsException</code> is immediately thrown
+    by <code>persist()</code>, or
+<li>an <code>EntityExistsException</code> or some other subtype
+    of <a href="PersistenceException.html" title="class in jakarta.persistence"><code>PersistenceException</code></a> is thrown when the
+    persistence context is flushed or when the transaction
+    commits.
+</ul>
 
 <p> If an <code>EntityExistsException</code> is thrown by an
 <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with a persistence context joined to

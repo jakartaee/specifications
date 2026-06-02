@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -135,9 +135,9 @@ in the <a href="sql/ResultSetMapping.html" title="interface in jakarta.persisten
 returned by <a href="EntityManagerFactory.html#getResultSetMappings(java.lang.Class)"><code>EntityManagerFactory.getResultSetMappings(Class)</code></a>.
 
 <p>This annotation may be placed directly on a method annotated
-<a href="query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.
+<a href="query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.EntityResult3"><code class="language-java">@StaticNativeQuery("SELECT * FROM orders WHERE order_total &gt; ?")
+<pre class="snippet" id="snippet-jakarta.persistence.EntityResult3"><code class="language-java">@NativeQuery("SELECT * FROM orders WHERE order_total &gt; ?")
 @EntityResult(
     entityClass = Order.class,
     fields = {@FieldResult(name = Order_.ID, column = "order_id"),

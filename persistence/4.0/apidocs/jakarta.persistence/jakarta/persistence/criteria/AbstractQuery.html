@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -251,10 +251,14 @@ to the conjunction of the specified restriction predicates.</div>
 <section class="detail" id="from(java.lang.Class)">
 <h3>from</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;</span>&nbsp;<span class="element-name">from</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;entityClass)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;</span>&nbsp;<span class="element-name">from</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;entityClass)</span></div>
 <div class="block">Create and add a query root corresponding to the given entity,
 forming a cartesian product with any existing roots.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="from(java.lang.Class)-type-param-X"><code>X</code> - the entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - the entity class</dd>
 <dt>Returns:</dt>
@@ -267,10 +271,14 @@ forming a cartesian product with any existing roots.</div>
 <section class="detail" id="from(jakarta.persistence.metamodel.EntityType)">
 <h3>from</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;</span>&nbsp;<span class="element-name">from</span><wbr><span class="parameters">(<a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;X&gt;&nbsp;entity)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type"><a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;X&gt;</span>&nbsp;<span class="element-name">from</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a>&lt;X&gt;&nbsp;entity)</span></div>
 <div class="block">Create and add a query root corresponding to the given entity,
 forming a cartesian product with any existing roots.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="from(jakarta.persistence.metamodel.EntityType)-type-param-X"><code>X</code> - the entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entity</code> - metamodel entity representing the entity
                of type X</dd>
@@ -284,7 +292,9 @@ forming a cartesian product with any existing roots.</div>
 <section class="detail" id="where(jakarta.persistence.criteria.Expression)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
 <div class="block">Modify the query to restrict the query results according
 to the specified boolean expression.
 Replaces the previously added restriction(s), if any.</div>
@@ -301,7 +311,9 @@ Replaces the previously added restriction(s), if any.</div>
 <section class="detail" id="where(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Modify the query to restrict the query results according 
 to the conjunction of the specified restriction predicates.
 Replaces the previously added restriction(s), if any.
@@ -320,7 +332,9 @@ restrictions are simply removed.</div>
 <section class="detail" id="where(java.util.List)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.
 Replaces the previously added restriction(s), if any.
@@ -341,7 +355,9 @@ restrictions are simply removed.</div>
 <section class="detail" id="groupBy(jakarta.persistence.criteria.Expression...)">
 <h3>groupBy</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;grouping)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;grouping)</span></div>
 <div class="block">Specify the expressions that are used to form groups over
 the query results.
 Replaces the previous specified grouping expressions, if any.
@@ -360,7 +376,9 @@ added grouping expressions are simply removed.</div>
 <section class="detail" id="groupBy(java.util.List)">
 <h3>groupBy</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;&nbsp;grouping)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;&nbsp;grouping)</span></div>
 <div class="block">Specify the expressions that are used to form groups over
 the query results.
 Replaces the previous specified grouping expressions, if any.
@@ -379,7 +397,9 @@ added grouping expressions are simply removed.</div>
 <section class="detail" id="having(jakarta.persistence.criteria.Expression)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
 <div class="block">Specify a restriction over the groups of the query.
 Replaces the previous having restriction(s), if any.</div>
 <dl class="notes">
@@ -395,7 +415,9 @@ Replaces the previous having restriction(s), if any.</div>
 <section class="detail" id="having(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(@Nonnull
+ <a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction 
 predicates.
@@ -415,7 +437,9 @@ restrictions are simply removed.</div>
 <section class="detail" id="having(java.util.List)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction
 predicates.
@@ -437,7 +461,8 @@ restrictions are simply removed.</div>
 <section class="detail" id="distinct(boolean)">
 <h3>distinct</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">distinct</span><wbr><span class="parameters">(boolean&nbsp;distinct)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">distinct</span><wbr><span class="parameters">(boolean&nbsp;distinct)</span></div>
 <div class="block">Specify whether duplicate query results are eliminated.
 A true value will cause duplicates to be eliminated.
 A false value will cause duplicates to be retained.
@@ -458,7 +483,8 @@ be retained.</div>
 <section class="detail" id="getRoots()">
 <h3>getRoots</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getRoots</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Root.html" title="interface in jakarta.persistence.criteria">Root</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getRoots</span>()</div>
 <div class="block">Return the query roots. These are the roots that are
 defined for the <a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria"><code>CriteriaQuery</code></a> or <a href="Subquery.html" title="interface in jakarta.persistence.criteria"><code>Subquery</code></a>
 itself, including any subquery roots defined as a result of
@@ -475,7 +501,8 @@ defined. Modifications to the set do not affect the query.</div>
 <section class="detail" id="getSelection()">
 <h3>getSelection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">getSelection</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">getSelection</span>()</div>
 <div class="block">Return the selection of the query, or null if no selection
 has been set.</div>
 <dl class="notes">
@@ -489,7 +516,8 @@ has been set.</div>
 <section class="detail" id="getGroupList()">
 <h3>getGroupList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getGroupList</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getGroupList</span>()</div>
 <div class="block">Return a list of the grouping expressions.  Returns empty
 list if no grouping expressions have been specified.
 Modifications to the list do not affect the query.</div>
@@ -504,7 +532,8 @@ Modifications to the list do not affect the query.</div>
 <section class="detail" id="getGroupRestriction()">
 <h3>getGroupRestriction</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">getGroupRestriction</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="Predicate.html" title="interface in jakarta.persistence.criteria">Predicate</a></span>&nbsp;<span class="element-name">getGroupRestriction</span>()</div>
 <div class="block">Return the predicate that corresponds to the restriction(s)
 over the grouping items, or null if no restrictions have 
 been specified.</div>
@@ -534,7 +563,8 @@ retained.</div>
 <section class="detail" id="getResultType()">
 <h3>getResultType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">getResultType</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in AbstractQuery">T</a>&gt;</span>&nbsp;<span class="element-name">getResultType</span>()</div>
 <div class="block">Return the result type of the query or subquery. If
 a result type was specified as an argument to the
 <code>createQuery</code> or <code>subquery</code> method, that

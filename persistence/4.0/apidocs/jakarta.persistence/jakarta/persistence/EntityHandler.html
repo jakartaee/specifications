@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -609,11 +609,16 @@ a provider-specific API.</div>
 <section class="detail" id="get(java.lang.Class,java.lang.Object)">
 <h3>get</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id)</span></div>
 <div class="block">Retrieve an entity representing the record with the
 given identifier.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="get(java.lang.Class,java.lang.Object)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - The class of the entity to retrieve</dd>
 <dd><code>id</code> - The identifier of the entity to retrieve</dd>
@@ -643,8 +648,12 @@ instead of returning null.</dd>
 <section class="detail" id="get(java.lang.Class,java.lang.Object,jakarta.persistence.FindOption...)">
 <h3>get</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id,
+ @Nullable
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</span></div>
 <div class="block">Retrieve an entity representing the record with the
 given identifier, using the specified
@@ -660,6 +669,8 @@ Depending on the database in use and the locking
 mechanisms used by the provider, this option may or
 may not be observed.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="get(java.lang.Class,java.lang.Object,jakarta.persistence.FindOption...)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - The class of the entity to retrieve</dd>
 <dd><code>id</code> - The identifier of the entity to retrieve</dd>
@@ -672,6 +683,18 @@ may not be observed.</div>
         unit, or if the given identifier is not a
         non-null instance of the identifier type of the
         given entity class</dd>
+<dd><code><a href="TransactionRequiredException.html" title="class in jakarta.persistence">TransactionRequiredException</a></code> - if any lock mode
+        other than <a href="LockModeType.html#NONE"><code>NONE</code></a> is
+        specified and there is no transaction
+        associated with this handler</dd>
+<dd><code><a href="OptimisticLockException.html" title="class in jakarta.persistence">OptimisticLockException</a></code> - if an optimistic version
+        check fails</dd>
+<dd><code><a href="PessimisticLockException.html" title="class in jakarta.persistence">PessimisticLockException</a></code> - if a pessimistic lock
+        could not be obtained and the transaction is
+        rolled back</dd>
+<dd><code><a href="LockTimeoutException.html" title="class in jakarta.persistence">LockTimeoutException</a></code> - if a pessimistic lock
+        could not be obtained and only the statement
+        is rolled back</dd>
 <dd><code><a href="EntityNotFoundException.html" title="class in jakarta.persistence">EntityNotFoundException</a></code> - if no record with the
         given identifier exists in the database</dd>
 <dd><code><a href="PersistenceException.html" title="class in jakarta.persistence">PersistenceException</a></code> - if a given
@@ -692,8 +715,12 @@ instead of returning null.</dd>
 <section class="detail" id="get(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)">
 <h3>get</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(@Nonnull
+ <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id,
+ @Nullable
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</span></div>
 <div class="block">Retrieve an entity representing the record with the
 given identifier, fetching associations specified by
@@ -711,6 +738,8 @@ Depending on the database in use and the locking
 mechanisms used by the provider, this option may or
 may not be observed.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="get(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>graph</code> - The <a href="EntityGraph.html" title="interface in jakarta.persistence">load graph</a></dd>
 <dd><code>id</code> - The identifier of the entity to retrieve</dd>
@@ -723,6 +752,18 @@ may not be observed.</div>
         unit, or if the given identifier is not a
         non-null instance of the identifier type of the
         given entity class</dd>
+<dd><code><a href="TransactionRequiredException.html" title="class in jakarta.persistence">TransactionRequiredException</a></code> - if any lock mode
+        other than <a href="LockModeType.html#NONE"><code>NONE</code></a> is
+        specified and there is no transaction
+        associated with this handler</dd>
+<dd><code><a href="OptimisticLockException.html" title="class in jakarta.persistence">OptimisticLockException</a></code> - if an optimistic version
+        check fails</dd>
+<dd><code><a href="PessimisticLockException.html" title="class in jakarta.persistence">PessimisticLockException</a></code> - if a pessimistic lock
+        could not be obtained and the transaction is
+        rolled back</dd>
+<dd><code><a href="LockTimeoutException.html" title="class in jakarta.persistence">LockTimeoutException</a></code> - if a pessimistic lock
+        could not be obtained and only the statement
+        is rolled back</dd>
 <dd><code><a href="EntityNotFoundException.html" title="class in jakarta.persistence">EntityNotFoundException</a></code> - if no record with the
         given identifier exists in the database</dd>
 <dd><code><a href="PersistenceException.html" title="class in jakarta.persistence">PersistenceException</a></code> - if a given
@@ -743,8 +784,12 @@ instead of returning null.</dd>
 <section class="detail" id="getMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)">
 <h3>getMultiple</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</span>&nbsp;<span class="element-name">getMultiple</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</span>&nbsp;<span class="element-name">getMultiple</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;ids,
+ @Nullable
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</span></div>
 <div class="block">Retrieve entity instances representing the records
 with the given identifiers, using the specified
@@ -763,6 +808,8 @@ Depending on the database in use and the locking
 mechanisms used by the provider, this option may or
 may not be observed.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - The class of the entity to retrieve</dd>
 <dd><code>ids</code> - The identifiers of the entities to retrieve</dd>
@@ -775,6 +822,18 @@ may not be observed.</div>
         unit, or if one of the given identifiers is not
         a non-null instance of the identifier type of
         the given entity class</dd>
+<dd><code><a href="TransactionRequiredException.html" title="class in jakarta.persistence">TransactionRequiredException</a></code> - if any lock mode
+        other than <a href="LockModeType.html#NONE"><code>NONE</code></a> is
+        specified and there is no transaction
+        associated with this handler</dd>
+<dd><code><a href="OptimisticLockException.html" title="class in jakarta.persistence">OptimisticLockException</a></code> - if an optimistic version
+        check fails</dd>
+<dd><code><a href="PessimisticLockException.html" title="class in jakarta.persistence">PessimisticLockException</a></code> - if a pessimistic lock
+        could not be obtained and the transaction is
+        rolled back</dd>
+<dd><code><a href="LockTimeoutException.html" title="class in jakarta.persistence">LockTimeoutException</a></code> - if a pessimistic lock
+        could not be obtained and only the statement
+        is rolled back</dd>
 <dd><code><a href="EntityNotFoundException.html" title="class in jakarta.persistence">EntityNotFoundException</a></code> - if no record exists in
         the database for one of the given identifiers</dd>
 <dd><code><a href="PersistenceException.html" title="class in jakarta.persistence">PersistenceException</a></code> - if a given
@@ -795,8 +854,12 @@ instead of returning nulls.</dd>
 <section class="detail" id="getMultiple(jakarta.persistence.EntityGraph,java.util.List,jakarta.persistence.FindOption...)">
 <h3>getMultiple</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</span>&nbsp;<span class="element-name">getMultiple</span><wbr><span class="parameters">(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</span>&nbsp;<span class="element-name">getMultiple</span><wbr><span class="parameters">(@Nonnull
+ <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;ids,
+ @Nullable
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</span></div>
 <div class="block">Retrieve entity instances representing the records with
 the given identifiers of the root entity of the given
@@ -815,6 +878,8 @@ Depending on the database in use and the locking
 mechanisms used by the provider, this option may or
 may not be observed.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getMultiple(jakarta.persistence.EntityGraph,java.util.List,jakarta.persistence.FindOption...)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>graph</code> - The <a href="EntityGraph.html" title="interface in jakarta.persistence">load graph</a></dd>
 <dd><code>ids</code> - The identifiers of the entities to retrieve</dd>
@@ -827,6 +892,18 @@ may not be observed.</div>
         unit, or if one of the given identifiers is not
         a non-null instance of the identifier type of
         the given entity class</dd>
+<dd><code><a href="TransactionRequiredException.html" title="class in jakarta.persistence">TransactionRequiredException</a></code> - if any lock mode
+        other than <a href="LockModeType.html#NONE"><code>NONE</code></a> is
+        specified and there is no transaction
+        associated with this handler</dd>
+<dd><code><a href="OptimisticLockException.html" title="class in jakarta.persistence">OptimisticLockException</a></code> - if an optimistic version
+        check fails</dd>
+<dd><code><a href="PessimisticLockException.html" title="class in jakarta.persistence">PessimisticLockException</a></code> - if a pessimistic lock
+        could not be obtained and the transaction is
+        rolled back</dd>
+<dd><code><a href="LockTimeoutException.html" title="class in jakarta.persistence">LockTimeoutException</a></code> - if a pessimistic lock
+        could not be obtained and only the statement
+        is rolled back</dd>
 <dd><code><a href="EntityNotFoundException.html" title="class in jakarta.persistence">EntityNotFoundException</a></code> - if no record exists in
         the database for one of the given identifiers</dd>
 <dd><code><a href="PersistenceException.html" title="class in jakarta.persistence">PersistenceException</a></code> - if a given
@@ -847,12 +924,17 @@ instead of returning nulls.</dd>
 <section class="detail" id="find(java.lang.Class,java.lang.Object)">
 <h3>find</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">find</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">find</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id)</span></div>
 <div class="block">Retrieve an entity representing the record with the
 given identifier, or return <code>null</code> if there is
 no such record in the database.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="find(java.lang.Class,java.lang.Object)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - The class of the entity to retrieve</dd>
 <dd><code>id</code> - The identifier of the entity to retrieve</dd>
@@ -878,8 +960,12 @@ no such record in the database.</div>
 <section class="detail" id="find(java.lang.Class,java.lang.Object,jakarta.persistence.FindOption...)">
 <h3>find</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">find</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">find</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id,
+ @Nullable
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</span></div>
 <div class="block">Retrieve an entity representing the record with the
 given identifier, or return <code>null</code> if there is
@@ -896,6 +982,8 @@ Depending on the database in use and the locking
 mechanisms used by the provider, this option may or
 may not be observed.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="find(java.lang.Class,java.lang.Object,jakarta.persistence.FindOption...)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - The class of the entity to retrieve</dd>
 <dd><code>id</code> - The identifier of the entity to retrieve</dd>
@@ -937,8 +1025,12 @@ may not be observed.</div>
 <section class="detail" id="find(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)">
 <h3>find</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">find</span><wbr><span class="parameters">(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">find</span><wbr><span class="parameters">(@Nonnull
+ <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;id,
+ @Nullable
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</span></div>
 <div class="block">Retrieve an instance of the root entity of the given
 <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> representing the record with the
@@ -957,6 +1049,8 @@ Depending on the database in use and the locking
 mechanisms used by the provider, this option may or
 may not be observed.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="find(jakarta.persistence.EntityGraph,java.lang.Object,jakarta.persistence.FindOption...)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>graph</code> - The <a href="EntityGraph.html" title="interface in jakarta.persistence">load graph</a></dd>
 <dd><code>id</code> - The identifier of the entity to retrieve</dd>
@@ -998,8 +1092,12 @@ may not be observed.</div>
 <section class="detail" id="findMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)">
 <h3>findMultiple</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</span>&nbsp;<span class="element-name">findMultiple</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</span>&nbsp;<span class="element-name">findMultiple</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;ids,
+ @Nullable
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</span></div>
 <div class="block">Retrieve entity instances representing the records
 with the given identifiers, using the specified
@@ -1019,6 +1117,8 @@ Depending on the database in use and the locking
 mechanisms used by the provider, this option may or
 may not be observed.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="findMultiple(java.lang.Class,java.util.List,jakarta.persistence.FindOption...)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - The class of the entity to retrieve</dd>
 <dd><code>ids</code> - The identifiers of the entities to retrieve</dd>
@@ -1061,8 +1161,12 @@ may not be observed.</div>
 <section class="detail" id="findMultiple(jakarta.persistence.EntityGraph,java.util.List,jakarta.persistence.FindOption...)">
 <h3>findMultiple</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</span>&nbsp;<span class="element-name">findMultiple</span><wbr><span class="parameters">(<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</span>&nbsp;<span class="element-name">findMultiple</span><wbr><span class="parameters">(@Nonnull
+ <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;graph,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;ids,
+ @Nullable
  <a href="FindOption.html" title="interface in jakarta.persistence">FindOption</a>...&nbsp;options)</span></div>
 <div class="block">Retrieve entity instances representing the records with
 the given identifiers of the root entity of the given
@@ -1084,6 +1188,8 @@ Depending on the database in use and the locking
 mechanisms used by the provider, this option may or
 may not be observed.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="findMultiple(jakarta.persistence.EntityGraph,java.util.List,jakarta.persistence.FindOption...)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>graph</code> - The <a href="EntityGraph.html" title="interface in jakarta.persistence">load graph</a></dd>
 <dd><code>ids</code> - The identifiers of the entities to retrieve</dd>
@@ -1127,7 +1233,8 @@ may not be observed.</div>
 <section class="detail" id="setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)">
 <h3>setCacheRetrieveMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCacheRetrieveMode</span><wbr><span class="parameters">(<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCacheRetrieveMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</span></div>
 <div class="block">Set the default <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieval
 mode</a> for this <code>EntityHandler</code>.</div>
 <dl class="notes">
@@ -1143,7 +1250,8 @@ mode</a> for this <code>EntityHandler</code>.</div>
 <section class="detail" id="setCacheStoreMode(jakarta.persistence.CacheStoreMode)">
 <h3>setCacheStoreMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCacheStoreMode</span><wbr><span class="parameters">(<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCacheStoreMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</span></div>
 <div class="block">Set the default <a href="CacheStoreMode.html" title="enum class in jakarta.persistence">cache storage mode</a>
 for this <code>EntityHandler</code>.</div>
 <dl class="notes">
@@ -1159,7 +1267,8 @@ for this <code>EntityHandler</code>.</div>
 <section class="detail" id="getCacheRetrieveMode()">
 <h3>getCacheRetrieveMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></span>&nbsp;<span class="element-name">getCacheRetrieveMode</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></span>&nbsp;<span class="element-name">getCacheRetrieveMode</span>()</div>
 <div class="block">The cache retrieval mode for this <code>EntityHandler</code>.</div>
 <dl class="notes">
 <dt>Since:</dt>
@@ -1172,7 +1281,8 @@ for this <code>EntityHandler</code>.</div>
 <section class="detail" id="getCacheStoreMode()">
 <h3>getCacheStoreMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></span>&nbsp;<span class="element-name">getCacheStoreMode</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></span>&nbsp;<span class="element-name">getCacheStoreMode</span>()</div>
 <div class="block">The cache storage mode for this <code>EntityHandler</code>.</div>
 <dl class="notes">
 <dt>Since:</dt>
@@ -1185,21 +1295,29 @@ for this <code>EntityHandler</code>.</div>
 <section class="detail" id="setProperty(java.lang.String,java.lang.Object)">
 <h3>setProperty</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProperty</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName,
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProperty</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
-<div class="block">Set an <code>EntityHandler</code>-scoped property or hint.
-If a vendor-specific property or hint is not recognized, it is
+<div class="block">Set an <code>EntityHandler</code>-scoped property or hint. If a
+vendor-specific property or hint is not recognized, it is
 silently ignored.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>propertyName</code> - The name of the property or hint</dd>
 <dd><code>value</code> - The value for the property or hint</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the property or hint name
-        is recognized by the implementation, but the second
-        argument is not a valid value for that hint</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the given property or
+        hint name is recognized by the provider, but the
+        second argument is not a legal value for the given
+        property or hint</dd>
 <dt>Since:</dt>
 <dd>2.0</dd>
+<dt>API note:</dt>
+<dd>The use of named properties and hints lacks type
+         safety compared to the use of
+         <a href="EntityManager.Option.html" title="interface in jakarta.persistence">manager options</a>
+         or <a href="EntityAgent.Option.html" title="interface in jakarta.persistence">agent options</a>.</dd>
 </dl>
 </div>
 </section>
@@ -1208,14 +1326,15 @@ silently ignored.</div>
 <section class="detail" id="getProperties()">
 <h3>getProperties</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getProperties</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getProperties</span>()</div>
 <div class="block">The properties and hints and their associated values which
 are in effect for this <code>EntityHandler</code>. Modifying the
 contents of the returned map does not change the configuration
 in effect.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>a map of properties and hints currently in effect</dd>
+<dd>a copy of the properties and hints currently in effect</dd>
 <dt>Since:</dt>
 <dd>2.0</dd>
 </dl>
@@ -1226,7 +1345,9 @@ in effect.</div>
 <section class="detail" id="createStatement(java.lang.String)">
 <h3>createStatement</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">createStatement</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">createStatement</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</span></div>
 <div class="block">Create an instance of <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a
 Jakarta Persistence <code>UPDATE</code> or <code>DELETE</code>
 statement.</div>
@@ -1249,7 +1370,9 @@ statement.</div>
 <section class="detail" id="createQuery(java.lang.String)">
 <h3>createQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString)</span></div>
 <div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a>
 for executing a Jakarta Persistence query language
 statement.
@@ -1300,12 +1423,16 @@ should call:
 <section class="detail" id="createQuery(jakarta.persistence.criteria.CriteriaSelect)">
 <h3>createQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(<a href="criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">CriteriaSelect</a>&lt;T&gt;&nbsp;selectQuery)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">CriteriaSelect</a>&lt;T&gt;&nbsp;selectQuery)</span></div>
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
 <a href="criteria/CriteriaSelect.html" title="interface in jakarta.persistence.criteria">criteria select</a>, which may be
 top-level query or a union or intersection of top-level
 queries.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="createQuery(jakarta.persistence.criteria.CriteriaSelect)-type-param-T"><code>T</code> - The query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>selectQuery</code> - A criteria select query object</dd>
 <dt>Returns:</dt>
@@ -1324,7 +1451,9 @@ queries.</div>
 <section class="detail" id="createStatement(jakarta.persistence.criteria.CriteriaStatement)">
 <h3>createStatement</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">createStatement</span><wbr><span class="parameters">(<a href="criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&nbsp;statement)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">createStatement</span><wbr><span class="parameters">(@Nonnull
+ <a href="criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">CriteriaStatement</a>&lt;?&gt;&nbsp;statement)</span></div>
 <div class="block">Create an instance of <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a
 <a href="criteria/CriteriaStatement.html" title="interface in jakarta.persistence.criteria">criteria statement</a>.</div>
 <dl class="notes">
@@ -1346,7 +1475,10 @@ queries.</div>
 <section class="detail" id="createQuery(java.lang.String,java.lang.Class)">
 <h3>createQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;resultClass)</span></div>
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing
 a Jakarta Persistence query language <code>SELECT</code>
@@ -1374,6 +1506,8 @@ the select list. In the third case, each query result is
 automatically packaged in a new instance of the result
 class by calling the matching constructor.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="createQuery(java.lang.String,java.lang.Class)-type-param-T"><code>T</code> - The query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>qlString</code> - A Jakarta Persistence query string</dd>
 <dd><code>resultClass</code> - The result class</dd>
@@ -1396,7 +1530,10 @@ class by calling the matching constructor.</div>
 <section class="detail" id="createQuery(java.lang.String,jakarta.persistence.EntityGraph)">
 <h3>createQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;qlString,
+ @Nonnull
  <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;resultGraph)</span></div>
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing
 a Jakarta Persistence query language <code>SELECT</code>
@@ -1405,6 +1542,8 @@ interpreted as a load graph. The select list of the
 query must contain only a single item, which must be
 assignable to the root type of the given entity graph.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="createQuery(java.lang.String,jakarta.persistence.EntityGraph)-type-param-T"><code>T</code> - The query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>qlString</code> - A Jakarta Persistence query string</dd>
 <dd><code>resultGraph</code> - The <a href="EntityGraph.html" title="interface in jakarta.persistence">load graph</a></dd>
@@ -1459,7 +1598,9 @@ SQL statement which returns a row count.</div>
 <section class="detail" id="createNamedQuery(java.lang.String)">
 <h3>createNamedQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createNamedQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createNamedQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> for
 executing a named query written in the Jakarta Persistence
 query language or in native SQL.
@@ -1481,13 +1622,13 @@ query language or in native SQL.
 <dd><code>name</code> - The name of a query defined in metadata</dd>
 <dt>Returns:</dt>
 <dd>An instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> which
-        may be used to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> or
-        <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or to directly execute the
-        given query or statement</dd>
+may be used to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> or
+<a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or to directly execute the
+given query or statement</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if a query has not been
-        defined with the given name, or if the query string
-        is found to be invalid</dd>
+                                 defined with the given name, or if the query string
+                                 is found to be invalid</dd>
 <dt>Since:</dt>
 <dd>1.0</dd>
 <dt>See Also:</dt>
@@ -1521,7 +1662,10 @@ should call:
 <section class="detail" id="createNamedQuery(java.lang.String,java.lang.Class)">
 <h3>createNamedQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createNamedQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createNamedQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;resultClass)</span></div>
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
 named query written in the Jakarta Persistence query language
@@ -1538,6 +1682,8 @@ or in native SQL, returning instances of the given result class.
 by the <a href="NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> annotation or <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a>
 annotation which declares the named query.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="createNamedQuery(java.lang.String,java.lang.Class)-type-param-T"><code>T</code> - The query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of a query defined in metadata</dd>
 <dd><code>resultClass</code> - The type of the query result</dd>
@@ -1559,7 +1705,9 @@ annotation which declares the named query.</div>
 <section class="detail" id="createStatement(jakarta.persistence.StatementReference)">
 <h3>createStatement</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">createStatement</span><wbr><span class="parameters">(<a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">createStatement</span><wbr><span class="parameters">(@Nonnull
+ <a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&nbsp;reference)</span></div>
 <div class="block">Create an instance of <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a named
 statement written in the Jakarta Persistence query language or
 in native SQL.</div>
@@ -1589,7 +1737,9 @@ in native SQL.</div>
 <section class="detail" id="createQuery(jakarta.persistence.TypedQueryReference)">
 <h3>createQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(<a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;T&gt;&nbsp;reference)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;T&gt;&nbsp;reference)</span></div>
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a
 typed named query written in the Jakarta Persistence query
 language or in native SQL.
@@ -1607,6 +1757,8 @@ language or in native SQL.
     <a href="NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotation.
 </ul></div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="createQuery(jakarta.persistence.TypedQueryReference)-type-param-T"><code>T</code> - The query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>reference</code> - A reference to the query defined in metadata</dd>
 <dt>Returns:</dt>
@@ -1635,7 +1787,9 @@ language or in native SQL.
 <section class="detail" id="createNativeStatement(java.lang.String)">
 <h3>createNativeStatement</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">createNativeStatement</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Statement.html" title="interface in jakarta.persistence">Statement</a></span>&nbsp;<span class="element-name">createNativeStatement</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</span></div>
 <div class="block">Create an instance of <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> for executing a
 native SQL statement which returns a row count, usually
 an <code>INSERT</code>, <code>UPDATE</code>, <code>MERGE</code>, or
@@ -1656,7 +1810,9 @@ an <code>INSERT</code>, <code>UPDATE</code>, <code>MERGE</code>, or
 <section class="detail" id="createNativeQuery(java.lang.String)">
 <h3>createNativeQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString)</span></div>
 <div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> for
 executing a native SQL query or statement.
 <p>If the given query produces a result set, the query
@@ -1678,9 +1834,9 @@ type mappings defined by the JDBC specification.</div>
 <dd><code>sqlString</code> - A native SQL query string</dd>
 <dt>Returns:</dt>
 <dd>An instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> which
-        may be used to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> or
-        <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or to directly execute the
-        given query or statement</dd>
+may be used to obtain a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> or
+<a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or to directly execute the
+given query or statement</dd>
 <dt>Since:</dt>
 <dd>1.0</dd>
 <dt>API note:</dt>
@@ -1707,7 +1863,10 @@ should call:
 <section class="detail" id="createNativeQuery(java.lang.String,java.lang.Class)">
 <h3>createNativeQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;resultClass)</span></div>
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a native
 SQL query which produces a result set, returning instances of the
@@ -1733,6 +1892,8 @@ given result class. Either:
     specification.
 </ul></div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="createNativeQuery(java.lang.String,java.lang.Class)-type-param-T"><code>T</code> - The query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>sqlString</code> - A native SQL query string</dd>
 <dd><code>resultClass</code> - The type of the query result</dd>
@@ -1749,7 +1910,10 @@ given result class. Either:
 <section class="detail" id="createNativeQuery(java.lang.String,java.lang.String)">
 <h3>createNativeQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence">StatementOrTypedQuery</a></span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;resultSetMapping)</span></div>
 <div class="block">Create an instance of <a href="StatementOrTypedQuery.html" title="interface in jakarta.persistence"><code>StatementOrTypedQuery</code></a> for
 executing a native SQL query, using the named
@@ -1793,12 +1957,17 @@ obtained from the static metamodel.</dd>
 <section class="detail" id="createNativeQuery(java.lang.String,jakarta.persistence.sql.ResultSetMapping)">
 <h3>createNativeQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createNativeQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sqlString,
+ @Nonnull
  <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;T&gt;&nbsp;resultSetMapping)</span></div>
 <div class="block">Create an instance of <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> for executing a native
 SQL query, using the given <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a> to interpret
 the JDBC result set.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="createNativeQuery(java.lang.String,jakarta.persistence.sql.ResultSetMapping)-type-param-T"><code>T</code> - The query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>sqlString</code> - A native SQL query string</dd>
 <dd><code>resultSetMapping</code> - The result set mapping</dd>
@@ -1815,7 +1984,9 @@ the JDBC result set.</div>
 <section class="detail" id="createNamedStoredProcedureQuery(java.lang.String)">
 <h3>createNamedStoredProcedureQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">createNamedStoredProcedureQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">createNamedStoredProcedureQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Create an instance of <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing
 a stored procedure in the database.
 <p>Parameters must be registered before the stored procedure can
@@ -1842,7 +2013,9 @@ result set is returned as a list of type <code>Object[]</code>.</div>
 <section class="detail" id="createStoredProcedureQuery(java.lang.String)">
 <h3>createStoredProcedureQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">createStoredProcedureQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">createStoredProcedureQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName)</span></div>
 <div class="block">Create an instance of <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing a
 stored procedure in the database.
 <p>Parameters must be registered before the stored procedure can
@@ -1870,7 +2043,10 @@ result set is returned as a list of type <code>Object[]</code>.</div>
 <section class="detail" id="createStoredProcedureQuery(java.lang.String,java.lang.Class...)">
 <h3>createStoredProcedureQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">createStoredProcedureQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">createStoredProcedureQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;...&nbsp;resultClasses)</span></div>
 <div class="block">Create an instance of <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing
 a stored procedure in the database, explicitly specifying the
@@ -1925,7 +2101,10 @@ pass each result class individually as an argument to
 <section class="detail" id="createStoredProcedureQuery(java.lang.String,java.lang.String...)">
 <h3>createStoredProcedureQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">createStoredProcedureQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></span>&nbsp;<span class="element-name">createStoredProcedureQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;procedureName,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;resultSetMappings)</span></div>
 <div class="block">Create an instance of <a href="StoredProcedureQuery.html" title="interface in jakarta.persistence"><code>StoredProcedureQuery</code></a> for executing
 a stored procedure in the database, explicitly specifying the
@@ -1975,12 +2154,16 @@ and pass each result mapping individually as an argument to
 <section class="detail" id="unwrap(java.lang.Class)">
 <h3>unwrap</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">unwrap</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">unwrap</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</span></div>
 <div class="block">Return an object of the specified type to allow access to
 a provider-specific API. If the provider implementation
 of <code>EntityHandler</code> does not support the given type,
 the <a href="PersistenceException.html" title="class in jakarta.persistence"><code>PersistenceException</code></a> is thrown.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="unwrap(java.lang.Class)-type-param-T"><code>T</code> - The type of the object to be returned</span></dd>
 <dt>Parameters:</dt>
 <dd><code>type</code> - The class of the object to be returned.
             This is usually either the underlying class
@@ -2043,7 +2226,8 @@ remain managed until the transaction completes.</div>
 <section class="detail" id="getTransaction()">
 <h3>getTransaction</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityTransaction.html" title="interface in jakarta.persistence">EntityTransaction</a></span>&nbsp;<span class="element-name">getTransaction</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="EntityTransaction.html" title="interface in jakarta.persistence">EntityTransaction</a></span>&nbsp;<span class="element-name">getTransaction</span>()</div>
 <div class="block">Return the resource-level <a href="EntityTransaction.html" title="interface in jakarta.persistence"><code>EntityTransaction</code></a> object.
 The <code>EntityTransaction</code> instance may be used serially
 to begin and commit multiple transactions.</div>
@@ -2064,7 +2248,8 @@ to begin and commit multiple transactions.</div>
 <section class="detail" id="getEntityManagerFactory()">
 <h3>getEntityManagerFactory</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></span>&nbsp;<span class="element-name">getEntityManagerFactory</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></span>&nbsp;<span class="element-name">getEntityManagerFactory</span>()</div>
 <div class="block">The <a href="EntityManagerFactory.html" title="interface in jakarta.persistence">entity manager factory</a>
 which created this <code>EntityHandler</code>.</div>
 <dl class="notes">
@@ -2083,7 +2268,8 @@ which created this <code>EntityHandler</code>.</div>
 <section class="detail" id="getCriteriaBuilder()">
 <h3>getCriteriaBuilder</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></span>&nbsp;<span class="element-name">getCriteriaBuilder</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></span>&nbsp;<span class="element-name">getCriteriaBuilder</span>()</div>
 <div class="block">Obtain an instance of <a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria"><code>CriteriaBuilder</code></a> which may be
 used to construct <a href="criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria"><code>CriteriaQuery</code></a> objects.</div>
 <dl class="notes">
@@ -2108,7 +2294,8 @@ used to construct <a href="criteria/CriteriaQuery.html" title="interface in jaka
 <section class="detail" id="getMetamodel()">
 <h3>getMetamodel</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel">Metamodel</a></span>&nbsp;<span class="element-name">getMetamodel</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel">Metamodel</a></span>&nbsp;<span class="element-name">getMetamodel</span>()</div>
 <div class="block">Obtain an instance of the <a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel"><code>Metamodel</code></a> interface which
 provides access to metamodel objects describing the managed
 types belonging to the persistence unit.</div>
@@ -2128,10 +2315,14 @@ types belonging to the persistence unit.</div>
 <section class="detail" id="createEntityGraph(java.lang.Class)">
 <h3>createEntityGraph</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createEntityGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;rootType)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;</span>&nbsp;<span class="element-name">createEntityGraph</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;rootType)</span></div>
 <div class="block">Create a new mutable <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>, allowing programmatic
 definition of the graph.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="createEntityGraph(java.lang.Class)-type-param-T"><code>T</code> - The root entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>rootType</code> - the root entity type of the new graph</dd>
 <dt>Returns:</dt>
@@ -2152,7 +2343,9 @@ definition of the graph.</div>
 <section class="detail" id="getEntityGraph(java.lang.String)">
 <h3>getEntityGraph</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getEntityGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;graphName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getEntityGraph</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;graphName)</span></div>
 <div class="block">Obtain a mutable copy of the named <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -2172,11 +2365,16 @@ definition of the graph.</div>
 <section class="detail" id="getEntityGraph(java.lang.Class,java.lang.String)">
 <h3>getEntityGraph</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;</span>&nbsp;<span class="element-name">getEntityGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;rootType,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;</span>&nbsp;<span class="element-name">getEntityGraph</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;rootType,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;graphName)</span></div>
 <div class="block">Obtain a mutable copy of the named <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>
 whose root type is exactly the given entity type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getEntityGraph(java.lang.Class,java.lang.String)-type-param-T"><code>T</code> - The root entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>rootType</code> - the root entity type of the graph</dd>
 <dd><code>graphName</code> - the name of an existing entity graph</dd>
@@ -2197,10 +2395,14 @@ whose root type is exactly the given entity type.</div>
 <section class="detail" id="getEntityGraphs(java.lang.Class)">
 <h3>getEntityGraphs</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? super T&gt;&gt;</span>&nbsp;<span class="element-name">getEntityGraphs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? super T&gt;&gt;</span>&nbsp;<span class="element-name">getEntityGraphs</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;entityClass)</span></div>
 <div class="block">Return all named <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a>s that are defined for
 the given entity class type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="getEntityGraphs(java.lang.Class)-type-param-T"><code>T</code> - The entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityClass</code> - An entity class</dd>
 <dt>Returns:</dt>
@@ -2218,7 +2420,8 @@ the given entity class type.</div>
 <section class="detail" id="runWithConnection(jakarta.persistence.ConnectionConsumer)">
 <h3>runWithConnection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;C&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">runWithConnection</span><wbr><span class="parameters">(<a href="ConnectionConsumer.html" title="interface in jakarta.persistence">ConnectionConsumer</a>&lt;C&gt;&nbsp;action)</span></div>
+<div class="member-signature"><span class="type-parameters">&lt;C&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">runWithConnection</span><wbr><span class="parameters">(@Nonnull
+ <a href="ConnectionConsumer.html" title="interface in jakarta.persistence">ConnectionConsumer</a>&lt;C&gt;&nbsp;action)</span></div>
 <div class="block">Execute the given action using the database connection underlying this
 <code>EntityHandler</code>. Usually, the connection is a JDBC connection, but a
 provider might support some other native connection type, and is not required
@@ -2255,7 +2458,8 @@ transaction for rollback.
 <section class="detail" id="callWithConnection(jakarta.persistence.ConnectionFunction)">
 <h3>callWithConnection</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;C,<wbr>T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">callWithConnection</span><wbr><span class="parameters">(<a href="ConnectionFunction.html" title="interface in jakarta.persistence">ConnectionFunction</a>&lt;C,<wbr>T&gt;&nbsp;function)</span></div>
+<div class="member-signature"><span class="type-parameters">&lt;C,<wbr>T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">callWithConnection</span><wbr><span class="parameters">(@Nonnull
+ <a href="ConnectionFunction.html" title="interface in jakarta.persistence">ConnectionFunction</a>&lt;C,<wbr>T&gt;&nbsp;function)</span></div>
 <div class="block">Call the given function and return its result using the database connection
 underlying this <code>EntityHandler</code>. Usually, the connection is a JDBC
 connection, but a provider might support some other native connection type,

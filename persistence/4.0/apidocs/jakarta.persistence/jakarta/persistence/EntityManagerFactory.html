@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -60,11 +60,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#createEntityManager()" tabindex="0">createEntityManager()</a></li>
+<li><a href="#createEntityManager(jakarta.persistence.EntityManager.CreationOption...)" tabindex="0">createEntityManager(EntityManager.CreationOption...)</a></li>
 <li><a href="#createEntityManager(java.util.Map)" tabindex="0">createEntityManager(Map)</a></li>
-<li><a href="#createEntityManager(jakarta.persistence.SynchronizationType)" tabindex="0">createEntityManager(SynchronizationType)</a></li>
 <li><a href="#createEntityManager(jakarta.persistence.SynchronizationType,java.util.Map)" tabindex="0">createEntityManager(SynchronizationType, Map)</a></li>
-<li><a href="#createEntityAgent()" tabindex="0">createEntityAgent()</a></li>
+<li><a href="#createEntityAgent(jakarta.persistence.EntityAgent.CreationOption...)" tabindex="0">createEntityAgent(EntityAgent.CreationOption...)</a></li>
 <li><a href="#createEntityAgent(java.util.Map)" tabindex="0">createEntityAgent(Map)</a></li>
 <li><a href="#getCriteriaBuilder()" tabindex="0">getCriteriaBuilder()</a></li>
 <li><a href="#getMetamodel()" tabindex="0">getMetamodel()</a></li>
@@ -193,8 +192,8 @@ EntityManagerFactory entityManagerFactory;
 
 
 <p>An <code>EntityManager</code> or <code>EntityAgent</code> may be created
-via a call to, respectively, <a href="#createEntityManager()"><code>createEntityManager()</code></a> or
-<a href="#createEntityAgent()"><code>createEntityAgent()</code></a>. However, this approach places complete
+via a call to, respectively, <a href="#createEntityManager(jakarta.persistence.EntityManager.CreationOption...)"><code>createEntityManager(EntityManager.CreationOption...)</code></a> or
+<a href="#createEntityAgent(jakarta.persistence.EntityAgent.CreationOption...)"><code>createEntityAgent(EntityAgent.CreationOption...)</code></a>. However, this approach places complete
 responsibility for cleanup and exception management on the client and
 is thus considered error-prone. It is much safer to use the methods
 <a href="#runInTransaction(java.util.function.Consumer)"><code>runInTransaction(Consumer)</code></a> and <a href="#callInTransaction(java.util.function.Function)"><code>callInTransaction(Function)</code></a> to obtain
@@ -340,139 +339,134 @@ to the function.</div>
 <div class="block">Close the factory, releasing any resources that it holds.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityAgent()" class="member-name-link">createEntityAgent</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityAgent(jakarta.persistence.EntityAgent.CreationOption...)" class="member-name-link">createEntityAgent</a><wbr>(<a href="EntityAgent.CreationOption.html" title="interface in jakarta.persistence">EntityAgent.CreationOption</a>...&nbsp;options)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a new application-managed <a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityAgent(java.util.Map)" class="member-name-link">createEntityAgent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;map)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityAgent(java.util.Map)" class="member-name-link">createEntityAgent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;properties)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a new application-managed <a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a> with
 the given <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a> specifying property settings.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityManager()" class="member-name-link">createEntityManager</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityManager(jakarta.persistence.EntityManager.CreationOption...)" class="member-name-link">createEntityManager</a><wbr>(<a href="EntityManager.CreationOption.html" title="interface in jakarta.persistence">EntityManager.CreationOption</a>...&nbsp;options)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a new application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityManager(jakarta.persistence.SynchronizationType)" class="member-name-link">createEntityManager</a><wbr>(<a href="SynchronizationType.html" title="enum class in jakarta.persistence">SynchronizationType</a>&nbsp;synchronizationType)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityManager(jakarta.persistence.SynchronizationType,java.util.Map)" class="member-name-link">createEntityManager</a><wbr>(<a href="SynchronizationType.html" title="enum class in jakarta.persistence">SynchronizationType</a>&nbsp;synchronizationType,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;properties)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a new JTA application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
-the specified synchronization type.</div>
+<div class="block">Create a new application-managed JTA <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
+the specified <a href="SynchronizationType.html" title="enum class in jakarta.persistence">synchronization
+type</a> and given property settings.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityManager(jakarta.persistence.SynchronizationType,java.util.Map)" class="member-name-link">createEntityManager</a><wbr>(<a href="SynchronizationType.html" title="enum class in jakarta.persistence">SynchronizationType</a>&nbsp;synchronizationType,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;map)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityManager(java.util.Map)" class="member-name-link">createEntityManager</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;properties)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Create a new JTA application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
-the specified synchronization type and map of properties.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createEntityManager(java.util.Map)" class="member-name-link">createEntityManager</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;map)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a new application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
 the given <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a> specifying property settings.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Cache.html" title="interface in jakarta.persistence">Cache</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCache()" class="member-name-link">getCache</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Cache.html" title="interface in jakarta.persistence">Cache</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCache()" class="member-name-link">getCache</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Access the cache that is associated with the entity manager 
 factory (the "second level cache").</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCriteriaBuilder()" class="member-name-link">getCriteriaBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCriteriaBuilder()" class="member-name-link">getCriteriaBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return an instance of <a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria"><code>CriteriaBuilder</code></a> which may be used
 to construct <a href="criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria"><code>CriteriaQuery</code></a>
 objects.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel">Metamodel</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMetamodel()" class="member-name-link">getMetamodel</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel">Metamodel</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMetamodel()" class="member-name-link">getMetamodel</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return an instance of the <a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel"><code>Metamodel</code></a> interface for access
 to the metamodel of the persistence unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The name of the persistence unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;E&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? extends E&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNamedEntityGraphs(java.lang.Class)" class="member-name-link">getNamedEntityGraphs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;entityType)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;E&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? extends E&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNamedEntityGraphs(java.lang.Class)" class="member-name-link">getNamedEntityGraphs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;entityType)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">A map keyed by <a href="NamedEntityGraph.html#name()">graph name</a>, containing
 every named <a href="EntityGraph.html" title="interface in jakarta.persistence">entity graph</a> whose entity type is
 assignable to the given Java type.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;R&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;R&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNamedQueries(java.lang.Class)" class="member-name-link">getNamedQueries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;R&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;R&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNamedQueries(java.lang.Class)" class="member-name-link">getNamedQueries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">A map keyed by <a href="NamedQuery.html#name()">query name</a>, containing
 <a href="TypedQueryReference.html" title="interface in jakarta.persistence">references</a> to every named query whose
 result type is assignable to the given Java type.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNamedStatements()" class="member-name-link">getNamedStatements</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNamedStatements()" class="member-name-link">getNamedStatements</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">A map keyed by <a href="NamedStatement.html#name()">query name</a>, containing
 <a href="StatementReference.html" title="interface in jakarta.persistence">references</a> to every named statement.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="PersistenceUnitUtil.html" title="interface in jakarta.persistence">PersistenceUnitUtil</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPersistenceUnitUtil()" class="member-name-link">getPersistenceUnitUtil</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="PersistenceUnitUtil.html" title="interface in jakarta.persistence">PersistenceUnitUtil</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPersistenceUnitUtil()" class="member-name-link">getPersistenceUnitUtil</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return interface providing access to utility methods for the
 persistence unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProperties()" class="member-name-link">getProperties</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProperties()" class="member-name-link">getProperties</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get the properties and associated values that are in effect
 for the entity manager factory.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;R&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResultSetMappings(java.lang.Class)" class="member-name-link">getResultSetMappings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;R&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResultSetMappings(java.lang.Class)" class="member-name-link">getResultSetMappings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">A map keyed by <a href="SqlResultSetMapping.html#name()">name</a>, containing
 a typed <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a> for every result set mapping defined
 <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">in annotations</a> whose inferred result
 type is exactly the given Java type.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="SchemaManager.html" title="interface in jakarta.persistence">SchemaManager</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSchemaManager()" class="member-name-link">getSchemaManager</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="SchemaManager.html" title="interface in jakarta.persistence">SchemaManager</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSchemaManager()" class="member-name-link">getSchemaManager</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return interface providing access to schema management
 operations for the persistence unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="PersistenceUnitTransactionType.html" title="enum class in jakarta.persistence">PersistenceUnitTransactionType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTransactionType()" class="member-name-link">getTransactionType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="PersistenceUnitTransactionType.html" title="enum class in jakarta.persistence">PersistenceUnitTransactionType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTransactionType()" class="member-name-link">getTransactionType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The type of transaction management used by this persistence
 unit, either resource-local transaction management, or JTA.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isOpen()" class="member-name-link">isOpen</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isOpen()" class="member-name-link">isOpen</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Indicates whether the factory is open.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;H extends <a href="EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a>&gt;<br>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#runInTransaction(java.lang.Class,java.util.function.Consumer)" class="member-name-link">runInTransaction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;H&gt;&nbsp;handlerClass,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;H extends <a href="EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a>&gt;<br>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#runInTransaction(java.lang.Class,java.util.function.Consumer)" class="member-name-link">runInTransaction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;H&gt;&nbsp;handlerClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;H&gt;&nbsp;work)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a new application-managed <a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> of the given type,
 with an active transaction, and execute the given function, passing the
 <code>EntityHandler</code> to the function.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#runInTransaction(java.util.function.Consumer)" class="member-name-link">runInTransaction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a>&gt;&nbsp;work)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#runInTransaction(java.util.function.Consumer)" class="member-name-link">runInTransaction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a>&gt;&nbsp;work)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Create a new application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with an active
 transaction, and execute the given function, passing the <code>EntityManager</code>
 to the function.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unwrap(java.lang.Class)" class="member-name-link">unwrap</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;cls)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unwrap(java.lang.Class)" class="member-name-link">unwrap</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;cls)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Return an object of the specified type to allow access to
 a provider-specific API.</div>
 </div>
@@ -491,21 +485,26 @@ a provider-specific API.</div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="createEntityManager()">
+<section class="detail" id="createEntityManager(jakarta.persistence.EntityManager.CreationOption...)">
 <h3>createEntityManager</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></span>&nbsp;<span class="element-name">createEntityManager</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></span>&nbsp;<span class="element-name">createEntityManager</span><wbr><span class="parameters">(@Nullable
+ <a href="EntityManager.CreationOption.html" title="interface in jakarta.persistence">EntityManager.CreationOption</a>...&nbsp;options)</span></div>
 <div class="block">Create a new application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>. This
 method returns a new <code>EntityManager</code> instance each time
-it is invoked. 
-<p>The <a href="EntityHandler.html#isOpen()"><code>EntityHandler.isOpen()</code></a> method will return true
-on the returned instance.</div>
+it is invoked. The returned object must not be reused across
+distinct units of work or shared between concurrent threads.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>options</code> - options controlling the behavior of the entity
+               manager</dd>
 <dt>Returns:</dt>
-<dd>entity manager instance</dd>
+<dd>a new <a href="EntityHandler.html#isOpen()">open</a> entity
+        manager</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory
-has been closed</dd>
+        has been closed</dd>
 </dl>
 </div>
 </section>
@@ -514,47 +513,27 @@ has been closed</dd>
 <section class="detail" id="createEntityManager(java.util.Map)">
 <h3>createEntityManager</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></span>&nbsp;<span class="element-name">createEntityManager</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;map)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></span>&nbsp;<span class="element-name">createEntityManager</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;properties)</span></div>
 <div class="block">Create a new application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
 the given <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a> specifying property settings. This
 method returns a new <code>EntityManager</code> instance each time
-it is invoked.
-<p>The <a href="EntityHandler.html#isOpen()"><code>EntityHandler.isOpen()</code></a> method will return true
-on the returned instance.</div>
+it is invoked. The returned object must not be reused across
+distinct units of work or shared between concurrent threads.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>map</code> - properties for entity manager</dd>
+<dd><code>properties</code> - properties and hints affecting the behavior
+                  of the returned entity manager</dd>
 <dt>Returns:</dt>
-<dd>entity manager instance</dd>
+<dd>a new <a href="EntityHandler.html#isOpen()">open</a> entity
+        manager</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory
-has been closed</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="createEntityManager(jakarta.persistence.SynchronizationType)">
-<h3>createEntityManager</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></span>&nbsp;<span class="element-name">createEntityManager</span><wbr><span class="parameters">(<a href="SynchronizationType.html" title="enum class in jakarta.persistence">SynchronizationType</a>&nbsp;synchronizationType)</span></div>
-<div class="block">Create a new JTA application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
-the specified synchronization type. This method returns a new
-<code>EntityManager</code> instance each time it is invoked.
-<p>The <a href="EntityHandler.html#isOpen()"><code>EntityHandler.isOpen()</code></a> method will return true on
-the returned instance.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>synchronizationType</code> - how and when the entity manager should
-                            be synchronized with the current JTA
-                            transaction</dd>
-<dt>Returns:</dt>
-<dd>entity manager instance</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory has
-been configured for resource-local entity managers or is closed</dd>
-<dt>Since:</dt>
-<dd>2.1</dd>
+        has been closed</dd>
+<dt>API note:</dt>
+<dd>The use of named properties lacks type safety compared
+to the use of <a href="EntityManager.CreationOption.html" title="interface in jakarta.persistence">options</a>.</dd>
 </dl>
 </div>
 </section>
@@ -563,47 +542,60 @@ been configured for resource-local entity managers or is closed</dd>
 <section class="detail" id="createEntityManager(jakarta.persistence.SynchronizationType,java.util.Map)">
 <h3>createEntityManager</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></span>&nbsp;<span class="element-name">createEntityManager</span><wbr><span class="parameters">(<a href="SynchronizationType.html" title="enum class in jakarta.persistence">SynchronizationType</a>&nbsp;synchronizationType,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;map)</span></div>
-<div class="block">Create a new JTA application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
-the specified synchronization type and map of properties. This
-method returns a new <code>EntityManager</code> instance each time it
-is invoked.
-<p>The <a href="EntityHandler.html#isOpen()"><code>EntityHandler.isOpen()</code></a> method will return true on the
-returned instance.</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></span>&nbsp;<span class="element-name">createEntityManager</span><wbr><span class="parameters">(@Nonnull
+ <a href="SynchronizationType.html" title="enum class in jakarta.persistence">SynchronizationType</a>&nbsp;synchronizationType,
+ @Nullable
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;properties)</span></div>
+<div class="block">Create a new application-managed JTA <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
+the specified <a href="SynchronizationType.html" title="enum class in jakarta.persistence">synchronization
+type</a> and given property settings. This method returns a new
+<code>EntityManager</code> instance each time it is invoked. The
+returned object must not be reused across distinct units of work
+or shared between concurrent threads.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>synchronizationType</code> - how and when the entity manager should
-                            be synchronized with the current JTA
-                            transaction</dd>
-<dd><code>map</code> - properties for entity manager</dd>
+                           be synchronized with the current JTA
+                           transaction</dd>
+<dd><code>properties</code> - properties and hints affecting the behavior
+                  of the returned entity manager</dd>
 <dt>Returns:</dt>
-<dd>entity manager instance</dd>
+<dd>a new <a href="EntityHandler.html#isOpen()">open</a> entity
+        manager</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory has
-been configured for resource-local entity managers or is closed</dd>
+        <a href="PersistenceUnitTransactionType.html#RESOURCE_LOCAL">resource local</a> transaction type or has been closed</dd>
 <dt>Since:</dt>
 <dd>2.1</dd>
+<dt>API note:</dt>
+<dd>The use of named properties lacks type safety compared
+to the use of <a href="EntityManager.CreationOption.html" title="interface in jakarta.persistence">options</a>.</dd>
 </dl>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="createEntityAgent()">
+<section class="detail" id="createEntityAgent(jakarta.persistence.EntityAgent.CreationOption...)">
 <h3>createEntityAgent</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></span>&nbsp;<span class="element-name">createEntityAgent</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></span>&nbsp;<span class="element-name">createEntityAgent</span><wbr><span class="parameters">(@Nullable
+ <a href="EntityAgent.CreationOption.html" title="interface in jakarta.persistence">EntityAgent.CreationOption</a>...&nbsp;options)</span></div>
 <div class="block">Create a new application-managed <a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a>. This
 method returns a new <code>EntityAgent</code> instance each time
-it is invoked.
-<p>The <a href="EntityHandler.html#isOpen()"><code>EntityHandler.isOpen()</code></a> method will return true
-on the returned instance.</div>
+it is invoked. The returned object most not be shared
+between concurrent threads.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>options</code> - options controlling the behavior of the entity
+               agent</dd>
 <dt>Returns:</dt>
-<dd>entity agent instance</dd>
+<dd>a new <a href="EntityHandler.html#isOpen()">open</a> entity
+        agent</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory
-has been closed</dd>
+        has been closed</dd>
 <dt>Since:</dt>
 <dd>4.0</dd>
 </dl>
@@ -614,23 +606,29 @@ has been closed</dd>
 <section class="detail" id="createEntityAgent(java.util.Map)">
 <h3>createEntityAgent</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></span>&nbsp;<span class="element-name">createEntityAgent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;map)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></span>&nbsp;<span class="element-name">createEntityAgent</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;properties)</span></div>
 <div class="block">Create a new application-managed <a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a> with
 the given <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link"><code>Map</code></a> specifying property settings. This
 method returns a new <code>EntityAgent</code> instance each time
-it is invoked.
-<p>The <a href="EntityHandler.html#isOpen()"><code>EntityHandler.isOpen()</code></a> method will return true
-on the returned instance.</div>
+it is invoked. The returned object must not be shared
+between concurrent threads.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>map</code> - properties for entity agent</dd>
+<dd><code>properties</code> - properties and hints affecting the behavior
+                  of the returned entity agent</dd>
 <dt>Returns:</dt>
-<dd>entity agent instance</dd>
+<dd>a new <a href="EntityHandler.html#isOpen()">open</a> entity
+        agent</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory
-has been closed</dd>
+        has been closed</dd>
 <dt>Since:</dt>
 <dd>4.0</dd>
+<dt>API note:</dt>
+<dd>The use of named properties lacks type safety compared
+to the use of <a href="EntityAgent.CreationOption.html" title="interface in jakarta.persistence">options</a>.</dd>
 </dl>
 </div>
 </section>
@@ -639,7 +637,8 @@ has been closed</dd>
 <section class="detail" id="getCriteriaBuilder()">
 <h3>getCriteriaBuilder</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></span>&nbsp;<span class="element-name">getCriteriaBuilder</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></span>&nbsp;<span class="element-name">getCriteriaBuilder</span>()</div>
 <div class="block">Return an instance of <a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria"><code>CriteriaBuilder</code></a> which may be used
 to construct <a href="criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria"><code>CriteriaQuery</code></a>
 objects.</div>
@@ -648,7 +647,7 @@ objects.</div>
 <dd>an instance of <a href="criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria"><code>CriteriaBuilder</code></a></dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory has
-been closed</dd>
+        been closed</dd>
 <dt>Since:</dt>
 <dd>2.0</dd>
 <dt>See Also:</dt>
@@ -665,7 +664,8 @@ been closed</dd>
 <section class="detail" id="getMetamodel()">
 <h3>getMetamodel</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel">Metamodel</a></span>&nbsp;<span class="element-name">getMetamodel</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel">Metamodel</a></span>&nbsp;<span class="element-name">getMetamodel</span>()</div>
 <div class="block">Return an instance of the <a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel"><code>Metamodel</code></a> interface for access
 to the metamodel of the persistence unit.</div>
 <dl class="notes">
@@ -673,7 +673,7 @@ to the metamodel of the persistence unit.</div>
 <dd>an instance of <a href="metamodel/Metamodel.html" title="interface in jakarta.persistence.metamodel"><code>Metamodel</code></a></dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory
-has been closed</dd>
+        has been closed</dd>
 <dt>Since:</dt>
 <dd>2.0</dd>
 </dl>
@@ -710,7 +710,7 @@ entity managers are considered to be in the closed state.</div>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory
-has been closed</dd>
+        has been closed</dd>
 </dl>
 </div>
 </section>
@@ -719,7 +719,8 @@ has been closed</dd>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
 <div class="block">The name of the persistence unit.</div>
 <dl class="notes">
 <dt>Since:</dt>
@@ -732,7 +733,8 @@ has been closed</dd>
 <section class="detail" id="getProperties()">
 <h3>getProperties</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getProperties</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getProperties</span>()</div>
 <div class="block">Get the properties and associated values that are in effect
 for the entity manager factory. Changing the contents of the
 map does not change the configuration in effect.</div>
@@ -741,7 +743,7 @@ map does not change the configuration in effect.</div>
 <dd>properties</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory 
-has been closed</dd>
+        has been closed</dd>
 <dt>Since:</dt>
 <dd>2.0</dd>
 </dl>
@@ -752,7 +754,8 @@ has been closed</dd>
 <section class="detail" id="getCache()">
 <h3>getCache</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Cache.html" title="interface in jakarta.persistence">Cache</a></span>&nbsp;<span class="element-name">getCache</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="Cache.html" title="interface in jakarta.persistence">Cache</a></span>&nbsp;<span class="element-name">getCache</span>()</div>
 <div class="block">Access the cache that is associated with the entity manager 
 factory (the "second level cache").</div>
 <dl class="notes">
@@ -761,7 +764,7 @@ factory (the "second level cache").</div>
 second-level cache in use</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory
-has been closed</dd>
+        has been closed</dd>
 <dt>Since:</dt>
 <dd>2.0</dd>
 </dl>
@@ -772,7 +775,8 @@ has been closed</dd>
 <section class="detail" id="getPersistenceUnitUtil()">
 <h3>getPersistenceUnitUtil</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="PersistenceUnitUtil.html" title="interface in jakarta.persistence">PersistenceUnitUtil</a></span>&nbsp;<span class="element-name">getPersistenceUnitUtil</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="PersistenceUnitUtil.html" title="interface in jakarta.persistence">PersistenceUnitUtil</a></span>&nbsp;<span class="element-name">getPersistenceUnitUtil</span>()</div>
 <div class="block">Return interface providing access to utility methods for the
 persistence unit.</div>
 <dl class="notes">
@@ -780,7 +784,7 @@ persistence unit.</div>
 <dd>an instance of <a href="PersistenceUnitUtil.html" title="interface in jakarta.persistence"><code>PersistenceUnitUtil</code></a></dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory
-has been closed</dd>
+        has been closed</dd>
 <dt>Since:</dt>
 <dd>2.0</dd>
 </dl>
@@ -791,7 +795,8 @@ has been closed</dd>
 <section class="detail" id="getTransactionType()">
 <h3>getTransactionType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="PersistenceUnitTransactionType.html" title="enum class in jakarta.persistence">PersistenceUnitTransactionType</a></span>&nbsp;<span class="element-name">getTransactionType</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="PersistenceUnitTransactionType.html" title="enum class in jakarta.persistence">PersistenceUnitTransactionType</a></span>&nbsp;<span class="element-name">getTransactionType</span>()</div>
 <div class="block">The type of transaction management used by this persistence
 unit, either resource-local transaction management, or JTA.</div>
 <dl class="notes">
@@ -805,7 +810,8 @@ unit, either resource-local transaction management, or JTA.</div>
 <section class="detail" id="getSchemaManager()">
 <h3>getSchemaManager</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="SchemaManager.html" title="interface in jakarta.persistence">SchemaManager</a></span>&nbsp;<span class="element-name">getSchemaManager</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="SchemaManager.html" title="interface in jakarta.persistence">SchemaManager</a></span>&nbsp;<span class="element-name">getSchemaManager</span>()</div>
 <div class="block">Return interface providing access to schema management
 operations for the persistence unit.</div>
 <dl class="notes">
@@ -813,7 +819,7 @@ operations for the persistence unit.</div>
 <dd>an instance of <a href="SchemaManager.html" title="interface in jakarta.persistence"><code>SchemaManager</code></a></dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the entity manager factory
-has been closed</dd>
+        has been closed</dd>
 <dt>Since:</dt>
 <dd>3.2</dd>
 </dl>
@@ -824,7 +830,9 @@ has been closed</dd>
 <section class="detail" id="addNamedQuery(java.lang.String,jakarta.persistence.Query)">
 <h3>addNamedQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addNamedQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addNamedQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="Query.html" title="interface in jakarta.persistence">Query</a>&nbsp;query)</span></div>
 <div class="block">Define the query, typed query, or stored procedure query as
 a named query such that future query objects can be created
@@ -860,7 +868,10 @@ definition is replaced.</div>
 <section class="detail" id="addNamedQuery(java.lang.String,jakarta.persistence.TypedQuery)">
 <h3>addNamedQuery</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;R&gt;</span>&nbsp;<span class="element-name">addNamedQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;R&gt;</span>&nbsp;<span class="element-name">addNamedQuery</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;R&gt;&nbsp;query)</span></div>
 <div class="block">Define the given <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a> as a named query such that
 future query objects can be created from it by calling either
@@ -882,6 +893,8 @@ query objects created from it by calling <code>createNamedQuery</code>.
 either statically via metadata or via this method, that query
 definition is replaced.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addNamedQuery(java.lang.String,jakarta.persistence.TypedQuery)-type-param-R"><code>R</code> - the query result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - name for the query</dd>
 <dd><code>query</code> - a <a href="TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a></dd>
@@ -904,7 +917,10 @@ definition is replaced.</div>
 <section class="detail" id="addNamedStatement(java.lang.String,jakarta.persistence.Statement)">
 <h3>addNamedStatement</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></span>&nbsp;<span class="element-name">addNamedStatement</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></span>&nbsp;<span class="element-name">addNamedStatement</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nonnull
  <a href="Statement.html" title="interface in jakarta.persistence">Statement</a>&nbsp;statement)</span></div>
 <div class="block">Define the given <a href="Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> as a named statement such that
 future statement objects can be created from it by calling either
@@ -947,12 +963,16 @@ definition is replaced.</div>
 <section class="detail" id="unwrap(java.lang.Class)">
 <h3>unwrap</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">unwrap</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;cls)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">unwrap</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;cls)</span></div>
 <div class="block">Return an object of the specified type to allow access to
 a provider-specific API. If the provider implementation of
 <code>EntityManagerFactory</code> does not support the given
 type, the <a href="PersistenceException.html" title="class in jakarta.persistence"><code>PersistenceException</code></a> is thrown.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="unwrap(java.lang.Class)-type-param-T"><code>T</code> - the type of the object to be returned</span></dd>
 <dt>Parameters:</dt>
 <dd><code>cls</code> - the class of the object to be returned.
            This is usually either the underlying class
@@ -962,7 +982,7 @@ type, the <a href="PersistenceException.html" title="class in jakarta.persistenc
 <dd>an instance of the specified class</dd>
 <dt>Throws:</dt>
 <dd><code><a href="PersistenceException.html" title="class in jakarta.persistence">PersistenceException</a></code> - if the provider does not support
-       the given type</dd>
+        the given type</dd>
 <dt>Since:</dt>
 <dd>2.1</dd>
 </dl>
@@ -973,12 +993,16 @@ type, the <a href="PersistenceException.html" title="class in jakarta.persistenc
 <section class="detail" id="addNamedEntityGraph(java.lang.String,jakarta.persistence.EntityGraph)">
 <h3>addNamedEntityGraph</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addNamedEntityGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;graphName,
+<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addNamedEntityGraph</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;graphName,
+ @Nonnull
  <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;T&gt;&nbsp;entityGraph)</span></div>
 <div class="block">Add a named copy of the given <a href="EntityGraph.html" title="interface in jakarta.persistence"><code>EntityGraph</code></a> to this
 <code>EntityManagerFactory</code>. If an entity graph with the
 given name already exists, it is replaced.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addNamedEntityGraph(java.lang.String,jakarta.persistence.EntityGraph)-type-param-T"><code>T</code> - the entity graph type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>graphName</code> - name for the entity graph</dd>
 <dd><code>entityGraph</code> - entity graph</dd>
@@ -992,7 +1016,9 @@ given name already exists, it is replaced.</div>
 <section class="detail" id="getNamedQueries(java.lang.Class)">
 <h3>getNamedQueries</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;R&gt;&gt;</span>&nbsp;<span class="element-name">getNamedQueries</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a>&lt;R&gt;&gt;</span>&nbsp;<span class="element-name">getNamedQueries</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</span></div>
 <div class="block">A map keyed by <a href="NamedQuery.html#name()">query name</a>, containing
 <a href="TypedQueryReference.html" title="interface in jakarta.persistence">references</a> to every named query whose
 result type is assignable to the given Java type.</div>
@@ -1022,7 +1048,8 @@ result type is assignable to the given Java type.</div>
 <section class="detail" id="getNamedStatements()">
 <h3>getNamedStatements</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&gt;</span>&nbsp;<span class="element-name">getNamedStatements</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="StatementReference.html" title="interface in jakarta.persistence">StatementReference</a>&gt;</span>&nbsp;<span class="element-name">getNamedStatements</span>()</div>
 <div class="block">A map keyed by <a href="NamedStatement.html#name()">query name</a>, containing
 <a href="StatementReference.html" title="interface in jakarta.persistence">references</a> to every named statement.</div>
 <dl class="notes">
@@ -1046,7 +1073,9 @@ result type is assignable to the given Java type.</div>
 <section class="detail" id="getNamedEntityGraphs(java.lang.Class)">
 <h3>getNamedEntityGraphs</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? extends E&gt;&gt;</span>&nbsp;<span class="element-name">getNamedEntityGraphs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;entityType)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="EntityGraph.html" title="interface in jakarta.persistence">EntityGraph</a>&lt;? extends E&gt;&gt;</span>&nbsp;<span class="element-name">getNamedEntityGraphs</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;entityType)</span></div>
 <div class="block">A map keyed by <a href="NamedEntityGraph.html#name()">graph name</a>, containing
 every named <a href="EntityGraph.html" title="interface in jakarta.persistence">entity graph</a> whose entity type is
 assignable to the given Java type.</div>
@@ -1074,7 +1103,9 @@ assignable to the given Java type.</div>
 <section class="detail" id="getResultSetMappings(java.lang.Class)">
 <h3>getResultSetMappings</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&gt;</span>&nbsp;<span class="element-name">getResultSetMappings</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;R&gt;&gt;</span>&nbsp;<span class="element-name">getResultSetMappings</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;resultType)</span></div>
 <div class="block">A map keyed by <a href="SqlResultSetMapping.html#name()">name</a>, containing
 a typed <a href="sql/ResultSetMapping.html" title="interface in jakarta.persistence.sql"><code>ResultSetMapping</code></a> for every result set mapping defined
 <a href="SqlResultSetMapping.html" title="annotation interface in jakarta.persistence">in annotations</a> whose inferred result
@@ -1097,8 +1128,12 @@ type is exactly the given Java type.</div>
 <section class="detail" id="addListener(java.lang.Class,java.lang.Class,java.util.function.Consumer)">
 <h3>addListener</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="EntityListenerRegistration.html" title="interface in jakarta.persistence">EntityListenerRegistration</a></span>&nbsp;<span class="element-name">addListener</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;entityType,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;E&gt;</span>&nbsp;<span class="return-type"><a href="EntityListenerRegistration.html" title="interface in jakarta.persistence">EntityListenerRegistration</a></span>&nbsp;<span class="element-name">addListener</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;entityType,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>&gt;&nbsp;callbackType,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;? super E&gt;&nbsp;listener)</span></div>
 <div class="block">Register a listener for the given kind of entity lifecycle event
 and given entity type, returning an <a href="EntityListenerRegistration.html" title="interface in jakarta.persistence"><code>EntityListenerRegistration</code></a>
@@ -1112,6 +1147,8 @@ for example, <a href="PostPersist.html" title="annotation interface in jakarta.p
 event of the given type occurs for any entity assignable to the given
 entity type, the listener is invoked with the entity instance.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="addListener(java.lang.Class,java.lang.Class,java.util.function.Consumer)-type-param-E"><code>E</code> - the entity type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>entityType</code> - An entity class, or any supertype of an entity
                   class</dd>
@@ -1142,7 +1179,8 @@ entity type, the listener is invoked with the entity instance.</div>
 <section class="detail" id="runInTransaction(java.util.function.Consumer)">
 <h3>runInTransaction</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">runInTransaction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a>&gt;&nbsp;work)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">runInTransaction</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a>&gt;&nbsp;work)</span></div>
 <div class="block">Create a new application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with an active
 transaction, and execute the given function, passing the <code>EntityManager</code>
 to the function.
@@ -1175,7 +1213,8 @@ control to the client.</div>
 <section class="detail" id="callInTransaction(java.util.function.Function)">
 <h3>callInTransaction</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">callInTransaction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a>, R&gt;&nbsp;work)</span></div>
+<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">callInTransaction</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EntityManager.html" title="interface in jakarta.persistence">EntityManager</a>, R&gt;&nbsp;work)</span></div>
 <div class="block">Create a new application-managed <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with an active
 transaction, and call the given function, passing the <code>EntityManager</code>
 to the function.
@@ -1197,6 +1236,8 @@ exception, the transaction is rolled back, and the exception is rethrown.
 Finally, the <code>EntityManager</code> is closed before this method returns
 control to the client.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="callInTransaction(java.util.function.Function)-type-param-R"><code>R</code> - the function result type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>work</code> - a function to be called in the scope of the transaction</dd>
 <dt>Returns:</dt>
@@ -1211,7 +1252,9 @@ control to the client.</div>
 <section class="detail" id="runInTransaction(java.lang.Class,java.util.function.Consumer)">
 <h3>runInTransaction</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;H extends <a href="EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a>&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">runInTransaction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;H&gt;&nbsp;handlerClass,
+<div class="member-signature"><span class="type-parameters">&lt;H extends <a href="EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a>&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">runInTransaction</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;H&gt;&nbsp;handlerClass,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;H&gt;&nbsp;work)</span></div>
 <div class="block">Create a new application-managed <a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> of the given type,
 with an active transaction, and execute the given function, passing the
@@ -1233,6 +1276,8 @@ the exception is rethrown.
 Finally, the <code>EntityHandler</code> is closed before this method returns
 control to the client.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="runInTransaction(java.lang.Class,java.util.function.Consumer)-type-param-H"><code>H</code> - the entity handler type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>handlerClass</code> - the type of <a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> to create, for
                     example, <a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent.class</code></a>.</dd>
@@ -1247,7 +1292,9 @@ control to the client.</div>
 <section class="detail" id="callInTransaction(java.lang.Class,java.util.function.Function)">
 <h3>callInTransaction</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;R, H extends <a href="EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a>&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">callInTransaction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;H&gt;&nbsp;handlerClass,
+<div class="member-signature"><span class="type-parameters">&lt;R, H extends <a href="EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a>&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">callInTransaction</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;H&gt;&nbsp;handlerClass,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;H,<wbr>R&gt;&nbsp;work)</span></div>
 <div class="block">Create a new application-managed <a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> of the given type,
 with an active transaction, and call the given function, passing the
@@ -1270,6 +1317,9 @@ exception, the transaction is rolled back, and the exception is rethrown.
 Finally, the <code>EntityHandler</code> is closed before this method returns
 control to the client.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="callInTransaction(java.lang.Class,java.util.function.Function)-type-param-R"><code>R</code> - the function result type</span></dd>
+<dd><span id="callInTransaction(java.lang.Class,java.util.function.Function)-type-param-H"><code>H</code> - the entity handler type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>handlerClass</code> - the type of <a href="EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> to create, for
                     example, <a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent.class</code></a>.</dd>

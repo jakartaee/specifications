@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -83,6 +83,10 @@ attribute.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>2.0</dd>
+<dt>API note:</dt>
+<dd>This is an SPI interface forming part of the Jakarta EE
+container / persistence provider contract. It is not intended for
+direct use by application programs.</dd>
 </dl>
 </div>
 </section>
@@ -141,7 +145,10 @@ this method returns <a href="LoadState.html#LOADED"><code>LoadState.LOADED</code
 <section class="detail" id="isLoadedWithoutReference(java.lang.Object,java.lang.String)">
 <h3>isLoadedWithoutReference</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="LoadState.html" title="enum class in jakarta.persistence.spi">LoadState</a></span>&nbsp;<span class="element-name">isLoadedWithoutReference</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="LoadState.html" title="enum class in jakarta.persistence.spi">LoadState</a></span>&nbsp;<span class="element-name">isLoadedWithoutReference</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">If the provider determines that the entity has been provided by
 itself and that the state of the specified attribute has been loaded,
@@ -171,7 +178,10 @@ provider.</div>
 <section class="detail" id="isLoadedWithReference(java.lang.Object,java.lang.String)">
 <h3>isLoadedWithReference</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="LoadState.html" title="enum class in jakarta.persistence.spi">LoadState</a></span>&nbsp;<span class="element-name">isLoadedWithReference</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="LoadState.html" title="enum class in jakarta.persistence.spi">LoadState</a></span>&nbsp;<span class="element-name">isLoadedWithReference</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">If the provider determines that the entity has been provided by
 itself and that the state of the specified attribute has been loaded,
@@ -202,7 +212,9 @@ state will have already been determined by
 <section class="detail" id="isLoaded(java.lang.Object)">
 <h3>isLoaded</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="LoadState.html" title="enum class in jakarta.persistence.spi">LoadState</a></span>&nbsp;<span class="element-name">isLoaded</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="LoadState.html" title="enum class in jakarta.persistence.spi">LoadState</a></span>&nbsp;<span class="element-name">isLoaded</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">If the provider determines that the entity has been provided by
 itself and that the state of all attributes for which
 <a href="../FetchType.html#EAGER"><code>FetchType.EAGER</code></a> has been specified have been loaded, this

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -172,7 +172,8 @@ the given join type.</div>
 <section class="detail" id="getFetches()">
 <h3>getFetches</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getFetches</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">getFetches</span>()</div>
 <div class="block">Return the fetch joins that have been made from this type.
 Returns empty set if no fetch joins have been made from
 this type.
@@ -188,10 +189,14 @@ Modifications to the set do not affect the query.</div>
 <section class="detail" id="fetch(jakarta.persistence.metamodel.SingularAttribute)">
 <h3>fetch</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in FetchParent">X</a>, Y&gt;&nbsp;attribute)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in FetchParent">X</a>, Y&gt;&nbsp;attribute)</span></div>
 <div class="block">Create a fetch join to the specified single-valued attribute 
 using an inner join.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="fetch(jakarta.persistence.metamodel.SingularAttribute)-type-param-Y"><code>Y</code> - the type of the fetched attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>attribute</code> - target of the join</dd>
 <dt>Returns:</dt>
@@ -204,11 +209,16 @@ using an inner join.</div>
 <section class="detail" id="fetch(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.JoinType)">
 <h3>fetch</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(<a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in FetchParent">X</a>, Y&gt;&nbsp;attribute,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/SingularAttribute.html" title="interface in jakarta.persistence.metamodel">SingularAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in FetchParent">X</a>, Y&gt;&nbsp;attribute,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a fetch join to the specified single-valued attribute 
 using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="fetch(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the type of the fetched attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>attribute</code> - target of the join</dd>
 <dd><code>jt</code> - join type</dd>
@@ -222,10 +232,14 @@ using the given join type.</div>
 <section class="detail" id="fetch(jakarta.persistence.metamodel.PluralAttribute)">
 <h3>fetch</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(<a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in FetchParent">X</a>, ?, Y&gt;&nbsp;attribute)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in FetchParent">X</a>, ?, Y&gt;&nbsp;attribute)</span></div>
 <div class="block">Create a fetch join to the specified collection-valued 
 attribute using an inner join.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="fetch(jakarta.persistence.metamodel.PluralAttribute)-type-param-Y"><code>Y</code> - the type of the fetched attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>attribute</code> - target of the join</dd>
 <dt>Returns:</dt>
@@ -238,11 +252,16 @@ attribute using an inner join.</div>
 <section class="detail" id="fetch(jakarta.persistence.metamodel.PluralAttribute,jakarta.persistence.criteria.JoinType)">
 <h3>fetch</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(<a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in FetchParent">X</a>, ?, Y&gt;&nbsp;attribute,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(@Nonnull
+ <a href="../metamodel/PluralAttribute.html" title="interface in jakarta.persistence.metamodel">PluralAttribute</a>&lt;? super <a href="#type-param-X" title="type parameter in FetchParent">X</a>, ?, Y&gt;&nbsp;attribute,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a fetch join to the specified collection-valued 
 attribute using the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="fetch(jakarta.persistence.metamodel.PluralAttribute,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the type of the fetched attribute</span></dd>
 <dt>Parameters:</dt>
 <dd><code>attribute</code> - target of the join</dd>
 <dd><code>jt</code> - join type</dd>
@@ -256,18 +275,28 @@ attribute using the given join type.</div>
 <section class="detail" id="fetch(java.lang.String)">
 <h3>fetch</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block">Create a fetch join to the specified attribute using an 
 inner join.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="fetch(java.lang.String)-type-param-Y"><code>Y</code> - the type of the fetched attribute</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
+<dd><code>attributeName</code> - the name of the attribute for the
        target of the join</dd>
 <dt>Returns:</dt>
 <dd>the resulting fetch join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#fetch(jakarta.persistence.metamodel.SingularAttribute)"><code>fetch(SingularAttribute)</code></a>
+         or <a href="#fetch(jakarta.persistence.metamodel.PluralAttribute)"><code>fetch(PluralAttribute)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>
@@ -276,20 +305,31 @@ inner join.</div>
 <section class="detail" id="fetch(java.lang.String,jakarta.persistence.criteria.JoinType)">
 <h3>fetch</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;Y&gt;</span>&nbsp;<span class="return-type"><a href="Fetch.html" title="interface in jakarta.persistence.criteria">Fetch</a>&lt;<a href="#type-param-X" title="type parameter in FetchParent">X</a>,<wbr>Y&gt;</span>&nbsp;<span class="element-name">fetch</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName,
+ @Nonnull
  <a href="JoinType.html" title="enum class in jakarta.persistence.criteria">JoinType</a>&nbsp;jt)</span></div>
 <div class="block">Create a fetch join to the specified attribute using 
 the given join type.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="fetch(java.lang.String,jakarta.persistence.criteria.JoinType)-type-param-Y"><code>Y</code> - the type of the fetched attribute</span></dd>
 <dt>Parameters:</dt>
-<dd><code>attributeName</code> - name of the attribute for the
-             target of the join</dd>
-<dd><code>jt</code> - join type</dd>
+<dd><code>attributeName</code> - the name of the attribute that is the
+       target of the join</dd>
+<dd><code>jt</code> - the join type</dd>
 <dt>Returns:</dt>
 <dd>the resulting fetch join</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if attribute of the given
-        name does not exist</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no attribute
+        with the given name</dd>
+<dt>API note:</dt>
+<dd>This method accepts a string-valued attribute name,
+         and lacks type safety compared to passing a static
+         metamodel element to <a href="#fetch(jakarta.persistence.metamodel.SingularAttribute,jakarta.persistence.criteria.JoinType)"><code>fetch(SingularAttribute, JoinType)</code></a>
+         or <a href="#fetch(jakarta.persistence.metamodel.PluralAttribute,jakarta.persistence.criteria.JoinType)"><code>fetch(PluralAttribute, JoinType)</code></a>.
+         Use of the typesafe version is strongly preferred.</dd>
 </dl>
 </div>
 </section>

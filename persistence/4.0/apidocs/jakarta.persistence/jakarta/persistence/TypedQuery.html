@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
@@ -98,6 +99,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#setTimeout(java.lang.Integer)" tabindex="0">setTimeout(Integer)</a></li>
 <li><a href="#setTimeout(jakarta.persistence.Timeout)" tabindex="0">setTimeout(Timeout)</a></li>
 <li><a href="#executeUpdate()" tabindex="0">executeUpdate()</a></li>
+<li><a href="#addOption(jakarta.persistence.TypedQuery.Option)" tabindex="0">addOption(TypedQuery.Option)</a></li>
+<li><a href="#getOptions()" tabindex="0">getOptions()</a></li>
 </ol>
 </li>
 </ol>
@@ -146,11 +149,39 @@ query if it returns a result set.</div>
 <li><a href="StatementOrTypedQuery.html#withResultSetMapping(jakarta.persistence.sql.ResultSetMapping)"><code>StatementOrTypedQuery.withResultSetMapping(jakarta.persistence.sql.ResultSetMapping)</code></a></li>
 </ul>
 </dd>
+<dt>API note:</dt>
+<dd>Just like any other data access API, including JDBC
+itself, native SQL query strings and Jakarta Persistence query
+language strings executed via this API must never be composed
+by concatenating user input or other untrusted data. User
+input should be properly validated and passed as a
+<a href="#setParameter(java.lang.String,java.lang.Object)">parameter</a> to a
+parameterized query string. In particular, native SQL query
+strings executed via this API are typically executed verbatim
+with no additional validation or sanitization beyond that
+performed by the JDBC driver.</dd>
 </dl>
 </div>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Interface</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="TypedQuery.Option.html" class="type-name-link" title="interface in jakarta.persistence">TypedQuery.Option</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">An option influencing execution of a typed query.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method-summary">
@@ -162,52 +193,65 @@ query if it returns a result set.</div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#executeUpdate()" class="member-name-link">executeUpdate</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a><wbr>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addOption(jakarta.persistence.TypedQuery.Option)" class="member-name-link">addOption</a><wbr>(<a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a>&nbsp;option)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Specify an <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">option</a> influencing execution
+of this typed query, overwriting any existing option of the
+same type.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#executeUpdate()" class="member-name-link">executeUpdate</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
 <div class="deprecation-comment">This operation should never be called on a <code>TypedQuery</code>.</div>
 </div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieval mode</a> in
 effect during query execution.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheStoreMode()" class="member-name-link">getCacheStoreMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCacheStoreMode()" class="member-name-link">getCacheStoreMode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <a href="CacheStoreMode.html" title="enum class in jakarta.persistence">cache storage mode</a> in effect
 during query execution.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFirstResult()" class="member-name-link">getFirstResult</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFirstResult()" class="member-name-link">getFirstResult</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The position of the first result returned to the client,
 as specified by <a href="#setFirstResult(int)"><code>setFirstResult(int)</code></a>, or <code>0</code> if
 <a href="#setFirstResult(int)"><code>setFirstResult(int)</code></a> was not called.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLockMode()" class="member-name-link">getLockMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLockMode()" class="member-name-link">getLockMode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The current <a href="LockModeType.html" title="enum class in jakarta.persistence">lock mode</a> for the
 query or <code>null</code> if a lock mode has not been set.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLockScope()" class="member-name-link">getLockScope</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLockScope()" class="member-name-link">getLockScope</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The current <a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">pessimistic
 lock scope</a> for the query or <code>null</code> if a scope has
 not been set.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMaxResults()" class="member-name-link">getMaxResults</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMaxResults()" class="member-name-link">getMaxResults</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The maximum number of results returned to the client,
 as specified by <a href="#setMaxResults(int)"><code>setMaxResults(int)</code></a>, or
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html#MAX_VALUE" title="class or interface in java.lang" class="external-link">2147483647</a> if <a href="#setMaxResults(int)"><code>setMaxResults(int)</code></a>
 was not called.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOptions()" class="member-name-link">getOptions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">options</a> influencing execution of
+this typed query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResultCount()" class="member-name-link">getResultCount</a>()</code></div>
@@ -487,7 +531,8 @@ results to be fetched from the database.</p></div>
 <section class="detail" id="getResultList()">
 <h3>getResultList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">getResultList</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">getResultList</span>()</div>
 <div class="block">Execute the query and return the query results as a typed
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List&lt;X&gt;</code></a>. If necessary, first synchronize
 changes with the database by flushing the persistence context.</div>
@@ -564,7 +609,8 @@ flushing the persistence context.</div>
 <section class="detail" id="getResultStream()">
 <h3>getResultStream</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">getResultStream</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">getResultStream</span>()</div>
 <div class="block">Execute the query and return the query results as a typed
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link"><code>Stream&lt;X&gt;</code></a>. If necessary, first synchronize
 changes with the database by flushing the persistence context.
@@ -613,7 +659,8 @@ to override this method to provide additional capabilities.</div>
 <section class="detail" id="getSingleResultOrNull()">
 <h3>getSingleResultOrNull</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="#type-param-X" title="type parameter in TypedQuery">X</a></span>&nbsp;<span class="element-name">getSingleResultOrNull</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="#type-param-X" title="type parameter in TypedQuery">X</a></span>&nbsp;<span class="element-name">getSingleResultOrNull</span>()</div>
 <div class="block">Execute the query, returning a single typed result, or
 <code>null</code> if the query has no results. If necessary, first
 synchronize changes with the database by flushing the persistence
@@ -655,7 +702,8 @@ context.</div>
 <section class="detail" id="setMaxResults(int)">
 <h3>setMaxResults</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setMaxResults</span><wbr><span class="parameters">(int&nbsp;maxResult)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setMaxResults</span><wbr><span class="parameters">(int&nbsp;maxResult)</span></div>
 <div class="block">Set the maximum number of results returned to the client.
 If the query has more results than the given maximum,
 results are excluded from the list returned by
@@ -680,7 +728,8 @@ those which would otherwise occur later in the list.</div>
 <section class="detail" id="setFirstResult(int)">
 <h3>setFirstResult</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setFirstResult</span><wbr><span class="parameters">(int&nbsp;startPosition)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setFirstResult</span><wbr><span class="parameters">(int&nbsp;startPosition)</span></div>
 <div class="block">Set the position of the first query result returned to
 the client. The given number of results is excluded
 from the list returned by <a href="#getResultList()"><code>getResultList()</code></a>.
@@ -744,14 +793,16 @@ as specified by <a href="#setFirstResult(int)"><code>setFirstResult(int)</code><
 <section class="detail" id="setHint(java.lang.String,java.lang.Object)">
 <h3>setHint</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setHint</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setHint</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;hintName,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
-<div class="block">Set a query property or hint. The hints elements may be used 
-to specify query properties and hints. Properties defined by
-this specification must be observed by the provider. 
+<div class="block">Set a query property or hint. Properties defined by this
+specification must be observed by the persistence provider.
 Vendor-specific hints that are not recognized by a provider
 must be silently ignored. Portable applications should not
-rely on the standard timeout hint. Depending on the database
+rely on the standard timeout hint; depending on the database
 in use and the locking mechanisms used by the provider,
 this hint may or may not be observed.</div>
 <dl class="notes">
@@ -763,8 +814,13 @@ this hint may or may not be observed.</div>
 <dt>Returns:</dt>
 <dd>the same query instance</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the second argument is not
-        valid for the implementation</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the given property or
+        hint name is recognized by the provider, but the
+        second argument is not a legal value for the given
+        property or hint</dd>
+<dt>API note:</dt>
+<dd>The use of named hints lacks type safety compared
+         to the use of <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">options</a>.</dd>
 </dl>
 </div>
 </section>
@@ -773,13 +829,18 @@ this hint may or may not be observed.</div>
 <section class="detail" id="setParameter(jakarta.persistence.Parameter,T)">
 <h3 id="setParameter(jakarta.persistence.Parameter,java.lang.Object)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;T&gt;&nbsp;parameter,
+ @Nullable
  T&nbsp;value)</span></div>
 <div class="block">Bind an argument to a parameter of this query respresented as
 a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parameter</code></a> object.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(jakarta.persistence.Parameter,T)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(jakarta.persistence.Parameter,T)-type-param-T"><code>T</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>parameter</code> - The parameter object</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -798,8 +859,12 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
+@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&gt;&nbsp;param,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -827,8 +892,12 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
+@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="Parameter.html" title="interface in jakarta.persistence">Parameter</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&gt;&nbsp;param,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -855,7 +924,10 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <section class="detail" id="setParameter(java.lang.String,java.lang.Object)">
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 <div class="block">Bind an argument value to a named parameter.</div>
 <dl class="notes">
@@ -878,8 +950,12 @@ a <a href="Parameter.html" title="interface in jakarta.persistence"><code>Parame
 <section class="detail" id="setParameter(java.lang.String,P,java.lang.Class)">
 <h3 id="setParameter(java.lang.String,java.lang.Object,java.lang.Class)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</span></div>
 <div class="block">Bind an argument value to a named parameter, explicitly
 specifying the parameter type. This is most useful when
@@ -896,6 +972,8 @@ the argument might be <code>null</code>.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(java.lang.String,P,java.lang.Class)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(java.lang.String,P,java.lang.Class)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the parameter</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -916,8 +994,12 @@ the argument might be <code>null</code>.
 <section class="detail" id="setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)">
 <h3 id="setParameter(java.lang.String,java.lang.Object,jakarta.persistence.metamodel.Type)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</span></div>
 <div class="block">Bind an argument value to a named parameter, explicitly
 specifying the parameter type. This is most useful when
@@ -934,6 +1016,8 @@ var affordableBooks =
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(java.lang.String,P,jakarta.persistence.metamodel.Type)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the parameter</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -954,8 +1038,12 @@ var affordableBooks =
 <section class="detail" id="setConvertedParameter(java.lang.String,P,java.lang.Class)">
 <h3 id="setConvertedParameter(java.lang.String,java.lang.Object,java.lang.Class)">setConvertedParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setConvertedParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setConvertedParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</span></div>
 <div class="block">Bind an argument value to a named parameter, explicitly
  specifying an <a href="AttributeConverter.html" title="interface in jakarta.persistence">attribute
@@ -974,6 +1062,8 @@ var affordableBooks =
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setConvertedParameter(java.lang.String,P,java.lang.Class)">setConvertedParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setConvertedParameter(java.lang.String,P,java.lang.Class)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the parameter</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -995,8 +1085,12 @@ var affordableBooks =
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -1025,8 +1119,12 @@ var affordableBooks =
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -1054,7 +1152,9 @@ var affordableBooks =
 <section class="detail" id="setParameter(int,java.lang.Object)">
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 <div class="block">Bind an argument value to a positional parameter.</div>
 <dl class="notes">
@@ -1077,8 +1177,11 @@ var affordableBooks =
 <section class="detail" id="setParameter(int,P,java.lang.Class)">
 <h3 id="setParameter(int,java.lang.Object,java.lang.Class)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;P&gt;&nbsp;type)</span></div>
 <div class="block">Bind an argument value to a positional parameter, explicitly
 specifying the parameter type. This is most useful when
@@ -1095,6 +1198,8 @@ the argument might be <code>null</code>.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(int,P,java.lang.Class)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(int,P,java.lang.Class)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>position</code> - The parameter position</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -1115,8 +1220,11 @@ the argument might be <code>null</code>.
 <section class="detail" id="setParameter(int,P,jakarta.persistence.metamodel.Type)">
 <h3 id="setParameter(int,java.lang.Object,jakarta.persistence.metamodel.Type)">setParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="metamodel/Type.html" title="interface in jakarta.persistence.metamodel">Type</a>&lt;P&gt;&nbsp;type)</span></div>
 <div class="block">Bind an argument value to a positional parameter, explicitly
 specifying the parameter type. This is most useful when
@@ -1133,6 +1241,8 @@ var affordableBooks =
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setParameter(int,P,jakarta.persistence.metamodel.Type)">setParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setParameter(int,P,jakarta.persistence.metamodel.Type)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>position</code> - The parameter position</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -1153,8 +1263,11 @@ var affordableBooks =
 <section class="detail" id="setConvertedParameter(int,P,java.lang.Class)">
 <h3 id="setConvertedParameter(int,java.lang.Object,java.lang.Class)">setConvertedParameter</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setConvertedParameter</span><wbr><span class="parameters">(int&nbsp;position,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="type-parameters">&lt;P&gt;</span>&nbsp;<span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setConvertedParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  P&nbsp;value,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="AttributeConverter.html" title="interface in jakarta.persistence">AttributeConverter</a>&lt;P,<wbr>?&gt;&gt;&nbsp;converter)</span></div>
 <div class="block">Bind an argument value to a named parameter, explicitly
  specifying an <a href="AttributeConverter.html" title="interface in jakarta.persistence">attribute
@@ -1173,6 +1286,8 @@ var affordableBooks =
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Query.html#setConvertedParameter(int,P,java.lang.Class)">setConvertedParameter</a></code>&nbsp;in interface&nbsp;<code><a href="Query.html" title="interface in jakarta.persistence">Query</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><span id="setConvertedParameter(int,P,java.lang.Class)-type-param-P"><code>P</code> - the parameter type</span></dd>
 <dt>Parameters:</dt>
 <dd><code>position</code> - The parameter position</dd>
 <dd><code>value</code> - The argument to the parameter</dd>
@@ -1194,8 +1309,11 @@ var affordableBooks =
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
+@Nonnull
 </span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html" title="class or interface in java.util" class="external-link">Calendar</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -1225,8 +1343,11 @@ parameter.</div>
 <h3>setParameter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
+@Nonnull
 </span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setParameter</span><wbr><span class="parameters">(int&nbsp;position,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value,
+ @Nonnull
  <a href="TemporalType.html" title="enum class in jakarta.persistence">TemporalType</a>&nbsp;temporalType)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Newly written code should use the date/time types
@@ -1255,7 +1376,9 @@ parameter.</div>
 <section class="detail" id="setQueryFlushMode(jakarta.persistence.QueryFlushMode)">
 <h3>setQueryFlushMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setQueryFlushMode</span><wbr><span class="parameters">(<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setQueryFlushMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&nbsp;flushMode)</span></div>
 <div class="block">Set the <a href="QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to be
 used when the query is executed. This flush mode overrides
 the <a href="EntityManager.html#getFlushMode()">flush mode type
@@ -1277,8 +1400,10 @@ of the entity manager</a>.</div>
 <section class="detail" id="setFlushMode(jakarta.persistence.FlushModeType)">
 <h3>setFlushMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setFlushMode</span><wbr><span class="parameters">(<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="4.0")
+@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setFlushMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&nbsp;flushMode)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Use <a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>setQueryFlushMode(QueryFlushMode)</code></a>.</div>
 </div>
@@ -1301,7 +1426,9 @@ of the entity manager</a>.</div>
 <section class="detail" id="setLockMode(jakarta.persistence.LockModeType)">
 <h3>setLockMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setLockMode</span><wbr><span class="parameters">(<a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setLockMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode)</span></div>
 <div class="block">Set the <a href="LockModeType.html" title="enum class in jakarta.persistence">lock mode type</a> to use
 when the query is executed.</div>
 <dl class="notes">
@@ -1331,7 +1458,9 @@ when the query is executed.</div>
 <section class="detail" id="setLockScope(jakarta.persistence.PessimisticLockScope)">
 <h3>setLockScope</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setLockScope</span><wbr><span class="parameters">(<a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a>&nbsp;lockScope)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setLockScope</span><wbr><span class="parameters">(@Nonnull
+ <a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a>&nbsp;lockScope)</span></div>
 <div class="block">Set the <a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">pessimistic lock scope</a>
 to use when the query is executed if a pessimistic lock mode
 is specified via <a href="#setLockMode(jakarta.persistence.LockModeType)"><code>setLockMode(LockModeType)</code></a>.
@@ -1356,7 +1485,8 @@ the pessimistic lock scope has no effect.</div>
 <section class="detail" id="getLockMode()">
 <h3>getLockMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></span>&nbsp;<span class="element-name">getLockMode</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a></span>&nbsp;<span class="element-name">getLockMode</span>()</div>
 <div class="block">The current <a href="LockModeType.html" title="enum class in jakarta.persistence">lock mode</a> for the
 query or <code>null</code> if a lock mode has not been set.
 <p>The lock mode affects every entity occurring as an
@@ -1399,7 +1529,8 @@ argument to an aggregate function.</div>
 <section class="detail" id="getLockScope()">
 <h3>getLockScope</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a></span>&nbsp;<span class="element-name">getLockScope</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a></span>&nbsp;<span class="element-name">getLockScope</span>()</div>
 <div class="block">The current <a href="PessimisticLockScope.html" title="enum class in jakarta.persistence">pessimistic
 lock scope</a> for the query or <code>null</code> if a scope has
 not been set.
@@ -1428,7 +1559,9 @@ mode is <code>null</code> or <a href="LockModeType.html#NONE"><code>NONE</code><
 <section class="detail" id="setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)">
 <h3>setCacheRetrieveMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setCacheRetrieveMode</span><wbr><span class="parameters">(<a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setCacheRetrieveMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode)</span></div>
 <div class="block">Set the <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieval mode</a>
 in effect during query execution. This cache retrieval mode
 overrides the <a href="EntityHandler.html#getCacheRetrieveMode()">cache retrieve mode of the entity manager</a>.</div>
@@ -1449,7 +1582,9 @@ overrides the <a href="EntityHandler.html#getCacheRetrieveMode()">cache retrieve
 <section class="detail" id="setCacheStoreMode(jakarta.persistence.CacheStoreMode)">
 <h3>setCacheStoreMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setCacheStoreMode</span><wbr><span class="parameters">(<a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setCacheStoreMode</span><wbr><span class="parameters">(@Nonnull
+ <a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode)</span></div>
 <div class="block">Set the <a href="CacheStoreMode.html" title="enum class in jakarta.persistence">cache storage mode</a> in
 effect during query execution. This cache storage mode
 overrides the <a href="EntityHandler.html#getCacheStoreMode()">cache storage mode of the entity manager</a>.</div>
@@ -1470,7 +1605,8 @@ overrides the <a href="EntityHandler.html#getCacheStoreMode()">cache storage mod
 <section class="detail" id="getCacheRetrieveMode()">
 <h3>getCacheRetrieveMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></span>&nbsp;<span class="element-name">getCacheRetrieveMode</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a></span>&nbsp;<span class="element-name">getCacheRetrieveMode</span>()</div>
 <div class="block">The <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieval mode</a> in
 effect during query execution.</div>
 <dl class="notes">
@@ -1491,7 +1627,8 @@ effect during query execution.</div>
 <section class="detail" id="getCacheStoreMode()">
 <h3>getCacheStoreMode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></span>&nbsp;<span class="element-name">getCacheStoreMode</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a></span>&nbsp;<span class="element-name">getCacheStoreMode</span>()</div>
 <div class="block">The <a href="CacheStoreMode.html" title="enum class in jakarta.persistence">cache storage mode</a> in effect
 during query execution.</div>
 <dl class="notes">
@@ -1512,7 +1649,9 @@ during query execution.</div>
 <section class="detail" id="setTimeout(java.lang.Integer)">
 <h3>setTimeout</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setTimeout</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setTimeout</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeout)</span></div>
 <div class="block">Set the query timeout, in milliseconds. This is a hint,
 and is an alternative to <a href="#setHint(java.lang.String,java.lang.Object)">setting
 the hint</a> <code>jakarta.persistence.query.timeout</code>.</div>
@@ -1534,7 +1673,9 @@ the hint</a> <code>jakarta.persistence.query.timeout</code>.</div>
 <section class="detail" id="setTimeout(jakarta.persistence.Timeout)">
 <h3>setTimeout</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setTimeout</span><wbr><span class="parameters">(<a href="Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">setTimeout</span><wbr><span class="parameters">(@Nullable
+ <a href="Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</span></div>
 <div class="block">Set the query timeout. This is a hint.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -1583,6 +1724,49 @@ the operation.</div>
 <dt>Returns:</dt>
 <dd>the number of entities updated or deleted, or the
         row count of the native SQL statement</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addOption(jakarta.persistence.TypedQuery.Option)">
+<h3>addOption</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a>&lt;<a href="#type-param-X" title="type parameter in TypedQuery">X</a>&gt;</span>&nbsp;<span class="element-name">addOption</span><wbr><span class="parameters">(@Nonnull
+ <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a>&nbsp;option)</span></div>
+<div class="block">Specify an <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">option</a> influencing execution
+of this typed query, overwriting any existing option of the
+same type.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>option</code> - the option</dd>
+<dt>Returns:</dt>
+<dd>the same query instance</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getOptions()">
+<h3>getOptions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a>&gt;</span>&nbsp;<span class="element-name">getOptions</span>()</div>
+<div class="block">Get the <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">options</a> influencing execution of
+this typed query. The returned set includes options set via
+<a href="#addOption(jakarta.persistence.TypedQuery.Option)"><code>addOption(TypedQuery.Option)</code></a> along with options specified via
+<a href="#setTimeout(java.lang.Integer)"><code>setTimeout(Integer)</code></a>, <a href="#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>setQueryFlushMode(QueryFlushMode)</code></a>,
+<a href="#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)"><code>setCacheRetrieveMode(CacheRetrieveMode)</code></a>, <a href="#setCacheStoreMode(jakarta.persistence.CacheStoreMode)"><code>setCacheStoreMode(CacheStoreMode)</code></a>,
+<a href="#setLockMode(jakarta.persistence.LockModeType)"><code>setLockMode(LockModeType)</code></a>, and <a href="#setLockScope(jakarta.persistence.PessimisticLockScope)"><code>setLockScope(PessimisticLockScope)</code></a>. Mutation
+of the returned set does not affect the options of the query.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the options for this query</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
 </dl>
 </div>
 </section>

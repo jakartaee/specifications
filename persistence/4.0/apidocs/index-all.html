@@ -34,7 +34,7 @@ loadScripts(document, 'script');</script>
 <li><a href="search.html">Search</a></li>
 <li><a href="help-doc.html#index">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -88,45 +88,52 @@ embeddable class, or to a specific attribute of such a class.</div>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addAttributeNode(jakarta.persistence.metamodel.Attribute)" class="member-name-link">addAttributeNode(Attribute)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
 <div class="block">Get an existing attribute node for the given attribute, or add
-a new attribute node if there is no existing node.</div>
+a new attribute node if there is no existing node, cancelling
+the effect of any prior <a href="jakarta.persistence/jakarta/persistence/Graph.html#removeAttributeNode(java.lang.String)">removal</a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addAttributeNode(java.lang.String)" class="member-name-link">addAttributeNode(String)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
 <div class="block">Get an existing attribute node for the attribute with the given
-name, or add a new attribute node if there is no existing node.</div>
+name, or add a new attribute node if there is no existing node,
+cancelling the effect of any prior
+<a href="jakarta.persistence/jakarta/persistence/Graph.html#removeAttributeNode(java.lang.String)">removal</a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addAttributeNodes(jakarta.persistence.metamodel.Attribute...)" class="member-name-link">addAttributeNodes(Attribute...)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add one or more attribute nodes to the entity graph.</div>
+<div class="block">Add one or more attribute nodes to the entity graph,
+cancelling the effect of any prior
+<a href="jakarta.persistence/jakarta/persistence/Graph.html#removeAttributeNode(java.lang.String)">removals</a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addAttributeNodes(java.lang.String...)" class="member-name-link">addAttributeNodes(String...)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add one or more attribute nodes to the entity graph.</div>
+<div class="block">Add one or more attribute nodes to the entity graph,
+cancelling the effect of any prior
+<a href="jakarta.persistence/jakarta/persistence/Graph.html#removeAttributeNode(java.lang.String)">removals</a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addElementSubgraph(jakarta.persistence.metamodel.PluralAttribute)" class="member-name-link">addElementSubgraph(PluralAttribute)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a collection element
+<div class="block">Add a node to the graph representing a collection element
 that is a managed type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addElementSubgraph(java.lang.String)" class="member-name-link">addElementSubgraph(String)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a collection element
+<div class="block">Add a node to the graph representing a collection element
 that is a managed type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addElementSubgraph(java.lang.String,java.lang.Class)" class="member-name-link">addElementSubgraph(String, Class)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a collection element
+<div class="block">Add a node to the graph that representing a collection element
 that is a managed type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addKeySubgraph(java.lang.String)" class="member-name-link">addKeySubgraph(String)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a map key
-that is a managed type.</div>
+<div class="block">Add a node to the graph representing a map key that is a
+managed type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addKeySubgraph(java.lang.String,java.lang.Class)" class="member-name-link">addKeySubgraph(String, Class)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a map key
-that is a managed type with inheritance.</div>
+<div class="block">Add a node to the graph representing a map key that is a
+managed type with inheritance.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html#addListener(java.lang.Class,java.lang.Class,java.util.function.Consumer)" class="member-name-link">addListener(Class, Class, Consumer)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></dt>
 <dd>
@@ -137,8 +144,8 @@ the registration.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addMapKeySubgraph(jakarta.persistence.metamodel.MapAttribute)" class="member-name-link">addMapKeySubgraph(MapAttribute)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a map key
-that is a managed type.</div>
+<div class="block">Add a node to the graph representing a map key that is a
+managed type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html#addNamedEntityGraph(java.lang.String,jakarta.persistence.EntityGraph)" class="member-name-link">addNamedEntityGraph(String, EntityGraph)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></dt>
 <dd>
@@ -166,10 +173,41 @@ future statement objects can be created from it by calling either
 <a href="jakarta.persistence/jakarta/persistence/EntityHandler.html#createStatement(jakarta.persistence.StatementReference)"><code>EntityHandler.createStatement(StatementReference)</code></a> or
 <a href="jakarta.persistence/jakarta/persistence/EntityHandler.html#createNamedStatement(java.lang.String)"><code>EntityHandler.createNamedStatement(String)</code></a>.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityAgent.html#addOption(jakarta.persistence.EntityAgent.Option)" class="member-name-link">addOption(EntityAgent.Option)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></dt>
+<dd>
+<div class="block">Specify an <a href="jakarta.persistence/jakarta/persistence/EntityAgent.Option.html" title="interface in jakarta.persistence">option</a> controlling the
+behavior of this entity agent, overwriting any existing
+option of the same type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityManager.html#addOption(jakarta.persistence.EntityManager.Option)" class="member-name-link">addOption(EntityManager.Option)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></dt>
+<dd>
+<div class="block">Specify an <a href="jakarta.persistence/jakarta/persistence/EntityManager.Option.html" title="interface in jakarta.persistence">option</a> controlling the
+behavior of this entity manager, overwriting any existing
+option of the same type.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/AttributeNode.html#addOption(jakarta.persistence.FetchOption)" class="member-name-link">addOption(FetchOption)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a></dt>
 <dd>
 <div class="block">Specify an <a href="jakarta.persistence/jakarta/persistence/FetchOption.html" title="interface in jakarta.persistence">option</a> controlling
-how this node is fetched.</div>
+how this node is fetched, overwriting any existing
+option of the same type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Statement.html#addOption(jakarta.persistence.Statement.Option)" class="member-name-link">addOption(Statement.Option)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Statement.html" title="interface in jakarta.persistence">Statement</a></dt>
+<dd>
+<div class="block">Specify an <a href="jakarta.persistence/jakarta/persistence/Statement.Option.html" title="interface in jakarta.persistence">option</a> influencing execution
+of this statement, overwriting any existing option of the
+same type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.html#addOption(jakarta.persistence.StoredProcedureQuery.Option)" class="member-name-link">addOption(StoredProcedureQuery.Option)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></dt>
+<dd>
+<div class="block">Specify an <a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">option</a> influencing execution
+of this stored procedure, overwriting any existing option of
+the same type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/TypedQuery.html#addOption(jakarta.persistence.TypedQuery.Option)" class="member-name-link">addOption(TypedQuery.Option)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a></dt>
+<dd>
+<div class="block">Specify an <a href="jakarta.persistence/jakarta/persistence/TypedQuery.Option.html" title="interface in jakarta.persistence">option</a> influencing execution
+of this typed query, overwriting any existing option of the
+same type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/AttributeNode.html#addSubgraph()" class="member-name-link">addSubgraph()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a></dt>
 <dd>
@@ -179,16 +217,16 @@ an entity class.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addSubgraph(jakarta.persistence.metamodel.Attribute)" class="member-name-link">addSubgraph(Attribute)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a managed type.</div>
+<div class="block">Add a node to the graph representing a managed type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addSubgraph(java.lang.String)" class="member-name-link">addSubgraph(String)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a managed type.</div>
+<div class="block">Add a node to the graph representing a managed type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addSubgraph(java.lang.String,java.lang.Class)" class="member-name-link">addSubgraph(String, Class)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a managed
-type with inheritance.</div>
+<div class="block">Add a node to the graph representing a managed type with
+inheritance.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html#addTransformer(jakarta.persistence.spi.ClassTransformer)" class="member-name-link">addTransformer(ClassTransformer)</a> - Method in interface jakarta.persistence.spi.<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html" title="interface in jakarta.persistence.spi">PersistenceUnitInfo</a></dt>
 <dd>
@@ -199,18 +237,18 @@ loaded by the loader returned by the
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addTreatedElementSubgraph(jakarta.persistence.metamodel.PluralAttribute,java.lang.Class)" class="member-name-link">addTreatedElementSubgraph(PluralAttribute, Class)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a collection element
+<div class="block">Add a node to the graph representing a collection element
 that is a managed type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addTreatedMapKeySubgraph(jakarta.persistence.metamodel.MapAttribute,java.lang.Class)" class="member-name-link">addTreatedMapKeySubgraph(MapAttribute, Class)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a map key
-that is a managed type with inheritance.</div>
+<div class="block">Add a node to the graph representing a map key that is a
+managed type with inheritance.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#addTreatedSubgraph(jakarta.persistence.metamodel.Attribute,java.lang.Class)" class="member-name-link">addTreatedSubgraph(Attribute, Class)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Add a node to the graph that corresponds to a managed
-type with inheritance.</div>
+<div class="block">Add a node to the graph representing a managed type with
+inheritance.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/AttributeNode.html#addTreatedSubgraph(java.lang.Class)" class="member-name-link">addTreatedSubgraph(Class)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/AttributeNode.html" title="interface in jakarta.persistence">AttributeNode</a></dt>
 <dd>
@@ -224,17 +262,25 @@ entity subclass of the entity class.</div>
 correspond to attributes of subclasses of the entity type of
 this <code>EntityGraph</code>.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/TemporalExpression.html#after(jakarta.persistence.criteria.Expression)" class="member-name-link">after(Expression)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a></dt>
+<dd>
+<div class="block">Synonym for <a href="jakarta.persistence/jakarta/persistence/criteria/ComparableExpression.html#greaterThan(jakarta.persistence.criteria.Expression)"><code>ComparableExpression.greaterThan(Expression)</code></a>.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/TemporalExpression.html#after(T)" class="member-name-link">after(T)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a></dt>
+<dd>
+<div class="block">Synonym for <a href="jakarta.persistence/jakarta/persistence/criteria/ComparableExpression.html#greaterThan(C)"><code>ComparableExpression.greaterThan(Comparable)</code></a>.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/sql/ColumnMapping.html#alias()" class="member-name-link">alias()</a> - Method in record class jakarta.persistence.sql.<a href="jakarta.persistence/jakarta/persistence/sql/ColumnMapping.html" title="class in jakarta.persistence.sql">ColumnMapping</a></dt>
 <dd>
-<div class="block">Returns the value of the <code>alias</code> record component.</div>
+<div class="block">Returns the value of the <a href="./jakarta.persistence/jakarta/persistence/sql/ColumnMapping.html#param-alias"><code>alias</code></a> record component.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/sql/ConstructorMapping.html#alias()" class="member-name-link">alias()</a> - Method in record class jakarta.persistence.sql.<a href="jakarta.persistence/jakarta/persistence/sql/ConstructorMapping.html" title="class in jakarta.persistence.sql">ConstructorMapping</a></dt>
 <dd>
-<div class="block">Returns the value of the <code>alias</code> record component.</div>
+<div class="block">Returns the value of the <a href="./jakarta.persistence/jakarta/persistence/sql/ConstructorMapping.html#param-alias"><code>alias</code></a> record component.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/sql/EntityMapping.html#alias()" class="member-name-link">alias()</a> - Method in record class jakarta.persistence.sql.<a href="jakarta.persistence/jakarta/persistence/sql/EntityMapping.html" title="class in jakarta.persistence.sql">EntityMapping</a></dt>
 <dd>
-<div class="block">Returns the value of the <code>alias</code> record component.</div>
+<div class="block">Returns the value of the <a href="./jakarta.persistence/jakarta/persistence/sql/EntityMapping.html#param-alias"><code>alias</code></a> record component.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/Selection.html#alias(java.lang.String)" class="member-name-link">alias(String)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Selection.html" title="interface in jakarta.persistence.criteria">Selection</a></dt>
 <dd>
@@ -393,6 +439,20 @@ or default) property or field or <code>Id</code> property or field.</div>
 <dd>
 <div class="block">Used to override mappings of multiple properties or fields.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#augment(jakarta.persistence.StatementReference,java.util.function.Consumer)" class="member-name-link">augment(StatementReference, Consumer)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
+<dd>
+<div class="block">Modify the Jakarta Persistence query language statement
+represented by the given reference, returning a reference
+to the modified statement inheriting all the options of
+the given reference.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#augment(jakarta.persistence.TypedQueryReference,java.util.function.Consumer)" class="member-name-link">augment(TypedQueryReference, Consumer)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
+<dd>
+<div class="block">Modify the Jakarta Persistence query language query
+represented by the given reference, returning a
+reference to the modified query inheriting all the
+options of the given reference.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/FlushModeType.html#AUTO" class="member-name-link">AUTO</a> - Enum constant in enum class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a></dt>
 <dd>
 <div class="block">Pending modifications to entities associated with a
@@ -407,7 +467,7 @@ appropriate strategy for the particular database.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/ValidationMode.html#AUTO" class="member-name-link">AUTO</a> - Enum constant in enum class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/ValidationMode.html" title="enum class in jakarta.persistence">ValidationMode</a></dt>
 <dd>
-<div class="block">If a Bean Validation provider is present in the environment,
+<div class="block">If a Jakarta Validation provider is present in the environment,
 the persistence provider must perform the automatic validation
 of entities.</div>
 </dd>
@@ -452,6 +512,11 @@ single database column.</div>
 <dd>
 <div class="block">Returns the value of the <code>batchSize</code> record component.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.html#batchSize()" class="member-name-link">batchSize()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Fetch.html" title="annotation interface in jakarta.persistence">Fetch</a></dt>
+<dd>
+<div class="block">A batch size, that is, how many entities should be fetched
+in each request to the database.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/BatchSize.html" class="type-name-link" title="class in jakarta.persistence">BatchSize</a> - Record Class in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Specifies a batch size, that is, how many entities should be
@@ -464,6 +529,14 @@ fetched in each request to the database.</div>
 <dt><a href="jakarta.persistence/jakarta/persistence/Persistence.BeanManagementProperties.html#BEAN_MANAGER" class="member-name-link">BEAN_MANAGER</a> - Static variable in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Persistence.BeanManagementProperties.html" title="interface in jakarta.persistence">Persistence.BeanManagementProperties</a></dt>
 <dd>
 <div class="block">An instance of <code>jakarta.enterprise.inject.spi.BeanManager</code>.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/TemporalExpression.html#before(jakarta.persistence.criteria.Expression)" class="member-name-link">before(Expression)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a></dt>
+<dd>
+<div class="block">Synonym for <a href="jakarta.persistence/jakarta/persistence/criteria/ComparableExpression.html#lessThan(jakarta.persistence.criteria.Expression)"><code>ComparableExpression.lessThan(Expression)</code></a>.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/TemporalExpression.html#before(T)" class="member-name-link">before(T)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/TemporalExpression.html" title="interface in jakarta.persistence.criteria">TemporalExpression</a></dt>
+<dd>
+<div class="block">Synonym for <a href="jakarta.persistence/jakarta/persistence/criteria/ComparableExpression.html#lessThan(C)"><code>ComparableExpression.lessThan(Comparable)</code></a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityTransaction.html#begin()" class="member-name-link">begin()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityTransaction.html" title="interface in jakarta.persistence">EntityTransaction</a></dt>
 <dd>
@@ -485,6 +558,11 @@ between the first and second arguments in value.</div>
 between the second and third arguments in value.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#between(jakarta.persistence.criteria.Expression,Y,Y)" class="member-name-link">between(Expression, Y, Y)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
+<dd>
+<div class="block">Create a predicate for testing whether the first argument is 
+between the second and third arguments in value.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#between(Y,jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">between(Y, Expression, Expression)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
 <dd>
 <div class="block">Create a predicate for testing whether the first argument is 
 between the second and third arguments in value.</div>
@@ -548,7 +626,12 @@ and when the value of the <code>persistence.xml</code> caching element is
 <a href="jakarta.persistence/jakarta/persistence/SharedCacheMode.html#ENABLE_SELECTIVE"><code>SharedCacheMode.ENABLE_SELECTIVE</code></a> or
 <a href="jakarta.persistence/jakarta/persistence/SharedCacheMode.html#DISABLE_SELECTIVE"><code>SharedCacheMode.DISABLE_SELECTIVE</code></a>.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#cacheRetrieveMode()" class="member-name-link">cacheRetrieveMode()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.html#cacheRetrieveMode()" class="member-name-link">cacheRetrieveMode()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Fetch.html" title="annotation interface in jakarta.persistence">Fetch</a></dt>
+<dd>
+<div class="block">Specifies whether the persistence provider is permitted
+to read the associated entity data from the cache.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#cacheRetrieveMode()" class="member-name-link">cacheRetrieveMode()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query">QueryOptions</a></dt>
 <dd>
 <div class="block">The <a href="jakarta.persistence/jakarta/persistence/CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieve mode</a>
 to use.</div>
@@ -560,7 +643,12 @@ second-level cache when data is read from the database via
 the <a href="jakarta.persistence/jakarta/persistence/EntityManager.html#find(java.lang.Class,java.lang.Object,java.util.Map)"><code>EntityManager.find(Class, Object, Map)</code></a> methods and execution of
 queries.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#cacheStoreMode()" class="member-name-link">cacheStoreMode()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.html#cacheStoreMode()" class="member-name-link">cacheStoreMode()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Fetch.html" title="annotation interface in jakarta.persistence">Fetch</a></dt>
+<dd>
+<div class="block">Specifies whether the persistence provider should cache
+the associated entity after fetching it from the database.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#cacheStoreMode()" class="member-name-link">cacheStoreMode()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query">QueryOptions</a></dt>
 <dd>
 <div class="block">The <a href="jakarta.persistence/jakarta/persistence/CacheStoreMode.html" title="enum class in jakarta.persistence">cache store mode</a> to use.</div>
 </dd>
@@ -1150,6 +1238,11 @@ to be stored in the entity attribute.</div>
 <div class="block">Create a subquery collection join object correlated to a 
 collection join object of the enclosing query.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html#correlate(jakarta.persistence.criteria.From)" class="member-name-link">correlate(From)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a></dt>
+<dd>
+<div class="block">Create a subquery root or join correlated to a root or join
+of the enclosing query.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html#correlate(jakarta.persistence.criteria.Join)" class="member-name-link">correlate(Join)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a></dt>
 <dd>
 <div class="block">Create a subquery join object correlated to a join object
@@ -1204,8 +1297,11 @@ persistence unit.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html#createContainerEntityManagerFactory(jakarta.persistence.spi.PersistenceUnitInfo,java.util.Map)" class="member-name-link">createContainerEntityManagerFactory(PersistenceUnitInfo, Map)</a> - Method in interface jakarta.persistence.spi.<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html" title="interface in jakarta.persistence.spi">PersistenceProvider</a></dt>
 <dd>
-<div class="block">Called by the container when an <a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a>
-is to be created.</div>
+<div class="block">Called by the Jakarta EE container to create a new
+<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for the persistence unit with the
+given <a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html" title="interface in jakarta.persistence.spi">metadata</a>, optionally
+specifying configuration properties which override the settings
+specified in the given <a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html" title="interface in jakarta.persistence.spi"><code>PersistenceUnitInfo</code></a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#createCriteriaDelete(java.lang.Class)" class="member-name-link">createCriteriaDelete(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
 <dd>
@@ -1241,7 +1337,7 @@ query with the given target entity type.</div>
 given Jakarta Persistence query language <code>UPDATE</code>
 query.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html#createEntityAgent()" class="member-name-link">createEntityAgent()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html#createEntityAgent(jakarta.persistence.EntityAgent.CreationOption...)" class="member-name-link">createEntityAgent(EntityAgent.CreationOption...)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></dt>
 <dd>
 <div class="block">Create a new application-managed <a href="jakarta.persistence/jakarta/persistence/EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a>.</div>
 </dd>
@@ -1266,19 +1362,15 @@ definition of the graph.</div>
 <div class="deprecation-comment">Use <a href="jakarta.persistence/jakarta/persistence/EntityHandler.html#getEntityGraph(java.lang.String)"><code>EntityHandler.getEntityGraph(String)</code></a> instead.</div>
 </div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html#createEntityManager()" class="member-name-link">createEntityManager()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html#createEntityManager(jakarta.persistence.EntityManager.CreationOption...)" class="member-name-link">createEntityManager(EntityManager.CreationOption...)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></dt>
 <dd>
 <div class="block">Create a new application-managed <a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html#createEntityManager(jakarta.persistence.SynchronizationType)" class="member-name-link">createEntityManager(SynchronizationType)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></dt>
-<dd>
-<div class="block">Create a new JTA application-managed <a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
-the specified synchronization type.</div>
-</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html#createEntityManager(jakarta.persistence.SynchronizationType,java.util.Map)" class="member-name-link">createEntityManager(SynchronizationType, Map)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></dt>
 <dd>
-<div class="block">Create a new JTA application-managed <a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
-the specified synchronization type and map of properties.</div>
+<div class="block">Create a new application-managed JTA <a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a> with
+the specified <a href="jakarta.persistence/jakarta/persistence/SynchronizationType.html" title="enum class in jakarta.persistence">synchronization
+type</a> and given property settings.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html#createEntityManager(java.util.Map)" class="member-name-link">createEntityManager(Map)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></dt>
 <dd>
@@ -1296,8 +1388,9 @@ persistence unit, using the given properties.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html#createEntityManagerFactory(jakarta.persistence.PersistenceConfiguration)" class="member-name-link">createEntityManagerFactory(PersistenceConfiguration)</a> - Method in interface jakarta.persistence.spi.<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html" title="interface in jakarta.persistence.spi">PersistenceProvider</a></dt>
 <dd>
-<div class="block">Called by <a href="jakarta.persistence/jakarta/persistence/Persistence.html" title="class in jakarta.persistence"><code>Persistence</code></a> class when an
-<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> is to be created.</div>
+<div class="block">Called by <a href="jakarta.persistence/jakarta/persistence/Persistence.html" title="class in jakarta.persistence"><code>Persistence</code></a> class to create a new
+<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for a persistence unit with the
+given programmatic configuration.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Persistence.html#createEntityManagerFactory(java.lang.String)" class="member-name-link">createEntityManagerFactory(String)</a> - Static method in class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Persistence.html" title="class in jakarta.persistence">Persistence</a></dt>
 <dd>
@@ -1311,8 +1404,11 @@ persistence unit, using the given properties.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html#createEntityManagerFactory(java.lang.String,java.util.Map)" class="member-name-link">createEntityManagerFactory(String, Map)</a> - Method in interface jakarta.persistence.spi.<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html" title="interface in jakarta.persistence.spi">PersistenceProvider</a></dt>
 <dd>
-<div class="block">Called by <a href="jakarta.persistence/jakarta/persistence/Persistence.html" title="class in jakarta.persistence"><code>Persistence</code></a> class when an
-<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> is to be created.</div>
+<div class="block">Called by <a href="jakarta.persistence/jakarta/persistence/Persistence.html" title="class in jakarta.persistence"><code>Persistence</code></a> class to create a new
+<a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for the persistence unit with the
+given name, optionally specifying configuration properties which
+override the settings specified in the <code>persistence.xml</code>
+file for the given persistence unit.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityHandler.html#createNamedQuery(java.lang.String)" class="member-name-link">createNamedQuery(String)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a></dt>
 <dd>
@@ -1873,6 +1969,14 @@ in order.</div>
 <div class="block">Provides entity operations that are performed independently
 of a persistence context.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityAgent.CreationOption.html" class="type-name-link" title="interface in jakarta.persistence">EntityAgent.CreationOption</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">An option controlling the creation of an entity agent.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityAgent.Option.html" class="type-name-link" title="interface in jakarta.persistence">EntityAgent.Option</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">An option controlling the behavior of an entity agent.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityResult.html#entityClass()" class="member-name-link">entityClass()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityResult.html" title="annotation interface in jakarta.persistence">EntityResult</a></dt>
 <dd>
 <div class="block">The class of the result.</div>
@@ -1887,10 +1991,8 @@ of a persistence context.</div>
 
 a detached instance of an entity type is passed to
     <a href="jakarta.persistence/jakarta/persistence/EntityManager.html#persist(java.lang.Object)"><code>EntityManager.persist(Object)</code></a>, or
-an instance of an entity type with an identifier already
-    assigned by the application is passed to
-    <a href="jakarta.persistence/jakarta/persistence/EntityAgent.html#insert(java.lang.Object)"><code>EntityAgent.insert(Object)</code></a>, and a record with the
-    assigned identifier value already exists in the database.</div>
+any kind of uniqueness constraint is violated when an
+    entity is inserted in the database.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityExistsException.html#%3Cinit%3E()" class="member-name-link">EntityExistsException()</a> - Constructor for exception class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityExistsException.html" title="class in jakarta.persistence">EntityExistsException</a></dt>
 <dd>
@@ -1918,7 +2020,7 @@ specified cause.</div>
 entity graph</a> interpreted as a load graph and applied to the
 entity returned by the query.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#entityGraph()" class="member-name-link">entityGraph()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#entityGraph()" class="member-name-link">entityGraph()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query">QueryOptions</a></dt>
 <dd>
 <div class="block">The name of a <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a>
 applied to the entity returned by the query.</div>
@@ -1946,11 +2048,19 @@ listener with the <a href="jakarta.persistence/jakarta/persistence/EntityManager
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityListeners.html" class="type-name-link" title="annotation interface in jakarta.persistence">EntityListeners</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Specifies the entity listener classes associated with the
-annotated class.</div>
+annotated class, package, or module.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityManager.html" class="type-name-link" title="interface in jakarta.persistence">EntityManager</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Interface used to interact with the persistence context.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityManager.CreationOption.html" class="type-name-link" title="interface in jakarta.persistence">EntityManager.CreationOption</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">An option controlling the creation of an entity manager.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityManager.Option.html" class="type-name-link" title="interface in jakarta.persistence">EntityManager.Option</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">An option controlling the behavior of an entity manager.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" class="type-name-link" title="interface in jakarta.persistence">EntityManagerFactory</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
@@ -2124,8 +2234,8 @@ from the first query, without elimination of duplicate results.</div>
 <dt><a href="jakarta.persistence/jakarta/persistence/ExcludeDefaultListeners.html" class="type-name-link" title="annotation interface in jakarta.persistence">ExcludeDefaultListeners</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Specifies that the invocation of default listeners is to
-be excluded for the entity class (or mapped superclass)
-and its subclasses.</div>
+be excluded for the annotated entity class or mapped
+superclass and for its subclasses.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/ExcludedFromVersioning.html" class="type-name-link" title="annotation interface in jakarta.persistence">ExcludedFromVersioning</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
@@ -2136,8 +2246,8 @@ field or property</a> of the entity.</div>
 <dt><a href="jakarta.persistence/jakarta/persistence/ExcludeSuperclassListeners.html" class="type-name-link" title="annotation interface in jakarta.persistence">ExcludeSuperclassListeners</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Specifies that the invocation of superclass listeners is 
-to be excluded for the entity class (or mapped superclass) 
-and its subclasses.</div>
+to be excluded for the annotated entity class or mapped
+superclass and for its subclasses.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html#excludeUnlistedClasses()" class="member-name-link">excludeUnlistedClasses()</a> - Method in interface jakarta.persistence.spi.<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html" title="interface in jakarta.persistence.spi">PersistenceUnitInfo</a></dt>
 <dd>
@@ -2318,6 +2428,12 @@ the database.</div>
 <dd>
 <div class="block">Represents a join-fetched association or attribute.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.html" class="type-name-link" title="annotation interface in jakarta.persistence">Fetch</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">Specifies options influencing how an attribute is fetched.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.Fetches.html" class="type-name-link" title="annotation interface in jakarta.persistence">Fetch.Fetches</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/PessimisticLockScope.html#FETCHED" class="member-name-link">FETCHED</a> - Enum constant in enum class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a></dt>
 <dd>
 <div class="block">The persistence provider must lock the row or rows of:
@@ -2361,7 +2477,7 @@ function as the parent of Fetches.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/AccessType.html#FIELD" class="member-name-link">FIELD</a> - Enum constant in enum class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/AccessType.html" title="enum class in jakarta.persistence">AccessType</a></dt>
 <dd>
-<div class="block">Field-based access is used.</div>
+<div class="block">Direct field access is used.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/sql/FieldMapping.html" class="type-name-link" title="class in jakarta.persistence.sql">FieldMapping&lt;C,<wbr>T&gt;</a> - Record Class in <a href="jakarta.persistence/jakarta/persistence/sql/package-summary.html">jakarta.persistence.sql</a></dt>
 <dd>
@@ -2481,7 +2597,7 @@ to use when executing the query.</div>
 <div class="block">(Optional) The <a href="jakarta.persistence/jakarta/persistence/QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a>
 to use when executing the query.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#flush()" class="member-name-link">flush()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#flush()" class="member-name-link">flush()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query">QueryOptions</a></dt>
 <dd>
 <div class="block">The <a href="jakarta.persistence/jakarta/persistence/QueryFlushMode.html" title="enum class in jakarta.persistence">query flush mode</a> to use when
 executing the query.</div>
@@ -2591,8 +2707,8 @@ an entity in the from clause.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#function(java.lang.String,java.lang.Class,jakarta.persistence.criteria.Expression...)" class="member-name-link">function(String, Class, Expression...)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
 <dd>
-<div class="block">Create an expression for the execution of a database
-function.</div>
+<div class="block">Create an expression for the execution of the database
+function with the given name.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:G">G</h2>
@@ -2628,13 +2744,13 @@ as determined by the supplied properties.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html#generateSchema(jakarta.persistence.PersistenceConfiguration)" class="member-name-link">generateSchema(PersistenceConfiguration)</a> - Method in interface jakarta.persistence.spi.<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html" title="interface in jakarta.persistence.spi">PersistenceProvider</a></dt>
 <dd>
-<div class="block">Create database schemas and/or tables and/or create DDL
-scripts as determined by the supplied properties.</div>
+<div class="block">Create database schemas and/or tables and/or create DDL scripts,
+as determined by the supplied properties.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html#generateSchema(jakarta.persistence.spi.PersistenceUnitInfo,java.util.Map)" class="member-name-link">generateSchema(PersistenceUnitInfo, Map)</a> - Method in interface jakarta.persistence.spi.<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html" title="interface in jakarta.persistence.spi">PersistenceProvider</a></dt>
 <dd>
-<div class="block">Create database schemas and/or tables and/or create DDL
-scripts as determined by the supplied properties.</div>
+<div class="block">Create database schemas and/or tables and/or create DDL scripts,
+as determined by the supplied properties.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Persistence.html#generateSchema(java.lang.String,java.util.Map)" class="member-name-link">generateSchema(String, Map)</a> - Static method in class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Persistence.html" title="class in jakarta.persistence">Persistence</a></dt>
 <dd>
@@ -2643,8 +2759,8 @@ as determined by the supplied properties.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html#generateSchema(java.lang.String,java.util.Map)" class="member-name-link">generateSchema(String, Map)</a> - Method in interface jakarta.persistence.spi.<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html" title="interface in jakarta.persistence.spi">PersistenceProvider</a></dt>
 <dd>
-<div class="block">Create database schemas and/or tables and/or create DDL
-scripts as determined by the supplied properties.</div>
+<div class="block">Create database schemas and/or tables and/or create DDL scripts,
+as determined by the supplied properties.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/GenerationType.html" class="type-name-link" title="enum class in jakarta.persistence">GenerationType</a> - Enum Class in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
@@ -2834,8 +2950,11 @@ name.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#getAttributeNodes()" class="member-name-link">getAttributeNodes()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Return the attribute nodes corresponding to the attributes of
-this managed type that are included in the graph.</div>
+<div class="block">Return the attribute nodes representing the persistent
+attributes of this managed type that were explicitly
+<a href="jakarta.persistence/jakarta/persistence/Graph.html#addAttributeNode(java.lang.String)">included in (added to)</a> or
+<a href="jakarta.persistence/jakarta/persistence/Graph.html#removeAttributeNode(java.lang.String)">excluded from (removed from)</a>
+the graph.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/metamodel/ManagedType.html#getAttributes()" class="member-name-link">getAttributes()</a> - Method in interface jakarta.persistence.metamodel.<a href="jakarta.persistence/jakarta/persistence/metamodel/ManagedType.html" title="interface in jakarta.persistence.metamodel">ManagedType</a></dt>
 <dd>
@@ -2864,18 +2983,10 @@ factory (the "second level cache").</div>
 <div class="deprecation-comment">Use <a href="jakarta.persistence/jakarta/persistence/TypedQuery.html#getCacheRetrieveMode()"><code>TypedQuery.getCacheRetrieveMode()</code></a></div>
 </div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode()</a> - Method in class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/TypedQuery.html#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a></dt>
 <dd>
 <div class="block">The <a href="jakarta.persistence/jakarta/persistence/CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache retrieval mode</a> in
 effect during query execution.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html#getCacheRetrieveMode()" class="member-name-link">getCacheRetrieveMode()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a></dt>
-<dd>
-<div class="block">The specified <a href="jakarta.persistence/jakarta/persistence/CacheRetrieveMode.html" title="enum class in jakarta.persistence"><code>CacheRetrieveMode</code></a>, if any,
-or <code>null</code> when the default mode of the
-<a href="jakarta.persistence/jakarta/persistence/EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> should be used.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityHandler.html#getCacheStoreMode()" class="member-name-link">getCacheStoreMode()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a></dt>
 <dd>
@@ -2887,18 +2998,10 @@ or <code>null</code> when the default mode of the
 <div class="deprecation-comment">Use <a href="jakarta.persistence/jakarta/persistence/TypedQuery.html#getCacheStoreMode()"><code>TypedQuery.getCacheStoreMode()</code></a></div>
 </div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html#getCacheStoreMode()" class="member-name-link">getCacheStoreMode()</a> - Method in class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/TypedQuery.html#getCacheStoreMode()" class="member-name-link">getCacheStoreMode()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a></dt>
 <dd>
 <div class="block">The <a href="jakarta.persistence/jakarta/persistence/CacheStoreMode.html" title="enum class in jakarta.persistence">cache storage mode</a> in effect
 during query execution.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html#getCacheStoreMode()" class="member-name-link">getCacheStoreMode()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a></dt>
-<dd>
-<div class="block">The specified <a href="jakarta.persistence/jakarta/persistence/CacheStoreMode.html" title="enum class in jakarta.persistence"><code>CacheStoreMode</code></a>, if any,
-or <code>null</code> when the default mode of the
-<a href="jakarta.persistence/jakarta/persistence/EntityHandler.html" title="interface in jakarta.persistence"><code>EntityHandler</code></a> should be used.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/PersistenceUnitUtil.html#getClass(T)" class="member-name-link">getClass(T)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceUnitUtil.html" title="interface in jakarta.persistence">PersistenceUnitUtil</a></dt>
 <dd>
@@ -2912,10 +3015,10 @@ classes, resources, or open URLs.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html#getClassTransformer(jakarta.persistence.spi.PersistenceUnitInfo,java.util.Map)" class="member-name-link">getClassTransformer(PersistenceUnitInfo, Map)</a> - Method in interface jakarta.persistence.spi.<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceProvider.html" title="interface in jakarta.persistence.spi">PersistenceProvider</a></dt>
 <dd>
-<div class="block">Obtain a transformer supplied by the provider that is called
-for every new class definition or class redefinition that gets
-loaded by the loader returned by the
-<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html#getClassLoader()"><code>PersistenceUnitInfo.getClassLoader()</code></a> method.</div>
+<div class="block">Obtain a provider-supplied class transformer that is called
+for every new class definition or class redefinition performed
+by the class loader returned by
+<a href="jakarta.persistence/jakarta/persistence/spi/PersistenceUnitInfo.html#getClassLoader()"><code>PersistenceUnitInfo.getClassLoader()</code></a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Subgraph.html#getClassType()" class="member-name-link">getClassType()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Subgraph.html" title="interface in jakarta.persistence">Subgraph</a></dt>
 <dd>
@@ -2951,7 +3054,7 @@ that corresponds to the specified name and Java element type.</div>
 <dd>
 <div class="block">Returns the parent <a href="jakarta.persistence/jakarta/persistence/criteria/From.html" title="interface in jakarta.persistence.criteria"><code>From</code></a> object from which the correlated
 <a href="jakarta.persistence/jakarta/persistence/criteria/From.html" title="interface in jakarta.persistence.criteria"><code>From</code></a> object has been obtained through correlation (use
-of <a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Subquery.correlate(Root)</code></a> method).</div>
+of <a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html#correlate(jakarta.persistence.criteria.From)"><code>Subquery.correlate(From)</code></a> method).</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityHandler.html#getCriteriaBuilder()" class="member-name-link">getCriteriaBuilder()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a></dt>
 <dd>
@@ -3193,7 +3296,7 @@ effect for the query instance.</div>
 <dd>
 <div class="block">A map keyed by hint name of all hints specified via
 <a href="jakarta.persistence/jakarta/persistence/NamedQuery.html#hints()"><code>NamedQuery.hints()</code></a>, <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html#hints()"><code>NamedNativeQuery.hints()</code></a>,
-<a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#hints()"><code>StaticQueryOptions.hints()</code></a>, or</div>
+or <a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#hints()"><code>QueryOptions.hints()</code></a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/metamodel/IdentifiableType.html#getId(java.lang.Class)" class="member-name-link">getId(Class)</a> - Method in interface jakarta.persistence.metamodel.<a href="jakarta.persistence/jakarta/persistence/metamodel/IdentifiableType.html" title="interface in jakarta.persistence.metamodel">IdentifiableType</a></dt>
 <dd>
@@ -3294,18 +3397,10 @@ corresponds to the specified name and Java element type.</div>
 <div class="deprecation-comment">Use <a href="jakarta.persistence/jakarta/persistence/TypedQuery.html#getLockMode()"><code>TypedQuery.getLockMode()</code></a></div>
 </div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html#getLockMode()" class="member-name-link">getLockMode()</a> - Method in class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/TypedQuery.html#getLockMode()" class="member-name-link">getLockMode()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a></dt>
 <dd>
 <div class="block">The current <a href="jakarta.persistence/jakarta/persistence/LockModeType.html" title="enum class in jakarta.persistence">lock mode</a> for the
 query or <code>null</code> if a lock mode has not been set.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html#getLockMode()" class="member-name-link">getLockMode()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a></dt>
-<dd>
-<div class="block">The specified <a href="jakarta.persistence/jakarta/persistence/LockModeType.html" title="enum class in jakarta.persistence"><code>LockModeType</code></a>, if any,
-oo <a href="jakarta.persistence/jakarta/persistence/LockModeType.html#NONE"><code>LockModeType.NONE</code></a> if no lock mode
-was specified.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityManager.html#getLockMode(java.lang.Object)" class="member-name-link">getLockMode(Object)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></dt>
 <dd>
@@ -3452,8 +3547,8 @@ not a named parameter or no name has been assigned.</div>
 <div class="block">The name of the statement or query, as specified by
 <a href="jakarta.persistence/jakarta/persistence/NamedQuery.html#name()"><code>NamedQuery.name()</code></a> or <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html#name()"><code>NamedNativeQuery.name()</code></a>,
 or as inferred from the name of the method annotated
-<a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+<a href="jakarta.persistence/jakarta/persistence/query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="jakarta.persistence/jakarta/persistence/query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/metamodel/EntityType.html#getNamedEntityGraphs()" class="member-name-link">getNamedEntityGraphs()</a> - Method in interface jakarta.persistence.metamodel.<a href="jakarta.persistence/jakarta/persistence/metamodel/EntityType.html" title="interface in jakarta.persistence.metamodel">EntityType</a></dt>
 <dd>
@@ -3511,6 +3606,49 @@ has been specified.</div>
 <dd>
 <div class="block">Return the <a href="jakarta.persistence/jakarta/persistence/FetchOption.html" title="interface in jakarta.persistence">options</a> controlling
 how this node is fetched.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityAgent.html#getOptions()" class="member-name-link">getOptions()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityAgent.html" title="interface in jakarta.persistence">EntityAgent</a></dt>
+<dd>
+<div class="block">Get the <a href="jakarta.persistence/jakarta/persistence/EntityAgent.Option.html" title="interface in jakarta.persistence">options</a> controlling the behavior
+of this entity agent.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/EntityManager.html#getOptions()" class="member-name-link">getOptions()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence">EntityManager</a></dt>
+<dd>
+<div class="block">Get the <a href="jakarta.persistence/jakarta/persistence/EntityManager.Option.html" title="interface in jakarta.persistence">options</a> controlling the behavior
+of this entity manager.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html#getOptions()" class="member-name-link">getOptions()</a> - Method in class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html" title="class in jakarta.persistence.query">StaticStatementReference</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html#getOptions()" class="member-name-link">getOptions()</a> - Method in class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Statement.html#getOptions()" class="member-name-link">getOptions()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Statement.html" title="interface in jakarta.persistence">Statement</a></dt>
+<dd>
+<div class="block">Get the <a href="jakarta.persistence/jakarta/persistence/Statement.Option.html" title="interface in jakarta.persistence">options</a> influencing execution of
+this statement.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/StatementReference.html#getOptions()" class="member-name-link">getOptions()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/StatementReference.html" title="interface in jakarta.persistence">StatementReference</a></dt>
+<dd>
+<div class="block">All <a href="jakarta.persistence/jakarta/persistence/Statement.Option.html" title="interface in jakarta.persistence">options</a> specified by
+<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query"><code>QueryOptions</code></a>,
+<a href="jakarta.persistence/jakarta/persistence/NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a>, or <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a>, or an
+empty set if no options were specified.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.html#getOptions()" class="member-name-link">getOptions()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.html" title="interface in jakarta.persistence">StoredProcedureQuery</a></dt>
+<dd>
+<div class="block">Get the <a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">options</a> influencing execution of
+this stored procedure.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/TypedQuery.html#getOptions()" class="member-name-link">getOptions()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQuery.html" title="interface in jakarta.persistence">TypedQuery</a></dt>
+<dd>
+<div class="block">Get the <a href="jakarta.persistence/jakarta/persistence/TypedQuery.Option.html" title="interface in jakarta.persistence">options</a> influencing execution of
+this typed query.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html#getOptions()" class="member-name-link">getOptions()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a></dt>
+<dd>
+<div class="block">All <a href="jakarta.persistence/jakarta/persistence/TypedQuery.Option.html" title="interface in jakarta.persistence">options</a> specified by
+<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query"><code>QueryOptions</code></a>,
+<a href="jakarta.persistence/jakarta/persistence/NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a>, or <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a>, or an
+empty set if no options were specified.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaQuery.html#getOrderList()" class="member-name-link">getOrderList()</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a></dt>
 <dd>
@@ -3659,14 +3797,6 @@ persistence unit.</div>
 <dd>
 <div class="block">Return the persistent attribute type for the attribute.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html#getPessimisticLockScope()" class="member-name-link">getPessimisticLockScope()</a> - Method in class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html#getPessimisticLockScope()" class="member-name-link">getPessimisticLockScope()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html" title="interface in jakarta.persistence">TypedQueryReference</a></dt>
-<dd>
-<div class="block">The specified <a href="jakarta.persistence/jakarta/persistence/PessimisticLockScope.html" title="enum class in jakarta.persistence"><code>PessimisticLockScope</code></a>,
-if any, or <a href="jakarta.persistence/jakarta/persistence/PessimisticLockScope.html#NORMAL"><code>PessimisticLockScope.NORMAL</code></a>
-if no lock scope was specified.</div>
-</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/metamodel/ManagedType.html#getPluralAttributes()" class="member-name-link">getPluralAttributes()</a> - Method in interface jakarta.persistence.metamodel.<a href="jakarta.persistence/jakarta/persistence/metamodel/ManagedType.html" title="interface in jakarta.persistence.metamodel">ManagedType</a></dt>
 <dd>
 <div class="block">Return all multi-valued attributes (Collection-, Set-,
@@ -3798,8 +3928,8 @@ type is exactly the given Java type.</div>
 <a href="jakarta.persistence/jakarta/persistence/NamedQuery.html#resultClass()"><code>NamedQuery.resultClass()</code></a> or
 <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html#resultClass()"><code>NamedNativeQuery.resultClass()</code></a>, or as inferred
 from the declared return type of the method annotated
-<a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+<a href="jakarta.persistence/jakarta/persistence/query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="jakarta.persistence/jakarta/persistence/query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityTransaction.html#getRollbackOnly()" class="member-name-link">getRollbackOnly()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityTransaction.html" title="interface in jakarta.persistence">EntityTransaction</a></dt>
 <dd>
@@ -3936,15 +4066,6 @@ or mapped superclass.</div>
 <dd>
 <div class="block">The query timeout, in milliseconds, or null for no timeout.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html#getTimeout()" class="member-name-link">getTimeout()</a> - Method in class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html" title="class in jakarta.persistence.query">StaticStatementReference</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html#getTimeout()" class="member-name-link">getTimeout()</a> - Method in class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/Reference.html#getTimeout()" class="member-name-link">getTimeout()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Reference.html" title="interface in jakarta.persistence">Reference</a></dt>
-<dd>
-<div class="block">The specified <a href="jakarta.persistence/jakarta/persistence/Timeout.html" title="class in jakarta.persistence"><code>Timeout</code></a>, if any, or
-<code>null</code> if no timeout was specified.</div>
-</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/EntityHandler.html#getTransaction()" class="member-name-link">getTransaction()</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/EntityHandler.html" title="interface in jakarta.persistence">EntityHandler</a></dt>
 <dd>
 <div class="block">Return the resource-level <a href="jakarta.persistence/jakarta/persistence/EntityTransaction.html" title="interface in jakarta.persistence"><code>EntityTransaction</code></a> object.</div>
@@ -3982,15 +4103,9 @@ attribute of the entity or mapped superclass.</div>
 <dd>
 <div class="block">Return the version of the entity.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNode.html#graph()" class="member-name-link">graph()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNode.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNode</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.html#graph()" class="member-name-link">graph()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Fetch.html" title="annotation interface in jakarta.persistence">Fetch</a></dt>
 <dd>
-<div class="block">The name of the containing entity graph, as specified by
-<a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html#name()"><code>NamedEntityGraph.name()</code></a>.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraph.html#graph()" class="member-name-link">graph()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraph</a></dt>
-<dd>
-<div class="block">The name of the containing entity graph, as specified by
-<a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html#name()"><code>NamedEntityGraph.name()</code></a>.</div>
+<div class="block">The name of an entity graph.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html" class="type-name-link" title="interface in jakarta.persistence">Graph&lt;T&gt;</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
@@ -4207,6 +4322,10 @@ predicates.</div>
 according the conjunction of the specified restriction
 predicates.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.html#hints()" class="member-name-link">hints()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Fetch.html" title="annotation interface in jakarta.persistence">Fetch</a></dt>
+<dd>
+<div class="block">Vendor-specific fetching hints.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html#hints()" class="member-name-link">hints()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence">NamedNativeQuery</a></dt>
 <dd>
 <div class="block">Query properties and hints.</div>
@@ -4227,7 +4346,7 @@ predicates.</div>
 <dd>
 <div class="block">Query properties and hints.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#hints()" class="member-name-link">hints()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#hints()" class="member-name-link">hints()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query">QueryOptions</a></dt>
 <dd>
 <div class="block">Query properties and hints.</div>
 </dd>
@@ -4450,7 +4569,7 @@ parameter object.</div>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/From.html#isCorrelated()" class="member-name-link">isCorrelated()</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/From.html" title="interface in jakarta.persistence.criteria">From</a></dt>
 <dd>
 <div class="block">Whether the <a href="jakarta.persistence/jakarta/persistence/criteria/From.html" title="interface in jakarta.persistence.criteria"><code>From</code></a> object has been obtained as a result
-of correlation (use of a <a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html#correlate(jakarta.persistence.criteria.Root)"><code>Subquery.correlate(Root)</code></a> method).</div>
+of correlation (use of a <a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html#correlate(jakarta.persistence.criteria.From)"><code>Subquery.correlate(From)</code></a> method).</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/AbstractQuery.html#isDistinct()" class="member-name-link">isDistinct()</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/AbstractQuery.html" title="interface in jakarta.persistence.criteria">AbstractQuery</a></dt>
 <dd>
@@ -4620,24 +4739,39 @@ environments.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a> - package jakarta.persistence</dt>
 <dd>
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/package-summary.html">jakarta.persistence.criteria</a> - package jakarta.persistence.criteria</dt>
 <dd>
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/metamodel/package-summary.html">jakarta.persistence.metamodel</a> - package jakarta.persistence.metamodel</dt>
 <dd>
-<div class="block">Jakarta Persistence Metamodel API</div>
+<div class="block">Defines the Jakarta Persistence Metamodel API, allowing runtime
+reflection on the managed types declared by a persistence unit.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/query/package-summary.html">jakarta.persistence.query</a> - package jakarta.persistence.query</dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Defines annotations for expressing statically type safe queries by
+annotating query methods of a
+<a href="jakarta.persistence/jakarta/persistence/spi/Discoverable.html" title="annotation interface in jakarta.persistence.spi">discoverable</a> type
+or Jakarta Data repository.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/spi/package-summary.html">jakarta.persistence.spi</a> - package jakarta.persistence.spi</dt>
 <dd>
-<div class="block">SPI for Jakarta Persistence providers</div>
+<div class="block">Defines an SPI for integrating with the persistence provider
+and with the Jakarta EE platform.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/sql/package-summary.html">jakarta.persistence.sql</a> - package jakarta.persistence.sql</dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Defines an API for the programmatic definition of SQL result set
+mappings to Java classes.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/JakartaQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence.query">JakartaQuery</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/query/package-summary.html">jakarta.persistence.query</a></dt>
+<dd>
+<div class="block">Specifies a query expressed in the Jakarta Persistence Query Language.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Persistence.JdbcProperties.html#JDBC_BATCH_SIZE" class="member-name-link">JDBC_BATCH_SIZE</a> - Static variable in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Persistence.JdbcProperties.html" title="interface in jakarta.persistence">Persistence.JdbcProperties</a></dt>
 <dd>
 <div class="block">Enable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Statement.html#executeBatch()" title="class or interface in java.sql" class="external-link">JDBC statement batching</a>
@@ -4852,21 +4986,11 @@ table.</div>
 <dd>
 <div class="block">Create a path expression that corresponds to the map key.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#keys(M)" class="member-name-link">keys(M)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
-<dd>
-<div class="block">Create an expression that returns the keys of a map.</div>
-</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/NamedAttributeNode.html#keySubgraph()" class="member-name-link">keySubgraph()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedAttributeNode.html" title="annotation interface in jakarta.persistence">NamedAttributeNode</a></dt>
 <dd>
 <div class="block">(Optional) If the attribute references a Map type, this element
 can be used to specify a subgraph for the Key in the case of an
 entity key type.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/Index.html#kind()" class="member-name-link">kind()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Index.html" title="annotation interface in jakarta.persistence">Index</a></dt>
-<dd>
-<div class="block">(Optional) A SQL fragment representing the index kind,
-usually inserted before the keyword <code>index</code> in 
-the generated DDL which creates this index.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
@@ -5212,7 +5336,7 @@ using the specified properties.</div>
 <dd>
 <div class="block">(Optional) The lock mode type to use in query execution.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#lockMode()" class="member-name-link">lockMode()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#lockMode()" class="member-name-link">lockMode()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query">QueryOptions</a></dt>
 <dd>
 <div class="block">The lock mode type to use in query execution.</div>
 </dd>
@@ -5234,10 +5358,10 @@ be obtained on an entity instance.</div>
 <div class="block">(Optional) The pessimistic lock scope to use in query execution
 if a pessimistic lock mode is specified via <a href="jakarta.persistence/jakarta/persistence/NamedQuery.html#lockMode()"><code>NamedQuery.lockMode()</code></a>.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#lockScope()" class="member-name-link">lockScope()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#lockScope()" class="member-name-link">lockScope()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query">QueryOptions</a></dt>
 <dd>
 <div class="block">The pessimistic lock scope to use in query execution if a
-pessimistic lock mode is specified via <a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#lockMode()"><code>StaticQueryOptions.lockMode()</code></a>.</div>
+pessimistic lock mode is specified via <a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#lockMode()"><code>QueryOptions.lockMode()</code></a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/LockTimeoutException.html" class="type-name-link" title="class in jakarta.persistence">LockTimeoutException</a> - Exception Class in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
@@ -5697,6 +5821,11 @@ methods that create stored procedure query objects.</div>
 <dd>
 <div class="block">(Optional) The name of the ordering column.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/PersistenceAgent.html#name()" class="member-name-link">name()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceAgent.html" title="annotation interface in jakarta.persistence">PersistenceAgent</a></dt>
+<dd>
+<div class="block">(Optional) The name at which the <a href="jakarta.persistence/jakarta/persistence/EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a> is
+accessed in the environment referencing context.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/PersistenceConfiguration.html#name()" class="member-name-link">name()</a> - Method in class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceConfiguration.html" title="class in jakarta.persistence">PersistenceConfiguration</a></dt>
 <dd>
 <div class="block">The name of the persistence unit, which may be used by the persistence
@@ -5775,25 +5904,6 @@ element of a <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.h
 <div class="block">Declares a named <a href="jakarta.persistence/jakarta/persistence/EntityGraph.html" title="interface in jakarta.persistence">entity graph</a> or subgraph
 of a named entity graph.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNode.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNode</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
-<dd>
-<div class="block">Declares that the annotated attribute is an attribute
-node in a <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity graph</a>.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNodes.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNodes</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
-<dd>
-<div class="block">Groups <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNode.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.AttributeNode</code></a> annotations.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraph.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraph</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
-<dd>
-<div class="block">Declares that the annotated association is the root of a
-subgraph of a <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence">named entity
-graph</a>.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraphs.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraphs</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
-<dd>
-<div class="block">Groups <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph.Subgraph</code></a> annotations.</div>
-</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphs.html" class="type-name-link" title="annotation interface in jakarta.persistence">NamedEntityGraphs</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Used to group <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a> annotations.</div>
@@ -5846,6 +5956,10 @@ Jakarta Persistence Query Language.</div>
 <dd>
 <div class="block">Declares a <a href="jakarta.persistence/jakarta/persistence/Subgraph.html" title="interface in jakarta.persistence">subgraph</a> as a member element
 of a <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html" title="annotation interface in jakarta.persistence"><code>NamedEntityGraph</code></a>.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/NativeQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence.query">NativeQuery</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/query/package-summary.html">jakarta.persistence.query</a></dt>
+<dd>
+<div class="block">Specifies a query expressed in the native SQL dialect of the database.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#neg(jakarta.persistence.criteria.Expression)" class="member-name-link">neg(Expression)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
 <dd>
@@ -6250,6 +6364,31 @@ specified ON condition and return the join object.</div>
 <div class="block">Modify the join to restrict the result according to the
 specified ON condition and return the join object.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CollectionJoin.html#on(java.util.List)" class="member-name-link">on(List)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a></dt>
+<dd>
+<div class="block">Modify the join to restrict the result according to the
+specified ON condition and return the join object.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/Join.html#on(java.util.List)" class="member-name-link">on(List)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Join.html" title="interface in jakarta.persistence.criteria">Join</a></dt>
+<dd>
+<div class="block">Modify the join to restrict the result according to the
+specified ON condition and return the join object.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/ListJoin.html#on(java.util.List)" class="member-name-link">on(List)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a></dt>
+<dd>
+<div class="block">Modify the join to restrict the result according to the
+specified ON condition and return the join object.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/MapJoin.html#on(java.util.List)" class="member-name-link">on(List)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a></dt>
+<dd>
+<div class="block">Modify the join to restrict the result according to the
+specified ON condition and return the join object.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/SetJoin.html#on(java.util.List)" class="member-name-link">on(List)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a></dt>
+<dd>
+<div class="block">Modify the join to restrict the result according to the
+specified ON condition and return the join object.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/metamodel/Attribute.PersistentAttributeType.html#ONE_TO_MANY" class="member-name-link">ONE_TO_MANY</a> - Enum constant in enum class jakarta.persistence.metamodel.<a href="jakarta.persistence/jakarta/persistence/metamodel/Attribute.PersistentAttributeType.html" title="enum class in jakarta.persistence.metamodel">Attribute.PersistentAttributeType</a></dt>
 <dd>
 <div class="block">One-to-many association</div>
@@ -6535,8 +6674,8 @@ operation</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Persistence.html" class="type-name-link" title="class in jakarta.persistence">Persistence</a> - Class in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
-<div class="block">Bootstrap class used to obtain an <a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a>
-in Java SE environments.</div>
+<div class="block">Bootstrap class used to obtain an <a href="jakarta.persistence/jakarta/persistence/EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> in
+Java SE environments.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Persistence.UnitProperties.html#PERSISTENCE_PROVIDER" class="member-name-link">PERSISTENCE_PROVIDER</a> - Static variable in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Persistence.UnitProperties.html" title="interface in jakarta.persistence">Persistence.UnitProperties</a></dt>
 <dd>
@@ -6598,6 +6737,15 @@ in <code>persistence.xml</code>.</div>
 <dd>
 <div class="block">Properties used to control the integration with Bean Validation.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/PersistenceAgent.html" class="type-name-link" title="annotation interface in jakarta.persistence">PersistenceAgent</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">Expresses a dependency on a container-managed <a href="jakarta.persistence/jakarta/persistence/EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a>
+and its associated persistence unit.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/PersistenceAgents.html" class="type-name-link" title="annotation interface in jakarta.persistence">PersistenceAgents</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">Declares one or more <a href="jakarta.persistence/jakarta/persistence/PersistenceAgent.html" title="annotation interface in jakarta.persistence"><code>PersistenceAgent</code></a> annotations.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/PersistenceConfiguration.html" class="type-name-link" title="class in jakarta.persistence">PersistenceConfiguration</a> - Class in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Represents a configuration of a persistence unit, allowing programmatic
@@ -6610,7 +6758,7 @@ creation of an <a href="jakarta.persistence/jakarta/persistence/EntityManagerFac
 <dt><a href="jakarta.persistence/jakarta/persistence/PersistenceContext.html" class="type-name-link" title="annotation interface in jakarta.persistence">PersistenceContext</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Expresses a dependency on a container-managed <a href="jakarta.persistence/jakarta/persistence/EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>
- and its associated persistence context.</div>
+and its associated persistence context.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/PersistenceContexts.html" class="type-name-link" title="annotation interface in jakarta.persistence">PersistenceContexts</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
@@ -6930,6 +7078,11 @@ of its arguments.</div>
 <div class="block">Create an expression that returns the product
 of its arguments.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/PersistenceAgent.html#properties()" class="member-name-link">properties()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceAgent.html" title="annotation interface in jakarta.persistence">PersistenceAgent</a></dt>
+<dd>
+<div class="block">(Optional) Properties for the container or persistence
+provider.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/PersistenceConfiguration.html#properties()" class="member-name-link">properties()</a> - Method in class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceConfiguration.html" title="class in jakarta.persistence">PersistenceConfiguration</a></dt>
 <dd>
 <div class="block">Standard and vendor-specific property settings.</div>
@@ -6948,8 +7101,8 @@ of its arguments.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/AccessType.html#PROPERTY" class="member-name-link">PROPERTY</a> - Enum constant in enum class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/AccessType.html" title="enum class in jakarta.persistence">AccessType</a></dt>
 <dd>
-<div class="block">Property-based access is used, that is, state is accessed
-via getter and setter methods.</div>
+<div class="block">Property access is used; that is, state is accessed via
+getter and setter methods.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/PersistenceConfiguration.html#provider()" class="member-name-link">provider()</a> - Method in class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceConfiguration.html" title="class in jakarta.persistence">PersistenceConfiguration</a></dt>
 <dd>
@@ -7007,6 +7160,10 @@ query language or in native SQL.</div>
 <dd>
 <div class="block">Used to supply a query property or hint to the <a href="jakarta.persistence/jakarta/persistence/NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a>
 or <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotation.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" class="type-name-link" title="annotation interface in jakarta.persistence.query">QueryOptions</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/query/package-summary.html">jakarta.persistence.query</a></dt>
+<dd>
+<div class="block">Configures options that affect the execution of a query.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/QueryTimeoutException.html" class="type-name-link" title="class in jakarta.persistence">QueryTimeoutException</a> - Exception Class in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
@@ -7073,8 +7230,8 @@ of its arguments.</div>
 <dd>
 <div class="block">A reference to a named statement or query declared via the
 <a href="jakarta.persistence/jakarta/persistence/NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+or using <a href="jakarta.persistence/jakarta/persistence/query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="jakarta.persistence/jakarta/persistence/query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/JoinColumn.html#referencedColumnName()" class="member-name-link">referencedColumnName()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/JoinColumn.html" title="annotation interface in jakarta.persistence">JoinColumn</a></dt>
 <dd>
@@ -7187,15 +7344,18 @@ operation</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#removeAttributeNode(jakarta.persistence.metamodel.Attribute)" class="member-name-link">removeAttributeNode(Attribute)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Remove an attribute node from the entity graph.</div>
+<div class="block">Remove an attribute node from the entity graph, cancelling the
+effect of any prior <a href="jakarta.persistence/jakarta/persistence/Graph.html#addAttributeNode(java.lang.String)">addition</a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#removeAttributeNode(java.lang.String)" class="member-name-link">removeAttributeNode(String)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Remove an attribute node from the entity graph.</div>
+<div class="block">Remove an attribute node from the entity graph, cancelling the
+effect of any prior <a href="jakarta.persistence/jakarta/persistence/Graph.html#addAttributeNode(java.lang.String)">addition</a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Graph.html#removeAttributeNodes(jakarta.persistence.metamodel.Attribute.PersistentAttributeType)" class="member-name-link">removeAttributeNodes(Attribute.PersistentAttributeType)</a> - Method in interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Graph.html" title="interface in jakarta.persistence">Graph</a></dt>
 <dd>
-<div class="block">Remove all attribute nodes of the given attribute types.</div>
+<div class="block">Remove all attribute nodes of the given attribute type, cancelling
+the effect of any prior <a href="jakarta.persistence/jakarta/persistence/Graph.html#addAttributeNode(java.lang.String)">additions</a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/TextExpression.html#replace(jakarta.persistence.criteria.Expression,jakarta.persistence.criteria.Expression)" class="member-name-link">replace(Expression, Expression)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/TextExpression.html" title="interface in jakarta.persistence.criteria">TextExpression</a></dt>
 <dd>
@@ -7530,15 +7690,29 @@ result.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#selectCase()" class="member-name-link">selectCase()</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
 <dd>
-<div class="block">Create a general case expression.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/criteria/Expression.html#selectCase()" class="member-name-link">selectCase()</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Expression.html" title="interface in jakarta.persistence.criteria">Expression</a></dt>
-<dd>
-<div class="block">Create a simple case expression to test against this expression.</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">This operation declares an unconstrained type variable.
+            Use <a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#selectCase(java.lang.Class)"><code>CriteriaBuilder.selectCase(Class)</code></a> instead.</div>
+</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#selectCase(jakarta.persistence.criteria.Expression)" class="member-name-link">selectCase(Expression)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">This operation declares an unconstrained type variable.
+            Use <a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#selectCase(jakarta.persistence.criteria.Expression,java.lang.Class)"><code>CriteriaBuilder.selectCase(Expression,Class)</code></a> instead.</div>
+</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#selectCase(jakarta.persistence.criteria.Expression,java.lang.Class)" class="member-name-link">selectCase(Expression, Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
+<dd>
 <div class="block">Create a simple case expression.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#selectCase(java.lang.Class)" class="member-name-link">selectCase(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
+<dd>
+<div class="block">Create a general case expression.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/Expression.html#selectCase(java.lang.Class)" class="member-name-link">selectCase(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Expression.html" title="interface in jakarta.persistence.criteria">Expression</a></dt>
+<dd>
+<div class="block">Create a simple case expression to test against this expression.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/Selection.html" class="type-name-link" title="interface in jakarta.persistence.criteria">Selection&lt;X&gt;</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/criteria/package-summary.html">jakarta.persistence.criteria</a></dt>
 <dd>
@@ -8239,6 +8413,10 @@ query language.</div>
 <dd>
 <div class="block">Interface used to control the execution of executable statements.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Statement.Option.html" class="type-name-link" title="interface in jakarta.persistence">Statement.Option</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">An option influencing execution of a statement.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/StatementOrTypedQuery.html" class="type-name-link" title="interface in jakarta.persistence">StatementOrTypedQuery</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Declares operations allowing a <a href="jakarta.persistence/jakarta/persistence/Statement.html" title="interface in jakarta.persistence"><code>Statement</code></a> or <a href="jakarta.persistence/jakarta/persistence/TypedQuery.html" title="interface in jakarta.persistence"><code>TypedQuery</code></a>
@@ -8256,41 +8434,29 @@ that returns a row count.</div>
 a metamodel class that represents the Java type designated by the
 <a href="jakarta.persistence/jakarta/persistence/metamodel/StaticMetamodel.html#value()"><code>StaticMetamodel.value()</code></a> element.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence.query">StaticNativeQuery</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/query/package-summary.html">jakarta.persistence.query</a></dt>
-<dd>
-<div class="block">Specifies a query expressed in the native SQL dialect of the database.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" class="type-name-link" title="annotation interface in jakarta.persistence.query">StaticQuery</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/query/package-summary.html">jakarta.persistence.query</a></dt>
-<dd>
-<div class="block">Specifies a query expressed in the Jakarta Persistence Query Language.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" class="type-name-link" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/query/package-summary.html">jakarta.persistence.query</a></dt>
-<dd>
-<div class="block">Configures options that affect the execution of a query.</div>
-</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html" class="type-name-link" title="class in jakarta.persistence.query">StaticStatementReference</a> - Class in <a href="jakarta.persistence/jakarta/persistence/query/package-summary.html">jakarta.persistence.query</a></dt>
 <dd>
-<div class="block">A reference to a statement declared using a <a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a>
-or <a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a> annotation.</div>
+<div class="block">A reference to a statement declared using a <a href="jakarta.persistence/jakarta/persistence/query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a>
+or <a href="jakarta.persistence/jakarta/persistence/query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a> annotation.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html#%3Cinit%3E(java.lang.String,java.lang.Class,java.lang.String,java.util.List,java.util.List,java.util.List)" class="member-name-link">StaticStatementReference(String, Class, String, List, List, List)</a> - Constructor for class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html" title="class in jakarta.persistence.query">StaticStatementReference</a></dt>
 <dd>
 <div class="block">Intended for use in code generated by an annotation processor.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html#%3Cinit%3E(java.lang.String,java.lang.Class,java.lang.String,java.util.List,java.util.List,java.util.List,jakarta.persistence.Timeout,java.util.Map)" class="member-name-link">StaticStatementReference(String, Class, String, List, List, List, Timeout, Map)</a> - Constructor for class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html" title="class in jakarta.persistence.query">StaticStatementReference</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html#%3Cinit%3E(java.lang.String,java.lang.Class,java.lang.String,java.util.List,java.util.List,java.util.List,java.util.Map,jakarta.persistence.Statement.Option...)" class="member-name-link">StaticStatementReference(String, Class, String, List, List, List, Map, Statement.Option...)</a> - Constructor for class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticStatementReference.html" title="class in jakarta.persistence.query">StaticStatementReference</a></dt>
 <dd>
 <div class="block">Intended for use in code generated by an annotation processor.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" class="type-name-link" title="class in jakarta.persistence.query">StaticTypedQueryReference&lt;R&gt;</a> - Class in <a href="jakarta.persistence/jakarta/persistence/query/package-summary.html">jakarta.persistence.query</a></dt>
 <dd>
-<div class="block">A reference to a query declared using a <a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a>
-or <a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a> annotation.</div>
+<div class="block">A reference to a query declared using a <a href="jakarta.persistence/jakarta/persistence/query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a>
+or <a href="jakarta.persistence/jakarta/persistence/query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a> annotation.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html#%3Cinit%3E(java.lang.String,java.lang.Class,java.lang.String,java.lang.Class,java.util.List,java.util.List,java.util.List)" class="member-name-link">StaticTypedQueryReference(String, Class, String, Class, List, List, List)</a> - Constructor for class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference</a></dt>
 <dd>
 <div class="block">Intended for use in code generated by an annotation processor.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html#%3Cinit%3E(java.lang.String,java.lang.Class,java.lang.String,java.lang.Class,java.util.List,java.util.List,java.util.List,jakarta.persistence.CacheRetrieveMode,jakarta.persistence.CacheStoreMode,jakarta.persistence.LockModeType,jakarta.persistence.PessimisticLockScope,jakarta.persistence.Timeout,java.lang.String,java.util.Map)" class="member-name-link">StaticTypedQueryReference(String, Class, String, Class, List, List, List, CacheRetrieveMode, CacheStoreMode, LockModeType, PessimisticLockScope, Timeout, String, Map)</a> - Constructor for class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html#%3Cinit%3E(java.lang.String,java.lang.Class,java.lang.String,java.lang.Class,java.util.List,java.util.List,java.util.List,java.lang.String,java.util.Map,jakarta.persistence.TypedQuery.Option...)" class="member-name-link">StaticTypedQueryReference(String, Class, String, Class, List, List, List, String, Map, TypedQuery.Option...)</a> - Constructor for class jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticTypedQueryReference.html" title="class in jakarta.persistence.query">StaticTypedQueryReference</a></dt>
 <dd>
 <div class="block">Intended for use in code generated by an annotation processor.</div>
 </dd>
@@ -8301,6 +8467,10 @@ or <a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html
 <dt><a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.html" class="type-name-link" title="interface in jakarta.persistence">StoredProcedureQuery</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">Interface used to control execution of a stored procedure query.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/StoredProcedureQuery.Option.html" class="type-name-link" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">An option influencing execution of a stored procedure.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/GeneratedValue.html#strategy()" class="member-name-link">strategy()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/GeneratedValue.html" title="annotation interface in jakarta.persistence">GeneratedValue</a></dt>
 <dd>
@@ -8331,16 +8501,18 @@ hierarchy.</div>
 attributes for subclasses of the annotated entity class to
 the entity graph.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.html#subgraph()" class="member-name-link">subgraph()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Fetch.html" title="annotation interface in jakarta.persistence">Fetch</a></dt>
+<dd>
+<div class="block">The names of one or more entity graphs to be attached as
+subgraphs of the <a href="jakarta.persistence/jakarta/persistence/Fetch.html#graph()">named</a> entity graph
+to the attribute node representing the annotated
+association.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/NamedAttributeNode.html#subgraph()" class="member-name-link">subgraph()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedAttributeNode.html" title="annotation interface in jakarta.persistence">NamedAttributeNode</a></dt>
 <dd>
 <div class="block">(Optional) If the attribute references a managed type that has
 its own <a href="jakarta.persistence/jakarta/persistence/AttributeNode.html" title="interface in jakarta.persistence"><code>AttributeNode</code></a>s, this element is used to refer
 to that <a href="jakarta.persistence/jakarta/persistence/NamedSubgraph.html" title="annotation interface in jakarta.persistence"><code>NamedSubgraph</code></a> definition.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraph.html#subgraph()" class="member-name-link">subgraph()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraph.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraph</a></dt>
-<dd>
-<div class="block">The name of an entity graph whose root is the associated
-entity, as specified by <a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.html#name()"><code>NamedEntityGraph.name()</code></a>.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Subgraph.html" class="type-name-link" title="interface in jakarta.persistence">Subgraph&lt;T&gt;</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
@@ -8597,7 +8769,7 @@ single-valued properties or fields of string type.</div>
 <dd>
 <div class="block">The <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/LocalTime.html" title="class or interface in java.time" class="external-link">time</a> part of a datetime.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html#timeout()" class="member-name-link">timeout()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticQueryOptions.html" title="annotation interface in jakarta.persistence.query">StaticQueryOptions</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html#timeout()" class="member-name-link">timeout()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/QueryOptions.html" title="annotation interface in jakarta.persistence.query">QueryOptions</a></dt>
 <dd>
 <div class="block">A query timeout in milliseconds.</div>
 </dd>
@@ -8803,6 +8975,10 @@ persistent.</div>
 <dd>
 <div class="block">Downcast CollectionJoin object to the specified type.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#treat(jakarta.persistence.criteria.From,java.lang.Class)" class="member-name-link">treat(From, Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
+<dd>
+<div class="block">Downcast Root or Join to the specified type.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#treat(jakarta.persistence.criteria.Join,java.lang.Class)" class="member-name-link">treat(Join, Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
 <dd>
 <div class="block">Downcast Join object to the specified type.</div>
@@ -8826,6 +9002,42 @@ persistent.</div>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#treat(jakarta.persistence.criteria.SetJoin,java.lang.Class)" class="member-name-link">treat(SetJoin, Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
 <dd>
 <div class="block">Downcast SetJoin object to the specified type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CollectionJoin.html#treat(java.lang.Class)" class="member-name-link">treat(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CollectionJoin.html" title="interface in jakarta.persistence.criteria">CollectionJoin</a></dt>
+<dd>
+<div class="block">Downcast the element type to the given type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/From.html#treat(java.lang.Class)" class="member-name-link">treat(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/From.html" title="interface in jakarta.persistence.criteria">From</a></dt>
+<dd>
+<div class="block">Downcast the bound type to the given type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/Join.html#treat(java.lang.Class)" class="member-name-link">treat(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Join.html" title="interface in jakarta.persistence.criteria">Join</a></dt>
+<dd>
+<div class="block">Downcast the joined type to the given type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/ListJoin.html#treat(java.lang.Class)" class="member-name-link">treat(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/ListJoin.html" title="interface in jakarta.persistence.criteria">ListJoin</a></dt>
+<dd>
+<div class="block">Downcast the element type to the given type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/MapJoin.html#treat(java.lang.Class)" class="member-name-link">treat(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/MapJoin.html" title="interface in jakarta.persistence.criteria">MapJoin</a></dt>
+<dd>
+<div class="block">Downcast the value type to the given type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/Path.html#treat(java.lang.Class)" class="member-name-link">treat(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Path.html" title="interface in jakarta.persistence.criteria">Path</a></dt>
+<dd>
+<div class="block">Downcast the type of the path to the given type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/PluralJoin.html#treat(java.lang.Class)" class="member-name-link">treat(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/PluralJoin.html" title="interface in jakarta.persistence.criteria">PluralJoin</a></dt>
+<dd>
+<div class="block">Downcast the element type to the given type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/Root.html#treat(java.lang.Class)" class="member-name-link">treat(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Root.html" title="interface in jakarta.persistence.criteria">Root</a></dt>
+<dd>
+<div class="block">Downcast the root type to the given type.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/SetJoin.html#treat(java.lang.Class)" class="member-name-link">treat(Class)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/SetJoin.html" title="interface in jakarta.persistence.criteria">SetJoin</a></dt>
+<dd>
+<div class="block">Downcast the element type to the given type.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/TextExpression.html#trim()" class="member-name-link">trim()</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/TextExpression.html" title="interface in jakarta.persistence.criteria">TextExpression</a></dt>
 <dd>
@@ -8918,6 +9130,12 @@ in a tuple of values packaged as an instance of <a href="jakarta.persistence/jak
 <dd>
 <div class="block">Creates an instance of a <code>TupleMapping</code> record class.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/CollectionTable.html#type()" class="member-name-link">type()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/CollectionTable.html" title="annotation interface in jakarta.persistence">CollectionTable</a></dt>
+<dd>
+<div class="block">(Optional) A SQL fragment indicating the type of table,
+usually inserted before the keyword <code>table</code> in
+the generated DDL which creates this table.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/ColumnResult.html#type()" class="member-name-link">type()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/ColumnResult.html" title="annotation interface in jakarta.persistence">ColumnResult</a></dt>
 <dd>
 <div class="block">(Optional) The Java type to which the column type is to be mapped.</div>
@@ -8926,9 +9144,21 @@ in a tuple of values packaged as an instance of <a href="jakarta.persistence/jak
 <dd>
 <div class="block">Create an expression corresponding to the type of the path.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.html#type()" class="member-name-link">type()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Fetch.html" title="annotation interface in jakarta.persistence">Fetch</a></dt>
+<dd>
+<div class="block">The fetching policy.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Index.html#type()" class="member-name-link">type()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Index.html" title="annotation interface in jakarta.persistence">Index</a></dt>
 <dd>
-<div class="block">(Optional) A SQL fragment representing the index type.</div>
+<div class="block">(Optional) A SQL fragment indicating the type of index,
+usually inserted before the keyword <code>index</code> in the
+generated DDL which creates this index.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/JoinTable.html#type()" class="member-name-link">type()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/JoinTable.html" title="annotation interface in jakarta.persistence">JoinTable</a></dt>
+<dd>
+<div class="block">(Optional) A SQL fragment indicating the type of table,
+usually inserted before the keyword <code>table</code> in
+the generated DDL which creates this table.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/NamedSubgraph.html#type()" class="member-name-link">type()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedSubgraph.html" title="annotation interface in jakarta.persistence">NamedSubgraph</a></dt>
 <dd>
@@ -8938,6 +9168,12 @@ in a tuple of values packaged as an instance of <a href="jakarta.persistence/jak
 <dd>
 <div class="block">(Optional) Specifies whether a transaction-scoped or extended
 persistence context is required.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/SecondaryTable.html#type()" class="member-name-link">type()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/SecondaryTable.html" title="annotation interface in jakarta.persistence">SecondaryTable</a></dt>
+<dd>
+<div class="block">(Optional) A SQL fragment indicating the type of table,
+usually inserted before the keyword <code>table</code> in
+the generated DDL which creates this table.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/sql/ColumnMapping.html#type()" class="member-name-link">type()</a> - Method in record class jakarta.persistence.sql.<a href="jakarta.persistence/jakarta/persistence/sql/ColumnMapping.html" title="class in jakarta.persistence.sql">ColumnMapping</a></dt>
 <dd>
@@ -8971,6 +9207,12 @@ persistence context is required.</div>
 <dd>
 <div class="block">JDBC type of the parameter.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Table.html#type()" class="member-name-link">type()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Table.html" title="annotation interface in jakarta.persistence">Table</a></dt>
+<dd>
+<div class="block">(Optional) A SQL fragment indicating the type of table,
+usually inserted before the keyword <code>table</code> in
+the generated DDL which creates this table.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/metamodel/Type.html" class="type-name-link" title="interface in jakarta.persistence.metamodel">Type&lt;X&gt;</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/metamodel/package-summary.html">jakarta.persistence.metamodel</a></dt>
 <dd>
 <div class="block">An instance of the type <code>Type</code> represents a persistent
@@ -8982,12 +9224,16 @@ object or attribute type.</div>
 <dd>
 <div class="block">Interface used to control the execution of typed queries.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/TypedQuery.Option.html" class="type-name-link" title="interface in jakarta.persistence">TypedQuery.Option</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
+<dd>
+<div class="block">An option influencing execution of a typed query.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/TypedQueryReference.html" class="type-name-link" title="interface in jakarta.persistence">TypedQueryReference&lt;R&gt;</a> - Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
 <div class="block">A reference to a typed named query declared via the
 <a href="jakarta.persistence/jakarta/persistence/NamedQuery.html" title="annotation interface in jakarta.persistence"><code>NamedQuery</code></a> or <a href="jakarta.persistence/jakarta/persistence/NamedNativeQuery.html" title="annotation interface in jakarta.persistence"><code>NamedNativeQuery</code></a> annotations,
-or using <a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticQuery</code></a> or
-<a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>StaticNativeQuery</code></a>.</div>
+or using <a href="jakarta.persistence/jakarta/persistence/query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query"><code>JakartaQuery</code></a> or
+<a href="jakarta.persistence/jakarta/persistence/query/NativeQuery.html" title="annotation interface in jakarta.persistence.query"><code>NativeQuery</code></a>.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:U">U</h2>
@@ -9048,6 +9294,11 @@ table.</div>
 <dd>
 <div class="block">(Optional) Unique constraints that are to be placed on
 the table.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/PersistenceAgent.html#unitName()" class="member-name-link">unitName()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceAgent.html" title="annotation interface in jakarta.persistence">PersistenceAgent</a></dt>
+<dd>
+<div class="block">(Optional) The name of the persistence unit as defined in the
+<code>persistence.xml</code> file.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/PersistenceContext.html#unitName()" class="member-name-link">unitName()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceContext.html" title="annotation interface in jakarta.persistence">PersistenceContext</a></dt>
 <dd>
@@ -9155,6 +9406,10 @@ instead of from the database.</div>
 second-level cache when read from the database, and inserted
 or updated in the second-level cache when written to the
 database.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Index.html#using()" class="member-name-link">using()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Index.html" title="annotation interface in jakarta.persistence">Index</a></dt>
+<dd>
+<div class="block">(Optional) A SQL fragment representing the indexing method.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/GenerationType.html#UUID" class="member-name-link">UUID</a> - Enum constant in enum class jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/GenerationType.html" title="enum class in jakarta.persistence">GenerationType</a></dt>
 <dd>
@@ -9270,6 +9525,8 @@ are invoked.</div>
 <dd>
 <div class="block">(Optional) The type used in mapping an enum type.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/Fetch.Fetches.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/Fetch.Fetches.html" title="annotation interface in jakarta.persistence">Fetch.Fetches</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/ForeignKey.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/ForeignKey.html" title="annotation interface in jakarta.persistence">ForeignKey</a></dt>
 <dd>
 <div class="block">(Optional) Used to specify whether a foreign key constraint
@@ -9325,10 +9582,6 @@ key to which the relationship attribute corresponds.</div>
 <div class="block">(Required) The name of the attribute that must be included in
 the graph.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNodes.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.AttributeNodes.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.AttributeNodes</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraphs.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedEntityGraph.Subgraphs.html" title="annotation interface in jakarta.persistence">NamedEntityGraph.Subgraphs</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphs.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedEntityGraphs.html" title="annotation interface in jakarta.persistence">NamedEntityGraphs</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/NamedNativeQueries.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/NamedNativeQueries.html" title="annotation interface in jakarta.persistence">NamedNativeQueries</a></dt>
@@ -9355,6 +9608,10 @@ the graph.</div>
 <dd>
 <div class="block">An <code>orderby_list</code>.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/PersistenceAgents.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceAgents.html" title="annotation interface in jakarta.persistence">PersistenceAgents</a></dt>
+<dd>
+<div class="block">(Required) One or more <a href="jakarta.persistence/jakarta/persistence/PersistenceAgent.html" title="annotation interface in jakarta.persistence"><code>PersistenceAgent</code></a> annotations.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/PersistenceContexts.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/PersistenceContexts.html" title="annotation interface in jakarta.persistence">PersistenceContexts</a></dt>
 <dd>
 <div class="block">(Required) One or more <a href="jakarta.persistence/jakarta/persistence/PersistenceContext.html" title="annotation interface in jakarta.persistence"><code>PersistenceContext</code></a> annotations.</div>
@@ -9371,13 +9628,13 @@ the graph.</div>
 <dd>
 <div class="block">(Optional) The primary key columns that map the relationship.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticNativeQuery.html" title="annotation interface in jakarta.persistence.query">StaticNativeQuery</a></dt>
-<dd>
-<div class="block">The query string in the native SQL dialect of the database.</div>
-</dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/StaticQuery.html" title="annotation interface in jakarta.persistence.query">StaticQuery</a></dt>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/JakartaQuery.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/JakartaQuery.html" title="annotation interface in jakarta.persistence.query">JakartaQuery</a></dt>
 <dd>
 <div class="block">The query string in the Jakarta Persistence Query Language.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/query/NativeQuery.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.query.<a href="jakarta.persistence/jakarta/persistence/query/NativeQuery.html" title="annotation interface in jakarta.persistence.query">NativeQuery</a></dt>
+<dd>
+<div class="block">The query string in the native SQL dialect of the database.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/QueryHint.html#value()" class="member-name-link">value()</a> - Element in annotation interface jakarta.persistence.<a href="jakarta.persistence/jakarta/persistence/QueryHint.html" title="annotation interface in jakarta.persistence">QueryHint</a></dt>
 <dd>
@@ -9703,14 +9960,10 @@ the order they are declared.</div>
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
 </dd>
-<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html#values(M)" class="member-name-link">values(M)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaBuilder.html" title="interface in jakarta.persistence.criteria">CriteriaBuilder</a></dt>
-<dd>
-<div class="block">Create an expression that returns the values of a map.</div>
-</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/Version.html" class="type-name-link" title="annotation interface in jakarta.persistence">Version</a> - Annotation Interface in <a href="jakarta.persistence/jakarta/persistence/package-summary.html">jakarta.persistence</a></dt>
 <dd>
-<div class="block">Declares the version field or property of an entity class, which
-is used to detect optimistic locking conflicts, ensuring the integrity
+<div class="block">Declares the version field or property of an entity class, which is
+used to detect optimistic locking conflicts, ensuring the integrity
 of optimistic transactions.</div>
 </dd>
 </dl>
@@ -9805,10 +10058,22 @@ to the specified boolean expression.</div>
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.</div>
 </dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaDelete.html#where(java.util.List)" class="member-name-link">where(List)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaDelete.html" title="interface in jakarta.persistence.criteria">CriteriaDelete</a></dt>
+<dd>
+<div class="block">Modify the DELETE query to restrict the target of the deletion
+according to the conjunction of the specified restriction
+predicates.</div>
+</dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaQuery.html#where(java.util.List)" class="member-name-link">where(List)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a></dt>
 <dd>
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.</div>
+</dd>
+<dt><a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaUpdate.html#where(java.util.List)" class="member-name-link">where(List)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/CriteriaUpdate.html" title="interface in jakarta.persistence.criteria">CriteriaUpdate</a></dt>
+<dd>
+<div class="block">Modify the update query to restrict the target of the
+update according to the conjunction of the specified
+restriction predicates.</div>
 </dd>
 <dt><a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html#where(java.util.List)" class="member-name-link">where(List)</a> - Method in interface jakarta.persistence.criteria.<a href="jakarta.persistence/jakarta/persistence/criteria/Subquery.html" title="interface in jakarta.persistence.criteria">Subquery</a></dt>
 <dd>

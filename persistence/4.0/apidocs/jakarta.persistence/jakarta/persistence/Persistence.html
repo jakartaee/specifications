@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -84,20 +84,59 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">Persistence</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Bootstrap class used to obtain an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a>
-in Java SE environments. It may also be used to cause schema
-generation to occur.
+<div class="block">Bootstrap class used to obtain an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> in
+Java SE environments.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.Persistence1"><code class="language-java">EntityManagerFactory factory =
+        Persistence.createEntityManagerFactory("Library", // name of the persistence unit
+                // property overrides
+                Map.of(Persistence.ConnectionProperties.JDBC_USER, userName,
+                       Persistence.ConnectionProperties.JDBC_PASSWORD, password));
+</code></pre>
+</div>
 
-<p>The <code>Persistence</code> class is available in a Jakarta EE
-container environment as well; however, support for the Java SE
-bootstrapping APIs is not required in container environments.
+Since <a href="#createEntityManagerFactory(java.lang.String)"><code>createEntityManagerFactory(String)</code></a> is an expensive operation,
+and since the <code>EntityManagerFactory</code> is a heavyweight object,
+the application program should create no more than one factory for
+each persistence unit.
 
-<p>The <code>Persistence</code> class is used to obtain a
-<a href="PersistenceUtil.html" title="interface in jakarta.persistence"><code>PersistenceUtil</code></a> instance in both
-Jakarta EE and Java SE environments.</div>
+<p>This class also allows schema management to be decoupled from
+creation of the entity manager factory.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.Persistence2"><code class="language-java">Persistence.generateSchema("Library", // name of the persistence unit
+        // property overrides
+        Map.of(Persistence.SchemaManagementProperties.SCHEMAGEN_DATABASE_ACTION, "create",
+               Persistence.ConnectionProperties.JDBC_USER, userName,
+               Persistence.ConnectionProperties.JDBC_PASSWORD, password));
+</code></pre>
+</div>
+
+
+<p>The <code>Persistence</code> class may be used to obtain a
+<a href="PersistenceUtil.html" title="interface in jakarta.persistence"><code>PersistenceUtil</code></a> instance in both Jakarta EE
+and Java SE environments.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.Persistence3"><code class="language-java">boolean loaded = Persistence.getPersistenceUtil().isLoaded(entity);
+</code></pre>
+</div>
+
+
+<p>The nested interfaces of this class list the standard configuration
+properties defined by the Jakarta Persistence specification.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="PersistenceConfiguration.html" title="class in jakarta.persistence"><code>PersistenceConfiguration</code></a></li>
+<li><a href="spi/PersistenceProvider.html" title="interface in jakarta.persistence.spi"><code>PersistenceProvider</code></a></li>
+</ul>
+</dd>
+<dt>API note:</dt>
+<dd>The <code>Persistence</code> class is available in a Jakarta EE
+container environment. However, support for the Java SE bootstrapping
+APIs is not required in container environments.</dd>
 </dl>
 </div>
 </section>
@@ -174,13 +213,13 @@ in <code>persistence.xml</code>.</div>
 persistence unit, using the given properties.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createEntityManagerFactory(java.lang.String)" class="member-name-link">createEntityManagerFactory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;persistenceUnitName)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createEntityManagerFactory(java.lang.String)" class="member-name-link">createEntityManagerFactory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitName)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create and return an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for the named
 persistence unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createEntityManagerFactory(java.lang.String,java.util.Map)" class="member-name-link">createEntityManagerFactory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;persistenceUnitName,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createEntityManagerFactory(java.lang.String,java.util.Map)" class="member-name-link">createEntityManagerFactory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;properties)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create and return an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for the named
@@ -193,7 +232,7 @@ persistence unit, using the given properties.</div>
 as determined by the supplied properties.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#generateSchema(java.lang.String,java.util.Map)" class="member-name-link">generateSchema</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;persistenceUnitName,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#generateSchema(java.lang.String,java.util.Map)" class="member-name-link">generateSchema</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;map)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create database schemas and/or tables and/or create DDL scripts
@@ -225,15 +264,23 @@ as determined by the supplied properties.</div>
 <section class="detail" id="createEntityManagerFactory(java.lang.String)">
 <h3>createEntityManagerFactory</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></span>&nbsp;<span class="element-name">createEntityManagerFactory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;persistenceUnitName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></span>&nbsp;<span class="element-name">createEntityManagerFactory</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitName)</span></div>
 <div class="block">Create and return an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for the named
 persistence unit.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>persistenceUnitName</code> - the name of the persistence unit</dd>
+<dd><code>unitName</code> - the name of the persistence unit; usually the
+                name specified by the <code>name</code> attribute of
+                the <code>&lt;persistence-unit&gt;</code> element in the
+                <code>persistence.xml</code> file</dd>
 <dt>Returns:</dt>
-<dd>the factory that creates <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>s configured
-        according to the specified persistence unit</dd>
+<dd>an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for the named persistence
+        unit</dd>
+<dt>API note:</dt>
+<dd>This operation is very expensive. It should usually be
+         called just once for each persistence unit.</dd>
 </dl>
 </div>
 </section>
@@ -242,21 +289,38 @@ persistence unit.</div>
 <section class="detail" id="createEntityManagerFactory(java.lang.String,java.util.Map)">
 <h3>createEntityManagerFactory</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></span>&nbsp;<span class="element-name">createEntityManagerFactory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;persistenceUnitName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></span>&nbsp;<span class="element-name">createEntityManagerFactory</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitName,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;properties)</span></div>
 <div class="block">Create and return an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for the named
-persistence unit, using the given properties.</div>
+persistence unit, using the given properties. Standard properties
+are enumerated by <a href="Persistence.UnitProperties.html" title="interface in jakarta.persistence"><code>Persistence.UnitProperties</code></a>, <a href="Persistence.CacheProperties.html" title="interface in jakarta.persistence"><code>Persistence.CacheProperties</code></a>,
+<a href="Persistence.ConnectionProperties.html" title="interface in jakarta.persistence"><code>Persistence.ConnectionProperties</code></a>, <a href="Persistence.JdbcProperties.html" title="interface in jakarta.persistence"><code>Persistence.JdbcProperties</code></a>,
+<a href="Persistence.DatabaseProperties.html" title="interface in jakarta.persistence"><code>Persistence.DatabaseProperties</code></a>, <a href="Persistence.SchemaManagementProperties.html" title="interface in jakarta.persistence"><code>Persistence.SchemaManagementProperties</code></a>,
+<a href="Persistence.ValidationProperties.html" title="interface in jakarta.persistence"><code>Persistence.ValidationProperties</code></a>, and <a href="Persistence.BeanManagementProperties.html" title="interface in jakarta.persistence"><code>Persistence.BeanManagementProperties</code></a>.
+A provider might recognize additional vendor-specific properties.
+Property values specified via the second argument of this method
+override property values specified in the <code>persistence.xml</code>
+file.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>persistenceUnitName</code> - the name of the persistence unit</dd>
+<dd><code>unitName</code> - the name of the persistence unit; usually the name
+                specified by the <code>name</code> attribute of the
+                <code>&lt;persistence-unit&gt;</code> element in the
+                <code>persistence.xml</code> file</dd>
 <dd><code>properties</code> - additional properties to use when creating the
                   factory. These properties may include properties
                   to control schema generation. The values of these
                   properties override any values that may have been
                   configured elsewhere.</dd>
 <dt>Returns:</dt>
-<dd>the factory that creates <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>s configured
-       according to the specified persistence unit</dd>
+<dd>an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for the named persistence
+        unit</dd>
+<dt>API note:</dt>
+<dd>This operation is very expensive. It should usually be
+         called just once for each persistence unit.</dd>
 </dl>
 </div>
 </section>
@@ -265,7 +329,9 @@ persistence unit, using the given properties.</div>
 <section class="detail" id="createEntityManagerFactory(jakarta.persistence.PersistenceConfiguration)">
 <h3>createEntityManagerFactory</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></span>&nbsp;<span class="element-name">createEntityManagerFactory</span><wbr><span class="parameters">(<a href="PersistenceConfiguration.html" title="class in jakarta.persistence">PersistenceConfiguration</a>&nbsp;configuration)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="EntityManagerFactory.html" title="interface in jakarta.persistence">EntityManagerFactory</a></span>&nbsp;<span class="element-name">createEntityManagerFactory</span><wbr><span class="parameters">(@Nonnull
+ <a href="PersistenceConfiguration.html" title="class in jakarta.persistence">PersistenceConfiguration</a>&nbsp;configuration)</span></div>
 <div class="block">Create and return an <a href="EntityManagerFactory.html" title="interface in jakarta.persistence"><code>EntityManagerFactory</code></a> for the named
 persistence unit, using the given properties.</div>
 <dl class="notes">
@@ -276,6 +342,9 @@ persistence unit, using the given properties.</div>
         according to the specified persistence unit</dd>
 <dt>Since:</dt>
 <dd>3.2</dd>
+<dt>API note:</dt>
+<dd>This operation is very expensive. It should usually be
+         called just once for each persistence unit.</dd>
 </dl>
 </div>
 </section>
@@ -284,16 +353,27 @@ persistence unit, using the given properties.</div>
 <section class="detail" id="generateSchema(java.lang.String,java.util.Map)">
 <h3>generateSchema</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">generateSchema</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;persistenceUnitName,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">generateSchema</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitName,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;?,<wbr>?&gt;&nbsp;map)</span></div>
 <div class="block">Create database schemas and/or tables and/or create DDL scripts
-as determined by the supplied properties.
+as determined by the supplied properties. Standard properties
+are enumerated by <a href="Persistence.SchemaManagementProperties.html" title="interface in jakarta.persistence"><code>Persistence.SchemaManagementProperties</code></a>,
+<a href="Persistence.DatabaseProperties.html" title="interface in jakarta.persistence"><code>Persistence.DatabaseProperties</code></a>, <a href="Persistence.ConnectionProperties.html" title="interface in jakarta.persistence"><code>Persistence.ConnectionProperties</code></a>, and
+<a href="Persistence.UnitProperties.html" title="interface in jakarta.persistence"><code>Persistence.UnitProperties</code></a>. A provider might recognize additional
+vendor-specific properties. Property values specified via the
+second argument of this method override property values
+specified in the <code>persistence.xml</code> file.
 <p>
 Called when schema generation is to occur as a separate phase
 from creation of the entity manager factory.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>persistenceUnitName</code> - the name of the persistence unit</dd>
+<dd><code>unitName</code> - the name of the persistence unit; usually the
+                name specified by the <code>name</code> attribute
+                of the <code>&lt;persistence-unit&gt;</code> element in
+                the <code>persistence.xml</code> file</dd>
 <dd><code>map</code> - properties for schema generation; these may also
            contain provider-specific properties. The values
            of these properties override any values that may
@@ -312,7 +392,8 @@ from creation of the entity manager factory.</div>
 <section class="detail" id="generateSchema(jakarta.persistence.PersistenceConfiguration)">
 <h3>generateSchema</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">generateSchema</span><wbr><span class="parameters">(<a href="PersistenceConfiguration.html" title="class in jakarta.persistence">PersistenceConfiguration</a>&nbsp;configuration)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">generateSchema</span><wbr><span class="parameters">(@Nonnull
+ <a href="PersistenceConfiguration.html" title="class in jakarta.persistence">PersistenceConfiguration</a>&nbsp;configuration)</span></div>
 <div class="block">Create database schemas and/or tables and/or create DDL scripts
 as determined by the supplied properties.
 <p>
@@ -335,7 +416,8 @@ from creation of the entity manager factory.</div>
 <section class="detail" id="getPersistenceUtil()">
 <h3>getPersistenceUtil</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PersistenceUtil.html" title="interface in jakarta.persistence">PersistenceUtil</a></span>&nbsp;<span class="element-name">getPersistenceUtil</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PersistenceUtil.html" title="interface in jakarta.persistence">PersistenceUtil</a></span>&nbsp;<span class="element-name">getPersistenceUtil</span>()</div>
 <div class="block">Return the <a href="PersistenceUtil.html" title="interface in jakarta.persistence"><code>PersistenceUtil</code></a> instance</div>
 <dl class="notes">
 <dt>Returns:</dt>

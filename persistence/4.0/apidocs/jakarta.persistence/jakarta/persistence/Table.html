@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -67,6 +67,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#indexes()" tabindex="0">indexes</a></li>
 <li><a href="#check()" tabindex="0">check</a></li>
 <li><a href="#comment()" tabindex="0">comment</a></li>
+<li><a href="#type()" tabindex="0">type</a></li>
 <li><a href="#options()" tabindex="0">options</a></li>
 </ol>
 </li>
@@ -155,9 +156,16 @@ statement which creates this table.</div>
 <div class="col-last even-row-color">
 <div class="block">(Optional) The schema of the table.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="UniqueConstraint.html" title="annotation interface in jakarta.persistence">UniqueConstraint</a>[]</code></div>
-<div class="col-second odd-row-color"><code><a href="#uniqueConstraints()" class="member-name-link">uniqueConstraints</a></code></div>
+<div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#type()" class="member-name-link">type</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">(Optional) A SQL fragment indicating the type of table,
+usually inserted before the keyword <code>table</code> in
+the generated DDL which creates this table.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="UniqueConstraint.html" title="annotation interface in jakarta.persistence">UniqueConstraint</a>[]</code></div>
+<div class="col-second even-row-color"><code><a href="#uniqueConstraints()" class="member-name-link">uniqueConstraints</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">(Optional) Unique constraints to be placed on the table.</div>
 </div>
 </div>
@@ -290,13 +298,38 @@ This is only used if table generation is in effect.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="type()">
+<h3>type</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">type</span></div>
+<div class="block">(Optional) A SQL fragment indicating the type of table,
+usually inserted before the keyword <code>table</code> in
+the generated DDL which creates this table.
+
+<p>For example, <code>type = "GLOBAL TEMPORARY"</code>
+results in <code>CREATE GLOBAL TEMPORARY TABLE ...</code>.</div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>4.0</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd><code>""</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="options()">
 <h3>options</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">options</span></div>
 <div class="block">(Optional) A SQL fragment appended to the generated DDL
 statement which creates this table. This is only used if
-table generation is in effect.</div>
+table generation is in effect.
+
+<p>For example, <code>options = "PARTITION BY HASH (name)"</code>
+results in <code>CREATE TABLE ... PARTITION BY HASH (name)</code>.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>3.2</dd>

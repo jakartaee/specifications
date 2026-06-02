@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -88,12 +88,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
+<dd><code><a href="EntityManager.CreationOption.html" title="interface in jakarta.persistence">EntityManager.CreationOption</a>, <a href="EntityManager.Option.html" title="interface in jakarta.persistence">EntityManager.Option</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">FlushModeType</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&gt;</span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="FlushModeType.html" title="enum class in jakarta.persistence">FlushModeType</a>&gt;
+implements <a href="EntityManager.Option.html" title="interface in jakarta.persistence">EntityManager.Option</a></span></div>
 <div class="block">Enumerates flush modes recognized by the <a href="EntityManager.html" title="interface in jakarta.persistence"><code>EntityManager</code></a>.
 The <a href="EntityManager.html#getFlushMode()">flush mode of a
 persistence context</a> controls synchronization of modifications

@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -236,7 +236,9 @@ to the conjunction of the specified restriction predicates.</div>
 <section class="detail" id="select(jakarta.persistence.criteria.Selection)">
 <h3>select</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">select</span><wbr><span class="parameters">(<a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;? extends <a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;&nbsp;selection)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">select</span><wbr><span class="parameters">(@Nonnull
+ <a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;? extends <a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;&nbsp;selection)</span></div>
 <div class="block">Specify the item that is to be returned in the query result.
 Replaces the previously specified selection(s), if any.
 
@@ -277,7 +279,9 @@ q2.select(q2.from(Order.class)
 <h3>multiselect</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">multiselect</span><wbr><span class="parameters">(<a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;?&gt;...&nbsp;selections)</span></div>
+@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">multiselect</span><wbr><span class="parameters">(@Nonnull
+ <a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;?&gt;...&nbsp;selections)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Since this method is not typesafe, the use of
 <a href="CriteriaBuilder.html#array(jakarta.persistence.criteria.Selection...)"><code>CriteriaBuilder.array(Selection...)</code></a> or <a href="CriteriaBuilder.html#tuple(jakarta.persistence.criteria.Selection...)"><code>CriteriaBuilder.tuple(Selection...)</code></a>
@@ -345,7 +349,9 @@ the specified order.
 <h3>multiselect</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="3.2")
-</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">multiselect</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;?&gt;&gt;&nbsp;selectionList)</span></div>
+@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">multiselect</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Selection.html" title="interface in jakarta.persistence.criteria">Selection</a>&lt;?&gt;&gt;&nbsp;selectionList)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">Since this method is not typesafe, the use of
 <a href="CriteriaBuilder.html#array(jakarta.persistence.criteria.Selection...)"><code>CriteriaBuilder.array(Selection...)</code></a> or <a href="CriteriaBuilder.html#tuple(jakarta.persistence.criteria.Selection...)"><code>CriteriaBuilder.tuple(Selection...)</code></a>
@@ -410,7 +416,9 @@ the <code>multiselect</code> method, in the specified order.
 <section class="detail" id="where(jakarta.persistence.criteria.Expression)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
 <div class="block">Modify the query to restrict the query result according
 to the specified boolean expression.
 Replaces the previously added restriction(s), if any.
@@ -431,7 +439,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="where(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Modify the query to restrict the query result according 
 to the conjunction of the specified restriction predicates.
 Replaces the previously added restriction(s), if any.
@@ -454,7 +464,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="where(java.util.List)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
 <div class="block">Modify the query to restrict the query result according
 to the conjunction of the specified restriction predicates.
 Replaces the previously added restriction(s), if any.
@@ -479,7 +491,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="groupBy(jakarta.persistence.criteria.Expression...)">
 <h3>groupBy</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;grouping)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;...&nbsp;grouping)</span></div>
 <div class="block">Specify the expressions that are used to form groups over
 the query results.
 Replaces the previous specified grouping expressions, if any.
@@ -502,7 +516,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="groupBy(java.util.List)">
 <h3>groupBy</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;&nbsp;grouping)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">groupBy</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;?&gt;&gt;&nbsp;grouping)</span></div>
 <div class="block">Specify the expressions that are used to form groups over
 the query results.
 Replaces the previous specified grouping expressions, if any.
@@ -525,7 +541,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="having(jakarta.persistence.criteria.Expression)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
 <div class="block">Specify a restriction over the groups of the query.
 Replaces the previous having restriction(s), if any.
 This method only overrides the return type of the 
@@ -545,7 +563,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="having(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(@Nonnull
+ <a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction 
 predicates.
@@ -569,7 +589,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="having(java.util.List)">
 <h3>having</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">having</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
 <div class="block">Specify restrictions over the groups of the query
 according the conjunction of the specified restriction
 predicates.
@@ -595,7 +617,9 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="orderBy(jakarta.persistence.criteria.Order...)">
 <h3>orderBy</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">orderBy</span><wbr><span class="parameters">(<a href="Order.html" title="interface in jakarta.persistence.criteria">Order</a>...&nbsp;o)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">orderBy</span><wbr><span class="parameters">(@Nonnull
+ <a href="Order.html" title="interface in jakarta.persistence.criteria">Order</a>...&nbsp;o)</span></div>
 <div class="block">Specify the ordering expressions that are used to
 order the query results.
 Replaces the previous ordering expressions, if any.
@@ -618,7 +642,9 @@ highest precedence.</div>
 <section class="detail" id="orderBy(java.util.List)">
 <h3>orderBy</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">orderBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Order.html" title="interface in jakarta.persistence.criteria">Order</a>&gt;&nbsp;o)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">orderBy</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Order.html" title="interface in jakarta.persistence.criteria">Order</a>&gt;&nbsp;o)</span></div>
 <div class="block">Specify the ordering expressions that are used to
 order the query results.
 Replaces the previous ordering expressions, if any.
@@ -641,7 +667,8 @@ the list has the highest precedence.</div>
 <section class="detail" id="distinct(boolean)">
 <h3>distinct</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">distinct</span><wbr><span class="parameters">(boolean&nbsp;distinct)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaQuery.html" title="interface in jakarta.persistence.criteria">CriteriaQuery</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaQuery">T</a>&gt;</span>&nbsp;<span class="element-name">distinct</span><wbr><span class="parameters">(boolean&nbsp;distinct)</span></div>
 <div class="block">Specify whether duplicate query results are eliminated.
 A true value will cause duplicates to be eliminated.
 A false value will cause duplicates to be retained.
@@ -666,7 +693,8 @@ corresponding <code>AbstractQuery</code> method.</div>
 <section class="detail" id="getOrderList()">
 <h3>getOrderList</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Order.html" title="interface in jakarta.persistence.criteria">Order</a>&gt;</span>&nbsp;<span class="element-name">getOrderList</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Order.html" title="interface in jakarta.persistence.criteria">Order</a>&gt;</span>&nbsp;<span class="element-name">getOrderList</span>()</div>
 <div class="block">Return the ordering expressions in order of precedence.
 Returns empty list if no ordering expressions have been
 specified.

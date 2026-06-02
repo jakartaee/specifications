@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#package">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -68,7 +68,21 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="package-signature">package <span class="element-name">jakarta.persistence.spi</span></div>
 <section class="package-description" id="package-description">
-<div class="block">SPI for Jakarta Persistence providers</div>
+<div class="block">Defines an SPI for integrating with the persistence provider
+and with the Jakarta EE platform.
+<ul>
+<li><a href="PersistenceProvider.html" title="interface in jakarta.persistence.spi"><code>PersistenceProvider</code></a> must
+    be implemented by every persistence provider.
+<li><a href="ClassTransformer.html" title="interface in jakarta.persistence.spi"><code>ClassTransformer</code></a> allows
+    the persistence provider to peform its own custom bytecode
+    processing in a Jakarta EE environment.
+<li><a href="PersistenceUnitInfo.html" title="interface in jakarta.persistence.spi"><code>PersistenceUnitInfo</code></a>
+    carries information about a persistence unit under the
+    management of the Jakarta EE container.
+<li>The <a href="Discoverable.html" title="annotation interface in jakarta.persistence.spi"><code>Discoverable</code></a>
+    meta-annotation identifies annotation types which trigger
+    automatic discovery of classes by the Jakarta EE container.
+</ul></div>
 </section>
 </div>
 <section class="summary">
@@ -81,20 +95,30 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="../package-summary.html">jakarta.persistence</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </div>
 <div class="col-first odd-row-color"><a href="../criteria/package-summary.html">jakarta.persistence.criteria</a></div>
 <div class="col-last odd-row-color">
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </div>
 <div class="col-first even-row-color"><a href="../metamodel/package-summary.html">jakarta.persistence.metamodel</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence Metamodel API</div>
+<div class="block">Defines the Jakarta Persistence Metamodel API, allowing runtime
+reflection on the managed types declared by a persistence unit.</div>
 </div>
 <div class="col-first odd-row-color"><a href="../query/package-summary.html">jakarta.persistence.query</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Defines annotations for expressing statically type safe queries by
+annotating query methods of a
+<a href="Discoverable.html" title="annotation interface in jakarta.persistence.spi">discoverable</a> type
+or Jakarta Data repository.</div>
+</div>
 <div class="col-first even-row-color"><a href="../sql/package-summary.html">jakarta.persistence.sql</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Defines an API for the programmatic definition of SQL result set
+mappings to Java classes.</div>
+</div>
 </div>
 </div>
 </li>

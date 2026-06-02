@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -62,6 +62,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#where(jakarta.persistence.criteria.Expression)" tabindex="0">where(Expression)</a></li>
 <li><a href="#where(jakarta.persistence.criteria.BooleanExpression...)" tabindex="0">where(BooleanExpression...)</a></li>
+<li><a href="#where(java.util.List)" tabindex="0">where(List)</a></li>
 </ol>
 </li>
 </ol>
@@ -124,6 +125,13 @@ predicates.</div>
 <div class="block">Modify the DELETE query to restrict the target of the deletion 
 according to the specified boolean expression.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CriteriaDelete.html" title="interface in jakarta.persistence.criteria">CriteriaDelete</a><wbr>&lt;<a href="#type-param-T" title="type parameter in CriteriaDelete">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#where(java.util.List)" class="member-name-link">where</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Modify the DELETE query to restrict the target of the deletion
+according to the conjunction of the specified restriction
+predicates.</div>
+</div>
 </div>
 </div>
 </div>
@@ -148,7 +156,9 @@ according to the specified boolean expression.</div>
 <section class="detail" id="where(jakarta.persistence.criteria.Expression)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaDelete.html" title="interface in jakarta.persistence.criteria">CriteriaDelete</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaDelete">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaDelete.html" title="interface in jakarta.persistence.criteria">CriteriaDelete</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaDelete">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;restriction)</span></div>
 <div class="block">Modify the DELETE query to restrict the target of the deletion 
 according to the specified boolean expression.
 Replaces the previously added restriction(s), if any.</div>
@@ -165,7 +175,9 @@ Replaces the previously added restriction(s), if any.</div>
 <section class="detail" id="where(jakarta.persistence.criteria.BooleanExpression...)">
 <h3>where</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="CriteriaDelete.html" title="interface in jakarta.persistence.criteria">CriteriaDelete</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaDelete">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(<a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaDelete.html" title="interface in jakarta.persistence.criteria">CriteriaDelete</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaDelete">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="BooleanExpression.html" title="interface in jakarta.persistence.criteria">BooleanExpression</a>...&nbsp;restrictions)</span></div>
 <div class="block">Modify the DELETE query to restrict the target of the deletion
 according to the conjunction of the specified restriction 
 predicates.
@@ -177,6 +189,30 @@ restrictions are simply removed.</div>
 <dd><code>restrictions</code> - zero or more restriction predicates</dd>
 <dt>Returns:</dt>
 <dd>the modified delete query</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="where(java.util.List)">
+<h3>where</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="CriteriaDelete.html" title="interface in jakarta.persistence.criteria">CriteriaDelete</a>&lt;<a href="#type-param-T" title="type parameter in CriteriaDelete">T</a>&gt;</span>&nbsp;<span class="element-name">where</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</span></div>
+<div class="block">Modify the DELETE query to restrict the target of the deletion
+according to the conjunction of the specified restriction
+predicates.
+Replaces the previously added restriction(s), if any.
+If no restrictions are specified, any previously added
+restrictions are simply removed.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>restrictions</code> - zero or more restriction predicates</dd>
+<dt>Returns:</dt>
+<dd>the modified delete query</dd>
+<dt>Since:</dt>
+<dd>4.0</dd>
 </dl>
 </div>
 </section>

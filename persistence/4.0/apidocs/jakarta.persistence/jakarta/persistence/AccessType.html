@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -129,12 +129,12 @@ embeddable class, or to a specific attribute of such a class.</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#FIELD" class="member-name-link">FIELD</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Field-based access is used.</div>
+<div class="block">Direct field access is used.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="#PROPERTY" class="member-name-link">PROPERTY</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Property-based access is used, that is, state is accessed
-via getter and setter methods.</div>
+<div class="block">Property access is used; that is, state is accessed via
+getter and setter methods.</div>
 </div>
 </div>
 </section>
@@ -186,7 +186,9 @@ the order they are declared.</div>
 <h3>FIELD</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="AccessType.html" title="enum class in jakarta.persistence">AccessType</a></span>&nbsp;<span class="element-name">FIELD</span></div>
-<div class="block">Field-based access is used.</div>
+<div class="block">Direct field access is used. Instance variables must have
+private, protected, or package visibility. Property
+accessor methods are not required.</div>
 </div>
 </section>
 </li>
@@ -195,8 +197,10 @@ the order they are declared.</div>
 <h3>PROPERTY</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="AccessType.html" title="enum class in jakarta.persistence">AccessType</a></span>&nbsp;<span class="element-name">PROPERTY</span></div>
-<div class="block">Property-based access is used, that is, state is accessed
-via getter and setter methods.</div>
+<div class="block">Property access is used; that is, state is accessed via
+getter and setter methods. Property accessor methods must
+have public or protected visibility. Instance variables
+must have private, protected, or package visibility.</div>
 </div>
 </section>
 </li>

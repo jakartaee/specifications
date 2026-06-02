@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,10 +63,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence">jakarta.persistence</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence is the API for the management for persistence and object/relational mapping.</div>
+<div class="block">Defines the core APIs for the management for persistence and
+object/relational mapping.</div>
 </div>
-<div class="col-first odd-row-color"><a href="#jakarta.persistence.query">jakarta.persistence.query</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <section class="class-uses">
 <ul class="block-list">
@@ -78,30 +77,24 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Reference.</span><code><a href="../Reference.html#getTimeout()" class="member-name-link">getTimeout</a>()</code></div>
+<div class="col-first even-row-color"><code>static <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Timeout.</span><code><a href="../Timeout.html#milliseconds(int)" class="member-name-link">milliseconds</a><wbr>(int&nbsp;milliseconds)</code></div>
 <div class="col-last even-row-color">
-<div class="block">The specified <a href="../Timeout.html" title="class in jakarta.persistence"><code>Timeout</code></a>, if any, or
-<code>null</code> if no timeout was specified.</div>
+<div class="block">Specify a timeout in milliseconds.</div>
 </div>
 <div class="col-first odd-row-color"><code>static <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Timeout.</span><code><a href="../Timeout.html#milliseconds(int)" class="member-name-link">milliseconds</a><wbr>(int&nbsp;milliseconds)</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Timeout.</span><code><a href="../Timeout.html#ms(int)" class="member-name-link">ms</a><wbr>(int&nbsp;milliseconds)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Specify a timeout in milliseconds.</div>
 </div>
 <div class="col-first even-row-color"><code>static <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Timeout.</span><code><a href="../Timeout.html#ms(int)" class="member-name-link">ms</a><wbr>(int&nbsp;milliseconds)</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Timeout.</span><code><a href="../Timeout.html#s(int)" class="member-name-link">s</a><wbr>(int&nbsp;seconds)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Specify a timeout in milliseconds.</div>
-</div>
-<div class="col-first odd-row-color"><code>static <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Timeout.</span><code><a href="../Timeout.html#s(int)" class="member-name-link">s</a><wbr>(int&nbsp;seconds)</code></div>
-<div class="col-last odd-row-color">
 <div class="block">Specify a timeout in seconds.</div>
 </div>
-<div class="col-first even-row-color"><code>static <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Timeout.</span><code><a href="../Timeout.html#seconds(int)" class="member-name-link">seconds</a><wbr>(int&nbsp;seconds)</code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Timeout.</span><code><a href="../Timeout.html#seconds(int)" class="member-name-link">seconds</a><wbr>(int&nbsp;seconds)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Specify a timeout in seconds.</div>
 </div>
 </div>
@@ -129,59 +122,6 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color"><span class="type-name-label">TypedQuery.</span><code><a href="../TypedQuery.html#setTimeout(jakarta.persistence.Timeout)" class="member-name-link">setTimeout</a><wbr>(<a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Set the query timeout.</div>
-</div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="jakarta.persistence.query">
-<h2>Uses of <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a> in <a href="../query/package-summary.html">jakarta.persistence.query</a></h2>
-<div class="caption"><span>Methods in <a href="../query/package-summary.html">jakarta.persistence.query</a> that return <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Method</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">StaticStatementReference.</span><code><a href="../query/StaticStatementReference.html#getTimeout()" class="member-name-link">getTimeout</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">StaticTypedQueryReference.</span><code><a href="../query/StaticTypedQueryReference.html#getTimeout()" class="member-name-link">getTimeout</a>()</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-</div>
-<div class="caption"><span>Constructors in <a href="../query/package-summary.html">jakarta.persistence.query</a> with parameters of type <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a></span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier</div>
-<div class="table-header col-second">Constructor</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="../query/StaticStatementReference.html#%3Cinit%3E(java.lang.String,java.lang.Class,java.lang.String,java.util.List,java.util.List,java.util.List,jakarta.persistence.Timeout,java.util.Map)" class="member-name-link">StaticStatementReference</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;queryName,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;annotatedClass,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;annotatedMemberName,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&gt;&nbsp;parameterTypes,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;parameterNames,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;arguments,
- <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;hints)</code></div>
-<div class="col-last even-row-color">
-<div class="block">Intended for use in code generated by an annotation processor.</div>
-</div>
-<div class="col-first odd-row-color"><code>&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="../query/StaticTypedQueryReference.html#%3Cinit%3E(java.lang.String,java.lang.Class,java.lang.String,java.lang.Class,java.util.List,java.util.List,java.util.List,jakarta.persistence.CacheRetrieveMode,jakarta.persistence.CacheStoreMode,jakarta.persistence.LockModeType,jakarta.persistence.PessimisticLockScope,jakarta.persistence.Timeout,java.lang.String,java.util.Map)" class="member-name-link">StaticTypedQueryReference</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;queryName,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;annotatedClass,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;annotatedMemberName,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="../query/StaticTypedQueryReference.html#type-param-R" title="type parameter in StaticTypedQueryReference">R</a>&gt;&nbsp;resultType,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&gt;&nbsp;parameterTypes,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;parameterNames,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;arguments,
- <a href="../CacheRetrieveMode.html" title="enum class in jakarta.persistence">CacheRetrieveMode</a>&nbsp;cacheRetrieveMode,
- <a href="../CacheStoreMode.html" title="enum class in jakarta.persistence">CacheStoreMode</a>&nbsp;cacheStoreMode,
- <a href="../LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode,
- <a href="../PessimisticLockScope.html" title="enum class in jakarta.persistence">PessimisticLockScope</a>&nbsp;lockScope,
- <a href="../Timeout.html" title="class in jakarta.persistence">Timeout</a>&nbsp;timeout,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;entityGraphName,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;hints)</code></div>
-<div class="col-last odd-row-color">
-<div class="block">Intended for use in code generated by an annotation processor.</div>
 </div>
 </div>
 </section>

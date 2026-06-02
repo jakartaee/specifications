@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -98,6 +98,7 @@ loadScripts(document, 'script');</script>
 <dt>Record Components:</dt>
 <dd><code><span id="param-columnName">columnName</span></code> - The name of the mapped column of the result set</dd>
 <dd><code><span id="param-type">type</span></code> - The Java type of the resulting scalar value</dd>
+<dd><code><span id="param-alias">alias</span></code> - An optional alias</dd>
 </dl>
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
@@ -105,7 +106,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ColumnMapping&lt;T&gt;</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ColumnMapping">T</a>&gt;&nbsp;type, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ColumnMapping&lt;T&gt;</span>(@Nonnull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName, @Nonnull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ColumnMapping">T</a>&gt;&nbsp;type, @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="MappingElement.html" title="interface in jakarta.persistence.sql">MappingElement</a>&lt;T&gt;, <a href="ResultSetMapping.html" title="interface in jakarta.persistence.sql">ResultSetMapping</a>&lt;T&gt;</span></div>
 <div class="block">Maps a column of a JDBC <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ResultSet.html" title="class or interface in java.sql" class="external-link"><code>ResultSet</code></a> to a scalar
@@ -155,7 +156,7 @@ value in the result returned by the query.</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#alias()" class="member-name-link">alias</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>alias</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-alias"><code>alias</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#columnName()" class="member-name-link">columnName</a>()</code></div>
@@ -229,15 +230,18 @@ value in the result returned by the query.</div>
 <section class="detail" id="&lt;init&gt;(java.lang.String,java.lang.Class,java.lang.String)">
 <h3>ColumnMapping</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ColumnMapping</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ColumnMapping</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ColumnMapping">T</a>&gt;&nbsp;type,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</span></div>
 <div class="block">Creates an instance of a <code>ColumnMapping</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>columnName</code> - the value for the <a href="#param-columnName"><code>columnName</code></a> record component</dd>
 <dd><code>type</code> - the value for the <a href="#param-type"><code>type</code></a> record component</dd>
-<dd><code>alias</code> - the value for the <code>alias</code> record component</dd>
+<dd><code>alias</code> - the value for the <a href="#param-alias"><code>alias</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -254,7 +258,8 @@ value in the result returned by the query.</div>
 <section class="detail" id="getJavaType()">
 <h3>getJavaType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ColumnMapping">T</a>&gt;</span>&nbsp;<span class="element-name">getJavaType</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ColumnMapping">T</a>&gt;</span>&nbsp;<span class="element-name">getJavaType</span>()</div>
 <div class="block">The Java type of the scalar value.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -269,7 +274,8 @@ value in the result returned by the query.</div>
 <section class="detail" id="getAlias()">
 <h3>getAlias</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAlias</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAlias</span>()</div>
 <div class="block">The colum name.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -284,7 +290,9 @@ value in the result returned by the query.</div>
 <section class="detail" id="withAlias(java.lang.String)">
 <h3>withAlias</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ColumnMapping.html" title="class in jakarta.persistence.sql">ColumnMapping</a>&lt;<a href="#type-param-T" title="type parameter in ColumnMapping">T</a>&gt;</span>&nbsp;<span class="element-name">withAlias</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ColumnMapping.html" title="class in jakarta.persistence.sql">ColumnMapping</a>&lt;<a href="#type-param-T" title="type parameter in ColumnMapping">T</a>&gt;</span>&nbsp;<span class="element-name">withAlias</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</span></div>
 <div class="block">Specify an alias for this column in the result set.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -299,7 +307,9 @@ value in the result returned by the query.</div>
 <section class="detail" id="of(java.lang.String)">
 <h3>of</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ColumnMapping.html" title="class in jakarta.persistence.sql">ColumnMapping</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</span></div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ColumnMapping.html" title="class in jakarta.persistence.sql">ColumnMapping</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName)</span></div>
 <div class="block">Construct a new instance.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -312,7 +322,10 @@ value in the result returned by the query.</div>
 <section class="detail" id="of(java.lang.String,java.lang.Class)">
 <h3>of</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="ColumnMapping.html" title="class in jakarta.persistence.sql">ColumnMapping</a>&lt;T&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="ColumnMapping.html" title="class in jakarta.persistence.sql">ColumnMapping</a>&lt;T&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;columnName,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</span></div>
 <div class="block">Construct a new instance.</div>
 <dl class="notes">
@@ -376,7 +389,8 @@ value in the result returned by the query.</div>
 <section class="detail" id="columnName()">
 <h3>columnName</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">columnName</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">columnName</span>()</div>
 <div class="block">Returns the value of the <a href="#param-columnName"><code>columnName</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -389,7 +403,8 @@ value in the result returned by the query.</div>
 <section class="detail" id="type()">
 <h3>type</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ColumnMapping">T</a>&gt;</span>&nbsp;<span class="element-name">type</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in ColumnMapping">T</a>&gt;</span>&nbsp;<span class="element-name">type</span>()</div>
 <div class="block">Returns the value of the <a href="#param-type"><code>type</code></a> record component.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -404,11 +419,12 @@ value in the result returned by the query.</div>
 <section class="detail" id="alias()">
 <h3>alias</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">alias</span>()</div>
-<div class="block">Returns the value of the <code>alias</code> record component.</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">alias</span>()</div>
+<div class="block">Returns the value of the <a href="#param-alias"><code>alias</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>alias</code> record component</dd>
+<dd>the value of the <a href="#param-alias"><code>alias</code></a> record component</dd>
 </dl>
 </div>
 </section>

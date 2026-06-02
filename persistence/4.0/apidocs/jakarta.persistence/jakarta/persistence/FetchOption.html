@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -75,9 +75,7 @@ loadScripts(document, 'script');</script>
 <div class="block">An option influencing how an
 <a href="AttributeNode.html" title="interface in jakarta.persistence">attribute node</a> belonging
 to an <a href="EntityGraph.html" title="interface in jakarta.persistence">entity graph</a> is fetched.
-The built-in option <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence"><code>CacheRetrieveMode</code></a> controls
-whether an associated entity may be loaded from the
-second-level cache.
+Built-in options control <a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence">cache interaction</a> and <a href="BatchSize.html" title="class in jakarta.persistence">batching</a>.
 <p>
 Typical options are specific to a given persistence
 provider and are often hints. A provider must ignore
@@ -92,6 +90,9 @@ rely on vendor-specific fetch options.</div>
 <ul class="tag-list-long">
 <li><a href="AttributeNode.html#addOption(jakarta.persistence.FetchOption)"><code>AttributeNode.addOption(FetchOption)</code></a></li>
 <li><a href="CacheRetrieveMode.html" title="enum class in jakarta.persistence"><code>CacheRetrieveMode</code></a></li>
+<li><a href="CacheStoreMode.html" title="enum class in jakarta.persistence"><code>CacheStoreMode</code></a></li>
+<li><a href="BatchSize.html" title="class in jakarta.persistence"><code>BatchSize</code></a></li>
+<li><a href="FetchType.html" title="enum class in jakarta.persistence"><code>FetchType</code></a></li>
 </ul>
 </dd>
 </dl>

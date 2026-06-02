@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -98,11 +98,17 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="SharedCacheMode.html" title="enum class in jakarta.persistence">SharedCacheMode</a>&gt;</span></div>
 <div class="block">Enumerates policies which control how the provider determines if
 an entity type is eligible for storage in the second-level cache.
+The shared cache mode is determined by the
+<a href="PersistenceConfiguration.html#sharedCacheMode()">configuration
+of the persistence unit</a>, and is common across all entity managers
+and entity agents for the given persistence unit.
 <p>
-A <code>SharedCacheMode</code> may be specified by the
-<code>&lt;shared-cache-mode&gt;</code> element of <code>persistence.xml</code>
-or by calling
-<a href="PersistenceConfiguration.html#sharedCacheMode(jakarta.persistence.SharedCacheMode)"><code>PersistenceConfiguration.sharedCacheMode(SharedCacheMode)</code></a>.</div>
+A <code>SharedCacheMode</code> may be specified by:
+<ul>
+<li>the <code>&lt;shared-cache-mode&gt;</code> element of <code>persistence.xml</code>,
+<li>the property <a href="Persistence.CacheProperties.html#CACHE_MODE">"jakarta.persistence.sharedCache.mode"</a>, or
+<li><a href="PersistenceConfiguration.html#sharedCacheMode(jakarta.persistence.SharedCacheMode)"><code>PersistenceConfiguration.sharedCacheMode(SharedCacheMode)</code></a>.
+</ul></div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>2.0</dd>
@@ -111,6 +117,7 @@ or by calling
 <ul class="tag-list-long">
 <li><a href="spi/PersistenceUnitInfo.html#getSharedCacheMode()"><code>PersistenceUnitInfo.getSharedCacheMode()</code></a></li>
 <li><a href="PersistenceConfiguration.html#sharedCacheMode()"><code>PersistenceConfiguration.sharedCacheMode()</code></a></li>
+<li><a href="Persistence.CacheProperties.html#CACHE_MODE"><code>Persistence.CacheProperties.CACHE_MODE</code></a></li>
 </ul>
 </dd>
 </dl>

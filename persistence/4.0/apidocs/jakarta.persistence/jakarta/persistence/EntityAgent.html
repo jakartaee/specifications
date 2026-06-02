@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
@@ -72,6 +73,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#refreshMultiple(java.util.List)" tabindex="0">refreshMultiple(List)</a></li>
 <li><a href="#refresh(java.lang.Object,jakarta.persistence.LockModeType)" tabindex="0">refresh(Object, LockModeType)</a></li>
 <li><a href="#fetch(T)" tabindex="0">fetch(T)</a></li>
+<li><a href="#addOption(jakarta.persistence.EntityAgent.Option)" tabindex="0">addOption(EntityAgent.Option)</a></li>
+<li><a href="#getOptions()" tabindex="0">getOptions()</a></li>
 </ol>
 </li>
 </ol>
@@ -116,7 +119,7 @@ dependency injection.
 </ul>
 
 <p>An application-managed <code>EntityAgent</code> may be created
-via a call to <a href="EntityManagerFactory.html#createEntityAgent()"><code>EntityManagerFactory.createEntityAgent()</code></a>.
+via a call to <a href="EntityManagerFactory.html#createEntityAgent(jakarta.persistence.EntityAgent.CreationOption...)"><code>EntityManagerFactory.createEntityAgent(EntityAgent.CreationOption...)</code></a>.
 The <code>EntityAgent</code> must be explicitly closed via a call
 to <a href="EntityHandler.html#close()"><code>EntityHandler.close()</code></a> to allow resources to be cleaned up by the
 persistence provider. This approach places almost complete
@@ -133,6 +136,17 @@ and <a href="EntityManagerFactory.html#callInTransaction(java.lang.Class,java.ut
 </div>
 
 
+<p>In the Jakarta EE environment, a container-managed
+<a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a> may be obtained by dependency injection,
+using <a href="PersistenceAgent.html" title="annotation interface in jakarta.persistence"><code>PersistenceAgent</code></a>.
+<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
+<pre class="snippet" id="snippet-jakarta.persistence.EntityAgent2"><code class="language-java">// inject the container-managed entity agent
+@PersistenceAgent(unitName="orderMgt")
+EntityAgent entityAgent;
+</code></pre>
+</div>
+
+
 <p>If the persistence unit has
 <a href="PersistenceUnitTransactionType.html#RESOURCE_LOCAL">resource local</a> transaction management, transactions must
 be managed using the <a href="EntityTransaction.html" title="interface in jakarta.persistence"><code>EntityTransaction</code></a> obtained by
@@ -142,7 +156,7 @@ calling <a href="EntityHandler.html#getTransaction()"><code>EntityHandler.getTra
 the <a href="EntityAgent.html" title="interface in jakarta.persistence"><code>EntityAgent</code></a> and its associated resource-local
 <a href="EntityTransaction.html" title="interface in jakarta.persistence"><code>EntityTransaction</code></a> is as follows:
 <div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jakarta.persistence.EntityAgent2"><code class="language-java">EntityAgent entityAgent = entityManagerFactory.createEntityAgent();
+<pre class="snippet" id="snippet-jakarta.persistence.EntityAgent3"><code class="language-java">EntityAgent entityAgent = entityManagerFactory.createEntityAgent();
 EntityTransaction transaction = entityAgent.getTransaction();
 try {
     transaction.begin();
@@ -168,7 +182,12 @@ database happens immediately and synchronously. In particular,
 <a href="#update(java.lang.Object)">update</a> is an explicit operation. Since
 there is no <a href="EntityManager.html#flush()">flush operation</a>,
 and since the entities themselves are detached, modifications to
-the entities are never automatically detected and made persistent.</div>
+the entities are never automatically detected and made persistent.
+
+<p>An exception thrown by a method of an <code>EntityAgent</code>,
+or by a method of an instance of <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a> obtained from
+an <code>EntityAgent</code>, is considered recoverable and does not
+usually cause the active transaction to be marked for rollback.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>4.0</dd>
@@ -183,6 +202,28 @@ the entities are never automatically detected and made persistent.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Interface</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="EntityAgent.CreationOption.html" class="type-name-link" title="interface in jakarta.persistence">EntityAgent.CreationOption</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">An option controlling the creation of an entity agent.</div>
+</div>
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="EntityAgent.Option.html" class="type-name-link" title="interface in jakarta.persistence">EntityAgent.Option</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">An option controlling the behavior of an entity agent.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method-summary">
@@ -195,21 +236,34 @@ the entities are never automatically detected and made persistent.</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#delete(java.lang.Object)" class="member-name-link">delete</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addOption(jakarta.persistence.EntityAgent.Option)" class="member-name-link">addOption</a><wbr>(<a href="EntityAgent.Option.html" title="interface in jakarta.persistence">EntityAgent.Option</a>&nbsp;option)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Delete a record.</div>
+<div class="block">Specify an <a href="EntityAgent.Option.html" title="interface in jakarta.persistence">option</a> controlling the
+behavior of this entity agent, overwriting any existing
+option of the same type.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#deleteMultiple(java.util.List)" class="member-name-link">deleteMultiple</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#delete(java.lang.Object)" class="member-name-link">delete</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Delete a record.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#deleteMultiple(java.util.List)" class="member-name-link">deleteMultiple</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Delete every record in the given list.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#fetch(T)" class="member-name-link">fetch</a><wbr>(T&nbsp;association)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#fetch(T)" class="member-name-link">fetch</a><wbr>(T&nbsp;association)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Fetch an association or collection that was configured
 for lazy loading if it has not yet been fetched from
 the database.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="EntityAgent.Option.html" title="interface in jakarta.persistence">EntityAgent.Option</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOptions()" class="member-name-link">getOptions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the <a href="EntityAgent.Option.html" title="interface in jakarta.persistence">options</a> controlling the behavior
+of this entity agent.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insert(java.lang.Object)" class="member-name-link">insert</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</code></div>
@@ -279,7 +333,8 @@ exist, or update it if it already exists.</div>
 <section class="detail" id="insert(java.lang.Object)">
 <h3>insert</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">Insert a record.
 <p>
 If the entity <a href="Id.html" title="annotation interface in jakarta.persistence"><code>Id</code></a> field is declared to be generated,
@@ -298,10 +353,8 @@ id is generated and assigned to the given instance.
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the given instance is
         determined to not be new or removed</dd>
-<dd><code><a href="EntityExistsException.html" title="class in jakarta.persistence">EntityExistsException</a></code> - if the given entity has an
-        identifier assigned by the application, and a
-        record with the assigned identifier already exists
-        in the database</dd>
+<dd><code><a href="EntityExistsException.html" title="class in jakarta.persistence">EntityExistsException</a></code> - if any kind of uniqueness
+        constraint is violated</dd>
 <dd><code><a href="PersistenceException.html" title="class in jakarta.persistence">PersistenceException</a></code> - if a record could not be
         inserted in the database</dd>
 </dl>
@@ -312,7 +365,8 @@ id is generated and assigned to the given instance.
 <section class="detail" id="insertMultiple(java.util.List)">
 <h3>insertMultiple</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">insertMultiple</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">insertMultiple</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
 <div class="block">Insert every record in the given list. The records are
 inserted in the order in which they occur in the given list
 and according to the requirements of the <a href="#insert(java.lang.Object)"><code>insert(Object)</code></a>
@@ -323,10 +377,8 @@ method.</div>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if one of the given
         instances is determined to not be new or removed</dd>
-<dd><code><a href="EntityExistsException.html" title="class in jakarta.persistence">EntityExistsException</a></code> - if one of the given entities
-        has an identifier assigned by the application, and
-        a record with the assigned identifier already exists
-        in the database</dd>
+<dd><code><a href="EntityExistsException.html" title="class in jakarta.persistence">EntityExistsException</a></code> - if any kind of uniqueness
+        constraint is violated</dd>
 <dd><code><a href="PersistenceException.html" title="class in jakarta.persistence">PersistenceException</a></code> - if a record could not be
         inserted in the database</dd>
 <dt>See Also:</dt>
@@ -343,7 +395,8 @@ method.</div>
 <section class="detail" id="update(java.lang.Object)">
 <h3>update</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">update</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">update</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">Update a record.
 <p>
 <ul>
@@ -372,7 +425,8 @@ method.</div>
 <section class="detail" id="updateMultiple(java.util.List)">
 <h3>updateMultiple</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">updateMultiple</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">updateMultiple</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
 <div class="block">Update every record in the given list. The records are
 updated in the order in which they occur in the given list
 and according to the requirements of the <a href="#update(java.lang.Object)"><code>update(Object)</code></a>
@@ -404,7 +458,8 @@ method.</div>
 <section class="detail" id="delete(java.lang.Object)">
 <h3>delete</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">Delete a record.
 <p>
 <ul>
@@ -433,7 +488,8 @@ method.</div>
 <section class="detail" id="deleteMultiple(java.util.List)">
 <h3>deleteMultiple</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">deleteMultiple</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">deleteMultiple</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
 <div class="block">Delete every record in the given list. The records are
 deleted in the order in which they occur in the given list
 and according to the requirements of the <a href="#delete(java.lang.Object)"><code>delete(Object)</code></a>
@@ -465,7 +521,8 @@ method.</div>
 <section class="detail" id="upsert(java.lang.Object)">
 <h3>upsert</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">upsert</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">upsert</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">Perform an upsert, that is, insert the record if it does not
 exist, or update it if it already exists.
 <p>
@@ -505,7 +562,8 @@ be used to import data from an external source.
 <section class="detail" id="upsertMultiple(java.util.List)">
 <h3>upsertMultiple</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">upsertMultiple</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">upsertMultiple</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
 <div class="block">Upsert every record in the given list. The records are
 upserted in the order in which they occur in the given list
 and according to the requirements of the <a href="#upsert(java.lang.Object)"><code>upsert(Object)</code></a>
@@ -535,7 +593,8 @@ method.</div>
 <section class="detail" id="refresh(java.lang.Object)">
 <h3>refresh</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">refresh</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">refresh</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity)</span></div>
 <div class="block">Refresh the entity instance state from the database.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -553,7 +612,8 @@ method.</div>
 <section class="detail" id="refreshMultiple(java.util.List)">
 <h3>refreshMultiple</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">refreshMultiple</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">refreshMultiple</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;?&gt;&nbsp;entities)</span></div>
 <div class="block">Refresh multiple entities.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -577,7 +637,9 @@ method.</div>
 <section class="detail" id="refresh(java.lang.Object,jakarta.persistence.LockModeType)">
 <h3>refresh</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">refresh</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">refresh</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;entity,
+ @Nonnull
  <a href="LockModeType.html" title="enum class in jakarta.persistence">LockModeType</a>&nbsp;lockMode)</span></div>
 <div class="block">Refresh the entity instance state from the database.</div>
 <dl class="notes">
@@ -622,6 +684,41 @@ agent.fetch(book.getAuthors())            // fetch the associated authors
 <dt>Throws:</dt>
 <dd><code><a href="PersistenceException.html" title="class in jakarta.persistence">PersistenceException</a></code> - if a record could not be
         read from the database</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addOption(jakarta.persistence.EntityAgent.Option)">
+<h3>addOption</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addOption</span><wbr><span class="parameters">(@Nonnull
+ <a href="EntityAgent.Option.html" title="interface in jakarta.persistence">EntityAgent.Option</a>&nbsp;option)</span></div>
+<div class="block">Specify an <a href="EntityAgent.Option.html" title="interface in jakarta.persistence">option</a> controlling the
+behavior of this entity agent, overwriting any existing
+option of the same type.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>option</code> - the option</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getOptions()">
+<h3>getOptions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="EntityAgent.Option.html" title="interface in jakarta.persistence">EntityAgent.Option</a>&gt;</span>&nbsp;<span class="element-name">getOptions</span>()</div>
+<div class="block">Get the <a href="EntityAgent.Option.html" title="interface in jakarta.persistence">options</a> controlling the behavior
+of this entity agent. The returned set includes options set
+via <a href="#addOption(jakarta.persistence.EntityAgent.Option)"><code>addOption(EntityAgent.Option)</code></a>, along with options specified via
+<a href="EntityHandler.html#setCacheRetrieveMode(jakarta.persistence.CacheRetrieveMode)"><code>EntityHandler.setCacheRetrieveMode(CacheRetrieveMode)</code></a> or <a href="EntityHandler.html#setCacheStoreMode(jakarta.persistence.CacheStoreMode)"><code>EntityHandler.setCacheStoreMode(CacheStoreMode)</code></a>.
+Mutation of the returned set does not affect the options of
+the entity agent.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the options for this entity agent</dd>
 </dl>
 </div>
 </section>

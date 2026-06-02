@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -166,9 +166,12 @@ an array.</div>
 <section class="detail" id="get(jakarta.persistence.TupleElement)">
 <h3>get</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type">X</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;X&gt;&nbsp;tupleElement)</span></div>
+<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type">X</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(@Nonnull
+ <a href="TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;X&gt;&nbsp;tupleElement)</span></div>
 <div class="block">Get the value of the specified tuple element.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="get(jakarta.persistence.TupleElement)-type-param-X"><code>X</code> - the type of the tuple element</span></dd>
 <dt>Parameters:</dt>
 <dd><code>tupleElement</code> - tuple element</dd>
 <dt>Returns:</dt>
@@ -185,11 +188,15 @@ an array.</div>
 <section class="detail" id="get(java.lang.String,java.lang.Class)">
 <h3>get</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type">X</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias,
+<div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type">X</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;type)</span></div>
 <div class="block">Get the value of the tuple element to which the
 specified alias has been assigned.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="get(java.lang.String,java.lang.Class)-type-param-X"><code>X</code> - the type of the tuple element</span></dd>
 <dt>Parameters:</dt>
 <dd><code>alias</code> - alias assigned to tuple element</dd>
 <dd><code>type</code> - of the tuple element</dd>
@@ -208,7 +215,8 @@ specified alias has been assigned.</div>
 <section class="detail" id="get(java.lang.String)">
 <h3>get</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</span></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(@Nonnull
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;alias)</span></div>
 <div class="block">Get the value of the tuple element to which the
 specified alias has been assigned.</div>
 <dl class="notes">
@@ -229,20 +237,24 @@ specified alias has been assigned.</div>
 <h3>get</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="type-parameters">&lt;X&gt;</span>&nbsp;<span class="return-type">X</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;i,
+ @Nonnull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;X&gt;&nbsp;type)</span></div>
 <div class="block">Get the value of the element at the specified
 position in the result tuple. The first position
 is 0.</div>
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="get(int,java.lang.Class)-type-param-X"><code>X</code> - the type of the tuple element</span></dd>
 <dt>Parameters:</dt>
 <dd><code>i</code> - position in result tuple</dd>
 <dd><code>type</code> - type of the tuple element</dd>
 <dt>Returns:</dt>
 <dd>value of the tuple element</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if i exceeds
-        length of result tuple  or element cannot
-        be assigned to the specified type</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the position
+        exceeds the length of the result tuple or
+        if the element cannot be assigned to the
+        specified type</dd>
 </dl>
 </div>
 </section>
@@ -271,7 +283,8 @@ is 0.</div>
 <section class="detail" id="toArray()">
 <h3>toArray</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]</span>&nbsp;<span class="element-name">toArray</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]</span>&nbsp;<span class="element-name">toArray</span>()</div>
 <div class="block">Return the values of the result tuple elements as
 an array.</div>
 <dl class="notes">
@@ -285,7 +298,8 @@ an array.</div>
 <section class="detail" id="getElements()">
 <h3>getElements</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getElements</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TupleElement.html" title="interface in jakarta.persistence">TupleElement</a>&lt;?&gt;&gt;</span>&nbsp;<span class="element-name">getElements</span>()</div>
 <div class="block">Return the tuple elements.</div>
 <dl class="notes">
 <dt>Returns:</dt>

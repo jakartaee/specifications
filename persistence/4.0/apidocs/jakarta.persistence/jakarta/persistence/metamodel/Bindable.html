@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../search.html">Search</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -148,7 +148,8 @@ or attribute type that can be bound into a <a href="../criteria/Path.html" title
 <section class="detail" id="getBindableType()">
 <h3>getBindableType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="Bindable.BindableType.html" title="enum class in jakarta.persistence.metamodel">Bindable.BindableType</a></span>&nbsp;<span class="element-name">getBindableType</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="Bindable.BindableType.html" title="enum class in jakarta.persistence.metamodel">Bindable.BindableType</a></span>&nbsp;<span class="element-name">getBindableType</span>()</div>
 <div class="block">Return the bindable type of the represented object.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -161,7 +162,8 @@ or attribute type that can be bound into a <a href="../criteria/Path.html" title
 <section class="detail" id="getBindableJavaType()">
 <h3>getBindableJavaType</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in Bindable">T</a>&gt;</span>&nbsp;<span class="element-name">getBindableJavaType</span>()</div>
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="#type-param-T" title="type parameter in Bindable">T</a>&gt;</span>&nbsp;<span class="element-name">getBindableJavaType</span>()</div>
 <div class="block">Return the Java type of the represented object.
 If the bindable type of the object is <code>PLURAL_ATTRIBUTE</code>,
 the Java element type is returned. If the bindable type is

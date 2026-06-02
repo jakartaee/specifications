@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../search.html">Search</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -88,12 +88,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
+<dd><code><a href="Statement.Option.html" title="interface in jakarta.persistence">Statement.Option</a>, <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a>, <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">QueryFlushMode</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&gt;</span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="QueryFlushMode.html" title="enum class in jakarta.persistence">QueryFlushMode</a>&gt;
+implements <a href="TypedQuery.Option.html" title="interface in jakarta.persistence">TypedQuery.Option</a>, <a href="Statement.Option.html" title="interface in jakarta.persistence">Statement.Option</a>, <a href="StoredProcedureQuery.Option.html" title="interface in jakarta.persistence">StoredProcedureQuery.Option</a></span></div>
 <div class="block">Enumerates the possible flush modes for execution of a
 <a href="Query.html" title="interface in jakarta.persistence"><code>Query</code></a>. An explicitly-specified
 <a href="Query.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)">query-level
@@ -150,15 +151,13 @@ and so flush modes have no effect on an entity agent, nor on
 <dl class="notes">
 <dt>Since:</dt>
 <dd>4.0</dd>
-<dt>Author:</dt>
-<dd>Gavin King</dd>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list-long">
 <li><a href="Query.html#setQueryFlushMode(jakarta.persistence.QueryFlushMode)"><code>Query.setQueryFlushMode(QueryFlushMode)</code></a></li>
 <li><a href="NamedQuery.html#flush()"><code>NamedQuery.flush()</code></a></li>
 <li><a href="NamedNativeQuery.html#flush()"><code>NamedNativeQuery.flush()</code></a></li>
-<li><a href="query/StaticQueryOptions.html#flush()"><code>StaticQueryOptions.flush()</code></a></li>
+<li><a href="query/QueryOptions.html#flush()"><code>QueryOptions.flush()</code></a></li>
 <li><a href="FlushModeType.html" title="enum class in jakarta.persistence"><code>FlushModeType</code></a></li>
 </ul>
 </dd>

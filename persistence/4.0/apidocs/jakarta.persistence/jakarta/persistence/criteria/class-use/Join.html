@@ -36,7 +36,7 @@ loadScripts(document, 'script');</script>
 <li><a href="../../../../../search.html">Search</a></li>
 <li><a href="../../../../../help-doc.html#use">Help</a></li>
 </ul>
-<div class="about-language"><br>Jakarta Persistence API v4.0.0-M2</div>
+<div class="about-language"><br>Jakarta Persistence API v4.0.0-M4</div>
 </div>
 </div>
 <div class="sub-nav">
@@ -63,7 +63,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="#jakarta.persistence.criteria">jakarta.persistence.criteria</a></div>
 <div class="col-last even-row-color">
-<div class="block">Jakarta Persistence Criteria API</div>
+<div class="block">Defines the Jakarta Persistence Criteria Query API.</div>
 </div>
 </div>
 <section class="class-uses">
@@ -181,11 +181,22 @@ specified ON condition and return the join object.</div>
 <div class="block">Modify the join to restrict the result according to the
 specified ON condition and return the join object.</div>
 </div>
-<div class="col-first odd-row-color"><code>&lt;X, T, V extends T&gt;<br><a href="../Join.html" title="interface in jakarta.persistence.criteria">Join</a><wbr>&lt;X,<wbr>V&gt;</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#treat(jakarta.persistence.criteria.Join,java.lang.Class)" class="member-name-link">treat</a><wbr>(<a href="../Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;X,<wbr>T&gt;&nbsp;join,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;V&gt;&nbsp;type)</code></div>
+<div class="col-first odd-row-color"><code><a href="../Join.html" title="interface in jakarta.persistence.criteria">Join</a><wbr>&lt;<a href="../Join.html#type-param-Z" title="type parameter in Join">Z</a>,<wbr><a href="../Join.html#type-param-X" title="type parameter in Join">X</a>&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Join.</span><code><a href="../Join.html#on(java.util.List)" class="member-name-link">on</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="../Expression.html" title="interface in jakarta.persistence.criteria">Expression</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&gt;&nbsp;restrictions)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Modify the join to restrict the result according to the
+specified ON condition and return the join object.</div>
+</div>
+<div class="col-first even-row-color"><code>&lt;X, T, V extends T&gt;<br><a href="../Join.html" title="interface in jakarta.persistence.criteria">Join</a><wbr>&lt;X,<wbr>V&gt;</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">CriteriaBuilder.</span><code><a href="../CriteriaBuilder.html#treat(jakarta.persistence.criteria.Join,java.lang.Class)" class="member-name-link">treat</a><wbr>(<a href="../Join.html" title="interface in jakarta.persistence.criteria">Join</a>&lt;X,<wbr>T&gt;&nbsp;join,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;V&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Downcast Join object to the specified type.</div>
+</div>
+<div class="col-first odd-row-color"><code>&lt;T extends <a href="../Join.html#type-param-X" title="type parameter in Join">X</a>&gt;<br><a href="../Join.html" title="interface in jakarta.persistence.criteria">Join</a><wbr>&lt;<a href="../Join.html#type-param-Z" title="type parameter in Join">Z</a>,<wbr>T&gt;</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Join.</span><code><a href="../Join.html#treat(java.lang.Class)" class="member-name-link">treat</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Downcast the joined type to the given type.</div>
 </div>
 </div>
 <div class="caption"><span>Methods in <a href="../package-summary.html">jakarta.persistence.criteria</a> that return types with arguments of type <a href="../Join.html" title="interface in jakarta.persistence.criteria">Join</a></span></div>
