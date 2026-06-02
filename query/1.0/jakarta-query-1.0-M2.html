@@ -529,8 +529,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div id="header">
 <h1>Jakarta Query</h1>
 <div class="details">
-<span id="revnumber"> 1.0-M1,</span>
-<span id="revdate">October 11, 2025</span>
+<span id="revnumber"> 1.0-M2,</span>
+<span id="revdate">May 25, 2026</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -549,10 +549,10 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_goals">1.3. Goals</a></li>
 <li><a href="#_non_goals">1.4. Non-goals</a></li>
 <li><a href="#_conventions">1.5. Conventions</a></li>
-<li><a href="#_jakarta_query_project_team">1.6. Jakarta Query Project Team</a>
+<li><a href="#_jakarta_query_project_team">1.6. Jakarta Query project team</a>
 <ul class="sectlevel3">
-<li><a href="#_project_leads">1.6.1. Project Leads</a></li>
-<li><a href="#_committers">1.6.2. Committers</a></li>
+<li><a href="#_project_leads">1.6.1. Project leads</a></li>
+<li><a href="#_other_committers">1.6.2. Other committers</a></li>
 <li><a href="#_contributors">1.6.3. Contributors</a></li>
 </ul>
 </li>
@@ -580,9 +580,12 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#joins">3.2. Joins</a>
 <ul class="sectlevel3">
 <li><a href="#joins-entities">3.2.1. Joins to named entities</a></li>
-<li><a href="#joins-nested">3.2.2. Joins to nested entities or collections</a></li>
-<li><a href="#left-joins">3.2.3. Left joins</a></li>
-<li><a href="#fetch-joins">3.2.4. Fetch joins</a></li>
+<li><a href="#left-joins-entities">3.2.2. Left joins to named entities</a></li>
+<li><a href="#right-joins-entities">3.2.3. Right joins to named entities</a></li>
+<li><a href="#full-joins-entities">3.2.4. Full joins to named entities</a></li>
+<li><a href="#joins-nested">3.2.5. Joins to nested entities or collections</a></li>
+<li><a href="#left-joins-nested">3.2.6. Left joins to nested entities or collections</a></li>
+<li><a href="#fetch-joins">3.2.7. Fetch joins</a></li>
 </ul>
 </li>
 <li><a href="#restriction">3.3. Restriction</a>
@@ -611,6 +614,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_numeric_literals">4.5. Numeric literals</a></li>
 <li><a href="#_single_character_literals">4.6. Single-character literals</a></li>
 <li><a href="#_whitespace">4.7. Whitespace</a></li>
+<li><a href="#_scope_of_identification_variables">4.8. Scope of identification variables</a></li>
 </ul>
 </li>
 <li><a href="#_expressions">5. Expressions</a>
@@ -624,14 +628,15 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#entity-type-literals">5.1.5. Entity type literals</a></li>
 <li><a href="#path-expressions">5.1.6. Path expressions</a></li>
 <li><a href="#identifier-version-expressions">5.1.7. Identifier and version expressions</a></li>
-<li><a href="#function-calls">5.1.8. Function calls</a></li>
+<li><a href="#function-application">5.1.8. Function application</a></li>
 <li><a href="#map-key-value">5.1.9. Map keys and values</a></li>
 <li><a href="#types-and-typecasts">5.1.10. Types and typecasts</a></li>
-<li><a href="#aggregate-functions">5.1.11. Aggregate functions calls</a></li>
+<li><a href="#aggregate-functions">5.1.11. Aggregate function application</a></li>
 <li><a href="#case-expressions">5.1.12. Case expressions</a></li>
-<li><a href="#operator-expressions">5.1.13. Operator expressions</a></li>
-<li><a href="#subquery-expressions">5.1.14. Subquery expressions</a></li>
-<li><a href="#numeric-promotion">5.1.15. Numeric types and numeric type promotion</a></li>
+<li><a href="#constructor-application">5.1.13. Constructor application</a></li>
+<li><a href="#operator-expressions">5.1.14. Operator expressions</a></li>
+<li><a href="#subquery-expressions">5.1.15. Subquery expressions</a></li>
+<li><a href="#numeric-promotion">5.1.16. Numeric types and numeric type promotion</a></li>
 </ul>
 </li>
 <li><a href="#predicates">5.2. Conditional expressions</a>
@@ -645,7 +650,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </ul>
 </li>
 <li><a href="#natural-order">5.3. Natural order</a></li>
-<li><a href="#logical-operators">5.4. Logical operators</a></li>
+<li><a href="#ordering-expressions">5.4. Ordering criteria</a></li>
+<li><a href="#logical-operators">5.5. Logical operators</a></li>
 </ul>
 </li>
 <li><a href="#_statements_and_clauses">6. Statements and clauses</a>
@@ -679,8 +685,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 <li><a href="#syntax">7. Syntax</a>
 <ul class="sectlevel2">
-<li><a href="#_core_language_grammar">7.1. Core language grammar</a></li>
-<li><a href="#_full_language_grammar">7.2. Full language grammar</a></li>
+<li><a href="#_common_language_grammar">7.1. Common language grammar</a></li>
+<li><a href="#_persistence_language_grammar">7.2. Persistence language grammar</a></li>
 </ul>
 </li>
 </ul>
@@ -693,11 +699,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta Query
 
-Version: 1.0-M1
+Version: 1.0-M2
 
 Status: Draft
 
-Release: October 11, 2025</pre>
+Release: May 25, 2026</pre>
 </div>
 </div>
 </div>
@@ -810,11 +816,11 @@ Jakarta Query specifies:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>a core language which can be implemented by Jakarta Data and Jakarta NoSQL
+<p>a common language which can be implemented by Jakarta Data and Jakarta NoSQL
 providers, and</p>
 </li>
 <li>
-<p>an extended language tailored for Jakarta Persistence providers or other
+<p>a persistence language tailored for Jakarta Persistence providers or other
 persistence technologies backed by relational databases.</p>
 </li>
 </ul>
@@ -880,16 +886,16 @@ evolution.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>the <em>extended language</em>, which is known to be implementable by persistence solutions backed by SQL databases, and</p>
+<p>the <em>persistence language</em>, which is known to be implementable by persistence solutions backed by SQL databases, and</p>
 </li>
 <li>
-<p>the <em>core language</em>, a strict subset which is designed to be implementable on other kinds of non-SQL data stores.</p>
+<p>the <em>common language</em>, a strict subset which is designed to be implementable on other kinds of non-SQL data stores.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The extended language is designed for reuse by Jakarta Persistence.
-The core language is designed for reuse by Jakarta Data and Jakarta NoSQL.
+<p>The persistence language is designed for reuse by Jakarta Persistence.
+The common language is designed for reuse by Jakarta Data and Jakarta NoSQL.
 Jakarta Query itself has no dependence on either of these specifications, and reuse in other contexts is encouraged.</p>
 </div>
 <div class="paragraph">
@@ -904,7 +910,7 @@ Jakarta Query itself has no dependence on either of these specifications, and re
 <p>standardizes the syntax and semantics of the language,</p>
 </li>
 <li>
-<p>delineates the core subset,</p>
+<p>delineates the common subset,</p>
 </li>
 <li>
 <p>provides guidelines on how query language constructs map to language elements in a program written in Java.</p>
@@ -954,7 +960,7 @@ Jakarta Persistence defines an interpretation compatible with SQL.</p>
 </div>
 <div class="paragraph">
 <p><code>Monospace</code> font indicates a keyword or fragment of text from the query language itself, or from the grammar for the language.
-When a keyword or name of a grammar rule is not part of the core language, the keyword or rule name is <code><mark>highlighted</mark></code>.</p>
+When a keyword or name of a grammar rule is not part of the common language, the keyword or rule name is <code><mark>highlighted</mark></code>.</p>
 </div>
 <div class="paragraph">
 <p>ANTLR 4-style BNF is used to define the syntax of the language in <a href="#syntax">Syntax</a>.</p>
@@ -973,7 +979,7 @@ Code fragments written in this metalanguage are never prescriptive.</p>
 <p>explanatory text which is not prescriptive or not part of the definition of the language, and</p>
 </li>
 <li>
-<p>information relating to compatibility between implementations of Jakarta Query, and to differences between the core language and the extended language.</p>
+<p>information relating to compatibility between implementations of Jakarta Query, and to differences between the common language and the persistence language.</p>
 </li>
 </ul>
 </div>
@@ -984,14 +990,14 @@ This specification places certain requirements on implementations for Java which
 </div>
 </div>
 <div class="sect2">
-<h3 id="_jakarta_query_project_team">1.6. Jakarta Query Project Team</h3>
+<h3 id="_jakarta_query_project_team">1.6. Jakarta Query project team</h3>
 <div class="paragraph">
 <p>This specification is being developed as part of Jakarta Query project under the
 Jakarta EE Specification Process. It is the result of the collaborative work
 of the project committers and various contributors.</p>
 </div>
 <div class="sect3">
-<h4 id="_project_leads">1.6.1. Project Leads</h4>
+<h4 id="_project_leads">1.6.1. Project leads</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1004,17 +1010,14 @@ of the project committers and various contributors.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_committers">1.6.2. Committers</h4>
+<h4 id="_other_committers">1.6.2. Other committers</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://projects.eclipse.org/user/8388">Gavin King</a></p>
-</li>
-<li>
-<p><a href="https://projects.eclipse.org/user/3043">Lukas Jungmann</a></p>
-</li>
-<li>
 <p><a href="https://projects.eclipse.org/user/10400">Nathan Rauh</a></p>
+</li>
+<li>
+<p><a href="https://accounts.eclipse.org/users/osantanatrg">Otavio Santana</a></p>
 </li>
 <li>
 <p><a href="https://projects.eclipse.org/user/18033">Riva Tholoor Philip</a></p>
@@ -1400,9 +1403,9 @@ The representation of a record as a tree might necessarily be infinite, with a n
 <div class="paragraph">
 <p>Circularity typically arises in implementations which support <em>associations</em> between entity types.
 An association is a labeled element of an entity or embeddable type which is itself an entity type.
-This specification does not require that implementations allow associations between entities, and the core language does not feature constructs for querying associations.
+This specification does not require that implementations allow associations between entities, and the common language does not feature constructs for querying associations.
 In particular, an implementation of Jakarta Query which targets a non-relational database might not feature any support for associations.
-On the other hand, the extended language defines constructs like <a href="#joins-nested">joins</a> and <a href="#treat">typecasts</a> which are intended for use in implementations which do support associations.
+On the other hand, the persistence language defines constructs like <a href="#joins-nested">joins</a> and <a href="#treat">typecasts</a> which are intended for use in implementations which do support associations.
 In particular, association mapping is a fundamental feature of Jakarta Persistence, and circularity is completely normal in implementations based on object/relational mapping.</p>
 </div>
 </td>
@@ -1816,7 +1819,130 @@ In this case, the syntax is slightly different:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="joins-nested">3.2.2. Joins to nested entities or collections</h4>
+<h4 id="left-joins-entities">3.2.2. Left joins to named entities</h4>
+<div class="paragraph">
+<p>A left join to a named entity has the syntax:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="sql">[<span class="keyword">from</span>] <span class="keyword">left</span> <span class="keyword">join</span> Y <span class="keyword">as</span> y</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where, as before, <code>Y</code> is the name of the entity, <code>y</code> is the label (alias) assigned to it, and <code>[from]</code> is a root entity or a join.
+As before, the keyword <code>as</code> is optional.</p>
+</div>
+<div class="paragraph">
+<p>A left join may specify a predicate:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="sql">[<span class="keyword">from</span>] <span class="keyword">left</span> <span class="keyword">join</span> Y <span class="keyword">as</span> y <span class="keyword">on</span> [predicate]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>[predicate]</code> is a predicate, as defined later in <a href="#predicates">Conditional expressions</a>.</p>
+</div>
+<div class="paragraph">
+<p>A left join to a named entity produces a result list with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>every structure belonging to the result list of the identical regular join,<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> as defined above in <a href="#joins-entities">Joins to named entities</a>, and</p>
+</li>
+<li>
+<p>every structure <em>r</em> of the result list of the operation on which the join acts for which there is no structure <em>r'</em> in the result list of the identical regular join which contains every labeled element of <em>r</em>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="right-joins-entities">3.2.3. Right joins to named entities</h4>
+<div class="paragraph">
+<p>A right join to a named entity has the syntax:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="sql">[<span class="keyword">from</span>] <span class="keyword">right</span> <span class="keyword">join</span> Y <span class="keyword">as</span> y</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where, as before, <code>Y</code> is the name of the entity, <code>y</code> is the label (alias) assigned to it, and <code>[from]</code> is a root entity or a join.
+As usual, the keyword <code>as</code> is optional.</p>
+</div>
+<div class="paragraph">
+<p>A right join may specify a predicate:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="sql">[<span class="keyword">from</span>] <span class="keyword">right</span> <span class="keyword">join</span> Y <span class="keyword">as</span> y <span class="keyword">on</span> [predicate]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>[predicate]</code> is a predicate, as defined later in <a href="#predicates">Conditional expressions</a>.</p>
+</div>
+<div class="paragraph">
+<p>A right join to a named entity produces a result list with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>every structure belonging to the result list of the identical regular join, as defined above in <a href="#joins-entities">Joins to named entities</a>, and</p>
+</li>
+<li>
+<p>for each record <em>y</em> of entity type <code>Y</code> which does not already occur with label <code>y</code> in the result list of the identical regular join, a structure containing <em>y</em> labeled by the alias <code>y</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="full-joins-entities">3.2.4. Full joins to named entities</h4>
+<div class="paragraph">
+<p>A full join to a named entity has the syntax:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="sql">[<span class="keyword">from</span>] <span class="keyword">full</span> <span class="keyword">join</span> Y <span class="keyword">as</span> y</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where, as before, <code>Y</code> is the name of the entity, <code>y</code> is the label (alias) assigned to it, and <code>[from]</code> is a root entity or a join.
+As usual, the keyword <code>as</code> is optional.</p>
+</div>
+<div class="paragraph">
+<p>A full join may specify a predicate:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="sql">[<span class="keyword">from</span>] <span class="keyword">full</span> <span class="keyword">join</span> Y <span class="keyword">as</span> y <span class="keyword">on</span> [predicate]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>[predicate]</code> is a predicate, as defined later in <a href="#predicates">Conditional expressions</a>.</p>
+</div>
+<div class="paragraph">
+<p>A full join to a named entity produces a result list with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>every structure belonging to the result list of the identical regular join, as defined above in <a href="#joins-entities">Joins to named entities</a>,</p>
+</li>
+<li>
+<p>every structure <em>r</em> of the result list of the operation on which the join acts for which there is no structure <em>r'</em> in the result list of the identical regular join which contains every labeled element of <em>r</em>, and</p>
+</li>
+<li>
+<p>for each record <em>y</em> of entity type <code>Y</code> which does not already occur with label <code>y</code> in the result list of the identical regular join, a structure containing <em>y</em> labeled by the alias <code>y</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>That is, the result list of a full join contains every structure belonging to the result list of an identical left join, and every structure belonging to the result list of an identical right join.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="joins-nested">3.2.5. Joins to nested entities or collections</h4>
 <div class="paragraph">
 <p>Instead of a named entity, a join may identify a structure or collection nested within the result list of the operation on which it acts:</p>
 </div>
@@ -1923,7 +2049,7 @@ Implementations of Jakarta Query do not, in practice, always return the entire r
 </div>
 </div>
 <div class="sect3">
-<h4 id="left-joins">3.2.3. Left joins</h4>
+<h4 id="left-joins-nested">3.2.6. Left joins to nested entities or collections</h4>
 <div class="paragraph">
 <p>A left join is similar to a regular join:</p>
 </div>
@@ -1984,9 +2110,22 @@ The keyword <code>outer</code> is also completely optional, and so a left join m
 <p>In this case, however, the restriction is only evaluated for elements of the result list which contain structures labeled by the alias <code>y</code>.
 Any element of the result list of the join which does not contain a structure labeled by the alias <code>y</code> is taken to satisfy the restriction, even when the predicate would not be satisfied by that element.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This specification does not require support for right or full outer joins to nested entities or collections.
+Some implementations of Jakarta Query might support such outer joins, but we do not define the semantics here.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
-<h4 id="fetch-joins">3.2.4. Fetch joins</h4>
+<h4 id="fetch-joins">3.2.7. Fetch joins</h4>
 <div class="paragraph">
 <p>A fetch join is a hint to the Jakarta Query implementation regarding which data in the query result set the application program will access.
 A fetch join does not affect the shape (type) of the query result set, and therefore does not introduce a label.
@@ -2071,7 +2210,7 @@ That is, the result list of a restriction contains a structure <em>r</em> if and
 <p>value expressions which also occur in the <code>group by</code> clause, and</p>
 </li>
 <li>
-<p>aggregate function expressions, as specified below in <a href="#aggregate-functions">Aggregate functions calls</a>.</p>
+<p>aggregate function expressions, as specified below in <a href="#aggregate-functions">Aggregate function application</a>.</p>
 </li>
 </ul>
 </div>
@@ -2209,7 +2348,7 @@ For each value expression with label <code>x</code> in the given <code>select</c
 <p>a value expression which also occurs in the <code>group by</code> clause, or</p>
 </li>
 <li>
-<p>an aggregate function expression, as specified below in <a href="#aggregate-functions">Aggregate functions calls</a>.</p>
+<p>an aggregate function expression, as specified below in <a href="#aggregate-functions">Aggregate function application</a>.</p>
 </li>
 </ul>
 </div>
@@ -2217,7 +2356,7 @@ For each value expression with label <code>x</code> in the given <code>select</c
 <p>In this case, the projection has the additional effect of collapsing the list of lists produced by aggregation, producing a single result structure for each nested list in the result list of the operation to which the projection applies.</p>
 </div>
 <div class="paragraph">
-<p>Alternatively, if every value expression in the <code>select</code> list is an aggregate function, and if the query does <em>not</em> have a <code>group by</code> clause, then aggregation over all elements of the result list is implied.<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup>
+<p>Alternatively, if every value expression in the <code>select</code> list is an aggregate function, and if the query does <em>not</em> have a <code>group by</code> clause, then aggregation over all elements of the result list is implied.<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup>
 Such a query produces a result list with a single element.</p>
 </div>
 <div class="paragraph">
@@ -2298,7 +2437,7 @@ Some general principles for ordering of atomic types are established in <a href=
 </table>
 </div>
 <div class="paragraph">
-<p>Each value expression in the <code>order by</code> list must also occur in the projection list. TODO!</p>
+<p>Each value expression in the <code>order by</code> list must also occur in the projection list, as specified below in <a href="#ordering-expressions">Ordering criteria</a>.</p>
 </div>
 <div class="paragraph">
 <p>For example:</p>
@@ -2435,8 +2574,22 @@ Subqueries have a restricted syntax compared to root queries, and, in particular
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This specification defines the behavior of subqueries occurring within <a href="#restriction">restrictions</a> in the <code>where</code> clause or <code>having</code> clause.
-Some implementations of Jakarta Query allow subqueries to occur elsewhere in the query, but this functionality falls outside the scope of this specification.
+<div class="paragraph">
+<p>This specification defines the behavior of subqueries occurring:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>within <a href="#restriction">restrictions</a> in the <code>where</code> clause or <code>having</code> clause, or</p>
+</li>
+<li>
+<p>within <a href="#select-clause">projections</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some implementations of Jakarta Query allow subqueries to occur elsewhere in the query, but this functionality falls outside the scope of this specification.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -2498,7 +2651,7 @@ A query with such expressions is called <em>correlated</em>.</p>
 <p>In the <a href="#syntax">grammar</a>, identifiers are labeled with the <code>IDENTIFIER</code> token type.</p>
 </div>
 <div class="paragraph">
-<p>The following identifiers are <em>keywords</em>: <code>abs</code>, <code>all</code>, <code>and</code>, <code>any</code>, <code>as</code>, <code>asc</code>, <code>avg</code>, <code>between</code>, <code>both</code>, <code>by</code>, <code>case</code>, <code>ceiling</code>, <code>class</code>, <code>coalesce</code>, <code>concat</code>, <code>count</code>, <code>current_date</code>, <code>current_time</code>, <code>current_timestamp</code>, <code>delete</code>, <code>desc</code>, <code>distinct</code>, <code>else</code>, <code>empty</code>, <code>end</code>, <code>entry</code>, <code>escape</code>, <code>except</code>, <code>exists</code>, <code>exp</code>, <code>extract</code>, <code>false</code>, <code>fetch</code>, <code>first</code>, <code>floor</code>, <code>from</code>, <code>function</code>, <code>group</code>, <code>having</code>, <code>in</code>, <code>index</code>, <code>inner</code>, <code>intersect</code>, <code>is</code>, <code>join</code>, <code>key</code>, <code>leading</code>, <code>last</code>, <code>left</code>, <code>length</code>, <code>like</code>, <code>local</code>, <code>ln</code>, <code>locate</code>, <code>lower</code>, <code>max</code>, <code>member</code>, <code>min</code>, <code>mod</code>, <code>new</code>, <code>not</code>, <code>null</code>, <code>nulls</code>, <code>nullif</code>, <code>object</code>, <code>of</code>, <code>on</code>, <code>or</code>, <code>order</code>, <code>outer</code>, <code>position</code>, <code>power</code>, <code>replace</code>, <code>right</code>, <code>round</code>, <code>select</code>, <code>set</code>, <code>sign</code>, <code>size</code>, <code>some</code>, <code>sqrt</code>, <code>substring</code>, <code>sum</code>, <code>then</code>, <code>trailing</code>, <code>treat</code>, <code>trim</code>, <code>true</code>, <code>type</code>, <code>union</code>, <code>update</code>, <code>upper</code>, <code>value</code>, <code>when</code>, <code>where</code>.<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup>.</p>
+<p>The following identifiers are <em>keywords</em>: <code>abs</code>, <code>all</code>, <code>and</code>, <code>any</code>, <code>as</code>, <code>asc</code>, <code>avg</code>, <code>between</code>, <code>both</code>, <code>by</code>, <code>case</code>, <code>ceiling</code>, <code>class</code>, <code>coalesce</code>, <code>concat</code>, <code>count</code>, <code>current_date</code>, <code>current_time</code>, <code>current_timestamp</code>, <code>delete</code>, <code>desc</code>, <code>distinct</code>, <code>else</code>, <code>empty</code>, <code>end</code>, <code>entry</code>, <code>escape</code>, <code>except</code>, <code>exists</code>, <code>exp</code>, <code>extract</code>, <code>false</code>, <code>fetch</code>, <code>first</code>, <code>floor</code>, <code>from</code>, <code>function</code>, <code>greatest</code>, <code>group</code>, <code>having</code>, <code>in</code>, <code>index</code>, <code>inner</code>, <code>intersect</code>, <code>is</code>, <code>join</code>, <code>key</code>, <code>last</code>, <code>leading</code>, <code>least</code>, <code>left</code>, <code>length</code>, <code>like</code>, <code>local</code>, <code>ln</code>, <code>locate</code>, <code>lower</code>, <code>max</code>, <code>member</code>, <code>min</code>, <code>mod</code>, <code>new</code>, <code>not</code>, <code>null</code>, <code>nulls</code>, <code>nullif</code>, <code>object</code>, <code>of</code>, <code>on</code>, <code>or</code>, <code>order</code>, <code>outer</code>, <code>position</code>, <code>power</code>, <code>replace</code>, <code>right</code>, <code>round</code>, <code>select</code>, <code>set</code>, <code>sign</code>, <code>size</code>, <code>some</code>, <code>sqrt</code>, <code>substring</code>, <code>sum</code>, <code>then</code>, <code>trailing</code>, <code>treat</code>, <code>trim</code>, <code>true</code>, <code>type</code>, <code>union</code>, <code>update</code>, <code>upper</code>, <code>value</code>, <code>when</code>, <code>where</code>.<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p><strong>TODO:</strong> function names don&#8217;t really need to be keywords!</p>
@@ -2555,7 +2708,7 @@ Use of a reserved identifier as a regular identifier in a query might be accepte
 <div class="sect2">
 <h3 id="_numeric_literals">4.5. Numeric literals</h3>
 <div class="paragraph">
-<p>In the core language, numeric literals come in two flavors:</p>
+<p>In the common language, numeric literals come in two flavors:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2623,7 +2776,7 @@ Jakarta Query does not require support for literals written in octal or hexadeci
 </table>
 </div>
 <div class="paragraph">
-<p>In the extended language, arbitrary-precision numeric literals are also provided:</p>
+<p>In the persistence language, arbitrary-precision numeric literals are also provided:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2667,6 +2820,28 @@ Jakarta Query does not require support for literals written in octal or hexadeci
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_scope_of_identification_variables">4.8. Scope of identification variables</h3>
+<div class="paragraph">
+<p>A reference to an identification variable (alias) may occur:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>in any <a href="#path-expressions">expression</a> occurring after its declaration, but directly within the query which declares the identification variable,</p>
+</li>
+<li>
+<p>in any expression occurring directly in the <code>select</code> clause of the query which declares the identification variable, or</p>
+</li>
+<li>
+<p>in a direct or indirect subquery of the query which declares the identification variable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A reference to an identification variable declared by a subquery may not occur in a containing query of the subquery.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2690,7 +2865,10 @@ Expressions may be categorized as:</p>
 <p><a href="#path-expressions">paths</a>,</p>
 </li>
 <li>
-<p><a href="#function-calls">function calls</a> and <a href="#aggregate-functions">aggregate function calls</a>,</p>
+<p><a href="#function-application">function application</a> and <a href="#aggregate-functions">aggregate function application</a>,</p>
+</li>
+<li>
+<p><a href="#map-key-value">map key and value expressions</a> and <a href="#identifier-version-expressions">entity identifier and version expressions</a>,</p>
 </li>
 <li>
 <p><a href="#types-and-typecasts">typecasts</a>, <a href="#entity-type-expressions">type expressions</a>, and <a href="#entity-type-literals">literal entity types</a>,</p>
@@ -2702,27 +2880,36 @@ Expressions may be categorized as:</p>
 <p><a href="#operator-expressions">operator expressions</a>, and</p>
 </li>
 <li>
-<p><a href="#subquery-expressions">Subquery expressions</a>.</p>
+<p><a href="#subquery-expressions">subqueries</a>.</p>
 </li>
 </ul>
 </div>
 <div class="sect3">
 <h4 id="literal-expressions">5.1.1. Literal expressions</h4>
 <div class="paragraph">
-<p>The syntax for literal expressions is given by the rules <code>string_literal</code> and <code>numeric_literal</code>, and in the previous section titled <a href="#_lexical_structure">Lexical structure</a>.</p>
+<p>The syntax for literal expressions is given by the rules <code>string_literal</code>, <code>numeric_literal</code>, <code><mark>datetime_literal</mark></code>, and in the previous section titled <a href="#_lexical_structure">Lexical structure</a>.</p>
 </div>
 <div class="paragraph">
 <p>In an implementation for Java, a string, integer, or decimal literal is assigned the type it would be assigned in Java.
 So, for example, <code>'Hello'</code> is assigned the type <code>java.lang.String</code>, <code>123</code> is assigned the type <code>int</code>, <code>1e4</code> is assigned the type <code>double</code>, and <code>1.23f</code> is assigned the type <code>float</code>.
-In the extended language:</p>
+In the persistence language:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>arbitrary-precision integer literals (with suffix <code>BI</code>) are assigned the type <code>java.math.BigInteger</code>, and</p>
+<p>arbitrary-precision integer literals (with suffix <code>BI</code>) are assigned the type <code>java.math.BigInteger</code>,</p>
 </li>
 <li>
-<p>arbitrary-precision decimal literals (with suffix <code>BD</code>) are assigned the type <code>java.math.BigDecimal</code>.</p>
+<p>arbitrary-precision decimal literals (with suffix <code>BD</code>) are assigned the type <code>java.math.BigDecimal</code>,</p>
+</li>
+<li>
+<p>datetime literals (with prefix <code>DATETIME</code>) are assigned the type <code>java.time.LocalDateTime</code>,</p>
+</li>
+<li>
+<p>date literals (with prefix <code>DATE</code>) are assigned the type <code>java.time.LocalDate</code>, and</p>
+</li>
+<li>
+<p>time literals (with prefix <code>TIME</code>) are assigned the type <code>java.time.LocalTime</code>.</p>
 </li>
 </ul>
 </div>
@@ -2796,13 +2983,13 @@ An enum literal may only occur as:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>the right operand of an <code>update_item</code> belonging to a <code>set</code> assignment,</p>
+<p>the right operand of an <code>=</code> or <code>&lt;&gt;</code> equality comparison,</p>
 </li>
 <li>
-<p>the right operand of an <code>=</code> or <code>&lt;&gt;</code> equality comparison, or</p>
+<p>an <code>in_item</code> element of an <code>in_item_list</code> occurring as the right operand of the <a href="#in-expressions"><code>in</code> operator</a>, or</p>
 </li>
 <li>
-<p>an <code>in_item</code> element of an <code>in_item_list</code> occurring as the right operand of the <a href="#in-expressions"><code>in</code> operator</a>.</p>
+<p>the <code>new_value</code> of an <code>update_item</code> in a <code>set</code> assignment.</p>
 </li>
 </ul>
 </div>
@@ -2810,19 +2997,29 @@ An enum literal may only occur as:</p>
 <p>In each case, the enum literal expression is assigned the type of the left operand of the assignment, comparison, or <code>in</code> operator.</p>
 </div>
 <div class="paragraph">
-<p>In an implementation for Java, the type assigned must be a Java <code>enum</code> type, and the identifier must be the name of an enumerated value of the <code>enum</code> type including the fully qualified Java enum class name. For example, <code>day &lt;&gt; java.time.DayOfWeek.MONDAY</code> is a legal comparison expression.</p>
+<p>In an implementation for Java, the type assigned must be a Java <code>enum</code> type, and the identifier must be either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the qualified name of an enumerated value of the <code>enum</code> type, including the fully qualified Java enum class name, or</p>
+</li>
+<li>
+<p>when the left operand of the comparison expression or <code>update_item</code> is assigned the enum type, just the unqualified name of the enumerated value.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, <code>day &lt;&gt; java.time.DayOfWeek.MONDAY</code> and <code>day &lt;&gt; MONDAY</code> are both legal comparison expressions.</p>
 </div>
 <div class="paragraph">
 <p>When executed, the enum literal expression evaluates to the named member of the enumerated type.</p>
-</div>
-<div class="paragraph">
-<p><strong>TODO</strong> allow <code>day &lt;&gt; MONDAY</code>, since the <code>enum</code> type can be inferred.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="entity-type-literals">5.1.5. Entity type literals</h4>
 <div class="paragraph">
-<p>In the extended language, an <em>entity type literal</em>, with syntax given by <code><mark>entity_type_literal</mark></code> is just the name of an entity type, in the sense given in <a href="#entities-and-embeddables">Entities and embeddable types</a>.
+<p>In the persistence language, an <em>entity type literal</em>, with syntax given by <code><mark>entity_type_literal</mark></code> is just the name of an entity type, in the sense given in <a href="#entities-and-embeddables">Entities and embeddable types</a>.
 When executed, it evaluates to a value which represents the named entity type.</p>
 </div>
 <div class="paragraph">
@@ -2838,10 +3035,10 @@ When executed, the literal evaluates to an instance of <code>Class</code> repres
 <div class="ulist">
 <ul>
 <li>
-<p><code>simple_path_expression</code> in the core language, and</p>
+<p><code>simple_path_expression</code> in the common language, and</p>
 </li>
 <li>
-<p><code><mark>single_valued_path_expression</mark></code>, <code><mark>atomic_valued_path_expression</mark></code>, <code><mark>embeddable_valued_path_expression</mark></code>, <code><mark>entity_valued_path_expression</mark></code>, <code><mark>collection_valued_path_expression</mark></code>, or <code><mark>joinable_path_expression</mark></code> in the extended language.</p>
+<p><code><mark>single_valued_path_expression</mark></code>, <code><mark>atomic_valued_path_expression</mark></code>, <code><mark>embeddable_valued_path_expression</mark></code>, <code><mark>entity_valued_path_expression</mark></code>, <code><mark>collection_valued_path_expression</mark></code>, or <code><mark>joinable_path_expression</mark></code> in the persistence language.</p>
 </li>
 </ul>
 </div>
@@ -2874,10 +3071,10 @@ Any other sort of path expression might begin with:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>If the root element is an identifier matching an alias declared in a <code>from</code> clause of any containing query, as defined below in <a href="#from-clause">From clause</a>, the root element is assigned the entity type associated with that alias.<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup></p>
+<p>If the root element is an identifier matching an alias declared in a <code>from</code> clause of any containing query, as defined below in <a href="#from-clause">From clause</a>, the root element is assigned the entity type associated with that alias.<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup></p>
 </li>
 <li>
-<p>Otherwise, if the root element is an identifier, and if a containing query has a <code>from</code> clause declaring a root entity with (implicit or explicit) alias <code>this</code>, then the path expression is interpreted as if it were prefixed with the first element <code>this</code>, with <code>this</code> being assigned the type of the root entity.<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup></p>
+<p>Otherwise, if the root element is an identifier, and if a containing query has a <code>from</code> clause declaring a root entity with (implicit or explicit) alias <code>this</code>, then the path expression is interpreted as if it were prefixed with the first element <code>this</code>, with <code>this</code> being assigned the type of the root entity.<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p>
 </li>
 <li>
 <p>If the root element is a <code><mark>treated_entity_path_expression</mark></code>, then it is assigned the treated type, according to the usual rules defined by <a href="#treat">Treated path expressions</a>.</p>
@@ -2929,7 +3126,8 @@ Typically, the last element of a path expression is assigned an <a href="#atomic
 </ul>
 </div>
 <div class="paragraph">
-<p>If any element of a path expression evaluates to a null value, the whole path expression evaluates to a null value.</p>
+<p>If any element of a path expression evaluates to a null value, the whole path expression evaluates to a null value.
+However, the behavior of the <code>is null</code> operator, <code>coalesce()</code> function, or <code>nullif()</code> function is undefined when applied to a path with a null subpath.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2938,7 +3136,23 @@ Typically, the last element of a path expression is assigned an <a href="#atomic
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-An implementation of the core language is not required to support path expressions which involve multiple entities. For example, if <code>Book</code> and <code>Publisher</code> are different entity types, then the path expression <code>book.publisher.name</code> is not part of the core language.<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>
+<div class="paragraph">
+<p>According to this definition, Jakarta Query treats path expressions as a sort of left outer join.
+But for backward compatibility with older releases of the Jakarta Persistence Query Language, and contrary to the specification given here, an implementation of Jakarta Query is permitted to treat a path expression as if it were a sort of inner join.
+That is, an expression like <code>book.publisher.name is null</code> might be unsatisfied when the subpath <code>book.publisher</code> is null.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+An implementation of the common language is not required to support path expressions which involve multiple entities. For example, if <code>Book</code> and <code>Publisher</code> are different entity types, then the path expression <code>book.publisher.name</code> is not part of the common language.<sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup>
 </td>
 </tr>
 </table>
@@ -2947,10 +3161,10 @@ An implementation of the core language is not required to support path expressio
 <div class="sect3">
 <h4 id="identifier-version-expressions">5.1.7. Identifier and version expressions</h4>
 <div class="paragraph">
-<p>In the core language, an <em>identifier expression</em>, with syntax given by <code>id_expression</code>, is assigned the type of the unique identifier of the queried entity and evaluates to the unique identifier of a given record. An identifier expression is a synonym for a path expression with one element matching the identifier attribute of the queried entity type. An identifier expression may occur in the <code>select</code> clause, in the <code>order</code> clause, or as a scalar expression in the <code>where</code> clause.</p>
+<p>In the common language, an <em>identifier expression</em>, with syntax given by <code>id_expression</code>, is assigned the type of the unique identifier of the queried entity and evaluates to the unique identifier of a given record. An identifier expression is a synonym for a path expression with one element matching the identifier attribute of the queried entity type. An identifier expression may occur in the <code>select</code> clause, in the <code>order</code> clause, or as a scalar expression in the <code>where</code> clause.</p>
 </div>
 <div class="paragraph">
-<p>In the extended language, the grammar rule <code><mark>entity_id_or_version_function</mark></code> gives the syntax of the special functions <code>id</code> and <code>version</code>, which accept a path expression whose last element is assigned an entity type, and evaluate to, respectively, the identifier or version element of the record to which the path expression evaluates when executed.</p>
+<p>In the persistence language, the grammar rule <code><mark>entity_id_or_version_function</mark></code> gives the syntax of the special functions <code>id</code> and <code>version</code>, which accept a path expression whose last element is assigned an entity type, and evaluate to, respectively, the identifier or version element of the record to which the path expression evaluates when executed.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2969,17 +3183,17 @@ For example, Jakarta Persistence specifies the notion of a version field or prop
 </div>
 </div>
 <div class="sect3">
-<h4 id="function-calls">5.1.8. Function calls</h4>
+<h4 id="function-application">5.1.8. Function application</h4>
 <div class="paragraph">
-<p>A <em>function call</em> is the name of a function recognized by the Jakarta Query implementation, followed by a parenthesized list of argument expressions, with syntax given by:</p>
+<p>A <em>function application</em> is the name of a function recognized by the Jakarta Query implementation, followed by a parenthesized list of argument expressions, with syntax given by:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>function_expression</code> in the core language, or</p>
+<p><code>function_expression</code> in the common language, or</p>
 </li>
 <li>
-<p><code><mark>functions_returning_strings</mark></code>, <code><mark>functions_returning_datetime</mark></code>, and <code><mark>functions_returning_numerics</mark></code> in the full grammar of the extended language.</p>
+<p><code><mark>functions_returning_strings</mark></code>, <code><mark>functions_returning_datetime</mark></code>, and <code><mark>functions_returning_numerics</mark></code> in the grammar of the persistence language.</p>
 </li>
 </ul>
 </div>
@@ -2993,7 +3207,7 @@ For example, Jakarta Persistence specifies the notion of a version field or prop
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Functions highlighted in yellow belong to the extended language and are not required for an implementation of the core language.
+Functions highlighted in yellow belong to the persistence language and are not required for an implementation of the common language.
 </td>
 </tr>
 </table>
@@ -3184,10 +3398,24 @@ Functions highlighted in yellow belong to the extended language and are not requ
 <td class="tableblock halign-left valign-top"><p class="tableblock">See text</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">See text</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><mark>least</mark></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 or more</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any numeric type, any date or time type, or string</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Same as arguments</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evaluates to the smallest argument, according to the <a href="#natural-order">natural order</a> of the type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><mark>greatest</mark></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 or more</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any numeric type, any date or time type, or string</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Same as arguments</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evaluates to the largest argument, according to the <a href="#natural-order">natural order</a> of the type</p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>When any argument expression of any function call evaluates to a null value, the whole function call evaluates to null.</p>
+<p>When any argument expression of any function application evaluates to a null value, the whole function application evaluates to null.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3233,7 +3461,7 @@ On the other hand, an implementation of Jakarta Query might provide additional b
 <p>The primitive types <code>double</code>, <code>float</code>, <code>long</code>, <code>int</code>, <code>short</code>, <code>byte</code>, wrappers for these primitive types, <code>BigInteger</code>, and <code>BigDecimal</code> are all considered "Numeric" types.</p>
 </div>
 <div class="paragraph">
-<p>In the extended language, the <code><mark>extract()</mark></code> function accepts an expression assigned a date, time, or datetime type, along with an identifier&#8201;&#8212;&#8201;a <code><mark>datetime_field</mark></code> or <code><mark>datetime_part</mark></code>&#8201;&#8212;&#8201;indicating a specific part of the date, time, or datetime to extract, and evaluates to the specified part of the value to which its argument expression evaluates.</p>
+<p>In the persistence language, the <code><mark>extract()</mark></code> function accepts an expression assigned a date, time, or datetime type, along with an identifier&#8201;&#8212;&#8201;a <code><mark>datetime_field</mark></code> or <code><mark>datetime_part</mark></code>&#8201;&#8212;&#8201;indicating a specific part of the date, time, or datetime to extract, and evaluates to the specified part of the value to which its argument expression evaluates.</p>
 </div>
 <div class="paragraph">
 <p>Like keywords, <code><mark>datetime_field</mark></code> and <code><mark>datetime_part</mark></code> identifiers are case-insensitive.</p>
@@ -3261,8 +3489,8 @@ Such implementations are encouraged to also support:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>If the first argument of <code><mark>extract()</mark></code> is a <code><mark>datetime_field</mark></code> identifier, the function call is assigned the type <code>Integer</code>.
-If the first argument of <code><mark>extract()</mark></code> is <code><mark>DATE</mark></code>, the function call is assigned the type <code>LocalDate</code>. If the first argument of <code><mark>extract()</mark></code> is <code><mark>TIME</mark></code>, the function call is assigned the type <code>LocalTime</code>.</p>
+<p>If the first argument of <code><mark>extract()</mark></code> is a <code><mark>datetime_field</mark></code> identifier, the function application is assigned the type <code>Integer</code>.
+If the first argument of <code><mark>extract()</mark></code> is <code><mark>DATE</mark></code>, the function application is assigned the type <code>LocalDate</code>. If the first argument of <code><mark>extract()</mark></code> is <code><mark>TIME</mark></code>, the function application is assigned the type <code>LocalTime</code>.</p>
 </div>
 <div class="paragraph">
 <p>The <code><mark>datetime_field</mark></code> or <code><mark>datetime_part</mark></code> must be compatible with the type of the second argument expression.
@@ -3282,7 +3510,7 @@ For example, <code>extract(day from local date)</code> is well-typed; <code>extr
 <div class="paragraph">
 <p>Jakarta Persistence requires support for the <code><mark>function()</mark></code> function, with syntax given by <code><mark>function_invocation</mark></code>, allowing invocation of a native or user-defined database function from a query written in JPQL.
 On the other hand, an implementation of Jakarta Query might simply allow direct invocation of such functions&#8201;&#8212;&#8201;without the requirement to use the <code><mark>function()</mark></code> syntax&#8201;&#8212;&#8201;as an extension to the functionality required by this specification.
-This specification does not, therefore, require support for <code><mark>function()</mark></code>, not even in an implementation of the extended language.</p>
+This specification does not, therefore, require support for <code><mark>function()</mark></code>, not even in an implementation of the persistence language.</p>
 </div>
 <div class="paragraph">
 <p><strong>TODO</strong> Should we simply deprecate it? Remove it?</p>
@@ -3295,10 +3523,10 @@ This specification does not, therefore, require support for <code><mark>function
 <div class="sect3">
 <h4 id="map-key-value">5.1.9. Map keys and values</h4>
 <div class="paragraph">
-<p>In the extended language, a <em>map key expression</em>, <em>map value expression</em>, or <em>map entry expression</em> is an application of the special <code><mark>key()</mark></code> function, special <code><mark>value()</mark></code> function, or special <code><mark>entry()</mark></code> function, respectively.</p>
+<p>In the persistence language, a <em>map key expression</em>, <em>map value expression</em>, or <em>map entry expression</em> is an application of the special <code><mark>key()</mark></code> function, special <code><mark>value()</mark></code> function, or special <code><mark>entry()</mark></code> function, respectively.</p>
 </div>
 <div class="paragraph">
-<p>The <code><mark>entry()</mark></code> function may only occur in the <a href="#select-clause">select clause</a>, as specified by the full grammar of the extended language.</p>
+<p>The <code><mark>entry()</mark></code> function may only occur in the <a href="#select-clause">select clause</a>, as specified by the grammar of the persistence language.</p>
 </div>
 <div class="paragraph">
 <p>The argument of the <code><mark>key()</mark></code>, <code><mark>value()</mark></code>, or <mark>entry()</mark> function must be an alias of a collection join of a <a href="#collections">map</a>, as defined in <a href="#join-clauses">Join clauses</a>.</p>
@@ -3348,12 +3576,12 @@ An implementation of Jakarta Query which targets clients written in a language o
 <div class="sect3">
 <h4 id="types-and-typecasts">5.1.10. Types and typecasts</h4>
 <div class="paragraph">
-<p>The extended language provides three special functions for working with subtype polymorphism.</p>
+<p>The persistence language provides three special functions for working with subtype polymorphism.</p>
 </div>
 <div class="sect4">
 <h5 id="treat">5.1.10.1. Treated path expressions</h5>
 <div class="paragraph">
-<p>A <em>treated path expression</em> is an invocation of the special <code><mark>treat()</mark></code> function, with syntax given by <code><mark>treated_entity_path_expression</mark></code> and <code><mark>treated_joinable_path_expression</mark></code>.
+<p>A <em>treated path expression</em> is an application of the special <code><mark>treat()</mark></code> function, with syntax given by <code><mark>treated_entity_path_expression</mark></code> and <code><mark>treated_joinable_path_expression</mark></code>.
 The <code><mark>treat()</mark></code> function accepts:</p>
 </div>
 <div class="olist arabic">
@@ -3386,7 +3614,7 @@ The <code><mark>treat()</mark></code> function accepts:</p>
 <div class="sect4">
 <h5 id="_coercion_expressions">5.1.10.2. Coercion expressions</h5>
 <div class="paragraph">
-<p>A <em>coercion expression</em> is an invocation of the special <code><mark>cast()</mark></code> function, with syntax given by the last alternatives of <code><mark>functions_returning_numerics</mark></code> and <code><mark>functions_returning_strings</mark></code>.
+<p>A <em>coercion expression</em> is an application of the special <code><mark>cast()</mark></code> function, with syntax given by the last alternatives of <code><mark>functions_returning_numerics</mark></code> and <code><mark>functions_returning_strings</mark></code>.
 The <code><mark>cast()</mark></code> function accepts:</p>
 </div>
 <div class="olist arabic">
@@ -3414,7 +3642,7 @@ The <code><mark>cast()</mark></code> function accepts:</p>
 <td class="content">
 <div class="paragraph">
 <p>This specification places no specific requirements on the types which are allowed as arguments of the <code><mark>cast()</mark></code> function, nor on the behavior of coercion between types.
-As suggested by the grammar for <code><mark>functions_returning_numerics</mark></code> and <code><mark>functions_returning_strings</mark></code>, implementations of the extended language are strongly encouraged to support at least:</p>
+As suggested by the grammar for <code><mark>functions_returning_numerics</mark></code> and <code><mark>functions_returning_strings</mark></code>, implementations of the persistence language are strongly encouraged to support at least:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3440,7 +3668,7 @@ As suggested by the grammar for <code><mark>functions_returning_numerics</mark><
 <div class="sect4">
 <h5 id="entity-type-expressions">5.1.10.3. Entity type expressions</h5>
 <div class="paragraph">
-<p>An <em>entity type expression</em> is an invocation of the special <code><mark>type()</mark></code> function, with syntax given by <code><mark>type_discriminator</mark></code>.
+<p>An <em>entity type expression</em> is an application of the special <code><mark>type()</mark></code> function, with syntax given by <code><mark>type_discriminator</mark></code>.
 The <code><mark>type()</mark></code> function accepts an expression assigned an entity type, and, when executed, evaluates to a value which represents the type of the record to which the argument expression evaluates.</p>
 </div>
 <div class="paragraph">
@@ -3449,11 +3677,11 @@ The <code><mark>type()</mark></code> function accepts an expression assigned an 
 </div>
 </div>
 <div class="sect3">
-<h4 id="aggregate-functions">5.1.11. Aggregate functions calls</h4>
+<h4 id="aggregate-functions">5.1.11. Aggregate function application</h4>
 <div class="paragraph">
-<p>An <em>aggregate function call</em> may only occur in the <code>select</code> or <code>having</code> clause of a query involving <a href="#aggregation">aggregation</a>.
+<p>An <em>aggregate function application</em> may only occur in the <code>select</code> or <code>having</code> clause of a query involving <a href="#aggregation">aggregation</a>.
 Such a clause operates on a list of nested result lists, as specified above in <a href="#projection-and-aggregation">Projection and aggregation</a> and <a href="#restriction-and-aggregation">Restriction and aggregation</a>.
-An aggregate function call is evaluated in the context of such a nested list.</p>
+An aggregate function application is evaluated in the context of such a nested list.</p>
 </div>
 <div class="paragraph">
 <p>This specification defines the standard aggregate functions listed in the table below.</p>
@@ -3465,7 +3693,7 @@ An aggregate function call is evaluated in the context of such a nested list.</p
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Functions highlighted in yellow belong to the extended language and are not required for an implementation of the core language.
+Functions highlighted in yellow belong to the persistence language and are not required for an implementation of the common language.
 </td>
 </tr>
 </table>
@@ -3526,17 +3754,17 @@ Functions highlighted in yellow belong to the extended language and are not requ
 </tbody>
 </table>
 <div class="paragraph">
-<p>In the core language, the only allowed aggregate function call is the expression <code>count(this)</code>, as specified below in <a href="#select-clause">Select clause</a>.</p>
+<p>In the common language, the only allowed aggregate function application is the expression <code>count(this)</code>, as specified below in <a href="#select-clause">Select clause</a>.</p>
 </div>
 <div class="paragraph">
-<p>In the extended language, the syntax for aggregate functions is given by <code><mark>aggregate_expression</mark></code>.
-An aggregate function invocation may specify the keyword <code><mark>distinct</mark></code>, in which case <a href="#distinct">duplicate elimination</a> is applied to the list of values produced by evaluating the argument expression over all elements of the nested list before counting or summing the values.<sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup></p>
+<p>In the persistence language, the syntax for aggregate functions is given by <code><mark>aggregate_expression</mark></code>.
+An aggregate function application may specify the keyword <code><mark>distinct</mark></code>, in which case <a href="#distinct">duplicate elimination</a> is applied to the list of values produced by evaluating the argument expression over all elements of the nested list before counting or summing the values.<sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="case-expressions">5.1.12. Case expressions</h4>
 <div class="paragraph">
-<p>In the extended language, a <em>case expression</em> has syntax given by <code><mark>general_case_expression</mark></code> or <code><mark>simple_case_expression</mark></code>.</p>
+<p>In the persistence language, a <em>case expression</em> has syntax given by <code><mark>general_case_expression</mark></code> or <code><mark>simple_case_expression</mark></code>.</p>
 </div>
 <div class="paragraph">
 <p>A <code><mark>general_case_expression</mark></code> has:</p>
@@ -3603,7 +3831,20 @@ If there is no <code>else</code>, and no <code>scalar_expression</code> was eval
 </div>
 </div>
 <div class="sect3">
-<h4 id="operator-expressions">5.1.13. Operator expressions</h4>
+<h4 id="constructor-application">5.1.13. Constructor application</h4>
+<div class="paragraph">
+<p>In the grammar of the persistence language, a <em>constructor application</em> is the name of a type belonging to the host programming language, followed by a parenthesized list of argument expressions, with syntax given by <code><mark>constructor_expression</mark></code>.</p>
+</div>
+<div class="paragraph">
+<p>Constructor application can only occur as a <code><mark>select_expression</mark></code> in a projection.</p>
+</div>
+<div class="paragraph">
+<p>In an implementation for Java, constructor application is interpreted as instantiation of a Java class or record type.
+This specification does not require support for constructor application, not even in an implementation of the persistence language.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="operator-expressions">5.1.14. Operator expressions</h4>
 <div class="paragraph">
 <p>The syntax of an <em>operator expression</em> is given by the <code>scalar_expression</code> rule. Within an operator expression, parentheses indicate grouping.</p>
 </div>
@@ -3666,7 +3907,7 @@ The precise behavior of numeric operators is outside the scope of this specifica
 <p>The four numeric operators may also be applied to operands of type <code>java.math.BigInteger</code> or <code>java.math.BigDecimal</code>.</p>
 </li>
 <li>
-<p>A numeric operator expression is evaluated according to the native semantics of the database. In translating an operator expression to the native query language of the database, a Jakarta Query provider is encouraged, but not required, to apply reasonable transformations so that evaluation of the expression more closely mimics the semantics of the Java language.<sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup></p>
+<p>A numeric operator expression is evaluated according to the native semantics of the database. In translating an operator expression to the native query language of the database, a Jakarta Query provider is encouraged, but not required, to apply reasonable transformations so that evaluation of the expression more closely mimics the semantics of the Java language.<sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -3687,15 +3928,15 @@ This specification does not require support for arithmetic operators or grouping
 </div>
 </div>
 <div class="sect3">
-<h4 id="subquery-expressions">5.1.14. Subquery expressions</h4>
+<h4 id="subquery-expressions">5.1.15. Subquery expressions</h4>
 <div class="paragraph">
-<p>In the extended language, a <code><mark>subquery</mark></code> may occur as a <code>scalar_expression</code> in many places where an expression of atomic type is legal.
+<p>In the persistence language, a <code><mark>subquery</mark></code> may occur as a <code>scalar_expression</code> in many places where an expression of atomic type is legal.
 Such a subquery must produce a result list with exactly one element when executed.
 When the <code>scalar_expression</code> is evaluated, the subquery is executed, and the whole expression evaluates to the single element of the result list of the subquery.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="numeric-promotion">5.1.15. Numeric types and numeric type promotion</h4>
+<h4 id="numeric-promotion">5.1.16. Numeric types and numeric type promotion</h4>
 <div class="paragraph">
 <p>The type assigned to an operator expression depends on the types of its operand expression, which need not be identical.
 Numeric type promotion is defined by the following rules:</p>
@@ -3762,10 +4003,13 @@ The Jakarta Persistence specification defines the result of a conditional expres
 <p><a href="#equality-and-inequality">equality and inequality</a> operator expressions,</p>
 </li>
 <li>
-<p><a href="#quantifiers">quantified conditional expressions</a>, and</p>
+<p><a href="#quantifiers">quantified conditional expressions</a>,</p>
 </li>
 <li>
-<p><a href="#logical-operators">logical operator expressions</a>.</p>
+<p><a href="#logical-operators">logical operator expressions</a>, and</p>
+</li>
+<li>
+<p>boolean <a href="#value-expressions">value expressions</a>.</p>
 </li>
 </ul>
 </div>
@@ -3781,12 +4025,15 @@ The Jakarta Persistence specification defines the result of a conditional expres
 <td class="content">
 <div class="paragraph">
 <p>When a Jakarta Query implementation targets a non-relational database, support for conditional expression might depart from what is described below.
-This specification does not require support for use of any sort of conditional expression if the underlying datastore does not provide a functionally equivalent capability among its native querying capabilities.<sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>
-For example, in a non-relational database which only allows lookup by key, the only sort of conditional expression which is allowed is an equality operator expression involving the entity <a href="#structures-and-records">identifier</a>.<sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup></p>
+This specification does not require support for use of any sort of conditional expression if the underlying datastore does not provide a functionally equivalent capability among its native querying capabilities.<sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup>
+For example, in a non-relational database which only allows lookup by key, the only sort of conditional expression which is allowed is an equality operator expression involving the entity <a href="#structures-and-records">identifier</a>.<sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup></p>
 </div>
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>Every value expression of type <code>boolean</code> or <code>Boolean</code> is a legal conditional expression, satisfied when the value expression evaluates to <code>true</code>.</p>
 </div>
 <div class="sect3">
 <h4 id="null-comparisons">5.2.1. Null comparisons</h4>
@@ -3807,7 +4054,7 @@ For example, in a non-relational database which only allows lookup by key, the o
 <div class="sect3">
 <h4 id="in-expressions">5.2.2. In expressions</h4>
 <div class="paragraph">
-<p>In the core language, an <code>in</code> expression, with syntax given by <code>in_expression</code>, must have:</p>
+<p>In the common language, an <code>in</code> expression, with syntax given by <code>in_expression</code>, must have:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3826,7 +4073,7 @@ For example, in a non-relational database which only allows lookup by key, the o
 <p><strong>TODO</strong> We should relax the restrictions on the left operand.</p>
 </div>
 <div class="paragraph">
-<p>In the extended language, the leftmost operand must be a path expression assigned an atomic type or an <a href="#entity-type-expressions">entity type expression</a>, and there must be exactly one of the following elements:</p>
+<p>In the persistence language, the leftmost operand must be a path expression assigned an atomic type or an <a href="#entity-type-expressions">entity type expression</a>, and there must be exactly one of the following elements:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3837,7 +4084,7 @@ For example, in a non-relational database which only allows lookup by key, the o
 <p>a parenthesized subquery with a <code><mark>simple_select_expression</mark></code> expression with the same assigned type as the leftmost operand, or</p>
 </li>
 <li>
-<p>an unparenthesized parameter.<sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup></p>
+<p>an unparenthesized parameter.<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -3924,7 +4171,7 @@ For example, in a non-relational database which only allows lookup by key, the o
 <p>Its left operand must be an expression assigned some atomic type representing character strings.</p>
 </li>
 <li>
-<p>Its right operand must be a pattern given as a literal string, with syntax <code>literal_pattern</code>, or, in the extended language, a <a href="#parameters">parameter</a>.</p>
+<p>Its right operand must be a pattern given as a literal string, with syntax <code>literal_pattern</code>, or, in the persistence language, a <a href="#parameters">parameter</a>.</p>
 </li>
 <li>
 <p>Optionally, its right operand may specify an <code>escape_character</code> as a literal single character.</p>
@@ -3978,8 +4225,20 @@ Within the pattern, the character bigram <code>''</code> is interpreted as a lit
 </div>
 <div class="paragraph">
 <p>The operands of an equality or inequality operator must have the same type,
- and it must be an atomic type considered <em>comparable</em> by the implementation of Jakarta Query.
-Any type with a <a href="#natural-order">natural order</a> must be treated as a comparable type, and the equality and inequality operators must be interpreted in a way which is consistent with the natural order.</p>
+ and it must be either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>an <a href="#atomic-values">atomic type</a> considered <em>comparable</em> by the implementation of Jakarta Query, or</p>
+</li>
+<li>
+<p>an <a href="#entity-type-expressions">entity class type</a>&#8201;&#8212;&#8201;that is <code>Class&lt;E&gt;</code>, where <code>E</code> is an entity class.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Any type with a <a href="#natural-order">natural order</a> must be treated as a comparable type, and the equality and inequality operators must be interpreted in a way which is consistent with the natural order.</p>
 </div>
 <div class="paragraph">
 <p>For non-null values, the following table defines an interpretation consistent with the natural order:</p>
@@ -4050,6 +4309,10 @@ As mentioned above in <a href="#atomic-values">Atomic values</a>, the semantics 
 <p>For wrapper types, these operators are satisfied if both operands evaluate to non-null values, and the equivalent operator expression involving primitives would be satisfied.</p>
 </li>
 <li>
+<p>For entity class types&#8201;&#8212;&#8201;that is, <code>Class&lt;E&gt;</code>&#8201;&#8212;&#8201;an equality expression is satisfied if the two expressions represent the same entity class, and an inequality expression is satisfied if they represent distinct entity classes.
+Entity class types do not have a natural order, and so only the <code>=</code> and <code>&lt;&gt;</code> operators are meaningful.</p>
+</li>
+<li>
 <p>For other types, these operators are usually evaluated according to the native semantics of the database.</p>
 </li>
 </ul>
@@ -4062,19 +4325,19 @@ As mentioned above in <a href="#atomic-values">Atomic values</a>, the semantics 
 </td>
 <td class="content">
 Portability is maximized when Jakarta Query providers interpret equality and inequality operators in a manner consistent with the implementation of <code>Object.equals()</code> or <code>Comparable.compareTo()</code> for the assigned Java type.
-<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup>
+<sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>In the extended language, the right operand of an equality or inequality operator may be a subquery, as discussed in the <a href="#quantifiers">next section</a>.</p>
+<p>In the persistence language, the right operand of an equality or inequality operator may be a subquery, as discussed in the <a href="#quantifiers">next section</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="quantifiers">5.2.6. Quantified conditional expressions</h4>
 <div class="paragraph">
-<p>In the extended language, there are two kinds of conditional expression involving quantification:</p>
+<p>In the persistence language, there are two kinds of conditional expression involving quantification:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4190,7 +4453,44 @@ For an implementation of Jakarta Query which targets clients written in Java, th
 </div>
 </div>
 <div class="sect2">
-<h3 id="logical-operators">5.4. Logical operators</h3>
+<h3 id="ordering-expressions">5.4. Ordering criteria</h3>
+<div class="paragraph">
+<p>An <em>ordering criterion</em>, with syntax given by <code>orderby_expression</code>, contributes to determining the order of a result list, as specified in <a href="#ordering">Ordering</a>.
+Each ordering criterion must be either:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>a <a href="#path-expressions">path expression</a> assigned an atomic type with a natural order, and which evaluates to a value being returned by the query, either as an item in the select list, or as a labeled element of an entity or embeddable returned by the query,</p>
+</li>
+<li>
+<p>in the persistence language, the name of a label declared by a <code><mark>select_item</mark></code> and assigned an atomic type with a natural order&#8201;&#8212;&#8201;that is, a reference to a <code><mark>result_variable</mark></code> of the query, or</p>
+</li>
+<li>
+<p>a <code>scalar_expression</code> involving only path expressions and result variables permitted by items 1 and 2 above.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>An ordering criterion must never involve a <a href="#parameters">parameter</a> of the query.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A database might impose additional restrictions on ordering criteria.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logical-operators">5.5. Logical operators</h3>
 <div class="paragraph">
 <p>The logical operators are <code>and</code>, <code>or</code>, and <code>not</code>.</p>
 </div>
@@ -4223,7 +4523,7 @@ A compliant implementation of Jakarta Query might feature SQL/JPQL-style ternary
 </table>
 </div>
 <div class="paragraph">
-<p>Syntactically, logical operators are parsed with lower precedence than <a href="#equality-and-inequality">equality and inequality operators</a> and other <a href="#predicates">conditional expressions listed above</a>. The <code>not</code> operator has higher precedence than <code>and</code> and <code>or</code>. The <code>and</code> operator has higher precedence than <code>or</code>.</p>
+<p>Syntactically, logical operators are parsed with lower precedence than <a href="#equality-and-inequality">equality and inequality operators</a> and other <a href="#predicates">conditional expressions listed above</a>. The <code>not</code> operator has higher precedence than <code>and</code> and <code>or</code>. The <code>and</code> operator has higher precedence than <code>or</code>. Within an expression involving logical operators, parentheses indicate grouping.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -4282,11 +4582,11 @@ This specification does not require support for logical operators if the underly
 <div class="sect3">
 <h4 id="from-clause">6.1.1. From clause</h4>
 <div class="paragraph">
-<p>In the core language, the <code>from</code> clause, with syntax given by <code>from_clause</code>, specifies an <em>entity name</em> identifying the root entity of the query, as defined in <a href="#root-entity">The root entity</a>.
+<p>In the common language, the <code>from</code> clause, with syntax given by <code>from_clause</code>, specifies an <em>entity name</em> identifying the root entity of the query, as defined in <a href="#root-entity">The root entity</a>.
 This entity is always assigned the implicit alias <code>this</code>.</p>
 </div>
 <div class="paragraph">
-<p>In the core language, path expressions occurring in later clauses are interpreted with respect to this entity. That is, the first element of each path expression in the query must be a persistent attribute of the entity named in the <code>from</code> clause. The entity name is a Java identifier, usually the unqualified name of the entity class, as specified in <a href="#entities-and-embeddables">Entities and embeddable types</a>.</p>
+<p>In the common language, path expressions occurring in later clauses are interpreted with respect to this entity. That is, the first element of each path expression in the query must be a persistent attribute of the entity named in the <code>from</code> clause. The entity name is a Java identifier, usually the unqualified name of the entity class, as specified in <a href="#entities-and-embeddables">Entities and embeddable types</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4295,14 +4595,14 @@ This entity is always assigned the implicit alias <code>this</code>.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The core language does not have joins, and so the <code>from</code> clause is always trivial.
+The common language does not have joins, and so the <code>from</code> clause is always trivial.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>In the extended language, the <code>from</code> clause might enumerate multiple steps of the basic operation pipeline.
-The <code><mark>from_clause</mark></code> of the full grammar allows:</p>
+<p>In the persistence language, the <code>from</code> clause might enumerate multiple steps of the basic operation pipeline.
+The <code><mark>from_clause</mark></code> of the persistence language grammar allows:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -4340,7 +4640,7 @@ Join clauses are discussed <a href="#join-clauses">below</a>.</p>
 <p>An <code><mark>identification_variable_declaration</mark></code> declaring a root entity has a <code><mark>range_variable_declaration</mark></code> with an <code><mark>entity_name</mark></code> specifying the name of the root entity, and an <code><mark>identification_variable</mark></code> specifying its alias (label).</p>
 </div>
 <div class="paragraph">
-<p>Since a <code>from</code> clause may introduce multiple distinct labels, paths in the extended language may begin with the label of an entity.
+<p>Since a <code>from</code> clause may introduce multiple distinct labels, paths in the persistence language may begin with the label of an entity.
 Alternatively, a path which does not begin with the label of an entity is interpreted as beginning with the implicit label <code>this</code>.</p>
 </div>
 <div class="paragraph">
@@ -4376,7 +4676,7 @@ Alternatively, a path which does not begin with the label of an entity is interp
 <div class="sect3">
 <h4 id="join-clauses">6.1.2. Join clauses</h4>
 <div class="paragraph">
-<p>In the extended language, an <code><mark>identification_variable_declaration</mark></code> might include a list of:</p>
+<p>In the persistence language, an <code><mark>identification_variable_declaration</mark></code> might include a list of:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4389,7 +4689,7 @@ Alternatively, a path which does not begin with the label of an entity is interp
 </ul>
 </div>
 <div class="paragraph">
-<p>Each <code><mark>join</mark></code> is in turn either a <code><mark>range_join</mark></code>, with semantics given by <a href="#joins-entities">Joins to named entities</a> or a <code><mark>path_join</mark></code>, with semantics given by <a href="#joins-nested">Joins to nested entities or collections</a>.
+<p>Each <code><mark>join</mark></code> is in turn either a <code><mark>range_join</mark></code>, with semantics given by <a href="#joins-entities">Joins to named entities</a>, or a <code><mark>path_join</mark></code>, with semantics given by <a href="#joins-nested">Joins to nested entities or collections</a>.
 Such joins may specify a restriction.</p>
 </div>
 <div class="paragraph">
@@ -4423,10 +4723,16 @@ The <code><mark>identification_variable</mark></code> specifies the alias (label
 <div class="ulist">
 <ul>
 <li>
-<p>if the keyword <code><mark>left</mark></code> occurs in the <code><mark>join_spec</mark></code>, then the join is interpreted as a left (outer) join, as specified by <a href="#left-joins">Left joins</a>, or</p>
+<p>if the keyword <code><mark>left</mark></code> occurs in the <code><mark>join_spec</mark></code>, then the join is interpreted as a left (outer) join, as specified by <a href="#left-joins-entities">Left joins to named entities</a> and <a href="#left-joins-nested">Left joins to nested entities or collections</a>,</p>
 </li>
 <li>
-<p>otherwise, if the keyword <code><mark>left</mark></code> is missing, the join is interpreted as a regular (inner) join.</p>
+<p>if the keyword <code><mark>right</mark></code> occurs in the <code><mark>join_spec</mark></code>, then the join is interpreted as a right (outer) join, as specified by <a href="#right-joins-entities">Right joins to named entities</a>,</p>
+</li>
+<li>
+<p>if the keyword <code><mark>full</mark></code> occurs in the <code><mark>join_spec</mark></code>, then the join is interpreted as a full (outer) join, as specified by <a href="#full-joins-entities">Full joins to named entities</a>, or</p>
+</li>
+<li>
+<p>otherwise, the join is interpreted as a regular (inner) join.</p>
 </li>
 </ul>
 </div>
@@ -4449,7 +4755,7 @@ The <code><mark>identification_variable</mark></code> specifies the alias (label
 <div class="sect3">
 <h4 id="group-clause">6.1.4. Group clause</h4>
 <div class="paragraph">
-<p>The <code><mark>group</mark></code> clause in the extended language, with syntax given by <code><mark>groupby_clause</mark></code>, specifies a list of grouping items, which are collectively interpreted as an aggregation, as specified in <a href="#aggregation">Aggregation</a>.</p>
+<p>The <code><mark>group</mark></code> clause in the persistence language, with syntax given by <code><mark>groupby_clause</mark></code>, specifies a list of grouping items, which are collectively interpreted as an aggregation, as specified in <a href="#aggregation">Aggregation</a>.</p>
 </div>
 <div class="paragraph">
 <p>According to the rule <code><mark>groupby_item</mark></code>, each item must be either:</p>
@@ -4483,7 +4789,7 @@ An implementation of Jakarta Query might treat the entity-valued path expression
 <div class="sect3">
 <h4 id="having-clause">6.1.5. Having clause</h4>
 <div class="paragraph">
-<p>The <code><mark>having</mark></code> clause in the extended language, with syntax given by <code><mark>having_clause</mark></code>, specifies a restriction on the result list of an aggregation, as specified by <a href="#restriction">Restriction</a>.</p>
+<p>The <code><mark>having</mark></code> clause in the persistence language, with syntax given by <code><mark>having_clause</mark></code>, specifies a restriction on the result list of an aggregation, as specified by <a href="#restriction">Restriction</a>.</p>
 </div>
 <div class="paragraph">
 <p>The <code><mark>having</mark></code> clause specifies a <code>conditional_expression</code>, interpreted as the logical predicate of the restriction.</p>
@@ -4497,7 +4803,7 @@ A restriction specified using <code>having</code> is applied after aggregation a
 <div class="sect3">
 <h4 id="select-clause">6.1.6. Select clause</h4>
 <div class="paragraph">
-<p>In the core language, the <code>select</code> clause, with syntax given by <code>select_clause</code>, specifies one or more path expressions with syntax <code>simple_path_expression</code>, which are collectively interpreted as a projection with automatically assigned aliases, as specified in <a href="#projection">Projection</a>.</p>
+<p>In the common language, the <code>select</code> clause, with syntax given by <code>select_clause</code>, specifies one or more path expressions with syntax <code>simple_path_expression</code>, which are collectively interpreted as a projection with automatically assigned aliases, as specified in <a href="#projection">Projection</a>.</p>
 </div>
 <div class="paragraph">
 <p>Alternatively, the <code>select</code> clause may contain either:</p>
@@ -4505,7 +4811,7 @@ A restriction specified using <code>having</code> is applied after aggregation a
 <div class="ulist">
 <ul>
 <li>
-<p>a single <code>count(this)</code> <a href="#aggregate-functions">aggregate function invocation</a>, or</p>
+<p>a single <code>count(this)</code> <a href="#aggregate-functions">aggregate function application</a>, or</p>
 </li>
 <li>
 <p>a single <a href="#identifier-version-expressions">identifier expression</a>.</p>
@@ -4531,7 +4837,7 @@ In particular, this specification does not require support for <code>count(this)
 </table>
 </div>
 <div class="paragraph">
-<p>In the extended language, the <code>select</code> clause is much more flexible.
+<p>In the persistence language, the <code>select</code> clause is much more flexible.
 Its syntax, given by <code><mark>select_clause</mark></code>, permits:</p>
 </div>
 <div class="ulist">
@@ -4574,13 +4880,13 @@ Its syntax, given by <code><mark>select_clause</mark></code>, permits:</p>
 <p>optionally, the keyword <code>asc</code> or <code>desc</code>,</p>
 </li>
 <li>
-<p>optionally, in the extended language, <code><mark>nulls first</mark></code> or <code><mark>nulls last</mark></code>.</p>
+<p>optionally, in the persistence language, <code><mark>nulls first</mark></code> or <code><mark>nulls last</mark></code>.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>In the core language, an <code>orderby_expression</code> must be a <a href="#path-expressions">path expression</a> or <a href="#identifier-version-expressions">identifier expression</a>.
-In the extended language, an <code>orderby_expression</code> may be almost any sort of atomic-valued expression (but not a parameter), as specified by the full grammar of the extended language.</p>
+<p>In the common language, an <code>orderby_expression</code> must be a <a href="#path-expressions">path expression</a> or <a href="#identifier-version-expressions">identifier expression</a>.
+In the persistence language, an <code>orderby_expression</code> may be almost any sort of atomic-valued expression (but not a parameter), as specified by the grammar of the persistence language and in <a href="#ordering-expressions">Ordering criteria</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4611,7 +4917,7 @@ An implementation of Jakarta Query is not required to support sorting by any exp
 <p>Entity attributes occurring earlier in the <code>order by</code> clause take precedence. That is, an attribute occurring later in the <code>order by</code> clause is only used to resolve "ties" between records which cannot be unambiguously ordered using only earlier attributes.</p>
 </div>
 <div class="paragraph">
-<p>In the extended language, <code><mark>nulls first</mark></code> or <code><mark>nulls last</mark></code> specifies whether null values should be considered, respectively, smaller or larger than non-null values. This specification does not define how null values are ordered with respect to non-null values when the sorting of null values is not explicitly specified. The ordering of null values may vary between data stores and between Jakarta Query providers.</p>
+<p>In the persistence language, <code><mark>nulls first</mark></code> or <code><mark>nulls last</mark></code> specifies whether null values should be considered, respectively, smaller or larger than non-null values. This specification does not define how null values are ordered with respect to non-null values when the sorting of null values is not explicitly specified. The ordering of null values may vary between data stores and between Jakarta Query providers.</p>
 </div>
 <div class="paragraph">
 <p>The <code>order</code> clause is always optional. When it is missing, the order of the query results is not defined by this specification and might not be deterministic.</p>
@@ -4669,7 +4975,7 @@ If a datastore does not natively provide the ability to sort query results, the 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-These operations are part of the extended language, and so support for union, intersection, and complementation is not required for an implementation of Jakarta Query core.
+These operations are part of the persistence language, and so support for union, intersection, and complementation is not required for an implementation of the Jakarta Common Query Language.
 </td>
 </tr>
 </table>
@@ -4680,7 +4986,7 @@ These operations are part of the extended language, and so support for union, in
 <div class="sect3">
 <h4 id="_union_and_complement">6.2.1. Union and complement</h4>
 <div class="paragraph">
-<p>The syntax of <code><mark>union</mark></code>, <code><mark>union all</mark></code>, <code><mark>except</mark></code>, and <code><mark>except all</mark></code> is given by the rule <code><mark>union</mark></code> of the full grammar.
+<p>The syntax of <code><mark>union</mark></code>, <code><mark>union all</mark></code>, <code><mark>except</mark></code>, and <code><mark>except all</mark></code> is given by the rule <code><mark>union</mark></code> of the persistence language grammar.
 The operands must produce result lists of the same type.
 The type of the union or complement expression is the same as the type of its operands.</p>
 </div>
@@ -4688,7 +4994,7 @@ The type of the union or complement expression is the same as the type of its op
 <div class="sect3">
 <h4 id="_intersection">6.2.2. Intersection</h4>
 <div class="paragraph">
-<p>The syntax of <code><mark>intersect</mark></code> and <code><mark>intersect all</mark></code> is given by the rule <code><mark>intersection</mark></code> of the full grammar.
+<p>The syntax of <code><mark>intersect</mark></code> and <code><mark>intersect all</mark></code> is given by the rule <code><mark>intersection</mark></code> of the persistence language grammar.
 The operands must produce result lists of the same type.
 The type of the intersection expression is the same as the type of its operands.</p>
 </div>
@@ -4721,7 +5027,7 @@ The type of the intersection expression is the same as the type of its operands.
 <p>A <code>select</code> statement, with syntax given by <code>select_statement</code>, returns data to the client.</p>
 </div>
 <div class="paragraph">
-<p>In the core language, a <code>select</code> statement may contain one of more of the following clauses:</p>
+<p>In the common language, a <code>select</code> statement may contain one of more of the following clauses:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4744,9 +5050,9 @@ The type of the intersection expression is the same as the type of its operands.
 The result list of the whole <code>select</code> statement is the same as the result list of the last operation in the pipeline.</p>
 </div>
 <div class="paragraph">
-<p>In the extended language, a <code>select</code> statement may contain, in addition, a <code><mark>group</mark></code> and/or a <code><mark>having</mark></code> clause, with syntax specified by <code><mark>select_query</mark></code>.
+<p>In the persistence language, a <code>select</code> statement may contain, in addition, a <code><mark>group</mark></code> and/or a <code><mark>having</mark></code> clause, with syntax specified by <code><mark>select_query</mark></code>.
 Each <code><mark>select_query</mark></code> is a pipeline as defined in <a href="#algebra">Basic operations</a>.
-A <code><mark>select_statement</mark></code> in the full grammar may contain union, intersection, and complement operations, as defined in <a href="#union-intersect-except">Union, intersect, and except</a>.</p>
+A <code><mark>select_statement</mark></code> in the persistence language grammar may contain union, intersection, and complement operations, as defined in <a href="#union-intersect-except">Union, intersect, and except</a>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4789,7 +5095,7 @@ Such functionality falls outside the scope of this specification.</p>
 <td class="content">
 <div class="paragraph">
 <p>A Jakarta Query implementation which targets a non-relational database might not support conditional updates.
-This specification does not require support for conditional updates if the underlying datastore does not provide a functionally equivalent capability.<sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup></p>
+This specification does not require support for conditional updates if the underlying datastore does not provide a functionally equivalent capability.<sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup></p>
 </div>
 </td>
 </tr>
@@ -4828,20 +5134,23 @@ This specification does not require support for conditional deletes if the under
 <h2 id="syntax">7. Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following grammars define the syntax of the Jakarta Query language, via ANTLR4-style BNF.</p>
+<p>The following grammars define the syntax of query languages in Jakarta Query, via ANTLR4-style BNF.</p>
 </div>
 <div class="sect2">
-<h3 id="_core_language_grammar">7.1. Core language grammar</h3>
+<h3 id="_common_language_grammar">7.1. Common language grammar</h3>
 <div class="paragraph">
-<p>The following grammar is the grammar for the core language.</p>
+<p>The following grammar is the grammar for the Jakarta Common Query Language.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="antlrv4">grammar JQLCore;
+<pre class="CodeRay highlight"><code data-lang="antlrv4">grammar JCQL;
 
 statement : select_statement | update_statement | delete_statement;
 
-select_statement : select_clause? from_clause? where_clause? orderby_clause?;
+select_statement
+    : from_clause? where_clause? select_clause? orderby_clause?
+    | select_clause from_clause? where_clause? orderby_clause?
+    ;
 update_statement : update_clause set_clause where_clause?;
 delete_statement : delete_clause where_clause?;
 
@@ -4984,13 +5293,13 @@ escape_character : CHARACTER;</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_full_language_grammar">7.2. Full language grammar</h3>
+<h3 id="_persistence_language_grammar">7.2. Persistence language grammar</h3>
 <div class="paragraph">
-<p>This much longer grammar is the grammar for the full language.</p>
+<p>This much longer grammar is the grammar for the Jakarta Persistence Query Language.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="antlrv4">grammar JQLFull;
+<pre class="CodeRay highlight"><code data-lang="antlrv4">grammar JPQL;
 
 statement
     : select_statement
@@ -5022,7 +5331,13 @@ query_expression
     ;
 
 select_query
-    : select_clause?
+    : from_clause
+      where_clause?
+      groupby_clause?
+      having_clause?
+      select_clause?
+      orderby_clause?
+    | select_clause
       from_clause
       where_clause?
       groupby_clause?
@@ -5082,7 +5397,7 @@ fetch_join
     ;
 
 join_spec
-    : ('INNER' | 'LEFT' 'OUTER'?)?
+    : ('INNER' | ('LEFT' | 'RIGHT' | 'FULL') 'OUTER'?)?
       'JOIN'
     ;
 
@@ -5104,7 +5419,7 @@ joinable_path_expression
     // JPQL does not allow use of TREAT() here
     // TODO: Should we allow KEY(), VALUE() here?
     : (identification_variable '.')?
-      (structure_field '.')*
+      (embedded_field '.')*
       (entity_field | collection_field)
     ;
 
@@ -5348,6 +5663,7 @@ simple_conditional_expression
     | empty_collection_comparison_expression
     | collection_member_of_expression
     | exists_expression
+    | boolean_expression
     ;
 
 between_expression
@@ -5499,6 +5815,7 @@ datetime_expression
     | single_valued_input_parameter
     | functions_returning_datetime
     | special_datetime_expression
+    | datetime_literal
     | aggregate_expression
     | case_expression
     | function_invocation
@@ -5553,11 +5870,15 @@ functions_returning_numerics
     | 'SIZE' '(' collection_valued_path_expression ')'
     | 'INDEX' '(' identification_variable ')'
     | 'EXTRACT' '(' datetime_field 'FROM' datetime_expression ')'
+    | 'LEAST' '(' arithmetic_expression ',' arithmetic_expression (',' arithmetic_expression)* ')'
+    | 'GREATEST' '(' arithmetic_expression ',' arithmetic_expression (',' arithmetic_expression)* ')'
     | 'CAST' '(' string_expression 'AS' ('INTEGER' | 'LONG' | 'FLOAT' | 'DOUBLE') ')'
     ;
 
 functions_returning_datetime
     : 'EXTRACT' '(' datetime_part 'FROM' datetime_expression ')'
+    | 'LEAST' '(' datetime_expression ',' datetime_expression (',' datetime_expression)* ')'
+    | 'GREATEST' '(' datetime_expression ',' datetime_expression (',' datetime_expression)* ')'
     ;
 
 functions_returning_strings
@@ -5566,6 +5887,8 @@ functions_returning_strings
     | 'TRIM' '(' (trim_specification? trim_character? 'FROM')? string_expression ')'
     | 'LOWER' '(' string_expression ')'
     | 'UPPER' '(' string_expression ')'
+    | 'LEAST' '(' string_expression ',' string_expression (',' string_expression)* ')'
+    | 'GREATEST' '(' string_expression ',' string_expression (',' string_expression)* ')'
     | 'CAST' '(' scalar_expression 'AS' 'STRING' ')'
     ;
 
@@ -5672,6 +5995,32 @@ datetime_part
     : IDENTIFIER
     ;
 
+datetime_literal
+    : 'DATETIME' date time
+    | 'DATE' date
+    | 'TIME' time
+    ;
+
+date
+        : year '-' month '-' day
+        ;
+
+time
+        : hour ':' minute (':' second)?
+        ;
+
+year: INTEGER;
+
+month: INTEGER;
+
+day: INTEGER;
+
+hour: INTEGER;
+
+minute: INTEGER;
+
+second: INTEGER | DOUBLE;
+
 
 entity_name : IDENTIFIER;
 
@@ -5737,45 +6086,48 @@ literal_pattern : STRING;</code></pre>
 <a href="#_footnoteref_7">7</a>. Subqueries complicate the picture; a query involving subqueries is conceptually a tree.
 </div>
 <div class="footnote" id="_footnotedef_8">
-<a href="#_footnoteref_8">8</a>. That is, the query functions as if it had an empty <code>group by</code> clause with no value expressions, so that every element of the result list was assigned a grouping tuple of length zero, resulting in a result list containing a single nested list.
+<a href="#_footnoteref_8">8</a>. That is, the same join with the <code>left</code> keyword deleted.
 </div>
 <div class="footnote" id="_footnotedef_9">
-<a href="#_footnoteref_9">9</a>. Jakarta Persistence reserves the following additional keywords for future use: <code>BIT_LENGTH</code>, <code>CHAR_LENGTH</code>, <code>CHARACTER_LENGTH</code>, and <code>UNKNOWN</code>.
+<a href="#_footnoteref_9">9</a>. That is, the query functions as if it had an empty <code>group by</code> clause with no value expressions, so that every element of the result list was assigned a grouping tuple of length zero, resulting in a result list containing a single nested list.
 </div>
 <div class="footnote" id="_footnotedef_10">
-<a href="#_footnoteref_10">10</a>. This is the same type as the type of a structure with that label belonging to each element of the result list.
+<a href="#_footnoteref_10">10</a>. Jakarta Persistence reserves the following additional keywords for future use: <code>BIT_LENGTH</code>, <code>CHAR_LENGTH</code>, <code>CHARACTER_LENGTH</code>, and <code>UNKNOWN</code>.
 </div>
 <div class="footnote" id="_footnotedef_11">
-<a href="#_footnoteref_11">11</a>. This is the same type as the type of a structure with label <code>this</code> belonging to each element of the result list.
+<a href="#_footnoteref_11">11</a>. This is the same type as the type of a structure with that label belonging to each element of the result list.
 </div>
 <div class="footnote" id="_footnotedef_12">
-<a href="#_footnoteref_12">12</a>. Path expressions involving multiple entities are called <em>implicit joins</em> by the Jakarta Persistence specification.
+<a href="#_footnoteref_12">12</a>. This is the same type as the type of a structure with label <code>this</code> belonging to each element of the result list.
 </div>
 <div class="footnote" id="_footnotedef_13">
-<a href="#_footnoteref_13">13</a>. Use of <code>min(distinct &#8230;&#8203;)</code> or <code>max(distinct &#8230;&#8203;)</code> is allowed but redundant.
+<a href="#_footnoteref_13">13</a>. Path expressions involving multiple entities are called <em>implicit joins</em> by the Jakarta Persistence specification.
 </div>
 <div class="footnote" id="_footnotedef_14">
-<a href="#_footnoteref_14">14</a>. As <a href="#mapping-to-java">earlier</a> noted, this specification never mandates an inefficient implementation of operations which are implemented by the database itself.
+<a href="#_footnoteref_14">14</a>. Use of <code>min(distinct &#8230;&#8203;)</code> or <code>max(distinct &#8230;&#8203;)</code> is allowed but redundant.
 </div>
 <div class="footnote" id="_footnotedef_15">
-<a href="#_footnoteref_15">15</a>. This is not an open-ended invitation for implementations backed by non-relational databases to ignore the requirements of this specification in cases where there <em>is</em> a reasonable way to emulate the behavior of a conditional expression.
+<a href="#_footnoteref_15">15</a>. As <a href="#mapping-to-java">earlier</a> noted, this specification never mandates an inefficient implementation of operations which are implemented by the database itself.
 </div>
 <div class="footnote" id="_footnotedef_16">
-<a href="#_footnoteref_16">16</a>. In Jakarta NoSQL, the key attribute is identified by the annotation <code>jakarta.nosql.Id</code>.
+<a href="#_footnoteref_16">16</a>. This is not an open-ended invitation for implementations backed by non-relational databases to ignore the requirements of this specification in cases where there <em>is</em> a reasonable way to emulate the behavior of a conditional expression.
 </div>
 <div class="footnote" id="_footnotedef_17">
-<a href="#_footnoteref_17">17</a>. Jakarta Persistence treats this parameter as a <em>collection-valued input parameter</em>.
+<a href="#_footnoteref_17">17</a>. In Jakarta NoSQL, the key attribute is identified by the annotation <code>jakarta.nosql.Id</code>.
 </div>
 <div class="footnote" id="_footnotedef_18">
-<a href="#_footnoteref_18">18</a>. A notable special case is <code>java.math.BigDecimal</code>, whose implementation of <code>equals()</code> is inconsistent with its implementation of <code>compareTo()</code>. For <code>BigDecimal</code>, the <code>=</code> operator in Jakarta Data should be implemented for consistency with <code>compareTo()</code>.
+<a href="#_footnoteref_18">18</a>. Jakarta Persistence treats this parameter as a <em>collection-valued input parameter</em>.
 </div>
 <div class="footnote" id="_footnotedef_19">
-<a href="#_footnoteref_19">19</a>. Alternatively, in a non-relational database with <em>append-only semantics</em>&#8201;&#8212;&#8201;common in time-series and wide-column databases&#8201;&#8212;&#8201;conditional updates might be provided, but the update operation might behave more like an insert operation, with repeated updates to the same record not overwriting previous values.
+<a href="#_footnoteref_19">19</a>. A notable special case is <code>java.math.BigDecimal</code>, whose implementation of <code>equals()</code> is inconsistent with its implementation of <code>compareTo()</code>. For <code>BigDecimal</code>, the <code>=</code> operator in Jakarta Data should be implemented for consistency with <code>compareTo()</code>.
+</div>
+<div class="footnote" id="_footnotedef_20">
+<a href="#_footnoteref_20">20</a>. Alternatively, in a non-relational database with <em>append-only semantics</em>&#8201;&#8212;&#8201;common in time-series and wide-column databases&#8201;&#8212;&#8201;conditional updates might be provided, but the update operation might behave more like an insert operation, with repeated updates to the same record not overwriting previous values.
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
- 1.0-M1<br>
+ 1.0-M2<br>
 Last updated 2025-09-11 07:59:05 +0100
 </div>
 </div>
