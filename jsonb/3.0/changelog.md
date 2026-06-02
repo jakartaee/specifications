@@ -1,8 +1,13 @@
 ---
 title: "Change Log"
-date: 2023-04-29
+date: 2026-05-29
 summary: "Release for Jakarta EE 10"
 ---
+
+### CHANGES IN THE 3.0.2 RELEASE
+
+* updates TCK to allow implementations to certify on Java 25
+* updates API bundle manifest to include Bundle-SymbolicName
 
 ### CHANGES IN THE 3.0.1 RELEASE
 
