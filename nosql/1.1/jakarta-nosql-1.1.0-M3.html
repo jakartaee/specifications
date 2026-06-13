@@ -529,9 +529,9 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div id="header">
 <h1>Jakarta NoSQL</h1>
 <div class="details">
-<span id="revnumber"> 1.1-M2,</span>
-<span id="revdate">April 07, 2026</span>
-<br><span id="revremark">M2</span>
+<span id="revnumber"> 1.1.0-M3,</span>
+<span id="revdate">June 13, 2026</span>
+<br><span id="revremark">M3</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -587,13 +587,14 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_id">3.3. @Id</a></li>
 <li><a href="#_column">3.4. @Column</a></li>
 <li><a href="#_convert">3.5. @Convert</a></li>
-<li><a href="#_inheritance">3.6. Inheritance</a>
+<li><a href="#_converter">3.6. Converter</a></li>
+<li><a href="#_inheritance">3.7. Inheritance</a>
 <ul class="sectlevel3">
-<li><a href="#_abstract_entity_classes">3.6.1. Abstract Entity Classes</a></li>
-<li><a href="#_mappedsuperclass">3.6.2. @MappedSuperclass</a></li>
-<li><a href="#inheritance_definition">3.6.3. @Inheritance</a></li>
-<li><a href="#_discriminatorcolumn">3.6.4. @DiscriminatorColumn</a></li>
-<li><a href="#_discriminatorvalue">3.6.5. @DiscriminatorValue</a></li>
+<li><a href="#_abstract_entity_classes">3.7.1. Abstract Entity Classes</a></li>
+<li><a href="#_mappedsuperclass">3.7.2. @MappedSuperclass</a></li>
+<li><a href="#inheritance_definition">3.7.3. @Inheritance</a></li>
+<li><a href="#_discriminatorcolumn">3.7.4. @DiscriminatorColumn</a></li>
+<li><a href="#_discriminatorvalue">3.7.5. @DiscriminatorValue</a></li>
 </ul>
 </li>
 </ul>
@@ -647,11 +648,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta NoSQL
 
-Version: 1.1-M2
+Version: 1.1.0-M3
 
-Status: M2
+Status: M3
 
-Release: April 07, 2026</pre>
+Release: June 13, 2026</pre>
 </div>
 </div>
 </div>
@@ -1861,6 +1862,9 @@ Supported types include: <code>String</code>, <code>Integer</code>, <code>Long</
 <p>@Convert</p>
 </li>
 <li>
+<p>@Converter</p>
+</li>
+<li>
 <p>@MappedSuperclass</p>
 </li>
 <li>
@@ -1893,6 +1897,9 @@ Supported types include: <code>String</code>, <code>Integer</code>, <code>Long</
 </li>
 <li>
 <p><strong>@Convert</strong>: With the <code>@Convert</code> annotation, developers can seamlessly transform entity attribute values between Java and database types. This annotation offers flexibility in data representation, allowing developers to adapt entity properties to suit the requirements of different database systems.</p>
+</li>
+<li>
+<p><strong>@Converter</strong>: The <code>@Converter</code> annotation identifies a class as an attribute converter, enabling the transformation of values between Java types and their database representations. Converter classes implement <code>AttributeConverter</code> and provide the logic required to convert application-specific types into forms that can be persisted by the underlying NoSQL database and reconstructed when retrieved. Converters may be applied explicitly using the <code>@Convert</code> annotation or automatically to all compatible attributes when <code>autoApply=true</code>, promoting consistency and reducing repetitive mapping configuration.</p>
 </li>
 <li>
 <p><strong>@MappedSuperclass</strong>: The <code>@MappedSuperclass</code> annotation is used to define shared attributes and behaviors across multiple entity classes by denoting a superclass whose mappings are applied to its subclasses.</p>
@@ -2346,7 +2353,84 @@ If you use NoSQL databases that serialize information to JSON, A Jakarta NoSQL p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_inheritance"><a class="anchor" href="#_inheritance"></a>3.6. Inheritance</h3>
+<h3 id="_converter"><a class="anchor" href="#_converter"></a>3.6. Converter</h3>
+<div class="paragraph">
+<p>The <code>@Converter</code> annotation allows developers to define custom conversions between Java types and their database representations. This capability is useful when working with domain-specific value objects or types that are not natively supported by the underlying NoSQL database.</p>
+</div>
+<div class="paragraph">
+<p>A converter class must implement the <code>AttributeConverter&lt;X, Y&gt;</code> interface, where <code>X</code> represents the Java type used by the application and <code>Y</code> represents the type stored in the database. Converters may be applied explicitly using the <code>@Convert</code> annotation or automatically to all compatible attributes when <code>autoApply=true</code>.</p>
+</div>
+<div class="paragraph">
+<p>The following example defines a converter that stores a UUID as a string:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Converter</span>(autoApply = <span class="predefined-constant">true</span>)
+<span class="directive">public</span> <span class="type">class</span> <span class="class">UUIDConverter</span> <span class="directive">implements</span> AttributeConverter&lt;<span class="predefined-type">UUID</span>, <span class="predefined-type">String</span>&gt; {
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="predefined-type">String</span> toDatabase(<span class="predefined-type">UUID</span> attribute) {
+        <span class="keyword">return</span> attribute == <span class="predefined-constant">null</span> ? <span class="predefined-constant">null</span> : attribute.toString();
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="predefined-type">UUID</span> toEntityAttribute(<span class="predefined-type">String</span> value) {
+        <span class="keyword">return</span> value == <span class="predefined-constant">null</span> ? <span class="predefined-constant">null</span> : <span class="predefined-type">UUID</span>.fromString(value);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Because the converter is marked with <code>autoApply=true</code>, it is automatically applied to all <code>UUID</code> attributes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Person</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">UUID</span> id;
+
+    <span class="directive">private</span> <span class="predefined-type">UUID</span> companyId;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When <code>autoApply=false</code>, the converter must be explicitly associated with an attribute using <code>@Convert</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Converter</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">EmailConverter</span> <span class="directive">implements</span> AttributeConverter&lt;Email, <span class="predefined-type">String</span>&gt; {
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="predefined-type">String</span> toDatabase(Email attribute) {
+        <span class="keyword">return</span> attribute == <span class="predefined-constant">null</span> ? <span class="predefined-constant">null</span> : attribute.value();
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> Email toEntityAttribute(<span class="predefined-type">String</span> value) {
+        <span class="keyword">return</span> value == <span class="predefined-constant">null</span> ? <span class="predefined-constant">null</span> : <span class="keyword">new</span> Email(value);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Customer</span> {
+
+    <span class="annotation">@Convert</span>(EmailConverter.class)
+    <span class="directive">private</span> Email email;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Converters help keep domain models expressive by allowing applications to work with rich domain types while delegating persistence-specific representations to the mapping layer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inheritance"><a class="anchor" href="#_inheritance"></a>3.7. Inheritance</h3>
 <div class="paragraph">
 <p>In Jakarta NoSQL, entities support inheritance, enabling the creation of hierarchies of classes where subclasses inherit attributes and behaviors from their superclass. This feature allows for the modeling of complex data structures and relationships within NoSQL databases.</p>
 </div>
@@ -2375,7 +2459,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 </table>
 </div>
 <div class="sect3">
-<h4 id="_abstract_entity_classes"><a class="anchor" href="#_abstract_entity_classes"></a>3.6.1. Abstract Entity Classes</h4>
+<h4 id="_abstract_entity_classes"><a class="anchor" href="#_abstract_entity_classes"></a>3.7.1. Abstract Entity Classes</h4>
 <div class="paragraph">
 <p>In Jakarta NoSQL, an abstract class can be specified as an entity, providing a mechanism for defining common attributes and behaviors that are shared among multiple concrete subclasses. An abstract entity class is annotated with the <code>@Entity</code> annotation, indicating its role as a mapped entity within the data model.</p>
 </div>
@@ -2390,7 +2474,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mappedsuperclass"><a class="anchor" href="#_mappedsuperclass"></a>3.6.2. @MappedSuperclass</h4>
+<h4 id="_mappedsuperclass"><a class="anchor" href="#_mappedsuperclass"></a>3.7.2. @MappedSuperclass</h4>
 <div class="paragraph">
 <p>The <code>@MappedSuperclass</code> annotation designates a class whose mapping information is applied to the entities that inherit from it. Unlike regular entities, a mapped superclass does not imply the existence of a separate storage structure such as tables in relational databases.</p>
 </div>
@@ -2440,7 +2524,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 </div>
 </div>
 <div class="sect3">
-<h4 id="inheritance_definition"><a class="anchor" href="#inheritance_definition"></a>3.6.3. @Inheritance</h4>
+<h4 id="inheritance_definition"><a class="anchor" href="#inheritance_definition"></a>3.7.3. @Inheritance</h4>
 <div class="paragraph">
 <p>The <code>@Inheritance</code> annotation in Jakarta NoSQL enables the use of inheritance strategies within the data model, allowing for the creation of class hierarchies where subclasses inherit attributes and behaviors from their superclass. By applying <code>@Inheritance</code> to the superclass, developers can define the inheritance strategy to be used for mapping the class hierarchy to the underlying NoSQL database.</p>
 </div>
@@ -2493,7 +2577,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_discriminatorcolumn"><a class="anchor" href="#_discriminatorcolumn"></a>3.6.4. @DiscriminatorColumn</h4>
+<h4 id="_discriminatorcolumn"><a class="anchor" href="#_discriminatorcolumn"></a>3.7.4. @DiscriminatorColumn</h4>
 <div class="paragraph">
 <p>The <code>@DiscriminatorColumn</code> annotation is utilized to specify the discriminator column for the inheritance mapping strategy within an entity class hierarchy. This annotation is typically applied at the root of the hierarchy, although it can also be used within subhierarchies if a different inheritance strategy is applied.</p>
 </div>
@@ -2533,7 +2617,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_discriminatorvalue"><a class="anchor" href="#_discriminatorvalue"></a>3.6.5. @DiscriminatorValue</h4>
+<h4 id="_discriminatorvalue"><a class="anchor" href="#_discriminatorvalue"></a>3.7.5. @DiscriminatorValue</h4>
 <div class="paragraph">
 <p>This annotation specifies the value of the discriminator column for entities of the given type.</p>
 </div>
@@ -3360,7 +3444,7 @@ template.insert(student);</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
- 1.1-M2<br>
+ 1.1.0-M3<br>
 Last updated 2025-05-04 17:24:41 +0100
 </div>
 </div>
