@@ -41,6 +41,12 @@ summary: "Release for Jakarta EE 10"
 
 ## TCK Changes
 
+### CHANGES IN THE 4.0.4 RELEASE
+
+#### Addressed Issues
+
+* [#197](https://github.com/jakartaee/jaxb-tck/issues/197) distribution contains JDK 25-compiled prebuilt classes
+
 ### CHANGES IN THE 4.0.3 RELEASE
 
 #### Addressed Issues
