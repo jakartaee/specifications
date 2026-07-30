@@ -10,6 +10,8 @@ This minimal initial release seeks to build early momentum, including broadening
 
 The release focuses on key programming models, patterns, life cycles, as well as a lightweight LLM facade. Subsequent releases will likely focus more on a programmatic life cycle management as well as workflow API.
 
+Milestone 1 of the API, specification, and TCK is already available. It is published as a non-final, draft-status release for early community feedback and is not yet reviewed under the Eclipse Foundation Specification Process.
+
 #### API Concepts
 
 The following annotated example demonstrates the key concepts this initial minimal release will aim to build consensus and momentum around.
@@ -122,6 +124,21 @@ N/A
 # Details
 
 * [Jakarta Agentic Artificial Intelligence 1.0 Release Record]() (to be created when the project is provisioned)
+* [Jakarta Agentic Artificial Intelligence 1.0.0-M1 Specification Document](./jakarta-agentic-ai-1.0.0-M1.pdf) (PDF)
+* [Jakarta Agentic Artificial Intelligence 1.0.0-M1 Specification Document](./jakarta-agentic-ai-1.0.0-M1.html) (HTML)
+* [Jakarta Agentic Artificial Intelligence 1.0.0-M1 Javadoc](./apidocs)
+* Maven coordinates
+    * [jakarta.agentic-ai:jakarta.agentic-ai-api:jar:1.0.0-M1](https://central.sonatype.com/artifact/jakarta.agentic-ai/jakarta.agentic-ai-api/1.0.0-M1/jar)
+    * [jakarta.agentic-ai:jakarta.agentic-ai-tck:jar:1.0.0-M1](https://central.sonatype.com/artifact/jakarta.agentic-ai/jakarta.agentic-ai-tck/1.0.0-M1/jar)
+<!--
+* [Jakarta Agentic Artificial Intelligence 1.0 Specification Document](./jakarta-agentic-ai-1.0.pdf) (PDF)
+* [Jakarta Agentic Artificial Intelligence 1.0 Specification Document](./jakarta-agentic-ai-1.0.html) (HTML)
+* [Jakarta Agentic Artificial Intelligence 1.0 Javadoc](./apidocs)
+* [Jakarta Agentic Artificial Intelligence 1.0 TCK](https://download.eclipse.org/jakartaee/agentic-ai/1.0/jakarta-agentic-ai-tck-1.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/agentic-ai/1.0/jakarta-agentic-ai-tck-1.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/agentic-ai/1.0/jakarta-agentic-ai-tck-1.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+* Maven coordinates
+    * [jakarta.agentic-ai:jakarta.agentic-ai-api:jar:1.0.0](https://central.sonatype.com/artifact/jakarta.agentic-ai/jakarta.agentic-ai-api/1.0.0/jar)
+-->
+
 
 # Ballots
 
