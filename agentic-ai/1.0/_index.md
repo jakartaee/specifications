@@ -8,7 +8,7 @@ This minimal initial release seeks to build early momentum, including broadening
 
 The release focuses on key programming models, patterns, life cycles, as well as a lightweight LLM facade. Subsequent releases will likely focus more on a programmatic life cycle management as well as workflow API.
 
-Milestone 1 of the API, specification, and TCK is already available. It is published as a non-final, draft-status release for early community feedback and is not yet reviewed under the Eclipse Foundation Specification Process.
+Milestone 1 of the API, specification, and TCK is already available. It is published as a non-final, draft-status release for early community feedback, and has not undergone the release review required to ratify a final specification.
 
 #### API Concepts
 
