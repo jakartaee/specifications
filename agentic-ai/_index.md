@@ -12,7 +12,7 @@ The Jakarta Agentic AI project provides a set of vendor-neutral APIs that make i
 ## Scope
 * Defines common usage patterns and life cycles for AI agents running on Jakarta EE runtimes.
 * Provides a very minimal facade to access more foundational AI capabilities, such as LLMs, without attempting to standardize LLMs. Instead, the API provides easy, pluggable, and configurable access to existing LLM APIs such as LangChain4j and Spring AI. This is similar to how Jakarta Persistence provides access to underlying non-standard APIs by unwrapping.
-* The API will likely include a mechanism to define agent workflows. This will be done using a fluent Java API (as opposed to XML). The agent workflow will likely be dynamic at runtime rather than strictly defined and static at deployment time. A pluggability mechanism may be provided for YAML and XML.
+* The API will include a mechanism to define agent workflows. This will be done using a fluent Java API (as opposed to XML). The agent workflow may be dynamic at runtime rather than strictly defined and static at deployment time. A pluggability mechanism may be provided for YAML and XML.
 * Defines integrations with other key Jakarta EE APIs such as Validation, REST, JSON Binding, Persistence, Data, Transactions, NoSQL, Concurrency, Security, Messaging, and so on.
 * The project will aim to utilize Jakarta Config if possible. It may allow implementations to utilize MicroProfile Config.
 * Implementations may provide integrations with OpenTelemetry.
