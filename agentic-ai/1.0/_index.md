@@ -50,7 +50,7 @@ public class FraudDetectionAgent {
     // In subsequent releases, more robust decision flows should be possible, either with
     // annotations/EL and/or the programmatic workflow API.
     @Decision
-    private Result checkFraud (BankTransaction transaction) {
+    private Result checkFraud(BankTransaction transaction) {
         /*
          * One of the value propositions of the LLM facade is automatic type conversion in Java,
          * both for parameters and return types.
@@ -70,7 +70,7 @@ public class FraudDetectionAgent {
                                                // possibly involving database queries.
         }
  
-        return new Result (fraud, details);
+        return new Result(fraud, details);
     }
 
     // Only one action here, but there could be multiple actions and/or decisions in sequence.
@@ -79,7 +79,7 @@ public class FraudDetectionAgent {
     // pre-conditions for actions defined via annotation/EL.
     @Action
     // Notice that we are automatically injecting domain objects from the workflow context.
-    private void handleFraud (Fraud fraud, BankTransaction transaction) {
+    private void handleFraud(Fraud fraud, BankTransaction transaction) {
         /*
          * IMPORTANT FUNDAMENTAL CONCEPT:
          * This is an example of hard-coded logic, which would still be possible if desired.
