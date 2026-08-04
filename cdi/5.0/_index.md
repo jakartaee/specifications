@@ -1,6 +1,6 @@
 ---
-title: "Jakarta Contexts and Dependency Injection 5.0 (Under development)"
-date: 2026-05-19
+title: "Jakarta Contexts and Dependency Injection 5.0"
+date: 2026-08-20
 summary: "Release for Jakarta EE 12"
 ---
 
@@ -46,15 +46,15 @@ A complete list of issues and pull requests for this version can be viewed using
 * [Jakarta Contexts Dependency Injection 5.0 Specification Document](./jakarta-cdi-spec-5.0.pdf) (PDF)
 * [Jakarta Contexts Dependency Injection 5.0 Specification Document](./jakarta-cdi-spec-5.0.html) (HTML)
 * [Jakarta Contexts Dependency Injection 5.0 Javadoc](./apidocs)
-* [Jakarta Contexts Dependency Injection 5.0.0.Beta1 TCK](https://download.eclipse.org/jakartaee/cdi/5.0/cdi-tck-5.0.0.Beta1-dist.zip)
-([sig](https://download.eclipse.org/jakartaee/cdi/5.0/cdi-tck-5.0.0.Beta1-dist.zip.sig),
-[sha](https://download.eclipse.org/jakartaee/cdi/5.0/cdi-tck-5.0.0.Beta1-dist.zip.sha256),
+* [Jakarta Contexts Dependency Injection 5.0.0 TCK](https://download.eclipse.org/jakartaee/cdi/5.0/cdi-tck-5.0.0-dist.zip)
+([sig](https://download.eclipse.org/jakartaee/cdi/5.0/cdi-tck-5.0.0-dist.zip.sig),
+[sha](https://download.eclipse.org/jakartaee/cdi/5.0/cdi-tck-5.0.0-dist.zip.sha256),
 [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/cdi/5.0)
 * Maven coordinates
-  * [jakarta.cdi:jakarta.cdi-api:5.0.0-Beta1](https://central.sonatype.com/artifact/jakarta.cdi/jakarta.cdi-api/5.0.0-Beta1/jar)
-  * [jakarta.cdi:jakarta.cdi-lang-model-api:5.0.0-Beta1](https://central.sonatype.com/artifact/jakarta.cdi/jakarta.cdi-lang-model-api/5.0.0-Beta1/jar)
-  * [jakarta.cdi:jakarta.cdi-el-api:5.0.0-Beta1](https://central.sonatype.com/artifact/jakarta.cdi/jakarta.cdi-el-api/5.0.0-Beta1/jar)
+  * [jakarta.cdi:jakarta.cdi-api:5.0.0](https://central.sonatype.com/artifact/jakarta.cdi/jakarta.cdi-api/5.0.0/jar)
+  * [jakarta.cdi:jakarta.cdi-lang-model-api:5.0.0](https://central.sonatype.com/artifact/jakarta.cdi/jakarta.cdi-lang-model-api/5.0.0/jar)
+  * [jakarta.cdi:jakarta.cdi-el-api:5.0.0](https://central.sonatype.com/artifact/jakarta.cdi/jakarta.cdi-el-api/5.0.0/jar)
 
 * Schemas
   * [XML Schema for the CDI 5.0 beans.xml deployment](https://jakarta.ee/xml/ns/jakartaee/beans_5_0.xsd)
@@ -62,7 +62,7 @@ A complete list of issues and pull requests for this version can be viewed using
 
 # Compatible Implementations
 
-* [Weld 7.0.0.Beta1](https://central.sonatype.com/artifact/org.jboss.weld/weld-core-impl/7.0.0.Beta1)
+* [Weld 7.0.0.CR1](https://central.sonatype.com/artifact/org.jboss.weld/weld-core-impl/7.0.0.CR1)
 
 # Ballots
 
