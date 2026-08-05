@@ -30,9 +30,9 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 
 * [Jakarta JSON Binding 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsonb/releases/3.1)
 * Milestone 1
-  * [Jakarta JSON Binding 3.1 Specification Document](./M1/jakarta-jsonb-spec-3.1.pdf) (PDF) (Does not exist yet)
-  * [Jakarta JSON Binding 3.1 Specification Document](./M1/jakarta-jsonb-spec-3.1.html) (HTML) (Does not exist yet)
-  * [Jakarta JSON Binding 3.1 Javadoc](./M1/apidocs) (Does not exist yet)
+  * [Jakarta JSON Binding 3.1 Specification Document](./M1/jsonb-spec-3.1.pdf) (PDF)
+  * [Jakarta JSON Binding 3.1 Specification Document](./M1/jsonb-spec-3.1.html) (HTML)
+  * [Jakarta JSON Binding 3.1 Javadoc](./M1/apidocs)
 * [Jakarta JSON Binding 3.1 TCK](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.1.0.zip) (Does not exist yet)
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/jsonb/3.1/)
 * Maven coordinates
