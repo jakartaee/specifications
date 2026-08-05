@@ -37,6 +37,9 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
   * [Jakarta Concurrency 3.2 M1 Specification Document](./M1/jakarta-concurrency-spec-3.2.html) (HTML)
   * [Jakarta Concurrency 3.2 M1 Javadoc](.M1//apidocs)
 * Milestone 2
+  * [Jakarta Concurrency 3.2 M2 Specification Document](./M2/jakarta-concurrency-spec-3.2.pdf) (PDF)
+  * [Jakarta Concurrency 3.2 M2 Specification Document](./M2/jakarta-concurrency-spec-3.2.html) (HTML)
+  * [Jakarta Concurrency 3.2 M2 Javadoc](.M2//apidocs)
 * Milestone 3
 * [Jakarta Concurrency 3.2 TCK](https://download.eclipse.org/jakartaee/concurrency/) (Does not exist yet)
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/concurrency/3.2) (Does not exist yet)
