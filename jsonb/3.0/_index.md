@@ -39,7 +39,7 @@ Jakarta JSON Binding defines a binding framework for converting Java(R) objects 
 
 # Compatible Implementations
 
-* [Eclipse Yasson 3.0.0-RC1](https://github.com/eclipse-ee4j/yasson/releases/tag/3.0.0-RC1)
+* [Eclipse Yasson 3.0.0](https://github.com/eclipse-ee4j/yasson/releases/tag/3.0.0)
 
 # Ballots
 
