@@ -98,6 +98,9 @@ Note: If any item does not apply, check it and mark N/A below it.
 
 11. Update Jakarta EE API jar
   - [ ] Update the Jakarta EE API jar by submitting a PR to the jakartaee-api project that updates the version number of your API jar file.
+        
+12. Document the Jenkins Release job
+- [ ] All of the Jenkins jobs were documented to the spec github wiki so that each spec committer can perform the spec release.
 
 ### Mentor Final Tasks after a Successful Release Review
 
