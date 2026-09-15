@@ -58,9 +58,30 @@ Currently suggested topics includes:
 
 ## Release Review
 
-The Specification Committee Ballot is TBD.
+The Specification Committee Ballot concluded successfully on 2026-09-11 with the following results.
 
-The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg02354.html)
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Kenji Kazumura                                 | Fujitsu             |   +1    |
+| Emily Jiang, Tom Watson                        | IBM                 |   +1    |
+| Dmitry Kornilov, Robert Patrick                | Oracle              | no vote |
+| Andrew Pielage, Petr Aubrecht                  | Payara              |   +1    |
+| David Blevins, Jean-Louis Monteiro             | Tomitribe           |   +1    |
+| Ivar Grimstad                                  | EE4J PMC            |   +1    |
+| Arjan Tijms                                    | Participant Members | no vote |
+| Werner Keil                                    | Committer Members   |   +1    |
+| Jun Qian                                       | Enterprise Members  |   +1    |
+| Zhai Luchao                                    | Enterprise Members  |   +1    |
+|                                                | **Total**           |  **8**  |
+
+Non-binding Votes
+| Representative                                 | Representative for: |  Vote   |
+|------------------------------------------------|---------------------|---------|
+| Michael Redlich                                | Community           |   +1    |
+| Bernd Müller                                   | Community           |   +1    |
+|                                                | **Total**           |  **2**  |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg04279.html)
 
 ## Plan Review
 
