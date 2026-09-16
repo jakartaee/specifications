@@ -95,7 +95,7 @@ public interface Products extends DataRepository<Product, String> {
   * [Jakarta Data 1.1 M4 API Javadoc](./api/apidocs)
   * [Jakarta Data 1.1 M4 Stateful Javadoc](./stateful/apidocs)
 * [Jakarta Data 1.1 TCK](http://downloads.eclipse.org/jakarta/data/1.1/data-tck-1.1.0.zip) (Does not exist yet)
-  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/data/1.1) (Does not exist yet)
+   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/data/1.1) (Does not exist yet)
 * Maven coordinates
   * [jakarta.data:jakarta.data-api:jar:1.1.0-M4](https://search.maven.org/artifact/jakarta.data/jakarta.data-api/1.1.0-M4/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).

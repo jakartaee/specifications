@@ -58,10 +58,10 @@ None - first release
 * [Jakarta Data 1.0 Specification Document](./jakarta-data-1.0.html) (HTML)
   * [Jakarta Data 1.0 Specification Addendum](./jakarta-data-addendum-1.0.html) (HTML)
 * [Jakarta Data 1.0 Javadoc](./apidocs)
-* [Jakarta Data 1.0 TCK](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.0.zip), ([sig](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.0.zip.sig), [sha](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.0.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
+* [Jakarta Data 1.0 TCK](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.2.zip), ([sig](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.2.zip.sig), [sha](https://download.eclipse.org/jakartaee/data/1.0/data-tck-1.0.2.zip.sha256), [pub](https://raw.githubusercontent.com/jakartaee/specification-committee/master/jakartaee-spec-committee.pub))
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/data/1.0)
 * Maven coordinates
-  * [jakarta.data:jakarta.data-api:jar:1.0.1](https://central.sonatype.com/artifact/jakarta.data/jakarta.data-api/1.0.1/jar)
+  * [jakarta.data:jakarta.data-api:jar:1.0.2](https://central.sonatype.com/artifact/jakarta.data/jakarta.data-api/1.0.2/jar)
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification)
   * Persistence (Hibernate): https://github.com/jakartaee/data/issues/714
   * Persistence (Open Liberty): https://github.com/jakartaee/data/issues/741
