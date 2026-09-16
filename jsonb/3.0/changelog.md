@@ -1,8 +1,13 @@
 ---
 title: "Change Log"
-date: 2026-05-29
+date: 2026-08-27
 summary: "Release for Jakarta EE 10"
 ---
+
+### CHANGES IN THE 3.0.3 RELEASE
+
+* resolves accepted challenges to TCK
+* fixes character encoding assumptions in TCK
 
 ### CHANGES IN THE 3.0.2 RELEASE
 
