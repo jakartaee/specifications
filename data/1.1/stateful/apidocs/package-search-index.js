@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"jakarta.data.stateful","l":"jakarta.data.repository.stateful"}];updateSearchResults();

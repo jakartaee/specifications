@@ -1,0 +1,1 @@
+tagSearchIndex = [{"l":"Examples","h":"module jakarta.data.stateful","d":"Section","u":"jakarta.data.stateful/module-summary.html#examples-heading"},{"l":"Transactions","h":"module jakarta.data.stateful","d":"Section","u":"jakarta.data.stateful/module-summary.html#transactions-heading"}];updateSearchResults();

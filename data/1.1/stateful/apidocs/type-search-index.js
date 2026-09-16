@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"jakarta.data.repository.stateful","l":"Detach"},{"p":"jakarta.data.repository.stateful","l":"Merge"},{"p":"jakarta.data.repository.stateful","l":"Persist"},{"p":"jakarta.data.repository.stateful","l":"Refresh"},{"p":"jakarta.data.repository.stateful","l":"Remove"}];updateSearchResults();

@@ -1,6 +1,6 @@
 ---
 title: "Jakarta Data 1.1 (under development)"
-date: 2026-02-09
+date: 2026-08-27
 summary: "Enhancements for Jakarta EE 12"
 ---
 
@@ -87,14 +87,17 @@ public interface Products extends DataRepository<Product, String> {
 # Details
 
 * [Jakarta Data 1.1 Release Record](https://projects.eclipse.org/projects/ee4j.data/releases/1.1)
-* Milestone 3
-  * [Jakarta Data 1.1 M3 Specification Document](./jakarta-data-1.1-M3.pdf) (PDF)
-  * [Jakarta Data 1.1 M3 Specification Document](./jakarta-data-1.1-M3.html) (HTML)
-  * [Jakarta Data 1.1 M3 Javadoc](./apidocs)
+* Milestone 4
+  * [Jakarta Data 1.1 M4 Specification Document](./jakarta-data-1.1.pdf) (PDF)
+    * [Jakarta Data 1.1 M4 Specification Addendum](./jakarta-method-name-query-1.1.pdf) (PDF)
+  * [Jakarta Data 1.1 M4 Specification Document](./jakarta-data-1.1.html) (HTML)
+    * [Jakarta Data 1.1 M4 Specification Addendum](./jakarta-method-name-query-1.1.html) (HTML)
+  * [Jakarta Data 1.1 M4 API Javadoc](./api/apidocs)
+  * [Jakarta Data 1.1 M4 Stateful Javadoc](./stateful/apidocs)
 * [Jakarta Data 1.1 TCK](http://downloads.eclipse.org/jakarta/data/1.1/data-tck-1.1.0.zip) (Does not exist yet)
    * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/data/1.1) (Does not exist yet)
 * Maven coordinates
-  * [jakarta.data:jakarta.data-api:jar:1.1.0-M3](https://search.maven.org/artifact/jakarta.data/jakarta.data-api/1.1.0-M3/jar)
+  * [jakarta.data:jakarta.data-api:jar:1.1.0-M4](https://search.maven.org/artifact/jakarta.data/jakarta.data-api/1.1.0-M4/jar)
 * Compatible Implementations used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [To Be Determined](https://github.com/)
 
