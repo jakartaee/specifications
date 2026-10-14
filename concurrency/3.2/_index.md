@@ -33,13 +33,13 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 
 * [Jakarta Concurrency 3.2 Release Record](https://projects.eclipse.org/projects/ee4j.cu/releases/3.2)
 * Milestone 2
-  * [Jakarta Concurrency 3.2 M2 Specification Document](./jakarta-concurrency-spec-3.2.pdf) (PDF)
-  * [Jakarta Concurrency 3.2 M2 Specification Document](./jakarta-concurrency-spec-3.2.html) (HTML)
-  * [Jakarta Concurrency 3.2 M2 Javadoc](.//apidocs)
+  * [Jakarta Concurrency 3.2 M3 Specification Document](./jakarta-concurrency-spec-3.2.pdf) (PDF)
+  * [Jakarta Concurrency 3.2 M3 Specification Document](./jakarta-concurrency-spec-3.2.html) (HTML)
+  * [Jakarta Concurrency 3.2 M3 Javadoc](./apidocs)
 * [Jakarta Concurrency 3.2 TCK](https://download.eclipse.org/jakartaee/concurrency/) (Does not exist yet)
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/concurrency/3.2) (Does not exist yet)
 * Maven coordinates
-  * [jakarta.concurrency:jakarta.concurrency-api:3.2.0-M2](https://central.sonatype.com/artifact/jakarta.concurrency/jakarta.concurrency-api/3.2.0-M2/jar)
+  * [jakarta.concurrency:jakarta.concurrency-api:3.2.0-M3](https://central.sonatype.com/artifact/jakarta.concurrency/jakarta.concurrency-api/3.2.0-M3/jar)
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [To Be Determined](https://github.com/jakartaee/concurrency/issues?q=sort%3Aupdated-desc%20is%3Aissue%20state%3Aclosed%20label%3Acertification%20milestone%3A3.2.0)
 

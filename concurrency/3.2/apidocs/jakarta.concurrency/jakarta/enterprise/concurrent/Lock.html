@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <hr>
-<div class="type-signature"><span class="annotations">@InterceptorBinding
+<div class="type-signature"><span class="annotations"><a href="https://jakarta.ee/specifications/interceptors/2.2/apidocs/jakarta.interceptor/jakarta/interceptor/InterceptorBinding.html" title="class or interface in jakarta.interceptor" class="external-link">@InterceptorBinding</a>
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/ElementType.html#METHOD" title="class or interface in java.lang.annotation" class="external-link">METHOD</a>,<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE" title="class or interface in java.lang.annotation" class="external-link">TYPE</a>})
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Inherited.html" title="class or interface in java.lang.annotation" class="external-link">@Inherited</a>
@@ -98,12 +98,16 @@ loadScripts(document, 'script');</script>
  mode, by invoking bean methods. If the bean implementation internally accesses
  one of its own methods or fields, that access is not subject to the lock.</p>
 
- <p>A bean method that does not have a <code>Lock</code> annotation inherits
- the <code>Lock</code> annotation, if present, of the class that declares the method.
- A bean class that has a method annotated <code>Lock</code>, but does not have a
- <code>Lock</code> annotation of its own at the class level, operates according to
- the default values of the <code>Lock</code> annotation when bean methods that are
- not annotated <code>Lock</code> are invoked.</p></div>
+ <p>A <code>Lock</code> annotation on a bean method takes precedence over and
+ fully replaces a <code>Lock</code> annotation on the bean class.
+ A bean method that does not have a <code>Lock</code> annotation inherits the
+ <code>Lock</code> annotation, if present, of the class that declares the method.
+ If neither the bean method nor the bean class are annotated <code>Lock</code>,
+ then invocation of the method does not require a lock to be obtained.</p>
+
+ <p>The Jakarta EE Product Provider must assign the <code>@Lock</code> interceptor
+ a priority of <a href="https://jakarta.ee/specifications/interceptors/2.2/apidocs/jakarta.interceptor/jakarta/interceptor/Interceptor.Priority.html#PLATFORM_BEFORE" title="class or interface in jakarta.interceptor" class="external-link"><code>Interceptor.Priority.PLATFORM_BEFORE</code></a>
+ <code>+ 100</code>.</p></div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>3.2</dd>
@@ -128,7 +132,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><code>static enum&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="Lock.Type.html" class="type-name-link" title="enum class in jakarta.enterprise.concurrent">Lock.Type</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Designates the type of lock to be READ or WRITE.</div>
+<div class="block">Designates the type of lock to be <a href="Lock.Type.html#READ"><code>Lock.Type.READ</code></a> or <a href="Lock.Type.html#WRITE"><code>Lock.Type.WRITE</code></a>.</div>
 </div>
 </div>
 </section>
@@ -155,7 +159,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a></code></div>
 <div class="col-second even-row-color"><code><a href="#unit()" class="member-name-link">unit</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Time unit of the <a href="#accessTimeout()"><code>accessTimeout</code></a>.</div>
+</div>
 </div>
 </section>
 </li>
@@ -198,8 +204,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">IMMEDIATE</span></div>
 <div class="block">Value for <a href="#accessTimeout()"><code>accessTimeout()</code></a> that indicates that the lock that
  permits running a bean method must be obtained immediately.
- Otherwise, a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletionException.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletionException</code></a> that
- chains a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/TimeoutException.html" title="class or interface in java.util.concurrent" class="external-link"><code>TimeoutException</code></a> is thrown.</div>
+ Otherwise, a <a href="LockTimeoutException.html" title="class in jakarta.enterprise.concurrent"><code>LockTimeoutException</code></a> is thrown.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -255,11 +260,19 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="accessTimeout()">
 <h3>accessTimeout</h3>
 <div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">accessTimeout</span></div>
-<div class="block"><p>The maximum amount of time to wait to obtain the lock.
- If the lock that allows running the method cannot be obtained within
- the specified amount of time, a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletionException.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletionException</code></a>
- that chains a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/TimeoutException.html" title="class or interface in java.util.concurrent" class="external-link"><code>TimeoutException</code></a> is thrown
- from the method invocation attempt.</p>
+<div class="block"><p>The maximum amount of time to wait to obtain the lock.</p>
+
+ <p>If the lock that controls access to the method cannot be obtained
+ within the specified amount of time, a <a href="LockTimeoutException.html" title="class in jakarta.enterprise.concurrent"><code>LockTimeoutException</code></a>
+ is thrown from the method invocation attempt.</p>
+
+ <p>If the thread is interrupted while awaiting the lock, and the bean
+ method declares that it throws <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link"><code>InterruptedException</code></a>, then
+ <code>InterruptedException</code> is raised to the caller.
+ If the thread is interrupted while awaiting the lock, but the bean
+ does not declare that it throws <code>InterruptedException</code>, then an
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link"><code>IllegalStateException</code></a> that chains <code>InterruptedException</code>
+ is raised to the caller.</p>
 
  <p>Use the <a href="#IMMEDIATE"><code>IMMEDIATE</code></a> constant to avoid waiting.</p>
 
@@ -281,9 +294,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="unit()">
 <h3>unit</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a></span>&nbsp;<span class="element-name">unit</span></div>
+<div class="block">Time unit of the <a href="#accessTimeout()"><code>accessTimeout</code></a>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>units used for the specified accessTimeout value.</dd>
+<dd>units used for the specified <code>accessTimeout</code> value.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
