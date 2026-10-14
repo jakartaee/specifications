@@ -40,29 +40,29 @@ The specification does not mandate a particular checkpoint/restore implementatio
 # Compatible Implementations
 * TBD
 
-<!--
 # Ballots
 ## Creation and Plan Review
 
-The Specification Committee Ballot concluded successfully on yyyy-MM-dd with the following results.
+The Specification Committee Ballot concluded successfully on 2026-10-13 with the following results.
 
 | Representative                       | Representative for:   | Vote    |
 |--------------------------------------|-----------------------|---------|
-| Kenji Kazumura                       | Fujitsu               |       |
-| Tom Watson, Emily Jiang              | IBM                   |       |
-| Dmitry Kornilov, Robert Patrick      | Oracle                |       |
-| Andrew Pielage.                      | Payara                |       |
-| David Blevins, Jean-Louis Monteiro   | Tomitribe             |       |
-| Ivar Grimstad                        | EE4J PMC              |       |
-| Arjan Tijms                          | Participant Members   |       |
-| Werner Keil                          | Committer Members     |       |
-| Jun Qian                             | Enterprise Members    |       |
-| Zhai Luchao                          | Enterprise Members    |       |
-|                                      | **Total**             | ** **   |
-| Non-binding votes                    |                       |         |
-| ------------------------------------ | --------------------- | ------- |
-|                                      |                       |       |
-|                                      | **Total**             | ** **   |
+| Kenji Kazumura                       | Fujitsu               |   +1    |
+| Emily Jiang, Tom Watson              | IBM                   |   +1    |
+| Dmitry Kornilov, Robert Patrick      | Oracle                |   +1    |
+| Andrew Pielage.                      | Payara                |   +1    |
+| David Blevins, Jean-Louis Monteiro   | Tomitribe             |   +1    |
+| Ivar Grimstad                        | EE4J PMC              |   +1    |
+| Arjan Tijms                          | Participant Members   |   +1    |
+| Werner Keil                          | Committer Members     |   +1    |
+| Jun Qian                             | Enterprise Members    |   +1    |
+| Zhai Luchao                          | Enterprise Members    |   +1    |
+|                                      | **Total**             |  **9**  |
 
-The ballot was run in the [jakarta.ee-spec mailing list]()
--->
+| Non-binding votes                    | Representative for:   | Vote    |
+|--------------------------------------|-----------------------|---------|
+| Michael Redlich                      | Community             |    +1   |
+| Tom Watson                           | Community             |    +1   |
+|                                      | **Total**             | **2**   |
+
+The ballot was run in the [jakarta.ee-spec mailing list](https://www.eclipse.org/lists/jakarta.ee-spec/msg04303.html)
