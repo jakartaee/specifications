@@ -1,6 +1,6 @@
 ---
 title: "Jakarta RESTful Web Services 5.0 (under development)"
-date: 2025-04-15
+date: 2026-10-19
 summary: "Release for Jakarta EE 12"
 ---
 
@@ -39,16 +39,20 @@ See the [Jakarta RESTful Web Services 5.0 Release Plan](https://projects.eclipse
 
 * [Jakarta RESTful Web Services 5.0 Release Record](https://projects.eclipse.org/projects/ee4j.rest/releases/5.0.0)
     * [Jakarta EE Platform 12 Release Plan](https://jakartaee.github.io/platform/jakartaee11/#jakarta-ee-12-release-plan)
-<!--
+
 * [Jakarta RESTful Web Services 5.0 Specification Document](./jakarta-restful-ws-spec-5.0.pdf) (PDF)
 * [Jakarta RESTful Web Services 5.0 Specification Document](./jakarta-restful-ws-spec-5.0.html) (HTML)
 * [Jakarta RESTful Web Services 5.0 Javadoc](./apidocs)
+<!-- Change back to this for the final release
 * [Jakarta RESTful Web Services 5.0.0 TCK](https://download.eclipse.org/jakartaee/restful-ws/5.0/jakarta-restful-ws-tck-5.0.0.zip)  ([sig](https://download.eclipse.org/jakartaee/restful-ws/5.0/jakarta-restful-ws-tck-5.0.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/restful-ws/5.0/jakarta-restful-ws-tck-5.0.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
+-->
+* [Jakarta RESTful Web Services 5.0.0-M1 TCK](https://download.eclipse.org/ee4j/restful-ws/tck/eftl/jakarta-restful-ws-tck-5.0.0-M1.zip)
     * For all TCK releases, see the download directory [here](http://download.eclipse.org/jakartaee/restful-ws/5.0/).
  * Maven coordinates
-    * [jakarta.ws.rs:jakarta.ws.rs-api:jar:5.0.0](https://central.sonatype.com/artifact/jakarta.ws.rs/jakarta.ws.rs-api/5.0.0/jar)
+    * [jakarta.ws.rs:jakarta.ws.rs-api:jar:5.0.0-M1](https://central.sonatype.com/artifact/jakarta.ws.rs/jakarta.ws.rs-api/5.0.0-M1/jar)
 
 # Compatible Implementations
+<!--
 * [RESTEasy XXXXX](https://github.com/resteasy/resteasy/releases/tag/XXXXX)
 * [Eclipse Jersey XXXXX](https://github.com/eclipse-ee4j/jersey/releases/tag/XXXXX)
 -->
