@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Documented.html" title="class or interface in java.lang.annotation" class="external-link">@Documented</a>
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Inherited.html" title="class or interface in java.lang.annotation" class="external-link">@Inherited</a>
-@InterceptorBinding
+<a href="https://jakarta.ee/specifications/interceptors/2.2/apidocs/jakarta.interceptor/jakarta/interceptor/InterceptorBinding.html" title="class or interface in jakarta.interceptor" class="external-link">@InterceptorBinding</a>
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/ElementType.html#METHOD" title="class or interface in java.lang.annotation" class="external-link">METHOD</a>,<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE" title="class or interface in java.lang.annotation" class="external-link">TYPE</a>})
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">Asynchronous</span></div>
@@ -228,17 +228,23 @@ loadScripts(document, 'script');</script>
 
  <h2 id="interceptor-and-transactional-heading">Interceptor and Transactional</h2>
 
- The Jakarta EE Product Provider must assign the interceptor for asynchronous methods
- to have priority of <code>Interceptor.Priority.PLATFORM_BEFORE + 5</code>.
- Interceptors with a lower priority, such as <code>Transactional</code>, must run on
- the thread where the asynchronous method executes, rather than on the submitting thread.
- When an asynchronous method is annotated as <code>Transactional</code>,
+ When an asynchronous method is annotated as <a href="https://jakarta.ee/specifications/transactions/2.0/apidocs/jakarta/transaction/Transactional.html" title="class or interface in jakarta.transaction" class="external-link"><code>Transactional</code></a>,
  the transactional types which can be used are:
- <code>TxType.REQUIRES_NEW</code>, which causes the method to run in a new transaction, and
- <code>TxType.NOT_SUPPORTED</code>, which causes the method to run with no transaction.
- All other transaction attributes must result in
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link"><code>UnsupportedOperationException</code></a>
- upon invocation of the asynchronous method.</div>
+ <ul>
+ <li><a href="https://jakarta.ee/specifications/transactions/2.0/apidocs/jakarta/transaction/Transactional.TxType.html#REQUIRES_NEW" title="class or interface in jakarta.transaction" class="external-link"><code>REQUIRES_NEW</code></a>,
+ which causes the method to run in a new transaction, and</li>
+ <li><a href="https://jakarta.ee/specifications/transactions/2.0/apidocs/jakarta/transaction/Transactional.TxType.html#NOT_SUPPORTED" title="class or interface in jakarta.transaction" class="external-link"><code>NOT_SUPPORTED</code></a>,
+ which causes the method to run with no transaction.</li>
+ </ul>
+ All other transaction attributes must result in <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link"><code>UnsupportedOperationException</code></a>
+ upon invocation of the asynchronous method.
+
+ <p>
+ The Jakarta EE Product Provider must assign the <code>@Asynchronous</code>
+ interceptor a priority of <a href="https://jakarta.ee/specifications/interceptors/2.2/apidocs/jakarta.interceptor/jakarta/interceptor/Interceptor.Priority.html#PLATFORM_BEFORE" title="class or interface in jakarta.interceptor" class="external-link"><code>Interceptor.Priority.PLATFORM_BEFORE</code></a>
+ <code>+ 5</code>. Interceptors with a lower priority, such as <a href="Lock.html" title="annotation interface in jakarta.enterprise.concurrent"><code>@Lock</code></a>
+ and <a href="https://jakarta.ee/specifications/transactions/2.0/apidocs/jakarta/transaction/Transactional.html" title="class or interface in jakarta.transaction" class="external-link"><code>@Transactional</code></a>, must run on the thread where the
+ asynchronous method executes, rather than on the submitting thread.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>3.0</dd>

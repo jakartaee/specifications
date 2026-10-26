@@ -104,7 +104,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public static enum </span><span class="element-name type-name-label">Lock.Type</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="Lock.Type.html" title="enum class in jakarta.enterprise.concurrent">Lock.Type</a>&gt;</span></div>
-<div class="block">Designates the type of lock to be READ or WRITE.</div>
+<div class="block">Designates the type of lock to be <a href="#READ"><code>READ</code></a> or <a href="#WRITE"><code>WRITE</code></a>.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -183,15 +183,26 @@ the order they are declared.</div>
 <h3>READ</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Lock.Type.html" title="enum class in jakarta.enterprise.concurrent">Lock.Type</a></span>&nbsp;<span class="element-name">READ</span></div>
 <div class="block">For read-only operations. Allows simultaneous access, as long as no
- <code>WRITE</code> lock is held.</div>
+ other thread holds a <code>WRITE</code> lock on the bean.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="WRITE">
 <h3>WRITE</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Lock.Type.html" title="enum class in jakarta.enterprise.concurrent">Lock.Type</a></span>&nbsp;<span class="element-name">WRITE</span></div>
-<div class="block">For exclusive access to the bean instance. A <code>WRITE</code> lock can only be acquired when no other method with
- either a <code>READ</code> or <code>WRITE</code> lock is currently held.</div>
+<div class="block">For exclusive access to the bean instance. A <code>WRITE</code>
+ lock can only be acquired when no thread holds a <code>READ</code>
+ or <code>WRITE</code> lock on the bean.
+ <p>
+ A thread that already holds a <code>READ</code> lock does not upgrade
+ to a <code>WRITE</code> lock on the bean. Instead, the bean method
+ raises <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link"><code>IllegalStateException</code></a> to the caller.
+ <p>
+ A thread that already holds a <code>WRITE</code> lock for purposes
+ of running a bean method, and from the bean method either
+ directly or indirectly invokes a method of the bean, does so
+ under the same lock rather than acquiring an additional lock on
+ the bean.</div>
 </section>
 </li>
 </ul>
