@@ -25,7 +25,7 @@ loadScripts(document, 'script');</script>
 <!-- ========= START OF TOP NAVBAR ======= -->
 <div class="top-nav" id="navbar-top"><button id="navbar-toggle-button" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation links"><span class="nav-bar-toggle-icon">&nbsp;</span><span class="nav-bar-toggle-icon">&nbsp;</span><span class="nav-bar-toggle-icon">&nbsp;</span></button>
 <div class="skip-nav"><a href="#skip-navbar-top" title="Skip navigation links">Skip navigation links</a></div>
-<div class="about-language"><br>Jakarta NoSQL API v1.0</div>
+<div class="about-language"><br>Jakarta NoSQL API v1.1</div>
 <ul id="navbar-top-firstrow" class="nav-list" title="Navigation">
 <li><a href="../../module-summary.html">Module</a></li>
 <li><a href="package-summary.html">Package</a></li>
@@ -140,7 +140,7 @@ loadScripts(document, 'script');</script>
          .eq("Joshua Bloch")
          .and("edition")
          .gt(3)
-         .results();
+         .result();
 
  Stream&lt;Book&gt; books = template.select(Book.class)
          .where("author")
@@ -227,7 +227,7 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insert(java.lang.Iterable,java.time.Duration)" class="member-name-link">insert</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;T&gt;&nbsp;entities,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;ttl)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Inserts multiple entities into the database with the expiration date.</div>
+<div class="block">Inserts multiple entities into the database with an optional expiration.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;T</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insert(T)" class="member-name-link">insert</a><wbr>(T&nbsp;entity)</code></div>
@@ -238,7 +238,7 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insert(T,java.time.Duration)" class="member-name-link">insert</a><wbr>(T&nbsp;entity,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;ttl)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Inserts an entity into the database with an expiration to the entity.</div>
+<div class="block">Inserts an entity into the database with an optional expiration.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Query.html" title="interface in jakarta.nosql">Query</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#query(java.lang.String)" class="member-name-link">query</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;query)</code></div>
@@ -290,9 +290,11 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <h3 id="insert(java.lang.Object)">insert</h3>
 <div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(T&nbsp;entity)</span></div>
 <div class="block">Inserts an entity into the database. If an entity of this type with the same
- unique identifier already exists in the database and the database supports ACID transactions,
- then this method raises an error. In databases that follow the BASE model
- or use an append model to write data, this exception is not thrown.
+ unique identifier already exists in the database, the outcome is provider-specific.
+ This specification does not require duplicate-identifier detection or rejection and does not define
+ a standard exception for such conflicts. Depending on the capabilities and insertion semantics of the
+ underlying database, a provider may reject the insertion, overwrite, append, or perform an upsert.
+ When an insertion is rejected because of an existing identifier, the exception type is provider-specific.
 
  <p>The entity instance returned as a result of this method must include all values
  written to the database, including all automatically generated values and incremented values
@@ -324,10 +326,8 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <h3 id="insert(java.lang.Object,java.time.Duration)">insert</h3>
 <div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(T&nbsp;entity,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;ttl)</span></div>
-<div class="block">Inserts an entity into the database with an expiration to the entity. If an entity of this type with the same
- unique identifier already exists in the database and the database supports ACID transactions,
- then this method raises an error. In databases that follow the BASE model
- or use an append model to write data, this exception is not thrown.
+<div class="block">Inserts an entity into the database with an optional expiration.
+ Duplicate-identifier handling is provider-specific, as described in <a href="#insert(T)"><code>insert(Object)</code></a>.
 
  <p>The entity instance returned as a result of this method must include all values
  written to the database, including all automatically generated values and incremented values
@@ -335,10 +335,13 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
   supplied as a parameter. This method makes no guarantees about the state of the
  instance that is supplied as a parameter.</p>
 
- <p>Time-To-Live (TTL) is a feature provided by some NoSQL databases where data is automatically removed from the
- database after a specified duration. When inserting an entity with a TTL, the entity will be automatically deleted
- from the database after the specified duration has passed since its insertion. If the database does not support TTL
- or if the TTL feature is not enabled, this operation will not have any effect on the entity's expiration.</p>
+ <p>Time-To-Live (TTL) is an optional capability. In databases that support per-entity expiration, the entity may be
+ removed automatically once the given duration has passed since its insertion. Databases that only offer retention
+ policies configured at the database or collection level do not provide an equivalent per-entity TTL, and other
+ databases offer no expiration at all. If the database or provider does not support TTL, the provider may throw an
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link"><code>UnsupportedOperationException</code></a>. Providers may also support TTL only with a coarser granularity, in which
+ case the duration may be rounded to a supported unit or the TTL may not be applied. Expiration is therefore
+ not guaranteed by this method; consult the provider documentation.</p>
  <pre><code>
 
  @Inject
@@ -360,7 +363,7 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
  values to be generated or automatically incremented.</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the entity is null.</dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - when the database does not provide TTL</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - if the provider rejects the requested TTL because it is unsupported</dd>
 </dl>
 </section>
 </li>
@@ -368,11 +371,8 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <section class="detail" id="insert(java.lang.Iterable)">
 <h3>insert</h3>
 <div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;T&gt;</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;T&gt;&nbsp;entities)</span></div>
-<div class="block">Inserts multiple entities into the database. If any entity of this type with the same
- unique identifier as any of the given entities already exists in the database and the database
- supports ACID transactions, then this method raises an error.
- In databases that follow the BASE model or use an append model to write data, this exception
- is not thrown.
+<div class="block">Inserts multiple entities into the database.
+ Duplicate-identifier handling is provider-specific, as described in <a href="#insert(T)"><code>insert(Object)</code></a>.
 
  <p>The entities within the returned <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link"><code>Iterable</code></a> must include all values
  written to the database, including all automatically generated values and incremented values
@@ -399,11 +399,8 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <h3>insert</h3>
 <div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;T&gt;</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;T&gt;&nbsp;entities,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;ttl)</span></div>
-<div class="block">Inserts multiple entities into the database with the expiration date. If any entity of this type with the same
- unique identifier as any of the given entities already exists in the database and the database
- supports ACID transactions, then this method raises an error.
- In databases that follow the BASE model or use an append model to write data, this exception
- is not thrown.
+<div class="block">Inserts multiple entities into the database with an optional expiration.
+ Duplicate-identifier handling is provider-specific, as described in <a href="#insert(T)"><code>insert(Object)</code></a>.
 
  <p>The entities within the returned <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link"><code>Iterable</code></a> must include all values
  written to the database, including all automatically generated values and incremented values
@@ -413,10 +410,13 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
  The position of entities within the <code>Iterable</code> return value must correspond to the
  position of entities in the parameter based on the unique identifier of the entity.</p>
 
- <p>Time-To-Live (TTL) is a feature provided by some NoSQL databases where data is automatically removed from the
- database after a specified duration. When inserting entities with a TTL, the entities will be automatically deleted
- from the database after the specified duration has passed since their insertion. If the database does not support TTL
- or if the TTL feature is not enabled, this operation will not have any effect on the expiration of the entities.</p>
+ <p>Time-To-Live (TTL) is an optional capability. In databases that support per-entity expiration, the entities may be
+ removed automatically once the given duration has passed since their insertion. Databases that only offer retention
+ policies configured at the database or collection level do not provide an equivalent per-entity TTL, and other
+ databases offer no expiration at all. If the database or provider does not support TTL, the provider may throw an
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link"><code>UnsupportedOperationException</code></a>. Providers may also support TTL only with a coarser granularity, in which
+ case the duration may be rounded to a supported unit or the TTL may not be applied. Expiration is therefore
+ not guaranteed by this method; consult the provider documentation.</p>
  <pre><code>
  @Inject
  Template template;
@@ -435,7 +435,9 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
          .build()
  );
 
- Iterable&lt;SessionToken&gt; insertedTokens = template.insert(tokens);
+ Duration ttl = Duration.ofMinutes(30);
+
+ Iterable&lt;SessionToken&gt; insertedTokens = template.insert(tokens, ttl);
  </code></pre></div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
@@ -448,7 +450,7 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
  on whether the insert caused values to be generated or automatically incremented.</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the iterable is null or any element is null.</dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - if the database does not provide time-to-live for insert operations.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - if the provider rejects the requested TTL because it is unsupported</dd>
 </dl>
 </section>
 </li>
@@ -459,15 +461,19 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <div class="block">Modifies an entity that already exists in the database.
 
  <p>For an update to be made, a matching entity with the same unique identifier
- must be present in the database. In databases that use an append model to write data or
- follow the BASE model, this method behaves the same as the <a href="#insert(T)"><code>insert(T)</code></a> method.</p>
+ must be present in the database. The intent of this method is to modify existing data, not to upsert:
+ portable applications should not rely on a missing entity being created or on any particular result for it.
+ As a provider-specific limitation, databases that do not distinguish between inserting and updating, such as
+ those that use an append or overwrite write model, may write the entity as the <a href="#insert(T)"><code>insert(T)</code></a> method would.</p>
 
- <p>If the entity is versioned (for example, with an annotation or by
- another convention from the entity model such as having an attribute named <code>version</code>),
- then the version must also match. The version is automatically incremented when making
- the update.</p>
+ <p>Optimistic versioning is provider-dependent. Jakarta NoSQL does not define a version annotation, and
+ an attribute named <code>version</code> does not by itself enable optimistic locking. A provider may detect
+ version metadata through its own annotation or entity-model convention. When the provider supports optimistic
+ versioning, for example through provider-supported conditional updates, it may require the version to match
+ and may increment it when making the update. Not every database offers native conditional writes or atomic
+ operations, so optimistic locking is not a guarantee across all database models.</p>
 
- <p>Non-matching entities are ignored and do not cause an error to be raised.</p>
+ <p>When the database distinguishes updates from inserts, non-matching entities are ignored and do not cause an error to be raised.</p>
  <pre><code>
  @Inject
  Template template;
@@ -500,15 +506,19 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <div class="block">Modifies entities that already exist in the database.
 
  <p>For an update to be made to an entity, a matching entity with the same unique identifier
- must be present in the database. In databases that use an append model to write data or
- follow the BASE model, this method behaves the same as the <a href="#insert(java.lang.Iterable)"><code>insert(Iterable)</code></a> method.</p>
+ must be present in the database. The intent of this method is to modify existing data, not to upsert:
+ portable applications should not rely on a missing entity being created or on any particular result for it.
+ As a provider-specific limitation, databases that do not distinguish between inserting and updating, such as
+ those that use an append or overwrite write model, may write the entity as the <a href="#insert(java.lang.Iterable)"><code>insert(Iterable)</code></a> method would.</p>
 
- <p>If the entity is versioned (for example, with an annotation or by
- another convention from the entity model such as having an attribute named <code>version</code>),
- then the version must also match. The version is automatically incremented when making
- the update.</p>
+ <p>Optimistic versioning is provider-dependent. Jakarta NoSQL does not define a version annotation, and
+ an attribute named <code>version</code> does not by itself enable optimistic locking. A provider may detect
+ version metadata through its own annotation or entity-model convention. When the provider supports optimistic
+ versioning, for example through provider-supported conditional updates, it may require the version to match
+ and may increment it when making the update. Not every database offers native conditional writes or atomic
+ operations, so optimistic locking is not a guarantee across all database models.</p>
 
- <p>Non-matching entities are ignored and do not cause an error to be raised.</p>
+ <p>When the database distinguishes updates from inserts, non-matching entities are ignored and do not cause an error to be raised.</p>
  <pre><code>
  @Inject
  Template template;
@@ -526,7 +536,8 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <dt>Parameters:</dt>
 <dd><code>entities</code> - entities to update.</dd>
 <dt>Returns:</dt>
-<dd>the number of matching entities that were found in the database to update.</dd>
+<dd>an iterable containing the updated entities, which may or may not be different instances depending
+ on whether the update caused values to be generated or automatically incremented.</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if either the iterable is null or any element is null.</dd>
 </dl>
@@ -537,9 +548,9 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <h3 id="delete(java.lang.Object)">delete</h3>
 <div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(T&nbsp;entity)</span></div>
 <div class="block">Deletes a given entity. Deletion is performed by matching the Id, and if
- the entity is versioned (for example, with
- <code>jakarta.persistence.Version</code>), then also the version. Other
- attributes of the entity do not need to match.
+ the provider detects version metadata (for example, through a provider-supported annotation or
+ convention) and supports optimistic versioning, then the provider may also require the
+ version to match. Other attributes of the entity do not need to match.
  <pre><code>
  @Inject
  Template template;
@@ -568,8 +579,9 @@ K&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base
 <div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends T&gt;&nbsp;entities)</span></div>
 <div class="block">Deletes the given entities. Deletion of each entity is performed by
  matching the unique identifier, and if the entity is versioned (for
- example, with <code>jakarta.persistence.Version</code>), then also the
- version. Other attributes of the entity do not need to match.
+ example, with a provider-supported version annotation or by a convention of the entity model)
+ and the provider supports optimistic versioning, then also the version.
+ Other attributes of the entity do not need to match.
  <pre><code>
  @Inject
  Template template;
@@ -786,15 +798,15 @@ K&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="elemen
  result type. The provided <code>type</code> must be one of the following:
  <ul>
   <li>An entity class annotated with <code>@Entity</code>. The query may explicitly include a <code>FROM</code> clause,
-   or omit it if the entity can be inferred from the <code>type</code> parameter.</li>
+   or omit it, in which case the entity is inferred from the <code>type</code> parameter.</li>
    <li>A Java <code>record</code> annotated with <code>@Projection</code>, which maps partial or flattened results based on the query output.</li>
  </ul>
 
  <p>When using a projection, the query can omit the <code>SELECT</code> clause entirely if the record component names match
- the entity’s attributes. The <code>FROM</code> clause can also be omitted if the <a href="Projection.html#from()"><code>Projection.from()</code></a> attribute is specified.</p>
+ the entity’s attributes. The <code>FROM</code> clause can only be omitted if the <a href="Projection.html#from()"><code>Projection.from()</code></a> attribute is specified.</p>
 
  <p>If the query references a different entity than the one implied by the <code>type</code> argument,
- an <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link"><code>IllegalArgumentException</code></a> may be thrown by the provider to indicate a mismatch.</p>
+ the provider may throw an <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link"><code>IllegalArgumentException</code></a> to indicate a mismatch.</p>
 
  <p>This method returns a <a href="TypedQuery.html" title="interface in jakarta.nosql"><code>TypedQuery</code></a>, which improves safety and readability by:
  <ul>
@@ -822,7 +834,8 @@ K&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="elemen
 <dd>a <a href="TypedQuery.html" title="interface in jakarta.nosql"><code>TypedQuery</code></a> instance to bind parameters and fetch results</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the query or type is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the provided <code>type</code> is incompatible with the entity in the query</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the provider detects that the provided <code>type</code> is incompatible with the
+                                  entity in the query</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link">UnsupportedOperationException</a></code> - if the query is not supported by the underlying provider</dd>
 <dt>Since:</dt>
 <dd>1.1.0</dd>
