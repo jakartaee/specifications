@@ -529,32 +529,44 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div id="header">
 <h1>Jakarta NoSQL</h1>
 <div class="details">
-<span id="revnumber"> 1.1.0-M3,</span>
-<span id="revdate">June 13, 2026</span>
-<br><span id="revremark">M3</span>
+<span id="revnumber"> 1.1.0,</span>
+<span id="revdate">October 29, 2026</span>
+<br><span id="revremark">M4</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_copyright">Copyright</a>
+<li><a href="#_eclipse_foundation_specification_license_v2_0">Eclipse Foundation Specification License - v2.0</a>
 <ul class="sectlevel2">
-<li><a href="#_eclipse_foundation_specification_license_v1_1">Eclipse Foundation Specification License - v1.1</a></li>
 <li><a href="#_disclaimers">Disclaimers</a></li>
 </ul>
 </li>
+<li><a href="#_copyright">Copyright</a></li>
 <li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#_goal">1.1. Goal</a></li>
 <li><a href="#_non_goals">1.2. Non-Goals</a></li>
-<li><a href="#_conventions">1.3. Conventions</a></li>
-<li><a href="#_jakarta_nosql_project_team">1.4. Jakarta NoSQL Project Team</a>
+<li><a href="#_nosql_database_models">1.3. NoSQL Database Models</a>
 <ul class="sectlevel3">
-<li><a href="#_project_lead">1.4.1. Project Lead</a></li>
-<li><a href="#_contributors">1.4.2. Contributors</a></li>
-<li><a href="#_committers">1.4.3. Committers</a></li>
-<li><a href="#_historical_committer">1.4.4. Historical Committer</a></li>
-<li><a href="#_mentor">1.4.5. Mentor</a></li>
-<li><a href="#_full_list_of_contributors">1.4.6. Full List of Contributors</a></li>
+<li><a href="#_key_value_databases">1.3.1. Key-Value Databases</a></li>
+<li><a href="#_column_databases">1.3.2. Column Databases</a></li>
+<li><a href="#_document_databases">1.3.3. Document Databases</a></li>
+<li><a href="#_graph_databases">1.3.4. Graph Databases</a></li>
+<li><a href="#_time_series_databases">1.3.5. Time Series Databases</a></li>
+<li><a href="#_vector_databases">1.3.6. Vector Databases</a></li>
+</ul>
+</li>
+<li><a href="#_optional_communication_api">1.4. Optional Communication API</a></li>
+<li><a href="#_compatibility_testing">1.5. Compatibility Testing</a></li>
+<li><a href="#_conventions">1.6. Conventions</a></li>
+<li><a href="#_jakarta_nosql_project_team">1.7. Jakarta NoSQL Project Team</a>
+<ul class="sectlevel3">
+<li><a href="#_project_lead">1.7.1. Project Lead</a></li>
+<li><a href="#_contributors">1.7.2. Contributors</a></li>
+<li><a href="#_committers">1.7.3. Committers</a></li>
+<li><a href="#_historical_committer">1.7.4. Historical Committer</a></li>
+<li><a href="#_mentor">1.7.5. Mentor</a></li>
+<li><a href="#_full_list_of_contributors">1.7.6. Full List of Contributors</a></li>
 </ul>
 </li>
 </ul>
@@ -601,7 +613,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 <li><a href="#_template_classes">4. Template Classes</a>
 <ul class="sectlevel2">
-<li><a href="#_template_and_inheritance_classes">4.1. Template and Inheritance classes</a></li>
+<li><a href="#template_inheritance">4.1. Template and Inheritance classes</a></li>
 <li><a href="#_fluent_api_query">4.2. Fluent API Query</a>
 <ul class="sectlevel3">
 <li><a href="#_importance_of_fluent_api_query">4.2.1. Importance of Fluent API Query</a></li>
@@ -610,7 +622,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_query_navigation_hierarchy">4.2.4. Query Navigation Hierarchy</a></li>
 </ul>
 </li>
-<li><a href="#_ttl_time_to_live_support">4.3. TTL (Time-To-Live) Support</a></li>
+<li><a href="#_update_and_versioning_semantics">4.3. Update and Versioning Semantics</a></li>
+<li><a href="#_ttl_time_to_live_support">4.4. TTL (Time-To-Live) Support</a></li>
 </ul>
 </li>
 <li><a href="#_jakarta_nosql_providers">5. Jakarta NoSQL Providers</a>
@@ -625,7 +638,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <ul class="sectlevel2">
 <li><a href="#_jakarta_contexts_and_dependency_injection">6.1. Jakarta Contexts and Dependency Injection</a>
 <ul class="sectlevel3">
-<li><a href="#_cdi_extensions_for_jakarta_data_providers">6.1.1. CDI Extensions for Jakarta Data Providers</a></li>
+<li><a href="#_cdi_extensions_for_jakarta_nosql_providers">6.1.1. CDI Extensions for Jakarta NoSQL Providers</a></li>
 </ul>
 </li>
 <li><a href="#_jakarta_bean_validation">6.2. Jakarta Bean Validation</a></li>
@@ -648,11 +661,63 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta NoSQL
 
-Version: 1.1.0-M3
+Version: 1.1.0
 
-Status: M3
+Status: M4
 
-Release: June 13, 2026</pre>
+Release: October 29, 2026</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eclipse_foundation_specification_license_v2_0"><a class="anchor" href="#_eclipse_foundation_specification_license_v2_0"></a>Eclipse Foundation Specification License - v2.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This license (the &#8220;License&#8221;) governs the use, modification and distribution of a specification generated pursuant to the Eclipse Foundation Specification Process.</p>
+</div>
+<div class="paragraph">
+<p>By using the file or document that incorporates this License (the &#8220;Document&#8221;), you (the licensee) agree that you have read, understood, and will comply with the following terms and conditions.</p>
+</div>
+<div class="paragraph">
+<p>Permission to copy and distribute the contents of the Document, in any medium for any purpose, and without fee or royalty is hereby granted, provided that you include the following on ALL copies of the Document that you copy or distribute:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>link or URL to the Document</p>
+</li>
+<li>
+<p>All existing copyright notices, or if one does not exist, a notice (hypertext is preferred, but a textual representation is permitted) of the form: &#8220;Copyright &#169; [date-of-document] Eclipse Foundation AISBL [URL to this license] This document includes material copied from [title and URL of the Eclipse Foundation specification document].&#8221;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition to the license granted above, you are granted the  right to create modifications or derivatives of the Document:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>in software that implements the Document, in supporting materials accompanying such software, and in documentation of such software (collectively the &#8220;Works&#8221;), such  Works to be made available under terms of your choice  PROVIDED that all such Works include a notice of the form: &#8220;This [software/document (choose as applicable)] includes material derived from [title and URL of the Eclipse Foundation specification document].&#8221;; and</p>
+</li>
+<li>
+<p>in materials that demonstrate or describe conformance with the Document PROVIDED that all such materials include a notice of the form: &#8220;This material demonstrates conformance with the [title and URL of the Eclipse Foundation specification document].&#8221;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>NOTWITHSTANDING THE FOREGOING, the creation or publication of derivative works of the Document or portions of the Document for use as a specification or standard is expressly prohibited.</p>
+</div>
+<div class="sect2">
+<h3 id="_disclaimers"><a class="anchor" href="#_disclaimers"></a>Disclaimers</h3>
+<div class="paragraph">
+<p>THE DOCUMENT IS PROVIDED "AS IS," AND TO THE EXTENT PERMITTED BY APPLICABLE LAW THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION AISBL MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.</p>
+</div>
+<div class="paragraph">
+<p>TO THE EXTENT PERMITTED BY APPLICABLE LAW THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION AISBL WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
+</div>
+<div class="paragraph">
+<p>The name and trademarks of the copyright holders or the Eclipse Foundation AISBL may NOT be used in advertising or publicity pertaining to this document or its contents without specific, written prior permission.</p>
 </div>
 </div>
 </div>
@@ -661,87 +726,7 @@ Release: June 13, 2026</pre>
 <h2 id="_copyright"><a class="anchor" href="#_copyright"></a>Copyright</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Copyright (c) 2025 Eclipse Foundation.</p>
-</div>
-<div class="sect2">
-<h3 id="_eclipse_foundation_specification_license_v1_1"><a class="anchor" href="#_eclipse_foundation_specification_license_v1_1"></a>Eclipse Foundation Specification License - v1.1</h3>
-<div class="paragraph">
-<p>By using and/or copying this document, or the Eclipse Foundation
-document from which this statement is linked or incorporated by reference, you (the licensee) agree
-that you have read, understood, and will comply with the following
-terms and conditions:</p>
-</div>
-<div class="paragraph">
-<p>Permission to copy, and distribute the contents of this document, or
-the Eclipse Foundation document from which this statement is linked, in
-any medium for any purpose and without fee or royalty is hereby
-granted, provided that you include the following on ALL copies of the
-document, or portions thereof, that you use:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>link or URL to the original Eclipse Foundation document.</p>
-</li>
-<li>
-<p>All existing copyright notices, or if one does not exist, a notice
-(hypertext is preferred, but a textual representation is permitted)
-of the form: "Copyright (c) [$date-of-document]
-Eclipse Foundation AISBL <a href="https://www.eclipse.org/legal/efsl.php" class="bare">https://www.eclipse.org/legal/efsl.php</a> "</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Inclusion of the full text of this NOTICE must be provided. We
-request that authorship attribution be provided in any software,
-documents, or other items or products that you create pursuant to the
-implementation of the contents of this document, or any portion
-thereof.</p>
-</div>
-<div class="paragraph">
-<p>No right to create modifications or derivatives of Eclipse Foundation
-documents is granted pursuant to this license, except anyone may
-prepare and distribute derivative works and portions of this document
-in software that implements the specification, in supporting materials
-accompanying such software, and in documentation of such software,
-PROVIDED that all such works include the notice below. HOWEVER, the
-publication of derivative works of this document for use as a technical
-specification is expressly prohibited.</p>
-</div>
-<div class="paragraph">
-<p>The notice is:</p>
-</div>
-<div class="paragraph">
-<p>"Copyright (c) 2025 Eclipse Foundation AISBL.This software or
-document includes material copied from or derived from Jakarta NoSQL and
-<a href="https://jakarta.ee/specifications/nosql/."" class="bare">https://jakarta.ee/specifications/nosql/."</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_disclaimers"><a class="anchor" href="#_disclaimers"></a>Disclaimers</h3>
-<div class="paragraph">
-<p>THIS DOCUMENT IS PROVIDED "AS IS," AND TO THE EXTENT PERMITTED BY APPLICABLE LAW THE COPYRIGHT
-HOLDERS AND THE ECLIPSE FOUNDATION AISBL MAKE NO REPRESENTATIONS OR
-WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
-WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE
-SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS
-WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR
-OTHER RIGHTS.</p>
-</div>
-<div class="paragraph">
-<p>TO THE EXTENT PERMITTED BY APPLICABLE LAW THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION AISBL WILL NOT BE LIABLE
-FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT
-OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE
-CONTENTS THEREOF.</p>
-</div>
-<div class="paragraph">
-<p>The name and trademarks of the copyright holders or the Eclipse
-Foundation AISBL may NOT be used in advertising or publicity pertaining to
-this document or its contents without specific, written prior
-permission. Title to copyright in this document will at all times
-remain with copyright holders.</p>
-</div>
+<p>Copyright (c) 2026 Eclipse Foundation.</p>
 </div>
 </div>
 </div>
@@ -793,7 +778,168 @@ remain with copyright holders.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_conventions"><a class="anchor" href="#_conventions"></a>1.3. Conventions</h3>
+<h3 id="_nosql_database_models"><a class="anchor" href="#_nosql_database_models"></a>1.3. NoSQL Database Models</h3>
+<div class="paragraph">
+<p>Jakarta NoSQL provides common Mapping abstractions for different NoSQL database models, including key-value, column, document, graph, time series, and vector databases.</p>
+</div>
+<div class="paragraph">
+<p>These models do not constitute an exhaustive list. Providers may support additional database models and expose specialized capabilities beyond the common Mapping API. A provider is not required to support every model, and not every operation applies to every model.</p>
+</div>
+<div class="paragraph">
+<p>The following examples illustrate possible entity mappings. Database-specific capabilities and restrictions may vary according to the provider.</p>
+</div>
+<div class="sect3">
+<h4 id="_key_value_databases"><a class="anchor" href="#_key_value_databases"></a>1.3.1. Key-Value Databases</h4>
+<div class="paragraph">
+<p>Key-value databases access entities through keys and may serialize the entire entity as a value. The serialization mechanism is provider-defined, so <code>@Column</code> is not required on every serialized attribute and no particular format is prescribed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Session</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">String</span> id;
+
+    <span class="directive">private</span> <span class="predefined-type">String</span> username;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_column_databases"><a class="anchor" href="#_column_databases"></a>1.3.2. Column Databases</h4>
+<div class="paragraph">
+<p>Column databases organize data using column-oriented structures. The availability of filtering, ordering, and other query capabilities depends on the database and provider.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Customer</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">String</span> id;
+
+    <span class="annotation">@Column</span>
+    <span class="directive">private</span> <span class="predefined-type">String</span> name;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_document_databases"><a class="anchor" href="#_document_databases"></a>1.3.3. Document Databases</h4>
+<div class="paragraph">
+<p>Document databases store structured or semi-structured documents, which may include nested attributes and collections.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Customer</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">String</span> id;
+
+    <span class="annotation">@Column</span>
+    <span class="directive">private</span> Address address;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here <code>Address</code> is an embeddable class, as described in the entity mapping chapter.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_graph_databases"><a class="anchor" href="#_graph_databases"></a>1.3.4. Graph Databases</h4>
+<div class="paragraph">
+<p>Graph databases model data through entities and relationships. Relationship management and traversal are not standardized by Jakarta NoSQL and may be exposed through provider extensions.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Person</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">String</span> id;
+
+    <span class="annotation">@Column</span>
+    <span class="directive">private</span> <span class="predefined-type">String</span> name;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_time_series_databases"><a class="anchor" href="#_time_series_databases"></a>1.3.5. Time Series Databases</h4>
+<div class="paragraph">
+<p>Time series databases store and retrieve observations associated with time. Providers may impose additional restrictions on identifier types, including temporal representations.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">SensorReading</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> Instant timestamp;
+
+    <span class="annotation">@Column</span>
+    <span class="directive">private</span> <span class="type">double</span> temperature;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>Instant</code> is illustrative and is not a mandatory identifier type. Specialized temporal operations are not standardized in Jakarta NoSQL 1.1 and may be offered by providers.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vector_databases"><a class="anchor" href="#_vector_databases"></a>1.3.6. Vector Databases</h4>
+<div class="paragraph">
+<p>Vector databases store numerical representations of data for similarity-based retrieval. Providers may define supported vector representations, including dense, sparse, and multi-vector structures.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Article</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">String</span> id;
+
+    <span class="annotation">@Column</span>
+    <span class="directive">private</span> <span class="predefined-type">Vector</span> embedding;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>Vector</code> in this example is a provider-defined type, not a Jakarta NoSQL interface. Vector representations and specialized operations such as similarity search are not standardized in Jakarta NoSQL 1.1; providers may offer them through extensions.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_optional_communication_api"><a class="anchor" href="#_optional_communication_api"></a>1.4. Optional Communication API</h3>
+<div class="paragraph">
+<p>The Jakarta NoSQL Mapping API (entities, annotations, and <code>Template</code>) is the primary and required programming model of this specification.</p>
+</div>
+<div class="paragraph">
+<p>The Jakarta NoSQL Communication API defines optional contracts intended primarily for database-provider integration. Jakarta NoSQL implementations are not required to implement or expose the Communication API to achieve specification compatibility. Implementations may provide Communication API support according to their capabilities, and its absence does not affect compliance with the required Mapping API contracts.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_compatibility_testing"><a class="anchor" href="#_compatibility_testing"></a>1.5. Compatibility Testing</h3>
+<div class="paragraph">
+<p>The Jakarta NoSQL 1.1 TCK focuses on the required Mapping API contracts. Dedicated compatibility tests for the optional Communication API are not planned for this release. Implementations must not be considered incompatible solely because they do not support the Communication API.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The absence of dedicated Communication API tests is a proposed TCK coverage policy. It remains subject to the applicable Eclipse Foundation Specification Process and Jakarta EE Specification Committee approval, and is distinct from the optionality of the Communication API stated above.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_conventions"><a class="anchor" href="#_conventions"></a>1.6. Conventions</h3>
 <div class="paragraph">
 <p>Throughout the Jakarta NoSQL specification, the terms "entity attribute" and "entity property" are used interchangeably to refer to the fields or properties defined within an entity class.</p>
 </div>
@@ -805,14 +951,14 @@ remain with copyright holders.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_jakarta_nosql_project_team"><a class="anchor" href="#_jakarta_nosql_project_team"></a>1.4. Jakarta NoSQL Project Team</h3>
+<h3 id="_jakarta_nosql_project_team"><a class="anchor" href="#_jakarta_nosql_project_team"></a>1.7. Jakarta NoSQL Project Team</h3>
 <div class="paragraph">
 <p>This specification is being developed as part of Jakarta NoSQL project under the
 Jakarta EE Specification Process. It is the result of the collaborative work
 of the project committers and various contributors.</p>
 </div>
 <div class="sect3">
-<h4 id="_project_lead"><a class="anchor" href="#_project_lead"></a>1.4.1. Project Lead</h4>
+<h4 id="_project_lead"><a class="anchor" href="#_project_lead"></a>1.7.1. Project Lead</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -822,7 +968,7 @@ of the project committers and various contributors.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_contributors"><a class="anchor" href="#_contributors"></a>1.4.2. Contributors</h4>
+<h4 id="_contributors"><a class="anchor" href="#_contributors"></a>1.7.2. Contributors</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -838,7 +984,7 @@ of the project committers and various contributors.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_committers"><a class="anchor" href="#_committers"></a>1.4.3. Committers</h4>
+<h4 id="_committers"><a class="anchor" href="#_committers"></a>1.7.3. Committers</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -875,7 +1021,7 @@ of the project committers and various contributors.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_historical_committer"><a class="anchor" href="#_historical_committer"></a>1.4.4. Historical Committer</h4>
+<h4 id="_historical_committer"><a class="anchor" href="#_historical_committer"></a>1.7.4. Historical Committer</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -885,7 +1031,7 @@ of the project committers and various contributors.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mentor"><a class="anchor" href="#_mentor"></a>1.4.5. Mentor</h4>
+<h4 id="_mentor"><a class="anchor" href="#_mentor"></a>1.7.5. Mentor</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -895,7 +1041,7 @@ of the project committers and various contributors.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_full_list_of_contributors"><a class="anchor" href="#_full_list_of_contributors"></a>1.4.6. Full List of Contributors</h4>
+<h4 id="_full_list_of_contributors"><a class="anchor" href="#_full_list_of_contributors"></a>1.7.6. Full List of Contributors</h4>
 <div class="paragraph">
 <p>The complete list of Jakarta NoSQL contributors may be found <a href="https://github.com/jakartaee/nosql/graphs/contributors">here</a>.</p>
 </div>
@@ -975,27 +1121,27 @@ When the context is clear, the term “entity” may refer either to the entity 
 <p>This approach ensures flexibility and interoperability, enabling developers to leverage Jakarta NoSQL&#8217;s standardized annotations alongside provider-specific annotations for fine-tuning entity behavior and mapping. Additionally, Jakarta NoSQL facilitates integration with other Jakarta EE specifications, fostering a cohesive Java-based NoSQL application development ecosystem.</p>
 </div>
 <div class="paragraph">
-<p>This section lays out the core requirements that an entity programming model must satisfy to be compatible with Jakarta Data and for the defining provider to be considered a fully compliant implementation of this specification.</p>
+<p>This section lays out the core requirements that an entity programming model must satisfy to be compatible with Jakarta NoSQL and for the defining provider to be considered a fully compliant implementation of this specification.</p>
 </div>
 <div class="paragraph">
 <p>Every entity programming model specifies an <em>entity-defining annotation</em>, <code>jakarta.nosql.Entity</code>.</p>
 </div>
 <div class="paragraph">
-<p>Furthermore, an entity programming model must define an annotation that identifies the field or property holding the unique identifier of an entity, the <code>Jakarta.nosql.Id</code>.</p>
+<p>Furthermore, an entity programming model must define an annotation that identifies the field or property holding the unique identifier of an entity, the <code>jakarta.nosql.Id</code>. Every entity must have an identifier mapped with <code>jakarta.nosql.Id</code>, either on a field or on a constructor parameter as described by the constructor rules below. The <code>jakarta.nosql.Column</code> annotation maps a persistent attribute but does not, by itself, establish the identity of an entity.</p>
 </div>
 <div class="paragraph">
 <p>Typically, an entity programming model specifies additional annotations used to make the entity schema explicit, for example, <code>jakarta.nosql.Id</code> and <code>jakarta.nosql.Column</code>. The nature of such annotations is beyond the scope of this specification.</p>
 </div>
 <div class="paragraph">
-<p>In a given entity programming model, entity classes are always mutable, or immutable, or the model might support a mix of mutable and immutable entity classes.</p>
+<p>Jakarta NoSQL supports mutable entity classes, immutable entity classes, and Java <code>record</code> types.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>A programming model that supports immutable entity classes may require that every mutable entity class declare a constructor with no parameters and might limit this constructor&#8217;s visibility.</p>
+<p>A mutable entity class is instantiated through a constructor with no parameters, which may be <code>public</code>, <code>protected</code>, or package-private.</p>
 </li>
 <li>
-<p>A programming model that supports the use of immutable entity classes&#8212;&#8203;ideally represented as Java <code>record</code> types&#8212;&#8203;would not typically require the existence of such a constructor.</p>
+<p>An immutable entity class, including a Java <code>record</code>, is instantiated through a constructor whose parameters are annotated with <code>jakarta.nosql.Id</code> or <code>jakarta.nosql.Column</code>.</p>
 </li>
 </ul>
 </div>
@@ -1011,7 +1157,7 @@ When the context is clear, the term “entity” may refer either to the entity 
 <div class="ulist">
 <ul>
 <li>
-<p>Constructors must be <code>public</code> or <code>protected</code> with no parameters or with parameters annotated with <code>Jakarta.nosql.Column</code> or <code>Jakarta.nosql.Id</code>.</p>
+<p>An entity must declare either a constructor with no parameters or a constructor whose parameters are annotated with <code>jakarta.nosql.Id</code> or <code>jakarta.nosql.Column</code>. A constructor with no parameters may be <code>public</code>, <code>protected</code>, or package-private; the specification does not limit entity constructors to <code>public</code> or <code>protected</code> visibility.</p>
 </li>
 <li>
 <p>Annotations at the constructor will build the entity and read information from the database, while field annotations are required to write information to the database.</p>
@@ -1020,10 +1166,19 @@ When the context is clear, the term “entity” may refer either to the entity 
 <p>If both a non-args constructor and a constructor with annotated parameters exist, the constructor with annotations will be used to create the entity.</p>
 </li>
 <li>
-<p>Constructor parameters without annotations will be ignored, utilizing a non-arg constructor instead.</p>
+<p>If no constructor has parameters annotated with <code>jakarta.nosql.Id</code> or <code>jakarta.nosql.Column</code>, the constructor with no parameters is used.</p>
+</li>
+<li>
+<p>This specification does not define the behavior of a constructor that mixes annotated and unannotated parameters.</p>
 </li>
 <li>
 <p>Entities should not have multiple constructors using <code>jakarta.nosql.Id</code> or <code>jakarta.nosql.Column</code> annotations.</p>
+</li>
+<li>
+<p>For a Java <code>record</code>, the annotations are placed on the record components and apply to the canonical constructor parameters; the exact propagation to fields and accessors follows the Java language rules for the annotation&#8217;s targets.</p>
+</li>
+<li>
+<p>Regardless of how the entity is constructed, the entity must have an identifier mapped with <code>jakarta.nosql.Id</code>, on a field or on an annotated constructor parameter.</p>
 </li>
 </ul>
 </div>
@@ -1045,7 +1200,7 @@ A <em>persistent field</em> has some corresponding representation in the data sc
 <div class="ulist">
 <ul>
 <li>
-<p>A <em>basic field</em> holds a value belonging to some fundamental data type supported natively by the Jakarta NoSQL Provider. Support for the set of basic types enumerated in the next section below is mandatory for all Jakarta NoSQL providers.</p>
+<p>A <em>basic field</em> holds a value belonging to some fundamental data type supported by the Jakarta NoSQL Provider. Support for the set of basic types enumerated in the next section below is mandatory for all Jakarta NoSQL providers, either through native database types or through conversion performed by the provider&#8217;s mapping layer.</p>
 </li>
 <li>
 <p>An <em>embedded field</em> allows the inclusion of the state of a finer-grained Java class within the state of an entity. The type of an embedded field is often a user-written Java class. Support for embedded fields varies depending on the Jakarta NoSQL provider and the database type.</p>
@@ -1264,7 +1419,7 @@ There is no representation of the embeddable class itself in the data schema.</p
 <div class="ulist">
 <ul>
 <li>
-<p>Constructors must be <code>public</code> or <code>protected</code> with no parameters or parameters annotated with <code>jakarta.nosql.Column</code>.</p>
+<p>An embeddable class must declare either a constructor with no parameters, which may be <code>public</code>, <code>protected</code>, or package-private, or a constructor whose parameters are annotated with <code>jakarta.nosql.Column</code>. Embeddable classes have no identifier, so <code>jakarta.nosql.Id</code> is not required.</p>
 </li>
 <li>
 <p>Annotations at the constructor will build the entity and read information from the database, while field annotations are required to write information to the database.</p>
@@ -1273,7 +1428,10 @@ There is no representation of the embeddable class itself in the data schema.</p
 <p>If both a non-args constructor and a constructor with annotated parameters exist, the constructor with annotations will be used to create the entity.</p>
 </li>
 <li>
-<p>Constructor parameters without annotations will be ignored, utilizing a non-arg constructor instead.</p>
+<p>If no constructor has parameters annotated with <code>jakarta.nosql.Column</code>, the constructor with no parameters is used.</p>
+</li>
+<li>
+<p>This specification does not define the behavior of a constructor that mixes annotated and unannotated parameters.</p>
 </li>
 <li>
 <p>Embeddable classes should not have multiple constructors using  <code>jakarta.nosql.Column</code> annotations.</p>
@@ -1546,6 +1704,8 @@ Given an instance of the first entity class, its association field references an
 
 <span class="annotation">@Entity</span>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Book</span> {
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
     <span class="annotation">@Column</span>
     <span class="directive">private</span> <span class="predefined-type">String</span> title;
     <span class="annotation">@Column</span>
@@ -1629,7 +1789,7 @@ Some databases might require the use of the udt attribute in the @Column annotat
 <p>The entity class will behave as an embeddable <strong>grouping</strong> class. This support may vary among NoSQL providers and might require a UDT name presentation in the case of embeddable or entity.</p>
 </div>
 <div class="paragraph">
-<p>For key-value databases, the serialization will occur through a unique blob, a process outside the scope of the Jakarta NoSQL specification.</p>
+<p>For key-value databases, a provider may serialize the whole entity as a single value; this mechanism is provider-defined and outside the scope of the Jakarta NoSQL specification.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1645,6 +1805,9 @@ Some databases might require the use of the udt attribute in the @Column annotat
 <span class="annotation">@Entity</span>
 <span class="comment">// It could be Embedded, and the behavior won't change</span>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Headquarter</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
 
     <span class="annotation">@Column</span>
     <span class="directive">private</span> <span class="predefined-type">String</span> city;
@@ -1842,7 +2005,7 @@ Supported types include: <code>String</code>, <code>Integer</code>, <code>Long</
 </ul>
 </div>
 <div class="paragraph">
-<p>Jakarta NoSQL has support for those nine types:</p>
+<p>Jakarta NoSQL has support for those ten types:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1905,7 +2068,7 @@ Supported types include: <code>String</code>, <code>Integer</code>, <code>Long</
 <p><strong>@MappedSuperclass</strong>: The <code>@MappedSuperclass</code> annotation is used to define shared attributes and behaviors across multiple entity classes by denoting a superclass whose mappings are applied to its subclasses.</p>
 </li>
 <li>
-<p><strong>@Inheritance</strong>: The @Inheritance annotation facilitates modeling inheritance hierarchies within entity classes. By default, Jakarta NoSQL supports a single inheritance strategy where subclass information is incorporated into the data structure as a field within the parent entity. In this default strategy, attributes of subclasses are represented as fields within the parent entity, maintaining a denormalized data structure. However, Jakarta NoSQL allows Jakarta Data providers to offer alternative inheritance strategies beyond the default specification.</p>
+<p><strong>@Inheritance</strong>: The @Inheritance annotation facilitates modeling inheritance hierarchies within entity classes. By default, Jakarta NoSQL supports a single inheritance strategy where subclass information is incorporated into the data structure as a field within the parent entity. In this default strategy, attributes of subclasses are represented as fields within the parent entity, maintaining a denormalized data structure. However, Jakarta NoSQL allows Jakarta NoSQL providers to offer alternative inheritance strategies beyond the default specification.</p>
 </li>
 <li>
 <p><strong>@DiscriminatorColumn</strong>: The <code>@DiscriminatorColumn</code> annotation configures the discriminator column used in single table inheritance mappings. By annotating a field with <code>@DiscriminatorColumn</code>, developers control the storage of discriminator values, ensuring accurate and efficient retrieval of entity subclasses.</p>
@@ -1952,12 +2115,12 @@ Supported types include: <code>String</code>, <code>Integer</code>, <code>Long</
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
-<span class="directive">public</span> record Person(<span class="annotation">@Id</span> <span class="directive">private</span> <span class="predefined-type">UUID</span> id, <span class="annotation">@Column</span> <span class="directive">private</span> <span class="predefined-type">String</span> name) {
+<span class="directive">public</span> record Person(<span class="annotation">@Id</span> <span class="predefined-type">UUID</span> id, <span class="annotation">@Column</span> <span class="predefined-type">String</span> name) {
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In this sample, the <code>Person</code> class is defined as a record, capturing its immutable nature. The <code>@Id</code> and <code>@Column</code> annotations are applied directly to the constructor parameters, indicating the primary key and persistent attributes.</p>
+<p>In this sample, the <code>Person</code> class is defined as a record, capturing its immutable nature. The <code>@Id</code> and <code>@Column</code> annotations are applied directly to the constructor parameters, indicating the primary key and persistent attributes. A record follows the same constructor rules as other entities: the annotated components map to the annotated parameters of its canonical constructor, and the identifier must be mapped with <code>@Id</code>. Mutable entity classes can instead be instantiated through a constructor with no parameters, which may be <code>public</code>, <code>protected</code>, or package-private.</p>
 </div>
 <div class="paragraph">
 <p>The serialization method of entity classes may vary depending on the NoSQL vendor and configuration. Here&#8217;s a sample JSON structure representing a <code>Person</code> entity:</p>
@@ -1996,6 +2159,9 @@ Supported types include: <code>String</code>, <code>Integer</code>, <code>Long</
 
 <span class="annotation">@Entity</span>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Address</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
 
     <span class="annotation">@Column</span>
     <span class="directive">private</span> <span class="predefined-type">String</span> street;
@@ -2041,6 +2207,8 @@ Supported types include: <code>String</code>, <code>Integer</code>, <code>Long</
 
 <span class="annotation">@Entity</span>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Car</span> {
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
     <span class="annotation">@Column</span>
     <span class="directive">private</span> <span class="predefined-type">String</span> make;
     <span class="annotation">@Column</span>
@@ -2162,7 +2330,7 @@ It&#8217;s important to note that not all NoSQL databases support entity associa
 <div class="sect2">
 <h3 id="_id"><a class="anchor" href="#_id"></a>3.3. @Id</h3>
 <div class="paragraph">
-<p>The <code>@Id</code> annotation in Jakarta NoSQL defines the unique identifier for entities within a database. For any entity, it is mandatory to have a field annotated with <code>@Id</code> to identify each instance uniquely. According to the specification, the field annotated with <code>@Id</code> must be of a basic type defined by <a href="#basic_types">Basic Types</a>.</p>
+<p>The <code>@Id</code> annotation in Jakarta NoSQL defines the unique identifier for entities within a database. For any entity, it is mandatory to have a field annotated with <code>@Id</code> to identify each instance uniquely. According to the specification, the field annotated with <code>@Id</code> must be of a basic type defined by <a href="#basic_types">Basic Types</a>. Supported identifier types and additional constraints may further depend on the database model and provider. For example, a time series provider may require a temporal identifier using a supported Java date/time type, and a vector provider may impose its own restrictions. The specification does not require <code>Instant</code> or any other particular identifier type for all providers.</p>
 </div>
 <div class="paragraph">
 <p>While the <code>@Id</code> annotation allows for a native name, it&#8217;s essential to note that some NoSQL databases have reserved keywords for their keys. In such cases, if the native name conflicts with a database keyword, the database might ignore it.</p>
@@ -2214,7 +2382,7 @@ It&#8217;s important to note that not all NoSQL databases support entity associa
 <div class="sect2">
 <h3 id="_column"><a class="anchor" href="#_column"></a>3.4. @Column</h3>
 <div class="paragraph">
-<p>The <code>@Column</code> annotation in Jakarta NoSQL marks fields that should be mapped to database columns within an entity, similar to the <code>@Id</code> annotation.</p>
+<p>The <code>@Column</code> annotation in Jakarta NoSQL marks fields that should be mapped to database columns within an entity, similar to the <code>@Id</code> annotation. This explicit attribute-level mapping applies to database models that map entities attribute by attribute; key-value providers may instead serialize the whole entity as a single value, as described in the note below.</p>
 </div>
 <div class="paragraph">
 <p>In the example below:</p>
@@ -2223,6 +2391,8 @@ It&#8217;s important to note that not all NoSQL databases support entity associa
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Person</span> {
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
     <span class="annotation">@Column</span>
     <span class="directive">private</span> <span class="predefined-type">String</span> nickname;
 
@@ -2268,7 +2438,7 @@ It&#8217;s important to note that not all NoSQL databases support entity associa
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-When using the <code>@Column</code> annotation, it&#8217;s important to remember that Key-Value databases usually only require the <code>@Id</code> annotation to identify unique entities. The Jakarta NoSQL provider will determine how to serialize the object for storage, which can be combined with other annotations, such as Jakarta JSON Binding, to customize the serialization process. This flexibility allows developers to adapt the serialization process to the specific requirements of their database.
+When using the <code>@Column</code> annotation, it&#8217;s important to remember that Key-Value databases usually only require the <code>@Id</code> annotation to identify unique entities. Providers may serialize the entire entity as a single value using a provider-defined mechanism that is outside the scope of this specification. The specification does not require any particular format (such as JSON, Java serialization, or a binary format), and <code>@Column</code> does not necessarily control every serialized field in that case. The provider determines how to serialize the object for storage, which can be combined with other annotations, such as Jakarta JSON Binding, to customize the serialization process. This flexibility allows developers to adapt the serialization process to the specific requirements of their database.
 </td>
 </tr>
 </table>
@@ -2301,6 +2471,9 @@ If you use NoSQL databases that serialize information to JSON, A Jakarta NoSQL p
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Employee</span> {
+
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
 
     <span class="annotation">@Column</span>
     <span class="directive">private</span> <span class="predefined-type">String</span> name;
@@ -2420,6 +2593,9 @@ If you use NoSQL databases that serialize information to JSON, A Jakarta NoSQL p
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Customer</span> {
 
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+
     <span class="annotation">@Convert</span>(EmailConverter.class)
     <span class="directive">private</span> Email email;
 }</code></pre>
@@ -2432,7 +2608,10 @@ If you use NoSQL databases that serialize information to JSON, A Jakarta NoSQL p
 <div class="sect2">
 <h3 id="_inheritance"><a class="anchor" href="#_inheritance"></a>3.7. Inheritance</h3>
 <div class="paragraph">
-<p>In Jakarta NoSQL, entities support inheritance, enabling the creation of hierarchies of classes where subclasses inherit attributes and behaviors from their superclass. This feature allows for the modeling of complex data structures and relationships within NoSQL databases.</p>
+<p>Jakarta NoSQL distinguishes between Java class inheritance and persistence inheritance strategies. Java class inheritance, such as extending a <code>@MappedSuperclass</code> or a non-entity class, is a language feature that applies to any entity. Persistence inheritance strategies, configured with <code>@Inheritance</code>, <code>@DiscriminatorColumn</code>, and <code>@DiscriminatorValue</code>, define how a class hierarchy is stored and queried; their support depends on the database model and on the capabilities of the provider.</p>
+</div>
+<div class="paragraph">
+<p>When a provider supports inheritance strategies, entities support inheritance, enabling the creation of hierarchies of classes where subclasses inherit attributes and behaviors from their superclass. This feature allows for the modeling of complex data structures and relationships within NoSQL databases.</p>
 </div>
 <div class="paragraph">
 <p>Entities in Jakarta NoSQL can be both abstract and concrete classes. Abstract classes can be annotated with the <code>@Entity</code> annotation and mapped as entities, allowing them to participate in entity inheritance hierarchies and be queried for as entities. Similarly, concrete classes can also be annotated with <code>@Entity</code> and serve as entities in the inheritance hierarchy.</p>
@@ -2441,7 +2620,7 @@ If you use NoSQL databases that serialize information to JSON, A Jakarta NoSQL p
 <p>It&#8217;s important to note that entities can extend both entity and non-entity classes. This flexibility allows for the construction of diverse inheritance structures, accommodating various data modeling requirements.</p>
 </div>
 <div class="paragraph">
-<p>Inheritance in Jakarta NoSQL facilitates polymorphic associations and queries, allowing for more flexible and expressive data manipulation and retrieval operations. Subclasses inherit attributes and behaviors from their superclass, providing a mechanism for code reuse and organizational structuring within the data model.</p>
+<p>Where supported by the provider, inheritance in Jakarta NoSQL facilitates polymorphic associations and queries, allowing for more flexible and expressive data manipulation and retrieval operations. Subclasses inherit attributes and behaviors from their superclass, providing a mechanism for code reuse and organizational structuring within the data model.</p>
 </div>
 <div class="paragraph">
 <p>Overall, the support for inheritance in Jakarta NoSQL contributes to the creation of robust and adaptable data models, empowering developers to effectively represent complex domain structures in NoSQL databases.</p>
@@ -2453,7 +2632,7 @@ If you use NoSQL databases that serialize information to JSON, A Jakarta NoSQL p
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Some NoSQL databases, particularly key-value databases, might not fully support inheritance due to their schemaless nature and limited querying capabilities. Developers should carefully consider the compatibility of their chosen database with inheritance features when designing their data models.
+Inheritance support depends on the database model and on the provider. Key-value databases are primarily focused on identifier-based access, so Jakarta NoSQL does not require key-value providers to implement inheritance strategies or polymorphic queries. Providers for other database models (column, document, graph, time series, and vector) are not required to implement inheritance capabilities that their database cannot offer, but providers that do support inheritance must honor the rules described in this specification. Developers should carefully consider the compatibility of their chosen database with inheritance features when designing their data models.
 </td>
 </tr>
 </table>
@@ -2467,7 +2646,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 <p>Abstract entity classes in Jakarta NoSQL differ from concrete entities primarily in their inability to be directly instantiated. Instead, abstract entities serve as templates or blueprints for concrete subclasses, encapsulating shared functionality and defining a common interface for their subclasses to implement.</p>
 </div>
 <div class="paragraph">
-<p>Despite being abstract, abstract entity classes are fully mapped as entities and can participate in data manipulation operations such as queries. Queries targeting abstract entity classes will operate over and/or retrieve instances of their concrete subclasses, allowing for polymorphic queries that span the entire inheritance hierarchy.</p>
+<p>Despite being abstract, abstract entity classes are fully mapped as entities and can participate in data manipulation operations such as queries. When the provider supports inheritance strategies, queries targeting abstract entity classes will operate over and/or retrieve instances of their concrete subclasses, allowing for polymorphic queries that span the entire inheritance hierarchy.</p>
 </div>
 <div class="paragraph">
 <p>By leveraging abstract entity classes, developers can effectively organize and structure their data model, promoting code reuse, maintainability, and scalability. Abstract entities encapsulate common attributes and behaviors, fostering a modular and extensible design approach within Jakarta NoSQL applications.</p>
@@ -2496,6 +2675,9 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 <span class="annotation">@MappedSuperclass</span>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">Animal</span> {
 
+    <span class="annotation">@Id</span>
+    <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+
     <span class="annotation">@Column</span>
     <span class="directive">private</span> <span class="predefined-type">String</span> breed;
 
@@ -2513,6 +2695,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="json">{
+   <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="integer">1</span>,
    <span class="key"><span class="delimiter">&quot;</span><span class="content">breed</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Golden Retriever</span><span class="delimiter">&quot;</span></span>,
    <span class="key"><span class="delimiter">&quot;</span><span class="content">age</span><span class="delimiter">&quot;</span></span>: <span class="integer">3</span>,
    <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Buddy</span><span class="delimiter">&quot;</span></span>
@@ -2520,7 +2703,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 </div>
 </div>
 <div class="paragraph">
-<p>In this JSON representation, the attributes <code>breed</code> and <code>age</code> from the <code>Animal</code> superclass are inherited by the <code>Dog</code> entity, showcasing the application of mapped superclass mappings to its subclasses.</p>
+<p>In this JSON representation, the attributes <code>id</code>, <code>breed</code>, and <code>age</code> from the <code>Animal</code> superclass are inherited by the <code>Dog</code> entity, showcasing the application of mapped superclass mappings to its subclasses.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2550,7 +2733,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 </div>
 </div>
 <div class="paragraph">
-<p>In Jakarta NoSQL, a unique strategy is employed where a single data structure per class hierarchy is utilized. In this strategy, all classes in the hierarchy are mapped to a single data structure in the database. The structure includes a "discriminator column," which serves to identify the specific subclass to which each instance belongs. This approach facilitates polymorphic relationships between entities and enables queries that span the entire class hierarchy.</p>
+<p>For providers that support inheritance strategies, Jakarta NoSQL defines a default strategy where a single data structure per class hierarchy is utilized. In this strategy, all classes in the hierarchy are mapped to a single data structure in the database. The structure includes a "discriminator column," which serves to identify the specific subclass to which each instance belongs. This approach facilitates polymorphic relationships between entities and enables queries that span the entire class hierarchy.</p>
 </div>
 <div class="paragraph">
 <p>However, this strategy does have a drawback: it requires that fields corresponding to subclass-specific state be nullable. Despite this limitation, the <code>@Inheritance</code> annotation provides a powerful mechanism for organizing and structuring data within Jakarta NoSQL applications, supporting code reuse, maintainability, and flexibility in data modeling.</p>
@@ -2566,7 +2749,7 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 </td>
 <td class="content">
 <div class="paragraph">
-<p>It&#8217;s crucial to note that the <code>@Inheritance</code> annotation may not be fully supported in all NoSQL databases, particularly in Key-value databases. Due to the schemaless nature of these databases, the concept of class inheritance and table inheritance, as seen in traditional relational databases, may not apply. Therefore, the use of <code>@Inheritance</code> in such environments might lead to unexpected behavior or errors, and the Key-value database may outright ignore this annotation.</p>
+<p>Support for the <code>@Inheritance</code> annotation depends on the database model and the provider. Key-value providers are not required to support inheritance strategies or polymorphic queries, and may ignore this annotation. Providers that do support inheritance must apply the behavior described in this specification, including the discriminator conditions described by <a href="#template_inheritance">Template and Inheritance classes</a> when inheritance mapping is used.</p>
 </div>
 <div class="paragraph">
 <p>Additionally, in cases where serialization is performed via JSON, certain NoSQL databases may not inherently support polymorphism and inheritance. However, Jakarta NoSQL providers may implement solutions using features from Jakarta JSON Binding to handle polymorphic entities effectively. Developers should be aware of these limitations and ensure compatibility with their chosen NoSQL database and serialization mechanisms when employing the <code>@Inheritance</code> annotation.</p>
@@ -2748,6 +2931,18 @@ Some NoSQL databases, particularly key-value databases, might not fully support 
 </li>
 </ol>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Handling of existing entity identifiers is provider-specific. This specification does not require duplicate-identifier detection or rejection. Depending on the capabilities and insertion semantics of the underlying database, a provider may reject the insertion, overwrite, append, or perform an upsert. If an insertion is rejected because of an existing identifier, the exception type is provider-specific, and this specification does not define a standard exception. This applies to single-entity, bulk, and TTL insertions. The mandatory <code>@Id</code> mapping identifies an entity but does not imply that the database enforces uniqueness on insertion.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Overall, this code snippet demonstrates how to use the <code>Template</code> class in Jakarta NoSQL to interact with the database, abstracting away the low-level details of database operations and providing a simplified interface for performing CRUD operations on entities.</p>
 </div>
@@ -2819,16 +3014,16 @@ template.delete(<span class="predefined-type">Book</span>.class)
 <p>Developers should be aware that while Jakarta NoSQL aims to provide a unified API across different NoSQL databases, there may be variations in support for certain operations depending on the capabilities of the specific database provider. When encountering limitations or unsupported operations, developers may need to adjust their application logic or consider alternative approaches to achieve the desired functionality within the constraints of the chosen NoSQL database technology.</p>
 </div>
 <div class="sect2">
-<h3 id="_template_and_inheritance_classes"><a class="anchor" href="#_template_and_inheritance_classes"></a>4.1. Template and Inheritance classes</h3>
+<h3 id="template_inheritance"><a class="anchor" href="#template_inheritance"></a>4.1. Template and Inheritance classes</h3>
 <div class="paragraph">
-<p>In case of querying an entity using the <code>@Inheritance</code> annotation as defined by <a href="#inheritance_definition">@Inheritance</a>, the Jakarta NoSQL provider must automatically include the condition where the value from <code>@DiscriminatorColumn</code> equals the value of <code>@DiscriminatorValue</code>.</p>
+<p>When a provider supports inheritance strategies and an entity hierarchy uses the <code>@Inheritance</code> annotation as defined by <a href="#inheritance_definition">@Inheritance</a>, the Jakarta NoSQL provider must automatically include the condition where the value from <code>@DiscriminatorColumn</code> equals the value of <code>@DiscriminatorValue</code>.</p>
 </div>
 <div class="paragraph">
 <p>For example, given the sample code from <a href="#inheritance_definition">@Inheritance</a> and executing the query for <code>SmsNotification</code>, the generated query should include a condition such as <code>type = 'SMS'</code> or its equivalent in the respective NoSQL database.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">List</span>&lt;SmsNotification&gt; notifications = template.select(SmsNotification.class);</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">List</span>&lt;SmsNotification&gt; notifications = template.select(SmsNotification.class).result();</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2870,32 +3065,35 @@ template.delete(<span class="predefined-type">Book</span>.class)
 <p>However, it&#8217;s essential to consider that the availability of certain query methods may vary depending on the specific NoSQL database being used. NoSQL databases that do not support certain operations can raise <code>UnsupportedOperationException</code>.</p>
 </div>
 <div class="paragraph">
-<p>Attempting to use unsupported operations with the fluent API query may result in runtime exceptions or unexpected behavior. Developers should consult the documentation of their chosen NoSQL database to understand its query capabilities and limitations and adjust their application logic accordingly.</p>
+<p>Providers may reject query operations that the underlying database does not support, with an <code>UnsupportedOperationException</code> where the corresponding <code>Template</code> and <code>QueryMapper</code> methods specify it. A rejected operation is distinct from a supported query that matches no entities, which returns an empty result. Portable applications must account for the capabilities of the chosen provider. Developers should consult the documentation of their chosen NoSQL database to understand its query capabilities and limitations and adjust their application logic accordingly.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_query_navigation_hierarchy"><a class="anchor" href="#_query_navigation_hierarchy"></a>4.2.4. Query Navigation Hierarchy</h4>
 <div class="paragraph">
-<p>In Jakarta NoSQL, the query navigation hierarchy refers to navigating through the properties of entities and their associated classes when constructing queries. Within an entity, property names must be unique, ignoring cases. For simple entity properties, the field or accessor method name serves as the entity property name. In the case of embedded and association classes, entity property names are computed by concatenating the field or accessor method names at each level, optionally joined by a dot or period, <code>.</code>, delimiter.</p>
+<p>In Jakarta NoSQL, the query navigation hierarchy refers to navigating through the properties of entities and their associated classes when constructing queries. Within a given entity or embeddable class, the names of persistent fields must be unique, ignoring cases. For simple entity properties, the field or accessor method name serves as the entity property name.</p>
 </div>
 <div class="paragraph">
-<p>Within a given entity or embeddable class, names assigned to persistent fields must be unique, ignoring cases.</p>
-</div>
-<div class="paragraph">
-<p>Furthermore, within the context of a given entity, each persistent field of an embeddable class reachable by navigation from the entity class may be assigned a compound name. The compound name is obtained by concatenating the names assigned to each field traversed by navigation from the entity class to the persistent field of the embedded class, optionally joined by a delimiter.</p>
+<p>For embedded and association classes, each persistent field reachable by navigation from the entity class may be assigned a compound name, obtained by concatenating the field or accessor method names traversed at each level, optionally joined by a dot or period, <code>.</code>, delimiter.</p>
 </div>
 <div class="paragraph">
 <p>For example, consider the following data model:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="type">class</span> <span class="class">Person</span> {
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Entity</span>
+<span class="type">class</span> <span class="class">Person</span> {
+  <span class="annotation">@Id</span>
   <span class="directive">private</span> <span class="predefined-type">Long</span> id;
+  <span class="annotation">@Column</span>
   <span class="directive">private</span> MailingAddress address;
 }
 
+<span class="annotation">@Embeddable</span>
 <span class="type">class</span> <span class="class">MailingAddress</span> {
+  <span class="annotation">@Column</span>
   <span class="directive">private</span> <span class="predefined-type">String</span> zipcode;
+  <span class="annotation">@Column</span>
   <span class="directive">private</span> <span class="predefined-type">String</span> city;
 }</code></pre>
 </div>
@@ -2908,7 +3106,7 @@ template.delete(<span class="predefined-type">Book</span>.class)
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Inject</span>
 Template template;
 
-<span class="predefined-type">List</span>&lt;<span class="predefined-type">Book</span>&gt; books = template.select(Person.class)
+<span class="predefined-type">List</span>&lt;Person&gt; people = template.select(Person.class)
         .where(<span class="string"><span class="delimiter">&quot;</span><span class="content">address.zipcode</span><span class="delimiter">&quot;</span></span>)
         .eq(<span class="string"><span class="delimiter">&quot;</span><span class="content">402-775</span><span class="delimiter">&quot;</span></span>)
         .orderBy(<span class="string"><span class="delimiter">&quot;</span><span class="content">address.city</span><span class="delimiter">&quot;</span></span>)
@@ -2930,34 +3128,46 @@ template.delete(Person.class)
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ttl_time_to_live_support"><a class="anchor" href="#_ttl_time_to_live_support"></a>4.3. TTL (Time-To-Live) Support</h3>
+<h3 id="_update_and_versioning_semantics"><a class="anchor" href="#_update_and_versioning_semantics"></a>4.3. Update and Versioning Semantics</h3>
 <div class="paragraph">
-<p>TTL (Time-To-Live) is a feature provided by many NoSQL databases that allows developers to set an expiration time for data stored in the database. When data reaches its TTL, it is automatically removed from the database, freeing up resources and ensuring that it remains efficient and clutter-free.</p>
+<p><code>Template.update(T)</code> and <code>Template.update(Iterable&lt;T&gt;)</code> are intended to modify entities that already exist in the database. They are not upserts: portable applications should not rely on a missing entity being created or on any particular result for it. Databases that do not distinguish between inserting and updating, such as those that use an append or overwrite write model, may write the entity as <code>insert</code> would; this is a provider-specific limitation. When the database distinguishes updates from inserts, non-matching entities are ignored without raising an error.</p>
 </div>
 <div class="paragraph">
-<p>For Java developers, TTL support is essential for managing data lifecycle and optimizing resource usage. It enables developers to implement caching strategies, manage temporary data, and enforce data retention policies effectively.</p>
+<p>Optimistic versioning is provider-dependent. This specification does not define a version annotation, and an attribute named <code>version</code> does not by itself enable optimistic locking in every provider. A provider may detect version metadata through its own annotation or entity-model convention. When the provider supports optimistic versioning, for example through provider-supported conditional updates, it may require the version to match and may increment it on update. Not every database offers native conditional writes or atomic operations, so optimistic locking is not a guarantee across all database models.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ttl_time_to_live_support"><a class="anchor" href="#_ttl_time_to_live_support"></a>4.4. TTL (Time-To-Live) Support</h3>
+<div class="paragraph">
+<p>TTL (Time-To-Live) is a feature provided by some NoSQL databases that allows developers to set an expiration time for data stored in the database. In databases that support it, data is removed automatically once its TTL is reached.</p>
 </div>
 <div class="paragraph">
-<p>While TTL support is valuable, not all NoSQL databases provide native support for TTL. In cases where TTL is not supported, attempting to set a TTL on data may result in an <code>UnsupportedOperationException</code> being thrown by the Jakarta NoSQL provider.</p>
+<p>For Java developers, TTL support is useful for managing data lifecycle and optimizing resource usage. It enables developers to implement caching strategies, manage temporary data, and implement data expiration where the database supports it.</p>
 </div>
 <div class="paragraph">
-<p>Additionally, some NoSQL providers may have limitations on the granularity of TTL values, such as supporting only TTL values specified in certain units (e.g., hours) or rounding TTL values to the nearest supported unit. In such cases, attempting to set a TTL value that does not align with the provider&#8217;s limitations may result in unexpected behavior or no TTL being applied.</p>
+<p>TTL is an optional capability. Some databases support per-entity expiration, others only offer retention policies configured at the database or collection level, which are not equivalent to a TTL supplied for a single insert, and others do not support expiration at all. In cases where TTL is not supported, attempting to set a TTL on data may result in an <code>UnsupportedOperationException</code> being thrown by the Jakarta NoSQL provider. The specification does not guarantee that a provider that does not throw this exception applies the expiration, so a requested TTL is not a guarantee of expiration, and applications must not assume that data inserted with a TTL will expire.</p>
 </div>
 <div class="paragraph">
-<p>For example, suppose a NoSQL database only supports TTL values specified in hours. If a developer attempts to set a TTL of 10 seconds, the Jakarta NoSQL provider may throw an UnsupportedOperationException. Similarly, if the developer attempts to set a TTL of 3660 seconds (which is more than one hour), the TTL value may be rounded to the nearest supported unit (i.e., one hour) by the provider.</p>
+<p>Per-entity TTL is distinct from retention policies configured at the database or collection level, such as those of time series databases, which are not controlled by <code>Template</code> and are not equivalent to a TTL passed to an insert operation.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, some NoSQL providers may have limitations on the granularity of TTL values, such as supporting only TTL values specified in certain units (e.g., hours) or rounding TTL values to the nearest supported unit. When a requested TTL does not align with these limitations, the provider may reject the request, round the duration to a supported value, or not apply the TTL.</p>
+</div>
+<div class="paragraph">
+<p>For example, suppose a NoSQL database only supports TTL values specified in hours. A provider may throw an <code>UnsupportedOperationException</code> for a TTL of 10 seconds. For a TTL of 3660 seconds (slightly more than one hour), a provider may round the value to a supported unit, such as one hour. These outcomes are provider-specific and are not guaranteed.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Inject</span>
 Template template;
 
-<span class="comment">// UnsupportedOperationException: TTL granularity not supported</span>
+<span class="comment">// A provider that only supports hours may reject this TTL, for example with an UnsupportedOperationException</span>
 template.insert(entity, <span class="predefined-type">Duration</span>.ofSeconds(<span class="integer">10L</span>));
 
-<span class="comment">// Inserting data with a TTL of one hour</span>
+<span class="comment">// A TTL of one hour, which a provider that only supports hours can represent</span>
 template.insert(entity, <span class="predefined-type">Duration</span>.ofSeconds(<span class="integer">3600</span>));
 
-<span class="comment">// Inserting data with a TTL of one hour (rounded from 3660 seconds)</span>
+<span class="comment">// A provider may round this TTL to a supported unit, such as one hour</span>
 template.insert(entity, <span class="predefined-type">Duration</span>.ofSeconds(<span class="integer">3660</span>));</code></pre>
 </div>
 </div>
@@ -2977,7 +3187,7 @@ template.insert(entity, <span class="predefined-type">Duration</span>.ofSeconds(
 <p>By adhering to these rules, Jakarta NoSQL providers ensure seamless integration with the application via dependency injection. This integration allows developers to access the functionality provided by the Template interfaces without concerning themselves with the underlying database implementation details.</p>
 </div>
 <div class="paragraph">
-<p>The Jakarta NoSQL specification sets clear guidelines for Jakarta NoSQL providers, ensuring consistency and compatibility across different providers. These rules enable multiple Jakarta Data providers to coexist within a system without interfering or overlapping at the same injection points. This level of standardization fosters interoperability and flexibility, empowering developers to choose the provider that best suits their project requirements.</p>
+<p>The Jakarta NoSQL specification sets clear guidelines for Jakarta NoSQL providers, ensuring consistency and compatibility across different providers. These rules enable multiple Jakarta NoSQL providers to coexist within a system without interfering or overlapping at the same injection points. This level of standardization fosters interoperability and flexibility, empowering developers to choose the provider that best suits their project requirements.</p>
 </div>
 <div class="sect2">
 <h3 id="_configuration_and_credentials"><a class="anchor" href="#_configuration_and_credentials"></a>5.1. Configuration and Credentials</h3>
@@ -3114,7 +3324,7 @@ Template anotherTemplate;</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>Thus, the implementation is eligible for injection to unqualified injection points typed to the repository interface, as defined by section 2.4 of the CDI specification, version 4.0.</p>
+<p>Thus, the implementation is eligible for injection to unqualified injection points typed to the template interface, as defined by section 2.4 of the CDI specification, version 4.0.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3129,7 +3339,7 @@ This specification does not restrict the scope of the template implementation be
 </table>
 </div>
 <div class="sect3">
-<h4 id="_cdi_extensions_for_jakarta_data_providers"><a class="anchor" href="#_cdi_extensions_for_jakarta_data_providers"></a>6.1.1. CDI Extensions for Jakarta Data Providers</h4>
+<h4 id="_cdi_extensions_for_jakarta_nosql_providers"><a class="anchor" href="#_cdi_extensions_for_jakarta_nosql_providers"></a>6.1.1. CDI Extensions for Jakarta NoSQL Providers</h4>
 <div class="paragraph">
 <p>In environments where CDI Full or CDI Lite is available, Jakarta NoSQL providers can leverage CDI extensions to enhance the integration and discovery of entities or implementations. While Jakarta NoSQL does not prescribe a specific type of CDI extension, it does require Jakarta NoSQL providers to ensure that template implementations are injected into appropriate injection points, typically interfaces, without additional qualifiers.</p>
 </div>
@@ -3254,12 +3464,15 @@ template.insert(student);</code></pre>
 <p>While Jakarta NoSQL offers a unified query interface based on Jakarta Common Query Language (JCQL), the actual query behavior and supported operations may vary across NoSQL database types. These limitations reflect fundamental differences in how each data model handles access, indexing, and consistency.</p>
 </div>
 <div class="paragraph">
-<p>The following guidelines describe expected behaviors by NoSQL category:</p>
+<p>The database models addressed by Jakarta NoSQL, which are not an exhaustive list, are introduced in <a href="#_nosql_database_models">NoSQL Database Models</a>. The following guidelines describe expected query behaviors for the models currently addressed. They are not exhaustive, and the capabilities of a specific database or provider may differ from what is described for its category.</p>
+</div>
+<div class="paragraph">
+<p>Entity updates performed with <code>Template.update(T)</code> and <code>Template.update(Iterable&lt;T&gt;)</code> operate on entity instances identified by their <code>@jakarta.nosql.Id</code>. They are distinct from query-based bulk updates, such as the <code>UPDATE</code> statements of Jakarta Common Query Language (JCQL) or the fluent <code>Template.update(Class)</code> API, which modify the entities matched by filtering conditions.</p>
 </div>
 <div class="sect4">
-<h5 id="_key_value_databases"><a class="anchor" href="#_key_value_databases"></a>6.4.1.1. Key-Value Databases</h5>
+<h5 id="_key_value_databases_2"><a class="anchor" href="#_key_value_databases_2"></a>6.4.1.1. Key-Value Databases</h5>
 <div class="paragraph">
-<p>Key-Value stores provide the most limited query capabilities:</p>
+<p>Key-Value stores are primarily focused on identifier-based access and provide the most limited query capabilities:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3273,18 +3486,18 @@ template.insert(student);</code></pre>
 <p>DELETE operations follow the same constraints — only by <code>@jakarta.nosql.Id</code>.</p>
 </li>
 <li>
-<p>UPDATE operations are not supported.</p>
+<p>Key-value providers are not required to implement advanced filtering or query-based updates, so these operations may result in an <code>UnsupportedOperationException</code>. This does not mean that key-value databases cannot modify existing data; entity-level operations such as <code>Template.update(T)</code> are subject to the capabilities of the provider.</p>
 </li>
 <li>
-<p>No filtering is allowed on other fields or attributes.</p>
+<p>Filtering on other fields or attributes is typically not available.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_wide_column_databases"><a class="anchor" href="#_wide_column_databases"></a>6.4.1.2. Wide-Column Databases</h5>
+<h5 id="_column_databases_2"><a class="anchor" href="#_column_databases_2"></a>6.4.1.2. Column Databases</h5>
 <div class="paragraph">
-<p>Wide-Column stores may offer slightly more flexibility:</p>
+<p>Column (wide-column) stores may offer slightly more flexibility:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3304,7 +3517,7 @@ template.insert(student);</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_document_databases"><a class="anchor" href="#_document_databases"></a>6.4.1.3. Document Databases</h5>
+<h5 id="_document_databases_2"><a class="anchor" href="#_document_databases_2"></a>6.4.1.3. Document Databases</h5>
 <div class="paragraph">
 <p>Document databases typically offer full query capabilities:</p>
 </div>
@@ -3329,7 +3542,7 @@ template.insert(student);</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_graph_databases"><a class="anchor" href="#_graph_databases"></a>6.4.1.4. Graph Databases</h5>
+<h5 id="_graph_databases_2"><a class="anchor" href="#_graph_databases_2"></a>6.4.1.4. Graph Databases</h5>
 <div class="paragraph">
 <p>Graph databases support advanced query patterns and filtering:</p>
 </div>
@@ -3348,7 +3561,25 @@ template.insert(student);</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_other_or_custom_nosql_providers"><a class="anchor" href="#_other_or_custom_nosql_providers"></a>6.4.1.5. Other or Custom NoSQL Providers</h5>
+<h5 id="_time_series_databases_2"><a class="anchor" href="#_time_series_databases_2"></a>6.4.1.5. Time Series Databases</h5>
+<div class="paragraph">
+<p>Time series databases are designed to store and retrieve data associated with time. Providers may impose additional constraints on entity identifiers, such as requiring the attribute annotated with <code>@Id</code> to use a supported temporal type from the Java Date and Time API.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta NoSQL does not standardize specialized temporal operations, such as retrieving the latest observations, temporal aggregation, or downsampling. Providers may expose these capabilities through extensions. Support for filtering, UPDATE, and DELETE operations is provider-specific.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_vector_databases_2"><a class="anchor" href="#_vector_databases_2"></a>6.4.1.6. Vector Databases</h5>
+<div class="paragraph">
+<p>Vector databases support the storage and retrieval of vector-based data. Providers may define their own vector representations, including dense, sparse, and multi-vector structures, according to their underlying database capabilities.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta NoSQL does not standardize vector representations or specialized operations such as similarity search and nearest-neighbor retrieval. Providers may expose these capabilities through extensions. Support for filtering, UPDATE, and DELETE operations is provider-specific.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_other_or_custom_nosql_providers"><a class="anchor" href="#_other_or_custom_nosql_providers"></a>6.4.1.7. Other or Custom NoSQL Providers</h5>
 <div class="paragraph">
 <p>If a NoSQL database does not fit into the categories above, it <strong>must</strong> support at minimum:</p>
 </div>
@@ -3364,7 +3595,7 @@ template.insert(student);</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_function_and_time_expression_limitations"><a class="anchor" href="#_function_and_time_expression_limitations"></a>6.4.1.6. Function and Time Expression Limitations</h5>
+<h5 id="_function_and_time_expression_limitations"><a class="anchor" href="#_function_and_time_expression_limitations"></a>6.4.1.8. Function and Time Expression Limitations</h5>
 <div class="paragraph">
 <p>Most NoSQL databases do not natively support scalar or time-based functions in their query engines. This includes expressions such as:</p>
 </div>
@@ -3379,7 +3610,7 @@ template.insert(student);</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>Since these are generally evaluated at the database level, behavior is not guaranteed and may vary by provider. Unsupported operations may result in: <code>UnsupportedOperationException</code>.</p>
+<p>Since these are generally evaluated at the database level, behavior is not guaranteed and may vary by provider. Providers may throw <code>UnsupportedOperationException</code> when a requested query function is not supported.</p>
 </div>
 </div>
 </div>
@@ -3389,7 +3620,7 @@ template.insert(student);</code></pre>
 <p>Jakarta NoSQL integrates query execution with Jakarta Mapping metadata. This integration allows Jakarta Common Query Language (JCQL) to resolve attribute names and types based on the annotated Java class structure.</p>
 </div>
 <div class="paragraph">
-<p>Only classes explicitly annotated with <code>@jakarta.nosql.Entity</code> are eligible for use in queries. Fields or constructor parameters must be annotated with either <code>@jakarta.nosql.Id</code> or <code>@jakarta.nosql.Column</code> to be considered queryable.</p>
+<p>Only classes explicitly annotated with <code>@jakarta.nosql.Entity</code> are eligible for use in queries. Every entity must have an identifier mapped with <code>@jakarta.nosql.Id</code>. Fields or constructor parameters must be annotated with either <code>@jakarta.nosql.Id</code> or <code>@jakarta.nosql.Column</code> to be considered queryable.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3444,8 +3675,8 @@ template.insert(student);</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
- 1.1.0-M3<br>
-Last updated 2025-05-04 17:24:41 +0100
+ 1.1.0<br>
+Last updated 2026-09-17 18:23:49 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">
