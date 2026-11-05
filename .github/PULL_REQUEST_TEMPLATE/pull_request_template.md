@@ -80,14 +80,14 @@ Note: If any item does not apply, check it and mark N/A below it.
 
 8. Compatibility certification request
   - [ ] Request follows [template](https://github.com/jakartaee/specification-committee/blob/master/compatibility-certification-request.md)
-  - [ ] SHA-256 fingerprint matches staged TCK zip file
+  - [ ] SHA-256/512 fingerprint matches staged TCK zip file
   - [ ] Request issue has `certification` label.
 
 9. TCK results summary
   - [ ] Page is hosted by Compatible Implementation project
   - [ ] Includes all information from certification request
   - [ ] Summary includes number of tests passed, failed, errors
-  - [ ] SHA-256 fingerprint matches staged TCK zip file on cert request
+  - [ ] SHA-256/512 fingerprint matches staged TCK zip file on cert request
 
 10. If a Release Review is required, the specification project team contacts the EMO to initiate the review by sending an email to emo@eclipse.org.
     (A Release Review is not required if the current release is a Service Release based on a previously successful Major or Minor
