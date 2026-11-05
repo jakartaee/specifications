@@ -1,6 +1,6 @@
 ---
 title: "Jakarta JSON Processing 2.2 (under development)"
-date: 2025-04-21
+date: 2026-11-05
 summary: "Release for Jakarta EE 12"
 ---
 Jakarta JSON Processing defines a Java(R) based framework for parsing, generating, transforming, and
@@ -15,24 +15,22 @@ the Jakarta EE 12 platform.
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
-* **N/A**
+* Security Manager
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
-**Java SE 11 or higher**
+**Java SE 17 or higher**
 
 # Details
 
 * [Jakarta JSON Processing 2.2 Release Record](https://projects.eclipse.org/projects/ee4j.jsonp/releases/2.2)
-<!--
 * [Jakarta JSON Processing 2.2 Specification Document](./apidocs) (Javadoc is the specification document of this project)
 * [Jakarta JSON Processing 2.2 Javadoc](./apidocs)
-* [Jakarta JSON Processing 2.2 TCK](https://download.eclipse.org/jakartaee/jsonp/2.2/jakarta-jsonp-tck-2.2.0.zip)  ([sig](https://download.eclipse.org/jakartaee/jsonp/2.2/jakarta-jsonp-tck-2.2.0.zip.sig),  [sha](https://download.eclipse.org/jakartaee/jsonp/2.2/jakarta-jsonp-tck-2.2.0.zip.sha256),  [pub](https://jakarta.ee/specifications/jakartaee-spec-committee.pub))
-  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/jsonp/2.2/)
+* [Jakarta JSON Processing 2.2 TCK](https://download.eclipse.org/jakartaee/jsonp/2.2/jakarta-jsonp-tck-2.2.0.zip)  (does not exist yet)
+  * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/jsonp/2.2/) (does not exist yet)
 * Maven coordinates
-  * [jakarta.json:jakarta.json-api:jar:2.2.0](https://central.sonatype.com/artifact/jakarta.json/jakarta.json-api/2.2.0/jar)
+  * [jakarta.json:jakarta.json-api:jar:2.2.0-M1](https://central.sonatype.com/artifact/jakarta.json/jakarta.json-api/2.2.0-M1/jar)
 * [Change Log](./changelog)
--->
 
 # Compatible Implementations
 <!--
