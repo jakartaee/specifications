@@ -1,0 +1,90 @@
+# Assigns the PR to its author and requests reviews from the mentor of every
+# top-level directory the PR modifies.
+#
+# A directory's mentor is read from the base commit's <dir>/_index.md, from a
+# line of the form:
+#   _internal_mentor_username: userName
+# Mentors are only ever added; existing reviewers and assignees are never removed.
+name: Notify mentors
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  request-mentor-reviews:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+    steps:
+      - name: Check out PR branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          # Full history so the merge base with the base branch is available.
+          fetch-depth: 0
+          # The token is not needed by git and must not be exposed to PR content.
+          persist-credentials: false
+
+      - name: Request mentor reviews
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          EXISTING_REVIEWERS: ${{ toJSON(github.event.pull_request.requested_reviewers.*.login) }}
+        run: |
+          set -euo pipefail
+
+          # Top-level directories with modifications (files at the repo root are ignored). 
+          # --no-renames lists both sides of a rename.
+          dirs=$(git -c core.quotepath=off diff --name-only --no-renames \
+                   "${BASE_SHA}...${HEAD_SHA}" \
+                 | grep '/' | cut -d/ -f1 | sort -u || true)
+
+          mentors=""
+          while IFS= read -r dir; do
+            [ -z "$dir" ] && continue
+
+            # Read from the base commit so a PR cannot choose its own mentor.
+            index=$(git show "${BASE_SHA}:${dir}/_index.md" 2>/dev/null || true)
+            if [ -z "$index" ]; then
+              echo "No _index.md found in ${dir}"
+              continue
+            fi
+
+            mentor=$(printf '%s\n' "$index" \
+                       | grep -m1 '^_internal_mentor_username:' \
+                       | sed -E 's/^_internal_mentor_username:[[:space:]]*//; s/[[:space:]]+$//; s/^["'"'"']//; s/["'"'"']$//' \
+                       || true)
+
+            # Accept only valid GitHub usernames.
+            if ! printf '%s' "$mentor" | grep -Eq '^[A-Za-z0-9]([A-Za-z0-9-]{0,38})$'; then
+              echo "No valid mentor found in ${dir}/_index.md"
+              continue
+            fi
+
+            mentors="${mentors}${mentor}"$'\n'
+          done <<< "$dirs"
+
+          # De-duplicate; exclude the PR author and users already requested.
+          excluded=$( { printf '%s' "$EXISTING_REVIEWERS" | jq -r '.[]'; printf '%s\n' "$PR_AUTHOR"; } )
+          new_mentors=$(printf '%s' "$mentors" | sort -fu \
+                          | grep -vixFf <(printf '%s\n' "$excluded") || true)
+
+          # Adding an existing assignee or reviewer is a no-op, and the --add-* flags never remove anyone.
+          args=(--repo "$REPO" --add-assignee "$PR_AUTHOR")
+
+          if [ -n "$new_mentors" ]; then
+            args+=(--add-reviewer "$(printf '%s\n' "$new_mentors" | paste -sd, -)")
+            echo "Requesting reviews from: $(echo "$new_mentors" | tr '\n' ' ')"
+          else
+            echo "No new mentors to request."
+          fi
+
+          gh pr edit "$PR_NUMBER" "${args[@]}"
