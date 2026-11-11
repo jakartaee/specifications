@@ -11,11 +11,11 @@ the Jakarta EE 12 platform.
 
 ### New features, enhancements or additions
 <!-- List here -->
-* **N/A**
+* Other changes required by the Jakarta EE 12 platform
 
 ### Removals, deprecations or backwards incompatible changes
 <!-- List here -->
-* Security Manager
+* Removes Security Manager-related requirements and API
 
 ### Minimum Java SE Version
 <!-- Specify the minimum required Java SE version for this specification -->
