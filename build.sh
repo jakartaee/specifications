@@ -23,7 +23,7 @@ echo -e "Step 2: Reset specifications content\n"
 mkdir -p website/static/specifications && mkdir -p website/content/specifications
 
 echo "Step 3: Copy PR content to Hugo content"
-find .  -mindepth 1 -maxdepth 1 -not -path "./.github" -not -path "./website" -type d  -exec cp -R {} website/content/specifications/ \;
+find .  -mindepth 1 -maxdepth 1 -not -path "./.github" -not -path "./website" -not -path "./nginx" -type d  -exec cp -R {} website/content/specifications/ \;
 cd website/content
 echo -e "Current working directory: $PWD\n"
 
@@ -72,5 +72,6 @@ for F in $FILES; do
 done
 echo "Done!"
 
-echo -e "Step 7: Remove jakarta.ee _redirect file."
-rm ../static/_redirects 
+echo -e "Step 7: Build the site with Hugo...\n"
+cd ..
+GOGC=20 hugo --buildFuture --destination ../public 
