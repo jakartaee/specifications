@@ -1,0 +1,374 @@
+{
+  "activation": {
+    "mentors": [
+      {
+        "name": "David Blevins",
+        "username": "dblevins"
+      },
+      {
+        "name": "Jean-Louis Monteiro",
+        "username": "jeanouii"
+      }
+    ]
+  },
+  "agentic-ai": {
+    "mentors": []
+  },
+  "annotations": {
+    "mentors": [
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "authentication": {
+    "mentors": [
+      {
+        "name": "Werner Keil",
+        "username": "keilw"
+      }
+    ]
+  },
+  "authorization": {
+    "mentors": [
+      {
+        "name": "Emily Jiang",
+        "username": "Emily-Jiang"
+      },
+      {
+        "name": "Thomas Watson",
+        "username": "tjwatson"
+      }
+    ]
+  },
+  "batch": {
+    "mentors": [
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "bean-validation": {
+    "mentors": [
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "cdi": {
+    "mentors": [
+      {
+        "name": "Emily Jiang",
+        "username": "Emily-Jiang"
+      },
+      {
+        "name": "Thomas Watson",
+        "username": "tjwatson"
+      }
+    ]
+  },
+  "concurrency": {
+    "mentors": [
+      {
+        "name": "Ed Bratt",
+        "username": "edbratt"
+      },
+      {
+        "name": "Dmitry Kornilov",
+        "username": "m0mus"
+      }
+    ]
+  },
+  "config": {
+    "mentors": []
+  },
+  "connectors": {
+    "mentors": [
+      {
+        "name": "Jun Qian",
+        "username": ""
+      },
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "coreprofile": {
+    "mentors": [
+      {
+        "name": "Emily Jiang",
+        "username": "Emily-Jiang"
+      },
+      {
+        "name": "Thomas Watson",
+        "username": "tjwatson"
+      }
+    ]
+  },
+  "crac": {
+    "mentors": []
+  },
+  "data": {
+    "mentors": [
+      {
+        "name": "Emily Jiang",
+        "username": "Emily-Jiang"
+      }
+    ]
+  },
+  "debugging": {
+    "mentors": []
+  },
+  "dependency-injection": {
+    "mentors": []
+  },
+  "deployment": {
+    "mentors": []
+  },
+  "enterprise-beans": {
+    "mentors": [
+      {
+        "name": "David Blevins",
+        "username": "dblevins"
+      }
+    ]
+  },
+  "enterprise-ws": {
+    "mentors": []
+  },
+  "expression-language": {
+    "mentors": [
+      {
+        "name": "Andrew Pielage",
+        "username": "Pandrex247"
+      }
+    ]
+  },
+  "faces": {
+    "mentors": [
+      {
+        "name": "Kenji Kazumura",
+        "username": "kazumura"
+      }
+    ]
+  },
+  "interceptors": {
+    "mentors": [
+      {
+        "name": "Emily Jiang",
+        "username": "Emily-Jiang"
+      },
+      {
+        "name": "Thomas Watson",
+        "username": "tjwatson"
+      }
+    ]
+  },
+  "jsonb": {
+    "mentors": [
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "jsonp": {
+    "mentors": [
+      {
+        "name": "Nathan Rauh",
+        "username": "njr-11"
+      }
+    ]
+  },
+  "mail": {
+    "mentors": [
+      {
+        "name": "Andrew Pielage",
+        "username": "Pandrex247"
+      }
+    ]
+  },
+  "managedbeans": {
+    "mentors": []
+  },
+  "management": {
+    "mentors": []
+  },
+  "messaging": {
+    "mentors": [
+      {
+        "name": "David Blevins",
+        "username": "dblevins"
+      },
+      {
+        "name": "Jean-Louis Monteiro",
+        "username": "jeanouii"
+      },
+      {
+        "name": "Cesar Hernandez",
+        "username": "cesarhernandezgt"
+      }
+    ]
+  },
+  "mvc": {
+    "mentors": [
+      {
+        "name": "Andrew Pielage",
+        "username": "Pandrex247"
+      }
+    ]
+  },
+  "nosql": {
+    "mentors": [
+      {
+        "name": "Kenji Kazumura",
+        "username": "kazumura"
+      }
+    ]
+  },
+  "pages": {
+    "mentors": [
+      {
+        "name": "Werner Keil",
+        "username": "keilw"
+      }
+    ]
+  },
+  "persistence": {
+    "mentors": [
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "platform": {
+    "mentors": [
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "portlet-bridge": {
+    "mentors": []
+  },
+  "portlet": {
+    "mentors": []
+  },
+  "query": {
+    "mentors": [
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "restful-ws": {
+    "mentors": [
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "rpc": {
+    "mentors": []
+  },
+  "security": {
+    "mentors": [
+      {
+        "name": "David Blevins",
+        "username": "dblevins"
+      },
+      {
+        "name": "Jean-Louis Monteiro",
+        "username": "jeanouii"
+      },
+      {
+        "name": "Cesar Hernandez",
+        "username": "cesarhernandezgt"
+      }
+    ]
+  },
+  "servlet": {
+    "mentors": [
+      {
+        "name": "Arjan Tijms",
+        "username": "arjantijms"
+      }
+    ]
+  },
+  "soap-attachments": {
+    "mentors": [
+      {
+        "name": "Ed Bratt",
+        "username": "edbratt"
+      },
+      {
+        "name": "Dmitry Kornilov",
+        "username": "m0mus"
+      }
+    ]
+  },
+  "tags": {
+    "mentors": [
+      {
+        "name": "Emily Jiang",
+        "username": "Emily-Jiang"
+      }
+    ]
+  },
+  "transactions": {
+    "mentors": []
+  },
+  "web-services-metadata": {
+    "mentors": []
+  },
+  "webprofile": {
+    "mentors": [
+      {
+        "name": "Ivar Grimstad",
+        "username": "ivargrimstad"
+      }
+    ]
+  },
+  "websocket": {
+    "mentors": [
+      {
+        "name": "Kenji Kazumura",
+        "username": "kazumura"
+      }
+    ]
+  },
+  "xml-binding": {
+    "mentors": [
+      {
+        "name": "Arjan Tijms",
+        "username": "arjantijms"
+      }
+    ]
+  },
+  "xml-registries": {
+    "mentors": []
+  },
+  "xml-rpc": {
+    "mentors": []
+  },
+  "xml-web-services": {
+    "mentors": [
+      {
+        "name": "Ed Bratt",
+        "username": "edbratt"
+      },
+      {
+        "name": "Dmitry Kornilov",
+        "username": "m0mus"
+      }
+    ]
+  }
+}
