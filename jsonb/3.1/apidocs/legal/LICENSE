@@ -331,12 +331,6 @@ only where Oracle has expressly included in the particular source file's header
 the words "Oracle designates this particular file as subject to the "Classpath"
 exception as provided by Oracle in the LICENSE file that accompanied this code."
 
-Certain source files distributed by IBM and/or its affiliates are
-subject to the following clarification and special exception to the GPL, but
-only where IBM has expressly included in the particular source file's header
-the words "IBM designates this particular file as subject to the "Classpath"
-exception as provided by IBM in the LICENSE file that accompanied this code."
-
     Linking this library statically or dynamically with other modules is making
     a combined work based on this library.  Thus, the terms and conditions of
     the GNU General Public License cover the whole combination.
