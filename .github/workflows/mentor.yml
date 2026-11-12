@@ -1,9 +1,9 @@
 # Assigns the PR to its author and requests reviews from the mentor of every
 # top-level directory the PR modifies.
 #
-# A directory's mentor is read from the base commit's <dir>/_index.md, from a
-# line of the form:
-#   _internal_mentor_username: userName
+# A directory's mentors are read from the base commit's mentor.json at the repo
+# root, which has the form:
+#   { "<dir>": { "mentors": [ { "username": "userName" } ] } }
 # Mentors are only ever added; existing reviewers and assignees are never removed.
 name: Notify mentors
 
@@ -47,29 +47,38 @@ jobs:
                    "${BASE_SHA}...${HEAD_SHA}" \
                  | grep '/' | cut -d/ -f1 | sort -u || true)
 
+          # Read from the base commit so a PR cannot choose its own mentors.
+          mentor_json=$(git show "${BASE_SHA}:mentor.json" 2>/dev/null || true)
+          if ! printf '%s' "$mentor_json" | jq -e . >/dev/null 2>&1; then
+            echo "No valid mentor.json found at the repository root"
+            mentor_json='{}'
+          fi
+
           mentors=""
           while IFS= read -r dir; do
             [ -z "$dir" ] && continue
 
-            # Read from the base commit so a PR cannot choose its own mentor.
-            index=$(git show "${BASE_SHA}:${dir}/_index.md" 2>/dev/null || true)
-            if [ -z "$index" ]; then
-              echo "No _index.md found in ${dir}"
-              continue
+            candidates=$(printf '%s' "$mentor_json" \
+                           | jq -r --arg dir "$dir" '.[$dir].mentors[]?.username // empty' \
+                           2>/dev/null || true)
+
+            found=0
+            while IFS= read -r mentor; do
+              [ -z "$mentor" ] && continue
+              
+              # Accept only valid GitHub usernames.
+              if ! printf '%s' "$mentor" | grep -Eq '^[A-Za-z0-9]([A-Za-z0-9-]{0,38})$'; then
+                echo "Ignoring invalid mentor username in mentor.json for ${dir}"
+                continue
+              fi
+              
+              mentors="${mentors}${mentor}"$'\n'
+              found=1
+            done <<< "$candidates"
+
+            if [ "$found" -eq 0 ]; then
+              echo "No valid mentor found in mentor.json for ${dir}"
             fi
-
-            mentor=$(printf '%s\n' "$index" \
-                       | grep -m1 '^_internal_mentor_username:' \
-                       | sed -E 's/^_internal_mentor_username:[[:space:]]*//; s/[[:space:]]+$//; s/^["'"'"']//; s/["'"'"']$//' \
-                       || true)
-
-            # Accept only valid GitHub usernames.
-            if ! printf '%s' "$mentor" | grep -Eq '^[A-Za-z0-9]([A-Za-z0-9-]{0,38})$'; then
-              echo "No valid mentor found in ${dir}/_index.md"
-              continue
-            fi
-
-            mentors="${mentors}${mentor}"$'\n'
           done <<< "$dirs"
 
           # De-duplicate; exclude the PR author and users already requested.
