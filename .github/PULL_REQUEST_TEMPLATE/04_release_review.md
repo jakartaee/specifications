@@ -34,7 +34,7 @@ For a service release, use the Service Release template instead.
 ### Mentor Spec Review Checklist
 
 1. Spec PR
-   - [ ] PR uses the [template](https://github.com/jakartaee/specifications/blob/master/pull_request_template.md)
+   - [ ] PR uses the [template](https://github.com/jakartaee/specifications/blob/master/.github/PULL_REQUEST_TEMPLATE/04_release_review.md)
    - [ ] Directory of the form `{spec}/x.y`
    - [ ] PDF of the form `jakarta-{spec}-spec-x.y.pdf` ("-spec" preferred but not required)
    - [ ] HTML of the form `jakarta-{spec}-spec-x.y.html` ("-spec" preferred but not required)
