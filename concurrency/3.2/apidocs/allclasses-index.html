@@ -89,7 +89,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Defines a <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextService.html" title="interface in jakarta.enterprise.concurrent"><code>ContextService</code></a>
  to be injected into
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextService.html" title="interface in jakarta.enterprise.concurrent"><code>ContextService</code></a> injection points
- including any required <code>Qualifier</code> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextServiceDefinition.html#qualifiers()"><code>ContextServiceDefinition.qualifiers()</code></a>
+ including any required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>Qualifier</code></a> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextServiceDefinition.html#qualifiers()"><code>ContextServiceDefinition.qualifiers()</code></a>
  and registered in JNDI by the container
  under the JNDI name that is specified in the
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextServiceDefinition.html#name()"><code>ContextServiceDefinition.name()</code></a> attribute.</div>
@@ -118,121 +118,126 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.Type.html" title="enum class in jakarta.enterprise.concurrent">Lock.Type</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
-<div class="block">Designates the type of lock to be READ or WRITE.</div>
+<div class="block">Designates the type of lock to be <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.Type.html#READ"><code>Lock.Type.READ</code></a> or <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.Type.html#WRITE"><code>Lock.Type.WRITE</code></a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManageableThread.html" title="interface in jakarta.enterprise.concurrent">ManageableThread</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html" title="class in jakarta.enterprise.concurrent">LockTimeoutException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
+<div class="block">Indicates that a <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html" title="annotation interface in jakarta.enterprise.concurrent"><code>Lock</code></a> could not be obtained within the allotted
+ <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html#accessTimeout()">access timeout</a>.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManageableThread.html" title="interface in jakarta.enterprise.concurrent">ManageableThread</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Interface to be implemented by the Jakarta&trade; EE product providers
  on platform threads that are created by calling
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ThreadFactory.html#newThread(java.lang.Runnable)" title="class or interface in java.util.concurrent" class="external-link"><code>ThreadFactory.newThread(java.lang.Runnable)</code></a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedExecutorDefinition</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedExecutorDefinition</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Defines a <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedExecutorService</code></a>
  to be injected into
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedExecutorService</code></a> injection points
- including any required <code>Qualifier</code> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html#qualifiers()"><code>ManagedExecutorDefinition.qualifiers()</code></a>
+ including any required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>Qualifier</code></a> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html#qualifiers()"><code>ManagedExecutorDefinition.qualifiers()</code></a>
  and registered in JNDI by the container
  under the JNDI name that is specified in the
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html#name()"><code>ManagedExecutorDefinition.name()</code></a> attribute.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.List.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedExecutorDefinition.List</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.List.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedExecutorDefinition.List</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Enables multiple <code>ManagedExecutorDefinition</code>
  annotations on the same type.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutors.html" title="class in jakarta.enterprise.concurrent">ManagedExecutors</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutors.html" title="class in jakarta.enterprise.concurrent">ManagedExecutors</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Utility methods for classes defined in this package.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorService.html" title="interface in jakarta.enterprise.concurrent">ManagedExecutorService</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorService.html" title="interface in jakarta.enterprise.concurrent">ManagedExecutorService</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">A manageable version of a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link"><code>ExecutorService</code></a>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedScheduledExecutorDefinition</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedScheduledExecutorDefinition</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Defines a <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedScheduledExecutorService</code></a>
  to be injected into
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedScheduledExecutorService</code></a> injection points
- including any required <code>Qualifier</code> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html#qualifiers()"><code>ManagedScheduledExecutorDefinition.qualifiers()</code></a>
+ including any required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>Qualifier</code></a> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html#qualifiers()"><code>ManagedScheduledExecutorDefinition.qualifiers()</code></a>
  and registered in JNDI by the container
  under the JNDI name that is specified in the
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html#name()"><code>ManagedScheduledExecutorDefinition.name()</code></a> attribute.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.List.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedScheduledExecutorDefinition.List</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.List.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedScheduledExecutorDefinition.List</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Enables multiple <code>ManagedScheduledExecutorDefinition</code>
  annotations on the same type.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorService.html" title="interface in jakarta.enterprise.concurrent">ManagedScheduledExecutorService</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorService.html" title="interface in jakarta.enterprise.concurrent">ManagedScheduledExecutorService</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">A manageable version of a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link"><code>ScheduledExecutorService</code></a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedTask.html" title="interface in jakarta.enterprise.concurrent">ManagedTask</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedTask.html" title="interface in jakarta.enterprise.concurrent">ManagedTask</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">A task submitted to an <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedExecutorService</code></a> or
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedScheduledExecutorService</code></a> can optionally implement this
  interface to provide identifying information about the task, to provide
  a <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedTaskListener.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedTaskListener</code></a> to get notification of lifecycle events of
  the task, or to provide additional execution properties.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedTaskListener.html" title="interface in jakarta.enterprise.concurrent">ManagedTaskListener</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedTaskListener.html" title="interface in jakarta.enterprise.concurrent">ManagedTaskListener</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">A ManagedTaskListener is used to monitor the state of a task's Future.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent">ManagedThreadFactory</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent">ManagedThreadFactory</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">A manageable version of a <code>ThreadFactory</code>.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedThreadFactoryDefinition</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedThreadFactoryDefinition</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Defines <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedThreadFactory</code></a> instances
  to be injected into
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedThreadFactory</code></a> injection points
- including any required <code>Qualifier</code> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html#qualifiers()"><code>ManagedThreadFactoryDefinition.qualifiers()</code></a>
+ including any required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>Qualifier</code></a> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html#qualifiers()"><code>ManagedThreadFactoryDefinition.qualifiers()</code></a>
  and registered in JNDI by the container
  under the JNDI name that is specified in the
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html#name()"><code>ManagedThreadFactoryDefinition.name()</code></a> attribute.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.List.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedThreadFactoryDefinition.List</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.List.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedThreadFactoryDefinition.List</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
 <div class="block">Enables multiple <code>ManagedThreadFactoryDefinition</code>
  annotations on the same type.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent">Schedule</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab6">
-<div class="block">Defines a schedule that indicates when to run a method.</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab6"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent">Schedule</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab6">
+<div class="block">A schedule that indicates when to run a method.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html" title="class in jakarta.enterprise.concurrent">Schedule.Literal</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html" title="class in jakarta.enterprise.concurrent">Schedule.Literal</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Enables instances of the <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent"><code>Schedule</code></a> annotation to be created
  at run time.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/SkippedException.html" title="class in jakarta.enterprise.concurrent">SkippedException</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/SkippedException.html" title="class in jakarta.enterprise.concurrent">SkippedException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Exception indicating that the result of a value-producing task cannot be
  retrieved because the task run was skipped.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/spi/ThreadContextProvider.html" title="interface in jakarta.enterprise.concurrent.spi">ThreadContextProvider</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/spi/ThreadContextProvider.html" title="interface in jakarta.enterprise.concurrent.spi">ThreadContextProvider</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Third party providers of thread context implement this interface to
  participate in thread context capture and propagation.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/spi/ThreadContextRestorer.html" title="interface in jakarta.enterprise.concurrent.spi">ThreadContextRestorer</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/spi/ThreadContextRestorer.html" title="interface in jakarta.enterprise.concurrent.spi">ThreadContextRestorer</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Restores the prior context on a thread after a contextual task or action completes.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/spi/ThreadContextSnapshot.html" title="interface in jakarta.enterprise.concurrent.spi">ThreadContextSnapshot</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/spi/ThreadContextSnapshot.html" title="interface in jakarta.enterprise.concurrent.spi">ThreadContextSnapshot</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">An immutable snapshot of a particular type of thread context.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Trigger.html" title="interface in jakarta.enterprise.concurrent">Trigger</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Trigger.html" title="interface in jakarta.enterprise.concurrent">Trigger</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Triggers allow application developers to plug in rules for when
  and how often a task should run.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ZonedTrigger.html" title="interface in jakarta.enterprise.concurrent">ZonedTrigger</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ZonedTrigger.html" title="interface in jakarta.enterprise.concurrent">ZonedTrigger</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Triggers allow application developers to plug in rules for when
  and how often a task should run.</div>
 </div>
