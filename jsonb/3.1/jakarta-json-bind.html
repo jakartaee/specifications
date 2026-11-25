@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="generator" content="Asciidoctor 2.0.26">
 <meta name="author" content="Jakarta JSON Binding Team, https://projects.eclipse.org/projects/ee4j.jsonb">
 <title>Jakarta JSON Binding</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -117,7 +117,6 @@ h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title str
 :not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
-pre>code{display:block}
 pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
 em em{font-style:normal}
 strong strong{font-weight:400}
@@ -141,7 +140,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
 #header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
@@ -163,6 +162,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
 #toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
@@ -209,19 +209,17 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
 .literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
 .listingblock>.content{position:relative}
+.listingblock pre>code{display:block}
 .listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
 .listingblock:hover code[data-lang]::before{display:block}
 .listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
@@ -331,7 +329,7 @@ a.image{text-decoration:none;display:inline-block}
 a.image object{pointer-events:none}
 sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
 sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
 #footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
@@ -394,7 +392,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -527,7 +525,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .head .head{color:#f4f}
 </style>
 <!-- revnumber comes from plugin configuration -->
-<link rel="canonical" href="https://jakarta.ee/specifications/jsonb/3.1.0-M1/jakarta-jsonb-spec-3.1.0-M1" />
+<link rel="canonical" href="https://jakarta.ee/specifications/jsonb/3.1/jakarta-jsonb-spec-3.1" />
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
@@ -535,15 +533,15 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="details">
 <span id="author" class="author">Jakarta JSON Binding Team, https://projects.eclipse.org/projects/ee4j.jsonb</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/jsonb-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/jsonb-dev</a></span><br>
-<span id="revnumber"> 3.1.0-M1,</span>
-<span id="revdate">August 05, 2026</span>
+<span id="revnumber"> 3.1,</span>
+<span id="revdate">October 13, 2026</span>
 <br><span id="revremark">DRAFT</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#eclipse-foundation-specification-license-v2-0">Eclipse Foundation Specification License - v2.0</a>
 <ul class="sectlevel2">
-<li><a href="#eclipse-foundation-specification-license">Eclipse Foundation Specification License</a>
-<ul class="sectlevel3">
 <li><a href="#disclaimers">Disclaimers</a></li>
 </ul>
 </li>
@@ -590,10 +588,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#untyped-mapping">3.6. Untyped mapping</a></li>
 <li><a href="#java-class-and-record">3.7. Java Class and Record</a>
 <ul class="sectlevel3">
-<li><a href="#scope-and-field-access-strategy">3.7.1. Scope and Field access strategy</a></li>
-<li><a href="#nested-classes">3.7.2. Nested Classes</a></li>
-<li><a href="#static-nested-classes">3.7.3. Static Nested Classes</a></li>
-<li><a href="#anonymous-classes">3.7.4. Anonymous Classes</a></li>
+<li><a href="#record-virtual-attributes">3.7.1. Record Virtual Attributes</a></li>
+<li><a href="#scope-and-field-access-strategy">3.7.2. Scope and Field access strategy</a></li>
+<li><a href="#nested-classes">3.7.3. Nested Classes</a></li>
+<li><a href="#static-nested-classes">3.7.4. Static Nested Classes</a></li>
+<li><a href="#anonymous-classes">3.7.5. Anonymous Classes</a></li>
 </ul>
 </li>
 <li><a href="#polymorphic-types">3.8. Polymorphic Types</a></li>
@@ -608,14 +607,14 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#null-array-values">3.14.2. Null Array Values</a></li>
 </ul>
 </li>
-<li><a href="#names-and-identifiers">3.15. Names and identifiers</a></li>
+<li><a href="#names-identifiers">3.15. Names and identifiers</a></li>
 <li><a href="#big-numbers">3.16. Big numbers</a></li>
 <li><a href="#generics">3.17. Generics</a>
 <ul class="sectlevel3">
 <li><a href="#type-resolution-algorithm">3.17.1. Type resolution algorithm</a></li>
 </ul>
 </li>
-<li><a href="#must-ignore-policy">3.18. Must-Ignore policy</a></li>
+<li><a href="#must-ignore-policy">3.18. Must-Ignore Policy</a></li>
 <li><a href="#uniqueness-of-properties">3.19. Uniqueness of properties</a></li>
 <li><a href="#json-processing-integration">3.20. JSON Processing integration</a></li>
 </ul>
@@ -626,37 +625,41 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <ul class="sectlevel3">
 <li><a href="#jakarta-json-bind-annotation-jsonbtransient">4.1.1. jakarta.json.bind.annotation.JsonbTransient</a></li>
 <li><a href="#jakarta-json-bind-annotation-jsonbproperty">4.1.2. jakarta.json.bind.annotation.JsonbProperty</a></li>
-<li><a href="#jakarta-json-bind-config-propertynamingstrategy">4.1.3. jakarta.json.bind.config.PropertyNamingStrategy</a></li>
-<li><a href="#property-names-resolution">4.1.4. Property names resolution</a></li>
 </ul>
 </li>
-<li><a href="#customizing-property-order">4.2. Customizing Property Order</a></li>
-<li><a href="#customizing-null-handling">4.3. Customizing Null Handling</a>
+<li><a href="#jakarta-json-bind-annotation-jsonbpropertyorder">4.2. jakarta.json.bind.annotation.JsonbPropertyOrder</a>
 <ul class="sectlevel3">
-<li><a href="#jakarta-json-bind-annotation-jsonbnillable">4.3.1. jakarta.json.bind.annotation.JsonbNillable</a></li>
-<li><a href="#global-null-handling-configuration">4.3.2. Global null handling configuration</a></li>
+<li><a href="#jakarta-json-bind-config-propertynamingstrategy">4.2.1. jakarta.json.bind.config.PropertyNamingStrategy</a></li>
+<li><a href="#property-names-resolution">4.2.2. Property names resolution</a></li>
 </ul>
 </li>
-<li><a href="#i-json-support">4.4. I-JSON support</a>
+<li><a href="#customizing-property-order">4.3. Customizing Property Order</a></li>
+<li><a href="#customizing-null-handling">4.4. Customizing Null Handling</a>
 <ul class="sectlevel3">
-<li><a href="#strict-date-serialization">4.4.1. Strict date serialization</a></li>
+<li><a href="#jakarta-json-bind-annotation-jsonbnillable">4.4.1. jakarta.json.bind.annotation.JsonbNillable</a></li>
+<li><a href="#global-null-handling-configuration">4.4.2. Global null handling configuration</a></li>
 </ul>
 </li>
-<li><a href="#custom-instantiation">4.5. Custom instantiation</a>
+<li><a href="#i-json-support">4.5. I-JSON support</a>
 <ul class="sectlevel3">
-<li><a href="#optional-parameter-values">4.5.1. Optional parameter values</a></li>
+<li><a href="#strict-date-serialization">4.5.1. Strict date serialization</a></li>
 </ul>
 </li>
-<li><a href="#custom-visibility">4.6. Custom visibility</a></li>
-<li><a href="#custom-mapping">4.7. Custom mapping</a>
+<li><a href="#custom-instantiation">4.6. Custom Instantiation</a>
 <ul class="sectlevel3">
-<li><a href="#adapters">4.7.1. Adapters</a></li>
-<li><a href="#serializersdeserializers">4.7.2. Serializers/Deserializers</a></li>
+<li><a href="#optional-parameter-values">4.6.1. Optional parameter values</a></li>
 </ul>
 </li>
-<li><a href="#custom-date-format">4.8. Custom date format</a></li>
-<li><a href="#custom-number-format">4.9. Custom number format</a></li>
-<li><a href="#custom-binary-data-handling">4.10. Custom binary data handling</a></li>
+<li><a href="#custom-visibility">4.7. Custom visibility</a></li>
+<li><a href="#custom-mapping">4.8. Custom mapping</a>
+<ul class="sectlevel3">
+<li><a href="#adapters">4.8.1. Adapters</a></li>
+<li><a href="#serializersdeserializers">4.8.2. Serializers/Deserializers</a></li>
+</ul>
+</li>
+<li><a href="#custom-date-format">4.9. Custom date format</a></li>
+<li><a href="#custom-number-format">4.10. Custom number format</a></li>
+<li><a href="#custom-binary-data-handling">4.11. Custom binary data handling</a></li>
 </ul>
 </li>
 <li><a href="#appendix">5. Appendix</a>
@@ -681,99 +684,75 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div class="content">
 <pre>Specification: Jakarta JSON Binding
 
-Version: 3.1.0-M1
+Version: 3.1
 
 Status: DRAFT
 
-Release: August 05, 2026</pre>
+Release: October 13, 2026</pre>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="eclipse-foundation-specification-license-v2-0"><a class="anchor" href="#eclipse-foundation-specification-license-v2-0"></a>Eclipse Foundation Specification License - v2.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This license (the &#8220;License&#8221;) governs the use, modification and distribution of a specification generated pursuant to the Eclipse Foundation Specification Process.</p>
 </div>
 <div class="paragraph">
-<p>Copyright (c) 2019, 2020 Eclipse Foundation.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="eclipse-foundation-specification-license"><a class="anchor" href="#eclipse-foundation-specification-license"></a>Eclipse Foundation Specification License</h3>
-<div class="paragraph">
-<p>By using and/or copying this document, or the Eclipse Foundation
-document from which this statement is linked, you (the licensee) agree
-that you have read, understood, and will comply with the following
-terms and conditions:</p>
+<p>By using the file or document that incorporates this License (the &#8220;Document&#8221;), you (the licensee) agree that you have read, understood, and will comply with the following terms and conditions.</p>
 </div>
 <div class="paragraph">
-<p>Permission to copy, and distribute the contents of this document, or
-the Eclipse Foundation document from which this statement is linked, in
-any medium for any purpose and without fee or royalty is hereby
-granted, provided that you include the following on ALL copies of the
-document, or portions thereof, that you use:</p>
+<p>Permission to copy and distribute the contents of the Document, in any medium for any purpose, and without fee or royalty is hereby granted, provided that you include the following on ALL copies of the Document that you copy or distribute:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>link or URL to the original Eclipse Foundation document.</p>
+<p>link or URL to the Document</p>
 </li>
 <li>
-<p>All existing copyright notices, or if one does not exist, a notice
-(hypertext is preferred, but a textual representation is permitted)
-of the form: "Copyright (c) [$date-of-document]
-Eclipse Foundation, Inc. <a href="https://www.eclipse.org/legal/efsl.php" class="bare">https://www.eclipse.org/legal/efsl.php</a>"</p>
+<p>All existing copyright notices, or if one does not exist, a notice (hypertext is preferred, but a textual representation is permitted) of the form: &#8220;Copyright &#169; [date-of-document] Eclipse Foundation AISBL [URL to this license] This document includes material copied from [title and URL of the Eclipse Foundation specification document].&#8221;</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Inclusion of the full text of this NOTICE must be provided. We
-request that authorship attribution be provided in any software,
-documents, or other items or products that you create pursuant to the
-implementation of the contents of this document, or any portion
-thereof.</p>
+<p>In addition to the license granted above, you are granted the  right to create modifications or derivatives of the Document:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>in software that implements the Document, in supporting materials accompanying such software, and in documentation of such software (collectively the &#8220;Works&#8221;), such  Works to be made available under terms of your choice  PROVIDED that all such Works include a notice of the form: &#8220;This [software/document (choose as applicable)] includes material derived from [title and URL of the Eclipse Foundation specification document].&#8221;; and</p>
+</li>
+<li>
+<p>in materials that demonstrate or describe conformance with the Document PROVIDED that all such materials include a notice of the form: &#8220;This material demonstrates conformance with the [title and URL of the Eclipse Foundation specification document].&#8221;</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>No right to create modifications or derivatives of Eclipse Foundation
-documents is granted pursuant to this license, except anyone may
-prepare and distribute derivative works and portions of this document
-in software that implements the specification, in supporting materials
-accompanying such software, and in documentation of such software,
-PROVIDED that all such works include the notice below. HOWEVER, the
-publication of derivative works of this document for use as a technical
-specification is expressly prohibited.</p>
+<p>NOTWITHSTANDING THE FOREGOING, the creation or publication of derivative works of the Document or portions of the Document for use as a specification or standard is expressly prohibited.</p>
+</div>
+<div class="sect2">
+<h3 id="disclaimers"><a class="anchor" href="#disclaimers"></a>Disclaimers</h3>
+<div class="paragraph">
+<p>THE DOCUMENT IS PROVIDED "AS IS," AND TO THE EXTENT PERMITTED BY APPLICABLE LAW THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION AISBL MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.</p>
 </div>
 <div class="paragraph">
-<p>The notice is:</p>
+<p>TO THE EXTENT PERMITTED BY APPLICABLE LAW THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION AISBL WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
 </div>
 <div class="paragraph">
-<p>"Copyright (c) 2018, 2020 Eclipse Foundation. This software or
-document includes material copied from or derived from Jakarta JSON Binding
-<a href="https://jakarta.ee/specifications/jsonb/2.0/" class="bare">https://jakarta.ee/specifications/jsonb/2.0/</a>"</p>
+<p>The name and trademarks of the copyright holders or the Eclipse Foundation AISBL may NOT be used in advertising or publicity pertaining to this document or its contents without specific, written prior permission.</p>
 </div>
-<div class="sect3">
-<h4 id="disclaimers"><a class="anchor" href="#disclaimers"></a>Disclaimers</h4>
-<div class="paragraph">
-<p>THIS DOCUMENT IS PROVIDED &quot;AS IS,&quot; AND THE COPYRIGHT
-HOLDERS AND THE ECLIPSE FOUNDATION MAKE NO REPRESENTATIONS OR
-WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
-WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE
-SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS
-WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR
-OTHER RIGHTS.</p>
-</div>
-<div class="paragraph">
-<p>THE COPYRIGHT HOLDERS AND THE ECLIPSE FOUNDATION WILL NOT BE LIABLE
-FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT
-OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE
-CONTENTS THEREOF.</p>
-</div>
-<div class="paragraph">
-<p>The name and trademarks of the copyright holders or the Eclipse
-Foundation may NOT be used in advertising or publicity pertaining to
-this document or its contents without specific, written prior
-permission. Title to copyright in this document will at all times
-remain with copyright holders.</p>
 </div>
 </div>
 </div>
 <h1 id="jakarta-json-binding-specification" class="sect0"><a class="anchor" href="#jakarta-json-binding-specification"></a>Jakarta JSON Binding Specification</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>Copyright (c) 2019, 2026 Eclipse Foundation.</p>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="introduction"><a class="anchor" href="#introduction"></a>1. Introduction</h2>
 <div class="sectionbody">
@@ -860,7 +839,7 @@ In many use cases, only a subset of JSON Document is required to be mapped to a 
 </li>
 <li>
 <p><strong>Integration</strong><br>
-Define or enable integration with Jakarta JSON Processing (JSON-P) 1.1.</p>
+Define or enable integration with Jakarta JSON Processing (JSON-P) 2.2.</p>
 </li>
 </ul>
 </div>
@@ -874,7 +853,7 @@ Define or enable integration with Jakarta JSON Processing (JSON-P) 1.1.</p>
 <ul>
 <li>
 <p><strong>Preserving equivalence (Round-trip)</strong><br>
-The specification recommends, but does not require equivalence of content for deserialized and serialized JSON documents.</p>
+The specification recommends, but does not require, equivalence of content for deserialized and serialized JSON documents.</p>
 </li>
 <li>
 <p><strong>JSON Schema</strong><br>
@@ -882,7 +861,7 @@ Generation of JSON Schema from Java classes, as well as validation based on JSON
 </li>
 <li>
 <p><strong>JEP 198 Lightweight JSON API</strong><br>
-Support and integration with Lightweight JSON API as defined within JEP 198 is out of scope of this specification. Will be reconsidered in future specification revisions.</p>
+Support and integration with Lightweight JSON API as defined within JEP 198 is out of scope of this specification. This will be reconsidered in future specification revisions.</p>
 </li>
 </ul>
 </div>
@@ -890,7 +869,7 @@ Support and integration with Lightweight JSON API as defined within JEP 198 is o
 <div class="sect2">
 <h3 id="conventions"><a class="anchor" href="#conventions"></a>1.4. Conventions</h3>
 <div class="paragraph">
-<p>The keywords ‘MUST’, ‘MUST NOT’, ‘REQUIRED’, ‘SHALL’, ‘SHALL NOT’, ‘SHOULD’, ‘SHOULD NOT’, ‘RECOMMENDED’, ‘MAY’, and ‘OPTIONAL’ in this document are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
+<p>The keywords 'MUST', 'MUST NOT', 'REQUIRED', 'SHALL', 'SHALL NOT', 'SHOULD', 'SHOULD NOT', 'RECOMMENDED', 'MAY', and 'OPTIONAL' in this document are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
 </div>
 <div class="paragraph">
 <p>Java code and sample data fragments are formatted as shown in Figure 1:</p>
@@ -912,7 +891,7 @@ Support and integration with Lightweight JSON API as defined within JEP 198 is o
 application or context-dependent URIs.</p>
 </div>
 <div class="paragraph">
-<p>All parts of this specification are normative, with the exception of examples, notes and sections explicitly marked as ‘Non-Normative’. Non-normative notes are formatted as shown below:</p>
+<p>All parts of this specification are normative, with the exception of examples, notes and sections explicitly marked as 'Non-Normative'. Non-normative notes are formatted as shown below:</p>
 </div>
 <div class="paragraph">
 <p><strong>Note:</strong> <em>This is a note.</em></p>
@@ -926,11 +905,11 @@ Process which defines the representation of information in a JSON document as an
 </div>
 <div class="paragraph">
 <p><strong>Deserialization</strong><br>
-Process of reading a JSON document and constructing a tree of content objects, where each object corresponds to part of JSON document, thus the content tree reflects the document’s content.</p>
+Process of reading a JSON document and constructing a tree of content objects, where each object corresponds to part of JSON document, thus the content tree reflects the document&#8217;s content.</p>
 </div>
 <div class="paragraph">
 <p><strong>Serialization</strong><br>
-Inverse process to deserialization. Process of traversing content object tree and writing a JSON document that reflects the tree’s content.</p>
+Inverse process to deserialization. Process of traversing a content object tree and writing a JSON document that reflects the tree&#8217;s content.</p>
 </div>
 </div>
 <div class="sect2">
@@ -988,7 +967,7 @@ Inverse process to deserialization. Process of traversing content object tree an
 <p>During the course of JSR 367 we received many excellent suggestions. Special thanks to Heather VanCura, David Delabassee and Reza Rahman for feedback and help with evangelizing the specification, and John Clingan for feedback and language corrections.</p>
 </div>
 <div class="paragraph">
-<p>During the course of JSR 367 we also received many excellent suggestions. Thanks in particular to Mark Struberg, Olena Syrota, Oleg Tsal-Tsalko and whole JUG UA for their contributions.</p>
+<p>During the course of JSR 367 we also received many excellent suggestions. Thanks in particular to Mark Struberg, Olena Syrota, Oleg Tsal-Tsalko and the whole JUG UA for their contributions.</p>
 </div>
 </div>
 </div>
@@ -1010,13 +989,13 @@ Inverse process to deserialization. Process of traversing content object tree an
 <div class="sect2">
 <h3 id="general"><a class="anchor" href="#general"></a>3.1. General</h3>
 <div class="paragraph">
-<p>JSON Binding implementations (<em>implementations</em> in further text) MUST support binding of JSON documents as defined in <a href="https://tools.ietf.org/html/rfc7159">RFC 7159 JSON Grammar</a>]. Serialized JSON output MUST conform to the RFC 7159 JSON Grammar and be encoded in UTF-8 encoding as defined in Section 8.1 (Character Encoding) of RFC 7159. Implementations MUST support deserialization of documents conforming to RFC 7159 JSON Grammar. In addition, implementations SHOULD NOT allow deserialization of RFC 7159 non-conforming text (e.g. unsupported encoding, &#8230;&#8203;) and report error in such cases. Detection of UTF encoding of a deserialized document MUST follow the encoding process defined in the Section 3 (Encoding) of <a href="https://tools.ietf.org/html/rfc4627">RFC 4627</a>. Implementations SHOULD ignore the presence of an UTF byte order mark (BOM) and not treat it as an error.</p>
+<p>JSON Binding implementations (<em>implementations</em> in further text) MUST support binding of JSON documents as defined in <a href="https://tools.ietf.org/html/rfc7159">RFC 7159 JSON Grammar</a>]. Serialized JSON output MUST conform to the RFC 7159 JSON Grammar and be encoded in UTF-8 encoding as defined in Section 8.1 (Character Encoding) of RFC 7159. Implementations MUST support deserialization of documents conforming to RFC 7159 JSON Grammar. In addition, implementations SHOULD NOT allow deserialization of RFC 7159 non-conforming text (e.g. unsupported encoding, &#8230;&#8203;) and SHOULD report errors in such cases. Detection of UTF encoding of a deserialized document MUST follow the encoding process defined in the Section 3 (Encoding) of <a href="https://tools.ietf.org/html/rfc4627">RFC 4627</a>. Implementations SHOULD ignore the presence of a UTF byte order mark (BOM) and not treat it as an error.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="errors"><a class="anchor" href="#errors"></a>3.2. Errors</h3>
 <div class="paragraph">
-<p>Implementations SHOULD NOT allow deserialization of RFC 7159 non-conforming text (e.g. unsupported encoding, &#8230;&#8203;) and report an error in such case. Implementations SHOULD also report an error during a deserialization operation, if it is not possible to represent a JSON document value with the expected Java type.</p>
+<p>Implementations SHOULD NOT allow deserialization of RFC 7159 non-conforming text (e.g. unsupported encoding, &#8230;&#8203;) and SHOULD report an error in such case. Implementations SHOULD also report an error during a deserialization operation if it is not possible to represent a JSON document value with the expected Java type.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1058,25 +1037,25 @@ Inverse process to deserialization. Process of traversing content object tree an
 <div class="sect3">
 <h4 id="java-lang-string-character"><a class="anchor" href="#java-lang-string-character"></a>3.3.1. java.lang.String, Character</h4>
 <div class="paragraph">
-<p>Instances of type <code>java.lang.String</code> and <code>java.lang.Character</code> are serialized to JSON String values as defined within RFC 7159 Section 7 (Strings) in UTF-8 encoding without a byte order mark. [JSB-3.3.1-1] Implementations SHOULD support deserialization of JSON text in other (than UTF-8) UTF encodings into <code>java.lang.String</code> instances.</p>
+<p>Instances of type <code>java.lang.String</code> and <code>java.lang.Character</code> are serialized to JSON String values as defined within RFC 7159 Section 7 (Strings) in UTF-8 encoding without a byte order mark. <a id="JSB-3.3.1-1"></a> Implementations SHOULD support deserialization of JSON text in other (than UTF-8) UTF encodings into <code>java.lang.String</code> instances.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="java-lang-byte-short-integer-long-float-double"><a class="anchor" href="#java-lang-byte-short-integer-long-float-double"></a>3.3.2. java.lang.Byte, Short, Integer, Long, Float, Double</h4>
 <div class="paragraph">
-<p>Serialization of type <code>java.lang.Byte</code>, <code>Short</code>, <code>Integer</code>, <code>Long</code>, <code>Float</code> or <code>Double</code> (and their corresponding primitive types) to a JSON Number MUST follow the conversion process defined in the javadoc specification for the corresponding type’s <code>toString()</code> method [JSB-3.3.2-1]. Deserialization of a JSON value into <code>java.lang.Byte</code>, <code>Short</code>, <code>Integer</code>, <code>Long</code>, <code>Float</code> or <code>Double</code> instance (or their corresponding primitive types) MUST follow the conversion process defined in the javadoc specification for the corresponding <code>parse$Type</code> method, such as <code>java.lang.Byte.parseByte()</code> for <code>Byte</code>.</p>
+<p>Serialization of type <code>java.lang.Byte</code>, <code>Short</code>, <code>Integer</code>, <code>Long</code>, <code>Float</code> or <code>Double</code> (and their corresponding primitive types) to a JSON Number MUST follow the conversion process defined in the javadoc specification for the corresponding type&#8217;s <code>toString()</code> method. <a id="JSB-3.3.2-1"></a> Deserialization of a JSON value into <code>java.lang.Byte</code>, <code>Short</code>, <code>Integer</code>, <code>Long</code>, <code>Float</code> or <code>Double</code> instance (or their corresponding primitive types) MUST follow the conversion process defined in the javadoc specification for the corresponding <code>parse$Type</code> method, such as <code>java.lang.Byte.parseByte()</code> for <code>Byte</code>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="java-lang-boolean"><a class="anchor" href="#java-lang-boolean"></a>3.3.3. java.lang.Boolean</h4>
 <div class="paragraph">
-<p>Serialization of type <code>java.lang.Boolean</code> and its corresponding <code>boolean</code> primitive type to a JSON value MUST follow the conversion process defined in the javadoc specification for <code>java.lang.Boolean.toString()</code> method. Deserialization of a JSON value into <code>java.lang.Boolean</code> instance or <code>boolean</code> primitive type MUST follow the conversion process defined in the javadoc specification for <code>java.lang.Boolean.parseBoolean()</code> method.</p>
+<p>Serialization of type <code>java.lang.Boolean</code> and its corresponding <code>boolean</code> primitive type to a JSON value MUST follow the conversion process defined in the javadoc specification for the <code>java.lang.Boolean.toString()</code> method. Deserialization of a JSON value into <code>java.lang.Boolean</code> instance or <code>boolean</code> primitive type MUST follow the conversion process defined in the javadoc specification for the <code>java.lang.Boolean.parseBoolean()</code> method.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="java-lang-number"><a class="anchor" href="#java-lang-number"></a>3.3.4. java.lang.Number</h4>
 <div class="paragraph">
-<p>Serialization of <code>java.lang.Number</code> instances (if their more concrete type is not defined elsewhere in this chapter) to a JSON string MUST retrieve double value from <code>java.lang.Number.doubleValue()</code> method and convert it to a JSON Number as defined in section-3.3.2,section 3.3.2. Deserialization of a JSON value into <code>java.lang.Number</code> type MUST return an instance of <code>java.math.BigDecimal</code> by using conversion process defined in the javadoc specification for constructor of <code>java.math.BigDecimal</code> with <code>java.lang.String</code> argument.</p>
+<p>Serialization of <code>java.lang.Number</code> instances (if their more concrete type is not defined elsewhere in this chapter) to a JSON string MUST retrieve a double value from the <code>java.lang.Number.doubleValue()</code> method and convert it to a JSON Number as defined in <a href="#java-lang-byte-short-integer-long-float-double">section 3.3.2</a>. Deserialization of a JSON value into a <code>java.lang.Number</code> type MUST return an instance of <code>java.math.BigDecimal</code> by using the conversion process defined in the javadoc specification for constructor of <code>java.math.BigDecimal</code> with a <code>java.lang.String</code> argument.</p>
 </div>
 </div>
 </div>
@@ -1119,31 +1098,31 @@ Inverse process to deserialization. Process of traversing content object tree an
 <div class="sect3">
 <h4 id="java-math-biginteger-bigdecimal"><a class="anchor" href="#java-math-biginteger-bigdecimal"></a>3.4.1. java.math.BigInteger, BigDecimal</h4>
 <div class="paragraph">
-<p>Serialization of type <code>java.math.BigInteger</code> or <code>BigDecimal</code> to a JSON Number MUST follow the conversion process defined in the javadoc specification for the corresponding type’s <code>toString()</code> method. Deserialization of a JSON value into <code>java.math.BigInteger</code> or <code>BigDecimal</code> instance MUST follow the conversion process defined in the javadoc specification for the constructor of <code>java.math.BigInteger</code> or <code>BigDecimal</code> with <code>java.lang.String</code> argument.</p>
+<p>Serialization of type <code>java.math.BigInteger</code> or <code>BigDecimal</code> to a JSON Number MUST follow the conversion process defined in the javadoc specification for the corresponding type&#8217;s <code>toString()</code> method. Deserialization of a JSON value into <code>java.math.BigInteger</code> or <code>BigDecimal</code> instance MUST follow the conversion process defined in the javadoc specification for the constructor of <code>java.math.BigInteger</code> or <code>BigDecimal</code> with a <code>java.lang.String</code> argument.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="java-net-url-uri"><a class="anchor" href="#java-net-url-uri"></a>3.4.2. java.net.URL, URI</h4>
 <div class="paragraph">
-<p>Serialization of type <code>java.net.URL</code> or <code>URI</code> to a JSON String MUST follow the conversion process defined in the javadoc specification for the corresponding type’s <code>toString()</code> method. Deserialization of a JSON value into <code>java.net.URL</code> or <code>URI</code> instance MUST follow the conversion process defined in the javadoc specification for the constructor of <code>java.net.URL</code> or <code>URI</code> with <code>java.lang.String</code> argument.</p>
+<p>Serialization of type <code>java.net.URL</code> or <code>URI</code> to a JSON String MUST follow the conversion process defined in the javadoc specification for the corresponding type&#8217;s <code>toString()</code> method. Deserialization of a JSON value into a <code>java.net.URL</code> or <code>URI</code> instance MUST follow the conversion process defined in the javadoc specification for the constructor of <code>java.net.URL</code> or <code>URI</code> with a <code>java.lang.String</code> argument.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="java-util-optional-optionalint-optionallong-optionaldouble"><a class="anchor" href="#java-util-optional-optionalint-optionallong-optionaldouble"></a>3.4.3. java.util.Optional, OptionalInt, OptionalLong, OptionalDouble</h4>
 <div class="paragraph">
-<p>Non-empty instances of type java.util.Optional, OptionalInt, OptionalLong, OptionalDouble are serialized to a JSON value by retrieving their contained instance and converting it to JSON value based on its type and corresponding mapping definitions within this chapter. Class fields containing empty optional instances are treated as having a null value and serialized based on section 3.14.1.</p>
+<p>Non-empty instances of type java.util.Optional, OptionalInt, OptionalLong, and OptionalDouble are serialized to a JSON value by retrieving their contained instance and converting it to a JSON value based on its type and corresponding mapping definitions within this chapter. Class fields containing empty optional instances are treated as having a null value and serialized based on section 3.14.1.</p>
 </div>
 <div class="paragraph">
 <p>Empty optional instances in array items are serialized as null.</p>
 </div>
 <div class="paragraph">
-<p>Deserializing into <code>Optional</code>, <code>OptionalInt</code>, <code>OptionalLong</code>, <code>OptionalDouble</code> return empty optional value for properties containing a null value. Otherwise any non-empty <code>Optional</code>, <code>OptionalInt</code>, <code>OptionalLong</code>, <code>OptionalDouble</code> value is constructed of type which deserialized based on mappings defined in this chapter.</p>
+<p>Deserializing into <code>Optional</code>, <code>OptionalInt</code>, <code>OptionalLong</code>, and <code>OptionalDouble</code> results in an empty optional value for properties containing a null value. Otherwise, any non-empty <code>Optional</code>, <code>OptionalInt</code>, <code>OptionalLong</code>, <code>OptionalDouble</code> value is constructed by deserializing its contained value according to the type mappings defined in this chapter.</p>
 </div>
 <div class="paragraph">
-<p>Instances of type <code>java.util.Optional&lt;T&gt;</code> are serialized to a JSON value as JSON objects when T alone would be serialized as JSON object. When T would be serialized as a JSON value (e.g. <code>java.lang.String</code>, <code>java.lang.Integer</code>), an instance of <code>java.util.Optional&lt;T&gt;</code> is serialized as a JSON value (without curly brackets).</p>
+<p>Instances of type <code>java.util.Optional&lt;T&gt;</code> are serialized to a JSON value as JSON objects when T alone would be serialized as a JSON object. When T would be serialized as a JSON value (e.g. <code>java.lang.String</code>, <code>java.lang.Integer</code>), an instance of <code>java.util.Optional&lt;T&gt;</code> is serialized as a JSON value (without curly brackets).</p>
 </div>
 <div class="paragraph">
-<p>Deserialization of a JSON value into <code>java.util.Optional&lt;T&gt;</code> MUST be supported if deserialization of a JSON value into instance of T is supported.</p>
+<p>Deserialization of a JSON value into <code>java.util.Optional&lt;T&gt;</code> MUST be supported if deserialization of a JSON value into an instance of T is supported.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1211,18 +1190,18 @@ Inverse process to deserialization. Process of traversing content object tree an
 </ul>
 </div>
 <div class="paragraph">
-<p>If not specified otherwise in this section, GMT standard time zone and offset specified from UTC Greenwich is used. If not specified otherwise, the date time format for serialization and deserialization is ISO 8601 without offset, as specified in <code>java.time.format.DateTimeFormatter.ISO_DATE</code>.</p>
+<p>Unless otherwise specified in this section, GMT standard time zone (UTC offset +00:00) is used. Unless otherwise specified, the date time format for serialization and deserialization is ISO 8601 without offset, as specified in <code>java.time.format.DateTimeFormatter.ISO_DATE</code>.</p>
 </div>
 <div class="paragraph">
 <p>Implementations MUST report an error if the date/time string in a JSON document does not correspond to the expected date/time format.</p>
 </div>
 <div class="paragraph">
-<p>If in strict I-JSON compliance mode, default date format is changed as it’s described in 4.4.1.</p>
+<p>If <a href="#i-json-support">strict I-JSON compliance mode</a> is configured, the default date format is changed as described in 4.4.1.</p>
 </div>
 <div class="sect3">
 <h4 id="java-util-date-calendar-gregoriancalendar"><a class="anchor" href="#java-util-date-calendar-gregoriancalendar"></a>3.5.1. java.util.Date, Calendar, GregorianCalendar</h4>
 <div class="paragraph">
-<p>The serialization format of <code>java.util.Date</code>, <code>Calendar</code>, <code>GregorianCalendar</code> instances with no time information is <code>ISO_DATE</code>.</p>
+<p>The serialization format of <code>java.util.Date</code>, <code>Calendar</code>, and <code>GregorianCalendar</code> instances with no time information is <code>ISO_DATE</code>.</p>
 </div>
 <div class="paragraph">
 <p>If time information is present, the format is <code>ISO_DATE_TIME</code>.</p>
@@ -1237,7 +1216,7 @@ Inverse process to deserialization. Process of traversing content object tree an
 <p>Implementations MUST support deserialization of any time zone format specified in <code>java.util.TimeZone</code> into a field or property of type <code>java.util.TimeZone</code> and <code>SimpleTimeZone</code>.</p>
 </div>
 <div class="paragraph">
-<p>Implementations MUST report an error for deprecated three-letter time zone IDs as specified in <code>java.util.Timezone</code>.</p>
+<p>Implementations MUST report an error for deprecated three-letter time zone IDs as specified in <code>java.util.TimeZone</code>.</p>
 </div>
 <div class="paragraph">
 <p>The serialization format of <code>java.util.TimeZone</code> and <code>SimpleTimeZone</code> is <code>NormalizedCustomID</code> as specified in <code>java.util.TimeZone</code>.</p>
@@ -1246,7 +1225,7 @@ Inverse process to deserialization. Process of traversing content object tree an
 <div class="sect3">
 <h4 id="java-time"><a class="anchor" href="#java-time"></a>3.5.3. java.time.*</h4>
 <div class="paragraph">
-<p>The serialization output for a java.time.Instant instance MUST be in a <code>ISO_INSTANT</code> format, as specified in <code>java.time.format.DateTimeFormatter</code>. Implementations MUST support the deserialization of an <code>ISO_INSTANT</code> formatted JSON string to a <code>java.time.Instant</code> instance.</p>
+<p>The serialization output for a java.time.Instant instance MUST be in an <code>ISO_INSTANT</code> format, as specified in <code>java.time.format.DateTimeFormatter</code>. Implementations MUST support the deserialization of an <code>ISO_INSTANT</code> formatted JSON string to a <code>java.time.Instant</code> instance.</p>
 </div>
 <div class="paragraph">
 <p>For other <code>java.time.*</code> classes, the following mapping table maps Java types to their corresponding formats:</p>
@@ -1301,7 +1280,7 @@ Inverse process to deserialization. Process of traversing content object tree an
 <p>Implementations MUST support the deserialization of any time zone ID format specified in <code>java.time.ZoneOffset</code> into a field or property of type <code>java.time.ZoneOffset</code>. The serialization format of <code>java.time.ZoneOffset</code> is the normalized zone ID as specified in <code>java.time.ZoneOffset</code>.</p>
 </div>
 <div class="paragraph">
-<p>Implementations MUST support the deserialization of any duration format specified in <code>java.time.Duration</code> into a field or property of type <code>java.time.Duration</code>. This is super-set of ISO 8601 duration format. The serialization format of <code>java.time.Duration</code> is the ISO 8601 seconds based representation, such as PT8H6M12.345S.</p>
+<p>Implementations MUST support the deserialization of any duration format specified in <code>java.time.Duration</code> into a field or property of type <code>java.time.Duration</code>. This is a super-set of ISO 8601 duration format. The serialization format of <code>java.time.Duration</code> is the ISO 8601 seconds based representation, such as PT8H6M12.345S.</p>
 </div>
 <div class="paragraph">
 <p>Implementations MUST support the deserialization of any period format specified in <code>java.time.Period</code> into a field or property of type <code>java.time.Period</code>. This is a super-set of ISO 8601 period format. The serialization format of <code>java.time.Period</code> is ISO 8601 period representation. A zero-length period is represented as zero days 'P0D'.</p>
@@ -1359,46 +1338,146 @@ Inverse process to deserialization. Process of traversing content object tree an
 <div class="sect2">
 <h3 id="java-class-and-record"><a class="anchor" href="#java-class-and-record"></a>3.7. Java Class and Record</h3>
 <div class="paragraph">
-<p>Any class instance passed to a deserialization operation must have a public or protected no-argument constructor. Implementations SHOULD throw an error if this condition is not met. This limitation does not apply to serialization operations, as well as to classes which specify explicit instantiation methods as described in section 4.5.</p>
+<p>Any class instance passed to a deserialization operation must have a public or protected no-argument constructor.
+Implementations SHOULD throw an error if this condition is not met.
+This limitation does not apply to serialization operations or to classes which specify explicit instantiation methods as described in the <a href="#custom-instantiation">Custom Instantiation</a> section.</p>
 </div>
 <div class="paragraph">
-<p>Any record instance passed to a deserialization operation must have its default generated constructor (and optionally a compact constructor that does not reassign any record component values) as its only constructor. Implementations SHOULD throw an error if this condition is not met. This limitation does not apply to serialization operations, as well as to records which specify explicit instantiation methods as described in section 4.5.</p>
+<p>Any record instance passed to a deserialization operation is instantiated via its canonical constructor.
+A compact constructor whose body is merged into the canonical constructor at compile time is indistinguishable at runtime and corresponds to the same deserialization path.
+Implementations SHOULD throw an error if this condition is not met.
+This limitation does not apply to serialization operations or to records which specify explicit instantiation methods as described in the <a href="#custom-instantiation">Custom Instantiation</a> section.</p>
 </div>
 <div class="sect3">
-<h4 id="scope-and-field-access-strategy"><a class="anchor" href="#scope-and-field-access-strategy"></a>3.7.1. Scope and Field access strategy</h4>
+<h4 id="record-virtual-attributes"><a class="anchor" href="#record-virtual-attributes"></a>3.7.1. Record Virtual Attributes</h4>
 <div class="paragraph">
-<p>For a deserialization operation of a Java property, if a matching public setter method exists, the method is called to set the value of the property. If a matching setter method with private, protected, or defaulted to package-only access exists, then this field is ignored. If no matching setter method exists and the field is public, then direct field assignment is used.</p>
+<p>A <em>record virtual attribute</em> is a value-returning, no-argument method of a record type where the method is declared <code>public</code>, but not <code>static</code>, and whose name differs from the names of components of the record. Additionally, methods from <code>java.lang.Object</code> and overrides thereof, such as <code>String toString()</code>, are excluded from being <em>record virtual attributes</em>.</p>
 </div>
 <div class="paragraph">
-<p>For a serialization operation, if a matching public getter method exists, the method is called to obtain the value of the property. If a matching getter method with private, protected, or defaulted to package-only access exists, then this field is ignored. If no matching getter method exists and the field is public, then the value is obtained directly from the field.</p>
+<p>Implementations MUST include all public virtual attributes in the serialized JSON output of a record unless suppressed by <code>@JsonbTransient</code>.</p>
+</div>
+<div class="paragraph">
+<p>The JSON property name for a virtual attribute is the method name unchanged (identity transformation, consistent with <a href="#names-identifiers">Names and Identifiers</a>).</p>
+</div>
+<div class="paragraph">
+<p>The JSON property value is the return value of the method, serialized according to the type&#8217;s default or customized mapping.</p>
+</div>
+<div class="paragraph">
+<p>Virtual attributes are read-only.
+A JSON name/value pair whose key matches the name of a virtual attribute MUST be silently ignored during deserialization, consistent with the <a href="#must-ignore-policy">Must-Ignore Policy</a>.
+No exception is thrown when such a pair is present in the input document.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> record FullName(<span class="predefined-type">String</span> first, <span class="predefined-type">String</span> last) {
+    <span class="comment">// virtual attribute — not a record component accessor</span>
+    <span class="directive">public</span> <span class="predefined-type">String</span> display() {
+        <span class="keyword">return</span> first + <span class="string"><span class="delimiter">&quot;</span><span class="content"> </span><span class="delimiter">&quot;</span></span> + last;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Serializing <code>new FullName("Jason", "Bourne")</code> with default mapping produces:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="json">{<span class="key"><span class="delimiter">&quot;</span><span class="content">first</span><span class="delimiter">&quot;</span></span>:<span class="string"><span class="delimiter">&quot;</span><span class="content">Jason</span><span class="delimiter">&quot;</span></span>,<span class="key"><span class="delimiter">&quot;</span><span class="content">last</span><span class="delimiter">&quot;</span></span>:<span class="string"><span class="delimiter">&quot;</span><span class="content">Bourne</span><span class="delimiter">&quot;</span></span>,<span class="key"><span class="delimiter">&quot;</span><span class="content">display</span><span class="delimiter">&quot;</span></span>:<span class="string"><span class="delimiter">&quot;</span><span class="content">Jason Bourne</span><span class="delimiter">&quot;</span></span>}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Deserializing the prior JSON into <code>FullName</code> silently ignores the <code>display</code> property and produces an instance of <code>FullName [ first="Jason", last="Bourne" ]</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="scope-and-field-access-strategy"><a class="anchor" href="#scope-and-field-access-strategy"></a>3.7.2. Scope and Field access strategy</h4>
+<div class="paragraph">
+<p>For a deserialization operation of a Java property:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If a matching public setter method exists, the method is called to set the value of the property.</p>
+</li>
+<li>
+<p>If a matching setter method with private, protected, or defaulted to package-only access exists, then this property is ignored.</p>
+</li>
+<li>
+<p>If no matching setter method exists and the field is public, then direct field assignment is used.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For a serialization operation of a Java property:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If a matching public getter method exists, the method is called to obtain the value of the property.</p>
+</li>
+<li>
+<p>If a matching getter method with private, protected, or defaulted to package-only access exists, then this property is ignored.</p>
+</li>
+<li>
+<p>If no matching getter method exists and the field is public, then the value is obtained directly from the field.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Public getter/setter methods without a corresponding field MUST be supported when serializing and deserializing Java Bean classes.
+When only public getter/setter methods without corresponding fields are present in the class,
+the getter method is called to obtain the value to serialize,
+and the setter method is called during the deserialization operation.</p>
+</div>
+<div class="paragraph">
+<p>For a deserialization operation of a Java record component:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If a custom constructor or factory method as described in <a href="#custom-instantiation">Custom Instantiation</a> is present, then a custom constructor or factory method is called to set the value of the component.</p>
+</li>
+<li>
+<p>If no custom constructor or factory method exists, then the canonical constructor as described in <a href="#java-class-and-record">Java Class and Record</a> is called to set the value of the component.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For a serialization operation of a Java record component:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The component accessor method is called to obtain the value of the component.  The component accessor method may be compiler-generated or explicitly redeclared by the record author.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>JSON Binding implementations MUST NOT deserialize into transient, final or static fields and MUST ignore name/value pairs corresponding to such fields.</p>
 </div>
 <div class="paragraph">
-<p>Implementations MUST support serialization of final fields. Transient and static fields MUST be ignored during serialization operation.</p>
+<p>Implementations MUST support serialization of final fields.
+Transient and static fields MUST be ignored during serialization operation.</p>
 </div>
 <div class="paragraph">
-<p>If a JSON document contains a name/value pair not corresponding to field or setter method then this name/value pair is skipped (see 3.18).</p>
-</div>
-<div class="paragraph">
-<p>Public getter/setter methods without a corresponding field MUST be supported. When only public getter/setter methods without corresponding fields are present in the class, the getter method is called to obtain the value to serialize, and the setter method is called during deserialization operation.</p>
+<p>If a JSON document contains a name/value pair not corresponding to field or setter method then this name/value pair is skipped
+as described in the <a href="#must-ignore-policy">Must-Ignore Policy</a> section.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="nested-classes"><a class="anchor" href="#nested-classes"></a>3.7.2. Nested Classes</h4>
+<h4 id="nested-classes"><a class="anchor" href="#nested-classes"></a>3.7.3. Nested Classes</h4>
 <div class="paragraph">
 <p>Implementations MUST support the binding of public and protected nested classes/records. For deserialization operations, both nested and encapsulating classes/records MUST fulfill the same instantiation requirements as specified in 3.7.1.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="static-nested-classes"><a class="anchor" href="#static-nested-classes"></a>3.7.3. Static Nested Classes</h4>
+<h4 id="static-nested-classes"><a class="anchor" href="#static-nested-classes"></a>3.7.4. Static Nested Classes</h4>
 <div class="paragraph">
 <p>Implementations MUST support the binding of public and protected static nested classes/records. For deserialization operations, the nested class/records MUST fulfill the same instantiation requirements as specified in 3.7.1.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="anonymous-classes"><a class="anchor" href="#anonymous-classes"></a>3.7.4. Anonymous Classes</h4>
+<h4 id="anonymous-classes"><a class="anchor" href="#anonymous-classes"></a>3.7.5. Anonymous Classes</h4>
 <div class="paragraph">
 <p>Deserialization into anonymous classes is not supported. Serialization of anonymous classes is supported by default object mapping.</p>
 </div>
@@ -1467,7 +1546,7 @@ Inverse process to deserialization. Process of traversing content object tree an
 <p>Serialization of an Enum instance to a JSON String value MUST follow the conversion process defined in javadoc specification for their <code>name()</code>.</p>
 </div>
 <div class="paragraph">
-<p>Deserialization of a JSON value into an enum instance MUST be done by calling the enum’s <code>valueOf(String)</code> method.</p>
+<p>Deserialization of a JSON value into an enum instance MUST be done by calling the enum&#8217;s <code>valueOf(String)</code> method.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1570,7 +1649,8 @@ Inverse process to deserialization. Process of traversing content object tree an
 <div class="sect2">
 <h3 id="attribute-order"><a class="anchor" href="#attribute-order"></a>3.13. Attribute order</h3>
 <div class="paragraph">
-<p>Class properties MUST be serialized in lexicographical order into the resulting JSON document. In case of inheritance, properties declared in super class MUST be serialized before properties declared in a child class.</p>
+<p>Java properties and record components as described in <a href="#scope-and-field-access-strategy">Scope and Field access strategy</a> MUST be serialized in lexicographical order into the resulting JSON document.
+In case of inheritance, properties declared in the super class MUST be serialized before properties declared in a child class.</p>
 </div>
 <div class="paragraph">
 <p>When deserializing a JSON document, field values MUST be set in the order of attributes present in the JSON document.</p>
@@ -1604,7 +1684,7 @@ Inverse process to deserialization. Process of traversing content object tree an
 </div>
 </div>
 <div class="sect2">
-<h3 id="names-and-identifiers"><a class="anchor" href="#names-and-identifiers"></a>3.15. Names and identifiers</h3>
+<h3 id="names-identifiers"><a class="anchor" href="#names-identifiers"></a>3.15. Names and identifiers</h3>
 <div class="paragraph">
 <p>According to RFC 7159 Section 7, every Java identifier name can be transformed using identity function into a valid JSON String. Identity function MUST be used for transforming Java identifier names into Strings in JSON document.</p>
 </div>
@@ -1668,50 +1748,50 @@ attribute)</p>
 <p>JSON Binding implementations MUST use the most specific type derived from the information available.</p>
 </div>
 <div class="paragraph">
-<p>Let’s consider situation when there is only a static type information of a given field/class/record/interface known, and there is no runtime type information available.</p>
+<p>Let&#8217;s consider situation when there is only a static type information of a given field/class/record/interface known, and there is no runtime type information available.</p>
 </div>
 <div class="paragraph">
-<p>Let <code>GenericClass&lt;T<sub>1</sub>…T<sub>n</sub>&gt;</code> be part of generic type declaration, where <code>GenericClass</code> is name of the generic type and <code>T<sub>1</sub>…T<sub>n</sub></code> are type parameters. For every , where <code>i</code> in <code>1…n</code>, there are 3 possible options:</p>
+<p>Let <code>GenericClass&lt;T<sub>1</sub>…T<sub>n</sub>&gt;</code> be part of generic type declaration, where <code>GenericClass</code> is name of the generic type and <code>T<sub>1</sub>…T<sub>n</sub></code> are type parameters. For every <code>T<sub>i</sub></code>, where <code>i</code> in <code>1…n</code>, there are 3 possible options:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>is concrete parameter type</p>
+<p><code>T<sub>i</sub></code> is concrete parameter type</p>
 </li>
 <li>
-<p>is bounded parameter type</p>
+<p><code>T<sub>i</sub></code> is bounded parameter type</p>
 </li>
 <li>
-<p>is wildcard parameter type without bounds</p>
+<p><code>T<sub>i</sub></code> is wildcard parameter type without bounds</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>In case 1, the most specific parameter type MUST be given concrete parameter type.</p>
+<p>In case 1, the most specific parameter type MUST be given concrete parameter type <code>T<sub>i</sub></code>.</p>
 </div>
 <div class="paragraph">
-<p>For bounded parameter type, let’s use bounds <code>B<sub>1</sub>,…,B<sub>m</sub></code>.</p>
+<p>For bounded parameter type, let&#8217;s use bounds <code>B<sub>1</sub>,…,B<sub>m</sub></code>.</p>
 </div>
 <div class="paragraph">
-<p>If <code>m = 1</code>, then the most specific parameter type MUST be derived from the given bound.</p>
+<p>If <code>m = 1</code>, then the most specific parameter type MUST be derived from the given bound <code>B<sub>1</sub></code>.</p>
 </div>
 <div class="paragraph">
-<p>If it is a class, record or interface, the most specific parameter type MUST be the class, record or interface.</p>
+<p>If <code>B<sub>1</sub></code> is a class, record or interface, the most specific parameter type MUST be the class, record or interface.</p>
 </div>
 <div class="paragraph">
 <p>Otherwise, the most specific parameter type SHOULD be <code>java.lang.Object</code>.</p>
 </div>
 <div class="paragraph">
-<p>If multiple bounds are specified, the first step is to resolve every bound separately. Let’s define result of such resolution as <code>S<sub>1</sub>,…,S<sub>m</sub></code> specific parameter types.</p>
+<p>If multiple bounds are specified, the first step is to resolve every bound separately. Let&#8217;s define result of such resolution as <code>S<sub>1</sub>,…,S<sub>m</sub></code> specific parameter types.</p>
 </div>
 <div class="paragraph">
-<p>If <code>S<sub>1</sub>,…,S<sub>m</sub></code> are <code>java.lang.Object</code>, then the bounded parameter type MUST be <code>java.lang.Object</code>.</p>
+<p>If <code>S<sub>1</sub>,…,S<sub>m</sub></code> are <code>java.lang.Object</code>, then the bounded parameter <code>T<sub>i</sub></code> type MUST be <code>java.lang.Object</code>.</p>
 </div>
 <div class="paragraph">
-<p>If there is exactly one , where <code>1&#8656;k&#8656;m</code> is different than <code>java.lang.Object</code>, then the most specific parameter type for this bounded parameter type MUST be .</p>
+<p>If there is exactly one <code>S<sub>k</sub></code>, where <code>1&#8656;k&#8656;m</code> is different than <code>java.lang.Object</code>, then the most specific parameter type for this bounded parameter <code>T<sub>i</sub></code> type MUST be <code>S<sub>k</sub></code>.</p>
 </div>
 <div class="paragraph">
-<p>If there exists <code>S<sub>k1</sub>,S<sub>k2</sub></code>, where <code>1&#8656;k1&#8656;k2&#8656;m</code>, then the most specific parameter type is .</p>
+<p>If there exists <code>S<sub>k1</sub>,S<sub>k2</sub></code>, where <code>1&#8656;k1&#8656;k2&#8656;m</code>, then the most specific parameter type is <code>S<sub>k1</sub></code>.</p>
 </div>
 <div class="paragraph">
 <p>For wildcard parameter type without bounds, the most specific parameter type MUST be <code>java.lang.Object</code>.</p>
@@ -1740,7 +1820,7 @@ attribute)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="must-ignore-policy"><a class="anchor" href="#must-ignore-policy"></a>3.18. Must-Ignore policy</h3>
+<h3 id="must-ignore-policy"><a class="anchor" href="#must-ignore-policy"></a>3.18. Must-Ignore Policy</h3>
 <div class="paragraph">
 <p>When JSON Binding implementation during deserialization encounters key in key/value pair that it does not recognize, it should treat the rest of the JSON document as if the element simply did not appear, and in particular, the implementation MUST NOT treat this as an error condition.</p>
 </div>
@@ -1751,7 +1831,7 @@ attribute)</p>
 <p>JSON Binding implementations MUST NOT produce JSON documents with members with duplicate names. In this context, "duplicate" means that the names, after processing any escaped characters, are identical sequences of Unicode characters.</p>
 </div>
 <div class="paragraph">
-<p>When non-unique property (after override and rename) is found, implementation MUST throw an exception. This doesn’t apply for customized user serialization behavior implemented with the usage of <code>JsonbAdapter</code> and <code>JsonbSerializer/JsonbDeserializer</code> mechanisms.</p>
+<p>When non-unique property (after override and rename) is found, implementation MUST throw an exception. This doesn&#8217;t apply for customized user serialization behavior implemented with the usage of <code>JsonbAdapter</code> and <code>JsonbSerializer/JsonbDeserializer</code> mechanisms.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1815,11 +1895,11 @@ attribute)</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Class field or record component is annotated with <code>@JsonbTransient</code></p>
+<p>Class field is annotated with <code>@JsonbTransient</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Exception must be thrown when this field, record component, getter or setter is annotated with other JSON Binding annotations.</p>
+<p>Exception must be thrown when this field, its getter, or its setter is annotated with other JSON Binding annotations.</p>
 </li>
 </ul>
 </div>
@@ -1829,7 +1909,7 @@ attribute)</p>
 <div class="ulist">
 <ul>
 <li>
-<p>An exception is thrown if the field, record component or this getter are annotated with other JSON Binding annotations. An exception is not thrown if JSON Binding annotations are present on the setter.</p>
+<p>An exception is thrown if the field or this getter are annotated with other JSON Binding annotations. An exception is not thrown if JSON Binding annotations are present on the setter.</p>
 </li>
 </ul>
 </div>
@@ -1839,7 +1919,40 @@ attribute)</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Exception is thrown if when the field or this setter are annotated with other JSON Binding annotations. Exception is not thrown if JSON Binding annotations are presented on the getter.</p>
+<p>An exception is thrown if the field or this setter are annotated with other JSON Binding annotations. An exception is not thrown if JSON Binding annotations are present on the getter.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Record component is annotated with <code>@JsonbTransient</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>An exception must be thrown when this component or its accessor is annotated with other JSON Binding annotations.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Record component accessor is annotated with <code>@JsonbTransient</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>An exception is thrown if the corresponding component or this accessor is annotated with other JSON Binding annotations.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Record virtual attribute method is annotated with <code>@JsonbTransient</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The method is excluded from serialization output.</p>
+</li>
+<li>
+<p>An exception must be thrown if the method is also annotated with any other JSON Binding annotation.</p>
 </li>
 </ul>
 </div>
@@ -1850,7 +1963,7 @@ attribute)</p>
 <div class="sect3">
 <h4 id="jakarta-json-bind-annotation-jsonbproperty"><a class="anchor" href="#jakarta-json-bind-annotation-jsonbproperty"></a>4.1.2. jakarta.json.bind.annotation.JsonbProperty</h4>
 <div class="paragraph">
-<p>According to default mapping 3.15, property names are serialized unchanged to JSON document (identity transformation). To provide custom name for given field or record component (or JavaBean property), <code>jakarta.json.bind.annotation.JsonbProperty</code> may be used. <code>JsonbProperty</code> annotation may be specified on field, record component, getter or setter method.</p>
+<p>According to default mapping 3.15, property names are serialized unchanged to a JSON document (identity transformation). To provide a custom name for a given field or record component (or JavaBean property), <code>jakarta.json.bind.annotation.JsonbProperty</code> may be used. The <code>JsonbProperty</code> annotation may be specified on a field, record component, record component accessor method, virtual attribute method, getter or setter method, or a <code>@JsonbCreator</code> annotated constructor or static factory method parameter.</p>
 </div>
 <div class="paragraph">
 <p>If specified on field or record component, custom name is used both for serialization and deserialization.</p>
@@ -1859,16 +1972,53 @@ attribute)</p>
 <p>If <code>jakarta.json.bind.annotation.JsonbProperty</code> is specified on getter method, it is used only for serialization. If <code>jakarta.json.bind.annotation.JsonbProperty</code> is specified on setter method, it is used only for deserialization.</p>
 </div>
 <div class="paragraph">
-<p>It is possible to specify different values for getter and setter method for <code>jakarta.json.bind.annotation.JsonbProperty</code> annotation. In such case the different custom name will be used for serialization and deserialization.</p>
+<p>If <code>jakarta.json.bind.annotation.JsonbProperty</code> is specified on a virtual attribute method or component accessor method, then the customization defined by the <code>JsonbProperty</code> annotation applies only for serialization.</p>
 </div>
+<div class="paragraph">
+<p>If <code>jakarta.json.bind.annotation.JsonbProperty</code> is specified on a parameter of a <code>@JsonbCreator</code> annotated constructor or static factory method, the custom name is used only for deserialization.</p>
+</div>
+<div class="paragraph">
+<p>It is possible to specify different values for getter and setter method for <code>jakarta.json.bind.annotation.JsonbProperty</code> annotation. In such case the different custom name will be used for serialization and deserialization independently.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jakarta-json-bind-annotation-jsonbpropertyorder"><a class="anchor" href="#jakarta-json-bind-annotation-jsonbpropertyorder"></a>4.2. jakarta.json.bind.annotation.JsonbPropertyOrder</h3>
+<div class="paragraph">
+<p>To customize the order of serialized properties only for one specific type, JSON Binding provides the <code>jakarta.json.bind.annotation.JsonbPropertyOrder</code> annotation. The order specified by the <code>JsonbPropertyOrder</code> annotation overrides the order specified by <code>PropertyOrderStrategy</code> for that type.</p>
+</div>
+<div class="paragraph">
+<p>Properties listed in <code>@JsonbPropertyOrder</code> are serialized first in the declared order. Any remaining properties not listed are serialized afterward in an unspecified order. Names provided in <code>@JsonbPropertyOrder</code> MUST correspond to the original property or record component names as defined in the type, before any renaming customization (such as <code>@JsonbProperty</code> or a <code>PropertyNamingStrategy</code>) is applied.</p>
 </div>
 <div class="sect3">
-<h4 id="jakarta-json-bind-config-propertynamingstrategy"><a class="anchor" href="#jakarta-json-bind-config-propertynamingstrategy"></a>4.1.3. jakarta.json.bind.config.PropertyNamingStrategy</h4>
+<h4 id="jakarta-json-bind-config-propertynamingstrategy"><a class="anchor" href="#jakarta-json-bind-config-propertynamingstrategy"></a>4.2.1. jakarta.json.bind.config.PropertyNamingStrategy</h4>
 <div class="paragraph">
-<p>To customize name translation of properties, JSON Binding provides <code>jakarta.json.bind.config.PropertyNamingStrategy</code> interface.</p>
+<p>To customize name translation of properties, JSON Binding provides the <code>jakarta.json.bind.config.PropertyNamingStrategy</code> interface.</p>
 </div>
 <div class="paragraph">
-<p>Interface <code>jakarta.json.bind.config.PropertyNamingStrategy</code> provides the most common property naming strategies.</p>
+<p>A naming strategy transforms the <em>identity property name</em> into the JSON property name used during serialization and deserialization. The identity property name is determined by one of the following program elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a field name</p>
+</li>
+<li>
+<p>a JavaBean property name</p>
+</li>
+<li>
+<p>a record component name</p>
+</li>
+<li>
+<p>a record virtual attribute name.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A <code>jakarta.json.bind.annotation.JsonbProperty</code> annotation on an individual field, record component, accessor method, virtual attribute, or <code>@JsonbCreator</code> parameter takes precedence over the naming strategy for that property. The strategy is applied only when no such annotation is present.</p>
+</div>
+<div class="paragraph">
+<p>Interface <code>jakarta.json.bind.config.PropertyNamingStrategy</code> provides the following predefined naming strategies:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1896,11 +2046,11 @@ attribute)</p>
 <p>The detailed description of property naming strategies can be found in javadoc.</p>
 </div>
 <div class="paragraph">
-<p>The way to set custom property naming strategy is to use <code>jakarta.json.bind.JsonbConfig::withPropertyNamingStrategy</code> method.</p>
+<p>To set a property naming strategy use the <code>jakarta.json.bind.JsonbConfig::withPropertyNamingStrategy</code> method.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="property-names-resolution"><a class="anchor" href="#property-names-resolution"></a>4.1.4. Property names resolution</h4>
+<h4 id="property-names-resolution"><a class="anchor" href="#property-names-resolution"></a>4.2.2. Property names resolution</h4>
 <div class="paragraph">
 <p>Property name resolution consists of two phases:</p>
 </div>
@@ -1921,12 +2071,12 @@ attribute)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="customizing-property-order"><a class="anchor" href="#customizing-property-order"></a>4.2. Customizing Property Order</h3>
+<h3 id="customizing-property-order"><a class="anchor" href="#customizing-property-order"></a>4.3. Customizing Property Order</h3>
 <div class="paragraph">
-<p>To customize the order of serialized properties, JSON Binding provides <code>jakarta.json.bind.config.PropertyOrderStrategy</code> class.</p>
+<p>To customize the order of serialized properties, JSON Binding provides the <code>jakarta.json.bind.config.PropertyOrderStrategy</code> class.</p>
 </div>
 <div class="paragraph">
-<p>Class <code>jakarta.json.bind.config.PropertyOrderStrategy</code> provides the most common property order strategies.</p>
+<p>Class <code>jakarta.json.bind.config.PropertyOrderStrategy</code> provides the following predefined property order strategies:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1942,20 +2092,14 @@ attribute)</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>The detailed description of property order strategies can be found in javadoc.</p>
+<p>Detailed descriptions of property order strategies can be found in the javadoc.</p>
 </div>
 <div class="paragraph">
-<p>The way to set custom property order strategy is to use <code>jakarta.json.bind.JsonbConfig::withPropertyOrderStrategy</code> method.</p>
-</div>
-<div class="paragraph">
-<p>To customize the order of serialized properties only for one specific type, JSON Binding provides <code>jakarta.json.bind.annotation.JsonbPropertyOrder</code> annotation. Order specified by <code>JsonbPropertyOrder</code> annotation overrides order specified by <code>PropertyOrderStrategy</code>.</p>
-</div>
-<div class="paragraph">
-<p>The order is applied to already renamed properties as stated in 4.1.</p>
+<p>Use the <code>jakarta.json.bind.JsonbConfig::withPropertyOrderStrategy</code> method to configure a property order strategy.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="customizing-null-handling"><a class="anchor" href="#customizing-null-handling"></a>4.3. Customizing Null Handling</h3>
+<h3 id="customizing-null-handling"><a class="anchor" href="#customizing-null-handling"></a>4.4. Customizing Null Handling</h3>
 <div class="paragraph">
 <p>There are two main ways how to change default null handling. The first option is to annotate type, package, field, record component or JavaBean property with <code>jakarta.json.bind.annotation.JsonbNillable</code> annotation. The second option is to set config-wide configuration via <code>JsonbConfig::withNullValues</code> method. There is also a third option to annotate a field, record component or JavaBean property with <code>jakarta.json.bind.annotation.JsonbProperty</code> and to set nillable parameter to true. However, this option is currently deprecated, and it is recommended to use <code>jakarta.json.bind.annotation.JsonbNillable</code> instead.</p>
 </div>
@@ -1966,12 +2110,12 @@ attribute)</p>
 <p>If <code>JsonbNillable</code> and <code>JsonbProperty</code> are applied on the same level, <code>JsonbNillable</code> takes precedence.</p>
 </div>
 <div class="sect3">
-<h4 id="jakarta-json-bind-annotation-jsonbnillable"><a class="anchor" href="#jakarta-json-bind-annotation-jsonbnillable"></a>4.3.1. jakarta.json.bind.annotation.JsonbNillable</h4>
+<h4 id="jakarta-json-bind-annotation-jsonbnillable"><a class="anchor" href="#jakarta-json-bind-annotation-jsonbnillable"></a>4.4.1. jakarta.json.bind.annotation.JsonbNillable</h4>
 <div class="paragraph">
 <p>To customize the result of serializing field or record component (or JavaBean property) with null value, JSON Binding provides <code>jakarta.json.bind.annotation.JsonbNillable</code> annotation.</p>
 </div>
 <div class="paragraph">
-<p>When given object (type, package, field, record component or JavaBean property) is annotated with <code>jakarta.json.bind.annotation.JsonbNillable</code> annotation, the result of null value will be presence of associated property in JSON document with explicit null value.</p>
+<p>When a given object (type, package, field, record component, virtual attribute, or JavaBean property) is annotated with <code>jakarta.json.bind.annotation.JsonbNillable</code> annotation, then a value of <code>null</code> will be explicitly serialized to <code>null</code> in the JSON document, instead of being skipped as described in <a href="#null-java-field">Null Java Field</a>.</p>
 </div>
 <div class="paragraph">
 <p>The same behavior as <code>JsonbNillable</code>, but only at field, record component, parameter and method (JavaBean property) level is provided by <code>jakarta.json.bind.annotation.JsonbProperty</code> annotation with its <code>nillable</code> parameter. This option is currently deprecated, and it is recommended to use <code>jakarta.json.bind.annotation.JsonbNillable</code> instead.</p>
@@ -1981,7 +2125,7 @@ attribute)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="global-null-handling-configuration"><a class="anchor" href="#global-null-handling-configuration"></a>4.3.2. Global null handling configuration</h4>
+<h4 id="global-null-handling-configuration"><a class="anchor" href="#global-null-handling-configuration"></a>4.4.2. Global null handling configuration</h4>
 <div class="paragraph">
 <p>Null handling behavior can be customized via <code>jakarta.json.bind.JsonbConfig::withNullValues</code> method.</p>
 </div>
@@ -1994,7 +2138,7 @@ attribute)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="i-json-support"><a class="anchor" href="#i-json-support"></a>4.4. I-JSON support</h3>
+<h3 id="i-json-support"><a class="anchor" href="#i-json-support"></a>4.5. I-JSON support</h3>
 <div class="paragraph">
 <p>I-JSON (short for "Internet JSON") is a restricted profile of JSON designed to maximize interoperability and increase confidence that software can process it successfully with predictable results. The profile is defined in <a href="https://tools.ietf.org/html/rfc7493">The I-JSON Message Format</a>.</p>
 </div>
@@ -2027,7 +2171,7 @@ attribute)</p>
 <p>Strict I-JSON compliance changes only default mapping behavior (see Section 3).</p>
 </div>
 <div class="sect3">
-<h4 id="strict-date-serialization"><a class="anchor" href="#strict-date-serialization"></a>4.4.1. Strict date serialization</h4>
+<h4 id="strict-date-serialization"><a class="anchor" href="#strict-date-serialization"></a>4.5.1. Strict date serialization</h4>
 <div class="paragraph">
 <p>Uppercase rather than lowercase letters MUST be used.</p>
 </div>
@@ -2043,33 +2187,35 @@ attribute)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="custom-instantiation"><a class="anchor" href="#custom-instantiation"></a>4.5. Custom instantiation</h3>
+<h3 id="custom-instantiation"><a class="anchor" href="#custom-instantiation"></a>4.6. Custom Instantiation</h3>
 <div class="paragraph">
-<p>In many scenarios instantiation with the use of default constructor is not enough. To support these scenarios, JSON Binding provides <code>jakarta.json.bind.annotation.JsonbCreator</code> annotation.</p>
+<p>In many scenarios instantiation with the use of the default constructor or canonical constructor is not enough.
+To support these scenarios, JSON Binding provides the <code>jakarta.json.bind.annotation.JsonbCreator</code> annotation.</p>
 </div>
 <div class="paragraph">
-<p>At most one <code>JsonbCreator</code> annotation can be used to annotate custom constructor or static factory method in a class/record, otherwise <code>JsonbException</code> MUST be thrown.</p>
+<p>At most one <code>@JsonbCreator</code> annotation can be used to annotate a custom constructor or static factory method in a class or record,
+otherwise a <code>JsonbException</code> MUST be thrown.</p>
 </div>
 <div class="paragraph">
-<p>Factory method annotated with <code>JsonbCreator</code> annotation should return instance of a particular class/record this annotation is used for, otherwise <code>JsonbException</code> MUST be thrown.</p>
+<p>A factory method annotated with the <code>@JsonbCreator</code> annotation must return an instance of the class or record the annotated factory method is defined within,
+otherwise a <code>JsonbException</code> MUST be thrown.</p>
 </div>
 <div class="paragraph">
-<p>Mapping between parameters of constructor/factory method annotated with <code>JsonbCreator</code> and JSON fields is defined using <code>JsonbProperty</code> annotation on all parameters.</p>
+<p>A JSON field is mapped to the parameter of the same name on the custom constructor or static factory method annotated by <code>@JsonbCreator</code>
+when the application is compiled with the <code>-parameters</code> compiler options and the parameter is not annotated with the <code>@JsonbProperty</code> annotation.
+Otherwise, applications must explicitly define the mapping between JSON field and the parameters of the custom constructor or static factory method annotated
+by <code>@JsonbCreator</code> using the <code>@JsonbProperty</code> parameter annotation.</p>
 </div>
 <div class="paragraph">
-<p>If the <code>JsonbProperty</code> annotation on parameters is not used, then parameters should be mapped from JSON fields with the same name. In this case the proper mapping is NOT guaranteed.</p>
+<p>All the <code>@JsonbCreator</code> parameters are treated as optional by default.
+See <a href="#optional-parameter-values">Optional parameter values</a> section for default optional parameter values.</p>
 </div>
 <div class="paragraph">
-<p>All the <code>JsonbCreator</code> parameters are treated as optional by default. See <a href="#optional-parameter-values">Optional parameter values</a> chapter for default optional parameter values.</p>
-</div>
-<div class="paragraph">
-<p>All the <code>JsonbCreator</code> parameters can be turned to required by using configuration method <code>Config::withCreatorParametersRequired</code>.</p>
-</div>
-<div class="paragraph">
-<p>If a required field for a parameter mapping does not exist in the JSON document, then <code>JsonbException</code> MUST be thrown.</p>
+<p>All the <code>@JsonbCreator</code> parameters can be made required by using configuration method <code>Config::withCreatorParametersRequired</code>.
+If a required field for a parameter mapping does not exist in the JSON document, then <code>JsonbException</code> MUST be thrown.</p>
 </div>
 <div class="sect3">
-<h4 id="optional-parameter-values"><a class="anchor" href="#optional-parameter-values"></a>4.5.1. Optional parameter values</h4>
+<h4 id="optional-parameter-values"><a class="anchor" href="#optional-parameter-values"></a>4.6.1. Optional parameter values</h4>
 <div class="paragraph">
 <p>When a property is marked as optional, the proper default should be used. If the parameter is any type other than <code>Optional</code> or its variations, then the <code>null</code> value is used. If the parameter is <code>java.util.Optional</code>, <code>OptionalInt</code>, <code>OptionalLong</code>, <code>OptionalDouble</code>, then the corresponding empty object must be used.</p>
 </div>
@@ -2126,18 +2272,18 @@ attribute)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="custom-visibility"><a class="anchor" href="#custom-visibility"></a>4.6. Custom visibility</h3>
+<h3 id="custom-visibility"><a class="anchor" href="#custom-visibility"></a>4.7. Custom visibility</h3>
 <div class="paragraph">
 <p>To customize scope and field access strategy as specified in section 3.7.1, it is possible to specify <code>jakarta.json.bind.annotation.JsonbVisibility</code> annotation or to override default behavior globally calling <code>JsonbConfig::withPropertyVisibilityStrategy</code> method with given custom property visibility strategy.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="custom-mapping"><a class="anchor" href="#custom-mapping"></a>4.7. Custom mapping</h3>
+<h3 id="custom-mapping"><a class="anchor" href="#custom-mapping"></a>4.8. Custom mapping</h3>
 <div class="paragraph">
 <p>Some Java types do not map naturally to a JSON representation and annotations cannot be used to customize mapping. An example can be some third party classes or classes without no-arg constructor. To customize mapping in this case JSON Binding has two mechanisms: Adapters and Serializers.</p>
 </div>
 <div class="sect3">
-<h4 id="adapters"><a class="anchor" href="#adapters"></a>4.7.1. Adapters</h4>
+<h4 id="adapters"><a class="anchor" href="#adapters"></a>4.8.1. Adapters</h4>
 <div class="paragraph">
 <p>Adapter is a class implementing <code>jakarta.json.bind.adapter.JsonbAdapter</code> interface. It has a custom code to convert the “unmappable” type (Original) into another one that JSONB can handle (Adapted).</p>
 </div>
@@ -2171,15 +2317,15 @@ attribute)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="serializersdeserializers"><a class="anchor" href="#serializersdeserializers"></a>4.7.2. Serializers/Deserializers</h4>
+<h4 id="serializersdeserializers"><a class="anchor" href="#serializersdeserializers"></a>4.8.2. Serializers/Deserializers</h4>
 <div class="paragraph">
 <p>Sometimes adapters mechanism is not enough and low level access to JSONP parser/generator is needed.</p>
 </div>
 <div class="paragraph">
-<p>Serializer is a class implementing <code>jakarta.json.bind.serializers.JsonbSerializer</code> interface. It is used to serialize the type it’s registered on (Original). On serializing of Original type JSONB calls <code>JsonbSerializer::serialize</code> method. This method has to contain a custom code to serialize Original type using provided <code>JsonpGenerator</code>.</p>
+<p>Serializer is a class implementing <code>jakarta.json.bind.serializers.JsonbSerializer</code> interface. It is used to serialize the type it&#8217;s registered on (Original). On serializing of Original type JSONB calls <code>JsonbSerializer::serialize</code> method. This method has to contain a custom code to serialize Original type using provided <code>JsonpGenerator</code>.</p>
 </div>
 <div class="paragraph">
-<p>Deserializer is a class implementing <code>jakarta.json.bind.serializers.JsonbDeserializer</code> interface. It is used to deserialize the type it’s registered on (Original). On deserialization of Original type JSONB calls <code>JsonbDeserializer::deserialize</code> method. This method has to contain a custom code to deserialize Original type using provided <code>JsonpParser</code>.</p>
+<p>Deserializer is a class implementing <code>jakarta.json.bind.serializers.JsonbDeserializer</code> interface. It is used to deserialize the type it&#8217;s registered on (Original). On deserialization of Original type JSONB calls <code>JsonbDeserializer::deserialize</code> method. This method has to contain a custom code to deserialize Original type using provided <code>JsonpParser</code>.</p>
 </div>
 <div class="paragraph">
 <p>There are two ways how to register <code>JsonbSerializer/JsonbDeserializer</code>:</p>
@@ -2190,7 +2336,7 @@ attribute)</p>
 <p>Using <code>JsonbConfig::withSerializers/ JsonbConfig::withDeserializers</code> method;</p>
 </li>
 <li>
-<p>Annotating a type with <code>JsonbSerializer/JsonbDeserializer</code> annotation.</p>
+<p>Annotating a type with <code>@JsonbTypeSerializer</code>/<code>@JsonbTypeDeserializer</code> annotation.</p>
 </li>
 </ol>
 </div>
@@ -2203,7 +2349,7 @@ attribute)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="custom-date-format"><a class="anchor" href="#custom-date-format"></a>4.8. Custom date format</h3>
+<h3 id="custom-date-format"><a class="anchor" href="#custom-date-format"></a>4.9. Custom date format</h3>
 <div class="paragraph">
 <p>To specify custom date format, it is necessary to annotate given annotation. <code>JsonbDateFormat</code> annotation can be applied to the following targets:</p>
 </div>
@@ -2214,6 +2360,12 @@ attribute)</p>
 </li>
 <li>
 <p>record component</p>
+</li>
+<li>
+<p>record component accessor</p>
+</li>
+<li>
+<p>virtual attribute</p>
 </li>
 <li>
 <p>getter/setter</p>
@@ -2233,14 +2385,14 @@ attribute)</p>
 <p>Default date format and default locale can be customized globally using <code>jakarta.json.bind.JsonbConfig::withDateFormat</code> and <code>jakarta.json.bind.JsonbConfig::withLocale</code> methods.</p>
 </div>
 <div class="paragraph">
-<p>If <code>jakarta.json.bind.annotation.JsonbDateFormat</code> is specified on a getter method, it is used only for serialization. If <code>jakarta.json.bind.annotation.JsonbDateFormat</code> is specified on a setter method, it is used only for deserialization.</p>
+<p>If <code>jakarta.json.bind.annotation.JsonbDateFormat</code> is specified on a getter, virtual attribute, or component accessor method, it is used only for serialization. If <code>jakarta.json.bind.annotation.JsonbDateFormat</code> is specified on a setter method, it is used only for deserialization.</p>
 </div>
 <div class="paragraph">
 <p>Annotation applied to more specific target overrides the same annotation applied to target with wider scope and global configuration. For example, annotation applied to type target will override the same annotation applied to package target.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="custom-number-format"><a class="anchor" href="#custom-number-format"></a>4.9. Custom number format</h3>
+<h3 id="custom-number-format"><a class="anchor" href="#custom-number-format"></a>4.10. Custom number format</h3>
 <div class="paragraph">
 <p>To specify custom number format, it is necessary to annotate given annotation target with <code>jakarta.json.bind.annotation.JsonbNumberFormat</code> annotation. <code>JsonbNumberFormat</code> annotation can be applied to the following targets:</p>
 </div>
@@ -2251,6 +2403,12 @@ attribute)</p>
 </li>
 <li>
 <p>record component</p>
+</li>
+<li>
+<p>record component accessor</p>
+</li>
+<li>
+<p>virtual attribute</p>
 </li>
 <li>
 <p>getter/setter</p>
@@ -2267,14 +2425,14 @@ attribute)</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>If <code>jakarta.json.bind.annotation.JsonbNumberFormat</code> is specified on a getter method, it is used only for serialization. If <code>jakarta.json.bind.annotation.JsonbNumberFormat</code> is specified on a setter method, it is used only for deserialization.</p>
+<p>If <code>jakarta.json.bind.annotation.JsonbNumberFormat</code> is specified on a getter, virtual attribute, or component accessor method, it is used only for serialization. If <code>jakarta.json.bind.annotation.JsonbNumberFormat</code> is specified on a setter method, it is used only for deserialization.</p>
 </div>
 <div class="paragraph">
 <p>Annotation applied to more specific target overrides the same annotation applied to target with wider scope. For example, annotation applied to type target will override the same annotation applied to package target.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="custom-binary-data-handling"><a class="anchor" href="#custom-binary-data-handling"></a>4.10. Custom binary data handling</h3>
+<h3 id="custom-binary-data-handling"><a class="anchor" href="#custom-binary-data-handling"></a>4.11. Custom binary data handling</h3>
 <div class="paragraph">
 <p>To customize encoding of binary data, JSON Binding provides <code>jakarta.json.bind.config.BinaryDataStrategy</code> class.</p>
 </div>
@@ -2328,10 +2486,10 @@ attribute)</p>
 <p>Section 3.14.1: Added an exception for <code>Optional</code> fields.</p>
 </li>
 <li>
-<p>Section 3.6: Removed ’smallest possible type’ rule for number types. JSON number type is always mapped to <code>BigDecimal</code> in case target type is not specified.</p>
+<p>Section 3.6: Removed 'smallest possible type' rule for number types. JSON number type is always mapped to <code>BigDecimal</code> in case target type is not specified.</p>
 </li>
 <li>
-<p>Removed ’Simple Value’ customization (<code>@JsonbValue</code>). Adapters shouldbe used instead.</p>
+<p>Removed 'Simple Value' customization (<code>@JsonbValue</code>). Adapters shouldbe used instead.</p>
 </li>
 <li>
 <p>Adapters section (4.7.1) changed.</p>
@@ -2382,8 +2540,8 @@ attribute)</p>
 </div>
 <div id="footer">
 <div id="footer-text">
- 3.1.0-M1<br>
-Last updated 2026-07-29 10:50:18 -0500
+ 3.1<br>
+Last updated 2026-10-13 14:37:11 UTC
 </div>
 </div>
 </body>

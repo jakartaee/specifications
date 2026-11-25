@@ -1,6 +1,6 @@
 ---
 title: "Jakarta JSON Binding 3.1 (under development)"
-date: 2026-08-05
+date: 2026-10-13
 summary: "Release for Jakarta EE 12"
 ---
 Jakarta JSON Binding defines a binding framework for converting Java(R) objects to and from JSON documents.
@@ -30,13 +30,13 @@ Community input is encouraged. Add your comments to issues in our [issue tracker
 
 * [Jakarta JSON Binding 3.1 Release Record](https://projects.eclipse.org/projects/ee4j.jsonb/releases/3.1)
 * Milestone 1
-  * [Jakarta JSON Binding 3.1 Specification Document](./jsonb-spec-3.1.pdf) (PDF)
-  * [Jakarta JSON Binding 3.1 Specification Document](./jsonb-spec-3.1.html) (HTML)
+  * [Jakarta JSON Binding 3.1 Specification Document](./jakarta-json-bind.pdf) (PDF)
+  * [Jakarta JSON Binding 3.1 Specification Document](./jakarta-json-bind.html) (HTML)
   * [Jakarta JSON Binding 3.1 Javadoc](./apidocs)
 * [Jakarta JSON Binding 3.1 TCK](https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.1.0.zip) (Does not exist yet)
   * For all TCK releases, see [download directory](https://download.eclipse.org/jakartaee/jsonb/3.1/)
 * Maven coordinates
-  * [jakarta.json.bind:jakarta.json.bind-api:jar:3.1.0-M1](https://central.sonatype.com/artifact/jakarta.json.bind/jakarta.json.bind-api/3.1.0-M1/jar)
+  * [jakarta.json.bind:jakarta.json.bind-api:jar:3.1.0-M2](https://central.sonatype.com/artifact/jakarta.json.bind/jakarta.json.bind-api/3.1.0-M2/jar)
 * Compatible Implementation used for [ratification](https://www.eclipse.org/projects/efsp/?version=1.2#efsp-ratification).
   * [To Be Determined](https://github.com/)
 
