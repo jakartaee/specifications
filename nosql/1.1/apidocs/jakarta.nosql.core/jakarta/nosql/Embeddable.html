@@ -25,7 +25,7 @@ loadScripts(document, 'script');</script>
 <!-- ========= START OF TOP NAVBAR ======= -->
 <div class="top-nav" id="navbar-top"><button id="navbar-toggle-button" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation links"><span class="nav-bar-toggle-icon">&nbsp;</span><span class="nav-bar-toggle-icon">&nbsp;</span><span class="nav-bar-toggle-icon">&nbsp;</span></button>
 <div class="skip-nav"><a href="#skip-navbar-top" title="Skip navigation links">Skip navigation links</a></div>
-<div class="about-language"><br>Jakarta NoSQL API v1.0</div>
+<div class="about-language"><br>Jakarta NoSQL API v1.1</div>
 <ul id="navbar-top-firstrow" class="nav-list" title="Navigation">
 <li><a href="../../module-summary.html">Module</a></li>
 <li><a href="package-summary.html">Package</a></li>
@@ -95,11 +95,14 @@ loadScripts(document, 'script');</script>
  <ul>
      <li>Be a non-abstract, non-final top-level class or static inner class.</li>
      <li>Have at least one field annotated with <a href="Column.html" title="annotation interface in jakarta.nosql"><code>Column</code></a>.</li>
-     <li>Have a public or protected constructor with no parameters or a constructor parameter annotated with <a href="Column.html" title="annotation interface in jakarta.nosql"><code>Column</code></a>.</li>
+     <li>Have a constructor with no parameters, which may be <code>public</code>, <code>protected</code> or package-private,
+     or a constructor whose parameters are annotated with <a href="Column.html" title="annotation interface in jakarta.nosql"><code>Column</code></a>. An embeddable has no identifier of its own,
+     so <a href="Id.html" title="annotation interface in jakarta.nosql"><code>Id</code></a> is not required.</li>
      <li>Annotations at the constructor will build the entity and read information from the database, while
      field annotations are required to write information to the database.</li>
      <li>If both a non-args constructor and a constructor with annotated parameters exist, the constructor with annotations will be used to create the entity.</li>
-     <li>Constructor parameters without annotations will be ignored, using a non-arg constructor instead.</li>
+     <li>If no constructor has mapping annotations, the no-arg constructor is used. The behavior for a constructor that mixes annotated and unannotated parameters
+     is not defined by this specification.</li>
      <li>An embeddable class should not have multiple constructors using <a href="Column.html" title="annotation interface in jakarta.nosql"><code>Column</code></a> annotations.</li>
      <li>Enums or interfaces cannot be designated as embeddable types.</li>
      <li>Record classes can also serve as embeddable types.</li>
