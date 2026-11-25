@@ -360,8 +360,9 @@ loadScripts(document, 'script');</script>
  <a href="ManagedExecutorService.html" title="interface in jakarta.enterprise.concurrent">ManagedExecutorService</a>&nbsp;executor,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;task)</span></div>
 <div class="block">This method is called before the task is about to start. The task will
- not enter the starting state until the taskSubmitted listener has completed. This method
- may be called from the same thread that the task was submitted with.</div>
+ not enter the starting state until the <code>taskStarting</code> listener has
+ completed. This method may be called from the same thread that runs the
+ task.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>future</code> - the <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Future.html" title="class or interface in java.util.concurrent" class="external-link"><code>Future</code></a> instance that was created when the task was submitted.</dd>

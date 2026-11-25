@@ -112,8 +112,6 @@ loadScripts(document, 'script');</script>
  instance that the Jakarta EE Product Provider supplies to the caller
  of the asynchronous method.</div>
 </dd>
-<dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#asynchronous-methods-with-a-schedule-heading" class="search-tag-link">Asynchronous methods with a Schedule</a> - Search tag in annotation interface jakarta.enterprise.concurrent.Schedule</dt>
-<dd>Section</dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Asynchronous.html#automatic-submit-on-startup-heading" class="search-tag-link">Automatic submit on startup</a> - Search tag in annotation interface jakarta.enterprise.concurrent.Asynchronous</dt>
 <dd>Section</dd>
 </dl>
@@ -179,7 +177,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Defines a <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextService.html" title="interface in jakarta.enterprise.concurrent"><code>ContextService</code></a>
  to be injected into
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextService.html" title="interface in jakarta.enterprise.concurrent"><code>ContextService</code></a> injection points
- including any required <code>Qualifier</code> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextServiceDefinition.html#qualifiers()"><code>ContextServiceDefinition.qualifiers()</code></a>
+ including any required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>Qualifier</code></a> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextServiceDefinition.html#qualifiers()"><code>ContextServiceDefinition.qualifiers()</code></a>
  and registered in JNDI by the container
  under the JNDI name that is specified in the
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextServiceDefinition.html#name()"><code>ContextServiceDefinition.name()</code></a> attribute.</div>
@@ -307,7 +305,7 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#daysOfMonth()" class="member-name-link">daysOfMonth()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent">Schedule</a></dt>
 <dd>
-<div class="block">Days of the month on which the asynchronous method aims to run.</div>
+<div class="block">Days of the month on which the method aims to run.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html#daysOfMonth()" class="member-name-link">daysOfMonth()</a> - Method in class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html" title="class in jakarta.enterprise.concurrent">Schedule.Literal</a></dt>
 <dd>
@@ -323,7 +321,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#daysOfWeek()" class="member-name-link">daysOfWeek()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent">Schedule</a></dt>
 <dd>
-<div class="block">Days of the week on which the asynchronous method aims to run.</div>
+<div class="block">Days of the week on which the method aims to run.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html#daysOfWeek()" class="member-name-link">daysOfWeek()</a> - Method in class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html" title="class in jakarta.enterprise.concurrent">Schedule.Literal</a></dt>
 <dd>
@@ -481,7 +479,7 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#hours()" class="member-name-link">hours()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent">Schedule</a></dt>
 <dd>
-<div class="block">Hours of the day at which the asynchronous method aims to run.</div>
+<div class="block">Hours of the day at which the method aims to run.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html#hours()" class="member-name-link">hours()</a> - Method in class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html" title="class in jakarta.enterprise.concurrent">Schedule.Literal</a></dt>
 <dd>
@@ -577,7 +575,30 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.Type.html" class="type-name-link" title="enum class in jakarta.enterprise.concurrent">Lock.Type</a> - Enum Class in <a href="jakarta.concurrency/jakarta/enterprise/concurrent/package-summary.html">jakarta.enterprise.concurrent</a></dt>
 <dd>
-<div class="block">Designates the type of lock to be READ or WRITE.</div>
+<div class="block">Designates the type of lock to be <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.Type.html#READ"><code>Lock.Type.READ</code></a> or <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.Type.html#WRITE"><code>Lock.Type.WRITE</code></a>.</div>
+</dd>
+<dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html" class="type-name-link" title="class in jakarta.enterprise.concurrent">LockTimeoutException</a> - Exception Class in <a href="jakarta.concurrency/jakarta/enterprise/concurrent/package-summary.html">jakarta.enterprise.concurrent</a></dt>
+<dd>
+<div class="block">Indicates that a <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html" title="annotation interface in jakarta.enterprise.concurrent"><code>Lock</code></a> could not be obtained within the allotted
+ <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html#accessTimeout()">access timeout</a>.</div>
+</dd>
+<dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html#%3Cinit%3E()" class="member-name-link">LockTimeoutException()</a> - Constructor for exception class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html" title="class in jakarta.enterprise.concurrent">LockTimeoutException</a></dt>
+<dd>
+<div class="block">Constructs a <code>LockTimeoutException</code> without providing a detail
+ message or cause.</div>
+</dd>
+<dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html#%3Cinit%3E(java.lang.String)" class="member-name-link">LockTimeoutException(String)</a> - Constructor for exception class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html" title="class in jakarta.enterprise.concurrent">LockTimeoutException</a></dt>
+<dd>
+<div class="block">Constructs a <code>LockTimeoutException</code> with the given detail message.</div>
+</dd>
+<dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html#%3Cinit%3E(java.lang.String,java.lang.Throwable)" class="member-name-link">LockTimeoutException(String, Throwable)</a> - Constructor for exception class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html" title="class in jakarta.enterprise.concurrent">LockTimeoutException</a></dt>
+<dd>
+<div class="block">Constructs a <code>LockTimeoutException</code> with the given detail message
+ and cause.</div>
+</dd>
+<dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html#%3Cinit%3E(java.lang.Throwable)" class="member-name-link">LockTimeoutException(Throwable)</a> - Constructor for exception class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/LockTimeoutException.html" title="class in jakarta.enterprise.concurrent">LockTimeoutException</a></dt>
+<dd>
+<div class="block">Constructs a <code>LockTimeoutException</code> with the given cause.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedTask.html#LONGRUNNING_HINT" class="member-name-link">LONGRUNNING_HINT</a> - Static variable in interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedTask.html" title="interface in jakarta.enterprise.concurrent">ManagedTask</a></dt>
 <dd>
@@ -599,7 +620,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Defines a <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedExecutorService</code></a>
  to be injected into
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedExecutorService</code></a> injection points
- including any required <code>Qualifier</code> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html#qualifiers()"><code>ManagedExecutorDefinition.qualifiers()</code></a>
+ including any required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>Qualifier</code></a> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html#qualifiers()"><code>ManagedExecutorDefinition.qualifiers()</code></a>
  and registered in JNDI by the container
  under the JNDI name that is specified in the
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html#name()"><code>ManagedExecutorDefinition.name()</code></a> attribute.</div>
@@ -622,7 +643,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Defines a <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedScheduledExecutorService</code></a>
  to be injected into
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedScheduledExecutorService</code></a> injection points
- including any required <code>Qualifier</code> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html#qualifiers()"><code>ManagedScheduledExecutorDefinition.qualifiers()</code></a>
+ including any required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>Qualifier</code></a> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html#qualifiers()"><code>ManagedScheduledExecutorDefinition.qualifiers()</code></a>
  and registered in JNDI by the container
  under the JNDI name that is specified in the
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html#name()"><code>ManagedScheduledExecutorDefinition.name()</code></a> attribute.</div>
@@ -687,7 +708,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Defines <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedThreadFactory</code></a> instances
  to be injected into
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedThreadFactory</code></a> injection points
- including any required <code>Qualifier</code> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html#qualifiers()"><code>ManagedThreadFactoryDefinition.qualifiers()</code></a>
+ including any required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>Qualifier</code></a> annotations specified by <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html#qualifiers()"><code>ManagedThreadFactoryDefinition.qualifiers()</code></a>
  and registered in JNDI by the container
  under the JNDI name that is specified in the
  <a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html#name()"><code>ManagedThreadFactoryDefinition.name()</code></a> attribute.</div>
@@ -713,7 +734,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#minutes()" class="member-name-link">minutes()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent">Schedule</a></dt>
 <dd>
-<div class="block">Minutes at which the asynchronous method aims to run.</div>
+<div class="block">Minutes at which the method aims to run.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/CronTrigger.html#minutes(int...)" class="member-name-link">minutes(int...)</a> - Method in class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/CronTrigger.html" title="class in jakarta.enterprise.concurrent">CronTrigger</a></dt>
 <dd>
@@ -729,7 +750,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#months()" class="member-name-link">months()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent">Schedule</a></dt>
 <dd>
-<div class="block">Months in which the asynchronous method aims to run.</div>
+<div class="block">Months in which the method aims to run.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/CronTrigger.html#months(java.lang.String)" class="member-name-link">months(String)</a> - Method in class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/CronTrigger.html" title="class in jakarta.enterprise.concurrent">CronTrigger</a></dt>
 <dd>
@@ -799,19 +820,19 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextServiceDefinition.html#qualifiers()" class="member-name-link">qualifiers()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/ContextServiceDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ContextServiceDefinition</a></dt>
 <dd>
-<div class="block">List of required <code>qualifier annotations</code>.</div>
+<div class="block">List of required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>qualifier annotations</code></a>.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html#qualifiers()" class="member-name-link">qualifiers()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedExecutorDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedExecutorDefinition</a></dt>
 <dd>
-<div class="block">List of required <code>qualifier annotations</code>.</div>
+<div class="block">List of required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>qualifier annotations</code></a>.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html#qualifiers()" class="member-name-link">qualifiers()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedScheduledExecutorDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedScheduledExecutorDefinition</a></dt>
 <dd>
-<div class="block">List of required <code>qualifier annotations</code>.</div>
+<div class="block">List of required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>qualifier annotations</code></a>.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html#qualifiers()" class="member-name-link">qualifiers()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/ManagedThreadFactoryDefinition.html" title="annotation interface in jakarta.enterprise.concurrent">ManagedThreadFactoryDefinition</a></dt>
 <dd>
-<div class="block">List of required <code>qualifier annotations</code>.</div>
+<div class="block">List of required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>qualifier annotations</code></a>.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:R">R</h2>
@@ -849,14 +870,16 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" class="type-name-link" title="annotation interface in jakarta.enterprise.concurrent">Schedule</a> - Annotation Interface in <a href="jakarta.concurrency/jakarta/enterprise/concurrent/package-summary.html">jakarta.enterprise.concurrent</a></dt>
 <dd>
-<div class="block">Defines a schedule that indicates when to run a method.</div>
+<div class="block">A schedule that indicates when to run a method.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html" class="type-name-link" title="class in jakarta.enterprise.concurrent">Schedule.Literal</a> - Class in <a href="jakarta.concurrency/jakarta/enterprise/concurrent/package-summary.html">jakarta.enterprise.concurrent</a></dt>
 <dd>
 <div class="block">Enables instances of the <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent"><code>Schedule</code></a> annotation to be created
  at run time.</div>
 </dd>
-<dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#scheduled-methods-heading" class="search-tag-link">Scheduled methods</a> - Search tag in annotation interface jakarta.enterprise.concurrent.Schedule</dt>
+<dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#scheduled-async-method" class="search-tag-link">Scheduled Asynchronous Methods</a> - Search tag in annotation interface jakarta.enterprise.concurrent.Schedule</dt>
+<dd>Section</dd>
+<dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#scheduled-methods" class="search-tag-link">Scheduled methods</a> - Search tag in annotation interface jakarta.enterprise.concurrent.Schedule</dt>
 <dd>Section</dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html#seconds()" class="member-name-link">seconds()</a> - Method in class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.Literal.html" title="class in jakarta.enterprise.concurrent">Schedule.Literal</a></dt>
 <dd>
@@ -864,7 +887,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html#seconds()" class="member-name-link">seconds()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Schedule.html" title="annotation interface in jakarta.enterprise.concurrent">Schedule</a></dt>
 <dd>
-<div class="block">Seconds at which the asynchronous method aims to run.</div>
+<div class="block">Seconds at which the method aims to run.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/CronTrigger.html#seconds(int...)" class="member-name-link">seconds(int...)</a> - Method in class jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/CronTrigger.html" title="class in jakarta.enterprise.concurrent">CronTrigger</a></dt>
 <dd>
@@ -1021,7 +1044,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns units used for the specified accessTimeout value.</div>
 </dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html#unit()" class="member-name-link">unit()</a> - Element in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html" title="annotation interface in jakarta.enterprise.concurrent">Lock</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Time unit of the <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html#accessTimeout()"><code>accessTimeout</code></a>.</div>
+</dd>
 <dt><a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html#UNLIMITED" class="member-name-link">UNLIMITED</a> - Static variable in annotation interface jakarta.enterprise.concurrent.<a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html" title="annotation interface in jakarta.enterprise.concurrent">Lock</a></dt>
 <dd>
 <div class="block">Value for <a href="jakarta.concurrency/jakarta/enterprise/concurrent/Lock.html#accessTimeout()"><code>Lock.accessTimeout()</code></a> that indicates to wait as long as necessary

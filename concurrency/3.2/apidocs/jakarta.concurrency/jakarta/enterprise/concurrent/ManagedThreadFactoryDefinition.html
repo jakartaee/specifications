@@ -92,7 +92,7 @@ loadScripts(document, 'script');</script>
 <div class="block"><p>Defines <a href="ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedThreadFactory</code></a> instances
  to be injected into
  <a href="ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedThreadFactory</code></a> injection points
- including any required <code>Qualifier</code> annotations specified by <a href="#qualifiers()"><code>qualifiers()</code></a>
+ including any required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>Qualifier</code></a> annotations specified by <a href="#qualifiers()"><code>qualifiers()</code></a>
  and registered in JNDI by the container
  under the JNDI name that is specified in the
  <a href="#name()"><code>name()</code></a> attribute.</p>
@@ -221,7 +221,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;[]</code></div>
 <div class="col-second even-row-color"><code><a href="#qualifiers()" class="member-name-link">qualifiers</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">List of required <code>qualifier annotations</code>.</div>
+<div class="block">List of required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>qualifier annotations</code></a>.</div>
 </div>
 <div class="col-first odd-row-color"><code>boolean</code></div>
 <div class="col-second odd-row-color"><code><a href="#virtual()" class="member-name-link">virtual</a></code></div>
@@ -264,7 +264,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="qualifiers()">
 <h3>qualifiers</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;[]</span>&nbsp;<span class="element-name">qualifiers</span></div>
-<div class="block"><p>List of required <code>qualifier annotations</code>.</p>
+<div class="block"><p>List of required <a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Qualifier.html" title="class or interface in jakarta.inject" class="external-link"><code>qualifier annotations</code></a>.</p>
 
  <p>A <a href="ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedThreadFactory</code></a> injection point
  with these qualifier annotations injects a bean that is
@@ -276,14 +276,14 @@ loadScripts(document, 'script');</script>
 
  <p>When the qualifiers list is non-empty, the container creates
  a <a href="ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedThreadFactory</code></a> instance and registers
- an <code>ApplicationScoped</code> bean for it with the specified
+ an <a href="https://jakarta.ee/specifications/cdi/5.0/apidocs/jakarta/enterprise/context/ApplicationScoped.html" title="class or interface in jakarta.enterprise.context" class="external-link"><code>ApplicationScoped</code></a> bean for it with the specified
  required qualifiers and required type of <code>ManagedThreadFactory</code>.
  The life cycle of the bean aligns with the life cycle of the application
  and the bean is not accessible from outside of the application.
  Applications must not configure a <code>java:global</code> <a href="#name()"><code>name</code></a>
  if also configuring a non-empty list of qualifiers.</p>
 
- <p>Applications can define their own <code>Producers</code>
+ <p>Applications can define their own <a href="https://jakarta.ee/specifications/cdi/5.0/apidocs/jakarta/enterprise/inject/spi/Producer.html" title="class or interface in jakarta.enterprise.inject.spi" class="external-link"><code>Producers</code></a>
  for <a href="ManagedThreadFactory.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedThreadFactory</code></a> injection points as long as the
  qualifier annotations on the producer do not conflict with the
  non-empty <a href="#qualifiers()"><code>qualifiers()</code></a> list of a

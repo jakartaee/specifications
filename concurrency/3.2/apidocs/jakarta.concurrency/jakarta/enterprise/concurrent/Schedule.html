@@ -89,23 +89,32 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/ElementType.html#ANNOTATION_TYPE" title="class or interface in java.lang.annotation" class="external-link">ANNOTATION_TYPE</a>,<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/ElementType.html#METHOD" title="class or interface in java.lang.annotation" class="external-link">METHOD</a>})
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">Schedule</span></div>
-<div class="block"><p>Defines a schedule that indicates when to run a method.</p>
+<div class="block"><p>A schedule that indicates when to run a method.</p>
 
- <p>For the scheduled asynchronous method to aim to run at a given day and time,
+ <p>For the scheduled method to aim to run at a given day and time,
  all of the criteria specified by the <code>Schedule</code> must match
  or be disregarded according to the rules of each field.</p>
 
- <h2 id="scheduled-methods-heading">Scheduled methods</h2>
+ <h2><a id="scheduled-methods">Scheduled methods</a></h2>
 
  <p>When the <code>Schedule</code> annotation is applied to a CDI managed bean method,
  the schedule defines the times after which to run the method. The method must
  have a <code>void</code> return type and no parameters. The bean must not be a
- Jakarta Enterprise Bean.</p>
+ Jakarta Enterprise Bean. Neither the bean nor the bean method may be annotated
+ <a href="Asynchronous.html" title="annotation interface in jakarta.enterprise.concurrent"><code>@Asynchronous</code></a>. The CDI managed bean must have one of the
+ following scopes or pseudo-scopes:
+ <ul>
+ <li><a href="https://jakarta.ee/specifications/cdi/5.0/apidocs/jakarta/enterprise/context/ApplicationScoped.html" title="class or interface in jakarta.enterprise.context" class="external-link"><code>ApplicationScoped</code></a></li>
+ <li><a href="https://jakarta.ee/specifications/cdi/5.0/apidocs/jakarta/enterprise/context/Dependent.html" title="class or interface in jakarta.enterprise.context" class="external-link"><code>Dependent</code></a></li>
+ <li><a href="https://jakarta.ee/specifications/dependency-injection/2.0/apidocs/jakarta/inject/Singleton.html" title="class or interface in jakarta.inject" class="external-link"><code>Singleton</code></a></li>
+ </ul>
+ </p>
 
  <p>Upon starting the application, the Jakarta EE Product Provider computes the
  next time from the <code>Schedule</code> annotation and schedules a task that aims to
  run at the computed time on the default <a href="ManagedScheduledExecutorService.html" title="interface in jakarta.enterprise.concurrent"><code>ManagedScheduledExecutorService</code></a>.
- After it is time to run the task, the task first checks to ensure that the
+ The task runs with the context of the application module that defines the
+ bean. After it is time to run the task, the task first checks to ensure that the
  schedule does not require <a href="#skipIfLateBy()">skipping</a> the invocation
  of the method. If method invocation is not skipped, the task obtains an instance
  of the bean and invokes the method on the bean instance.</p>
@@ -130,7 +139,7 @@ loadScripts(document, 'script');</script>
   }
  </pre>
 
- <h2 id="asynchronous-methods-with-a-schedule-heading">Asynchronous methods with a Schedule</h2>
+ <h2><a id="scheduled-async-method">Scheduled Asynchronous Methods</a></h2>
 
  <p>When the <code>Schedule</code> annotation is used as a value of
  <a href="Asynchronous.html#runAt()"><code>Asynchronous.runAt()</code></a>, the schedule defines the times after which to
@@ -138,7 +147,7 @@ loadScripts(document, 'script');</script>
 
  <p><a href="Asynchronous.html" title="annotation interface in jakarta.enterprise.concurrent"><code>Asynchronous</code></a> methods with a <code>Schedule</code> annotation can be
  written to schedule automatically at application startup by observing the
- application's <code>jakarta.enterprise.Startup</code> event. For example,
+ application's <a href="https://jakarta.ee/specifications/cdi/5.0/apidocs/jakarta/enterprise/event/Startup.html" title="class or interface in jakarta.enterprise.event" class="external-link"><code>Startup</code></a> event. For example,
  </p>
  <pre>
   @Asynchronous(runAt = @Schedule(cron = "30 8 * * SAT,SUN",
@@ -210,32 +219,32 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><code>int[]</code></div>
 <div class="col-second odd-row-color"><code><a href="#daysOfMonth()" class="member-name-link">daysOfMonth</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Days of the month on which the asynchronous method aims to run.</div>
+<div class="block">Days of the month on which the method aims to run.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DayOfWeek.html" title="class or interface in java.time" class="external-link">DayOfWeek</a>[]</code></div>
 <div class="col-second even-row-color"><code><a href="#daysOfWeek()" class="member-name-link">daysOfWeek</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Days of the week on which the asynchronous method aims to run.</div>
+<div class="block">Days of the week on which the method aims to run.</div>
 </div>
 <div class="col-first odd-row-color"><code>int[]</code></div>
 <div class="col-second odd-row-color"><code><a href="#hours()" class="member-name-link">hours</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Hours of the day at which the asynchronous method aims to run.</div>
+<div class="block">Hours of the day at which the method aims to run.</div>
 </div>
 <div class="col-first even-row-color"><code>int[]</code></div>
 <div class="col-second even-row-color"><code><a href="#minutes()" class="member-name-link">minutes</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Minutes at which the asynchronous method aims to run.</div>
+<div class="block">Minutes at which the method aims to run.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Month.html" title="class or interface in java.time" class="external-link">Month</a>[]</code></div>
 <div class="col-second odd-row-color"><code><a href="#months()" class="member-name-link">months</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Months in which the asynchronous method aims to run.</div>
+<div class="block">Months in which the method aims to run.</div>
 </div>
 <div class="col-first even-row-color"><code>int[]</code></div>
 <div class="col-second even-row-color"><code><a href="#seconds()" class="member-name-link">seconds</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Seconds at which the asynchronous method aims to run.</div>
+<div class="block">Seconds at which the method aims to run.</div>
 </div>
 <div class="col-first odd-row-color"><code>long</code></div>
 <div class="col-second odd-row-color"><code><a href="#skipIfLateBy()" class="member-name-link">skipIfLateBy</a></code></div>
@@ -276,7 +285,7 @@ loadScripts(document, 'script');</script>
  no cron expression is to be used.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>cron expression indicating when to run the asynchronous method.</dd>
+<dd>cron expression indicating when to run the method.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -288,13 +297,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="months()">
 <h3>months</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Month.html" title="class or interface in java.time" class="external-link">Month</a>[]</span>&nbsp;<span class="element-name">months</span></div>
-<div class="block"><p>Months in which the asynchronous method aims to run.</p>
+<div class="block"><p>Months in which the method aims to run.</p>
 
  <p>The default value is an empty list, which means that the month is
- not included in the criteria for deciding when to run the asynchronous method.</p></div>
+ not included in the criteria for deciding when to run the method.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>list of months in which the asynchronous method aims to run; An empty list disregards the month.</dd>
+<dd>list of months in which the method aims to run; An empty list
+         disregards the month.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -306,13 +316,15 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="daysOfMonth()">
 <h3>daysOfMonth</h3>
 <div class="member-signature"><span class="return-type">int[]</span>&nbsp;<span class="element-name">daysOfMonth</span></div>
-<div class="block"><p>Days of the month on which the asynchronous method aims to run. Values can range from 1 to 31.</p>
+<div class="block"><p>Days of the month on which the method aims to run. Values can range
+ from <code>1</code> to <code>31</code>.</p>
 
- <p>The default value is an empty list, which means that the day of the month is
- not included in the criteria for deciding when to run the asynchronous method.</p></div>
+ <p>The default value is an empty list, which means that the day of the month
+ is not included in the criteria for deciding when to run the method.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>list of days of the month on which the asynchronous method aims to run; An empty list disregards the day of the month.</dd>
+<dd>list of days of the month on which the method aims to run; An empty
+         list disregards the day of the month.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -324,13 +336,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="daysOfWeek()">
 <h3>daysOfWeek</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DayOfWeek.html" title="class or interface in java.time" class="external-link">DayOfWeek</a>[]</span>&nbsp;<span class="element-name">daysOfWeek</span></div>
-<div class="block"><p>Days of the week on which the asynchronous method aims to run.</p>
+<div class="block"><p>Days of the week on which the method aims to run.</p>
 
- <p>The default value is an empty list, which means that the day of the week is
- not included in the criteria for deciding when to run the asynchronous method.</p></div>
+ <p>The default value is an empty list, which means that the day of the week
+ is not included in the criteria for deciding when to run the method.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>list of days of the week on which the asynchronous method aims to run; An empty list disregards the day of the week.</dd>
+<dd>list of days of the week on which the method aims to run; An empty
+         list disregards the day of the week.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -342,15 +355,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="hours()">
 <h3>hours</h3>
 <div class="member-signature"><span class="return-type">int[]</span>&nbsp;<span class="element-name">hours</span></div>
-<div class="block"><p>Hours of the day at which the asynchronous method aims to run.</p>
+<div class="block"><p>Hours of the day at which the method aims to run.</p>
 
  <p>Values can range from 0 to 23. A value of empty list indicates that the
- hour is not included in the criteria for deciding when to run the asynchronous method.</p>
+ hour is not included in the criteria for deciding when to run the method.</p>
 
  <p>The default value is 0 (midnight).</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>list of hours at which the asynchronous method aims to run; An empty list disregards the hour.</dd>
+<dd>list of hours at which the method aims to run; An empty list
+         disregards the hour.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -362,15 +376,17 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="minutes()">
 <h3>minutes</h3>
 <div class="member-signature"><span class="return-type">int[]</span>&nbsp;<span class="element-name">minutes</span></div>
-<div class="block"><p>Minutes at which the asynchronous method aims to run.</p>
+<div class="block"><p>Minutes at which the method aims to run.</p>
 
- <p>Values can range from 0 to 59. A value of empty list indicates that the
- minute is not included in the criteria for deciding when to run the asynchronous method.</p>
+ <p>Values can range from <code>0</code> to <code>59</code>. A value of empty list
+ indicates that the minute is not included in the criteria for deciding
+ when to run the method.</p>
 
- <p>The default value is 0 (at the start of the hour).</p></div>
+ <p>The default value is <code>0</code> (at the start of the hour).</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>list of minutes at which the asynchronous method aims to run; An empty list disregards the minutes.</dd>
+<dd>list of minutes at which the method aims to run; An empty list
+         disregards the minutes.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -382,15 +398,18 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="seconds()">
 <h3>seconds</h3>
 <div class="member-signature"><span class="return-type">int[]</span>&nbsp;<span class="element-name">seconds</span></div>
-<div class="block"><p>Seconds at which the asynchronous method aims to run.</p>
+<div class="block"><p>Seconds at which the method aims to run.</p>
 
- <p>Values can range from 0 to 59. A value of empty list causes the asynchronous method
- to raise <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link"><code>IllegalArgumentException</code></a>.</p>
+ <p>Values can range from <code>0</code> to <code>59</code>. A value of empty list
+ is not valid, causing a <a href="Schedule.html#scheduled-methods">Scheduled
+ Method</a> to never run and a <a href="Schedule.html#scheduled-async-method">
+ Scheduled Asynchronous Method</a> to raise <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link"><code>IllegalArgumentException</code></a>.
+ </p>
 
- <p>The default value is 0 (at the start of the minute).</p></div>
+ <p>The default value is <code>0</code> (at the start of the minute).</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>list of seconds at which the asynchronous method aims to run.</dd>
+<dd>list of seconds at which the method aims to run.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -405,9 +424,10 @@ loadScripts(document, 'script');</script>
 <div class="block"><p>Seconds after which an execution that is late to start should be skipped
  rather than starting it late.</p>
 
- <p>Values must be greater than 0.
- The default value is 600 seconds (10 minutes).
- This differs from executions that are missed due to overlap, which are always skipped.</p></div>
+ <p>Values must be greater than <code>0</code>.
+ The default value is <code>600</code> seconds (10 minutes).
+ This differs from executions that are missed due to overlap, which are
+ always skipped.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the threshold for skipping executions that are late to start.</dd>
