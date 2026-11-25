@@ -1,8 +1,12 @@
 ---
 title: "Change Log"
-date: 2026-08-27
+date: 2026-10-13
 summary: "Release for Jakarta EE 10"
 ---
+
+### CHANGES IN THE 3.0.4 RELEASE
+
+* resolves OSGi Manifest error in API jar
 
 ### CHANGES IN THE 3.0.3 RELEASE
 
