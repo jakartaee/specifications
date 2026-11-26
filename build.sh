@@ -16,7 +16,7 @@ echo -e "Prepare Jakarta EE Specifications Preview...\n"
 
 echo -e "Step 1: Fetch a current copy of jakarta.ee\n"
 rm -rf website
-git clone https://github.com/jakartaee/jakarta.ee.git website
+git clone --depth 1 https://github.com/jakartaee/jakarta.ee.git website
 cd website && yarn install && yarn run production && cd ../
 
 echo -e "Step 2: Reset specifications content\n"
@@ -36,14 +36,18 @@ for f in specifications/*/*/*.html; do
   fi
 done
 
-echo -e "Step 5: Preparing to move folders to static folder..."
-for f in specifications/*/*/*/; do
-  if [ -d "$f" ]; then
-    echo -e "Moving $f folder to `dirname ../static/$f`"
-    mkdir -p `dirname ../static/$f`
-    mv -f "$f" "../static/$f"
-  fi
-done
+if [ -z "$CHANGE_ID" ]; then
+  echo -e "Step 5: Preparing to move folders to static folder..."
+  for f in specifications/*/*/*/; do
+    if [ -d "$f" ]; then
+      echo -e "Moving $f folder to `dirname ../static/$f`"
+      mkdir -p `dirname ../static/$f`
+      mv -f "$f" "../static/$f"
+    fi
+  done
+else
+  echo -e "Step 5: Skipping apidocs (PR preview build)...\n"
+fi
 
 echo "Done!"
 
