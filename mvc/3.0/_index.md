@@ -37,6 +37,7 @@ This release ensures alignment with Jakarta RESTful Web Services 4.0, removes th
 
 # Compatible Implementations
 * [Eclipse Krazo for Jersey 4.0.2](https://eclipse-ee4j.github.io/krazo/downloads/4.0.2.html)
+* [Eclipse Krazo for RESTEasy 4.0.4](https://eclipse-ee4j.github.io/krazo/downloads/4.0.4.html)
 
 ## Ballots
 
